@@ -12,8 +12,8 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-Project Name 
-============
+robotframework-testsuitesmanagement 
+===================================
 
 This repository is using to develop python package library -
 RobotFramework_Testsuites, this package is a part of ROBFW-AIO which is
