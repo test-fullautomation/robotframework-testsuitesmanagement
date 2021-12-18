@@ -254,7 +254,7 @@ own.
 License 
 ~~~~~~~
 
-robotframework-qconnect-base is open source software provided under the `Apache License
+robotframework-testsuitesmanagement is open source software provided under the `Apache License
 2.0`__. 
 
 __ http://apache.org/licenses/LICENSE-2.0
