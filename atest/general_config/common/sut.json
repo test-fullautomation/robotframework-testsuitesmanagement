@@ -1,0 +1,83 @@
+//  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+/////////////////////////////////////////////////////////////////////////////
+//
+// Copyright (c) 2021 Robert Bosch Car Multimedia GmbH, Hildesheim
+//
+// Copyright notice:
+// This software is property of Robert Bosch Car Multimedia GmbH
+// Unauthorized duplication and disclosure to third parties is forbidden.
+//
+/////////////////////////////////////////////////////////////////////////////
+{
+
+  "dSUT": {
+  			"tuner": {
+  					"am": {
+  							"frequency": {
+  			    							"bSupported": true,
+    										"nMin_kHz": 522,
+    										"nMax_kHz": 1611,
+    										"nStep_kHz": 9,
+    										"nDefault_kHz": 531
+  										 }
+  						  },
+  					"fm": {
+  							"frequency": {
+  			    							"bSupported": true,
+    										"nMin_MHz": 87.5,
+    										"nMax_MHz": 108.0,
+    										"nStep_MHz": 0.1,
+    										"nDefault_MHz": 88.0
+  										 }
+  						  }
+  			          },
+  	
+  			"audio": {
+ 					 "volume": {
+  	    							"bSupported": true,
+    								"nMin": 40,
+    								"nMax": 0,
+    								"nStep": 1,
+    								"nDefault": 5
+  								  }
+  			 		 },
+  			"hmi": {
+    	           "Key_bSupported": true,
+                   "Display_bSupported": true
+  			       },
+  			"system": {
+  			          "ign": {
+  			    	         "bSupported": true,
+  			    	         "sType": "CAN"
+  					         },
+  			           "Reset_bSupported": true,
+    				   "sExternalComponents": "CAN;Receiver;PowerSupply_Type_A",
+                       "sDetails": "BITS-Release-SelfTest",
+  			           "hardware": {
+    								"sID": "000001",
+    								"sVersion": "0.1",
+   	 								"sSample": "C1",
+                                    "wifi.sAddress": "123:123:123:123",
+                                    "bt.sAdress": "12:12:14:15"
+  						           },
+  			           "software": {
+    								"sVersion": "BITS_20.16.0",
+    								"NaviData.sVersion": "Navi-EU"
+  						           } 
+  			          }       
+  		  }
+
+}
+

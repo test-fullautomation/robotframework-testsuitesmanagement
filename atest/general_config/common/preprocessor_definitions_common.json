@@ -1,0 +1,40 @@
+//  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//*****************************************************************************
+//  Author: Mai Dinh Nam Son
+//
+//  This file defines all common global parameters and will be included to all
+//  test config files
+//*****************************************************************************
+{
+  "gPreprolIntParam" : 1,
+  
+  "gPreproFloatParam" : 1.332,
+  
+  "gPreproString"   : "This is a string",
+   
+  "gPreproStructure": {
+                         "general": "general",
+                         "testing": 19,
+                         "check01": "checkParam"
+                      },
+  "gPreproTest": {
+    "Param01": 10,
+    "Param02": {
+      "checkParam01": 2,
+      "checkParam02": 5
+    },
+    "checkParam": "For testing purpose"
+  }
+}

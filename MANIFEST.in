@@ -1,0 +1,2 @@
+include RobotFramework_Testsuites/Config/robot_config.json
+include RobotFramework_Testsuites/Config/robot_schema.json
