@@ -1,260 +1,186 @@
-.. Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+ROBFW TESTSUITES MANAGEMENT DOCUMENTATION
+=========================================
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+**This is the documentation for robotframework-testsuitesmanagement repository**
 
-   http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
-robotframework-testsuitesmanagement 
-===================================
-
-This repository is using to develop python package library -
-RobotFramework_Testsuites, this package is a part of ROBFW-AIO which is
-changed into a more advanced from Robot Framework for automation test
-projects in Bosch. This RobotFramework_Testsuites package manages Robot
-test project using configuration file in json format, 4 levels
-configuration, jsonschema validate, etc. The enhanced features will be
-introduced below in details.
-
-Table of Contents 
------------------
-
--  `Getting Started  <#getting-started->`__
-
-   -  `1. Configure with json files: <#1-configure-with-json-files>`__
-   -  `2. Dotdict features: <#2-dotdict-features>`__
-
--  `Building and Testing  <#building-and-testing->`__
--  `Contribution Guidelines  <#contribution-guidelines->`__
--  `Feedback  <#feedback->`__
--  `About  <#about->`__
-
-   -  `Maintainers  <#maintainers->`__
-   -  `Contributors  <#contributors->`__
-   -  `3rd Party Licenses  <#3rd-party-licenses->`__
-   -  `Used Encryption  <#used-encryption->`__
-   -  `License  <#license->`__
-
-Getting Started 
+Getting Started
 ---------------
 
-The RobotFramework_Testsuites package works together with
-`JsonPreprocessor python
-package <https://sourcecode.socialcoding.bosch.com/projects/ROBFW/repos/python-jsonpreprocessor/browse>`__
-to provide the enhanced features such as json configuration files, 4
-different levels of configuation, config object and global params,
-schema validation,Ö ### **1. Configure with json files:**
+The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
+python package to provide the enhanced features such as json configuration files, 
+4 different levels of configuation, config object and global params, schema validation,...
 
-Together with JsonPreprocessor package, RobotFramework_Testsuites
-supports configuring ROBFW automation test project with json files which
-allow user adds the comments, imports params from other json files.
-Adding comments and importing json files are enhanced features which are
-developed and documented in `JsonPreprocessor python
-package <https://sourcecode.socialcoding.bosch.com/projects/ROBFW/repos/python-jsonpreprocessor/browse>`__.
+How to install
+~~~~~~~~~~~~~~
 
-RobotFramework_Testsuites management difines 4 different configuration
-levels, from level 1 -> level 4, Level 1 is highest priority, and level
-4 is lowest priority. The detail of these configuration levels will be
-introduced below:
+Firstly, clone **RobotFramework_Testsuites** repository to your machine
 
-**a. Level 1: Load configuration file while executing robot testsuite by
-command.**
+.. code-block:: bat
 
-This is highest priority configuration level, it is called
-**configuration level 1**
+  git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
-User can address the json configuration file when executing robot
-testsuite with input parameter *ñvariable config_file:<filename>*
+Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
 
-Ex: robot ñvariable config_file:<filename>
+.. code-block:: bat
 
-The level 1 configuration could be set by defined the ``${config_file}``
-in ``*** Variables ***``
+    setup.py build      will build the package underneath 'build/'
+    setup.py install    will install the package
 
-Ex:
+After the build processes are completed, the package is located in **build/**, and the documents are 
+located in **doc/_build/**.
 
-.. code:: r
+We can use ``--help`` to discover the options for ``build`` command, ex:
 
-   *** Variables ***
-   ${config_file}   <Path_to_configuration_file>
+.. code-block:: bat
 
-   *** Settings ***
-   #Force Tags        atestExcluded
-   Library      RobotFramework_Testsuites    WITH NAME    testsuites
-   Suite Setup      testsuites.testsuite_setup
-   Suite Teardown   testsuites.testsuite_teardown
-   Test Setup       testsuites.testcase_setup
-   Test Teardown    testsuites.testcase_teardown
+     setup.py build      will build the package underneath 'build/'
+     setup.py install    will install the package
+   
+   Global options:
+     --verbose (-v)      run verbosely (default)
+     --quiet (-q)        run quietly (turns verbosity off)
+     --dry-run (-n)      don't actually do anything
+     --help (-h)         show detailed help message
+     --no-user-cfg       ignore pydistutils.cfg in your home directory
+     --command-packages  list of packages that provide distutils commands
+   
+   Information display options (just display information, ignore any commands)
+     --help-commands     list all available commands
+     --name              print package name
+     --version (-V)      print package version
+     --fullname          print <package name>-<version>
+     --author            print the author's name
+     --author-email      print the author's email address
+     --maintainer        print the maintainer's name
+     --maintainer-email  print the maintainer's email address
+     --contact           print the maintainer's name if known, else the author's
+     --contact-email     print the maintainer's email address if known, else the
+                         author's
+     --url               print the URL for this package
+     --license           print the license of the package
+     --licence           alias for --license
+     --description       print the package description
+     --long-description  print the long package description
+     --platforms         print the list of platforms
+     --classifiers       print the list of classifiers
+     --keywords          print the list of keywords
+     --provides          print the list of packages/modules provided
+     --requires          print the list of packages/modules required
+     --obsoletes         print the list of packages/modules made obsolete
+   
+   usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+      or: setup.py --help [cmd1 cmd2 ...]
+      or: setup.py --help-commands
+      or: setup.py cmd --help
 
-**b. Level 2: In case project have many variants, it reads from content
-of the json file to select the corresponding variant configuration.**
+Features
+--------
 
-If the level 1 is not configured, it will check the configuration for
-level 2.
+ROBFW project is configured with json files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In level 2 configuration, user has to create a json file which contains
-different variants point to different configuration files. For example,
-we create the ``variants_cfg.json`` with content below:
+Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring ROBFW automation test project 
+with json files which allow user adds the comments, imports params from other json files. Adding comments and importing 
+json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
 
-.. code:: json
+``RobotFramework_Testsuites`` management difines 4 different configuration levels, from level 1 -> level 4, Level 1 is highest 
+priority, and level 4 is lowest priority:
 
-   //*****************************************************************************
-   // The file configures the access to all variant dependent robot_config*.json
-   // files.
-   //
-   // The path to the robot_config*.json files depends on the test file location. A 
-   // different number of ../ is required dependend on the directory depth of the test 
-   // case location.
-   // Therefore we use here three .../ to tell the ROBFW to search from the test 
-   // file location up till the robot_config*.json files are found:
-   // ./config/robot_config.json
-   // ../config/robot_config.json
-   // ../../config/robot_config.json
-   // ../../../config/robot_config.json
-   // and so on.
-   //*****************************************************************************
+**Level 1: Load configuration file while executing robot testsuite by command**
+
+User can address the json configuration file when executing robot testsuite with input parameter ``--variable config_file:"
+<path_to_json_file>"``
+
+Ex: ``robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>``
+
+**Level 2: In case project have many variants, it reads from json file's content to select the corresponding variant configuration**
+
+In level 2 configuration, user has to create a json file which contains different variants point to different configuration files. 
+For example, we create the ``variants_cfg.json`` with content below:
+
+.. code-block:: json
+
    {
      "default": {
-       "name": "robot_config.json",
-       "path": ".../config/"
+       "name": "<default_cfg_file>",
+       "path": "<path>"
      },
      "variant_0": {
-       "name": "robot_config.json",
-       "path": ".../config/"
+       "name": "<file_name_variant_0>",
+       "path": "<path>"
      },
      "variant_1": {
-       "name": "robot_config_variant_1.json",
-       "path": ".../config/"
+       "name": "<file_name_variant_1>",
+       "path": "<path>"
      },
      "variant_2": {
-       "name": "robot_config_variant_2.json",
-       "path": ".../config/"
+       "name": "<file_name_variant_2>",
+       "path": "<path>"
      }
    }
 
 User can set configuration level 2 only in testsuite like below:
 
-.. code:: r
+.. code-block:: robot
 
    *** Settings ***
    Library      RobotFramework_Testsuites    WITH NAME    testsuites
    Suite Setup      testsuites.testsuite_setup    <Path_to_the_file_variants_cfg.json>
-   Suite Teardown   testsuites.testsuite_teardown
-   Test Setup       testsuites.testcase_setup
-   Test Teardown    testsuites.testcase_teardown
 
-**c. Level 3: Find the ``config/`` folder in testsuite directory, if the
-config folder is found, ROBFW-AIO will load configuration file in this
-folder.**
+**Level 3: Find the config/ folder in testsuite directory, if the config folder is found, it will load configuration file in 
+this folder**
 
-In case level 2 and level 2 are not configured, it will check the
-configuration for level 3.
+If there is the configuration file have the same name with testsuite file (ex: ``abc.rotbot`` & ``./config/abc.json``), then 
+it will load this configuration file. If the first case doesn't occur, it will load the configuration file ``./config/robot_config.json``. 
+In case these 2 cases are not matched, it will load the configuration level 4 (default and lowest priority)
 
-If there is the configuration file have the same with testsuite file
-(ex: ``abc.rotbot`` & ``./config/abc.json``), then it will load this
-configuration file. If not the first case, it will load the
-configuration file ``./config/robot_config.json``. In case these 2
-situations are not matched => ROBFW will load the configuration level 4
-(default and lowest priority)
+**Level 4: Lowest priority level, it reads default configuration file**
 
-Ex: We have testsuite ``./component/abc.robot``
+The default configuration file (``robot_config.json``) in installation directory:
 
--  In ``./component/config/`` contains ``abc.json`` and
-   ``robot_config.json``, then ``./component/config/abc.json`` will be
-   loaded.
--  In ``./component/config/`` contains ``robot_config.json``, then
-   ``./component/config/robot_config.json`` will be loaded.
--  If there is not ``./component/config/`` or the directory
-   ``./component/config/`` doesnít have ``abc.json`` or
-   ``robot_config.json``, then configuration level 4 will be set.
+``python39\Lib\site-packages\RobotFramework_Testsuites-0.1.0-py3.9.egg\RobotFramework_Testsuites\Config\robot_config.json``
 
-**d. Level 4: Lowest priority level, it reads default configuration
-file**
+Dotdict features
+~~~~~~~~~~~~~~~~
 
-The default configuration file (``robot_config.json``) in install
-ROBFW-AIO installation directory:
-``C:\Program Files\RobotFramework\python39\Lib\site-packages\RobotFramework_Testsuites-0.1.0-py3.9.egg\RobotFramework_Testsuites\Config\robot_config.json``
+User can access dictionary object in robot test script by called ``${dict}[abc][def]`` or ``${dict.abc.def}``
 
-The default configuration file just contains some basic parameters:
-``Json  {   "Project": "G3g",   "WelcomeString": "Hello... ROBFW is running now!",   // Version control information.   "version": {     "majorversion": "0",     "minorversion": "1",     "patchversion": "1"   },   "TargetName" : "gen3flex@dlt" }``
+**Note:** In case a parameter name contains a ".", then we could not use dotdict but the traditional way ``${dict}[abc][def]`` 
+is still working.
 
-**2. Dotdict features:**
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-User can access dictionary object in robot test script by called
-``${dict}[abc][def]`` or ``${dict.abc.def}``
-
--  **Note:** In case a parameter name contains a ì.î, then we could not
-   use dotdict but the traditional way ``${dict}[abc][def]`` is still
-   working.
-
-Building and Testing 
---------------------
-
-If the repository contains SW, add instructions on how to build it from
-source and test it in this section.
-
-Contribution Guidelines 
------------------------
-
-Use this section to describe or link to documentation which explaining
-how users can make contributions to the contents of this repository.
-Consider adopting the `BIOS way of facilitating
-contributions <http://bos.ch/ygF>`__.
-
-Configure Git and correct EOL handling 
---------------------------------------
-
-Here you can find the references for `Dealing with line
-endings <https://help.github.com/articles/dealing-with-line-endings/>`__.
-
-Every time you press return on your keyboard youíre actually inserting
-an invisible character called a line ending. Historically, different
-operating systems have handled line endings differently. When you view
-changes in a file, Git handles line endings in its own way. Since youíre
-collaborating on projects with Git and GitHub, Git might produce
-unexpected results if, for example, youíre working on a Windows machine,
-and your collaborator has made a change in OS X.
-
-To avoid problems in your diffs, you can configure Git to properly
-handle line endings. If you are storing the .gitattributes file directly
-inside of your repository, than you can asure that all EOL are manged by
-git correctly as defined.
-
-Feedback 
+Feedback
 --------
 
-Consider using this section to describe how you would like other
-developers to get in contact with you or provide feedback.
+To give us a feedback, you can send an email to `Thomas Pollersp√∂ck <Thomas.Pollerspoeck@de.bosch.com>`_ or
+`RBVH-ECM-Automation_Test_Framework-Associates <RBVH-ENG2-CMD-Associates@bcn.bosch.com>`_
 
-About 
+About
 -----
 
-Maintainers 
+Maintainers
 ~~~~~~~~~~~
 
-List the maintainers of this repository here. Consider linking to their
-Bosch Connect profile pages. Mention or link to their email as a
-minimum.
+`Thomas Pollersp√∂ck <Thomas.Pollerspoeck@de.bosch.com>`_
 
-Contributors 
+Contributors
 ~~~~~~~~~~~~
 
-Consider listing contributors in this section to give explicit credit.
-You could also ask contributors to add themselves in this file on their
-own.
+`Mai Dinh Nam Son <Son.MaiDinhNam@vn.bosch.com>`_
 
-License 
-~~~~~~~
+`Tran Duy Ngoan <Ngoan.TranDuy@vn.bosch.com>`_
 
-robotframework-testsuitesmanagement is open source software provided under the `Apache License
-2.0`__. 
+`Nguyen Huynh Tri Cuong <Cuong.NguyenHuynhTri@vn.bosch.com>`_
 
-__ http://apache.org/licenses/LICENSE-2.0
+`Tran Hoang Nguyen <Nguyen.TranHoang@vn.bosch.com>`_
+
+`Holger Queckenstedt <Holger.Queckenstedt@de.bosch.com>`_
+
+License
+-------
+
+`License: BIOSL v4 <http://bios.intranet.bosch.com/bioslv4-badge.svg>`_
+
+Copyright (c) 2009, 2018 Robert Bosch GmbH and its subsidiaries. This program and 
+the accompanying materials are made available under the terms of the Bosch Internal 
+Open Source License v4 which accompanies this distribution, and is available at 
+http://bios.intranet.bosch.com/bioslv4.txt

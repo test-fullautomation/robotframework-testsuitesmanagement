@@ -1,0 +1,284 @@
+%% NOTICES AND ADMONITIONS
+%
+% change this info string if making any custom modification
+\ProvidesFile{sphinxlatexadmonitions.sty}[2021/09/22 admonitions]
+
+% --------------------------------------------------------------------------------------------------------------
+%
+% File adapted by XC-CI1/ECA3-Queckenstedt / 22.09.2021 / v. 0.1.0
+%
+% Entry point for all kind of text boxes is the environment 'sphinxadmonition' (see end of this file).
+% This environment originally uses the two text boxes 'sphinxlightbox' and 'sphinxheavybox'.
+% The definition of these text boxes and the reference to these text boxes within 'sphinxadmonition'
+% have been replaced by alternative text boxes based on the LaTeX package 'tcolorbox' (looks much nicer).
+%
+% Sphinx is able to support the following markdown directives for text boxes:
+% "note, hint, tip, attention, caution, important, danger, warning, error"
+% Each markdown directive is mapped to an individual text box (with name box<noticetype>;
+% the noticetype is the name of the markdown directive).
+%
+% Markdown example to enable the text box 'boxattention':
+% .. attention:: Be aware of ..
+%
+% The original installation version of this file can be found here:
+% <Python installation path>\Lib\site-packages\sphinx\texinputs\sphinxlatexadmonitions.sty
+%
+% The exchange of this file happens in file conf.py, section 'latex_additional_files'.
+%
+% --------------------------------------------------------------------------------------------------------------
+%
+% Dependencies (they do not need to be defined at time of loading):
+% - of course the various colour and dimension options handled via sphinx.sty
+% - \sphinxstrong (for text boxes)
+% - dimension register \spx@image@maxheight from sphinxlatexgraphics.sty
+% - \savenotes/\spewnotes from sphinxpackagefootnote (for sphinxheavybox)
+
+% --------------------------------------------------------------------------------------------------------------
+
+\usepackage[breakable,skins]{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+
+\usepackage{wasysym} % to enable certain symbols in text mode
+
+% --------------------------------------------------------------------------------------------------------------
+% definition of text boxes for every text box markdown directive
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxnote_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=yellow!10,
+  colframe=yellow!80!white,
+  underlay={%
+    \path[fill=yellow!80!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \UParrow} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxnote}[1]
+{\begin{boxnote_template}
+{\color{yellow!95!black} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxnote_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxhint_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=green!10,
+  colframe=green!80!white,
+  underlay={%
+    \path[fill=green!80!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \checked} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxhint}[1]
+{\begin{boxhint_template}
+{\color{green!80!white} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxhint_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxtip_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=blue!10,
+  colframe=blue!70!white,
+  underlay={%
+    \path[fill=blue!70!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \smiley} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxtip}[1]
+{\begin{boxtip_template}
+{\color{blue!70!white} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxtip_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxattention_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=orange!10,
+  colframe=orange!80!white,
+  underlay={%
+    \path[fill=orange!80!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxattention}[1]
+{\begin{boxattention_template}
+{\color{orange!80!white} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxattention_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxcaution_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=orange!10,
+  colframe=orange!80!white,
+  underlay={%
+    \path[fill=orange!80!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxcaution}[1]
+{\begin{boxcaution_template}
+{\color{orange!80!white} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxcaution_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boximportant_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=orange!30,
+  colframe=orange!90!white,
+  underlay={%
+    \path[fill=orange!90!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boximportant}[1]
+{\begin{boximportant_template}
+{\color{orange!90!white} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boximportant_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxdanger_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=red!10,
+  colframe=red!70!white,
+  underlay={%
+    \path[fill=red!70!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \frownie} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxdanger}[1]
+{\begin{boxdanger_template}
+{\color{red} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxdanger_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxwarning_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=red!10,
+  colframe=red!70!white,
+  underlay={%
+    \path[fill=red!70!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \frownie} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxwarning}[1]
+{\begin{boxwarning_template}
+{\color{red} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxwarning_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newtcolorbox{boxerror_template}[1][]{
+  enhanced,
+  before skip=2mm,
+  after skip=3mm,
+  boxrule=2pt,
+  left=12mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  colback=red!30,
+  colframe=red!90!white,
+  underlay={%
+    \path[fill=red!90!white,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries \lightning} ([xshift=10mm]interior.north west);
+    },
+   , #1}
+
+\newenvironment{boxerror}[1]
+{\begin{boxerror_template}
+{\color{red} \sphinxstrong{#1}}
+\vspace{5pt}
+\\
+}{\end{boxerror_template}}
+
+% --------------------------------------------------------------------------------------------------------------
+% the main dispatch for all types of notices
+% --------------------------------------------------------------------------------------------------------------
+\newenvironment{sphinxadmonition}[2]{% #1=type, #2=heading
+  % can't use #1 directly in definition of end part
+  \def\spx@noticetype {#1}%
+  % start specific environment, passing the heading as argument
+  \begin{box#1}{#2}}
+  % workaround some LaTeX "feature" of \end command
+ {\edef\spx@temp{\noexpand\end{box\spx@noticetype}}\spx@temp}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\endinput

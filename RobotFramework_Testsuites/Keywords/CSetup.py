@@ -26,6 +26,9 @@ from robot.libraries.BuiltIn import BuiltIn
 
 
 class CSetupKeywords(object):
+    '''
+    Definition setup keywords
+    '''
     
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
@@ -77,6 +80,9 @@ class CSetupKeywords(object):
         CConfig.updateCfg(sCfgFile)
         
 class CGeneralKeywords(object):
+    '''
+    Definition setup keywords
+    '''
      
     @keyword
     def get_config(self):
