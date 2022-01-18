@@ -1,0 +1,1 @@
+This _static directory will be used to build documentation

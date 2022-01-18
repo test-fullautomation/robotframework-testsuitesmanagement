@@ -31,11 +31,16 @@ Usage: oStruct=CStruct(attribute_1=value_1, ... attribute_n=value_n)
 class CStruct:
     '''
     Constructor __init__ creates the given attributes dynamically at runtime.
+
     Args:
+
         Attributes to be created with the initial value
+
     Returns:
+
         Accessible attributes
     '''
+
     def __init__(self, *args, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)

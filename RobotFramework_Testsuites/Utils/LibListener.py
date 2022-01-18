@@ -21,6 +21,10 @@ from robot.api import logger
 from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
+    '''
+    Define some hook methods
+    '''
+
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LISTENER_API_VERSION = 2
     
@@ -43,6 +47,10 @@ class LibListener(object):
             This TestCasesCollect class collects all the testcases.
             '''
             class TestCasesCollect(SuiteVisitor):
+                '''
+                Collect test cases in testsuites
+                '''
+
                 def __init__(self):
                     self.testcases = []
                 

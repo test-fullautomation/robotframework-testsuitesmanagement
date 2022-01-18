@@ -47,32 +47,12 @@ import pathlib
 # This information is used for Robotframework AIO version control 
 VERSION = "0.4.11.0"
 
-'''
-Defines the properties of configuration
-'''
 class CConfig():
-    
-    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    __single          = None
-    oConfigParams     = {}
-    sConfigName       = 'default'
-    sProjectName      = None
-    iSuiteCount       = 0
-    iTestCount        = 0
-    iTotalTestcases   = 0
-    sConfigFileName   = None
-    bLoadedCfg        = True
-    sLoadedCfgError   = ''
-    sTestSuiteCfg     = ''
-    sTestCfgFile      = ''
-    sTestcasePath     = ''
-    sMaxVersion       = ''
-    sMinVersion       = ''
-    
     '''
+    Defines the properties of configuration
     Holds the identified config files.
     Level1 is highest priority, Level4 is lowest priority.
-    
+
     Level1: handed over by command line argument.
     Level2: read from content of 
                                 {
@@ -94,6 +74,22 @@ class CConfig():
     Level3: read in testsuite folder /config/robot_config.json
     Level4: read from ROBFW install folder /RobotFramework/defaultconfig/robot_config.json
     '''
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+    __single          = None
+    oConfigParams     = {}
+    sConfigName       = 'default'
+    sProjectName      = None
+    iSuiteCount       = 0
+    iTestCount        = 0
+    iTotalTestcases   = 0
+    sConfigFileName   = None
+    bLoadedCfg        = True
+    sLoadedCfgError   = ''
+    sTestSuiteCfg     = ''
+    sTestCfgFile      = ''
+    sTestcasePath     = ''
+    sMaxVersion       = ''
+    sMinVersion       = ''
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,
@@ -113,24 +109,27 @@ class CConfig():
     sTargetName     = None
     ddictJson = dotdict()
     
-    '''
-    The CJsonDotDict class converts json configuration object to dotdict
-    '''
     class CJsonDotDict():
+        '''
+        The CJsonDotDict class converts json configuration object to dotdict
+        '''
+
         def __init__(self):
             self.lTmpParam = ['CConfig.ddictJson']
             
         def __del__(self):
             CConfig.ddictJson = dotdict()
             del self.lTmpParam
-        '''
-        Method: dotdictConvert converts json object to dotdict
-        Args:
-            oJson: dict
-        Returns:
-            CConfig.ddictJson: dotdict
-        '''
+
         def dotdictConvert(self, oJson):
+            '''
+            Method: dotdictConvert converts json object to dotdict
+
+            Args:
+                oJson: dict
+            Returns:
+                CConfig.ddictJson: dotdict
+            '''
             if len(self.lTmpParam) == 1:
                 CConfig.ddictJson.update(oJson)
                 
@@ -312,16 +311,17 @@ class CConfig():
         else:
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         
-    '''
-    staticmethod updateParams: This method updates preprocessor, global or local params base on
-                 ROBFW local config or any json config file according to purpose of
-                 specific testsuite.
-    Args:
-        sUpdateCfgFile: str
-    Returns:
-        None              
-    '''
     def updateCfg(sUpdateCfgFile):
+        '''
+        staticmethod updateParams: This method updates preprocessor, global or local params base on
+                     ROBFW local config or any json config file according to purpose of
+                     specific testsuite.
+
+        Args:
+            sUpdateCfgFile: str
+        Returns:
+            None              
+        '''
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
             oUpdateParams = oJsonPreprocessor.jsonLoad(sUpdateCfgFile)
@@ -480,15 +480,16 @@ class CConfig():
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile    
     
-    '''
-    Staticmethod: sCalcAbsPath
-    Args:
-        relativePath: String
-    Returns:
-        absolutePath: String
-    '''
     @staticmethod
     def sCalcAbsPath(self, relativePath):
+        '''
+        Staticmethod: sCalcAbsPath
+
+        Args:
+            relativePath: String
+        Returns:
+            absolutePath: String
+        '''
         sCurDir = os.curdir
         os.chdir(self.sTestcasePath)
         absolutePath = os.path.abspath(os.path.relpath(relativePath, os.path.curdir))
@@ -496,24 +497,25 @@ class CConfig():
         
         return absolutePath
         
-    '''
-    staticmethod sNormalizePath:
-    - UNC paths
-      e.g. \\hi-z4939\ccstg\....
-    - escape sequences in windows paths
-      e.g. c:\robottest\tuner   \t will be interpreted as tab, the result
-      after processing it with an regexp wuld be
-           c:\robottest   uner
-   
-    In order to solve this problems any slash will be replaced from backslash
-    to slash, only the two UNC backslashes must be kept if contained.
-    Args:
-        sPath: string
-    Returns:
-        sNPath: string
-    '''
     @staticmethod
     def sNormalizePath(sPath):
+        '''
+        staticmethod sNormalizePath:
+        - UNC paths
+        e.g. \\hi-z4939\ccstg\....
+        - escape sequences in windows paths
+        e.g. c:\robottest\tuner   \t will be interpreted as tab, the result
+        after processing it with an regexp wuld be
+            c:\robottest   uner
+    
+        In order to solve this problems any slash will be replaced from backslash
+        to slash, only the two UNC backslashes must be kept if contained.
+
+        Args:
+            sPath: string
+        Returns:
+            sNPath: string
+        '''
         if sPath.strip()=='':
             return ''
         
@@ -523,6 +525,7 @@ class CConfig():
         sNPath=Config.__mkslash(sNPath)
         
         return sNPath
+
     '''
     staticmethod: __mkslash: Make all backslashes to slash, but mask
                   UNC indicator \\ before and restore after.
@@ -541,6 +544,7 @@ class CConfig():
         sNPath=re.sub(r"#!#!#",r"\\\\",sNPath)
         
         return sNPath
+        
     '''
     Private Method: __read reads data from a XML object
     Args:

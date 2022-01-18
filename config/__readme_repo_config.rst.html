@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<title>REPOSITORY CONFIGURATION</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="repository-configuration">
+<h1 class="title">REPOSITORY CONFIGURATION</h1>
+
+<p>XC-CI1/ECA3-Queckenstedt</p>
+<p>Last change: 31.08.2021</p>
+<div class="section" id="table-of-content">
+<h1>Table of content</h1>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#repository-content">Repository content</a></div>
+<div class="line"><a class="reference internal" href="#folders">Folders</a></div>
+<div class="line"><a class="reference internal" href="#files">Files</a></div>
+<div class="line"><a class="reference internal" href="#preconditions">Preconditions</a></div>
+<div class="line"><a class="reference internal" href="#additional-hints">Additional hints</a></div>
+<div class="line"><a class="reference internal" href="#how-to-start">How to start?</a></div>
+<div class="line"><a class="reference internal" href="#references">References</a></div>
+</div>
+</div>
+<div class="section" id="repository-content">
+<h1>Repository content</h1>
+<ul class="simple">
+<li>Package code</li>
+<li>Sphinx documentation project files</li>
+<li>Additional source files needed for package documentation</li>
+<li>Application to generate the package documentation</li>
+<li>Application to install the package (including the package documentation)</li>
+</ul>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="folders">
+<h1>Folders</h1>
+<dl class="docutils">
+<dt><tt class="docutils literal">atest</tt></dt>
+<dd>Contains test files.</dd>
+<dt><tt class="docutils literal">config</tt></dt>
+<dd><p class="first">Contains a <tt class="docutils literal">CConfig</tt> class storing all repository specific values like
+the name of the package, the name of the author and so on.</p>
+<p>Computes all paths to files and folders inside the repository and inside the
+installation location (usually the <tt class="docutils literal"><span class="pre">site-packages</span></tt> folder of the Python installation)
+relative to the position of the application that imports <tt class="docutils literal">CConfig</tt>.</p>
+<p class="last">All documentation and setup related scripts need to import this class and need to work with the provided values
+to avoid duplicate definition of common parameter.</p>
+</dd>
+<dt><tt class="docutils literal">doc</tt></dt>
+<dd><p class="first">Sphinx package documentation project root folder.</p>
+<p>Contains all files related to Sphinx package documentation:</p>
+<ul class="last simple">
+<li>Sphinx project files (<tt class="docutils literal">conf.py</tt>, <tt class="docutils literal">index.rst</tt>)</li>
+<li>Additional documentation source files in reStructuredText format (<tt class="docutils literal">.rst</tt>), pictures, LaTeX addons, ...</li>
+<li>The generated package documentation itself (formats: HTML, TEX, PDF)</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal">doc/_static</tt></dt>
+<dd>Do not remove; required by Sphinx.</dd>
+<dt><tt class="docutils literal">doc/_templates</tt></dt>
+<dd>Do not remove; required by Sphinx.</dd>
+<dt><tt class="docutils literal">doc/_build/html</tt></dt>
+<dd>Sphinx output: HTML version of package documentation.</dd>
+<dt><tt class="docutils literal">doc/_build/latex</tt></dt>
+<dd><p class="first">Sphinx output: LaTeX and PDF version of package documentation.</p>
+<p>The PDF version requires a LaTeX installation under <tt class="docutils literal"><span class="pre">%ROBOTLATEXPATH%/miktex/bin/x64/pdflatex.exe</span></tt>
+together <tt class="docutils literal">with self.__bGenPDFSupported = True</tt> (default).</p>
+<p class="last">This is defined in <tt class="docutils literal">config/CConfig.py</tt>.</p>
+</dd>
+<dt><tt class="docutils literal">doc/additional_doc</tt></dt>
+<dd><p class="first">Additional files in reStructuredText format that have to be added to the package documentation
+(additionally to the content of the docstrings of the documented Python modules within the package).</p>
+<p class="last">Files inside this folder have to be listed within <tt class="docutils literal">doc/index.rst</tt>.</p>
+</dd>
+<dt><tt class="docutils literal">doc/images</tt></dt>
+<dd><p class="first">Images to be added to the package documentation.</p>
+<p>The intention behind this is to have the possibility to add pictures to additional files within <tt class="docutils literal">doc/additional_doc</tt>.</p>
+<p><strong>Caution:</strong> The links to picture files have to be absolute! The reference is the root path of the Sphinx documentation project (<tt class="docutils literal">doc</tt>)
+and not the position of the document that imports the picture!</p>
+<p>Sphinx puts the documentation into <tt class="docutils literal">doc/_build/html</tt> and <tt class="docutils literal">doc/_build/latex</tt>. These are complete different locations
+than the root folders <tt class="docutils literal">doc/additional_doc</tt> and <tt class="docutils literal">doc/images</tt>. While generating the documentation Sphinx takes care about a proper conversion of
+all links to imported pictures (also the pictures are copied; the content of <tt class="docutils literal">doc/_build</tt> is standalone)!</p>
+<p>Example: How to import a picture within an additional rst file:</p>
+<p><tt class="docutils literal">.. image:: /images/DocTest.jpg</tt></p>
+<p class="last">Impediment: LaTeX does not support bitmaps (in opposite to HTML). Please use the jpg or png format for imported pictures.</p>
+</dd>
+<dt><tt class="docutils literal">&lt;package name&gt;</tt></dt>
+<dd>The Python package itself</dd>
+</dl>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="files">
+<h1>Files</h1>
+<dl class="docutils">
+<dt><tt class="docutils literal">setup.py</tt></dt>
+<dd><p class="first">Extended package installation.</p>
+<p>Includes the call of <tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt>.</p>
+<p>Also all destination folders are deleted at the beginning.</p>
+<p>Package installation:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">%ROBOTPYTHONPATH%/Lib/site-packages/&lt;package</span> name&gt;</tt></li>
+</ul>
+<p>Package documentation installation:</p>
+<ul class="last simple">
+<li><tt class="docutils literal"><span class="pre">%ROBOTPYTHONPATH%/Lib/site-packages/&lt;package</span> name&gt;_doc</tt></li>
+</ul>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt></dt>
+<dd><p class="first">Generates the package documentation.</p>
+<p>Access:</p>
+<ul class="simple">
+<li><tt class="docutils literal">doc/_build/html/index.html</tt></li>
+<li><tt class="docutils literal"><span class="pre">doc/_build/latex/*.tex</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">doc/_build/latex/*.pdf</span></tt></li>
+</ul>
+<p class="last">Previous output is deleted at the beginning.</p>
+</dd>
+<dt><tt class="docutils literal">config/CConfig.py</tt></dt>
+<dd>The repository configuration contains all repository specific information like the name of the Python package and the name of the author,
+and also computes the paths to files and folders needed by <tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt> and <tt class="docutils literal">setup_ext.py</tt>.</dd>
+<dt><tt class="docutils literal">conf.py</tt></dt>
+<dd>The configuration file for the Sphinx documentation builder. Contains also repository specific adaptions that must be done manually
+(this file does not use <tt class="docutils literal">config/CConfig.py</tt>).</dd>
+<dt><tt class="docutils literal">index.rst</tt></dt>
+<dd><p class="first">The Sphinx documentation master file.</p>
+<p>Settings to make here:</p>
+<ul class="last simple">
+<li>Include additional rst files (if required)</li>
+<li>List the names of all Python modules of the package (that shall be part of the package documentation)</li>
+<li>Define the structure of the table of content of the package documentation</li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="preconditions">
+<h1>Preconditions</h1>
+<ul>
+<li><p class="first">The generation of the package documentation in <tt class="docutils literal">HTML</tt> format and in <tt class="docutils literal">TEX</tt> format requires <em>Sphinx</em>.</p>
+</li>
+<li><p class="first">The generation of a <tt class="docutils literal">PDF</tt> document out of <tt class="docutils literal">TEX</tt> sources requires <em>LaTeX</em>.</p>
+</li>
+<li><p class="first">The conversion between several markdown formats requires <em>pandoc</em> and <em>pypandoc</em>.</p>
+</li>
+<li><p class="first">It is assumed that the repository documentation happens based on the file <tt class="docutils literal">README.rst</tt> within the repository root folder.</p>
+<p>The <tt class="docutils literal">md</tt> version of this file (<tt class="docutils literal">README.md</tt>) is created automatically with the help of pypandoc (triggered by <tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt>;
+output within same folder).</p>
+<p>Therefore the file <tt class="docutils literal">README.md</tt> must not be edited manually. Manual changes within this file will be overwritten
+with the next call of <tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt>.</p>
+</li>
+</ul>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="additional-hints">
+<h1>Additional hints</h1>
+<ul>
+<li><p class="first">Empty lines are a syntax element of markdown. For proper conversion between several markdown formats it is strongly required
+that the source file has proper line endings (<strong>LF</strong> for Linux and <strong>CR+LF</strong> for Windows). If not pandoc creates improper output.</p>
+<p>In case of doubts please check the settings of the editor you use.</p>
+</li>
+<li><p class="first">The conversion of <tt class="docutils literal">README.rst</tt> to <tt class="docutils literal">README.md</tt> is done with the help of pypandoc. This means that Python code is involved.</p>
+<p>When writing back the converted file content to the output file it is not enough simply to use <tt class="docutils literal">outputfilehandle.write(sFileContent)</tt>,
+because this adds additional blank lines.</p>
+<p>It is an experience that only <tt class="docutils literal">splitlines()</tt> is able to handle operating system dependend line breaks in a proper way.
+Therefore it is required to go the long winded way:</p>
+<div class="line-block">
+<div class="line"><tt class="docutils literal">sFileContent = pypandoc.convert_file(sFile_rst, 'md')</tt></div>
+<div class="line"><tt class="docutils literal">hFile_md = open(sFile_md, &quot;w&quot;, <span class="pre">encoding=&quot;utf-8&quot;)</span></tt></div>
+<div class="line"><tt class="docutils literal">listFileContent = sFileContent.splitlines()</tt></div>
+<div class="line"><tt class="docutils literal">for sLine in listFileContent:</tt></div>
+<div class="line-block">
+<div class="line"><tt class="docutils literal">hFile_md.write(sLine + &quot;\n&quot;)</tt></div>
+</div>
+<div class="line"><tt class="docutils literal">hFile_md.close()</tt></div>
+</div>
+</li>
+<li><p class="first">It is possible to add other <tt class="docutils literal">rst</tt> files to the package documentation. Even in case of they are <em>standalone</em> it has to be considered
+that within the package documentation the content of these files <em>is only a part of a larger document</em>.</p>
+<p>You may cause conflicts (e.g. <em>duplicate label</em> warnings) when inside the additional <tt class="docutils literal">rst</tt> files you accidently define the same headlines
+or labels than already used by Sphinx for the package documentation.</p>
+<p>In case of doubts please refer to <tt class="docutils literal">index.rst</tt> in which the main structure of the package documentation is defined.</p>
+</li>
+</ul>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="how-to-start">
+<h1>How to start?</h1>
+<ul class="simple">
+<li>Prepare docstrings of all Python modules of the package accordingly to reStructuredText syntax</li>
+<li>Add additional files if required</li>
+<li>Adapt <tt class="docutils literal">conf.py</tt> and <tt class="docutils literal">index.rst</tt></li>
+<li>Adapt <tt class="docutils literal">config/CConfig.py</tt></li>
+<li>Give it a try: <tt class="docutils literal"><span class="pre">sphinx-makeall.py</span></tt></li>
+</ul>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+<div class="section" id="references">
+<h1>References</h1>
+<p>For further details about documentation please refer to:</p>
+<p><a class="reference external" href="https://devguide.python.org/documenting/">https://devguide.python.org/documenting/</a></p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">https://docutils.sourceforge.io/docs/ref/rst/directives.html</a></p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html</a></p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">https://docutils.sourceforge.io/docs/user/rst/quickref.html</a></p>
+<p><a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></p>
+<p><a class="reference external" href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a></p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">https://www.sphinx-doc.org/en/master/usage/configuration.html</a></p>
+<p><a class="reference internal" href="#table-of-content">TOC</a></p>
+</div>
+</div>
+</body>
+</html>
