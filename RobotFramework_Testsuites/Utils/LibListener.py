@@ -84,12 +84,13 @@ class LibListener(object):
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionHW = BuiltIn().get_variable_value('${HW_VERSION}')
             if '${testversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${TEST_VERSION}')
-                
-            try:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-            except:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                pass
+            
+            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile != '':
+                try:
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                except:
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                    pass
             
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount)
