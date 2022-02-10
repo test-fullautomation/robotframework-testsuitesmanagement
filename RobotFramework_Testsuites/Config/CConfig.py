@@ -76,6 +76,7 @@ class CConfig():
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
+    bConfigLoaded     = False
     oConfigParams     = {}
     sConfigName       = 'default'
     sProjectName      = None
@@ -194,7 +195,8 @@ class CConfig():
 
     @staticmethod
     def loadCfg(self):
-       
+        
+        self.bConfigLoaded = True
         if not self.rConfigFiles.sLevel1:
             if self.rConfigFiles.sLevel2 == True:
                 self.__loadConfigFileLevel2()

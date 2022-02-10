@@ -32,31 +32,38 @@ class CSetupKeywords(object):
     
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
+
         if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg:
             BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             return
-        if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
-            if sTestsuiteCfgFile != '':
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
-                try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-                except Exception as error:
-                    BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
-            else:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
-                try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-                except Exception as error:
-                    BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
-            logger.info('Running with configuration level: 1')
-        elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
-            logger.info('Running with configuration level: 2')
-        elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
-            logger.info('Running with configuration level: 3')
         else:
-            logger.info('Running with configuration level: 4')
+            if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+                if sTestsuiteCfgFile != '':
+                    if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+                        logger.error('Configuration \"%s\" was already loaded for this Robot run!!!' \
+                            %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
+                    else:
+                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
+                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                        try:
+                            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                        except Exception as error:
+                            BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
+                else:
+                    if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
+                        try:
+                            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                        except Exception as error:
+                            BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
+            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+                logger.info('Running with configuration level: 1')
+            elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
+                logger.info('Running with configuration level: 2')
+            elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
+                logger.info('Running with configuration level: 3')
+            else:
+                logger.info('Running with configuration level: 4')
         
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info('Suite Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath))

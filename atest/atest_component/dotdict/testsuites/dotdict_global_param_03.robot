@@ -13,25 +13,12 @@
 #  limitations under the License.
 *** Settings ***
 Library      RobotFramework_Testsuites    WITH NAME    testsuites
-Suite Setup      testsuites.testsuite_setup    ../general_config/testsuites_config.json
+Suite Setup      testsuites.testsuite_setup    ../../../general_config/testsuites_config.json
 Suite Teardown   testsuites.testsuite_teardown
 Test Setup       testsuites.testcase_setup
 Test Teardown    testsuites.testcase_teardown
 
 *** Test Cases ***
-Test Dotdict Config Params 001
-    Log   ${CONFIG}
-    Should Be Equal    ${CONFIG.Project}    ${CONFIG}[Project] 
-    Should Be Equal    ${CONFIG.WelcomeString}    ${CONFIG}[WelcomeString] 
-    Should Be Equal    ${CONFIG.TargetName}    ${CONFIG}[TargetName]
-    Should Be Equal    ${CONFIG.Maximum_version}    ${CONFIG}[Maximum_version]
-    Should Be Equal    ${CONFIG.Minimum_version}    ${CONFIG}[Minimum_version]
-    
-Test Dotdict Global Params 002
-    Log   ${CONFIG}
-    Should Be Equal    ${gGlobalStructure.general}    ${gGlobalStructure}[general]
-    Should Be Equal    ${dSUT.tuner.fm.frequency.nMax_MHz}    ${dSUT}[tuner][fm][frequency][nMax_MHz]
-    
 Test Dotdict Global Params 003
     [Documentation]    "." is included in parameter name -> could not using dotdict but the traiditional way still works
     Log    ${dSUT}[system][hardware][wifi.sAddress]
@@ -39,4 +26,3 @@ Test Dotdict Global Params 003
     Should Be Equal    ${dSUT.system.hardware.sSample}    ${dSUT}[system][hardware][sSample]
     Should Be Equal    ${dSUT}[system][hardware][wifi.sAddress]    123:123:123:123
     Should Be Equal    ${dSUT}[system][hardware][bt.sAdress]    12:12:14:15
-    
