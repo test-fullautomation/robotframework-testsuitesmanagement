@@ -91,16 +91,12 @@ class LibListener(object):
                 except:
                     RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
                     pass
-            
+                    
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount)
         dispatch('scope_start', attrs['longname'])
         
     def _end_suite(self, name, attrs):
-        if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = False
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = False
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
         dispatch('scope_end', attrs['longname'])
         
     def _start_test(self, name, attrs):
