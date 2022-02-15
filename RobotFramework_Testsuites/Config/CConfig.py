@@ -284,6 +284,7 @@ class CConfig():
         BuiltIn().set_suite_metadata("machine", self.__getMachineName(), top=True)
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
+        BuiltIn().set_suite_metadata("version", VERSION, top=True)
         
         CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
         
