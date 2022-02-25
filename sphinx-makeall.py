@@ -1,3 +1,5 @@
+# **************************************************************************************************************
+#
 #  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,14 +13,12 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-
-# -*- coding: utf-8 -*-
-
+#
 # **************************************************************************************************************
 #
 # sphinx-makeall.py
 #
-# XC-CI1/ECA3-Queckenstedt
+# XC-CT/ECA3-Queckenstedt
 #
 # Uses the Python documentation tool Sphinx to generate the documentation of Python modules
 # - based on the docstrings inside the Python modules and
@@ -40,6 +40,9 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
+# 02.11.2021 / XC-CT/ECA3-Queckenstedt
+# gen_doc_pdf called twice (to get also a table of content added to PDF file)
+# 
 # 30.09.2021 / XC-CI1/ECA3-Queckenstedt
 # Added wrapper for error messages
 # 
@@ -94,7 +97,7 @@ def convert_repo_readme(oRepositoryConfig=None):
 
     if os.path.isfile(sReadMe_rst) is False:
         print()
-        printerror("Missing readme file '" + sReadMe_rst + "'")
+        printerror(f"Missing readme file '{sReadMe_rst}'")
         print()
         return ERROR
 
@@ -106,9 +109,9 @@ def convert_repo_readme(oRepositoryConfig=None):
     hFile_md.close()
 
     print()
-    print(COLBY + "File '" + sReadMe_rst + "'")
+    print(COLBY + f"File '{sReadMe_rst}'")
     print(COLBY + "converted to")
-    print(COLBY + "'" + sReadMe_md + "'")
+    print(COLBY + f"'{sReadMe_md}'")
     print()
 
     return SUCCESS
@@ -150,11 +153,11 @@ def sphinx_build(sFormat=None, oRepositoryConfig=None):
         return ERROR
 
     listCmdLineParts = []
-    listCmdLineParts.append("\"" + str(sPython) + "\"")
-    listCmdLineParts.append("\"" + str(SPHINXBUILD) + "\"")
-    listCmdLineParts.append("-M " + sFormat)
-    listCmdLineParts.append("\"" + str(SOURCEDIR) + "\"")
-    listCmdLineParts.append("\"" + str(BUILDDIR) + "\"")
+    listCmdLineParts.append(f"\"{sPython}\"")
+    listCmdLineParts.append(f"\"{SPHINXBUILD}\"")
+    listCmdLineParts.append(f"-M {sFormat}")
+    listCmdLineParts.append(f"\"{SOURCEDIR}\"")
+    listCmdLineParts.append(f"\"{BUILDDIR}\"")
 
     sCmdLine = " ".join(listCmdLineParts)
     del listCmdLineParts
@@ -203,10 +206,10 @@ def gen_doc_pdf(oRepositoryConfig=None):
         return ERROR
 
     # LaTeX sources are placed by Sphinx within subfolder 'latex' of folder 'BUILDDIR'
-    sLaTeXRoot = os.path.normpath(BUILDDIR + "/latex")        # not part of oRepositoryConfig; only needed here!
+    sLaTeXRoot = os.path.normpath(f"{BUILDDIR}/latex")        # not part of oRepositoryConfig; only needed here!
     if os.path.isdir(sLaTeXRoot) is False:
         print()
-        printerror("Missing LaTeX documentation folder '" + str(sLaTeXRoot) + "'")
+        printerror(f"Missing LaTeX documentation folder '{sLaTeXRoot}'")
         print()
         return ERROR
 
@@ -221,17 +224,17 @@ def gen_doc_pdf(oRepositoryConfig=None):
 
     if len(listTeXFiles) == 0:
         print()
-        printerror("Missing LaTeX source files (.tex) within '" + str(sLaTeXRoot) + "'")
+        printerror(f"Missing LaTeX source files (.tex) within '{sLaTeXRoot}'")
         print()
         return ERROR
 
     for sTeXFile in listTeXFiles:
-        print(COLBY + "* Rendering file '" + sTeXFile + "'")
+        print(COLBY + f"* Rendering file '{sTeXFile}'")
         print()
 
         listCmdLineParts = []
-        listCmdLineParts.append("\"" + str(sLaTeXInterpreter) + "\"")
-        listCmdLineParts.append("\"" + str(sTeXFile) + "\"")
+        listCmdLineParts.append(f"\"{sLaTeXInterpreter}\"")
+        listCmdLineParts.append(f"\"{sTeXFile}\"")
 
         sCmdLine = " ".join(listCmdLineParts)
         del listCmdLineParts
@@ -248,7 +251,7 @@ def gen_doc_pdf(oRepositoryConfig=None):
             os.chdir(sLaTeXRoot) # otherwise LaTeX compiler is not able to find files inside
             nReturn = subprocess.call(listCmdLineParts)
             print()
-            print("LaTeX compiler returned " + str(nReturn))
+            print(f"LaTeX compiler returned {nReturn}")
             print()
             os.chdir(cwd) # restore original value
         except Exception as ex:
@@ -258,7 +261,7 @@ def gen_doc_pdf(oRepositoryConfig=None):
             return ERROR
 
         if nReturn != SUCCESS:
-            printerror("LaTeX compiler not returned expected value " + str(SUCCESS))
+            printerror(f"LaTeX compiler not returned expected value {SUCCESS}")
             print()
             return nReturn
 
@@ -267,7 +270,7 @@ def gen_doc_pdf(oRepositoryConfig=None):
             for name in files:
                 if name.lower().endswith(".pdf"):
                     sPDFFile = os.path.join(root, name)
-                    print(COLBY + "* Created '" + sPDFFile + "'")
+                    print(COLBY + f"* Created '{sPDFFile}'")
         print()
 
     return nReturn
@@ -318,6 +321,13 @@ if nReturn != SUCCESS:
 # -- generating new documentation in PDF format (requires configured LaTeX)
 sLaTeXInterpreter = oRepositoryConfig.Get('sLaTeXInterpreter')
 if sLaTeXInterpreter is not None:
+    print("Calling LaTeX PDF renderer (1/2)")
+    nReturn = gen_doc_pdf(oRepositoryConfig)
+    if nReturn != SUCCESS:
+        printerror("PDF generation failed")
+        print()
+        sys.exit(nReturn)
+    print("Calling LaTeX PDF renderer (2/2) - to get referencs and table of content updated")
     nReturn = gen_doc_pdf(oRepositoryConfig)
     if nReturn != SUCCESS:
         printerror("PDF generation failed")

@@ -13,8 +13,10 @@
 #  limitations under the License.
 
 import os
-import RobotFramework_Testsuites
-from RobotFramework_Testsuites.Config import CConfig
+# import RobotFramework_Testsuites  # Sphinx fix to be verified
+# from RobotFramework_Testsuites.Config import CConfig  # Sphinx fix to be verified
+from Config import CConfig # Sphinx fix to be verified
+
 from .Events import dispatch
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api import logger

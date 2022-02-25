@@ -4,8 +4,6 @@ ROBFW-AIO Testsuite's Documentation
 Introduction:
 -------------
 
-.. image:: /images/DocTest.png
-
 The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
 python package to provide the enhanced features such as json configuration files, 
 4 different levels of configuation, config object and global params, schema validation,...
@@ -36,7 +34,7 @@ The level 1 configuration could be set by defined the ``${config_file}`` in ``**
 
 Ex:
 
-.. code-block:: Robot
+.. code-block::
 
 	*** Variables ***
 	${config_file}   <Path_to_configuration_file>
@@ -57,7 +55,7 @@ If the **level 1** is not configured, it will check the configuration for **leve
 In level 2 configuration, user has to create a json file which contains different variants point 
 to different configuration files. For example, we create the ``variants_cfg.json`` with content below:
 
-.. code-block:: json
+.. code-block::
 
 	//*****************************************************************************
 	// The file configures the access to all variant dependent robot_config*.json
@@ -95,7 +93,7 @@ to different configuration files. For example, we create the ``variants_cfg.json
 
 User can set configuration level 2 only in testsuite like below:
 
-.. code-block:: robot
+.. code-block::
 
 	*** Settings ***
 	Library      RobotFramework_Testsuites    WITH NAME    testsuites
@@ -135,7 +133,7 @@ The default configuration file (``robot_config.json``) in installation directory
 
 The default configuration file just contains some basic parameters:
 
-.. code-block:: json
+.. code-block::
 
 	{
 	"Project": "G3g",
@@ -163,7 +161,7 @@ How to use the parameters defined in json configuration file
 We design the special format of json configuration file, so users can define the global variables 
 for Robot project:
 
-.. code-block:: json
+.. code-block::
 
 	//**************************************************************************
 	// 
@@ -201,7 +199,7 @@ be difined in the ``{CONFIG}`` variables, and we can use them by calling ``{CONF
 
 Ex: If we create json cofiguration like below:
 
-.. code-block:: json
+.. code-block::
 
 	{
 	"Project": "G3g",
@@ -226,5 +224,5 @@ or ``{CONFIG}[WelcomeString]``
 Feedback
 --------
 
-To give us a feedback, you can send an email to `Thomas Pollerspöck <Thomas.Pollerspoeck@de.bosch.com>`_ or
-`RBVH-ECM-Automation_Test_Framework-Associates <RBVH-ENG2-CMD-Associates@bcn.bosch.com>`_
+To give us a feedback, you can send an email to `Thomas Pollerspöck <mailto:Thomas.Pollerspoeck@de.bosch.com>`_ or
+`RBVH-ECM-Automation_Test_Framework-Associates <mailto:RBVH-ENG2-CMD-Associates@bcn.bosch.com>`_

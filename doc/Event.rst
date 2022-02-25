@@ -1,5 +1,5 @@
 Utils.Events.Event module
---------------------------
+-------------------------
 
 .. automodule:: Utils.Events.Event
    :members:

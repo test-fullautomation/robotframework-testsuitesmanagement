@@ -3,16 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. include:: ./additional_doc/ROBFW_AIO_Testsuite.rst
 
-
-RobotFramework TestsuiteManagement's API!
-=========================================
+API Contents
+------------
 
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
 
+   ./additional_doc/ROBFW_AIO_Testsuite.rst
    ./CConfig.rst
    ./COnFailureHandle.rst
    ./CSetup.rst
@@ -20,11 +19,5 @@ RobotFramework TestsuiteManagement's API!
    ./ScopeEvent.rst
    ./CStruct.rst
    ./LibListener.rst
+   ./version.rst
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

@@ -34,7 +34,9 @@ from jsonschema import validate
 from builtins import staticmethod
 from dotdict import dotdict
 
-from RobotFramework_Testsuites.Utils.CStruct import CStruct
+# from RobotFramework_Testsuites.Utils.CStruct import CStruct # Sphinx fix to be verified
+from Utils.CStruct import CStruct # Sphinx fix to be verified
+
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
 from robot.version import get_full_version, get_version
@@ -49,31 +51,39 @@ VERSION = "0.4.11.0"
 
 class CConfig():
     '''
-    Defines the properties of configuration
-    Holds the identified config files.
-    Level1 is highest priority, Level4 is lowest priority.
+Defines the properties of configuration
+Holds the identified config files.
+Level1 is highest priority, Level4 is lowest priority.
 
-    Level1: handed over by command line argument.
-    Level2: read from content of 
-                                {
-                                  "default": {
-                                    "name": "robot_config.json",
-                                    "path": ".../config/"
-                                  },
-                                  "variant_0": {
-                                    "name": "robot_config.json",
-                                    "path": ".../config/"
-                                  },
-                                  "variant_1": {
-                                    "name": "robot_config_variant_1.json",
-                                    "path": ".../config/"
-                                  },
-                                    ...
-                                    ...
-                                }
-    Level3: read in testsuite folder /config/robot_config.json
-    Level4: read from ROBFW install folder /RobotFramework/defaultconfig/robot_config.json
+(remaining content needs to be fixed and restored)
+
     '''
+    # '''
+# Defines the properties of configuration
+# Holds the identified config files.
+# Level1 is highest priority, Level4 is lowest priority.
+
+# Level1: handed over by command line argument.
+# Level2: read from content of
+                            # {
+                              # "default": {
+                                # "name": "robot_config.json",
+                                # "path": ".../config/"
+                              # },
+                              # "variant_0": {
+                                # "name": "robot_config.json",
+                                # "path": ".../config/"
+                              # },
+                              # "variant_1": {
+                                # "name": "robot_config_variant_1.json",
+                                # "path": ".../config/"
+                              # },
+                                # ...
+                                # ...
+                            # }
+# Level3: read in testsuite folder /config/robot_config.json
+# Level4: read from ROBFW install folder /RobotFramework/defaultconfig/robot_config.json
+    # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
     bConfigLoaded     = False
@@ -503,22 +513,39 @@ class CConfig():
     @staticmethod
     def sNormalizePath(sPath):
         '''
-        staticmethod sNormalizePath:
-        - UNC paths
-        e.g. \\hi-z4939\ccstg\....
-        - escape sequences in windows paths
-        e.g. c:\robottest\tuner   \t will be interpreted as tab, the result
-        after processing it with an regexp wuld be
-            c:\robottest   uner
-    
-        In order to solve this problems any slash will be replaced from backslash
-        to slash, only the two UNC backslashes must be kept if contained.
 
-        Args:
-            sPath: string
-        Returns:
-            sNPath: string
+staticmethod sNormalizePath:
+
+(remaining content needs to be fixed and restored)
+
         '''
+        # '''
+
+# staticmethod sNormalizePath:
+
+# - UNC paths
+
+    # e.g. \\hi-z4939\ccstg\....
+
+# - escape sequences in windows paths
+
+    # e.g. c:\robottest\tuner   \t will be interpreted as tab, the result
+    # after processing it with an regexp would be
+
+    # c:\robottest   uner
+
+# In order to solve this problems any slash will be replaced from backslash
+# to slash, only the two UNC backslashes must be kept if contained.
+
+# Args:
+
+    # sPath: string
+
+# Returns:
+
+    # sNPath: string
+
+        # '''
         if sPath.strip()=='':
             return ''
         
@@ -692,13 +719,19 @@ class CConfig():
     @staticmethod
     def tupleVersion(sVersion):
         '''
-        Return a tuple which contains the (major, minor, patch) version.
-          - In case minor/patch version is missing, it is set to 0.
-            E.g: 1   => 1.0.0
-                 1.1 => 1.1.0
-          - Support version contains Alpha (a), Beta (b) or Release candidate (rc):
-            E.g: 1.2rc3, 1.2.1b1, ...
+Return a tuple which contains the (major, minor, patch) version.
+
+(remaining content needs to be fixed and restored)
+
         '''
+        # '''
+        # Return a tuple which contains the (major, minor, patch) version.
+          # - In case minor/patch version is missing, it is set to 0.
+            # E.g: 1   => 1.0.0
+                 # 1.1 => 1.1.0
+          # - Support version contains Alpha (a), Beta (b) or Release candidate (rc):
+            # E.g: 1.2rc3, 1.2.1b1, ...
+        # '''
         lVersion = sVersion.split(".")
         if len(lVersion) == 1:
             lVersion.extend(["0", "0"])
