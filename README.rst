@@ -148,11 +148,19 @@ User can access dictionary object in robot test script by called ``${dict}[abc][
 **Note:** In case a parameter name contains a ".", then we could not use dotdict but the traditional way ``${dict}[abc][def]`` 
 is still working.
 
+
+Package Documentation
+~~~~~~~~~~~~~~~~~~~~~
+
+A detailed documentation of the Python Extensions Collection package can be found here:
+`RobotFramework-Testsuites.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/doc/_build/latex/RobotFramework-Testsuites.pdf>`_
+
+
 Feedback
 --------
 
-To give us a feedback, you can send an email to `Thomas Pollerspöck <Thomas.Pollerspoeck@de.bosch.com>`_ or
-`RBVH-ECM-Automation_Test_Framework-Associates <RBVH-ENG2-CMD-Associates@bcn.bosch.com>`_
+To give us a feedback, you can send an email to `Thomas Pollerspöck <mailto:Thomas.Pollerspoeck@de.bosch.com>`_ or
+`RBVH-ECM-Automation_Test_Framework-Associates <mailto:RBVH-ENG2-CMD-Associates@bcn.bosch.com>`_
 
 About
 -----
@@ -160,25 +168,25 @@ About
 Maintainers
 ~~~~~~~~~~~
 
-`Thomas Pollerspöck <Thomas.Pollerspoeck@de.bosch.com>`_
+`Thomas Pollerspöck <mailto:Thomas.Pollerspoeck@de.bosch.com>`_
 
 Contributors
 ~~~~~~~~~~~~
 
-`Mai Dinh Nam Son <Son.MaiDinhNam@vn.bosch.com>`_
+`Mai Dinh Nam Son <mailto:Son.MaiDinhNam@vn.bosch.com>`_
 
-`Tran Duy Ngoan <Ngoan.TranDuy@vn.bosch.com>`_
+`Tran Duy Ngoan <mailto:Ngoan.TranDuy@vn.bosch.com>`_
 
-`Nguyen Huynh Tri Cuong <Cuong.NguyenHuynhTri@vn.bosch.com>`_
+`Nguyen Huynh Tri Cuong <mailto:Cuong.NguyenHuynhTri@vn.bosch.com>`_
 
-`Tran Hoang Nguyen <Nguyen.TranHoang@vn.bosch.com>`_
+`Tran Hoang Nguyen <mailto:Nguyen.TranHoang@vn.bosch.com>`_
 
-`Holger Queckenstedt <Holger.Queckenstedt@de.bosch.com>`_
+`Holger Queckenstedt <mailto:Holger.Queckenstedt@de.bosch.com>`_
 
 License
 -------
 
-Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+Copyright 2020-2022 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

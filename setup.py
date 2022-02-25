@@ -1,3 +1,5 @@
+# **************************************************************************************************************
+#
 #  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,14 +13,12 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-
-# -*- coding: utf-8 -*-
-
+#
 # **************************************************************************************************************
 #
 # setup.py
 #
-# CM-CI1/ECA3-Queckenstedt
+# XC-CT/ECA3-Queckenstedt
 #
 # Extends the standard setuptools installation by adding the documentation in HTML format
 # (requires installation mode) and tidying up some folders.
@@ -28,8 +28,8 @@
 # This script deletes folders (as defined in config.CConfig, depending on the position of this script):
 # - previous builds within this repository
 # - previous installations within
-#   * %ROBOTPYTHONPATH%\Lib\site-packages (Windows)
-#   * ${RobotPythonPath}/../lib/python3.9/site-packages (Linux)
+#   * <Python installation>\Lib\site-packages (Windows)
+#   * <Python installation>/../lib/python3.9/site-packages (Linux)
 #
 # before the build and the installation start again!
 #
@@ -48,21 +48,20 @@
 # to avoid that also config.CConfig() and config.CExtendedSetup() are part of the distribution.
 # CConfig and CExtendedSetup() are only repository internal helper.
 #
-# * Possible improvements:
-#
-#   - What does install.run(self) return? How to realize error handling?
-#
 # * Known issues:
 #
-#   - setuptools do not properly update an existing package installation under %ROBOTPYTHONPATH%\Lib\site-packages\<package name>!
+#   - setuptools do not properly update an existing package installation under <Python installation>\Lib\site-packages\<package name>!
 #     > Files modified manually within installation folder, are still modified after repeated execution of setuptools.
 #     > Files added manually within installation folder, are still present there after repeated execution of setuptools.
 #     > Only files deleted manually within installation folder, are are restored there after repeated execution of setuptools.
-#   - No such issues with %ROBOTPYTHONPATH%\Lib\site-packages\<package name>-<versions>.egg-info.
+#   - No such issues with <Python installation>\Lib\site-packages\<package name>-<versions>.egg-info.
 #   - Solution: explicit deletion of all previous output (all documentation-, build- and installation-folder, except the egg-info folder)
 #     (see 'delete_previous_build()' and 'delete_previous_installation()')
 #
 # --------------------------------------------------------------------------------------------------------------
+#
+# 22.02.2022 / XC-CT/ECA3-Queckenstedt
+# "sdist bdist_wheel" maintenance: some steps moved from inside 'ExtendedInstallCommand' to outside
 #
 # 11.10.2021 / XC-CI1/ECA3-Queckenstedt
 # Fixed computation order of readme files together with long_description
@@ -103,38 +102,42 @@ def printexception(sMsg):
 # --------------------------------------------------------------------------------------------------------------
 
 class ExtendedInstallCommand(install):
-    """Extended installation for installation mode."""
+    """Extended setup for installation mode."""
+
     def run(self):
-        # Extended installation step 1/5 moved to outside ExtendedInstallCommand because results are needed earlier
-        print()
-        print(COLBY + "Extended installation step 2/5: Deleting previous setup outputs (build, dist, <package name>.egg-info within repository)")
-        print()
-        nReturn = oExtendedSetup.delete_previous_build()
-        if nReturn != SUCCESS:
-            return nReturn
-        print()
-        print(COLBY + "Extended installation step 3/5: Deleting previous package installation folder within site-packages") # (<package name> and <package name>_doc under %ROBOTPYTHONPATH%\Lib\site-packages
-        print()
-        nReturn = oExtendedSetup.delete_previous_installation()
-        if nReturn != SUCCESS:
-            return nReturn
-        print(COLBY + "Extended installation step 4/5: install.run(self)") # creates the build folder .\build
-        print()
-        install.run(self) # TODO: What does install.run(self) return? How to realize error handling?
-        print()
-        print(COLBY + "Extended installation step 5/5: Add html documentation to package installation folder") # (./doc/_build/html to %ROBOTPYTHONPATH%\Lib\site-packages\<package name>_doc)
-        print()
-        nReturn = oExtendedSetup.add_htmldoc_to_installation()
-        if nReturn != SUCCESS:
-            return nReturn
-        print()
-        print(COLBG + "Extended installation done")
-        print()
+
+        listCmdArgs = sys.argv
+        if ( ('install' in listCmdArgs) or ('build' in listCmdArgs) or ('sdist' in listCmdArgs) or ('bdist_wheel' in listCmdArgs) ):
+            print()
+            print(COLBY + "Extended setup step 4/5: install.run(self)") # creates the build folder .\build
+            print()
+            install.run(self) # TODO: What does install.run(self) return? How to realize error handling?
+            print()
+            if 'bdist_wheel' in listCmdArgs:
+                print(COLBY + "Extended setup step 5/5: Add html documentation to local wheel folder inside build")
+                print()
+                nReturn = oExtendedSetup.add_htmldoc_to_wheel()
+                if nReturn != SUCCESS:
+                    return nReturn
+                print()
+            else:
+                print(COLBY + "Extended setup step 5/5: Add html documentation to package installation folder") # (./doc/_build/html to <Python installation>\Lib\site-packages\<package name>_doc)
+                print()
+                nReturn = oExtendedSetup.add_htmldoc_to_installation()
+                if nReturn != SUCCESS:
+                    return nReturn
+                print()
+            print(COLBG + "Extended installation done")
+            print()
+
         return SUCCESS
 
 # eof class ExtendedInstallCommand(install):
 
 # --------------------------------------------------------------------------------------------------------------
+
+# -- Even in case of other command line parameters than 'install' or 'build' are used we need the following objects.
+#    (Without repository configuration commands like '--author-email' would not be possible)
 
 # -- setting up the repository configuration
 oRepositoryConfig = None
@@ -159,25 +162,45 @@ except Exception as ex:
 
 # --------------------------------------------------------------------------------------------------------------
 
-print()
-print(COLBY + "Entering extended installation")
-print()
-print(COLBY + "Extended installation step 1/5: Calling the documentation builder")
-# (previously called inside ExtendedInstallCommand - but this is too late, because the content of the initially
-# generated or updated README file is already needed for the long_description below.)
-print()
-nReturn = oExtendedSetup.gen_doc()
-if nReturn != SUCCESS:
-    sys.exit(nReturn)
-print()
+long_description = "long description" # variable is required even in case of other command line parameters than 'install' or 'build' are used
+
+listCmdArgs = sys.argv
+if ( ('install' in listCmdArgs) or ('build' in listCmdArgs) or ('sdist' in listCmdArgs) or ('bdist_wheel' in listCmdArgs) ):
+    print()
+    print(COLBY + "Entering extended installation")
+    print()
+
+    print(COLBY + "Extended setup step 1/5: Calling the documentation builder")
+    # (previously called inside ExtendedInstallCommand - but this is too late, because the content of the initially
+    # generated or updated README file is already needed for the long_description below.)
+    print()
+    nReturn = oExtendedSetup.gen_doc()
+    if nReturn != SUCCESS:
+        sys.exit(nReturn)
+
+    print(COLBY + "Extended setup step 2/5: Deleting previous setup outputs (build, dist, <package name>.egg-info within repository)")
+    print()
+    nReturn = oExtendedSetup.delete_previous_build()
+    if nReturn != SUCCESS:
+        sys.exit(nReturn)
+
+    if not 'bdist_wheel' in listCmdArgs:
+        print()
+        print(COLBY + "Extended setup step 3/5: Deleting previous package installation folder within site-packages") # (<package name> and <package name>_doc under <Python installation>\Lib\site-packages
+        print()
+        nReturn = oExtendedSetup.delete_previous_installation()
+        if nReturn != SUCCESS:
+            sys.exit(nReturn)
+
+    with open("README.md", "r", encoding="utf-8") as fh:
+        long_description = fh.read()
+    print()
+
 
 # --------------------------------------------------------------------------------------------------------------
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-    
-# --------------------------------------------------------------------------------------------------------------
-
+# This also handles the printing of help to console and therefore must be called in every case.
+# And therefore all variables and objects must exist (even in case of the values are not used).
 setuptools.setup(
     name         = str(oRepositoryConfig.Get('sPackageName')),
     version      = str(oRepositoryConfig.Get('sVersion')),
@@ -191,12 +214,17 @@ setuptools.setup(
     classifiers = [
         str(oRepositoryConfig.Get('sProgrammingLanguage')),
         str(oRepositoryConfig.Get('sLicence')),
-        str(oRepositoryConfig.Get('sOperatingSystem'))
+        str(oRepositoryConfig.Get('sOperatingSystem')),
+        str(oRepositoryConfig.Get('sDevelopmentStatus')),
+        str(oRepositoryConfig.Get('sIntendedAudience')),
+        str(oRepositoryConfig.Get('sTopic')),
     ],
     python_requires = str(oRepositoryConfig.Get('sPythonRequires')),
     cmdclass={
         'install': ExtendedInstallCommand,
     },
+    install_requires = oRepositoryConfig.Get('arInstallRequires'),
 )
 
 # --------------------------------------------------------------------------------------------------------------
+

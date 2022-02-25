@@ -1,5 +1,5 @@
 CConfig module
------------------------
+--------------
 
 .. automodule:: Config.CConfig
    :members:

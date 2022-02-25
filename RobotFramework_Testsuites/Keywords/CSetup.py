@@ -14,10 +14,13 @@
 
 import copy
 
-import RobotFramework_Testsuites
+# import RobotFramework_Testsuites
 from robot.api.deco import keyword
 from robot.api import logger
-from RobotFramework_Testsuites.Config import CConfig
+
+# from RobotFramework_Testsuites.Config import CConfig # Sphinx fix to be verified
+from Config import CConfig # Sphinx fix to be verified
+
 from lxml import etree
 
 from robot.libraries.BuiltIn import BuiltIn
