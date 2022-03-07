@@ -1,7 +1,7 @@
 CConfig module
 --------------
 
-.. automodule:: Config.CConfig
+.. automodule:: RobotFramework_Testsuites.Config.CConfig
    :members:
    :undoc-members:
    :show-inheritance:

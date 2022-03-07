@@ -1,7 +1,7 @@
 Keywords.CSetup module
 ----------------------
 
-.. automodule:: Keywords.CSetup
+.. automodule:: RobotFramework_Testsuites.Keywords.CSetup
    :members:
    :undoc-members:
    :show-inheritance:

@@ -18,8 +18,7 @@ import copy
 from robot.api.deco import keyword
 from robot.api import logger
 
-# from RobotFramework_Testsuites.Config import CConfig # Sphinx fix to be verified
-from Config import CConfig # Sphinx fix to be verified
+from RobotFramework_Testsuites.Config import CConfig
 
 from lxml import etree
 

@@ -1,7 +1,7 @@
 Keywords.COnFailureHandle module
 --------------------------------
 
-.. automodule:: Keywords.COnFailureHandle
+.. automodule:: RobotFramework_Testsuites.Keywords.COnFailureHandle
    :members:
    :undoc-members:
    :show-inheritance:
