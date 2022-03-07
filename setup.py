@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -59,6 +59,9 @@
 #     (see 'delete_previous_build()' and 'delete_previous_installation()')
 #
 # --------------------------------------------------------------------------------------------------------------
+#
+# 07.03.2022 / XC-CT/ECA3-Queckenstedt
+# Fixed 'packages' listing and the installation of additional files (json)
 #
 # 22.02.2022 / XC-CT/ECA3-Queckenstedt
 # "sdist bdist_wheel" maintenance: some steps moved from inside 'ExtendedInstallCommand' to outside
@@ -210,7 +213,15 @@ setuptools.setup(
     long_description = long_description,
     long_description_content_type = str(oRepositoryConfig.Get('sLongDescriptionContentType')),
     url = str(oRepositoryConfig.Get('sURL')),
-    packages = [str(oRepositoryConfig.Get('sPackageName')), ],
+
+    packages = [str(oRepositoryConfig.Get('sPackageName')),
+                str(oRepositoryConfig.Get('sPackageName')) + ".Config",
+                str(oRepositoryConfig.Get('sPackageName')) + ".Keywords",
+                str(oRepositoryConfig.Get('sPackageName')) + ".Utils",
+                str(oRepositoryConfig.Get('sPackageName')) + ".Utils.Events"],
+
+    include_package_data = True,
+
     classifiers = [
         str(oRepositoryConfig.Get('sProgrammingLanguage')),
         str(oRepositoryConfig.Get('sLicence')),

@@ -1,3 +1,15 @@
+> Licensed under the Apache License, Version 2.0 (the \"License\"); you
+> may not use this file except in compliance with the License. You may
+> obtain a copy of the License at
+>
+> <http://www.apache.org/licenses/LICENSE-2.0>
+>
+> Unless required by applicable law or agreed to in writing, software
+> distributed under the License is distributed on an \"AS IS\" BASIS,
+> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied. See the License for the specific language governing
+> permissions and limitations under the License.
+
 # ROBFW TESTSUITES MANAGEMENT DOCUMENTATION
 
 **This is the documentation for robotframework-testsuitesmanagement
@@ -160,33 +172,39 @@ User can access dictionary object in robot test script by called
 use dotdict but the traditional way `${dict}[abc][def]` is still
 working.
 
+### Package Documentation
+
+A detailed documentation of the Python Extensions Collection package can
+be found here:
+[RobotFramework-Testsuites.pdf](https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/doc/_build/latex/RobotFramework-Testsuites.pdf)
+
 ## Feedback
 
 To give us a feedback, you can send an email to [Thomas
-Pollerspöck](Thomas.Pollerspoeck@de.bosch.com) or
-[RBVH-ECM-Automation_Test_Framework-Associates](RBVH-ENG2-CMD-Associates@bcn.bosch.com)
+Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com) or
+[RBVH-ECM-Automation_Test_Framework-Associates](mailto:RBVH-ENG2-CMD-Associates@bcn.bosch.com)
 
 ## About
 
 ### Maintainers
 
-[Thomas Pollerspöck](Thomas.Pollerspoeck@de.bosch.com)
+[Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
 ### Contributors
 
-[Mai Dinh Nam Son](Son.MaiDinhNam@vn.bosch.com)
+[Mai Dinh Nam Son](mailto:Son.MaiDinhNam@vn.bosch.com)
 
-[Tran Duy Ngoan](Ngoan.TranDuy@vn.bosch.com)
+[Tran Duy Ngoan](mailto:Ngoan.TranDuy@vn.bosch.com)
 
-[Nguyen Huynh Tri Cuong](Cuong.NguyenHuynhTri@vn.bosch.com)
+[Nguyen Huynh Tri Cuong](mailto:Cuong.NguyenHuynhTri@vn.bosch.com)
 
-[Tran Hoang Nguyen](Nguyen.TranHoang@vn.bosch.com)
+[Tran Hoang Nguyen](mailto:Nguyen.TranHoang@vn.bosch.com)
 
-[Holger Queckenstedt](Holger.Queckenstedt@de.bosch.com)
+[Holger Queckenstedt](mailto:Holger.Queckenstedt@de.bosch.com)
 
 ## License
 
-Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+Copyright 2020-2022 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the \"License\"); you
 may not use this file except in compliance with the License. You may

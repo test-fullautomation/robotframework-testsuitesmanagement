@@ -26,8 +26,7 @@
 #
 # *******************************************************************************
 
-# from RobotFramework_Testsuites.Config import VERSION  # Sphinx fix to be verified
-from Config import VERSION  # Sphinx fix to be verified
+from RobotFramework_Testsuites.Config import VERSION
 
 def robfwaio_version():
    '''

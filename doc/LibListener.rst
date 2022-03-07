@@ -1,7 +1,7 @@
 Utils.LibListener module
 ------------------------
 
-.. automodule:: Utils.LibListener
+.. automodule:: RobotFramework_Testsuites.Utils.LibListener
    :members:
    :undoc-members:
    :show-inheritance:

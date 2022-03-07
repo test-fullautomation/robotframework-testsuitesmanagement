@@ -1,7 +1,7 @@
 version module
 --------------
 
-.. automodule:: version
+.. automodule:: RobotFramework_Testsuites.version
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,7 +1,7 @@
 Utils.CStruct module
 --------------------
 
-.. automodule:: Utils.CStruct
+.. automodule:: RobotFramework_Testsuites.Utils.CStruct
    :members:
    :undoc-members:
    :show-inheritance:

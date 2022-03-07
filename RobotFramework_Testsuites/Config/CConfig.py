@@ -34,8 +34,7 @@ from jsonschema import validate
 from builtins import staticmethod
 from dotdict import dotdict
 
-# from RobotFramework_Testsuites.Utils.CStruct import CStruct # Sphinx fix to be verified
-from Utils.CStruct import CStruct # Sphinx fix to be verified
+from RobotFramework_Testsuites.Utils.CStruct import CStruct
 
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger

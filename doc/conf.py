@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./../RobotFramework_Testsuites")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./../")))
 
 # print("(debug) sys.path:\n" + '\n'.join(sys.path))
 
