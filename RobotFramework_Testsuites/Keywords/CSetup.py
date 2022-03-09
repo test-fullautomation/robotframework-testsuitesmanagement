@@ -14,7 +14,7 @@
 
 import copy
 
-# import RobotFramework_Testsuites
+import RobotFramework_Testsuites
 from robot.api.deco import keyword
 from robot.api import logger
 
