@@ -23,6 +23,7 @@ from robotlibcore import DynamicCore
 
 from RobotFramework_Testsuites.Utils import LibListener
 from RobotFramework_Testsuites.Keywords import (CSetupKeywords, CGeneralKeywords)
+from RobotFramework_Testsuites.Config import VERSION
 
 __version__ = '0.0.1'
 
