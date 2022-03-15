@@ -63,6 +63,7 @@
 import os, sys, platform, shlex, subprocess
 import colorama as col
 import pypandoc
+from RobotFramework_Testsuites import VERSION
 
 col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED
@@ -90,7 +91,7 @@ class CConfig():
         # 1. basic setup stuff
         self.__dictConfig['sPackageName']                = "robotframework-testsuitesmanagement"
         self.__dictConfig['sImportName']                 = "RobotFramework_Testsuites"
-        self.__dictConfig['sVersion']                    = "0.0.2"
+        self.__dictConfig['sVersion']                    = VERSION
         self.__dictConfig['sAuthor']                     = "ROBFW-AIO Team"
         self.__dictConfig['sAuthorEMail']                = "Thomas.Pollerspoeck@de.bosch.com"
         self.__dictConfig['sDescription']                = "This package together with the JsonPreprocessor package provides functionality to manage Robotframework testsuites"
@@ -104,7 +105,7 @@ class CConfig():
         self.__dictConfig['sIntendedAudience']           = "Intended Audience :: Developers"
         self.__dictConfig['sTopic']                      = "Topic :: Software Development"
         self.__dictConfig['arInstallRequires']           = ['sphinx','pypandoc','colorama']
-
+        self.__dictConfig['arConsoleScripts']            = ['robfwaio_version = RobotFramework_Testsuites.version:robfwaio_version']
 
         # 2. certain folder and executables (things that requires computation)
         bSuccess, sResult = self.__InitConfig()
