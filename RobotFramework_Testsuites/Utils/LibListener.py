@@ -40,40 +40,7 @@ class LibListener(object):
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = attrs['source']
         os.chdir(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath)
         
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:
-            
-            from robot.running import TestSuiteBuilder
-            from robot.model import SuiteVisitor
-            '''
-            This TestCasesCollect class collects all the testcases.
-            '''
-            class TestCasesCollect(SuiteVisitor):
-                '''
-                Collect test cases in testsuites
-                '''
-
-                def __init__(self):
-                    self.testcases = []
-                
-                '''
-                Overridden visit_test() method in SuiteVisitor object
-                '''
-                def visit_test(self, testcase):
-                    self.testcases.append(testcase)
-                    
-            datasources = SuiteStructureBuilder.data_sources
-            for source in datasources:
-                try:
-                    suiteBuilder = TestSuiteBuilder()
-                    testsuite = suiteBuilder.build(source)
-                    testcases = TestCasesCollect()
-                    testsuite.visit(testcases)
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases += len(testcases.testcases)
-                except:
-                    logger.info("The directory %s contains no tests or tasks!!!" % (source))
-                    pass
-            BuiltIn().set_global_variable("${TOTALTESTCASES}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases)
-            
+        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:           
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
