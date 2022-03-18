@@ -240,9 +240,6 @@ setuptools.setup(
         'install': ExtendedInstallCommand,
     },
     install_requires = oRepositoryConfig.Get('arInstallRequires'),
-    entry_points={
-        'console_scripts': oRepositoryConfig.Get('arConsoleScripts'),
-    }
 )
 
 # --------------------------------------------------------------------------------------------------------------
