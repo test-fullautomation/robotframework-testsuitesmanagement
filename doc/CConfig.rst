@@ -1,3 +1,9 @@
+.. rst-class:: dl-parameters
+
+.. role:: aspect (emphasis)
+.. role:: sep (strong)
+
+
 CConfig module
 --------------
 
