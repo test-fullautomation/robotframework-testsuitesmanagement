@@ -1,3 +1,9 @@
+.. rst-class:: dl-parameters
+
+.. role:: aspect (emphasis)
+.. role:: sep (strong)
+
+
 Utils.CStruct module
 --------------------
 
