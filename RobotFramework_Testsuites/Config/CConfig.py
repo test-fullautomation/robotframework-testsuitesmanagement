@@ -91,6 +91,7 @@ Level1 is highest priority, Level4 is lowest priority.
     sProjectName      = None
     iSuiteCount       = 0
     iTestCount        = 0
+    iTotalTestcases   = 0
     sConfigFileName   = None
     bLoadedCfg        = True
     sLoadedCfgError   = ''

@@ -40,7 +40,19 @@ class LibListener(object):
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = attrs['source']
         os.chdir(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath)
         
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:           
+        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:
+            import inspect
+            stack_list = inspect.stack()
+            test_suite = None
+            for stack_frame in stack_list:
+                if stack_frame.filename.endswith("\\robot\\model\\testsuite.py"):
+                    test_suite = stack_frame.frame.f_locals['self']
+                    break
+            while test_suite.parent != None:
+                test_suite = test_suite.parent
+
+            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
+
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
