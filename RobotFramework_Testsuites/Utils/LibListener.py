@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+from inspect import stack
 import os
 import RobotFramework_Testsuites
 from RobotFramework_Testsuites.Config import CConfig
@@ -43,6 +44,7 @@ class LibListener(object):
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:           
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
@@ -53,18 +55,21 @@ class LibListener(object):
             if '${testversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${TEST_VERSION}')
             
-            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile != '':
-                try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-                except:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    pass
+            try:
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+            except:
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                pass
                     
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount)
         dispatch('scope_start', attrs['longname'])
         
     def _end_suite(self, name, attrs):
+        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = False
+        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = False
+        if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = ''
         dispatch('scope_end', attrs['longname'])
         
     def _start_test(self, name, attrs):
