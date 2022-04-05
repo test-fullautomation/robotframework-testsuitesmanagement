@@ -31,7 +31,7 @@ class CSetupKeywords(object):
     '''
     Definition setup keywords
     '''
-    
+
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
         if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg:
@@ -40,36 +40,36 @@ class CSetupKeywords(object):
         else:
             if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
                 if sTestsuiteCfgFile != '':
-                    if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
-                        logger.error('Configuration \"%s\" was already loaded for this Robot run!!!' \
-                            %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-                        BuiltIn().unknown('Configuration file \"%s\" could not be loaded due to \"%s\" is loaded before' \
-                            %(sTestsuiteCfgFile, RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-                    else:
-                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
-                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
-                        try:
-                            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-                        except Exception as error:
-                            BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                    try:
+                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                    except Exception as error:
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
                 else:
-                    if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
-                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
-                        try:
-                            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-                        except Exception as error:
-                            BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                    try:
+                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                    except Exception as error:
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             else:
-                if sTestsuiteCfgFile != '':
-                    logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
-                        %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
+                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
 
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
         elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
             logger.info('Running with configuration level: 2')
+            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+                logger.info("The parameters in \"%s\" will be added into configuration object" \
+                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
         elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
             logger.info('Running with configuration level: 3')
+            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+                logger.info("The parameters in \"%s\" will be added into configuration object" \
+                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
         else:
             logger.info('Running with configuration level: 4')
 

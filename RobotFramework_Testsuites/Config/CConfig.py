@@ -103,7 +103,7 @@ Level1 is highest priority, Level4 is lowest priority.
                                 sLevel1 = False,
                                 sLevel2 = False,
                                 sLevel3 = False,
-                                sLevel4 = False   #'/RobotFramework/defaultconfig/robot_config.json'
+                                sLevel4 = True   #'.../RobotFramework_Testsuites/Config/robot_config.json'
                             )
     
     rMetaData      = CStruct(
@@ -203,10 +203,9 @@ Level1 is highest priority, Level4 is lowest priority.
 
     @staticmethod
     def loadCfg(self):
-        
-        self.bConfigLoaded = True
         if not self.rConfigFiles.sLevel1:
-            if self.rConfigFiles.sLevel2 == True:
+            if self.rConfigFiles.sLevel2:
+                self.rConfigFiles.sLevel4 = False
                 self.__loadConfigFileLevel2()
             else:
                 bLevel3Check = False
@@ -215,23 +214,36 @@ Level1 is highest priority, Level4 is lowest priority.
                     for file in os.listdir(self.sTestcasePath + 'config'):
                         if file.split('.')[0] == sSuiteFileName.split('.')[0]:
                             self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + file
+                            self.rConfigFiles.sLevel4 = False
                             bLevel3Check = True
                             break
                     if not bLevel3Check:
                         if os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'):
                             self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'
+                            self.rConfigFiles.sLevel4 = False
                         else:
                             self.rConfigFiles.sLevel3 = False
-                            self.rConfigFiles.sLevel4 = True
-                            sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
-                            self.sTestCfgFile = sDefaultConfig
+                            if not self.bConfigLoaded:
+                                #self.rConfigFiles.sLevel4 = True
+                                sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                                self.sTestCfgFile = sDefaultConfig
                 else:
                     self.rConfigFiles.sLevel3 = False
-                    self.rConfigFiles.sLevel4 = True
-                    sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
-                    self.sTestCfgFile = sDefaultConfig
- 
-        if not (os.path.isfile(self.sTestCfgFile)):
+                    if not self.bConfigLoaded:
+                        #self.rConfigFiles.sLevel4 = True
+                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                        self.sTestCfgFile = sDefaultConfig
+
+        if self.bConfigLoaded:
+            if self.rConfigFiles.sLevel1:
+                return
+            elif not self.rConfigFiles.sLevel2 and not self.rConfigFiles.sLevel3:
+                return
+        
+        if self.rConfigFiles.sLevel1 and self.sTestCfgFile == '':
+            logger.error("The config_file input parameter is empty!!!")
+            raise Exception("The config_file input parameter is empty!!!")
+        elif not (os.path.isfile(self.sTestCfgFile)):
            raise Exception("Did not find configuration file: '%s'!" % self.sTestCfgFile)
         
         robotCoreData = BuiltIn().get_variables()
@@ -321,6 +333,7 @@ Level1 is highest priority, Level4 is lowest priority.
             BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
         else:
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
+        self.bConfigLoaded = True
         
     def updateCfg(sUpdateCfgFile):
         '''
