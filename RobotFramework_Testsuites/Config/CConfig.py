@@ -255,7 +255,7 @@ Level1 is highest priority, Level4 is lowest priority.
             ROBFW_AIO_Data.update({key:v})
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
         try:
-            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
+            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sCalcAbsPath(self, self.sTestCfgFile))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -348,7 +348,7 @@ Level1 is highest priority, Level4 is lowest priority.
         '''
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
-            oUpdateParams = oJsonPreprocessor.jsonLoad(sUpdateCfgFile)
+            oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.sCalcAbsPath(CConfig, sUpdateCfgFile))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -469,7 +469,7 @@ Level1 is highest priority, Level4 is lowest priority.
         
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
-            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.sTestSuiteCfg)
+            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.sCalcAbsPath(self, self.sTestSuiteCfg))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
