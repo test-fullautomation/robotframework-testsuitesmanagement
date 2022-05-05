@@ -32,7 +32,6 @@ import json
 import copy
 from jsonschema import validate
 from builtins import staticmethod
-from dotdict import dotdict
 
 from RobotFramework_Testsuites.Utils.CStruct import CStruct
 
@@ -47,6 +46,17 @@ import pathlib
 # testsuitesmanagement, testresultwebapptool, Eclipse for RobotFramework, ...
 # This information is used for Robotframework AIO version control 
 VERSION = "0.4.11.0"
+
+class dotdict(dict):
+
+    __setattr__ = dict.__setitem__
+    def __getattr__(self, item):
+        try:
+            return self[item]
+        except KeyError as error:
+            raise AttributeError from error
+    __delattr__ = dict.__delitem__
+
 
 class CConfig():
     '''
