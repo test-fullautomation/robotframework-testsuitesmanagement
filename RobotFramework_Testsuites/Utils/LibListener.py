@@ -42,10 +42,6 @@ class LibListener(object):
         os.chdir(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath)
         
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:           
-            if '${configfile}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
             if '${swversion}' in BuiltIn().get_variables()._keys:
@@ -54,12 +50,15 @@ class LibListener(object):
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionHW = BuiltIn().get_variable_value('${HW_VERSION}')
             if '${testversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${TEST_VERSION}')
-            
-            try:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
-            except:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                pass
+            if '${configfile}' in BuiltIn().get_variables()._keys:
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
+                try:
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                except:
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                    pass
                     
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount)
