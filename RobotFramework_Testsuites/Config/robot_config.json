@@ -20,7 +20,7 @@
 {
   "Project": "G3g",
   "WelcomeString": "Hello... ROBFW is running now!",
-  "Maximum_version": "0.4.11",
+  "Maximum_version": "0.5.1",
   "Minimum_version": "0.4.10",
   // Version control information.
   "version": {
