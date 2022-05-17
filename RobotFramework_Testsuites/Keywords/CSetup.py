@@ -77,6 +77,9 @@ class CSetupKeywords(object):
         logger.info('Suite Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath))
         logger.info('CfgFile Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
         logger.info('Suite Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount))
+        logger.info('Total testcases in TestSuite "%s" is: %s' %( \
+            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName, \
+            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases))
         
     @keyword
     def testsuite_teardown(self):

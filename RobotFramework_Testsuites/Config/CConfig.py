@@ -45,7 +45,7 @@ import pathlib
 # It contains the core robotframework and relative resources such as:
 # testsuitesmanagement, testresultwebapptool, Eclipse for RobotFramework, ...
 # This information is used for Robotframework AIO version control 
-VERSION = "0.5.1"
+VERSION = "0.5.0.0"
 
 class dotdict(dict):
 
@@ -95,10 +95,12 @@ Level1 is highest priority, Level4 is lowest priority.
     # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
+    sRootSuiteName    = ''
     bConfigLoaded     = False
     oConfigParams     = {}
     sConfigName       = 'default'
     sProjectName      = None
+    iTotalTestcases   = 0
     iSuiteCount       = 0
     iTestCount        = 0
     sConfigFileName   = None
