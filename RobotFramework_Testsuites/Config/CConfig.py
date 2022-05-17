@@ -95,10 +95,12 @@ Level1 is highest priority, Level4 is lowest priority.
     # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
+    sRootSuiteName    = ''
     bConfigLoaded     = False
     oConfigParams     = {}
     sConfigName       = 'default'
     sProjectName      = None
+    iTotalTestcases   = 0
     iSuiteCount       = 0
     iTestCount        = 0
     sConfigFileName   = None
