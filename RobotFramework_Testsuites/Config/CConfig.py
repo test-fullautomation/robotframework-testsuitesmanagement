@@ -267,7 +267,7 @@ Level1 is highest priority, Level4 is lowest priority.
             ROBFW_AIO_Data.update({key:v})
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
         try:
-            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
+            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sTestCfgFile)))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -360,7 +360,7 @@ Level1 is highest priority, Level4 is lowest priority.
         '''
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
-            oUpdateParams = oJsonPreprocessor.jsonLoad(sUpdateCfgFile)
+            oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.__sNormalizePath(os.path.abspath(sUpdateCfgFile)))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -481,7 +481,7 @@ Level1 is highest priority, Level4 is lowest priority.
         
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
-            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.sTestSuiteCfg)
+            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sTestSuiteCfg)))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -502,115 +502,74 @@ Level1 is highest priority, Level4 is lowest priority.
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir
             sTestCfgDir = sTestCfgDir[4:]
-            if os.path.exists(self.sCalcAbsPath(self, './' + sTestCfgDir)):
+            if os.path.exists(self.__sNormalizePath(os.path.abspath('./' + sTestCfgDir))):
                 sTestCfgDir = './' + sTestCfgDir
             else:
                 bFoundTestCfgDir = False
                 for i in range(0, 30):
                     sTestCfgDir = '../' + sTestCfgDir
-                    if os.path.exists(self.sCalcAbsPath(self, sTestCfgDir)):
+                    if os.path.exists(self.__sNormalizePath(os.path.abspath(sTestCfgDir))):
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
                     raise Exception('Could not find out config directory: %s' %(sTestCfgDirStart))
                 
-        self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile    
+        self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
+
+    def __sNormalizePath(self, sPath : str) -> str:
+        """
+**Method: __sNormalizePath**
+    Python struggles with
+
+    - UNC paths
+      e.g. ``\\hi-z4939\ccstg\....``
+    - escape sequences in windows paths
+      e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result
+      after processing it with an regexp would be ``c:\autotest   uner``
     
-    @staticmethod
-    def sCalcAbsPath(self, relativePath):
-        '''
-        Staticmethod: sCalcAbsPath
+    In order to solve this problems any slash will be replaced from backslash
+    to slash, only the two UNC backslashes must be kept if contained.
+   
+**Args:**
+   **sPath** (*string*)
+      Absolute or relative path as input.
 
-        Args:
-            relativePath: String
-        Returns:
-            absolutePath: String
-        '''
-        sCurDir = os.curdir
-        os.chdir(self.sTestcasePath)
-        absolutePath = os.path.abspath(os.path.relpath(relativePath, os.path.curdir))
-        os.chdir(sCurDir)
-        
-        return absolutePath
-        
-    @staticmethod
-    def sNormalizePath(sPath):
-        '''
+      Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
 
-staticmethod sNormalizePath:
-
-(remaining content needs to be fixed and restored)
-
-        '''
-        # '''
-
-# staticmethod sNormalizePath:
-
-# - UNC paths
-
-    # e.g. \\hi-z4939\ccstg\....
-
-# - escape sequences in windows paths
-
-    # e.g. c:\robottest\tuner   \t will be interpreted as tab, the result
-    # after processing it with an regexp would be
-
-    # c:\robottest   uner
-
-# In order to solve this problems any slash will be replaced from backslash
-# to slash, only the two UNC backslashes must be kept if contained.
-
-# Args:
-
-    # sPath: string
-
-# Returns:
-
-    # sNPath: string
-
-        # '''
-        if sPath.strip()=='':
-            return ''
-        
+**Returns:**
+   **sPath** (*string*)
+      normalized path as string        
+        """  
+        # make all backslashes to slash, but mask
+        # UNC indicator \\ before and restore after.
+        def __mkslash(sPath : str) -> str:
+            if sPath.strip()=='':
+                return ''
+     
+            sNPath=re.sub(r"\\\\",r"#!#!#",sPath.strip())
+            sNPath=re.sub(r"\\",r"/",sNPath)
+            sNPath=re.sub(r"#!#!#",r"\\\\",sNPath)
+          
+            return sNPath               
+            if sPath.strip()=='':
+                return ''
+      
+        # TML Syntax uses %Name%-syntax to reference an system- or framework
+        # environment variable. Linux requires ${Name} to do the same.
+        # Therefore change on Linux systems to ${Name}-syntax to make
+        # expandvars working here, too.
+        # This makes same TML code working on both platforms
         if platform.system().lower()!="windows":
             sPath=re.sub("%(.*?)%","${\\1}",sPath)
+      
+        #in a windows system normpath turns all slashes to backslash
+        #this is unwanted. Therefore turn back after normpath execution.
         sNPath=os.path.normpath(os.path.expandvars(sPath.strip()))
-        sNPath=Config.__mkslash(sNPath)
-        
+        #make all backslashes to slash, but mask
+        #UNC indicator \\ before and restore after.
+        sNPath=__mkslash(sNPath)
+      
         return sNPath
-
-    '''
-    staticmethod: __mkslash: Make all backslashes to slash, but mask
-                  UNC indicator \\ before and restore after.
-    Args:
-        sPath: string
-    Returns:
-        sNPath: string
-    '''
-    @staticmethod
-    def __mkslash(sPath):
-        if sPath.strip()=='':
-            return ''
-        
-        sNPath=re.sub(r"\\\\",r"#!#!#",sPath.strip())
-        sNPath=re.sub(r"\\",r"/",sNPath)
-        sNPath=re.sub(r"#!#!#",r"\\\\",sNPath)
-        
-        return sNPath
-        
-    '''
-    Private Method: __read reads data from a XML object
-    Args:
-        oXMLTree: XML object
-        sPath: string
-        sDefault: string
-    Results:
-        sResult: string
-    '''
-    @staticmethod
-    def __read(oXMLTree, sPath, sDefault=None):
-        sResult = oXMLTree.xpath(sPath)[0].strip() if len(oXMLTree.xpath(sPath))>0 else sDefault
-        return sResult
     
     '''
     Private Method: __getMachineName gets current machine name which is running the test.
