@@ -1,3 +1,5 @@
+# **************************************************************************************************************
+#
 #  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,7 +13,11 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
+#
+# **************************************************************************************************************
+#
+# Version and date of PythonExtensionsCollection
+#
+VERSION      = "0.8.0"
+VERSION_DATE = "28.06.2022"
 
-
-from .LibListener import LibListener
-from .CStruct import CStruct

@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -112,12 +112,12 @@ class CGeneralKeywords(object):
     
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):
-        '''
-        This keyword uses to load json file then return json object.
-           - Level = 1 -> loads the content of jsonfile.
-           - level != 1 -> loads the json file which is set with variant (likes loading
-             config level2)
-        '''
+        # '''
+        # This keyword uses to load json file then return json object.
+           # - Level = 1 -> loads the content of jsonfile.
+           # - level != 1 -> loads the json file which is set with variant (likes loading
+             # config level2)
+        # '''
         import os
         from os.path import abspath, dirname
         from JsonPreprocessor import CJsonPreprocessor

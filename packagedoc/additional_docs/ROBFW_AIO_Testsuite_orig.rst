@@ -6,7 +6,7 @@ Introduction:
 
 The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
 python package to provide the enhanced features such as json configuration files, 
-4 different levels of configuation, config object and global params, schema validation,...
+4 different levels of configuation, config object and global params, schema validation, ...
 
 Features
 --------

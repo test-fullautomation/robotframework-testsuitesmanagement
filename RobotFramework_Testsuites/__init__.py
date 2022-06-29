@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -36,13 +36,13 @@ class RobotFramework_Testsuites(DynamicCore):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__
     
-    '''
-    Constructor
-    Args:
-        None
-    Returns:
-        None
-    '''
+    # '''
+    # Constructor
+    # Args:
+        # None
+    # Returns:
+        # None
+    # '''
     def __init__(self, timeout=10.0):
         self.timeout = timeout
         self._running_on_failure_keyword = False
@@ -52,13 +52,13 @@ class RobotFramework_Testsuites(DynamicCore):
         self._running_keyword = None
         DynamicCore.__init__(self, libraries)
     
-    '''
-    Method: run_keyword
-    Args:
-        name: string
-    Returns:
-        DynamicCore.run_keyword
-    '''
+    # '''
+    # Method: run_keyword
+    # Args:
+        # name: string
+    # Returns:
+        # DynamicCore.run_keyword
+    # '''
     def run_keyword(self, name, args, kwargs):
         try:
             return DynamicCore.run_keyword(self, name, args, kwargs)
@@ -66,36 +66,36 @@ class RobotFramework_Testsuites(DynamicCore):
             self.failure_occurred()
             raise
         
-    '''
-    Method: get_keyword_tags
-    Args:
-        name: String
-    Returns:
-        tags
-    '''
+    # '''
+    # Method: get_keyword_tags
+    # Args:
+        # name: String
+    # Returns:
+        # tags
+    # '''
     def get_keyword_tags(self, name):
         tags = list(DynamicCore.get_keyword_tags(self, name))
         return tags
         
-    '''
-    Method: get_keyword_documentation
-    Args:
-        name: string
-    Returns:
-        DynamicCore.get_keyword_documentation
-    '''
+    # '''
+    # Method: get_keyword_documentation
+    # Args:
+        # name: string
+    # Returns:
+        # DynamicCore.get_keyword_documentation
+    # '''
     def get_keyword_documentation(self, name):
         return DynamicCore.get_keyword_documentation(self, name)
     
-    '''
-    Method: failure_occurred is executed when RobotFramework_Testsuites keyword fails.
-    By default, executes the registered run-on-failure keyword. RobotFramework_Testsuites can 
-    overwrite this hook method in case provides custom functionality instead.
-    Args:
-        None
-    Returns:
-        None
-    '''        
+    # '''
+    # Method: failure_occurred is executed when RobotFramework_Testsuites keyword fails.
+    # By default, executes the registered run-on-failure keyword. RobotFramework_Testsuites can 
+    # overwrite this hook method in case provides custom functionality instead.
+    # Args:
+        # None
+    # Returns:
+        # None
+    # '''        
     def failure_occurred(self):
         if self._running_on_failure_keyword or not self.run_on_failure_keyword:
             return None

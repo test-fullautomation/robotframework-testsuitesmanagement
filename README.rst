@@ -167,7 +167,7 @@ Package Documentation
 ~~~~~~~~~~~~~~~~~~~~~
 
 A detailed documentation of the Python Extensions Collection package can be found here:
-`RobotFramework-Testsuites.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/doc/_build/latex/RobotFramework-Testsuites.pdf>`_
+`RobotFramework_Testsuites.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_Testsuites/RobotFramework_Testsuites.pdf>`_
 
 
 Feedback

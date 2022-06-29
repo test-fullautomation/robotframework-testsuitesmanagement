@@ -20,12 +20,12 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# Extends the standard setuptools installation by adding the documentation in HTML format
+# Extends the standard setuptools installation by adding the documentation in PDF format
 # (requires installation mode) and tidying up some folders.
 #
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
-# This script deletes folders (as defined in config.CConfig, depending on the position of this script):
+# This script deletes folders (as defined in config.CRepositoryConfig, depending on the position of this script):
 # - previous builds within this repository
 # - previous installations within
 #   * <Python installation>\Lib\site-packages (Windows)
@@ -44,9 +44,9 @@
 # The usual
 #    packages = setuptools.find_packages(),
 # is replaced by
-#    packages = [str(oRepositoryConfig.Get('sPackageName')), ],
-# to avoid that also config.CConfig() and config.CExtendedSetup() are part of the distribution.
-# CConfig and CExtendedSetup() are only repository internal helper.
+#    packages = [str(oRepositoryConfig.Get('PACKAGENAME')), ],
+# to avoid that also config.CRepositoryConfig() and additions.CExtendedSetup() are part of the distribution.
+# CRepositoryConfig and CExtendedSetup() are only repository internal helper.
 #
 # * Known issues:
 #
@@ -60,22 +60,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 11.03.2022 / XC-CT/ECA3-Queckenstedt
-# 'package_dir' added
-#
-# 07.03.2022 / XC-CT/ECA3-Queckenstedt
-# Fixed 'packages' listing and the installation of additional files (json)
-#
-# 22.02.2022 / XC-CT/ECA3-Queckenstedt
-# "sdist bdist_wheel" maintenance: some steps moved from inside 'ExtendedInstallCommand' to outside
-#
-# 11.10.2021 / XC-CI1/ECA3-Queckenstedt
-# Fixed computation order of readme files together with long_description
-# 
-# 30.09.2021 / XC-CI1/ECA3-Queckenstedt
-# Added wrapper for error messages
-# 
-# Initial version 08/2021
+# 29.06.2022
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -83,8 +68,11 @@ import os, sys, platform, shlex, subprocess
 import setuptools
 from setuptools.command.install import install
 
-from config.CConfig import CConfig # providing repository and environment specific information
-from config.CExtendedSetup import CExtendedSetup # providing functions to support the extended setup process
+# prefer the repository local version of all additional libraries (instead of the installed version under site-packages)
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./additions")))
+
+from config.CRepositoryConfig import CRepositoryConfig # providing repository and environment specific information
+from additions.CExtendedSetup import CExtendedSetup # providing functions to support the extended setup process
 
 import colorama as col
 
@@ -114,28 +102,7 @@ class ExtendedInstallCommand(install):
 
         listCmdArgs = sys.argv
         if ( ('install' in listCmdArgs) or ('build' in listCmdArgs) or ('sdist' in listCmdArgs) or ('bdist_wheel' in listCmdArgs) ):
-            print()
-            print(COLBY + "Extended setup step 4/5: install.run(self)") # creates the build folder .\build
-            print()
             install.run(self)
-            print()
-            if 'bdist_wheel' in listCmdArgs:
-                print(COLBY + "Extended setup step 5/5: Add html documentation to local wheel folder inside build")
-                print()
-                nReturn = oExtendedSetup.add_htmldoc_to_wheel()
-                if nReturn != SUCCESS:
-                    return nReturn
-                print()
-            else:
-                print(COLBY + "Extended setup step 5/5: Add html documentation to package installation folder") # (./doc/_build/html to <Python installation>\Lib\site-packages\<package name>_doc)
-                print()
-                nReturn = oExtendedSetup.add_htmldoc_to_installation()
-                if nReturn != SUCCESS:
-                    return nReturn
-                print()
-            print(COLBG + "Extended installation done")
-            print()
-
         return SUCCESS
 
 # eof class ExtendedInstallCommand(install):
@@ -147,9 +114,8 @@ class ExtendedInstallCommand(install):
 
 # -- setting up the repository configuration
 oRepositoryConfig = None
-sReferencePath = os.path.dirname(os.path.abspath(sys.argv[0]))
 try:
-    oRepositoryConfig = CConfig(sReferencePath)
+    oRepositoryConfig = CRepositoryConfig(os.path.abspath(sys.argv[0]))
 except Exception as ex:
     print()
     printexception(str(ex))
@@ -177,73 +143,93 @@ if ( ('install' in listCmdArgs) or ('build' in listCmdArgs) or ('sdist' in listC
     print()
 
     print(COLBY + "Extended setup step 1/5: Calling the documentation builder")
-    # (previously called inside ExtendedInstallCommand - but this is too late, because the content of the initially
-    # generated or updated README file is already needed for the long_description below.)
     print()
-    nReturn = oExtendedSetup.gen_doc()
+
+    nReturn = oExtendedSetup.genpackagedoc()
     if nReturn != SUCCESS:
         sys.exit(nReturn)
 
-    print(COLBY + "Extended setup step 2/5: Deleting previous setup outputs (build, dist, <package name>.egg-info within repository)")
+    print(COLBY + "Extended setup step 2/5: Converting the repository README")
+    print()
+
+    nReturn = oExtendedSetup.convert_repo_readme()
+    if nReturn != SUCCESS:
+        sys.exit(nReturn)
+
+    print(COLBY + "Extended setup step 3/5: Deleting previous setup outputs (build, dist, <package name>.egg-info within repository)")
     print()
     nReturn = oExtendedSetup.delete_previous_build()
     if nReturn != SUCCESS:
         sys.exit(nReturn)
 
-    if not 'bdist_wheel' in listCmdArgs:
+    if ( ('bdist_wheel' in listCmdArgs) or ('build' in listCmdArgs) ):
         print()
-        print(COLBY + "Extended setup step 3/5: Deleting previous package installation folder within site-packages") # (<package name> and <package name>_doc under <Python installation>\Lib\site-packages
+        print(COLBY + "Skipping extended setup step 4/5: Deleting previous package installation folder within site-packages")
+        print()
+    else:
+        print()
+        print(COLBY + "Extended setup step 4/5: Deleting previous package installation folder within site-packages") # (<package name> and <package name>_doc under <Python installation>\Lib\site-packages
         print()
         nReturn = oExtendedSetup.delete_previous_installation()
         if nReturn != SUCCESS:
             sys.exit(nReturn)
 
-    with open("README.md", "r", encoding="utf-8") as fh:
+    README_MD = str(oRepositoryConfig.Get('README_MD'))
+    with open(README_MD, "r", encoding="utf-8") as fh:
         long_description = fh.read()
-    print()
+    fh.close()
 
 
 # --------------------------------------------------------------------------------------------------------------
 
-# This also handles the printing of help to console and therefore must be called in every case.
-# And therefore all variables and objects must exist (even in case of the values are not used).
+# -- the 'setup' itself
+
+print(COLBY + "Extended setup step 5/5: install.run(self)")
+print()
+
 setuptools.setup(
-    name         = str(oRepositoryConfig.Get('sPackageName')),
-    version      = str(oRepositoryConfig.Get('sVersion')),
-    author       = str(oRepositoryConfig.Get('sAuthor')),
-    author_email = str(oRepositoryConfig.Get('sAuthorEMail')),
-    description  = str(oRepositoryConfig.Get('sDescription')),
+    name         = str(oRepositoryConfig.Get('REPOSITORYNAME')),
+    version      = str(oRepositoryConfig.Get('PACKAGEVERSION')),
+    author       = str(oRepositoryConfig.Get('AUTHOR')),
+    author_email = str(oRepositoryConfig.Get('AUTHOREMAIL')),
+    description  = str(oRepositoryConfig.Get('DESCRIPTION')),
     long_description = long_description,
-    long_description_content_type = str(oRepositoryConfig.Get('sLongDescriptionContentType')),
-    url = str(oRepositoryConfig.Get('sURL')),
+    long_description_content_type = str(oRepositoryConfig.Get('LONGDESCRIPTIONCONTENTTYPE')),
+    url = str(oRepositoryConfig.Get('URL')),
 
-    packages = [str(oRepositoryConfig.Get('sImportName')),
-                str(oRepositoryConfig.Get('sImportName')) + ".Config",
-                str(oRepositoryConfig.Get('sImportName')) + ".Keywords",
-                str(oRepositoryConfig.Get('sImportName')) + ".Utils",
-                str(oRepositoryConfig.Get('sImportName')) + ".Utils.Events"],
+    packages = [str(oRepositoryConfig.Get('PACKAGENAME')),
+                str(oRepositoryConfig.Get('PACKAGENAME')) + ".Config",
+                str(oRepositoryConfig.Get('PACKAGENAME')) + ".Keywords",
+                str(oRepositoryConfig.Get('PACKAGENAME')) + ".Utils",
+                str(oRepositoryConfig.Get('PACKAGENAME')) + ".Utils.Events"],
 
-    package_dir = {str(oRepositoryConfig.Get('sPackageName')) : str(oRepositoryConfig.Get('sImportName'))},
+    package_dir = {str(oRepositoryConfig.Get('REPOSITORYNAME')) : str(oRepositoryConfig.Get('PACKAGENAME'))},
 
     include_package_data = True,
 
     classifiers = [
-        str(oRepositoryConfig.Get('sProgrammingLanguage')),
-        str(oRepositoryConfig.Get('sLicence')),
-        str(oRepositoryConfig.Get('sOperatingSystem')),
-        str(oRepositoryConfig.Get('sDevelopmentStatus')),
-        str(oRepositoryConfig.Get('sIntendedAudience')),
-        str(oRepositoryConfig.Get('sTopic')),
+        str(oRepositoryConfig.Get('PROGRAMMINGLANGUAGE')),
+        str(oRepositoryConfig.Get('LICENCE')),
+        str(oRepositoryConfig.Get('OPERATINGSYSTEM')),
+        str(oRepositoryConfig.Get('DEVELOPMENTSTATUS')),
+        str(oRepositoryConfig.Get('INTENDEDAUDIENCE')),
+        str(oRepositoryConfig.Get('TOPIC')),
     ],
-    python_requires = str(oRepositoryConfig.Get('sPythonRequires')),
+    python_requires = str(oRepositoryConfig.Get('PYTHONREQUIRES')),
     cmdclass={
         'install': ExtendedInstallCommand,
     },
-    install_requires = oRepositoryConfig.Get('arInstallRequires'),
+    install_requires = oRepositoryConfig.Get('INSTALLREQUIRES'),
     entry_points={
-        'console_scripts': oRepositoryConfig.Get('arConsoleScripts'),
-    }
+        'console_scripts': oRepositoryConfig.Get('CONSOLESCRIPTS'),
+    },
+    package_data={f"{oRepositoryConfig.Get('PACKAGENAME')}" : oRepositoryConfig.Get('PACKAGEDATA')},
 )
+# --------------------------------------------------------------------------------------------------------------
+
+print()
+print(COLBG + "Extended installation done")
+print()
 
 # --------------------------------------------------------------------------------------------------------------
 
