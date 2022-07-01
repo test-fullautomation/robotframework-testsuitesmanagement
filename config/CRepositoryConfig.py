@@ -29,7 +29,7 @@
 # 
 # --------------------------------------------------------------------------------------------------------------
 #
-# 29.06.2022
+# 01.07.2022
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -152,7 +152,8 @@ class CRepositoryConfig():
         self.__dictRepositoryConfig['SETUPBUILDLIBFOLDER']        = CString.NormalizePath(f"{self.__sReferencePath}/build/lib")
         self.__dictRepositoryConfig['SETUPBUILDLIBPACKAGEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/build/lib/{self.__dictRepositoryConfig['PACKAGENAME']}")
         self.__dictRepositoryConfig['SETUPDISTFOLDER']            = CString.NormalizePath(f"{self.__sReferencePath}/dist")
-        self.__dictRepositoryConfig['EGGINFOFOLDER']              = CString.NormalizePath(f"{self.__sReferencePath}/{self.__dictRepositoryConfig['PACKAGENAME']}.egg-info")
+        EGGINFOFOLDER = self.__dictRepositoryConfig['REPOSITORYNAME'].replace('-', '_')
+        self.__dictRepositoryConfig['EGGINFOFOLDER']              = CString.NormalizePath(f"{self.__sReferencePath}/{EGGINFOFOLDER}.egg-info")
 
         print()
         print(f"Running under {sPlatformSystem} ({sOSName})")
