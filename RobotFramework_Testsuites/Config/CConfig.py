@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -148,6 +148,7 @@ Level1 is highest priority, Level4 is lowest priority.
 
             Args:
                 oJson: dict
+
             Returns:
                 CConfig.ddictJson: dotdict
             '''
@@ -187,28 +188,32 @@ Level1 is highest priority, Level4 is lowest priority.
             self.lTmpParam = self.lTmpParam[:-1]
             return CConfig.ddictJson
      
-    '''
-    Makes the CConfig class to singleton.
-    Checks to see if a __single exists already for this class
-    Compare class types instead of just looking for None so that subclasses will create
-    their own __single objects. 
-    Args:
-        classtype: type of class
-    Returns:
-        classtype.__single
-    '''
+    # '''
+    # Makes the CConfig class to singleton.
+    # Checks to see if a __single exists already for this class
+    # Compare class types instead of just looking for None so that subclasses will create
+    # their own __single objects. 
+
+    # Args:
+        # classtype: type of class
+
+    # Returns:
+        # classtype.__single
+    # '''
     def __new__(classtype, *args, **kwargs):
         if classtype != type(classtype.__single):
             classtype.__single = object.__new__(classtype)
         return classtype.__single
 
-    '''
-    Constructor
-    Args:
-        None
-    Returns:
-        None
-    '''
+    # '''
+    # Constructor
+
+    # Args:
+        # None
+
+    # Returns:
+        # None
+    # '''
     def __init__(self):
         pass
         
@@ -350,11 +355,12 @@ Level1 is highest priority, Level4 is lowest priority.
     def updateCfg(sUpdateCfgFile):
         '''
         staticmethod updateParams: This method updates preprocessor, global or local params base on
-                     ROBFW local config or any json config file according to purpose of
-                     specific testsuite.
+        ROBFW local config or any json config file according to purpose of
+        specific testsuite.
 
         Args:
             sUpdateCfgFile: str
+
         Returns:
             None              
         '''
@@ -384,14 +390,16 @@ Level1 is highest priority, Level4 is lowest priority.
         del oTmpJsonCfgData
         CConfig.__updateGlobalVariable(CConfig)
         
-    '''
-    private __setGlobalVariable: This method set Robot global variable from config object
-    Args:
-        key: string
-        value: value of key
-    Returns:
-        None
-    '''
+    # '''
+    # private __setGlobalVariable: This method set Robot global variable from config object
+
+    # Args:
+        # key: string
+        # value: value of key
+
+    # Returns:
+        # None
+    # '''
     def __setGlobalVariable(self, key, value):
         k = key
         v = value
@@ -431,14 +439,15 @@ Level1 is highest priority, Level4 is lowest priority.
         else:         
             BuiltIn().set_global_variable("${%s}" % k.strip(), v)
             
-    '''
-    private __updateGlobalVariable: This method updates preprocessor and global params to global variable
-                                    of ROBFW
-    Args:
-        None
-    Returns:
-        None
-    '''
+    # '''
+    # private __updateGlobalVariable: This method updates preprocessor and global params to global variable of ROBFW
+
+    # Args:
+        # None
+
+    # Returns:
+        # None
+    # '''
     def __updateGlobalVariable(self):
         try:
             for k,v in self.oConfigParams['preprocessor']['definitions'].items():
@@ -460,23 +469,27 @@ Level1 is highest priority, Level4 is lowest priority.
         except:
             pass  
         
-    '''
-    Destructor
-    Args:
-        None
-    Returns:
-        None
-    '''
+    # '''
+    # Destructor
+
+    # Args:
+        # None
+
+    # Returns:
+        # None
+    # '''
     def __del__(self):
         pass
     
-    '''
-    private __loadConfigFileLevel2: loads config in case rConfigFiles.sLevel2 == True
-    Args:
-        None
-    Returns:
-        sTestCfgFile: string
-    '''
+    # '''
+    # private __loadConfigFileLevel2: loads config in case rConfigFiles.sLevel2 == True
+
+    # Args:
+        # None
+
+    # Returns:
+        # sTestCfgFile: string
+    # '''
     def __loadConfigFileLevel2(self):
         
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
@@ -517,29 +530,32 @@ Level1 is highest priority, Level4 is lowest priority.
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
 
     def __sNormalizePath(self, sPath : str) -> str:
-        """
-**Method: __sNormalizePath**
-    Python struggles with
+        # """
+# **Method: __sNormalizePath**
 
-    - UNC paths
-      e.g. ``\\hi-z4939\ccstg\....``
-    - escape sequences in windows paths
-      e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result
-      after processing it with an regexp would be ``c:\autotest   uner``
+    # Python struggles with
+
+    # - UNC paths
+      # e.g. ``\\hi-z4939\ccstg\....``
+    # - escape sequences in windows paths
+      # e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result
+      # after processing it with an regexp would be ``c:\autotest   uner``
     
-    In order to solve this problems any slash will be replaced from backslash
-    to slash, only the two UNC backslashes must be kept if contained.
+    # In order to solve this problems any slash will be replaced from backslash
+    # to slash, only the two UNC backslashes must be kept if contained.
    
-**Args:**
-   **sPath** (*string*)
-      Absolute or relative path as input.
+# **Args:**
 
-      Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
+   # **sPath** (*string*)
+      # Absolute or relative path as input.
 
-**Returns:**
-   **sPath** (*string*)
-      normalized path as string        
-        """  
+      # Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
+
+# **Returns:**
+
+   # **sPath** (*string*)
+      # normalized path as string        
+        # """  
         # make all backslashes to slash, but mask
         # UNC indicator \\ before and restore after.
         def __mkslash(sPath : str) -> str:
@@ -571,13 +587,13 @@ Level1 is highest priority, Level4 is lowest priority.
       
         return sNPath
     
-    '''
-    Private Method: __getMachineName gets current machine name which is running the test.
-    Args:
-        None
-    Returns:
-        sMachineName: string
-    '''
+    # '''
+    # Private Method: __getMachineName gets current machine name which is running the test.
+    # Args:
+        # None
+    # Returns:
+        # sMachineName: string
+    # '''
     @staticmethod
     def __getMachineName():
         sMachineName = ''
@@ -595,13 +611,13 @@ Level1 is highest priority, Level4 is lowest priority.
             
         return sMachineName
     
-    '''
-    Private method: __getUserName gets current account name login to run the test
-    Args:
-        None
-    Returns:
-        sUserName: string
-    '''
+    # '''
+    # Private method: __getUserName gets current account name login to run the test
+    # Args:
+        # None
+    # Returns:
+        # sUserName: string
+    # '''
     @staticmethod
     def __getUserName():
         sUserName = ''

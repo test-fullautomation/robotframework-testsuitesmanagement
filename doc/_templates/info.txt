@@ -1,1 +1,0 @@
-This _templates directory will be used to build documentation

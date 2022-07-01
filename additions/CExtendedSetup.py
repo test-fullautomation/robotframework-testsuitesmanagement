@@ -24,17 +24,12 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 22.02.2022 / XC-CT/ECA3-Queckenstedt
-# Added add_htmldoc_to_wheel() to support wheel based distribution
-# 
-# 30.09.2021 / XC-CI1/ECA3-Queckenstedt
-# Added wrapper for error messages
-# 
-# Initial version 08/2021
+# 10.05.2022
 #
 # --------------------------------------------------------------------------------------------------------------
 
 import os, sys, platform, shlex, subprocess, shutil
+import pypandoc
 import colorama as col
 
 col.init(autoreset=True)
@@ -70,11 +65,11 @@ class CExtendedSetup():
 
     # --------------------------------------------------------------------------------------------------------------
 
-    def gen_doc(self):
-        """Executes sphinx-makeall.py
+    def genpackagedoc(self):
+        """Executes genpackagedoc.py
         """
-        sPython = self.__oRepositoryConfig.Get('sPython')
-        sDocumentationBuilder = self.__oRepositoryConfig.Get('sDocumentationBuilder')
+        sPython = self.__oRepositoryConfig.Get('PYTHON')
+        sDocumentationBuilder = self.__oRepositoryConfig.Get('DOCUMENTATIONBUILDER')
         listCmdLineParts = []
         listCmdLineParts.append(f"\"{sPython}\"")
         listCmdLineParts.append(f"\"{sDocumentationBuilder}\"")
@@ -96,16 +91,58 @@ class CExtendedSetup():
             return ERROR
         print()
         return nReturn
-    # eof def gen_doc():
+    # eof def genpackagedoc():
+
+    # --------------------------------------------------------------------------------------------------------------
+
+    def convert_repo_readme(self):
+        """Converts the main repository README from 'rst' to 'md' format.
+        """
+
+        sReadMe_rst = self.__oRepositoryConfig.Get("README_RST")
+        if sReadMe_rst is None:
+            print()
+            printerror(f"'sReadMe_rst' is None")
+            print()
+            return ERROR
+
+        sReadMe_md = self.__oRepositoryConfig.Get("README_MD")
+        if sReadMe_md is None:
+            print()
+            printerror(f"'sReadMe_md' is None")
+            print()
+            return ERROR
+
+        if os.path.isfile(sReadMe_rst) is False:
+            print()
+            printerror(f"Missing readme file '{sReadMe_rst}'")
+            print()
+            return ERROR
+
+        sFileContent = pypandoc.convert_file(sReadMe_rst, 'md')
+        hFile_md = open(sReadMe_md, "w", encoding="utf-8")
+        listFileContent = sFileContent.splitlines()
+        for sLine in listFileContent:
+            hFile_md.write(sLine + "\n")
+        hFile_md.close()
+
+        print(f"File '{sReadMe_rst}'")
+        print("converted to")
+        print(f"'{sReadMe_md}'")
+        print()
+
+        return SUCCESS
+
+    # eof def convert_repo_readme(self):
 
     # --------------------------------------------------------------------------------------------------------------
 
     def delete_previous_build(self):
         """Deletes folder containing previous builds of setup.py within the repository
         """
-        sSetupBuildFolder = self.__oRepositoryConfig.Get('sSetupBuildFolder')
-        sSetupDistFolder  = self.__oRepositoryConfig.Get('sSetupDistFolder')
-        sEggInfoFolder    = self.__oRepositoryConfig.Get('sEggInfoFolder')
+        sSetupBuildFolder = self.__oRepositoryConfig.Get('SETUPBUILDFOLDER')
+        sSetupDistFolder  = self.__oRepositoryConfig.Get('SETUPDISTFOLDER')
+        sEggInfoFolder    = self.__oRepositoryConfig.Get('EGGINFOFOLDER')
         if os.path.isdir(sSetupBuildFolder) is True:
             print(f"* Deleting '{sSetupBuildFolder}'")
             try:
@@ -141,7 +178,7 @@ class CExtendedSetup():
     def delete_previous_installation(self):
         """Deletes previous package installation folder within the Python installation
         """
-        sInstalledPackageFolder = self.__oRepositoryConfig.Get('sInstalledPackageFolder')
+        sInstalledPackageFolder = self.__oRepositoryConfig.Get('INSTALLEDPACKAGEFOLDER')
         if os.path.isdir(sInstalledPackageFolder) is True:
             print(f"* Deleting '{sInstalledPackageFolder}'")
             try:
@@ -151,101 +188,10 @@ class CExtendedSetup():
                 printexception(str(ex))
                 print()
                 return ERROR
-        sInstalledPackageDocFolder = self.__oRepositoryConfig.Get('sInstalledPackageDocFolder')
-        if os.path.isdir(sInstalledPackageDocFolder) is True:
-            print(f"* Deleting '{sInstalledPackageDocFolder}'")
-            try:
-                shutil.rmtree(sInstalledPackageDocFolder)
-            except Exception as ex:
-                print()
-                printexception(str(ex))
-                print()
-                return ERROR
         print()
         return SUCCESS
 
     # eof def delete_previous_installation():
-
-    # --------------------------------------------------------------------------------------------------------------
-
-    def add_htmldoc_to_installation(self):
-        """Adds the package documentation in HTML format to the Python onstallation
-        """
-        sHTMLOutputFolder          = self.__oRepositoryConfig.Get('sHTMLOutputFolder')
-        sInstalledPackageDocFolder = self.__oRepositoryConfig.Get('sInstalledPackageDocFolder')
-        if os.path.isdir(sHTMLOutputFolder) is False:
-            print()
-            printerror(f"Error: Missing html output folder '{sHTMLOutputFolder}'")
-            print()
-            return ERROR
-        shutil.copytree(sHTMLOutputFolder, sInstalledPackageDocFolder)
-        if os.path.isdir(sInstalledPackageDocFolder) is False:
-            print()
-            printerror(f"Error: html documentation not copied to package installation folder '{sInstalledPackageDocFolder}'")
-            print()
-            return ERROR
-        print(COLBY + f"Folder '{sHTMLOutputFolder}'")
-        print(COLBY + "copied to")
-        print(COLBY + f"'{sInstalledPackageDocFolder}'")
-        print()
-        return SUCCESS
-    # eof def add_htmldoc_to_installation():
-
-    # --------------------------------------------------------------------------------------------------------------
-
-    def add_htmldoc_to_wheel(self):
-        """Adds the package documentation in HTML format to the wheel folder inside build
-        """
-        sHTMLOutputFolder = self.__oRepositoryConfig.Get('sHTMLOutputFolder')
-        sSetupBuildFolder = self.__oRepositoryConfig.Get('sSetupBuildFolder')
-        sPackageName      = self.__oRepositoryConfig.Get('sPackageName')
-        if os.path.isdir(sHTMLOutputFolder) is False:
-            print()
-            printerror(f"Error: Missing html output folder '{sHTMLOutputFolder}'")
-            print()
-            return ERROR
-
-        # The desired destination path for the documentation is:
-        # <build>\bdist.win-amd64\wheel\<package name>\doc
-        # with <build> is already available by 'sSetupBuildFolder' in CConfig.
-        # I am not convinced that it's a good idea to have hard coded parts like 'bdist.win-amd64' within a path here.
-        # Therefore we search recursively the file system for a subfolder with name 'wheel/<package name>'. And that's it!
-        sTargetFolder     = f"wheel/{sPackageName}"
-        sWheelDocDestPath = None
-        bBreak            = False
-        for sRootFolder, listFolders, listFiles in os.walk(sSetupBuildFolder):
-            for sFolder in listFolders:
-                sPath = os.path.join(sRootFolder, sFolder)
-                sPathMod = sPath.replace("\\", "/")
-                if sPathMod.endswith(sTargetFolder):
-                    sWheelDocDestPath = f"{sPathMod}/doc"
-                    bBreak = True
-                    break # for sFolder in listFolders:
-                # eof if sPathMod.endswith(sTargetFolder):
-            # eof for sFolder in listFolders:
-            if bBreak is True:
-                break # walk
-        # eof for sRootFolder, listFolders, listFiles in os.walk(sSetupBuildFolder):
-
-        if sWheelDocDestPath is None:
-            print()
-            printerror(f"Error: Not able to find '{sTargetFolder}' inside {sSetupBuildFolder}")
-            print()
-            return ERROR
-
-        shutil.copytree(sHTMLOutputFolder, sWheelDocDestPath)
-        if os.path.isdir(sWheelDocDestPath) is False:
-            print()
-            printerror(f"Error: html documentation not copied to local wheel folder '{sWheelDocDestPath}'")
-            print()
-            return ERROR
-
-        print(COLBY + f"Folder '{sHTMLOutputFolder}'")
-        print(COLBY + "copied to")
-        print(COLBY + f"'{sWheelDocDestPath}'")
-        print()
-        return SUCCESS
-    # eof def add_htmldoc_to_wheel():
 
 # eof class CExtendedSetup():
 

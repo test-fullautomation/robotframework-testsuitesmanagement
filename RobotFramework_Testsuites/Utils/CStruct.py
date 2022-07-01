@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -20,13 +20,13 @@
 #
 #################################################################################
 
-'''
-This class provides the "struct" functionality of "C/C++" in python.
-It simply helps to organize data which belongs logically together.
+# '''
+# This class provides the "struct" functionality of "C/C++" in python.
+# It simply helps to organize data which belongs logically together.
 
-Usage: oStruct=CStruct(attribute_1=value_1, ... attribute_n=value_n)
-       oStruct.attribute_1="....."
-'''
+# Usage: oStruct=CStruct(attribute_1=value_1, ... attribute_n=value_n)
+       # oStruct.attribute_1="....."
+# '''
 
 class CStruct:
     '''
