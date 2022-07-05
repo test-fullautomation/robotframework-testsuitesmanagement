@@ -1,0 +1,636 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
+        <mxGraphModel dx="1075" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="1c1d494c118603dd-1" value="ROBFW-AIO Configuration" style="swimlane;html=1;childLayout=stackLayout;startSize=20;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="20" width="1550" height="1330" as="geometry"/>
+                </mxCell>
+                <mxCell id="1c1d494c118603dd-2" value="Robot run config (Highest-level directory test suite)" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
+                    <mxGeometry y="20" width="367" height="1310" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="60571a20871a0731-4" target="sv8sNIAZ2DMV6_7Wv51i-19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60571a20871a0731-4" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;align=center;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="50.5" y="40" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-19" target="sv8sNIAZ2DMV6_7Wv51i-25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-19" value="Config levels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=9;opacity=70;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="20.5" y="380" width="100" height="99" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-20" value="config_level1 = Flase" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="sv8sNIAZ2DMV6_7Wv51i-19" vertex="1">
+                    <mxGeometry y="30" width="100" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-21" value="config_level2 = False" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="sv8sNIAZ2DMV6_7Wv51i-19" vertex="1">
+                    <mxGeometry y="48" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-22" value="config_level3 = False" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="sv8sNIAZ2DMV6_7Wv51i-19" vertex="1">
+                    <mxGeometry y="65" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="config_level4 = True" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="sv8sNIAZ2DMV6_7Wv51i-19" vertex="1">
+                    <mxGeometry y="82" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-25" target="sv8sNIAZ2DMV6_7Wv51i-27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-25" target="sv8sNIAZ2DMV6_7Wv51i-31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-25" value="input variable&lt;br&gt;config_file exist?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="3" y="500" width="135" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-27" value="- Set config_level1 = True&lt;br&gt;- Set&amp;nbsp;bConfigLoaded = True&lt;br&gt;- other config levels are set False&lt;br&gt;- The config of the whole robot run is loaded 1 time via listener method at the first testsuite&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry y="590" width="141" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-31" target="sv8sNIAZ2DMV6_7Wv51i-35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-31" value="Handle the highest-level test suite" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="188.25" y="507.5" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-31" target="sv8sNIAZ2DMV6_7Wv51i-31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-34" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="138" y="507.5" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-35" target="sv8sNIAZ2DMV6_7Wv51i-37" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="161.5" y="715"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-35" value="Dose&amp;nbsp; __init__.robot with&lt;br&gt;config file in suite setup exist?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="179.5" y="680" width="162.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" parent="1c1d494c118603dd-2" source="sv8sNIAZ2DMV6_7Wv51i-37" target="sv8sNIAZ2DMV6_7Wv51i-46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-37" value="- Set config_level2 = True&lt;br&gt;- Set&amp;nbsp;bConfigLoaded = True&lt;br&gt;- Other config levels are set False&lt;br&gt;- The config of the whole robot run is loaded through __init__.robot file.&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="87.5" y="755" width="147" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-43" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="128.5" y="719" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-46" value="Create config object for the robot run" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="83" y="1020" width="156" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-62" value="&lt;font style=&quot;font-size: 9px&quot;&gt;Config object of the robot run:&lt;br&gt;{&lt;br&gt;&amp;nbsp; &amp;lt;common params define here&amp;gt;,&lt;br&gt;&amp;nbsp; &quot;preprocessor&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &quot;definitions&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;define params here, these params&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;will become the global params&amp;gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; }&lt;br&gt;&amp;nbsp; },&lt;br&gt;&amp;nbsp; &quot;params&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &quot;global&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;define params here, these params&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;will become the global params&amp;gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; }&lt;br&gt;&amp;nbsp; }&lt;br&gt;}&lt;br&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=10;opacity=70;align=left;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="16.5" y="1070" width="188" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-110" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;fontSize=9;entryX=0.178;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1c1d494c118603dd-2" target="1c1d494c118603dd-14" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="204.5" y="1200" as="sourcePoint"/>
+                        <mxPoint x="254.5" y="1150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="330.5" y="1200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-30" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="74.5" y="550" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;font style=&quot;font-size: 13px&quot;&gt;Start&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="50" y="50" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Execute entire robot test project" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;rotation=90;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="10" y="170" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="Run robot file directly" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="233.25" y="40" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-2" vertex="1">
+                    <mxGeometry x="333.25" y="719" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" parent="1c1d494c118603dd-1" source="sv8sNIAZ2DMV6_7Wv51i-46" target="1c1d494c118603dd-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;fontSize=9;" parent="1c1d494c118603dd-1" source="41" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="1c1d494c118603dd-3" value="Parent&amp;nbsp; Testsuite Config (robot directories)" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
+                    <mxGeometry x="367" y="20" width="303" height="1310" as="geometry"/>
+                </mxCell>
+                <mxCell id="1c1d494c118603dd-14" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Config Object&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="-52.5" y="1020" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-65" target="sv8sNIAZ2DMV6_7Wv51i-66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-65" value="Handle parent test suites" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="93.75" y="210" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=none;html=1;entryX=0.459;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=9;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-66" target="sv8sNIAZ2DMV6_7Wv51i-72" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-66" target="79" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-66" value="Dose&amp;nbsp; __init__.robot with&lt;br&gt;config file in suite setup exist?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="87.5" y="290" width="162.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-63" target="sv8sNIAZ2DMV6_7Wv51i-65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-63" value="Handle parent test suites and test suites" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=center;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="83.75" y="130" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-3" source="1c1d494c118603dd-14" target="sv8sNIAZ2DMV6_7Wv51i-63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-69" target="1c1d494c118603dd-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-69" value="Create config object" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="27.5" y="910" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-72" target="sv8sNIAZ2DMV6_7Wv51i-63" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="293" y="430"/>
+                            <mxPoint x="293" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-72" value="Continue handle sub-directories recursive" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="103.75" y="400" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-108" value="&lt;font style=&quot;font-size: 9px&quot;&gt;Config object of the robot run:&lt;br&gt;{&lt;br&gt;&amp;nbsp; &amp;lt;common params define here&amp;gt;,&lt;br&gt;&amp;nbsp; &quot;preprocessor&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &quot;definitions&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;define params here, these params&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;will become the global params&amp;gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; }&lt;br&gt;&amp;nbsp; },&lt;br&gt;&amp;nbsp; &quot;params&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &quot;global&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;define params here, these params&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;will become the global params&amp;gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; },&lt;br&gt;&amp;nbsp; &amp;nbsp; &quot;local&quot;: {&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;local params are defined here if they are&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;defined in __init__.robot &amp;gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; }&lt;br&gt;&amp;nbsp; }&lt;br&gt;}&lt;br&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=10;opacity=70;align=left;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="55.75" y="1060" width="188" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=-0.012;exitY=0.546;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1c1d494c118603dd-3" source="sv8sNIAZ2DMV6_7Wv51i-108" target="1c1d494c118603dd-14" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="117.5" y="1020" as="sourcePoint"/>
+                        <mxPoint x="167.5" y="970" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="15.5" y="1191"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-73" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="57.5" y="300" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-75" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="167" y="360" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;entryX=0.456;entryY=-0.035;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=9;" parent="1c1d494c118603dd-3" source="79" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-3" source="79" target="88" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="191" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="bConfigLoaded=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="20" y="490" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=none;html=1;entryX=0.329;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=9;exitX=0.32;exitY=0.941;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1c1d494c118603dd-3" source="65" target="sv8sNIAZ2DMV6_7Wv51i-69" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="67" y="870" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="- config_level2 = True&lt;br&gt;- bConfigLoaded = True&lt;br&gt;- Other config levels are set False&lt;br&gt;- The config of the whole robot run is loaded through __init__.robot file.&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="20" y="780" width="147" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="83.75" y="530" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-3" source="88" target="195" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="config_level1=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="123" y="590" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="Add config params to config object (Update level2)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="130.5" y="670" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-3" vertex="1">
+                    <mxGeometry x="250" y="590" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-1" source="sv8sNIAZ2DMV6_7Wv51i-72" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="576" y="510"/>
+                            <mxPoint x="710" y="510"/>
+                            <mxPoint x="710" y="420"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1c1d494c118603dd-4" value="Testsuite config (robot file)" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
+                    <mxGeometry x="670" y="20" width="880" height="1310" as="geometry"/>
+                </mxCell>
+                <mxCell id="60571a20871a0731-5" value="" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;perimeter=ellipsePerimeter;outline=end;symbol=terminate;rounded=0;shadow=0;comic=0;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="390" y="1100" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 10px&quot;&gt;Config Object&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="-53" y="1010" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="5" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="145" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Handle test suites (robot script)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="69.5" y="380" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="7" target="201" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="118" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="221" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="7" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="420" y="460"/>
+                            <mxPoint x="510" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 9px&quot;&gt;Dose suite setup have config&lt;br&gt;file in input param?&lt;br&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="230" y="430" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="252" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="12" target="60571a20871a0731-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Execute the test suite with current config object" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;align=left;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="347.25" y="930" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1c1d494c118603dd-4" source="18" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Look for&amp;nbsp; ./config/&amp;lt;testsuite name&amp;gt;.json or ./config/robot_config.json" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="570" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="21" target="227" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="519" y="550"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Is ./config/....json exist?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="565" y="520" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1c1d494c118603dd-4" source="2" target="12" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-225.5" y="860" as="sourcePoint"/>
+                        <mxPoint x="-175.5" y="810" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="144.5" y="1030"/>
+                            <mxPoint x="300" y="1030"/>
+                            <mxPoint x="300" y="960"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="42" value="End" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="390" y="1140" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="43" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Trigger separate robot file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="114.5" y="45" width="132.25" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Config levels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="12" y="80" width="100" height="99" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="config_level1 = Flase" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="46" vertex="1">
+                    <mxGeometry y="30" width="100" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="config_level2 = False" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="46" vertex="1">
+                    <mxGeometry y="48" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="config_level3 = False" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="46" vertex="1">
+                    <mxGeometry y="65" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="config_level4 = True" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=9;opacity=70;" parent="46" vertex="1">
+                    <mxGeometry y="82" width="100" height="17" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.394;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=9;" parent="1c1d494c118603dd-4" source="52" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="125" y="135"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="input variable&lt;br&gt;config_file exist?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="149.5" y="110" width="129" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="- Set config_level1 = True&lt;br&gt;- other config levels are set False&lt;br&gt;- The config of the whole robot run is loaded 1 time via listener method at the first testsuite&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="69.5" y="200" width="141" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="125" y="110" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="274.5" y="110" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="208" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="68" target="207" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="- Set config_level2 = True&lt;br&gt;- Other config levels are set False.&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="44" y="590" width="147" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;html=1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.706;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1c1d494c118603dd-4" source="sv8sNIAZ2DMV6_7Wv51i-47" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="432" y="920" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sv8sNIAZ2DMV6_7Wv51i-47" value="-&amp;nbsp; Set config_level3 = True&lt;br&gt;- Other config levels are set False&lt;br&gt;- The config file in ./config folder is loaded.&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="360" y="760" width="143.75" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="74" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="758" y="950"/>
+                            <mxPoint x="570.75" y="950"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="-&amp;nbsp; Set config_level4 = True&lt;br&gt;- Other config levels are set False&lt;br&gt;- The default config for the robot run will be loaded&lt;br&gt;- Log out the information of config level and config file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;align=left;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="685.63" y="800" width="143.75" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" style="edgeStyle=none;html=1;fontSize=9;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1c1d494c118603dd-4" source="201" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="118" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="212" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="201" target="211" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="268" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="201" value="bConfigLoaded=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="50" y="490" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="84.5" y="530" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="207" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="15" y="750"/>
+                            <mxPoint x="15" y="790"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="210" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="207" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="118" y="950"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="207" value="Create config object" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="57.5" y="720" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;html=1;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1c1d494c118603dd-4" source="56" target="207" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="20" y="800" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="20" y="245"/>
+                            <mxPoint x="20" y="730"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="217" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="211" target="216" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="365" y="570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="211" value="config_level1=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="200.38" y="550" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="185" y="490" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="Add config params to config object (Update level2)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="304.5" y="630" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="227" target="sv8sNIAZ2DMV6_7Wv51i-47" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="519" y="690"/>
+                            <mxPoint x="432" y="690"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="234" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="227" target="233" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="623" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="227" value="bConfigLoaded=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="451.5" y="600" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="530" y="530" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="490" y="640" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="239" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1c1d494c118603dd-4" source="233" target="238" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="config_level1=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="555" y="660" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="530" y="660" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="238" value="Add config params to config object (Update level3)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="563" y="740" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="615" y="700" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="246" style="edgeStyle=none;html=1;fontSize=9;" parent="1c1d494c118603dd-4" source="244" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="244" value="bConfigLoaded=True?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;opacity=70;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="690" y="600" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="243" style="edgeStyle=none;html=1;fontSize=9;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1c1d494c118603dd-4" source="21" target="244" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="750" y="550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="758" y="550"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="247" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1c1d494c118603dd-4" vertex="1">
+                    <mxGeometry x="725" y="640" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="764.5" y="1220" as="sourcePoint"/>
+                        <mxPoint x="714.5" y="1010" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="789.5" y="1220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;fontSize=9;" parent="1" source="sv8sNIAZ2DMV6_7Wv51i-27" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="314.5" y="1020" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="224.5" y="1020"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="52" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1040" y="440" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1130" y="175"/>
+                            <mxPoint x="1130" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=none;html=1;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="sv8sNIAZ2DMV6_7Wv51i-35" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="530" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="510" y="755"/>
+                            <mxPoint x="510" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="91" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="665" y="530" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="705" y="670" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="198" style="edgeStyle=none;html=1;fontSize=9;" parent="1" source="195" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="1081" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="708" y="1081"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="199" style="edgeStyle=none;html=1;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="88" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="860" y="440" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="830" y="650"/>
+                            <mxPoint x="830" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="203" value="&lt;font style=&quot;font-size: 9px&quot;&gt;Yes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1005" y="480" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" style="edgeStyle=none;html=1;fontSize=9;" parent="1" source="211" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1087.88" y="990" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="215" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1055" y="630" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1145" y="590" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" style="edgeStyle=none;html=1;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="216" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="850" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1060" y="690"/>
+                            <mxPoint x="1060" y="850"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="220" style="edgeStyle=none;html=1;fontSize=9;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="216" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1120" y="990" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1155" y="750"/>
+                            <mxPoint x="1120" y="750"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="222" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1205" y="480" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="232" style="edgeStyle=none;html=1;fontSize=9;" parent="1" source="sv8sNIAZ2DMV6_7Wv51i-47" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="880" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1140" y="840"/>
+                            <mxPoint x="1140" y="880"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="235" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1395" y="640" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="236" style="edgeStyle=none;html=1;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="233" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1250" y="920" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1350" y="720"/>
+                            <mxPoint x="1350" y="920"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="241" style="edgeStyle=none;html=1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="238" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1250" y="940" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1443" y="940"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="242" style="edgeStyle=none;html=1;fontSize=9;exitX=0.142;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="238" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="900" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1400" y="900"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="245" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1515" y="570" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="248" style="edgeStyle=none;html=1;fontSize=9;exitX=0.003;exitY=0.625;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="74" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="250" style="edgeStyle=none;html=1;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="244" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1577.5" y="990" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1690" y="660"/>
+                            <mxPoint x="1690" y="990"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="251" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1645" y="640" width="30" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
