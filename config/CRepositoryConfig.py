@@ -29,7 +29,7 @@
 # 
 # --------------------------------------------------------------------------------------------------------------
 #
-# 05.07.2022
+# 18.07.2022
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -39,8 +39,12 @@ import pypandoc
 
 from PythonExtensionsCollection.String.CString import CString
 
-from RobotFramework_Testsuites.packageversion import VERSION
-from RobotFramework_Testsuites.packageversion import VERSION_DATE
+# because of partially same names for packace constants and meta information constants we do a mapping here
+from RobotFramework_Testsuites.packageversion import VERSION as PACKAGEVERSION
+from RobotFramework_Testsuites.packageversion import VERSION_DATE as PACKAGEVERSIONDATE
+from RobotFramework_Testsuites.Config.CConfig import AIO_BUNDLE_NAME as META_NAME
+from RobotFramework_Testsuites.Config.CConfig import VERSION as META_VERSION
+from RobotFramework_Testsuites.Config.CConfig import VERSION_DATE as META_VERSION_DATE
 
 col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED
@@ -80,8 +84,13 @@ class CRepositoryConfig():
         self.__dictRepositoryConfig['REPOSITORYCONFIGURATIONFILE'] = sRepositoryConfigurationFile
 
         # add version and date of the package this repository configuration belongs to
-        self.__dictRepositoryConfig['PACKAGEVERSION'] = VERSION
-        self.__dictRepositoryConfig['PACKAGEDATE']    = VERSION_DATE
+        self.__dictRepositoryConfig['PACKAGEVERSION'] = PACKAGEVERSION
+        self.__dictRepositoryConfig['PACKAGEDATE']    = PACKAGEVERSIONDATE
+
+        # add meta information of the package this repository configuration belongs to
+        self.__dictRepositoryConfig['META_NAME']         = META_NAME
+        self.__dictRepositoryConfig['META_VERSION']      = META_VERSION
+        self.__dictRepositoryConfig['META_VERSION_DATE'] = META_VERSION_DATE
 
         # make absolute path to package documentation
         self.__dictRepositoryConfig['PACKAGEDOC'] = CString.NormalizePath(sPath=self.__dictRepositoryConfig['PACKAGEDOC'], sReferencePathAbs=self.__sReferencePath)

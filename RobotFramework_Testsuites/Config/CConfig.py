@@ -45,7 +45,9 @@ import pathlib
 # It contains the core robotframework and relative resources such as:
 # testsuitesmanagement, testresultwebapptool, Eclipse for RobotFramework, ...
 # This information is used for Robotframework AIO version control 
-VERSION = "0.5.1"
+AIO_BUNDLE_NAME = "RobotFramework AIO"
+VERSION         = "0.5.1"
+VERSION_DATE    = "07/2022"
 
 class dotdict(dict):
 
