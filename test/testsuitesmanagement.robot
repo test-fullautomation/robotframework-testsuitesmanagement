@@ -30,8 +30,8 @@ Suite Setup    testsuites.testsuite_setup    ./config/main_config.json
 
 Documentation    Self test of testsuites management
 
-Metadata    version     1234       # this value must not be valid - because taken from json configuration file!
-Metadata    testversion     5678   # but this
+# TODO: needs to be clarified if this shall be valid or not:  Metadata    version     1234
+Metadata    testversion     5678
 
 
 *** Variables ***
@@ -63,7 +63,10 @@ Testsuites_Management_Test_02
    # [Expectation] It must be possible to parse the maximum version from selected configuration file
    should_be_equal    ${bSuccess}    ${True}
    # [Expectation] The parsed maximum version must be the same than the suite metadata tells us
-   should_be_equal    ${sMaximumVersion}    ${SUITE METADATA}[version]
+   # TODO: needs to be clarified if this shall be valid or not:
+   # should_be_equal    ${sMaximumVersion}    ${SUITE METADATA}[version]
+   # alternatively hard coded:
+   should_be_equal    ${sMaximumVersion}    0.5.2
 
 # --------------------------------------------------------------------------------------------------------------
 
