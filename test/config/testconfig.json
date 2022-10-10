@@ -12,21 +12,19 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //*****************************************************************************
-//  Author: Mai Dinh Nam Son
-//
-//  This file defines all common global parameters and will be included to all
-//  test config files
-//*****************************************************************************
+
 {
-  "Project": "G3g",
   "WelcomeString": "Hello... ROBFW is running now!",
-  "Maximum_version": "0.5.2",
-  "Minimum_version": "0.4.10",
-  // Version control information.
-  "version": {
-    "majorversion": "0",
-    "minorversion": "1",
-    "patchversion": "1"
-  },
-  "TargetName" : "gen3flex@dlt"
+
+  "Maximum_version" : "0.5.2",
+  "Minimum_version" : "0.4.11",
+
+  "Project"    : "G3g",
+  "TargetName" : "gen3flex@dlt",
+
+  "params" : {
+              "global": {
+                            "testparam" : 123
+                        }
+             }
 }

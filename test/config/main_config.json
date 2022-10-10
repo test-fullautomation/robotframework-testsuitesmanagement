@@ -12,21 +12,23 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //*****************************************************************************
-//  Author: Mai Dinh Nam Son
+// The file configures the access to all variant dependent robot_config*.json
+// files.
 //
-//  This file defines all common global parameters and will be included to all
-//  test config files
+// The path to the robot_config*.json files depends on the test file location. A 
+// different number of ../ is required dependend on the directory depth of the test 
+// case location.
+// Therefore we use here three ... to tell the ROBFW to search from the test 
+// file location up till the robot_config*.json files are found:
+// ./config/robot_config.json
+// ../config/robot_config.json
+// ../../config/robot_config.json
+// ../../../config/robot_config.json
+// and so on.
 //*****************************************************************************
 {
-  "Project": "G3g",
-  "WelcomeString": "Hello... ROBFW is running now!",
-  "Maximum_version": "0.5.2",
-  "Minimum_version": "0.4.10",
-  // Version control information.
-  "version": {
-    "majorversion": "0",
-    "minorversion": "1",
-    "patchversion": "1"
-  },
-  "TargetName" : "gen3flex@dlt"
+  "default": {
+    "name": "testconfig.json",
+    "path": ".../config/"
+  }
 }
