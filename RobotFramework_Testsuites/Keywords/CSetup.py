@@ -29,11 +29,46 @@ from robot.libraries.BuiltIn import BuiltIn
 
 class CSetupKeywords(object):
     '''
-    Definition setup keywords
+**Class: CSetupKeywords**
+
+   This CSetupKeywords class uses to define the setup keywords which are using in suite setup and teardown of 
+robot test script.
+
+   ``Testsuite Setup`` keyword loads the RobotFramework AIO configuration, checks the version of RobotFramework AIO, 
+and logs out the basic information of the robot run.
+
+   ``Testsuite Teardown`` keyword currently do nothing, it's defined here for future requirements.
+
+   ``Testcase Setup`` keyword currently do nothing, it's defined here for future requirements.
+
+   ``Testcase Teardown`` keyword currently do nothing, it's defined here for future requirements.
+   
     '''
 
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
+        '''
+**Method: testsuite_setup**
+
+   This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration, 
+checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
+
+**Arguments:**
+
+* ``sTestsuiteCfgFile``
+
+   / *Condition*: required / *Type*: string
+
+   ``sTestsuiteCfgFile=''`` and vairiable ``config_file`` is not set Robotframework AIO will check 
+for configuration level 3, and level 4.
+
+   ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and vairiable ``config_file`` is not set 
+Robotframework AIO will load configuration level 2.
+
+**Returns:**
+
+* No return variable
+        '''
         if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg:
             BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             return
@@ -83,41 +118,116 @@ class CSetupKeywords(object):
         
     @keyword
     def testsuite_teardown(self):
+        '''
+**Method: testsuite_teardown**
+
+   This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing, 
+it's defined here for future requirements.
+        '''
         logger.info('testsuite_teardown: Will be implemented later')
         
     @keyword
     def testcase_setup(self):
+        '''
+**Method: testcase_setup**
+
+   This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
+it's defined here for future requirements.
+        '''
         logger.info('Test Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount))
         
     @keyword
     def testcase_teardown(self):
+        '''
+**Method: testcase_teardown**
+
+   This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing, 
+it's defined here for future requirements.
+        '''
         logger.info('testcase_teardown: Will be implemented later')
         
     @keyword
     def update_config(self, sCfgFile):
+        '''
+**Method: update_config**
+   This update_config defines the ``Update Config`` keyword which is using update the configuration object 
+of RobotFramework AIO.
+
+**Arguments:**
+
+* ``sCfgFile``
+
+   / *Condition*: required / *Type*: string
+
+   The path of Json configuration file.
+
+**Returns:**
+
+* No return variable
+        '''
         CConfig.updateCfg(sCfgFile)
         
 class CGeneralKeywords(object):
     '''
-    Definition setup keywords
+**Class: CGeneralKeywords**
+
+   This CGeneralKeywords class uses to define the keywords which will be using in RobotFramework AIO test script.
+
+   ``Get Config`` keyword gets the current config object of robot run.
+
+   ``Load Json`` keyword loads json file then return json object.
+
+   In case, new robot keyword is required, it will be defined and implemented in this class.
     '''
      
     @keyword
     def get_config(self):
         '''
-        oConfigParams: is the dictionary consist of some configuration params which 
-        are return to user from get_config_params keyword
+**Method: get_config**
+
+   This get_config defines the ``Get Config`` keyword gets the current config object of RobotFramework AIO.
+
+**Arguments:**
+
+* No parameter is required
+
+**Returns:**
+
+* ``oConfig.oConfigParams``
+
+   / *Type*: json /
         '''
         return copy.deepcopy(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.oConfigParams)
     
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):
-        # '''
-        # This keyword uses to load json file then return json object.
-           # - Level = 1 -> loads the content of jsonfile.
-           # - level != 1 -> loads the json file which is set with variant (likes loading
-             # config level2)
-        # '''
+        '''
+**Method: load_json**
+
+   This load_json defines the ``Load Json`` keyword which loads json file then return json object.
+
+**Arguments:**
+
+* ``jsonfile``
+
+   / *Condition*: required / *Type*: string
+
+   The path of Json configuration file.
+
+* ``level``
+
+   / *Condition*: required / *Type*: int
+
+   Level = 1 -> loads the content of jsonfile.
+
+   level != 1 -> loads the json file which is set with variant (likes loading config level2)
+
+**Returns:**
+
+* ``oJsonData``
+
+   / *Type*: json /
+        '''
         import os
         from os.path import abspath, dirname
         from JsonPreprocessor import CJsonPreprocessor
