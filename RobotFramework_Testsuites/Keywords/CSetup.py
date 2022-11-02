@@ -150,6 +150,7 @@ it's defined here for future requirements.
     def update_config(self, sCfgFile):
         '''
 **Method: update_config**
+
    This update_config defines the ``Update Config`` keyword which is using update the configuration object 
 of RobotFramework AIO.
 

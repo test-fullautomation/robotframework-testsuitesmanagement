@@ -84,27 +84,42 @@ Features
 Using configuration files in Json format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Nowadays, Json is the leading of structuring data for exchange not only for web applications but also for other software 
+applications. Json format is used to represent data, and become the universal standard of data exchange, that the reason 
+we decided using Json format as configuration file for RobotFramework AIO.
+
 Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring RobotFramework AIO automation 
 test project with json files which allow user adds the comments, imports params from other json files. Adding comments and 
 importing json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
 
-``RobotFramework_Testsuites`` management difines 4 different configuration levels, from level 1 -> level 4, Level 1 is highest 
+Define 4 levels of configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``RobotFramework_Testsuites`` management defines 4 different configuration levels, from level 1 to level 4 level 1 is highest 
 priority, and level 4 is lowest priority:
 
-**Level 1: Loads configuration file via parameter input of robot command**
+**Level 1: Loads configuration file via input parameter of robot command**
+
+This is highest priority of loading configuration method, that means, configuration level 2 or 3 will be ignored even it is set.
+
+This level 1 configuration is designed to force RobotFramework AIO executing with the configuration file for some purpose:
+
+* In case the use wants to execute the robot run with specific configuration file for the particular purposes.
+
+* User re-produces and verifies an issue or a corner case with new configuration file and doesn't want to modify the current 
+  configuration file.
 
 User can address the json configuration file when executing robot testsuite with input parameter 
 ``--variable config_file:"<path_to_json_file>"``
 
-Ex: ``robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>``
+.. code-block::
 
-This is highest priority of loading configuration method, that means, configuration level 2 or 3 will be ignored even it is set.
+robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>
 
 **Level 2: Loads Json configuration according to variant name**
 
 This level 2 is designed for the scenario that user creates the automation testing project which running 
-for many different variants. Base on variant name input when trigger robot run, it will load the appropriate 
-json configuration file.
+for many different variants. When trigger robot run, it will load the appropriate json configuration file.
 
 To set RobotFrameowork AIO run with level 2, first user has to create a json file which contains different 
 variants point to different configuration files.
@@ -137,7 +152,7 @@ in ``Suite Setup`` of a testsuite.
 
 In case of user wants to set configuration level 2 for entire RobotFrameowork test project instead of 
 indiviual robot testsuite file, ``__init__.robot`` file has to be created at the highest folder of 
-RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to add as input parameter of 
+RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to be added as input parameter of 
 ``testsuites.testsuite_setup`` in ``Suite Setup`` of the ``__init__.robot`` file.
 
 .. code-block::
@@ -150,7 +165,7 @@ RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to 
 
 Configuration level 3 is triggered only in case of level 1 and level 2 were not set.
 
-The configuration level 3 will check in ``config/`` folder in current testsuite directory, if there has json 
+The configuration level 3 will check in ``config/`` folder in current testsuite directory the existence of json 
 file which has the same name with testsuite file (ex: ``abc.rotbot`` & ``./config/abc.json``), then it will 
 load this configuration file. In case there is no json file has the same name with robot testsuite file, it will 
 check the existence of ``./config/robot_config.json`` then load this ``./config/robot_config.json`` file as 
@@ -158,15 +173,19 @@ configuration file.
 
 **Level 4: Lowest priority level, it reads default configuration file**
 
+In case testsuites management library detects that configuration level 1, level 2, and level 3 are not set, the 
+robot execution will use the configuration level 4 by default.
+
 The default configuration file (``robot_config.json``) in installation directory:
 
 ``\RobotFramework_Testsuites\Config\robot_config.json``
 
-Dotdict features
-~~~~~~~~~~~~~~~~
+**Access dictionary object of configuration by traditional way or using "."**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-User can access dictionary object in robot test script by called ``${dict}[abc][def]`` or ``${dict.abc.def}``
+User can access dictionary object which is defined in configuration file in robot test script by called ``${dict}[abc][def]`` 
+or ``${dict.abc.def}``
 
-**Note:** In case a parameter name contains a ".", then we could not use dotdict but the traditional way ``${dict}[abc][def]`` 
+**Note:** In case a parameter name contains a ".", then it is not possible to use dotdict but the traditional way ``${dict}[abc][def]`` 
 is still working.
 

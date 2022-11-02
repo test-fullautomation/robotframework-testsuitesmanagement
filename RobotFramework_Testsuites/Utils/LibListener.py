@@ -28,13 +28,13 @@ class LibListener(object):
 
    This ``LibListener`` class defines the hook methods.
 
-   ``_start_suite`` hooks to every starting testsuite of robot run.
+   * ``_start_suite`` hooks to every starting testsuite of robot run.
 
-   ``_end_suite`` hooks to every ending testsuite of robot run.
+   * ``_end_suite`` hooks to every ending testsuite of robot run.
 
-   ``_start_test`` hooks to every starting test case of robot run.
+   * ``_start_test`` hooks to every starting test case of robot run.
 
-   ``_end_test`` hooks to every ending test case of robot run.
+   * ``_end_test`` hooks to every ending test case of robot run.
     '''
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
