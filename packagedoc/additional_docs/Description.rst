@@ -32,9 +32,9 @@ Go to **robotframework-testsuitesmanagement**, using the 2 common commands below
     setup.py install    will install the package
 
 After the build processes are completed, the package is located in **build/**, and the documents are 
-located in **doc/_build/**.
+located in **build/lib/RobotFramework_Testsuites**.
 
-We can use ``--help`` to discover the options for ``build`` command, ex:
+We can use ``--help`` to discover the options for ``build`` command, example:
 
 .. code-block:: bat
 
