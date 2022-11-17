@@ -18,15 +18,15 @@ Getting Started
 How to install
 ~~~~~~~~~~~~~~
 
-Firstly, clone **RobotFramework_Testsuites** repository to your machine
+Firstly, clone **RobotFramework_Testsuites** repository to your machine.
 
-.. code-block:: bat
+.. code::
 
   git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
 Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
 
-.. code-block:: bat
+.. code::
 
     setup.py build      will build the package underneath 'build/'
     setup.py install    will install the package
@@ -36,7 +36,7 @@ located in **build/lib/RobotFramework_Testsuites**.
 
 We can use ``--help`` to discover the options for ``build`` command, example:
 
-.. code-block:: bat
+.. code::
 
      setup.py build      will build the package underneath 'build/'
      setup.py install    will install the package
@@ -85,24 +85,34 @@ Using configuration files in Json format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nowadays, Json is the leading of structuring data for exchange not only for web applications but also for other software 
-applications. Json format is used to represent data, and become the universal standard of data exchange, that the reason 
-we decided using Json format as configuration file for RobotFramework AIO.
+applications. Json format is used to represent data, and become the universal standard of data exchange. That is the reason 
+we decided using Json format for configuration files of RobotFramework AIO.
 
 Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring RobotFramework AIO automation 
-test project with json files which allow user adds the comments, imports params from other json files. Adding comments and 
-importing json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
+test project with json files which allow users to add the comments, and to import params from other json files. Adding comments 
+and importing json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
 
 Define 4 levels of configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``RobotFramework_Testsuites`` management defines 4 different configuration levels, from level 1 to level 4 level 1 is highest 
-priority, and level 4 is lowest priority:
+``RobotFramework_Testsuites`` management defines 4 different configuration levels, from level 1 to level 4. Level 1 is highest 
+priority, and level 4 is lowest priority.
+
+The 4 different configuration levels helps users more convenient to configure RobotFramework test project:
+
+* Level 1 supports users execute robot run with specific configuration file.
+
+* Level 2 supports users loading configuration file base on variant name.
+
+* Level 3 supports users creating different separated configuration files for indiviual robot testsuite files.
+
+* Level 4 supports users practicing to learn RobotFramework AIO.
 
 **Level 1: Loads configuration file via input parameter of robot command**
 
 This is highest priority of loading configuration method, that means, configuration level 2 or 3 will be ignored even it is set.
 
-This level 1 configuration is designed to force RobotFramework AIO executing with the configuration file for some purpose:
+This level 1 configuration is designed for some purpose:
 
 * In case the use wants to execute the robot run with specific configuration file for the particular purposes.
 
@@ -112,7 +122,7 @@ This level 1 configuration is designed to force RobotFramework AIO executing wit
 User can address the json configuration file when executing robot testsuite with input parameter 
 ``--variable config_file:"<path_to_json_file>"``
 
-.. code-block::
+.. code::
 
 robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>
 
@@ -121,12 +131,12 @@ robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>
 This level 2 is designed for the scenario that user creates the automation testing project which running 
 for many different variants. When trigger robot run, it will load the appropriate json configuration file.
 
-To set RobotFrameowork AIO run with level 2, first user has to create a json file which contains different 
+To set RobotFramework AIO run with level 2, first user has to create a json file which contains different 
 variants point to different configuration files.
 
 For example, we create the ``variants_cfg.json`` with content below:
 
-.. code-block:: json
+.. code::
 
    {
      "default": {
@@ -147,15 +157,15 @@ For example, we create the ``variants_cfg.json`` with content below:
      }
    }
 
-Then the path of ``variants_cfg.json`` file has to add as input parameter of ``testsuites.testsuite_setup`` 
+Then the path of ``variants_cfg.json`` file has to be added as input parameter of ``testsuites.testsuite_setup`` 
 in ``Suite Setup`` of a testsuite.
 
-In case of user wants to set configuration level 2 for entire RobotFrameowork test project instead of 
+In case of user wants to set configuration level 2 for entire RobotFramework test project instead of 
 indiviual robot testsuite file, ``__init__.robot`` file has to be created at the highest folder of 
 RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to be added as input parameter of 
 ``testsuites.testsuite_setup`` in ``Suite Setup`` of the ``__init__.robot`` file.
 
-.. code-block::
+.. code::
 
    *** Settings ***
    Library      RobotFramework_Testsuites    WITH NAME    testsuites
@@ -180,11 +190,11 @@ The default configuration file (``robot_config.json``) in installation directory
 
 ``\RobotFramework_Testsuites\Config\robot_config.json``
 
-**Access dictionary object of configuration by traditional way or using "."**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Access to configuration parameters**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-User can access dictionary object which is defined in configuration file in robot test script by called ``${dict}[abc][def]`` 
-or ``${dict.abc.def}``
+User can access dictionary object which is defined in configuration file in robot test script by traditional way or using ".". 
+For example, users can call ``${dict}[abc][def]`` or ``${dict.abc.def}``
 
 **Note:** In case a parameter name contains a ".", then it is not possible to use dotdict but the traditional way ``${dict}[abc][def]`` 
 is still working.

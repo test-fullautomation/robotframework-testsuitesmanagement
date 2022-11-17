@@ -15,11 +15,11 @@
 RobotFramework AIO testsuites management documentation
 ======================================================
 
-**This is the documentation for robotframework-testsuitesmanagement library**
+**This is the documentation for RobotFramework_Testsuites**
 
 The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
 Python package to provide the enhanced features such as json configuration files, 
-4 different levels of configuation, global parameters, schema validation, etc
+4 different levels of configuation, global parameters, schema validation, etc.
 
-This testsuites management package will support testing for many variants of product on the 
+This RobotFramework_Testsuites package will support testing for many variants of product on the 
 same Robot project by switching between different configuration files via variant name.

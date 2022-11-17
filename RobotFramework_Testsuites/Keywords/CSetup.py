@@ -32,10 +32,10 @@ class CSetupKeywords(object):
 **Class: CSetupKeywords**
 
    This CSetupKeywords class uses to define the setup keywords which are using in suite setup and teardown of 
-robot test script.
+   robot test script.
 
    ``Testsuite Setup`` keyword loads the RobotFramework AIO configuration, checks the version of RobotFramework AIO, 
-and logs out the basic information of the robot run.
+   and logs out the basic information of the robot run.
 
    ``Testsuite Teardown`` keyword currently do nothing, it's defined here for future requirements.
 
@@ -51,7 +51,7 @@ and logs out the basic information of the robot run.
 **Method: testsuite_setup**
 
    This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration, 
-checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
+   checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
 
 **Arguments:**
 
@@ -59,11 +59,11 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
 
    / *Condition*: required / *Type*: string
 
-   ``sTestsuiteCfgFile=''`` and vairiable ``config_file`` is not set Robotframework AIO will check 
-for configuration level 3, and level 4.
+   ``sTestsuiteCfgFile=''`` and vairiable ``config_file`` is not set Robotframework AIO will check for configuration
+    level 3, and level 4.
 
-   ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and vairiable ``config_file`` is not set 
-Robotframework AIO will load configuration level 2.
+   ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and vairiable ``config_file`` is not set Robotframework AIO 
+   will load configuration level 2.
 
 **Returns:**
 
@@ -122,7 +122,7 @@ Robotframework AIO will load configuration level 2.
 **Method: testsuite_teardown**
 
    This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing, 
-it's defined here for future requirements.
+   it's defined here for future requirements.
         '''
         logger.info('testsuite_teardown: Will be implemented later')
         
@@ -132,7 +132,7 @@ it's defined here for future requirements.
 **Method: testcase_setup**
 
    This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
-it's defined here for future requirements.
+   it's defined here for future requirements.
         '''
         logger.info('Test Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount))
         
@@ -142,7 +142,7 @@ it's defined here for future requirements.
 **Method: testcase_teardown**
 
    This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing, 
-it's defined here for future requirements.
+   it's defined here for future requirements.
         '''
         logger.info('testcase_teardown: Will be implemented later')
         
@@ -152,7 +152,7 @@ it's defined here for future requirements.
 **Method: update_config**
 
    This update_config defines the ``Update Config`` keyword which is using update the configuration object 
-of RobotFramework AIO.
+   of RobotFramework AIO.
 
 **Arguments:**
 
@@ -172,13 +172,13 @@ class CGeneralKeywords(object):
     '''
 **Class: CGeneralKeywords**
 
-   This CGeneralKeywords class uses to define the keywords which will be using in RobotFramework AIO test script.
+   This CGeneralKeywords class defines the keywords which will be using in RobotFramework AIO test script.
 
    ``Get Config`` keyword gets the current config object of robot run.
 
    ``Load Json`` keyword loads json file then return json object.
 
-   In case, new robot keyword is required, it will be defined and implemented in this class.
+   In case new robot keyword is required, it will be defined and implemented in this class.
     '''
      
     @keyword

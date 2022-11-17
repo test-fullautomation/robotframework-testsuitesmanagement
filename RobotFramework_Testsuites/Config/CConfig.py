@@ -96,8 +96,8 @@ class CConfig():
          }
 
       According to the ``ConfigName``, Testsuites-Management package will choose the corresponding config file. 
-``".../config/"`` indicats the relative path to json config file, Testsuites-Management will recursively 
-find the ``config`` folder.
+      ``".../config/"`` indicats the relative path to json config file, Testsuites-Management will recursively 
+      find the ``config`` folder.
 
    **Level3:** Read in testsuite folder ``/config/robot_config.json``
 
@@ -215,9 +215,8 @@ find the ``config`` folder.
 
    Makes the CConfig class to singleton.
    
-   Checks to see if a __single exists already for this class. 
-Compare class types instead of just looking for None so that subclasses will create 
-their own __single objects. 
+   Checks to see if a __single exists already for this class. Compare class types instead of just looking 
+   for None so that subclasses will create their own __single objects. 
         '''
         if classtype != type(classtype.__single):
             classtype.__single = object.__new__(classtype)
@@ -379,7 +378,7 @@ their own __single objects.
 **Method: updateCfg**
 
    This updateCfg method updates preprocessor, global or local params base on RobotFramework AIO local 
-config or any json config file according to purpose of specific testsuite.
+   config or any json config file according to purpose of specific testsuite.
 
 **Arguments:**
 
@@ -594,11 +593,11 @@ config or any json config file according to purpose of specific testsuite.
 
       - escape sequences in windows paths
 
-         e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result 
-after processing it with an regexp would be ``c:\autotest   uner``
+         e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result after 
+         processing it with an regexp would be ``c:\autotest   uner``
     
-      In order to solve this problems any slash will be replaced from backslash 
-to slash, only the two UNC backslashes must be kept if contained.
+      In order to solve this problems any slash will be replaced from backslash to slash, 
+      only the two UNC backslashes must be kept if contained.
 
 **Arguments:**
 
@@ -725,11 +724,11 @@ to slash, only the two UNC backslashes must be kept if contained.
         '''
 **Method: verifyRbfwVersion**
 
-   This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum
-version (if provided in the configuration file).
+   This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version 
+   (if provided in the configuration file).
 
-   In case the current version is not between min and max version, then the execution of 
-testsuite is terminated with "unknown" state
+   In case the current version is not between min and max version, then the execution of testsuite is terminated 
+   with "unknown" state
 
 **Arguments:**
 
@@ -819,7 +818,7 @@ testsuite is terminated with "unknown" state
 **Method: bValidateSubVersion**
 
    This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple 
-for version comparision.
+   for version comparision.
 
 **Arguments:**
 
