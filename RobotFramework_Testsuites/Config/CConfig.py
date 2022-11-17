@@ -50,7 +50,11 @@ VERSION         = "0.5.2"
 VERSION_DATE    = "09.2022"
 
 class dotdict(dict):
+    '''
+**Subclass: dotdict**
 
+   Subclass of dict, with "dot" (attribute) access to keys.
+    '''
     __setattr__ = dict.__setitem__
     def __getattr__(self, item):
         try:
@@ -62,39 +66,43 @@ class dotdict(dict):
 
 class CConfig():
     '''
-Defines the properties of configuration
-Holds the identified config files.
-Level1 is highest priority, Level4 is lowest priority.
+**Class: CConfig**
 
-(remaining content needs to be fixed and restored)
+   Defines the properties of configuration and holds the identified config files.
 
+   The loading configuration method is divided into 4 levels, level1 is highest priority, Level4 is lowest priority.
+
+   **Level1:** Handed over by command line argument.
+
+   **Level2:** Read from content of json config file
+
+      .. code:: json
+
+         {
+            "default": {
+               "name": "robot_config.json",
+               "path": ".../config/"
+            },
+            "variant_0": {
+               "name": "robot_config.json",
+               "path": ".../config/"
+            },
+            "variant_1": {
+               "name": "robot_config_variant_1.json",
+               "path": ".../config/"
+            },
+               ...
+               ...
+         }
+
+      According to the ``ConfigName``, Testsuites-Management package will choose the corresponding config file. 
+      ``".../config/"`` indicats the relative path to json config file, Testsuites-Management will recursively 
+      find the ``config`` folder.
+
+   **Level3:** Read in testsuite folder ``/config/robot_config.json``
+
+   **Level4:** Read from RobotFramework AIO install folder ``/RobotFramework/defaultconfig/robot_config.json``
     '''
-    # '''
-# Defines the properties of configuration
-# Holds the identified config files.
-# Level1 is highest priority, Level4 is lowest priority.
-
-# Level1: handed over by command line argument.
-# Level2: read from content of
-                            # {
-                              # "default": {
-                                # "name": "robot_config.json",
-                                # "path": ".../config/"
-                              # },
-                              # "variant_0": {
-                                # "name": "robot_config.json",
-                                # "path": ".../config/"
-                              # },
-                              # "variant_1": {
-                                # "name": "robot_config_variant_1.json",
-                                # "path": ".../config/"
-                              # },
-                                # ...
-                                # ...
-                            # }
-# Level3: read in testsuite folder /config/robot_config.json
-# Level4: read from ROBFW install folder /RobotFramework/defaultconfig/robot_config.json
-    # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
     sRootSuiteName    = ''
@@ -134,9 +142,10 @@ Level1 is highest priority, Level4 is lowest priority.
     
     class CJsonDotDict():
         '''
-        The CJsonDotDict class converts json configuration object to dotdict
-        '''
+**Class: CJsonDotDict**
 
+   The CJsonDotDict class converts json configuration object to dotdict
+        '''
         def __init__(self):
             self.lTmpParam = ['CConfig.ddictJson']
             
@@ -146,13 +155,23 @@ Level1 is highest priority, Level4 is lowest priority.
 
         def dotdictConvert(self, oJson):
             '''
-            Method: dotdictConvert converts json object to dotdict
+**Method: dotdictConvert**
 
-            Args:
-                oJson: dict
+   This dotdictConvert method converts json object to dotdict.
 
-            Returns:
-                CConfig.ddictJson: dotdict
+**Arguments:**
+
+* ``oJson``
+
+   / *Condition*: required / *Type*: dict
+
+   Json object which want to convert to dotdict.
+
+**Returns:**
+
+* ``CConfig.ddictJson``
+
+   / *Type*: dotdict /
             '''
             if len(self.lTmpParam) == 1:
                 CConfig.ddictJson.update(oJson)
@@ -190,38 +209,38 @@ Level1 is highest priority, Level4 is lowest priority.
             self.lTmpParam = self.lTmpParam[:-1]
             return CConfig.ddictJson
      
-    # '''
-    # Makes the CConfig class to singleton.
-    # Checks to see if a __single exists already for this class
-    # Compare class types instead of just looking for None so that subclasses will create
-    # their own __single objects. 
-
-    # Args:
-        # classtype: type of class
-
-    # Returns:
-        # classtype.__single
-    # '''
     def __new__(classtype, *args, **kwargs):
+        '''
+**Method: __new__**
+
+   Makes the CConfig class to singleton.
+   
+   Checks to see if a __single exists already for this class. Compare class types instead of just looking 
+   for None so that subclasses will create their own __single objects. 
+        '''
         if classtype != type(classtype.__single):
             classtype.__single = object.__new__(classtype)
         return classtype.__single
 
-    # '''
-    # Constructor
-
-    # Args:
-        # None
-
-    # Returns:
-        # None
-    # '''
     def __init__(self):
         pass
         
 
     @staticmethod
     def loadCfg(self):
+        '''
+**Method: loadCfg**
+
+   This loadCfg method uses to load configuration's parameters from json files.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
+        '''
         if not self.rConfigFiles.sLevel1:
             if self.rConfigFiles.sLevel2:
                 self.rConfigFiles.sLevel4 = False
@@ -356,15 +375,22 @@ Level1 is highest priority, Level4 is lowest priority.
         
     def updateCfg(sUpdateCfgFile):
         '''
-        staticmethod updateParams: This method updates preprocessor, global or local params base on
-        ROBFW local config or any json config file according to purpose of
-        specific testsuite.
+**Method: updateCfg**
 
-        Args:
-            sUpdateCfgFile: str
+   This updateCfg method updates preprocessor, global or local params base on RobotFramework AIO local 
+   config or any json config file according to purpose of specific testsuite.
 
-        Returns:
-            None              
+**Arguments:**
+
+* ``sUpdateCfgFile``
+
+   / *Condition*: required / *Type*: string
+
+   The path of json file which wants to update configuration parameters.
+
+**Returns:**
+
+* No return variable       
         '''
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
@@ -392,17 +418,28 @@ Level1 is highest priority, Level4 is lowest priority.
         del oTmpJsonCfgData
         CConfig.__updateGlobalVariable(CConfig)
         
-    # '''
-    # private __setGlobalVariable: This method set Robot global variable from config object
-
-    # Args:
-        # key: string
-        # value: value of key
-
-    # Returns:
-        # None
-    # '''
     def __setGlobalVariable(self, key, value):
+        '''
+**Method: __setGlobalVariable**
+
+   This method set RobotFramework AIO global variable from config object.
+
+**Arguments:**
+
+* ``key``
+
+   / *Condition*: required / *Type*: string
+
+   key is set as global variable of RobotFramework AIO, user can call ${<key>} in test script.
+
+* ``value``
+
+   / *Condition*: required / *Type*: <variant datatypes>
+
+**Returns:**
+
+* No return variable
+        '''
         k = key
         v = value
         if isinstance(v, dict):
@@ -441,16 +478,20 @@ Level1 is highest priority, Level4 is lowest priority.
         else:         
             BuiltIn().set_global_variable("${%s}" % k.strip(), v)
             
-    # '''
-    # private __updateGlobalVariable: This method updates preprocessor and global params to global variable of ROBFW
-
-    # Args:
-        # None
-
-    # Returns:
-        # None
-    # '''
     def __updateGlobalVariable(self):
+        '''
+**Method: __updateGlobalVariable**
+
+   This method updates preprocessor and global params to global variable of RobotFramework AIO.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
+        '''
         try:
             for k,v in self.oConfigParams['preprocessor']['definitions'].items():
                 try:
@@ -471,28 +512,36 @@ Level1 is highest priority, Level4 is lowest priority.
         except:
             pass  
         
-    # '''
-    # Destructor
-
-    # Args:
-        # None
-
-    # Returns:
-        # None
-    # '''
     def __del__(self):
+        '''
+**Method: __del__**
+
+   This destructor method.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
+        '''
         pass
     
-    # '''
-    # private __loadConfigFileLevel2: loads config in case rConfigFiles.sLevel2 == True
-
-    # Args:
-        # None
-
-    # Returns:
-        # sTestCfgFile: string
-    # '''
     def __loadConfigFileLevel2(self):
+        '''
+**Method: __loadConfigFileLevel2**
+
+   This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLevel2 == True.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
+        '''
         
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
@@ -532,32 +581,42 @@ Level1 is highest priority, Level4 is lowest priority.
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
 
     def __sNormalizePath(self, sPath : str) -> str:
-        # """
-# **Method: __sNormalizePath**
+        '''
+**Method: __sNormalizePath**
 
-    # Python struggles with
+   Python struggles with
 
-    # - UNC paths
-      # e.g. ``\\hi-z4939\ccstg\....``
-    # - escape sequences in windows paths
-      # e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result
-      # after processing it with an regexp would be ``c:\autotest   uner``
+      - UNC paths
+
+         e.g. ``\\hi-z4939\ccstg\....``
+
+
+      - escape sequences in windows paths
+
+         e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result after 
+         processing it with an regexp would be ``c:\autotest   uner``
     
-    # In order to solve this problems any slash will be replaced from backslash
-    # to slash, only the two UNC backslashes must be kept if contained.
-   
-# **Args:**
+      In order to solve this problems any slash will be replaced from backslash to slash, 
+      only the two UNC backslashes must be kept if contained.
 
-   # **sPath** (*string*)
-      # Absolute or relative path as input.
+**Arguments:**
 
-      # Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
+* ``sPath``
 
-# **Returns:**
+   / *Condition*: required / *Type*: string
 
-   # **sPath** (*string*)
-      # normalized path as string        
-        # """  
+   Absolute or relative path as input.
+
+   Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
+
+**Returns:**
+
+* ``sPath``
+
+   / *Type*: string /
+
+   Normalized path as string
+        '''
         # make all backslashes to slash, but mask
         # UNC indicator \\ before and restore after.
         def __mkslash(sPath : str) -> str:
@@ -589,15 +648,23 @@ Level1 is highest priority, Level4 is lowest priority.
       
         return sNPath
     
-    # '''
-    # Private Method: __getMachineName gets current machine name which is running the test.
-    # Args:
-        # None
-    # Returns:
-        # sMachineName: string
-    # '''
     @staticmethod
     def __getMachineName():
+        '''
+**Method: __getMachineName**
+
+   This __getMachineName method gets current machine name which is running the test.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* ``sMachineName``
+
+   / *Type*: string /
+        '''
         sMachineName = ''
         # Allows windows system access only in windows systems
         if platform.system().lower()!="windows":
@@ -613,15 +680,23 @@ Level1 is highest priority, Level4 is lowest priority.
             
         return sMachineName
     
-    # '''
-    # Private method: __getUserName gets current account name login to run the test
-    # Args:
-        # None
-    # Returns:
-        # sUserName: string
-    # '''
     @staticmethod
     def __getUserName():
+        '''
+**Method: __getUserName**
+
+   This __getUserName method gets current account name login to run the test.
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* ``sUserName``
+
+   / *Type*: string /
+        '''
         sUserName = ''
         # Allows windows system access only in windows systems
         if platform.system().lower()!="windows":
@@ -647,10 +722,21 @@ Level1 is highest priority, Level4 is lowest priority.
     
     def verifyRbfwVersion(self):
         '''
-        Validate the current robotframework version with maximum and minimum 
-        version (if provided in the configuration file).
-        In case the current version is not between min and max version, then
-        the execution of testsuite is terminated with "unknown" state
+**Method: verifyRbfwVersion**
+
+   This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version 
+   (if provided in the configuration file).
+
+   In case the current version is not between min and max version, then the execution of testsuite is terminated 
+   with "unknown" state
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
         '''
         sCurrentVersion = VERSION
         tCurrentVersion = CConfig.tupleVersion(sCurrentVersion)
@@ -675,22 +761,78 @@ Level1 is highest priority, Level4 is lowest priority.
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
         '''
-        Validate current version with required minimun version.
+**Method: bValidateMinVersion**
+
+   This bValidateMinVersion validates the current version with required minimun version.
+
+**Arguments:**
+
+* ``tCurrentVersion``
+
+   / *Condition*: required / *Type*: tuple
+
+   Current RobotFramework AIO version.
+
+* ``tMinVersion``
+
+   / *Condition*: required / *Type*: tuple
+
+   The minimum version of RobotFramework AIO.
+
+**Returns:**
+
+* ``True or False``
         '''
         return tCurrentVersion >= tMinVersion
 
     @staticmethod
     def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
         '''
-        Validate current version with required maximun version.
+**Method: bValidateMaxVersion**
+
+   This bValidateMaxVersion validates the current version with required minimun version.
+
+**Arguments:**
+
+* ``tCurrentVersion``
+
+   / *Condition*: required / *Type*: tuple
+
+   Current RobotFramework AIO version.
+
+* ``tMinVersion``
+
+   / *Condition*: required / *Type*: tuple
+
+   The minimum version of RobotFramework AIO.
+
+**Returns:**
+
+* ``True or False``
         '''
         return tCurrentVersion <= tMaxVersion
 
     @staticmethod
     def bValidateSubVersion(sVersion):
         '''
-        Validate the format of provided sub version and parse it into sub tuple
-        for version comparision.
+**Method: bValidateSubVersion**
+
+   This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple 
+   for version comparision.
+
+**Arguments:**
+
+* ``sVersion``
+
+   / *Condition*: required / *Type*: string
+
+   The version of RobotFramework AIO.
+
+**Returns:**
+
+* ``lSubVersion``
+
+   / *Type*: tuple /
         '''
         lSubVersion = [0,0,0]
         oMatch = re.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
@@ -719,10 +861,25 @@ Level1 is highest priority, Level4 is lowest priority.
     @staticmethod
     def tupleVersion(sVersion):
         '''
-Return a tuple which contains the (major, minor, patch) version.
+**Method: tupleVersion**
 
-(remaining content needs to be fixed and restored)
+   This tupleVersion returns a tuple which contains the (major, minor, patch) version. 
 
+   (remaining content needs to be fixed and restored)
+
+**Arguments:**
+
+* ``sVersion``
+
+   / *Condition*: required / *Type*: string
+
+   The version of RobotFramework AIO.
+
+**Returns:**
+
+* ``lVersion``
+
+   / *Type*: tuple /
         '''
         # '''
         # Return a tuple which contains the (major, minor, patch) version.
@@ -748,25 +905,47 @@ Return a tuple which contains the (major, minor, patch) version.
 
     def versioncontrol_error(self, reason, version1, version2):
         '''
-        Wrapper version control error log:
-        Log error message of version control due to reason and set to unknown state.
-        `reason` can only be "conflict_min", "conflict_max" and "wrong_minmax".
+**Method: versioncontrol_error**
+
+   Wrapper version control error log:
+
+      Log error message of version control due to reason and set to unknown state.
+
+      `reason` can only be "conflict_min", "conflict_max" and "wrong_minmax".
+
+**Arguments:**
+
+* ``reason``
+
+   / *Condition*: required / *Type*: string
+
+* ``version1``
+
+   / *Condition*: required / *Type*: string
+
+* ``version2``
+
+   / *Condition*: required / *Type*: string
+
+**Returns:**
+
+* No return variable
         '''
         sLocation = "\\\\bosch.com\\dfsrb\\DfsDE\\DIV\\CM\\DI\\Projects\\Common\\RobotFramework\\Releases"
         header = ""
         detail = ""
         if reason=="conflict_min":
             header = "Version conflict."
-            detail = f"\nThe configuration requires minimum Robotframework version '{version1}'"
-            detail +=f"\nbut the installed Robotframework version is older         '{version2}'"
+            detail = f"\nThe configuration requires minimum Robotframework AIO version '{version1}'"
+            detail +=f"\nbut the installed Robotframework AIO version is older         '{version2}'"
         elif reason=="conflict_max":
             header = "Version conflict."
-            detail = f"\nThe configuration requires maximum Robotframework version '{version1}'"
-            detail +=f"\nbut the installed Robotframework version is younger       '{version2}'"
+            detail = f"\nThe configuration requires maximum Robotframework AIO version '{version1}'"
+            detail +=f"\nbut the installed Robotframework AIO version is younger       '{version2}'"
         elif reason=="wrong_minmax":
             header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum Robotframework version                 '{version1}'"
-            detail +=f"\nis younger than the configured maximum Robotframework version '{version2}'"
+            detail = f"\nThe configured minimum Robotframework AIO version                 '{version1}'"
+            detail +=f"\nis younger than the configured maximum Robotframework AIO version '{version2}'"
             detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
         else:
             return

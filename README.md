@@ -10,7 +10,7 @@
 > implied. See the License for the specific language governing
 > permissions and limitations under the License.
 
-# ROBFW TESTSUITES MANAGEMENT DOCUMENTATION
+# RobotFramework AIO TESTSUITES MANAGEMENT DOCUMENTATION
 
 **This is the documentation for robotframework-testsuitesmanagement
 repository**
@@ -88,13 +88,14 @@ usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
 
 ## Features
 
-### ROBFW project is configured with json files
+### RobotFramework AIO project is configured with json files
 
 Together with `JsonPreprocessor` package, `RobotFramework_Testsuites`
-supports configuring ROBFW automation test project with json files which
-allow user adds the comments, imports params from other json files.
-Adding comments and importing json files are enhanced features which are
-developed and documented in `JsonPreprocessor` python package.
+supports configuring RobotFramework AIO automation test project with
+json files which allow user adds the comments, imports params from other
+json files. Adding comments and importing json files are enhanced
+features which are developed and documented in `JsonPreprocessor` python
+package.
 
 `RobotFramework_Testsuites` management difines 4 different configuration
 levels, from level 1 -\> level 4, Level 1 is highest priority, and level
@@ -176,7 +177,7 @@ working.
 
 A detailed documentation of the Python Extensions Collection package can
 be found here:
-[RobotFramework-Testsuites.pdf](https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/doc/_build/latex/RobotFramework-Testsuites.pdf)
+[RobotFramework_Testsuites.pdf](https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_Testsuites/RobotFramework_Testsuites.pdf)
 
 ## Feedback
 

@@ -24,13 +24,44 @@ from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
     '''
-    Define some hook methods
+**Class: LibListener**
+
+   This ``LibListener`` class defines the hook methods.
+
+   * ``_start_suite`` hooks to every starting testsuite of robot run.
+
+   * ``_end_suite`` hooks to every ending testsuite of robot run.
+
+   * ``_start_test`` hooks to every starting test case of robot run.
+
+   * ``_end_test`` hooks to every ending test case of robot run.
     '''
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LISTENER_API_VERSION = 3
     
     def _start_suite(self, data, result):
+        '''
+**Method: _start_suite**
+
+   This _start_suite method hooks to every starting testsuite of robot run.
+
+**Arguments:**
+
+* ``data``
+
+   / *Condition*: required / *Type*: dict
+
+   The data of current robot run.
+
+* ``result``
+
+   / *Condition*: required / *Type*: Any
+
+**Returns:**
+
+* No return variable
+        '''
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig = CConfig()
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = ''
         if os.path.isfile(data.source):
@@ -73,6 +104,27 @@ class LibListener(object):
         dispatch('scope_start', data.longname)
         
     def _end_suite(self, data, result):
+        '''
+**Method: _end_suite**
+
+   This _end_suite method hooks to every ending testsuite of robot run.
+
+**Arguments:**
+
+* ``data``
+
+   / *Condition*: required / *Type*: dict
+
+   The data of current robot run.
+
+* ``result``
+
+   / *Condition*: required / *Type*: Any
+
+**Returns:**
+
+* No return variable
+        '''
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = False
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = False
         if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
@@ -80,10 +132,52 @@ class LibListener(object):
         dispatch('scope_end', data.longname)
         
     def _start_test(self, data, result):
+        '''
+**Method: _start_test**
+
+   This _start_test method hooks to every starting test case of robot run.
+
+**Arguments:**
+
+* ``data``
+
+   / *Condition*: required / *Type*: dict
+
+   The data of current robot run.
+
+* ``result``
+
+   / *Condition*: required / *Type*: Any
+
+**Returns:**
+
+* No return variable
+        '''
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount += 1
         BuiltIn().set_global_variable("${TESTCOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount)
         dispatch('scope_start', data.longname)
         
     def _end_test(self, data, result):
+        '''
+**Method: _end_test**
+
+   This _end_test hooks to every ending test case of robot run.
+
+**Arguments:**
+
+* ``data``
+
+   / *Condition*: required / *Type*: dict
+
+   The data of current robot run.
+
+* ``result``
+
+   / *Condition*: required / *Type*: Any
+
+**Returns:**
+
+* No return variable
+        '''
         dispatch('scope_end', data.longname)
         

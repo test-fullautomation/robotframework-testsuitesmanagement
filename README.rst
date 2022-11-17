@@ -12,8 +12,8 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-ROBFW TESTSUITES MANAGEMENT DOCUMENTATION
-=========================================
+RobotFramework AIO TESTSUITES MANAGEMENT DOCUMENTATION
+======================================================
 
 **This is the documentation for robotframework-testsuitesmanagement repository**
 
@@ -90,12 +90,12 @@ We can use ``--help`` to discover the options for ``build`` command, ex:
 Features
 --------
 
-ROBFW project is configured with json files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RobotFramework AIO project is configured with json files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring ROBFW automation test project 
-with json files which allow user adds the comments, imports params from other json files. Adding comments and importing 
-json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
+Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring RobotFramework AIO automation 
+test project with json files which allow user adds the comments, imports params from other json files. Adding comments and 
+importing json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
 
 ``RobotFramework_Testsuites`` management difines 4 different configuration levels, from level 1 -> level 4, Level 1 is highest 
 priority, and level 4 is lowest priority:
