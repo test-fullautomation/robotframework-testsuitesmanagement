@@ -215,6 +215,9 @@ After installed RobotFramework AIO, the ``localconfig`` directory is created in:
 Users can create the local json configuration files in this directory, then some configuration parameters will be overridden 
 by the data in these local configuration files.
 
+**Note:** In case loading local configuration via input parameter of robot command is using, the local configuration files 
+which are loacted in ``/RobotTest/localconfig`` will be ignored.
+
 **Access to configuration parameters**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
