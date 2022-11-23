@@ -104,7 +104,7 @@ The 4 different configuration levels helps users more convenient to configure Ro
 
 * Level 2 supports users loading configuration file base on variant name.
 
-* Level 3 supports users creating different separated configuration files for indiviual robot testsuite files.
+* Level 3 supports users creating different separated configuration files for individual robot testsuite files.
 
 * Level 4 supports users practicing to learn RobotFramework AIO.
 
@@ -161,7 +161,7 @@ Then the path of ``variants_cfg.json`` file has to be added as input parameter o
 in ``Suite Setup`` of a testsuite.
 
 In case of user wants to set configuration level 2 for entire RobotFramework test project instead of 
-indiviual robot testsuite file, ``__init__.robot`` file has to be created at the highest folder of 
+indivdiual robot testsuite file, ``__init__.robot`` file has to be created at the highest folder of 
 RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to be added as input parameter of 
 ``testsuites.testsuite_setup`` in ``Suite Setup`` of the ``__init__.robot`` file.
 
@@ -189,6 +189,31 @@ robot execution will use the configuration level 4 by default.
 The default configuration file (``robot_config.json``) in installation directory:
 
 ``\RobotFramework_Testsuites\Config\robot_config.json``
+
+**Local configuration**
+~~~~~~~~~~~~~~~~~~~~~~~
+
+In case the robot test project runs on many different test setups, each test setup has some distinguished configuration 
+parameters. So this feature supports users create the local configuration file to override or add new parameters which 
+are applied for indivdiual test setup.
+
+There are 2 ways to load the local configuration for robot run:
+
+**Load local configuration via input parameter of robot command**
+
+User can address the local configuration file when executing robot testsuite with input parameter 
+``--variable local_config:"<path_to_localconfig_file>"``
+
+**Load local configuration in default directory**
+
+After installed RobotFramework AIO, the ``localconfig`` directory is created in:
+
+* **Windows:** ``C:\RobotTest\localconfig``
+
+* **Ubuntu:** ``/home/<user>/RobotTest/localconfig``
+
+Users can create the local json configuration files in this directory, then some configuration parameters will be overridden 
+by the data in these local configuration files.
 
 **Access to configuration parameters**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
