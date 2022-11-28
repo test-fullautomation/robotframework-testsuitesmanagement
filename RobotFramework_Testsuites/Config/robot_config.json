@@ -12,14 +12,14 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //*****************************************************************************
-//  Author: Mai Dinh Nam Son
+//  Author: RobotFramework AIO Team.
 //
-//  This file defines all common global parameters and will be included to all
-//  test config files
+//  This is the default configuration file which is used for level 4 configuration 
+//  of RobotFramework_Testsuites.
 //*****************************************************************************
 {
-  "Project": "G3g",
-  "WelcomeString": "Hello... ROBFW is running now!",
+  "Project": "RobotFramework Testsuites",
+  "WelcomeString": "Hello... RobotFramework AIO is running now!",
   "Maximum_version": "0.5.2",
   "Minimum_version": "0.4.10",
   // Version control information.
@@ -28,5 +28,5 @@
     "minorversion": "1",
     "patchversion": "1"
   },
-  "TargetName" : "gen3flex@dlt"
+  "TargetName" : "Device_01"
 }
