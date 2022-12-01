@@ -121,6 +121,7 @@ class CConfig():
     sTestcasePath     = ''
     sMaxVersion       = ''
     sMinVersion       = ''
+    lLocalConfig      = ''
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,
@@ -373,7 +374,7 @@ class CConfig():
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
         
-    def updateCfg(sUpdateCfgFile):
+    def updateCfg(self, sUpdateCfgFile):
         '''
 **Method: updateCfg**
 
@@ -394,7 +395,7 @@ class CConfig():
         '''
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
-            oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.__sNormalizePath(os.path.abspath(sUpdateCfgFile)))
+            oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.__sNormalizePath(CConfig, os.path.abspath(sUpdateCfgFile)))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -404,6 +405,7 @@ class CConfig():
         if bool(oUpdateParams):
             CConfig.oConfigParams.update(oUpdateParams)
         oTmpJsonCfgData = copy.deepcopy(CConfig.oConfigParams)
+        self.__updateGlobalVariable()
         try:    
             del oTmpJsonCfgData['params']['global']
         except:
@@ -414,9 +416,20 @@ class CConfig():
         except:
             pass
         
-        BuiltIn().set_global_variable("${CONFIG}", oTmpJsonCfgData)
+        bDotdict = False
+        dotdictObj = CConfig.CJsonDotDict()
+        try:
+            jsonDotdict = dotdictObj.dotdictConvert(oTmpJsonCfgData)
+            bDotdict = True
+        except:
+            logger.info("Could not convert json config to dotdict!!!")
+            pass
+        del dotdictObj
+        if bDotdict:
+            BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
+        else:
+            BuiltIn().set_global_variable("${CONFIG}", oTmpJsonCfgData)
         del oTmpJsonCfgData
-        CConfig.__updateGlobalVariable(CConfig)
         
     def __setGlobalVariable(self, key, value):
         '''

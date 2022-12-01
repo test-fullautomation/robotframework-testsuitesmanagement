@@ -17,7 +17,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from robot.api import logger
 
 @keyword
-def subprocess_execution(testscript):
+def subprocess_execution(testscript, args = ''):
     
     curDir = os.getcwd()
     suite_dir = os.path.dirname(BuiltIn().get_variable_value("${SUITE_SOURCE}"))
@@ -25,7 +25,13 @@ def subprocess_execution(testscript):
     print('INFO: Executed test - ', os.path.abspath(testscript))
     try:
         if os.name == 'nt':
-            result = os.popen(os.path.abspath(testscript)).read()
+            if args != '':
+                command = '"' + os.environ['RobotPythonPath'] + '/python.exe" -m robot.run ' + args + " " \
+                    + os.path.abspath(testscript)
+                result = os.popen(command).read()
+            else:
+                command = '"' + os.environ['RobotPythonPath'] + '/python.exe" -m robot.run ' + os.path.abspath(testscript)
+                result = os.popen(command).read()
         else:
             result = os.popen('robot ' + os.path.abspath(testscript)).read()
     except:
@@ -39,3 +45,18 @@ def subprocess_execution(testscript):
         logger.info(result)
         os.chdir(curDir)
         return "Failed"
+
+@keyword
+def create_valid_default_local_config_file():
+    curDir = os.getcwd()
+    suite_dir = os.path.dirname(BuiltIn().get_variable_value("${SUITE_SOURCE}"))
+    os.chdir(suite_dir)
+    os.system("copy " + os.path.abspath("../../general_config/localconfig/local_config_invalid.json") \
+        + " " + os.environ['ROBOT_LOCAL_CONFIG'] + "\\local_config.json")
+
+@keyword
+def delete_default_local_config_file():
+    try:
+        os.remove(os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json")
+    except:
+        pass
