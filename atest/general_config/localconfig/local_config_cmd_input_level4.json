@@ -1,0 +1,7 @@
+// Initially created by Pollerspoeck Thomas (CM-AI/PJ-CMD) / 30.10.2017
+// Override here default configuration according to real test bench configuration
+   
+{
+   "WelcomeString" : "Test local config!",
+   ${version}['patchversion'] : 2
+}   

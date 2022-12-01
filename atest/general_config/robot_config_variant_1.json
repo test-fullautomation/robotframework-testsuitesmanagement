@@ -12,11 +12,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //**************************************************************************
-// 
-// File: robot_config_variant_1.json
-// Initialized by Mai Dinh Nam Son
-//
-//**************************************************************************
+
 {
   "[import]": "./common/test_config_common.json",
   "params": {
