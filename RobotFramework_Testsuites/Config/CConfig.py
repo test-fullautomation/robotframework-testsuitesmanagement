@@ -374,11 +374,11 @@ class CConfig():
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
         
-    def updateCfg(self, sUpdateCfgFile):
+    def updateLocalConfig(self, sUpdateCfgFile):
         '''
-**Method: updateCfg**
+**Method: updateLocalConfig**
 
-   This updateCfg method updates preprocessor, global or local params base on RobotFramework AIO local 
+   This updateLocalConfig method updates preprocessor, global or local params base on RobotFramework AIO local 
    config or any json config file according to purpose of specific testsuite.
 
 **Arguments:**
@@ -393,13 +393,27 @@ class CConfig():
 
 * No return variable       
         '''
+        bCompositeVariable = False
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
         try:
             oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.__sNormalizePath(CConfig, os.path.abspath(sUpdateCfgFile)))
+            for k, v in oUpdateParams.items():
+                if isinstance(v, dict):
+                    bCompositeVariable = True
+                    raise
+
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error("Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
+            if bCompositeVariable:
+                errorMessage = "Composite variable in local config file is prohibited!"
+            else:
+                errorMessage = CConfig.sLoadedCfgError
+            if re.match("^\s*The variable (.+) is not available!\s*$", errorMessage):
+                errorMessage = "Using the used parameter with syntax ${...} to set a value for \
+another parameter in local config file is prohibited!"
+            logger.error("Failed while loading of JSON configuration file: %s \n \
+        Reason: %s" %(os.path.abspath(sUpdateCfgFile), errorMessage))
             raise Exception
             
         if bool(oUpdateParams):

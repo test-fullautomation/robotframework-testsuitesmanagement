@@ -2,11 +2,7 @@
 // Override here default configuration according to real test bench configuration
    
 {
-    "preprocessor" : {
-       "definitions" : {
-          "gPreproString" : "Default - Preprocessor - Test local config updated!"
-       }
-    },
+   ${preprocessor}['definitions']['gPreproString'] : "Default - Preprocessor - Test local config updated!",
    "WelcomeString" : "Default - Test local config!",
    ${params}['global']['gGlobalString'] : "Default - Local configuration test!",
    ${params}['global']['testNewVar'] : 1.111, // ${params}['global']['gGlobalFloatParam'],
