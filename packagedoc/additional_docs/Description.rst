@@ -206,11 +206,14 @@ User can address the local configuration file when executing robot testsuite wit
 
 **Load local configuration in default directory**
 
-After installed RobotFramework AIO, the ``localconfig`` directory is created in:
+To use this functionality, the ``localconfig`` directory has to be created with detail information below:
 
 * **Windows:** ``C:\RobotTest\localconfig``
 
 * **Ubuntu:** ``/home/<user>/RobotTest/localconfig``
+
+User also has to create the new environment variable with name ``ROBOT_LOCAL_CONFIG`` and the value is the path 
+to the ``localconfig`` directory.
 
 Users can add the content to the local json configuration file ``local_config.json`` in the default directory above, 
 then the configuration parameters will be overridden by the data in file ``local_config.json``.
