@@ -79,6 +79,9 @@ class LibListener(object):
             while test_suite.parent != None:
                 test_suite = test_suite.parent
 
+            for k, v in BuiltIn().get_variables()._keys.items():
+                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lBuitInVariables.append(re.match('.+{(.+)}', v)[1])
+
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
 
