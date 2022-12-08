@@ -549,7 +549,7 @@ class CConfig():
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error("Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
+            logger.error(f"Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
             raise Exception
         
         try:
@@ -557,8 +557,8 @@ class CConfig():
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 is failed! \n \
-                The vairant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
+                The variant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
             logger.error(CConfig.sLoadedCfgError)
             return
             
@@ -575,7 +575,7 @@ class CConfig():
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    raise Exception('Could not find out config directory: %s' %(sTestCfgDirStart))
+                    raise Exception(f"Could not find out config directory: %s" %(sTestCfgDirStart))
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
 
