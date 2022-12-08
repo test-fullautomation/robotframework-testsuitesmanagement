@@ -122,6 +122,7 @@ class CConfig():
     sMaxVersion       = ''
     sMinVersion       = ''
     lLocalConfig      = ''
+    lBuitInVariables  = []
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,
@@ -521,6 +522,8 @@ another parameter in local config file is prohibited!"
         '''
         try:
             for k,v in self.oConfigParams['preprocessor']['definitions'].items():
+                if k in self.lBuitInVariables:
+                    continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
@@ -531,6 +534,8 @@ another parameter in local config file is prohibited!"
         
         try:
             for k,v in self.oConfigParams['params']['global'].items():
+                if k in self.lBuitInVariables:
+                    continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
