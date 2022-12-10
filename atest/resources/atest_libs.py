@@ -51,7 +51,7 @@ def create_valid_default_local_config_file():
     curDir = os.getcwd()
     suite_dir = os.path.dirname(BuiltIn().get_variable_value("${SUITE_SOURCE}"))
     os.chdir(suite_dir)
-    os.system("copy " + os.path.abspath("../../general_config/localconfig/local_config.json") \
+    os.system("copy " + os.path.abspath("../../general_config/localconfig/local_config_invalid.json") \
         + " " + os.environ['ROBOT_LOCAL_CONFIG'] + "\\local_config.json")
 
 @keyword
