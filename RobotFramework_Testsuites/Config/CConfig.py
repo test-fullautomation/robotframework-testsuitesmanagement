@@ -586,13 +586,14 @@ another parameter in local config file is prohibited!"
         
         try:
             defualtCfg = oSuiteConfig['default']['name']
-            self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
-            sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 is failed! \n \
-                The vairant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
-            logger.error(CConfig.sLoadedCfgError)
+            logger.error("Testsuite management is in configuration level2.")
+            logger.error("The file '%s' has no default config or wrong testsuite config format for level 2" %(self.sTestSuiteCfg))
+            logger.error("Testsuite will run with default config file: %s " %(self.sTestCfgFile))
             return
+        
+        self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
+        sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
             
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir

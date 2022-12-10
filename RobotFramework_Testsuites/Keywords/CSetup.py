@@ -70,7 +70,7 @@ class CSetupKeywords(object):
 * No return variable
         '''
         if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg:
-            BuiltIn().unknown(CConfig.sLoadedCfgError)
+            BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             return
         else:
             if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
@@ -81,14 +81,14 @@ class CSetupKeywords(object):
                     try:
                         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
                 else:
                     RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
                     RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
                     try:
                         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             else:
                 logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
                     %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
