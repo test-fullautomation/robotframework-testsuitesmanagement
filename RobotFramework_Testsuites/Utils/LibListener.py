@@ -14,7 +14,6 @@
 
 from inspect import stack
 import os
-import re
 import RobotFramework_Testsuites
 from RobotFramework_Testsuites.Config import CConfig
 
@@ -84,14 +83,7 @@ class LibListener(object):
 
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
-
-            if '${localconfig}' in BuiltIn().get_variables()._keys:
-                if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
-                    logger.error("local_config input must not be empty!!!")
-                else:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig = BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip()
-            elif os.path.isfile(os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json"):
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig = os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json"
+            
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
             if '${swversion}' in BuiltIn().get_variables()._keys:

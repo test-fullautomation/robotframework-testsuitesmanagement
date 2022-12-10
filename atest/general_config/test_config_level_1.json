@@ -12,7 +12,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //**************************************************************************
-
+// 
+// File: test_config_level_1.json
+// Initialized by Mai Dinh Nam Son
+//
+//**************************************************************************
 {
   "WelcomeString": "Hello... ROBFW is running now!",
   // Version control information.
@@ -21,7 +25,7 @@
     "minorversion": "1",
     "patchversion": "0"
   },
-  "Maximum_version": "0.5.3",
+  "Maximum_version": "0.5.1",
   "Minimum_version": "0.4.10",
   "TargetName" : "gen3flex@dlt",
   "Project": "G3g-config-level_1"

@@ -93,12 +93,6 @@ class CSetupKeywords(object):
                 logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
                     %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
 
-            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig != '':
-                try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.updateCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
-                except:
-                    logger.warn("Could not load local configuration file: %s " % RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
-
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
         elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
@@ -117,8 +111,6 @@ class CSetupKeywords(object):
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info('Suite Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath))
         logger.info('CfgFile Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig != '':
-            logger.info('Local config file: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig))
         logger.info('Suite Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount))
         logger.info('Total testcases in TestSuite "%s" is: %s' %( \
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName, \
