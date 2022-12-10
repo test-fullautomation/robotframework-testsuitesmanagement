@@ -21,34 +21,31 @@ Getting Started
 ---------------
 
 The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
-Python package to provide the enhanced features such as json configuration files, 
-4 different levels of configuation, global parameters, schema validation, etc.
-
-This RobotFramework_Testsuites package will support testing for many variants of product on the 
-same Robot project by switching between different configuration files via variant name.
+python package to provide the enhanced features such as json configuration files, 
+4 different levels of configuation, config object and global params, schema validation,...
 
 How to install
 ~~~~~~~~~~~~~~
 
 Firstly, clone **RobotFramework_Testsuites** repository to your machine
 
-.. code::
+.. code-block:: bat
 
   git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
 Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
 
-.. code::
+.. code-block:: bat
 
     setup.py build      will build the package underneath 'build/'
     setup.py install    will install the package
 
 After the build processes are completed, the package is located in **build/**, and the documents are 
-located in **build/lib/RobotFramework_Testsuites**.
+located in **doc/_build/**.
 
-We can use ``--help`` to discover the options for ``build`` command, example:
+We can use ``--help`` to discover the options for ``build`` command, ex:
 
-.. code::
+.. code-block:: bat
 
      setup.py build      will build the package underneath 'build/'
      setup.py install    will install the package
@@ -93,8 +90,8 @@ We can use ``--help`` to discover the options for ``build`` command, example:
 Features
 --------
 
-Using configuration files in Json format
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RobotFramework AIO project is configured with json files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring RobotFramework AIO automation 
 test project with json files which allow user adds the comments, imports params from other json files. Adding comments and 
@@ -103,52 +100,19 @@ importing json files are enhanced features which are developed and documented in
 ``RobotFramework_Testsuites`` management difines 4 different configuration levels, from level 1 -> level 4, Level 1 is highest 
 priority, and level 4 is lowest priority:
 
-Define 4 levels of configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Level 1: Load configuration file while executing robot testsuite by command**
 
-``RobotFramework_Testsuites`` management defines 4 different configuration levels, from level 1 to level 4. Level 1 is highest 
-priority, and level 4 is lowest priority.
+User can address the json configuration file when executing robot testsuite with input parameter ``--variable config_file:"
+<path_to_json_file>"``
 
-The 4 different configuration levels helps users more convenient to configure RobotFramework test project:
+Ex: ``robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>``
 
-* Level 1 supports users execute robot run with specific configuration file.
+**Level 2: In case project have many variants, it reads from json file's content to select the corresponding variant configuration**
 
-* Level 2 supports users loading configuration file base on variant name.
-
-* Level 3 supports users creating different separated configuration files for individual robot testsuite files.
-
-* Level 4 supports users practicing to learn RobotFramework AIO.
-
-
-**Level 1: Loads configuration file via input parameter of robot command**
-
-This is highest priority of loading configuration method, that means, configuration level 2 or 3 will be ignored even it is set.
-
-This level 1 configuration is designed for some purpose:
-
-* In case the use wants to execute the robot run with specific configuration file for the particular purposes.
-
-* User re-produces and verifies an issue or a corner case with new configuration file and doesn't want to modify the current 
-  configuration file.
-
-User can address the json configuration file when executing robot testsuite with input parameter 
-``--variable config_file:"<path_to_json_file>"``
-
-.. code::
-
-robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>
-
-**Level 2: Loads Json configuration according to variant name**
-
-This level 2 is designed for the scenario that user creates the automation testing project which running 
-for many different variants. When trigger robot run, it will load the appropriate json configuration file.
-
-To set RobotFramework AIO run with level 2, first user has to create a json file which contains different 
-variants point to different configuration files.
-
+In level 2 configuration, user has to create a json file which contains different variants point to different configuration files. 
 For example, we create the ``variants_cfg.json`` with content below:
 
-.. code::
+.. code-block:: json
 
    {
      "default": {
@@ -169,74 +133,26 @@ For example, we create the ``variants_cfg.json`` with content below:
      }
    }
 
-Then the path of ``variants_cfg.json`` file has to be added as input parameter of ``testsuites.testsuite_setup`` 
-in ``Suite Setup`` of a testsuite.
+User can set configuration level 2 only in testsuite like below:
 
-In case of user wants to set configuration level 2 for entire RobotFramework test project instead of 
-indivdiual robot testsuite file, ``__init__.robot`` file has to be created at the highest folder of 
-RobotFrameowork test project, and the path of ``variants_cfg.json`` file has to be added as input parameter of 
-``testsuites.testsuite_setup`` in ``Suite Setup`` of the ``__init__.robot`` file.
-
-.. code::
+.. code-block:: robot
 
    *** Settings ***
    Library      RobotFramework_Testsuites    WITH NAME    testsuites
    Suite Setup      testsuites.testsuite_setup    <Path_to_the_file_variants_cfg.json>
 
-**Level 3: Find the ``config/`` folder in current testsuite directory**
+**Level 3: Find the config/ folder in testsuite directory, if the config folder is found, it will load configuration file in 
+this folder**
 
-Configuration level 3 is triggered only in case of level 1 and level 2 were not set.
-
-The configuration level 3 will check in ``config/`` folder in current testsuite directory the existence of json 
-file which has the same name with testsuite file (ex: ``abc.rotbot`` & ``./config/abc.json``), then it will 
-load this configuration file. In case there is no json file has the same name with robot testsuite file, it will 
-check the existence of ``./config/robot_config.json`` then load this ``./config/robot_config.json`` file as 
-configuration file. 
+If there is the configuration file have the same name with testsuite file (ex: ``abc.rotbot`` & ``./config/abc.json``), then 
+it will load this configuration file. If the first case doesn't occur, it will load the configuration file ``./config/robot_config.json``. 
+In case these 2 cases are not matched, it will load the configuration level 4 (default and lowest priority)
 
 **Level 4: Lowest priority level, it reads default configuration file**
 
-In case testsuites management library detects that configuration level 1, level 2, and level 3 are not set, the 
-robot execution will use the configuration level 4 by default.
-
 The default configuration file (``robot_config.json``) in installation directory:
 
-``\RobotFramework_Testsuites\Config\robot_config.json``
-
-**Local configuration**
-~~~~~~~~~~~~~~~~~~~~~~~
-
-In case the robot test project runs on many different test setups, each test setup has some distinguished configuration 
-parameters. So this feature supports users create the local configuration file to override or add new parameters which 
-are applied for indivdiual test setup.
-
-There are 2 ways to load the local configuration for robot run:
-
-**Load local configuration via input parameter of robot command**
-
-User can address the local configuration file when executing robot testsuite with input parameter 
-``--variable local_config:"<path_to_localconfig_file>"``
-
-**Load local configuration in default directory**
-
-After installed RobotFramework AIO, the ``localconfig`` directory is created in:
-
-* **Windows:** ``C:\RobotTest\localconfig``
-
-* **Ubuntu:** ``/home/<user>/RobotTest/localconfig``
-
-Users can add the content to the local json configuration file ``local_config.json`` in the default directory above, 
-then the configuration parameters will be overridden by the data in file ``local_config.json``.
-
-**Note:** 
-
-* In case loading local configuration via input parameter of robot command is using, the local configuration file 
-``./RobotTest/localconfig/local_config.json`` will be ignored.
-
-* The value of parameters in the local configuration file do not allow nested pamameter:
-
-     **Don't allow:** ``"variable_need_override" : ${variable}['exist']['in_config_file']``
-
-     **Allow:** ``${variable}['exist']['in_config_file'] : "new value", ${variable}['new_variable'] : "value"
+``python39\Lib\site-packages\RobotFramework_Testsuites-0.1.0-py3.9.egg\RobotFramework_Testsuites\Config\robot_config.json``
 
 Dotdict features
 ~~~~~~~~~~~~~~~~
