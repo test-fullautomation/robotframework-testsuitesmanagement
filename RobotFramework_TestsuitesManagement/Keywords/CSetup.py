@@ -81,14 +81,14 @@ class CSetupKeywords(object):
                     try:
                         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
                     try:
                         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown("Loading of %s" %(CConfig.sLoadedCfgError))
             else:
                 logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
                     %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))

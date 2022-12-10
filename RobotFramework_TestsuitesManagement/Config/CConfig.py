@@ -526,13 +526,14 @@ class CConfig():
         
         try:
             defualtCfg = oSuiteConfig['default']['name']
-            self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
-            sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
             CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
                 The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
             return
+        
+        self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
+        sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
             
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir
