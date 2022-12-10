@@ -581,7 +581,7 @@ another parameter in local config file is prohibited!"
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
+            logger.error("Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
             raise Exception
         
         try:
@@ -589,8 +589,8 @@ another parameter in local config file is prohibited!"
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-                The variant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
+            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 is failed! \n \
+                The vairant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
             logger.error(CConfig.sLoadedCfgError)
             return
             
@@ -607,7 +607,7 @@ another parameter in local config file is prohibited!"
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    raise Exception(f"Could not find out config directory: %s" %(sTestCfgDirStart))
+                    raise Exception('Could not find out config directory: %s' %(sTestCfgDirStart))
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
 
