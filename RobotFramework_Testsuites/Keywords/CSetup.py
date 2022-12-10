@@ -95,9 +95,9 @@ class CSetupKeywords(object):
 
             if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig != '':
                 try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.updateLocalConfig(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.updateCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
                 except:
-                    BuiltIn().unknown("Robot run failed: Could not load local configuration!")
+                    logger.warn("Could not load local configuration file: %s " % RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
 
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
@@ -174,7 +174,7 @@ class CSetupKeywords(object):
 
 * No return variable
         '''
-        CConfig.updateLocalConfig(sCfgFile)
+        CConfig.updateCfg(sCfgFile)
         
 class CGeneralKeywords(object):
     '''
