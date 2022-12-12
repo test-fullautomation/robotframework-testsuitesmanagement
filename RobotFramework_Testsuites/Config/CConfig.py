@@ -121,6 +121,7 @@ class CConfig():
     sTestcasePath     = ''
     sMaxVersion       = ''
     sMinVersion       = ''
+    lBuitInVariables  = []
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,
@@ -494,6 +495,8 @@ class CConfig():
         '''
         try:
             for k,v in self.oConfigParams['preprocessor']['definitions'].items():
+                if k in self.lBuitInVariables:
+                    continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
@@ -504,6 +507,8 @@ class CConfig():
         
         try:
             for k,v in self.oConfigParams['params']['global'].items():
+                if k in self.lBuitInVariables:
+                    continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
