@@ -111,6 +111,8 @@ class CSetupKeywords(object):
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info('Suite Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath))
         logger.info('CfgFile Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
+            logger.info(f"Local config file: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}")
         logger.info('Suite Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount))
         logger.info('Total testcases in TestSuite "%s" is: %s' %( \
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName, \
@@ -145,28 +147,6 @@ class CSetupKeywords(object):
    it's defined here for future requirements.
         '''
         logger.info('testcase_teardown: Will be implemented later')
-        
-    @keyword
-    def update_config(self, sCfgFile):
-        '''
-**Method: update_config**
-
-   This update_config defines the ``Update Config`` keyword which is using update the configuration object 
-   of RobotFramework AIO.
-
-**Arguments:**
-
-* ``sCfgFile``
-
-   / *Condition*: required / *Type*: string
-
-   The path of Json configuration file.
-
-**Returns:**
-
-* No return variable
-        '''
-        CConfig.updateCfg(sCfgFile)
         
 class CGeneralKeywords(object):
     '''
