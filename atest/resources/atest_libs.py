@@ -52,11 +52,11 @@ def create_valid_default_local_config_file():
     suite_dir = os.path.dirname(BuiltIn().get_variable_value("${SUITE_SOURCE}"))
     os.chdir(suite_dir)
     os.system("copy " + os.path.abspath("../../general_config/localconfig/local_config.json") \
-        + " " + os.environ['ROBOT_LOCAL_CONFIG'] + "\\local_config.json")
+        + " " + os.environ['ROBOT_LOCAL_CONFIG'])
 
 @keyword
 def delete_default_local_config_file():
     try:
-        os.remove(os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json")
+        os.remove(os.environ['ROBOT_LOCAL_CONFIG'])
     except:
         pass

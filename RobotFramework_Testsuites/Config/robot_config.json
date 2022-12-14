@@ -20,13 +20,13 @@
 {
   "Project": "RobotFramework Testsuites",
   "WelcomeString": "Hello... RobotFramework AIO is running now!",
-  "Maximum_version": "0.5.2",
+  "Maximum_version": "0.6.0",
   "Minimum_version": "0.4.10",
   // Version control information.
   "version": {
     "majorversion": "0",
-    "minorversion": "1",
-    "patchversion": "1"
+    "minorversion": "6",
+    "patchversion": "0"
   },
   "TargetName" : "Device_01"
 }

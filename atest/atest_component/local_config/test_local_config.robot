@@ -14,8 +14,6 @@
 
 *** Settings ***
 Library    ../../resources/atest_libs.py    WITH NAME    testlibs
-Suite setup    Create Valid Default Local Config File
-Suite Teardown    Delete Default Local Config File
 
 *** Test Cases ***
 Test Local Config with Valid Input Variable 01
@@ -47,23 +45,23 @@ Test Local Config with Invalid Input Variable 01
     Log    ${check}
     Should Be Equal    ${check}    Failed
 
-Test Local Config Default 01
-    [Documentation]    Test valid default local configuration with configuration level 1. 
-    ${check}=    Subprocess Execution    ./testsuites/local_config_default_01.robot    --log Local_Config_Default_01.html
-    Log    ${check}
-    Should Be Equal    ${check}    Passed
+# Test Local Config Default 01
+#     [Documentation]    Test valid default local configuration with configuration level 1. 
+#     ${check}=    Subprocess Execution    ./testsuites/local_config_default_01.robot    --log Local_Config_Default_01.html
+#     Log    ${check}
+#     Should Be Equal    ${check}    Passed
 
-Test Local Config Default 02
-    [Documentation]    Test valid default local configuration with configuration level 2. 
-    ${check}=    Subprocess Execution    ./testsuites/local_config_default_02.robot    --log Local_Config_Default_02.html
-    Log    ${check}
-    Should Be Equal    ${check}    Passed
+# Test Local Config Default 02
+#     [Documentation]    Test valid default local configuration with configuration level 2. 
+#     ${check}=    Subprocess Execution    ./testsuites/local_config_default_02.robot    --log Local_Config_Default_02.html
+#     Log    ${check}
+#     Should Be Equal    ${check}    Passed
 
-Test Local Config Default 03
-    [Documentation]    Test valid default local configuration with configuration level 3. 
-    ${check}=    Subprocess Execution    ./testsuites/local_config_default_03.robot    --log Local_Config_Default_03.html
-    Log    ${check}
-    Should Be Equal    ${check}    Passed
+# Test Local Config Default 03
+#     [Documentation]    Test valid default local configuration with configuration level 3. 
+#     ${check}=    Subprocess Execution    ./testsuites/local_config_default_03.robot    --log Local_Config_Default_03.html
+#     Log    ${check}
+#     Should Be Equal    ${check}    Passed
 
 Test Without Local Config
     Delete Default Local Config File

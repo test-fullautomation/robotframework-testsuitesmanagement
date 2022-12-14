@@ -89,9 +89,14 @@ class LibListener(object):
                 if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
                     logger.error("local_config input must not be empty!!!")
                 else:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig = BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip()
-            elif os.path.isfile(os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json"):
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig = os.environ['ROBOT_LOCAL_CONFIG'] + "/local_config.json"
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sLocalConfig = BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip()
+            elif 'ROBOT_LOCAL_CONFIG' in os.environ:
+                if os.path.isfile(os.environ['ROBOT_LOCAL_CONFIG']):
+                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sLocalConfig = os.environ['ROBOT_LOCAL_CONFIG']
+                else:
+                    logger.error(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} which set in ROBOT_LOCAL_CONFIG variable is not exist!!!")
+                    BuiltIn().unknown(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} is not exist!!!")
+
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
             if '${swversion}' in BuiltIn().get_variables()._keys:

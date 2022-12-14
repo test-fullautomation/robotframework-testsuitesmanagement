@@ -93,12 +93,6 @@ class CSetupKeywords(object):
                 logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
                     %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
 
-            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig != '':
-                try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.updateLocalConfig(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig)
-                except:
-                    BuiltIn().unknown("Robot run failed: Could not load local configuration!")
-
         if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
         elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
@@ -117,8 +111,8 @@ class CSetupKeywords(object):
         RobotFramework_Testsuites.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info('Suite Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath))
         logger.info('CfgFile Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig != '':
-            logger.info('Local config file: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lLocalConfig))
+        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sLocalConfig != '':
+            logger.info(f"Local config file: {RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sLocalConfig}")
         logger.info('Suite Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount))
         logger.info('Total testcases in TestSuite "%s" is: %s' %( \
             RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName, \
@@ -153,28 +147,6 @@ class CSetupKeywords(object):
    it's defined here for future requirements.
         '''
         logger.info('testcase_teardown: Will be implemented later')
-        
-    @keyword
-    def update_config(self, sCfgFile):
-        '''
-**Method: update_config**
-
-   This update_config defines the ``Update Config`` keyword which is using update the configuration object 
-   of RobotFramework AIO.
-
-**Arguments:**
-
-* ``sCfgFile``
-
-   / *Condition*: required / *Type*: string
-
-   The path of Json configuration file.
-
-**Returns:**
-
-* No return variable
-        '''
-        CConfig.updateLocalConfig(sCfgFile)
         
 class CGeneralKeywords(object):
     '''

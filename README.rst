@@ -38,21 +38,31 @@ same Robot project by switching between different configuration files via varian
 How to install
 ~~~~~~~~~~~~~~
 
-Firstly, clone **RobotFramework_Testsuites** repository to your machine
+**RobotFramework_TestsuitesManagement** can be installed in two different ways.
 
-.. code::
+1. Installation via PyPi (recommended for users)
 
-  git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+   .. code::
 
-Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
+      pip install RobotFramework_TestsuitesManagement
 
-.. code::
+   `RobotFramework_TestsuitesManagement in PyPi <https://pypi.org/project/robotframework-testsuitesmanagement/>`_
 
-    setup.py build      will build the package underneath 'build/'
-    setup.py install    will install the package
+2. Installation via GitHub (recommended for developers)
 
-After the build processes is completed, the package is located in 'build/', and the generated package documentation 
-is located in 'doc/_build/'.
+   Clone the **RobotFramework_TestsuitesManagement** repository to your machine.
+
+   .. code::
+
+      git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+
+   `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
+
+   Use the following command to install **RobotFramework_TestsuitesManagement**:
+
+   .. code::
+
+      setup.py install
 
 Package Documentation
 ~~~~~~~~~~~~~~~~~~~~~

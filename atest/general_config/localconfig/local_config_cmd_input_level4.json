@@ -3,5 +3,5 @@
    
 {
    "WelcomeString" : "Test local config!",
-   ${version}['patchversion'] : 2
+   ${version}['patchversion'] : "2"
 }   

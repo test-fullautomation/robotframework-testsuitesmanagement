@@ -26,4 +26,4 @@ Test Local Config With Input Variable 01
     Log   ${CONFIG}
     Log   ${local_config}
     Should Be Equal    ${CONFIG.WelcomeString}    Test local config!
-    Should Be Equal    ${CONFIG.version.patchversion}    ${2}
+    Should Be Equal    ${CONFIG.version.patchversion}    2

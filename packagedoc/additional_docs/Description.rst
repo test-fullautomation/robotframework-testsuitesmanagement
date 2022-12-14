@@ -18,65 +18,31 @@ Getting Started
 How to install
 ~~~~~~~~~~~~~~
 
-Firstly, clone **RobotFramework_Testsuites** repository to your machine.
+**RobotFramework_TestsuitesManagement** can be installed in two different ways.
 
-.. code::
+1. Installation via PyPi (recommended for users)
 
-  git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+   .. code::
 
-Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
+      pip install RobotFramework_TestsuitesManagement
 
-.. code::
+   `RobotFramework_TestsuitesManagement in PyPi <https://pypi.org/project/robotframework-testsuitesmanagement/>`_
 
-    setup.py build      will build the package underneath 'build/'
-    setup.py install    will install the package
+2. Installation via GitHub (recommended for developers)
 
-After the build processes are completed, the package is located in **build/**, and the documents are 
-located in **build/lib/RobotFramework_Testsuites**.
+   Clone the **RobotFramework_TestsuitesManagement** repository to your machine.
 
-We can use ``--help`` to discover the options for ``build`` command, example:
+   .. code::
 
-.. code::
+      git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
-     setup.py build      will build the package underneath 'build/'
-     setup.py install    will install the package
-   
-   Global options:
-     --verbose (-v)      run verbosely (default)
-     --quiet (-q)        run quietly (turns verbosity off)
-     --dry-run (-n)      don't actually do anything
-     --help (-h)         show detailed help message
-     --no-user-cfg       ignore pydistutils.cfg in your home directory
-     --command-packages  list of packages that provide distutils commands
-   
-   Information display options (just display information, ignore any commands)
-     --help-commands     list all available commands
-     --name              print package name
-     --version (-V)      print package version
-     --fullname          print <package name>-<version>
-     --author            print the author's name
-     --author-email      print the author's email address
-     --maintainer        print the maintainer's name
-     --maintainer-email  print the maintainer's email address
-     --contact           print the maintainer's name if known, else the author's
-     --contact-email     print the maintainer's email address if known, else the
-                         author's
-     --url               print the URL for this package
-     --license           print the license of the package
-     --licence           alias for --license
-     --description       print the package description
-     --long-description  print the long package description
-     --platforms         print the list of platforms
-     --classifiers       print the list of classifiers
-     --keywords          print the list of keywords
-     --provides          print the list of packages/modules provided
-     --requires          print the list of packages/modules required
-     --obsoletes         print the list of packages/modules made obsolete
-   
-   usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
-      or: setup.py --help [cmd1 cmd2 ...]
-      or: setup.py --help-commands
-      or: setup.py cmd --help
+   `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
+
+   Use the following command to install **RobotFramework_TestsuitesManagement**:
+
+   .. code::
+
+      setup.py install
 
 Features
 --------
@@ -88,14 +54,14 @@ Nowadays, Json is the leading of structuring data for exchange not only for web 
 applications. Json format is used to represent data, and become the universal standard of data exchange. That is the reason 
 we decided using Json format for configuration files of RobotFramework AIO.
 
-Together with ``JsonPreprocessor`` package, ``RobotFramework_Testsuites`` supports configuring RobotFramework AIO automation 
+Together with ``JsonPreprocessor`` package, ``RobotFramework_TestsuitesManagement`` supports configuring RobotFramework AIO automation 
 test project with json files which allow users to add the comments, and to import params from other json files. Adding comments 
 and importing json files are enhanced features which are developed and documented in ``JsonPreprocessor`` python package.
 
 Define 4 levels of configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``RobotFramework_Testsuites`` management defines 4 different configuration levels, from level 1 to level 4. Level 1 is highest 
+``RobotFramework_TestsuitesManagement`` management defines 4 different configuration levels, from level 1 to level 4. Level 1 is highest 
 priority, and level 4 is lowest priority.
 
 The 4 different configuration levels helps users more convenient to configure RobotFramework test project:
@@ -204,30 +170,15 @@ There are 2 ways to load the local configuration for robot run:
 User can address the local configuration file when executing robot testsuite with input parameter 
 ``--variable local_config:"<path_to_localconfig_file>"``
 
-**Load local configuration in default directory**
+**Load local configuration via environment variable**
 
-To use this functionality, the ``localconfig`` directory has to be created with detail information below:
-
-* **Windows:** ``C:\RobotTest\localconfig``
-
-* **Ubuntu:** ``/home/<user>/RobotTest/localconfig``
-
-User also has to create the new environment variable with name ``ROBOT_LOCAL_CONFIG`` and the value is the path 
-to the ``localconfig`` directory.
-
-Users can add the content to the local json configuration file ``local_config.json`` in the default directory above, 
-then the configuration parameters will be overridden by the data in file ``local_config.json``.
+To use this functionality, the environment variable ``ROBOT_LOCAL_CONFIG`` has to be created with the value is 
+the path to local config file.
 
 **Note:** 
 
 * In case loading local configuration via input parameter of robot command is using, the local configuration file 
-``./RobotTest/localconfig/local_config.json`` will be ignored.
-
-* The value of parameters in the local configuration file do not allow nested pamameter:
-
-     **Don't allow:** ``"variable_need_override" : ${variable}['exist']['in_config_file']``
-
-     **Allow:** ``${variable}['exist']['in_config_file'] : "new value", ${variable}['new_variable'] : "value"
+which is set in environment variable ``ROBOT_LOCAL_CONFIG`` will be ignored.
 
 **Access to configuration parameters**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
