@@ -21,20 +21,20 @@ from robot.utils.importer import Importer
 
 from robotlibcore import DynamicCore
 
-from RobotFramework_Testsuites.Utils import LibListener
-from RobotFramework_Testsuites.Keywords import (CSetupKeywords, CGeneralKeywords)
-from RobotFramework_Testsuites.Config import VERSION
+from RobotFramework_TestsuitesManagement.Utils import LibListener
+from RobotFramework_TestsuitesManagement.Keywords import (CSetupKeywords, CGeneralKeywords)
+from RobotFramework_TestsuitesManagement.Config import VERSION
 
 __version__ = '0.0.1'
 
 
-class RobotFramework_Testsuites(DynamicCore):
+class RobotFramework_TestsuitesManagement(DynamicCore):
     '''
-    **Class: RobotFramework_Testsuites**
+    **Class: RobotFramework_TestsuitesManagement**
 
-       RobotFramework_Testsuites is the Bosch testing library for Robot Framework.
+       RobotFramework_TestsuitesManagement is the Bosch testing library for Robot Framework.
 
-       RobotFramework_Testsuites control peripheral devices, tools and target under testing.
+       RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__
@@ -91,8 +91,8 @@ class RobotFramework_Testsuites(DynamicCore):
         return DynamicCore.get_keyword_documentation(self, name)
     
     # '''
-    # Method: failure_occurred is executed when RobotFramework_Testsuites keyword fails.
-    # By default, executes the registered run-on-failure keyword. RobotFramework_Testsuites can 
+    # Method: failure_occurred is executed when RobotFramework_TestsuitesManagement keyword fails.
+    # By default, executes the registered run-on-failure keyword. RobotFramework_TestsuitesManagement can 
     # overwrite this hook method in case provides custom functionality instead.
     # Args:
         # None

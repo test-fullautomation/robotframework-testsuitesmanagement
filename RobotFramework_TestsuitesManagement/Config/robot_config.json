@@ -15,7 +15,7 @@
 //  Author: RobotFramework AIO Team.
 //
 //  This is the default configuration file which is used for level 4 configuration 
-//  of RobotFramework_Testsuites.
+//  of RobotFramework_TestsuitesManagement.
 //*****************************************************************************
 {
   "Project": "RobotFramework Testsuites",

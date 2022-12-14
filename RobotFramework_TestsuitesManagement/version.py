@@ -26,7 +26,7 @@
 #
 # *******************************************************************************
 
-from RobotFramework_Testsuites.Config import VERSION
+from RobotFramework_TestsuitesManagement.Config import VERSION
 
 def robfwaio_version():
    '''

@@ -14,8 +14,9 @@
 
 from inspect import stack
 import os
-import RobotFramework_Testsuites
-from RobotFramework_Testsuites.Config import CConfig
+import re
+import RobotFramework_TestsuitesManagement
+from RobotFramework_TestsuitesManagement.Config import CConfig
 
 from .Events import dispatch
 from robot.libraries.BuiltIn import BuiltIn
@@ -62,48 +63,48 @@ class LibListener(object):
 
 * No return variable
         '''
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig = CConfig()
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = ''
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig = CConfig()
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = ''
         if os.path.isfile(data.source):
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = ''
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = ''
             for item in data.source.split(os.path.sep)[:-1]:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath += item + os.path.sep
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath += item + os.path.sep
         else:
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath = data.source
-        os.chdir(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath)
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = data.source
+        os.chdir(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath)
         
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount == 0:
+        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount == 0:
             test_suite = None
             test_suite = data
             while test_suite.parent != None:
                 test_suite = test_suite.parent
 
             for k, v in BuiltIn().get_variables()._keys.items():
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.lBuitInVariables.append(re.match('.+{(.+)}', v)[1])
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.lBuitInVariables.append(re.match('.+{(.+)}', v)[1])
 
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
             
             if '${variant}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
             if '${swversion}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
             if '${hwversion}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionHW = BuiltIn().get_variable_value('${HW_VERSION}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionHW = BuiltIn().get_variable_value('${HW_VERSION}')
             if '${testversion}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${TEST_VERSION}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${TEST_VERSION}')
             if '${configfile}' in BuiltIn().get_variables()._keys:
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
                 try:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                 except:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
                     pass
                     
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount += 1
-        BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount)
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount += 1
+        BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount)
         dispatch('scope_start', data.longname)
         
     def _end_suite(self, data, result):
@@ -128,10 +129,10 @@ class LibListener(object):
 
 * No return variable
         '''
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = False
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = False
-        if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile = ''
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = False
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = False
+        if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = ''
         dispatch('scope_end', data.longname)
         
     def _start_test(self, data, result):
@@ -156,8 +157,8 @@ class LibListener(object):
 
 * No return variable
         '''
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount += 1
-        BuiltIn().set_global_variable("${TESTCOUNT}", RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount)
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount += 1
+        BuiltIn().set_global_variable("${TESTCOUNT}", RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount)
         dispatch('scope_start', data.longname)
         
     def _end_test(self, data, result):
