@@ -1,12 +1,12 @@
 .. Copyright 2020-2022 Robert Bosch GmbH
 
-   Licensed under the Apache License, Version 2.0 (the "License");
+.. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+.. http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
+.. Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
@@ -29,26 +29,26 @@ How to install
 
 Firstly, clone **RobotFramework_Testsuites** repository to your machine
 
-.. code-block:: bat
+.. code:: bat
 
-  git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+   git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
 Go to **robotframework-testsuitesmanagement**, using the 2 common commands below to build or install this package:
 
-.. code-block:: bat
+.. code:: bat
 
-    setup.py build      will build the package underneath 'build/'
-    setup.py install    will install the package
+   setup.py build      will build the package underneath 'build/'
+   setup.py install    will install the package
 
 After the build processes are completed, the package is located in **build/**, and the documents are 
 located in **doc/_build/**.
 
 We can use ``--help`` to discover the options for ``build`` command, ex:
 
-.. code-block:: bat
+.. code:: bat
 
-     setup.py build      will build the package underneath 'build/'
-     setup.py install    will install the package
+   setup.py build      will build the package underneath 'build/'
+   setup.py install    will install the package
    
    Global options:
      --verbose (-v)      run verbosely (default)
@@ -112,7 +112,7 @@ Ex: ``robot --variable config_file:"<path_to_json_file>" <path_to_testsuite>``
 In level 2 configuration, user has to create a json file which contains different variants point to different configuration files. 
 For example, we create the ``variants_cfg.json`` with content below:
 
-.. code-block:: json
+.. code:: json
 
    {
      "default": {
@@ -135,7 +135,7 @@ For example, we create the ``variants_cfg.json`` with content below:
 
 User can set configuration level 2 only in testsuite like below:
 
-.. code-block:: robot
+.. code:: robot
 
    *** Settings ***
    Library      RobotFramework_Testsuites    WITH NAME    testsuites

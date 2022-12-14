@@ -1,15 +1,3 @@
-> Licensed under the Apache License, Version 2.0 (the \"License\"); you
-> may not use this file except in compliance with the License. You may
-> obtain a copy of the License at
->
-> <http://www.apache.org/licenses/LICENSE-2.0>
->
-> Unless required by applicable law or agreed to in writing, software
-> distributed under the License is distributed on an \"AS IS\" BASIS,
-> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-> implied. See the License for the specific language governing
-> permissions and limitations under the License.
-
 # RobotFramework AIO TESTSUITES MANAGEMENT DOCUMENTATION
 
 **This is the documentation for robotframework-testsuitesmanagement
@@ -49,41 +37,41 @@ setup.py build      will build the package underneath 'build/'
 setup.py install    will install the package
 
 Global options:
---verbose (-v)      run verbosely (default)
---quiet (-q)        run quietly (turns verbosity off)
---dry-run (-n)      don't actually do anything
---help (-h)         show detailed help message
---no-user-cfg       ignore pydistutils.cfg in your home directory
---command-packages  list of packages that provide distutils commands
+  --verbose (-v)      run verbosely (default)
+  --quiet (-q)        run quietly (turns verbosity off)
+  --dry-run (-n)      don't actually do anything
+  --help (-h)         show detailed help message
+  --no-user-cfg       ignore pydistutils.cfg in your home directory
+  --command-packages  list of packages that provide distutils commands
 
 Information display options (just display information, ignore any commands)
---help-commands     list all available commands
---name              print package name
---version (-V)      print package version
---fullname          print <package name>-<version>
---author            print the author's name
---author-email      print the author's email address
---maintainer        print the maintainer's name
---maintainer-email  print the maintainer's email address
---contact           print the maintainer's name if known, else the author's
---contact-email     print the maintainer's email address if known, else the
-                    author's
---url               print the URL for this package
---license           print the license of the package
---licence           alias for --license
---description       print the package description
---long-description  print the long package description
---platforms         print the list of platforms
---classifiers       print the list of classifiers
---keywords          print the list of keywords
---provides          print the list of packages/modules provided
---requires          print the list of packages/modules required
---obsoletes         print the list of packages/modules made obsolete
+  --help-commands     list all available commands
+  --name              print package name
+  --version (-V)      print package version
+  --fullname          print <package name>-<version>
+  --author            print the author's name
+  --author-email      print the author's email address
+  --maintainer        print the maintainer's name
+  --maintainer-email  print the maintainer's email address
+  --contact           print the maintainer's name if known, else the author's
+  --contact-email     print the maintainer's email address if known, else the
+                      author's
+  --url               print the URL for this package
+  --license           print the license of the package
+  --licence           alias for --license
+  --description       print the package description
+  --long-description  print the long package description
+  --platforms         print the list of platforms
+  --classifiers       print the list of classifiers
+  --keywords          print the list of keywords
+  --provides          print the list of packages/modules provided
+  --requires          print the list of packages/modules required
+  --obsoletes         print the list of packages/modules made obsolete
 
 usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
- or: setup.py --help [cmd1 cmd2 ...]
- or: setup.py --help-commands
- or: setup.py cmd --help
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
 ```
 
 ## Features
