@@ -22,10 +22,10 @@
   // Version control information.
   "version": {
     "majorversion": "0",
-    "minorversion": "1",
+    "minorversion": "6",
     "patchversion": "0"
   },
-  "Maximum_version": "0.5.1",
+  "Maximum_version": "0.6.0",
   "Minimum_version": "0.4.10",
   "TargetName" : "gen3flex@dlt"
 }

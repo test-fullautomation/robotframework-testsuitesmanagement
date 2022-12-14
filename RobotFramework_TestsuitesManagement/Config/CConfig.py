@@ -121,6 +121,7 @@ class CConfig():
     sTestcasePath     = ''
     sMaxVersion       = ''
     sMinVersion       = ''
+    sLocalConfig      = ''
     lBuitInVariables  = []
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
@@ -187,7 +188,7 @@ class CConfig():
                     try:
                         exec(sExec, globals())
                     except:
-                        logger.info("Could not convert: %s to dotdict" %(sExec))
+                        logger.info(f"Could not convert: {sExec} to dotdict")
                         pass
                     
                     self.dotdictConvert(v)
@@ -202,7 +203,7 @@ class CConfig():
                             try:
                                 exec(sExec, globals())
                             except:
-                                logger.info("Could not convert: %s to dotdict" %(sExec))
+                                logger.info(f"Could not convert: {sExec} to dotdict")
                                 pass
                             
                             self.dotdictConvert(item)
@@ -283,7 +284,7 @@ class CConfig():
             logger.error("The config_file input parameter is empty!!!")
             raise Exception("The config_file input parameter is empty!!!")
         elif not (os.path.isfile(self.sTestCfgFile)):
-           raise Exception("Did not find configuration file: '%s'!" % self.sTestCfgFile)
+           raise Exception(f"Did not find configuration file: '{self.sTestCfgFile}'!")
         
         robotCoreData = BuiltIn().get_variables()
         ROBFW_AIO_Data = {}
@@ -298,8 +299,19 @@ class CConfig():
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error("Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
             raise Exception
+
+        if self.sLocalConfig != '':
+            try:
+                oLocalConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sLocalConfig)))
+                oJsonCfgData.update(oLocalConfig)
+            except Exception as error:
+                CConfig.bLoadedCfg = False
+                CConfig.sLoadedCfgError = str(error)
+                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}")
+                BuiltIn().unknown(CConfig.sLoadedCfgError)
+                raise Exception
 
         bJsonSchema = True    
         try:
@@ -308,24 +320,24 @@ class CConfig():
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
             bJsonSchema = False
-            logger.error("Could not parse configuration json schema file: '%s'" % str(err))
+            logger.error(f"Could not parse configuration json schema file: '{str(err)}'")
     
         if bJsonSchema:
             try:
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
             except Exception as error:
                 if error.validator == 'additionalProperties':
-                    logger.error("Verification against json schema failed: '%s'" %(error.message))
+                    logger.error(f"Verification against json schema failed: '{error.message}'")
                     logger.error("Additional properties are not allowed! \n \
                     Please put the additional params to 'preprocessor': { 'definitions' : {...} or 'params': { 'global': {...}")
-                    raise Exception("Verification against json schema failed: '%s'" %(error.message))
+                    raise Exception(f"Verification against json schema failed: '{error.message}'")
                 elif error.validator == 'required':
-                    logger.error("The parameter %s, but it's not set in JSON configuration file." % (error.message))
-                    raise Exception("The parameter %s, but it's missing in JSON configuration file." % (error.message))
+                    logger.error(f"The parameter {error.message}, but it's not set in JSON configuration file.")
+                    raise Exception(f"The parameter {error.message}, but it's missing in JSON configuration file.")
                 else:
                     errParam = error.path.pop()
-                    logger.error("Parameter '%s' in JSON configuration file is not allowed due to: %s" % (errParam, error.message))
-                    raise Exception("Parameter '%s' in JSON configuration file is not allowed due to: %s" % (errParam, error.message))
+                    logger.error(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
+                    raise Exception(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
             
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
@@ -374,51 +386,6 @@ class CConfig():
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
         
-    def updateCfg(sUpdateCfgFile):
-        '''
-**Method: updateCfg**
-
-   This updateCfg method updates preprocessor, global or local params base on RobotFramework AIO local 
-   config or any json config file according to purpose of specific testsuite.
-
-**Arguments:**
-
-* ``sUpdateCfgFile``
-
-   / *Condition*: required / *Type*: string
-
-   The path of json file which wants to update configuration parameters.
-
-**Returns:**
-
-* No return variable       
-        '''
-        oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=CConfig.oConfigParams)
-        try:
-            oUpdateParams = oJsonPreprocessor.jsonLoad(CConfig.__sNormalizePath(os.path.abspath(sUpdateCfgFile)))
-        except Exception as error:
-            CConfig.bLoadedCfg = False
-            CConfig.sLoadedCfgError = str(error)
-            logger.error("Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
-            raise Exception
-            
-        if bool(oUpdateParams):
-            CConfig.oConfigParams.update(oUpdateParams)
-        oTmpJsonCfgData = copy.deepcopy(CConfig.oConfigParams)
-        try:    
-            del oTmpJsonCfgData['params']['global']
-        except:
-            pass  
-        
-        try:
-            del oTmpJsonCfgData['preprocessor']['definitions']
-        except:
-            pass
-        
-        BuiltIn().set_global_variable("${CONFIG}", oTmpJsonCfgData)
-        del oTmpJsonCfgData
-        CConfig.__updateGlobalVariable(CConfig)
-        
     def __setGlobalVariable(self, key, value):
         '''
 **Method: __setGlobalVariable**
@@ -454,9 +421,9 @@ class CConfig():
                 pass
             del dotdictObj
             if bDotdict:
-                BuiltIn().set_global_variable("${%s}" % k.strip(), jsonDotdict)
+                BuiltIn().set_global_variable(f"${{{k.strip()}}}", jsonDotdict)
             else:
-                BuiltIn().set_global_variable("${%s}" % k.strip(), v)
+                BuiltIn().set_global_variable(f"${{{k.strip()}}}", v)
         elif isinstance(v, list):
             tmpList = []
             for item in v:
@@ -475,9 +442,9 @@ class CConfig():
                         tmpList.append(item)
                 else:
                     tmpList.append(item)
-            BuiltIn().set_global_variable("${%s}" % k.strip(), tmpList)
+            BuiltIn().set_global_variable(f"${{{k.strip()}}}", tmpList)
         else:         
-            BuiltIn().set_global_variable("${%s}" % k.strip(), v)
+            BuiltIn().set_global_variable(f"${{{k.strip()}}}", v)
             
     def __updateGlobalVariable(self):
         '''
@@ -500,7 +467,7 @@ class CConfig():
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
-                    logger.info("The parameter %s is updated" %k.strip())
+                    logger.info(f"The parameter {k.strip()} is updated")
                     continue
         except:
             pass
@@ -512,7 +479,7 @@ class CConfig():
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
-                    logger.info("The parameter %s is updated" %k.strip())
+                    logger.info(f"The parameter {k.strip()} is updated")
                     continue
         except:
             pass  
@@ -554,7 +521,7 @@ class CConfig():
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: %s" %(CConfig.sLoadedCfgError))
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
             raise Exception
         
         try:
@@ -563,7 +530,7 @@ class CConfig():
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
             CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-                The variant '%s' is not defined in '%s'" % (self.sConfigName, os.path.abspath(self.sTestSuiteCfg))
+                The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
             return
             
@@ -580,7 +547,7 @@ class CConfig():
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    raise Exception(f"Could not find out config directory: %s" %(sTestCfgDirStart))
+                    raise Exception(f"Could not find out config directory: {sTestCfgDirStart}")
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
 
@@ -905,7 +872,7 @@ class CConfig():
             # verify the version info is a number
             return tuple(map(lambda x: CConfig.bValidateSubVersion(x), lVersion))
         except Exception:
-            BuiltIn().fatal_error("Provided version '%s' is not a correct version format."%sVersion)
+            BuiltIn().fatal_error(f"Provided version '{sVersion}' is not a correct version format.")
 
     def versioncontrol_error(self, reason, version1, version2):
         '''
