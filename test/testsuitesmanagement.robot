@@ -21,7 +21,7 @@ Library    Collections
 Library    BuiltIn
 
 # own libraries
-Library    RobotFramework_Testsuites    WITH NAME    testsuites
+Library    RobotFramework_TestsuitesManagement    WITH NAME    testsuites
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 Library    ./libs/CTestsuitesTestlib.py
 

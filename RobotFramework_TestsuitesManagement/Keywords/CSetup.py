@@ -14,11 +14,11 @@
 
 import copy
 
-import RobotFramework_Testsuites
+import RobotFramework_TestsuitesManagement
 from robot.api.deco import keyword
 from robot.api import logger
 
-from RobotFramework_Testsuites.Config import CConfig
+from RobotFramework_TestsuitesManagement.Config import CConfig
 
 from lxml import etree
 
@@ -69,52 +69,52 @@ class CSetupKeywords(object):
 
 * No return variable
         '''
-        if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bLoadedCfg:
+        if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg:
             BuiltIn().unknown(CConfig.sLoadedCfgError)
             return
         else:
-            if not RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+            if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
                 if sTestsuiteCfgFile != '':
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
                     try:
-                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
                         BuiltIn().unknown(CConfig.sLoadedCfgError)
                 else:
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
-                    RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
                     try:
-                        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_Testsuites.CTestsuitesCfg.oConfig)
+                        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
                         BuiltIn().unknown(CConfig.sLoadedCfgError)
             else:
                 logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
-                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
+                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
 
-        if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
+        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
-        elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
+        elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
             logger.info('Running with configuration level: 2')
-            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+            if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
                 logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-        elif RobotFramework_Testsuites.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
+                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+        elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
             logger.info('Running with configuration level: 3')
-            if RobotFramework_Testsuites.CTestsuitesCfg.oConfig.bConfigLoaded:
+            if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
                 logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
+                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
         else:
             logger.info('Running with configuration level: 4')
 
-        RobotFramework_Testsuites.CTestsuitesCfg.oConfig.verifyRbfwVersion()
-        logger.info('Suite Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestcasePath))
-        logger.info('CfgFile Path: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sTestCfgFile))
-        logger.info('Suite Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iSuiteCount))
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
+        logger.info('Suite Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath))
+        logger.info('CfgFile Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+        logger.info('Suite Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount))
         logger.info('Total testcases in TestSuite "%s" is: %s' %( \
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.sRootSuiteName, \
-            RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTotalTestcases))
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName, \
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases))
         
     @keyword
     def testsuite_teardown(self):
@@ -134,7 +134,7 @@ class CSetupKeywords(object):
    This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
-        logger.info('Test Count: %s' %(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.iTestCount))
+        logger.info('Test Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount))
         
     @keyword
     def testcase_teardown(self):
@@ -198,7 +198,7 @@ class CGeneralKeywords(object):
 
    / *Type*: json /
         '''
-        return copy.deepcopy(RobotFramework_Testsuites.CTestsuitesCfg.oConfig.oConfigParams)
+        return copy.deepcopy(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.oConfigParams)
     
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):

@@ -33,7 +33,7 @@ import copy
 from jsonschema import validate
 from builtins import staticmethod
 
-from RobotFramework_Testsuites.Utils.CStruct import CStruct
+from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
 
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
@@ -126,7 +126,7 @@ class CConfig():
                                 sLevel1 = False,
                                 sLevel2 = False,
                                 sLevel3 = False,
-                                sLevel4 = True   #'.../RobotFramework_Testsuites/Config/robot_config.json'
+                                sLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.json'
                             )
     
     rMetaData      = CStruct(
