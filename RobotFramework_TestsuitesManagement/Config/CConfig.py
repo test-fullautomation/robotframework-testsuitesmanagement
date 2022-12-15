@@ -122,6 +122,7 @@ class CConfig():
     sMaxVersion       = ''
     sMinVersion       = ''
     lBuitInVariables  = []
+    bVersionCheck     = False
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,
