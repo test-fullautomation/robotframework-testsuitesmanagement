@@ -98,7 +98,7 @@ class LibListener(object):
                     BuiltIn().unknown(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} is not exist!!!")
 
             if '${variant}' in BuiltIn().get_variables()._keys:
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
             if '${swversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
             if '${hwversion}' in BuiltIn().get_variables()._keys:
@@ -108,7 +108,7 @@ class LibListener(object):
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}').strip()
                 try:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                 except:
