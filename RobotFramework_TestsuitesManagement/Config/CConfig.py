@@ -279,11 +279,25 @@ class CConfig():
             elif not self.rConfigFiles.sLevel2 and not self.rConfigFiles.sLevel3:
                 return
         
-        if self.rConfigFiles.sLevel1 and self.sTestCfgFile == '':
-            logger.error("The config_file input parameter is empty!!!")
-            raise Exception("The config_file input parameter is empty!!!")
-        elif not (os.path.isfile(self.sTestCfgFile)):
-           raise Exception("Did not find configuration file: '%s'!" % self.sTestCfgFile)
+        if self.rConfigFiles.sLevel1:
+            if self.sConfigName != 'default':
+                errorMessage = f"RobotFramework-TestsuitesManagement detected that: \n \
+            - User is using configuration level 1 with configuration file '{self.sTestCfgFile}'. \n \
+            - The variant variable is also set with variant name '{self.sConfigName}' which is used for configuration \
+level 2 with variant configuration file. \n \
+        Please remove input parameter '--variable variant:{self.sConfigName}' out of the robot run comnand!!! \n"
+                logger.error(errorMessage)
+                BuiltIn().unknown(errorMessage)
+
+            if self.sTestCfgFile == '':
+                errorMessage = "The config_file input parameter is empty!!!"
+                logger.error(errorMessage)
+                BuiltIn().unknown(errorMessage)
+
+        if not os.path.isfile(self.__sNormalizePath(os.path.abspath(self.sTestCfgFile))):
+            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!"
+            logger.error(errorMessage)
+            BuiltIn().unknown(errorMessage)
         
         robotCoreData = BuiltIn().get_variables()
         ROBFW_AIO_Data = {}
