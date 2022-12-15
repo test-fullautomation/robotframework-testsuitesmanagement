@@ -123,6 +123,7 @@ class CConfig():
     sMinVersion       = ''
     sLocalConfig      = ''
     lBuitInVariables  = []
+    bVersionCheck     = False
     rConfigFiles   = CStruct(
                                 sLevel1 = False,
                                 sLevel2 = False,

@@ -98,7 +98,9 @@ class LibListener(object):
                     BuiltIn().unknown(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} is not exist!!!")
 
             if '${variant}' in BuiltIn().get_variables()._keys:
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
+            if '${versioncheck}' in BuiltIn().get_variables()._keys:
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck = BuiltIn().get_variable_value('${VERSION_CHECK}')
             if '${swversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
             if '${hwversion}' in BuiltIn().get_variables()._keys:
