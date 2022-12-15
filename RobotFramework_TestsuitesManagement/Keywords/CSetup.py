@@ -90,31 +90,30 @@ class CSetupKeywords(object):
                     except Exception as error:
                         BuiltIn().unknown(CConfig.sLoadedCfgError)
             else:
-                logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.warn(f"The configuration level 1 is set for this Robot run! \nThe configuration '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}' \
+is using as highest priority")
 
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
             logger.info('Running with configuration level: 1')
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
             logger.info('Running with configuration level: 2')
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.info(f"The parameters in '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}' \
+will be added into configuration object")
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
             logger.info('Running with configuration level: 3')
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.info(f"The parameters in '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}' \
+will be added into configuration object")
         else:
             logger.info('Running with configuration level: 4')
 
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
-        logger.info('Suite Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath))
-        logger.info('CfgFile Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
-        logger.info('Suite Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount))
-        logger.info('Total testcases in TestSuite "%s" is: %s' %( \
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName, \
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases))
+        logger.info(f"Suite Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}")
+        logger.info(f"CfgFile Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}")
+        logger.info(f"Suite Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
+        logger.info(f"Total testcases in TestSuite {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName} \
+is: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}")
         
     @keyword
     def testsuite_teardown(self):
@@ -134,7 +133,7 @@ class CSetupKeywords(object):
    This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
-        logger.info('Test Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount))
+        logger.info(f"Test Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount}")
         
     @keyword
     def testcase_teardown(self):
@@ -240,7 +239,7 @@ class CGeneralKeywords(object):
         else:
             oJsonFristLevel = oJsonPreprocessor.jsonLoad(jsonfile)
             if variant not in oJsonFristLevel:
-                logger.error('The variant: %s is not correct' % variant)
+                logger.error(f"The variant: {variant} is not correct")
                 return {}
             jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)

@@ -106,8 +106,7 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
             self._running_on_failure_keyword = True
             BuiltIn().run_keyword(self.run_on_failure_keyword)
         except Exception as error:
-            logger.warn("Keyword '%s' could not be run on failure: '%s'"
-                        % (self.run_on_failure_keyword, error))
+            logger.warn(f"Keyword '{self.run_on_failure_keyword}' could not be run on failure: '{error}'")
         finally:
             self._running_on_failure_keyword = False
 
