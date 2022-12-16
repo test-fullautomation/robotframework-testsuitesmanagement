@@ -25,8 +25,6 @@ from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
     '''
-**Class: LibListener**
-
    This ``LibListener`` class defines the hook methods.
 
    * ``_start_suite`` hooks to every starting testsuite of robot run.
@@ -43,8 +41,6 @@ class LibListener(object):
     
     def _start_suite(self, data, result):
         '''
-**Method: _start_suite**
-
    This _start_suite method hooks to every starting testsuite of robot run.
 
 **Arguments:**
@@ -123,8 +119,6 @@ class LibListener(object):
         
     def _end_suite(self, data, result):
         '''
-**Method: _end_suite**
-
    This _end_suite method hooks to every ending testsuite of robot run.
 
 **Arguments:**
@@ -151,8 +145,6 @@ class LibListener(object):
         
     def _start_test(self, data, result):
         '''
-**Method: _start_test**
-
    This _start_test method hooks to every starting test case of robot run.
 
 **Arguments:**
@@ -177,8 +169,6 @@ class LibListener(object):
         
     def _end_test(self, data, result):
         '''
-**Method: _end_test**
-
    This _end_test hooks to every ending test case of robot run.
 
 **Arguments:**

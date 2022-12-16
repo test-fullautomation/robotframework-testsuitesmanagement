@@ -51,8 +51,6 @@ VERSION_DATE    = "09.2022"
 
 class dotdict(dict):
     '''
-**Subclass: dotdict**
-
    Subclass of dict, with "dot" (attribute) access to keys.
     '''
     __setattr__ = dict.__setitem__
@@ -66,8 +64,6 @@ class dotdict(dict):
 
 class CConfig():
     '''
-**Class: CConfig**
-
    Defines the properties of configuration and holds the identified config files.
 
    The loading configuration method is divided into 4 levels, level1 is highest priority, Level4 is lowest priority.
@@ -145,8 +141,6 @@ class CConfig():
     
     class CJsonDotDict():
         '''
-**Class: CJsonDotDict**
-
    The CJsonDotDict class converts json configuration object to dotdict
         '''
         def __init__(self):
@@ -158,8 +152,6 @@ class CConfig():
 
         def dotdictConvert(self, oJson):
             '''
-**Method: dotdictConvert**
-
    This dotdictConvert method converts json object to dotdict.
 
 **Arguments:**
@@ -214,8 +206,6 @@ class CConfig():
      
     def __new__(classtype, *args, **kwargs):
         '''
-**Method: __new__**
-
    Makes the CConfig class to singleton.
    
    Checks to see if a __single exists already for this class. Compare class types instead of just looking 
@@ -232,8 +222,6 @@ class CConfig():
     @staticmethod
     def loadCfg(self):
         '''
-**Method: loadCfg**
-
    This loadCfg method uses to load configuration's parameters from json files.
 
 **Arguments:**
@@ -403,8 +391,6 @@ level 2 with variant configuration file. \n \
         
     def __setGlobalVariable(self, key, value):
         '''
-**Method: __setGlobalVariable**
-
    This method set RobotFramework AIO global variable from config object.
 
 **Arguments:**
@@ -463,8 +449,6 @@ level 2 with variant configuration file. \n \
             
     def __updateGlobalVariable(self):
         '''
-**Method: __updateGlobalVariable**
-
    This method updates preprocessor and global params to global variable of RobotFramework AIO.
 
 **Arguments:**
@@ -501,8 +485,6 @@ level 2 with variant configuration file. \n \
         
     def __del__(self):
         '''
-**Method: __del__**
-
    This destructor method.
 
 **Arguments:**
@@ -517,8 +499,6 @@ level 2 with variant configuration file. \n \
     
     def __loadConfigFileLevel2(self):
         '''
-**Method: __loadConfigFileLevel2**
-
    This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLevel2 == True.
 
 **Arguments:**
@@ -569,8 +549,6 @@ level 2 with variant configuration file. \n \
 
     def __sNormalizePath(self, sPath : str) -> str:
         '''
-**Method: __sNormalizePath**
-
    Python struggles with
 
       - UNC paths
@@ -638,8 +616,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def __getMachineName():
         '''
-**Method: __getMachineName**
-
    This __getMachineName method gets current machine name which is running the test.
 
 **Arguments:**
@@ -670,8 +646,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def __getUserName():
         '''
-**Method: __getUserName**
-
    This __getUserName method gets current account name login to run the test.
 
 **Arguments:**
@@ -709,8 +683,6 @@ level 2 with variant configuration file. \n \
     
     def verifyRbfwVersion(self):
         '''
-**Method: verifyRbfwVersion**
-
    This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version 
    (if provided in the configuration file).
 
@@ -748,8 +720,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
         '''
-**Method: bValidateMinVersion**
-
    This bValidateMinVersion validates the current version with required minimun version.
 
 **Arguments:**
@@ -775,8 +745,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
         '''
-**Method: bValidateMaxVersion**
-
    This bValidateMaxVersion validates the current version with required minimun version.
 
 **Arguments:**
@@ -802,8 +770,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def bValidateSubVersion(sVersion):
         '''
-**Method: bValidateSubVersion**
-
    This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple 
    for version comparision.
 
@@ -848,8 +814,6 @@ level 2 with variant configuration file. \n \
     @staticmethod
     def tupleVersion(sVersion):
         '''
-**Method: tupleVersion**
-
    This tupleVersion returns a tuple which contains the (major, minor, patch) version. 
 
    (remaining content needs to be fixed and restored)
@@ -892,8 +856,6 @@ level 2 with variant configuration file. \n \
 
     def versioncontrol_error(self, reason, version1, version2):
         '''
-**Method: versioncontrol_error**
-
    Wrapper version control error log:
 
       Log error message of version control due to reason and set to unknown state.
