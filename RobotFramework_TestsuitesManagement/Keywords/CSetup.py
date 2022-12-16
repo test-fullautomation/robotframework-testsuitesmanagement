@@ -29,8 +29,6 @@ from robot.libraries.BuiltIn import BuiltIn
 
 class CSetupKeywords(object):
     '''
-**Class: CSetupKeywords**
-
    This CSetupKeywords class uses to define the setup keywords which are using in suite setup and teardown of 
    robot test script.
 
@@ -48,8 +46,6 @@ class CSetupKeywords(object):
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
         '''
-**Method: testsuite_setup**
-
    This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration, 
    checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
 
@@ -119,8 +115,6 @@ class CSetupKeywords(object):
     @keyword
     def testsuite_teardown(self):
         '''
-**Method: testsuite_teardown**
-
    This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
@@ -129,8 +123,6 @@ class CSetupKeywords(object):
     @keyword
     def testcase_setup(self):
         '''
-**Method: testcase_setup**
-
    This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
@@ -139,8 +131,6 @@ class CSetupKeywords(object):
     @keyword
     def testcase_teardown(self):
         '''
-**Method: testcase_teardown**
-
    This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
@@ -149,8 +139,6 @@ class CSetupKeywords(object):
     @keyword
     def update_config(self, sCfgFile):
         '''
-**Method: update_config**
-
    This update_config defines the ``Update Config`` keyword which is using update the configuration object 
    of RobotFramework AIO.
 
@@ -170,8 +158,6 @@ class CSetupKeywords(object):
         
 class CGeneralKeywords(object):
     '''
-**Class: CGeneralKeywords**
-
    This CGeneralKeywords class defines the keywords which will be using in RobotFramework AIO test script.
 
    ``Get Config`` keyword gets the current config object of robot run.
@@ -184,8 +170,6 @@ class CGeneralKeywords(object):
     @keyword
     def get_config(self):
         '''
-**Method: get_config**
-
    This get_config defines the ``Get Config`` keyword gets the current config object of RobotFramework AIO.
 
 **Arguments:**
@@ -203,8 +187,6 @@ class CGeneralKeywords(object):
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):
         '''
-**Method: load_json**
-
    This load_json defines the ``Load Json`` keyword which loads json file then return json object.
 
 **Arguments:**
