@@ -30,15 +30,11 @@
 
 class CStruct:
     '''
-**Class: CStruct**
-
    This ``CStruct`` class creates the given attributes dynamically at runtime.
     '''
 
     def __init__(self, *args, **kwargs):
         '''
-**Method: __init__**
-
    The constructor __init__ creates the given attributes dynamically at runtime.
 
 **Arguments:**
