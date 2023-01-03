@@ -1,3 +1,5 @@
+# **************************************************************************************************************
+#
 #  Copyright 2020-2022 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,3 +13,10 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
+#
+# **************************************************************************************************************
+#
+# Version and date of package RobotFramework_TestsuitesManagement
+#
+VERSION      = "0.2.2"
+VERSION_DATE = "18.07.2022"

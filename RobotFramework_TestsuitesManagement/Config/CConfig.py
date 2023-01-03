@@ -271,11 +271,9 @@ class CConfig():
         
         if self.rConfigFiles.sLevel1:
             if self.sConfigName != 'default':
-                errorMessage = f"RobotFramework-TestsuitesManagement detected that: \n \
-            - User is using configuration level 1 with configuration file '{self.sTestCfgFile}'. \n \
-            - The variant variable is also set with variant name '{self.sConfigName}' which is used for configuration \
-level 2 with variant configuration file. \n \
-        Please remove input parameter '--variable variant:{self.sConfigName}' out of the robot run comnand!!! \n"
+                errorMessage = f"Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n\
+It is not possible to use both together, because they belong to the same feature (the variant selection).\n\
+Please remove one of them.\n"
                 logger.error(errorMessage)
                 BuiltIn().unknown(errorMessage)
 
@@ -323,14 +321,14 @@ level 2 with variant configuration file. \n \
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
             bJsonSchema = False
-            logger.error(f"Could not parse configuration json schema file: '{str(err)}'")
+            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'")
     
         if bJsonSchema:
             try:
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
             except Exception as error:
                 if error.validator == 'additionalProperties':
-                    logger.error(f"Verification against json schema failed: '{error.message}'")
+                    logger.error(f"Verification against JSON schema failed: '{error.message}'")
                     logger.error("Additional properties are not allowed! \n \
                     Please put the additional params to 'preprocessor': { 'definitions' : {...} or 'params': { 'global': {...}")
                     raise Exception(f"Verification against json schema failed: '{error.message}'")
@@ -379,7 +377,7 @@ level 2 with variant configuration file. \n \
             jsonDotdict = dotdictObj.dotdictConvert(oJsonCfgData)
             bDotdict = True
         except:
-            logger.info("Could not convert json config to dotdict!!!")
+            logger.info("Could not convert JSON config to dotdict!!!")
             pass
         del dotdictObj
         
@@ -418,7 +416,7 @@ level 2 with variant configuration file. \n \
                 jsonDotdict = dotdictObj.dotdictConvert(v)
                 bDotdict = True
             except:
-                logger.info("Could not convert json config to dotdict!!!")
+                logger.info("Could not convert JSON config to dotdict!!!")
                 pass
             del dotdictObj
             if bDotdict:
@@ -435,7 +433,7 @@ level 2 with variant configuration file. \n \
                         jsonDotdict = dotdictObj.dotdictConvert(item)
                         bDotdict = True
                     except:
-                        logger.info("Could not convert json config to dotdict!!!")
+                        logger.info("Could not convert JSON config to dotdict!!!")
                         pass
                     if bDotdict:
                         tmpList.append(jsonDotdict)

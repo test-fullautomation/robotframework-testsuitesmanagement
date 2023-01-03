@@ -14,7 +14,7 @@
    "INTENDEDAUDIENCE" : "Intended Audience :: Developers",
    "TOPIC" : "Topic :: Software Development",
    "INSTALLREQUIRES" : ["pypandoc","colorama","GenPackageDoc","PythonExtensionsCollection"],
-   "PACKAGEDATA" : ["*.pdf"],
+   "PACKAGEDATA" : ["*.pdf","./Config/*.json"],
    "PACKAGEDOC" : "./packagedoc",
    "CONSOLESCRIPTS" : ["robfwaio_version = RobotFramework_TestsuitesManagement.version:robfwaio_version"]
 }

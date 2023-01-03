@@ -18,15 +18,17 @@
 //  of RobotFramework_TestsuitesManagement.
 //*****************************************************************************
 {
-  "Project": "RobotFramework Testsuites",
-  "WelcomeString": "Hello... RobotFramework AIO is running now!",
-  "Maximum_version": "0.6.0",
-  "Minimum_version": "0.4.10",
+  "Project"         : "RobotFramework Testsuites",
+  "WelcomeString"   : "Hello... RobotFramework AIO is running now!",
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+
   // Version control information.
   "version": {
-    "majorversion": "0",
-    "minorversion": "6",
-    "patchversion": "0"
+    "majorversion" : "0",
+    "minorversion" : "6",
+    "patchversion" : "0"
   },
+
   "TargetName" : "Device_01"
 }
