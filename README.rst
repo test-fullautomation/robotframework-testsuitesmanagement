@@ -1,33 +1,37 @@
 .. Copyright 2020-2022 Robert Bosch GmbH
 
-   Licensed under the Apache License, Version 2.0 (the "License");
+.. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+.. http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
+.. Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
 
-RobotFramework AIO TESTSUITES MANAGEMENT DOCUMENTATION
-======================================================
+Package Description
+===================
 
-**This is the documentation for robotframework-testsuitesmanagement repository**
+The **RobotFramework_TestsuitesManagement** allows users to define dynamic configuration values within separate configuration files in JSON format.
 
-Getting Started
----------------
+These configuration values are available during test execution - but under certain conditions that can be defined by the user
+(e.g. to realize a variant handling). This means: Not all parameter values are available during test execution - only the ones
+that belong to the current test scenario.
 
-The RobotFramework_Testsuites package works together with `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_ 
-python package to provide the enhanced features such as json configuration files, 
-4 different levels of configuation, config object and global params, schema validation,...
+To realize this, the **RobotFramework_TestsuitesManagement** provides the following features:
+
+* Split all possible configuration values into several JSON configuration files, with every configuration file contains a specific set of values for configuration parameter
+* Use nested imports of JSON configuration files
+* Follow up definitions in configuration files overwrite previous definitions (of the same parameter)
+* Select between several criteria to let the Robot Framework use a certain JSON configuration file
 
 How to install
-~~~~~~~~~~~~~~
+--------------
 
-**RobotFramework_TestsuitesManagement** can be installed in two different ways.
+The **RobotFramework_TestsuitesManagement** can be installed in two different ways.
 
 1. Installation via PyPi (recommended for users)
 
@@ -54,11 +58,10 @@ How to install
       setup.py install
 
 Package Documentation
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
-A detailed documentation of the Python Extensions Collection package can be found here:
-`RobotFramework_Testsuites.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_Testsuites/RobotFramework_Testsuites.pdf>`_
-
+A detailed documentation of the **RobotFramework_TestsuitesManagement** can be found here:
+`RobotFramework_TestsuitesManagement.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 
 Feedback
 --------
