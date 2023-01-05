@@ -83,7 +83,8 @@ class LibListener(object):
 
             if '${localconfig}' in BuiltIn().get_variables()._keys:
                 if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
-                    logger.error("local_config input must not be empty!!!")
+                    CConfig.sLoadedCfgError = "local_config input must not be empty!!!"
+                    logger.error(CConfig.sLoadedCfgError)
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
 
@@ -93,7 +94,8 @@ class LibListener(object):
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    logger.error(f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!")
+                    CConfig.sLoadedCfgError = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
+                    logger.error(CConfig.sLoadedCfgError)
 
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
