@@ -333,7 +333,7 @@ Please remove one of them.\n"
                 if error.validator == 'additionalProperties':
                     logger.error(f"Verification against JSON schema failed: '{error.message}'")
                     logger.error("Additional properties are not allowed! \n \
-                    Please put the additional params to 'preprocessor': { 'definitions' : {...} or 'params': { 'global': {...}")
+                    Please put the additional params into 'params': { 'global': {...}")
                     raise Exception(f"Verification against json schema failed: '{error.message}'")
                 elif error.validator == 'required':
                     logger.error(f"The parameter {error.message}, but it's not set in JSON configuration file.")
