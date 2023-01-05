@@ -88,11 +88,12 @@ class LibListener(object):
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip()
 
             elif 'ROBOT_LOCAL_CONFIG' in os.environ:
-                if os.path.isfile(os.environ['ROBOT_LOCAL_CONFIG']):
-                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = os.environ['ROBOT_LOCAL_CONFIG']
+                localConfigFile = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
+                if os.path.isfile(localConfigFile):
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
                 else:
-                    logger.error(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!")
-                    BuiltIn().unknown(f"The local configuration file {os.environ['ROBOT_LOCAL_CONFIG']} does not exist!!!")
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                    logger.error(f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!")
 
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
