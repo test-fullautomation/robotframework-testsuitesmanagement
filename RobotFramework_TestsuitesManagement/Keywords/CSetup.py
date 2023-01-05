@@ -13,6 +13,7 @@
 #  limitations under the License.
 
 import copy
+import os
 
 import RobotFramework_TestsuitesManagement
 from robot.api.deco import keyword
@@ -73,7 +74,7 @@ class CSetupKeywords(object):
                 if sTestsuiteCfgFile != '':
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = os.path.abspath(sTestsuiteCfgFile)
                     try:
                         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:

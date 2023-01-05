@@ -263,6 +263,9 @@ class CConfig():
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
                         self.sTestCfgFile = sDefaultConfig
 
+            if self.sTestCfgFile != '':                      
+                self.sTestCfgFile = os.path.abspath(self.sTestCfgFile)
+
         if self.bConfigLoaded:
             if self.rConfigFiles.sLevel1:
                 return
@@ -282,7 +285,7 @@ Please remove one of them.\n"
                 logger.error(errorMessage)
                 BuiltIn().unknown(errorMessage)
 
-        if not os.path.isfile(self.__sNormalizePath(os.path.abspath(self.sTestCfgFile))):
+        if not os.path.isfile(self.__sNormalizePath(self.sTestCfgFile)):
             errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!"
             logger.error(errorMessage)
             BuiltIn().unknown(errorMessage)
@@ -296,7 +299,7 @@ Please remove one of them.\n"
             ROBFW_AIO_Data.update({key:v})
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
         try:
-            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sTestCfgFile)))
+            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(self.sTestCfgFile))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -305,7 +308,7 @@ Please remove one of them.\n"
 
         if self.sLocalConfig != '':
             try:
-                oLocalConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sLocalConfig)))
+                oLocalConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(self.sLocalConfig))
                 oJsonCfgData.update(oLocalConfig)
             except Exception as error:
                 CConfig.bLoadedCfg = False

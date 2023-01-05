@@ -85,7 +85,7 @@ class LibListener(object):
                 if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
                     logger.error("local_config input must not be empty!!!")
                 else:
-                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip()
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
 
             elif 'ROBOT_LOCAL_CONFIG' in os.environ:
                 localConfigFile = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
@@ -108,7 +108,7 @@ class LibListener(object):
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}').strip()
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
                 try:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                 except:
