@@ -25,8 +25,6 @@ from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
     '''
-**Class: LibListener**
-
    This ``LibListener`` class defines the hook methods.
 
    * ``_start_suite`` hooks to every starting testsuite of robot run.
@@ -43,8 +41,6 @@ class LibListener(object):
     
     def _start_suite(self, data, result):
         '''
-**Method: _start_suite**
-
    This _start_suite method hooks to every starting testsuite of robot run.
 
 **Arguments:**
@@ -84,9 +80,27 @@ class LibListener(object):
 
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
-            
+
+            if '${localconfig}' in BuiltIn().get_variables()._keys:
+                if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
+                    CConfig.sLoadedCfgError = "local_config input must not be empty!!!"
+                    logger.error(CConfig.sLoadedCfgError)
+                else:
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
+
+            elif 'ROBOT_LOCAL_CONFIG' in os.environ:
+                localConfigFile = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
+                if os.path.isfile(localConfigFile):
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
+                else:
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                    CConfig.sLoadedCfgError = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
+                    logger.error(CConfig.sLoadedCfgError)
+
             if '${variant}' in BuiltIn().get_variables()._keys:
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
+            if '${versioncheck}' in BuiltIn().get_variables()._keys:
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck = BuiltIn().get_variable_value('${VERSION_CHECK}')
             if '${swversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
             if '${hwversion}' in BuiltIn().get_variables()._keys:
@@ -96,7 +110,7 @@ class LibListener(object):
             if '${configfile}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1 = True
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = BuiltIn().get_variable_value('${CONFIG_FILE}')
+                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
                 try:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                 except:
@@ -109,8 +123,6 @@ class LibListener(object):
         
     def _end_suite(self, data, result):
         '''
-**Method: _end_suite**
-
    This _end_suite method hooks to every ending testsuite of robot run.
 
 **Arguments:**
@@ -137,8 +149,6 @@ class LibListener(object):
         
     def _start_test(self, data, result):
         '''
-**Method: _start_test**
-
    This _start_test method hooks to every starting test case of robot run.
 
 **Arguments:**
@@ -163,8 +173,6 @@ class LibListener(object):
         
     def _end_test(self, data, result):
         '''
-**Method: _end_test**
-
    This _end_test hooks to every ending test case of robot run.
 
 **Arguments:**

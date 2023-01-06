@@ -13,6 +13,7 @@
 #  limitations under the License.
 
 import copy
+import os
 
 import RobotFramework_TestsuitesManagement
 from robot.api.deco import keyword
@@ -29,8 +30,6 @@ from robot.libraries.BuiltIn import BuiltIn
 
 class CSetupKeywords(object):
     '''
-**Class: CSetupKeywords**
-
    This CSetupKeywords class uses to define the setup keywords which are using in suite setup and teardown of 
    robot test script.
 
@@ -48,8 +47,6 @@ class CSetupKeywords(object):
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
         '''
-**Method: testsuite_setup**
-
    This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration, 
    checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
 
@@ -77,50 +74,47 @@ class CSetupKeywords(object):
                 if sTestsuiteCfgFile != '':
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2 = True
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
-                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                    RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = os.path.abspath(sTestsuiteCfgFile)
                     try:
                         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown(f"{CConfig.sLoadedCfgError}")
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3 = True
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel4 = False
                     try:
                         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
                     except Exception as error:
-                        BuiltIn().unknown(CConfig.sLoadedCfgError)
+                        BuiltIn().unknown(f"{CConfig.sLoadedCfgError}")
             else:
-                logger.warn('The configuration level 1 is set for this Robot run! \nThe configuration \"%s\" is using as highest priority' \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.warn(f"Running with configuration level 1! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel1:
-            logger.info('Running with configuration level: 1')
+            logger.info('Running with configuration level 1')
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel2:
-            logger.info('Running with configuration level: 2')
+            logger.info('Running with configuration level 2')
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.sLevel3:
-            logger.info('Running with configuration level: 3')
+            logger.info('Running with configuration level 3')
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info("The parameters in \"%s\" will be added into configuration object" \
-                    %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
+                logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         else:
-            logger.info('Running with configuration level: 4')
+            logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
-        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
-        logger.info('Suite Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath))
-        logger.info('CfgFile Path: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile))
-        logger.info('Suite Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount))
-        logger.info('Total testcases in TestSuite "%s" is: %s' %( \
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName, \
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases))
+        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck:
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
+        logger.info(f"Suite Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}")
+        logger.info(f"CfgFile Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}")
+        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
+            logger.info(f"Local config file: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}")
+        logger.info(f"Suite Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
+        logger.info(f"Total testcases in TestSuite {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sRootSuiteName} \
+is: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}")
         
     @keyword
     def testsuite_teardown(self):
         '''
-**Method: testsuite_teardown**
-
    This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
@@ -129,49 +123,21 @@ class CSetupKeywords(object):
     @keyword
     def testcase_setup(self):
         '''
-**Method: testcase_setup**
-
    This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
-        logger.info('Test Count: %s' %(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount))
+        logger.info(f"Test Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount}")
         
     @keyword
     def testcase_teardown(self):
         '''
-**Method: testcase_teardown**
-
    This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing, 
    it's defined here for future requirements.
         '''
         logger.info('testcase_teardown: Will be implemented later')
         
-    @keyword
-    def update_config(self, sCfgFile):
-        '''
-**Method: update_config**
-
-   This update_config defines the ``Update Config`` keyword which is using update the configuration object 
-   of RobotFramework AIO.
-
-**Arguments:**
-
-* ``sCfgFile``
-
-   / *Condition*: required / *Type*: string
-
-   The path of Json configuration file.
-
-**Returns:**
-
-* No return variable
-        '''
-        CConfig.updateCfg(sCfgFile)
-        
 class CGeneralKeywords(object):
     '''
-**Class: CGeneralKeywords**
-
    This CGeneralKeywords class defines the keywords which will be using in RobotFramework AIO test script.
 
    ``Get Config`` keyword gets the current config object of robot run.
@@ -184,8 +150,6 @@ class CGeneralKeywords(object):
     @keyword
     def get_config(self):
         '''
-**Method: get_config**
-
    This get_config defines the ``Get Config`` keyword gets the current config object of RobotFramework AIO.
 
 **Arguments:**
@@ -203,8 +167,6 @@ class CGeneralKeywords(object):
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):
         '''
-**Method: load_json**
-
    This load_json defines the ``Load Json`` keyword which loads json file then return json object.
 
 **Arguments:**
@@ -240,7 +202,7 @@ class CGeneralKeywords(object):
         else:
             oJsonFristLevel = oJsonPreprocessor.jsonLoad(jsonfile)
             if variant not in oJsonFristLevel:
-                logger.error('The variant: %s is not correct' % variant)
+                logger.error(f"The variant: {variant} is not correct")
                 return {}
             jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)

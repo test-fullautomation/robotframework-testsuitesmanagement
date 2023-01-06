@@ -30,7 +30,8 @@
   "preprocessor": {
     "definitions": {
       // FEATURE switches
-      "[import]": "./common/preprocessor_definitions_common.json"
+      "[import]": "./common/preprocessor_definitions_common.json",
+      ${preprocessor}['definitions']['gPreproStructure']['check01']: ${params}['global']['gGlobalString']
     }
   },
   "Project": "G3g-variant_1"
