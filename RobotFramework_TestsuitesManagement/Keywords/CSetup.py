@@ -100,7 +100,7 @@ class CSetupKeywords(object):
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
                 logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         else:
-            logger.info('Running with configuration level 4')
+            logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck:
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
