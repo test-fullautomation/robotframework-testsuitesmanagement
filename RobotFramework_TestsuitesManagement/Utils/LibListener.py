@@ -99,8 +99,6 @@ class LibListener(object):
 
             if '${variant}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
-            if '${versioncheck}' in BuiltIn().get_variables()._keys:
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck = BuiltIn().get_variable_value('${VERSION_CHECK}')
             if '${swversion}' in BuiltIn().get_variables()._keys:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${SW_VERSION}')
             if '${hwversion}' in BuiltIn().get_variables()._keys:
