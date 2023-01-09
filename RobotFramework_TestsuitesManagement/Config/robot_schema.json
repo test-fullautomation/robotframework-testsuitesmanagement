@@ -47,6 +47,6 @@
 	  }
 	}
   },
-  "required": ["Project", "WelcomeString", "TargetName", "Maximum_version", "Minimum_version"],
-  "additionalProperties": false
+  "required": ["Project", "WelcomeString", "TargetName"],
+  "additionalProperties": true
 }
