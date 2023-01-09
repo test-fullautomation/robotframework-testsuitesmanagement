@@ -102,8 +102,7 @@ class CSetupKeywords(object):
         else:
             logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
-        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bVersionCheck:
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
+        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info(f"Suite Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}")
         logger.info(f"CfgFile Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}")
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
