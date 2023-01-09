@@ -1,0 +1,611 @@
+% --------------------------------------------------------------------------------------------------------------
+%
+% Copyright 2020-2022 Robert Bosch GmbH
+
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+
+% http://www.apache.org/licenses/LICENSE-2.0
+
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+%
+% --------------------------------------------------------------------------------------------------------------
+
+\section{Meaning of "Test Suites Management"}
+
+In the scope of the \rfwcore\ a test suite is either a single robot file containing one or more test cases, or a set of several robot files.
+
+Usually all test cases of a test suite run under the same conditions - but these conditions may be different. For example the same test case is used
+to test several different variants of a system under test. Every variant requires individual values for certain configuration parameters.
+
+Tests are carried out at several test benches. All test benches have different hardware configurations.
+Also the different test benches may require individual values for configuration parameters used in the tests.
+
+\textbf{Therefore the same tests have to run under different conditions!}
+
+The \rfwcore\ provides several places to define parameters: robot files, resource files, parameter files. But these parameters
+are fixed. Therefore we need a more dynamic way of accessing parameters. And we postulate the following: When switching between
+tests of several variants and test executions on several test benches, no changes shall be required within the test code.
+
+The outcome is that another position has to be introduced to store values for variant and test bench specific parameters.
+And a possibility has to be provided to dynamically make either the one or the other set of values vailable during the execution of
+tests - depending on outer circumstances like "\textit{which variant?}" and "\textit{which test bench?}".
+Those dynamic configuration values are stored within separate configuration files in JSON format and the \pkg\ makes the values 
+available globally during the test execution.
+
+Two different kinds of JSON configuration files are involved:
+
+\begin{enumerate}
+   \item \emph{parameter configuration files}
+
+   These configuration files contain all parameter definitions (can be more than one configuration file in a project)
+
+   \item \emph{variant configuration file}
+
+   This is a single configuration file containing the mapping between the several parameter configuration files and a name
+   (usually the name of a variant). This name can be used in command line to select a certain parameter configuration file
+   containing the values for this variant.
+
+   Background: It's easier simply to use a name for referencing a certain variant instead of having the need always to mention
+   the path and name of a configuration file.
+\end{enumerate}
+
+To realize a concrete test suites management for your project, you need to
+
+\begin{itemize}
+   \item identify the parameters that are variant specific, depending on the number of variants in your project,
+   \item identify the parameters that are test bench specific, depending on the number of test benches in your project,
+   \item identify the parameters that are both: variant specific and test bench specific,
+   \item identify the parameters that have the same value in all variants and test benches.
+\end{itemize}
+
+After this
+
+\begin{itemize}
+   \item for every set of parameters (variant specific and bench specific) you have to introduce a certain parameter configuration file,
+   \item in the variant configuration file you have to define for every variant a variant name together
+         with the path to the corresponding parameter configuration file.
+\end{itemize}
+
+The content of these configuration files is described in the next section.
+
+% --------------------------------------------------------------------------------------------------------------
+
+\section{Content of configuration files}
+
+\textbf{1. variant configuration file}
+
+This file configures the access to all variant dependent \plog{robot_config*.json} files.
+
+\begin{pythoncode}
+{
+  "default": {
+               "name": "robot_execution_config.json",
+               "path": ".../config/"
+             },
+  "variant_1": {
+                 "name": "robot_config_variant_1.json",
+                 "path": ".../config/"
+               },
+  "variant_2": {
+                 "name": "robot_config_variant_2.json",
+                 "path": ".../config/"
+               },
+  "variant_3": {
+                 "name": "robot_config_variant_3.json",
+                 "path": ".../config/"
+               }
+}
+\end{pythoncode}
+
+The example above contains definitions for three variants with names:\\
+\pcode{variant_1}, \pcode{variant_2} and \pcode{variant_3}. Additionally a variant named \pcode{default} is defined.
+This default configuration becomes active in case of no certain variant name is provided when the test suite is being executed.
+
+Another aspect is important: the \textbf{three dots}.
+The path to the \plog{robot_config*.json} files depends on the test file location. A
+different number of \plog{../} is required dependent on the directory depth of the test
+case location.
+
+Therefore we use here three dots to tell the \pkg\ to search from the test
+file location up till the \plog{robot_config*.json} files are found:
+
+\begin{pythonlog}
+./config/robot_config.json
+../config/robot_config.json
+../../config/robot_config.json
+../../../config/robot_config.json
+\end{pythonlog}
+
+and so on.
+
+Hint: The paths to the \plog{robot_config*.json} files are relative to the position of the test suite - \textbf{and not relative to the position of the
+mapping file in which they are defined!} You are free to move your test suites one or more level up or down in the file system, but using the
+three dots notation enables you to let the position of the \plog{config} folder unchanged.
+
+It is of course still possible to use the standard notation for relative paths:
+
+\begin{pythoncode}
+"path": "./config/"
+\end{pythoncode}
+
+\newpage
+
+\textbf{2. parameter configuration files}
+
+In these configuration files all parameters are defined, that shall be available globally during test execution.
+
+Some parameters are required. Optionally the user can add own ones. The following example shows the smallest version
+of a parameter configuration file containing only the most important parameters. This version is a default version and part of the
+\pkg\ installation.
+
+\begin{pythoncode}
+{
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+  "Project"         : "RobotFramework Testsuites",
+  "TargetName"      : "Device_01"
+}
+\end{pythoncode}
+
+\pcode{Project}, \pcode{WelcomeString} and \pcode{TargetName} are simple strings that can be used anyhow. \pcode{Maximum_version}
+and \pcode{Minimum_version} are part of a version control mechanism: In case of the version of the currently installed
+\rfwcore\ is outside the range between \pcode{Minimum_version} and \pcode{Maximum_version}, the test execution stops
+with an error message.
+
+The version control mechanism is optional. In case you do not need to have your tests under version control, you can set 
+the versions to the value \pcode{null}.
+
+\begin{pythoncode}
+"Maximum_version" : null,
+"Minimum_version" : null,
+\end{pythoncode}
+
+As an alternative it is also possible to remove \pcode{Minimum_version} and \pcode{Maximum_version} completely.
+
+In case you define only one single version number, only this version number is considered. The following combination
+makes sure, that the installed \rfwcore\ at least is of version 0.6.0, but there is no upper version limit:
+
+\begin{pythoncode}
+"Maximum_version" : null,
+"Minimum_version" : "0.6.0",
+\end{pythoncode}
+
+Hint: The parameters are keys of an internal configuration dictionary. They have to be accessed in the following way:
+
+\begin{robotcode}
+Log    Maximum_version : ${CONFIG}[Maximum_version]
+Log    Project : ${CONFIG}[Project]
+\end{robotcode}
+
+\vspace{1ex}
+
+The following example is an extended version of a configuration file containing also some user defined parameters.
+
+\begin{pythoncode}
+{
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+  "Project"         : "RobotFramework Testsuites",
+  "TargetName"      : "Device_01"
+  "params": {
+              // global parameters
+              "global" : {
+                           "param1" : "ABC",
+                           "param2" : 25
+                         }
+            }
+}
+\end{pythoncode}
+
+User defined parameters have to be placed inside \pcode{params:global}. The intermediate level \pcode{global} is introduced to enable further
+parameter scopes than \pcode{global} in future.
+
+All user defined parameters have the scope \pcode{params:global} per default. Therefore they can be accessed directly:
+
+\begin{robotcode}
+Log    param1 : ${param1}
+\end{robotcode}
+
+And another feature can be seen in the example above:\\
+In the context of the \pkg\ the JSON format is an extended one.
+Deviating from JSON standard it is possible to comment out lines with starting them with a double slash \pcode{//}.
+This allows to add explanations about the meaning of the defined parameters already within the JSON file.
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Access to configuration files}
+
+With an installed \pkg\ every test execution requires a configuration - that is the accessibility
+of a configuration file in JSON format. The \pkg\ provides four different possibilities - also
+called \textit{level} - to realize such an access. These possibilities are sorted and the \pkg\ tries to access
+the configuration file in a certain order: Level 1 has the highest priority and level 4 has the lowest priority.
+
+\textbf{Level 1}
+
+Path and name of a parameter configuration file is provided in command line of the \rfwcore.
+
+\textbf{Level 2 (recommended)}
+
+The name of the variant is provided in command line of the \rfwcore.
+
+This level requires that a variant configuration file is passed to the suite setup of the \pkg.
+
+\textbf{Level 3}
+
+The \pkg\ searches for parameter configuration files within a folder \plog{config} in current test suite folder.
+In case of such a folder exists and parameter configuration files are inside, they will be used.
+
+\textbf{Level 4 (unwanted, fallback solution only)}
+
+The \pkg\ uses the default configuration file that is part of the installation.
+
+\vspace{2ex}
+
+\textbf{Summary}
+
+\begin{itemize}
+   \item With highest priority a parameter configuration file provided in command line, is considered - even in case of also other
+configuration files (level 2 - level 4) are available.
+   \item If a parameter configuration file is not provided in command line, but a variant name, then the configuration belonging
+to this variant, is loaded - even in case of also other configuration files (level 3 - level 4) are available.
+   \item If nothing is specified in command line, then the \pkg\ tries to find parameter configuration files within a \plog{config} folder
+and take them if available - even in case of also the level 4 configuration file is available.
+   \item In case of the user does not provide any information about parameter configuration files to use, the \pkg\ loads the
+default configuration from installation folder (fallback solution; level 4).
+\end{itemize}
+
+\textbf{In this context two aspects are important to know for users:}
+
+\begin{enumerate}
+   \item \textit{Which parameter configuration file is selected for the test execution?}\\
+To answer this question the log file contains the path and the name of the selected parameter configuration file.
+   \item \textit{For which reason is this parameter configuration file selected?}\\
+To answer this question the log file also contains the level number. The level number indicates the reason.
+\end{enumerate}
+
+With these log file entries the test execution is clearly understandable, traceable and scales for huge test suites.
+
+\vspace{2ex}
+
+\textbf{Why is level 2 the recommended one?}
+
+Level 2 is the most flexible and extensible solution. Because the robot files contain a link to a variants configuration file,
+the possible sets of parameter values can already be taken out of the code.
+
+The values selected by level 1, you only see in the log files, but not in the code, because the selection happens in command line only.
+
+Level 3 has a rather strong binding between robot files and configuration files. If you start the test implementation based on level 3
+and after this want to have a variant handling, then you have to switch from level 3 to level 2 - and this causes effort in implementation.
+
+Wherease if you start with level 2 immediately and need to consider another set of configuration values for the same tests, then you only have to add
+another parameter configuration file and another entry in the variants configuration file, without changing any test implementation.
+
+\textit{We strongly recommend not to mix up several different configuration levels in one project!}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\section{Activation of "Test Suites Management"}
+
+To activate the test suites management you have to import the \pkg\ library in the following way:
+
+\begin{robotcode}
+Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+\end{robotcode}
+
+We recommend to use the \rcode{WITH NAME} option to shorten the robot code a little bit.
+
+The next step is to call the \rcode{testsuite_setup} of the \pkg\ within the \rcode{Suite Setup} of your test:
+
+\begin{robotcode}
+Suite Setup    tm.testsuite_setup
+\end{robotcode}
+
+As long as you
+\begin{itemize}
+   \item do not provide a parameter configuration file in command line when executing the test suite (level 1),
+   \item do not provide a variants configuration file as parameter of the \rcode{testsuite_setup} (level 2),
+   \item do not have a \plog{config} folder containing parameter configuration files in your test suites folder (level 3),
+\end{itemize}
+the \pkg\ falls back to the default configuration (level 4).
+
+In case you want to realize a variant handling you have to provide the path and the name of a variants configuration file to the \rcode{testsuite_setup}:
+
+\begin{robotcode}
+Suite Setup    tm.testsuite_setup    ./config/exercise_variants.json
+\end{robotcode}
+
+To ease the analysis of a test execution, the log file contains informations about the selected level and the path and the name of the used
+configuration file, for example:
+
+\begin{robotlog}
+Running with configuration level: 2
+CfgFile Path: ./config/exercise_config.json
+\end{robotlog}
+
+Please consider: The \rcode{testsuite_setup} requires a variants configuration file (in the example above: \plog{exercise_variants.json}) - whereas
+the log file contains the resulting parameter configuration file (in the example above: \plog{exercise_config.json}), that is selected depending
+on the name of the variant provided in command line of the \rfwcore.
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Variants selection}
+
+In a previous section the level concept for configuration files has been explained. This section contains corresponding code examples.
+
+\textit{1. Selection of a certain parameter configuration file in command line}
+
+\begin{robotlog}
+--variable config_file:"(path to parameter configuration file)"
+\end{robotlog}
+
+\textit{2. Selection of a certain variant per name in command line}
+
+\begin{robotlog}
+--variable variant:"(variant name)"
+\end{robotlog}
+
+\textit{3. Parameter configuration taken from} \rlog{config} \textit{folder}
+
+This \rlog{config} folder has to be placed in the same folder than the test suites.
+
+Parameter configuration files within this folder are considered under two different conditions:
+
+\begin{itemize}
+   \item The configuration file has the name \rlog{robot_config.json}. That is a fix name predefined by the \pkg.
+   \item The configuration file has the same name than a robot file inside the test suites folder, e.g.:
+         \begin{itemize}
+            \item Name of test suite file: \rlog{example.robot}
+            \item Path and name of corresponding parameter configuration file: \rlog{./config/example.json}
+         \end{itemize}
+         With this rule it is possible to give every test suite in a certain folder an own individual configuration.
+\end{itemize}
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Local configuration}
+
+It might be required to execute tests on several different test benches with every test bench has it's own individual hardware
+that might require configuration parameter values that are test bench specific. This can be related to common configuration parameters
+and also to parameters that are variant specific. In the second case a configuration parameter is both variant specific \textit{and}
+test bench specific.
+
+The \textit{local configuration} feature of the \pkg\ provide the possibility to define test bench specific configuration parameter values.
+
+The meaning of \textit{local} in this context is: placed on a certain test bench - and valid for this bench only.
+
+Also this local configuration is based on configuration files in JSON format. These files are the last ones that are considered when the configuration is loaded.
+The outcome is that it is possible to define default values for test bench specific parameters in other configuration files - to be also test bench independent.
+And it is possible to use the local configuration to overwrite these default values with values that are specific for a certain test bench.
+
+\textbf{Important:}
+
+\begin{itemize}
+   \item Local configuration files are fragments only - and not a full configuration! Even so they need to follow the JSON syntax rules.
+         This means, at least they have to start with an opening curly bracket and they have to end with a closing curly bracket.
+   \item Local configuration files must not contain the mandatory top level parameters like the \pcode{WelcomeString} and others.
+\end{itemize}
+
+Using the local configuration feature is an option and the \pkg\ provides two ways to realize it:
+
+\begin{enumerate}
+   \item \textit{per command line}
+
+         Path and name of the local parameter configuration file is provided in command line of the \rfwcore\ with the following syntax:
+\begin{robotlog}
+--variable local_config:"(path to localconfig file)"
+\end{robotlog}
+
+   \item \textit{per environment variable}
+
+         An environment variable named \rcode{ROBOT_LOCAL_CONFIG} exists and contains path and name of a local parameter configuration file.
+
+         \textbf{The user has to create this environment variable!}
+
+         This mechanism allows a user - without any command line extensions - automatically to refer on every test bench to an individual local configuration,
+         simply by giving on every test bench this environment variable an individual value.
+
+\end{enumerate}
+
+The command line has a higher priority than the environment variable. If both is available the local configuration is taken from command line.
+
+Recommendation: \textit{To avoid an accidental overwriting of local configuration files in version control systems we recommend to give those files
+names that are test bench specific.}
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Priority of configuration parameters}
+
+In previous sections the level concept has been explained. This concept introduces four levels of priority
+that define, which of the possible sources of configuration parameters are processed.
+But there are other rules involved that influence the priority:
+
+\begin{itemize}
+   \item The local configuration has higher priority than other parameter configurations
+   \item The command line has higher priority than definitions within configuration files
+\end{itemize}
+
+Already in command line we have several possibilities to make settings:
+
+\begin{itemize}
+   \item Set a parameter configuration file (with \pkg\ command line variable \rlog{config_file}, \textit{level 1})
+   \item Set a variant name (with \pkg\ command line variable \rlog{variant}, \textit{level 2})
+   \item Set a local configuration (with \pkg\ command line variable \rlog{local_config})
+   \item Set any other variables (directly with \rfwcore\ command line variable \rlog{--variable})
+\end{itemize}
+
+And it is possible that in all four use cases the same parameters are used. Or in other words: It is possible to use the
+\rlog{--variable} mechanism to define a parameter that is also defined within a parameter configuration or within a
+local configuration - or in both together.
+
+\vspace{2ex}
+
+Finally this is the order of processing (with highest priority first):
+
+\begin{enumerate}
+   \item Single command line variable (\rlog{--variable})
+   \item Local configuration (\rlog{local_config})
+   \item Variant specific configuration (\rlog{config_file} or \rlog{variant})
+\end{enumerate}
+
+Meaning:
+
+\begin{enumerate}
+   \item Variant specific configuration is overwritten by local configuration
+   \item Local configuration is overwritten by single command line variable
+\end{enumerate}
+
+What happens in case of a command line contains both a \rlog{config_file} and a \rlog{variant}?
+
+\rlog{config_file} is level 1 and \rlog{variant} is level 2. Level 1 has higher priority than level 2. Therefore \rlog{config_file}
+is the valid one. This does \textbf{not} mean that \rlog{config_file} overwrites \rlog{variant}! In case of a certain level is identified
+(here: level 1), all other levels are ignored. The outcome is that - in this example - the \rlog{variant} has no meaning.
+Between different levels there is an \textit{either or} relationship. And that is the reason for that it makes no sense to define both in command line,
+a \rlog{config_file} and a \rlog{variant}. The \pkg\ throws an error in this case.
+
+But when additionally \rlog{--variable} is used to define a new value for a parameter that is already defined in one of the involved configuration files,
+then the configuration file value is overwritten by the command line value.
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Nested configuration files}
+
+In case of a project requires more and more parameters, it makes sense to split the growing configuration file into smaller ones.
+
+This means, at first we have to split all configuration parameters in
+\begin{enumerate}
+   \item parameters that are specific for a certain variant,
+   \item common parameters that have the same value for all variants
+\end{enumerate}
+
+Placing those common parameters in every single variant specific parameter configuration file would craeate a lot of redundancy.
+This would also complicate the maintenance.
+
+The solution is to use the variant specific configuration files only for variant specific parameters and to put all common parameters in
+a separate configuration file. This common parameter file has to be imported in every variant specific parameter file.
+
+The outcome is that still with the selection of a certain variant specific parameter file both types of parameters are available:
+the variant specific ones and the common ones.
+
+This can be done in the following way:
+
+For example we have the following variant specific configuration files:
+
+\begin{pythonlog}
+config/config_variant1.json
+config/config_variant2.json
+\end{pythonlog}
+
+Additionaly we have a configuration file with common parameters:
+
+\begin{pythonlog}
+config/config_common.json
+\end{pythonlog}
+
+The import of \rlog{config_common.json} into \rlog{config_variant1.json} and into \rlog{config_variant2.json} is possible in the following way:
+
+\begin{pythonlog}
+"params" : {
+            "global": {
+                       "[import]"   : "./config_common.json",
+                       "teststring" : "variant specific value"
+                      }
+           }
+\end{pythonlog}
+
+The key \pcode{[import]} indicates the import of another configuration file. The value of the key is the path and name of this file.
+
+Imports can be nested. An imported configuration file is allowed to contain imports also.
+
+The content of the importing file and the content of all imported files are merged. In case of duplicate parameter names follow up definitions
+overwrite previous definitions of the same parameter!
+
+\textbf{Important:}
+
+\begin{itemize}
+   \item All imported configuration files are fragments only - and not a full configuration! Even so they need to follow the JSON syntax rules.
+         This means, at least they have to start with an opening curly bracket and they have to end with a closing curly bracket.
+   \item Imported configuration files must not contain the mandatory top level parameters like the \pcode{WelcomeString} and others.
+\end{itemize}
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Overwritten parameters}
+
+Summarized the \pkg\ provides three different types of parameter configuration files to define parameters:
+
+\begin{enumerate}
+   \item A full standard parameter configuration file containing at least the mandatory parameters and - as option - also user defined parameters
+   \item A parameter configuration file fragment that is imported in other configuration files by the \pcode{[import]} key
+   \item A local parameter configuration file that is also a fragment only, and accessed either by command line or environment variable
+\end{enumerate}
+
+All types of configuration file can be used
+
+\begin{enumerate}
+   \item to define new parameters
+   \item to overwrite already existing parameters
+\end{enumerate}
+
+This possibility only belongs to user defined parameters with scope \pcode{params:global}!
+
+\vspace{2ex}
+
+Example:
+
+\textit{1. Define a new parameter:}
+
+\begin{pythoncode}
+"params" : {
+            "global": {
+                       "teststring" : "initial value"
+                      }
+           }
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textit{2. Overwrite an already existing parameter:}
+
+To overwrite a parameter is - after the initial definition - possible at any follow up position
+
+\begin{itemize}
+   \item in the same configuration file or
+   \item in other configuration files like the imported ones or
+   \item in a local configuration file
+\end{itemize}
+
+With the following syntax:
+
+\begin{pythoncode}
+${params}['global']['teststring'] : "new value"
+\end{pythoncode}
+
+The resulting value of a parameter at the end depends on the priority (computation order) described in previous sections of this description.
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Tutorials}
+
+What is described up to here can be experienced in the tutorial \plog{900_building_testsuites}.
+
+It is also recommended to take a look at the tutorial \plog{100_variables_and_datatypes}.
+This tutorial goes more into detail about data types and explaines how to handle also other data types like strings in
+configuration files of the \pkg.
+
+
+

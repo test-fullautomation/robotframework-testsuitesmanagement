@@ -1,6 +1,6 @@
 # Package Description
 
-The **RobotFramework_TestsuitesManagement** allows users to define
+The **RobotFramework_TestsuitesManagement** enables users to define
 dynamic configuration values within separate configuration files in JSON
 format.
 
