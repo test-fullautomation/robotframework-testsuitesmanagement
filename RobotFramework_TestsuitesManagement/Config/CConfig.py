@@ -345,9 +345,9 @@ Please remove one of them.\n"
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
         self.sWelcomeString = oJsonCfgData['WelcomeString']
-        if ("Maximum_version" in oJsonCfgData):
+        if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
-        if ("Minimum_version" in oJsonCfgData):
+        if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
 
         # Set metadata at top level
