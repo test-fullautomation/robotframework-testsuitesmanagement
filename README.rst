@@ -15,7 +15,7 @@
 Package Description
 ===================
 
-The **RobotFramework_TestsuitesManagement** allows users to define dynamic configuration values within separate configuration files in JSON format.
+The **RobotFramework_TestsuitesManagement** enables users to define dynamic configuration values within separate configuration files in JSON format.
 
 These configuration values are available during test execution - but under certain conditions that can be defined by the user
 (e.g. to realize a variant handling). This means: Not all parameter values are available during test execution - only the ones
