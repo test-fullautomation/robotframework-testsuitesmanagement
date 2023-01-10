@@ -46,8 +46,8 @@ import pathlib
 # testsuitesmanagement, testresultwebapptool, Eclipse for RobotFramework, ...
 # This information is used for Robotframework AIO version control 
 AIO_BUNDLE_NAME = "RobotFramework AIO"
-VERSION         = "0.5.2"
-VERSION_DATE    = "09.2022"
+VERSION         = "0.6.0"
+VERSION_DATE    = "01.2023"
 
 class dotdict(dict):
     '''
