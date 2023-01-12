@@ -887,11 +887,11 @@ Please remove one of them.\n"
         detail = ""
         if reason=="conflict_min":
             header = "Version conflict."
-            detail = f"\nThe configuration requires minimum Robotframework AIO version '{version1}'"
+            detail = f"\nThe test execution requires minimum Robotframework AIO version '{version1}'"
             detail +=f"\nbut the installed Robotframework AIO version is older         '{version2}'"
         elif reason=="conflict_max":
             header = "Version conflict."
-            detail = f"\nThe configuration requires maximum Robotframework AIO version '{version1}'"
+            detail = f"\nThe test execution requires maximum Robotframework AIO version '{version1}'"
             detail +=f"\nbut the installed Robotframework AIO version is younger       '{version2}'"
         elif reason=="wrong_minmax":
             header = "Wrong use of max/min version control in configuration."
