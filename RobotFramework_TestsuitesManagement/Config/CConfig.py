@@ -339,8 +339,10 @@ Please remove one of them.\n"
                     raise Exception(f"The parameter {error.message}, but it's missing in JSON configuration file.")
                 else:
                     errParam = error.path.pop()
-                    logger.error(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
-                    raise Exception(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
+                    logger.error(f"The value sets for the parameter '{errParam}' in JSON configuration file is \
+                        not allowed due to: {error.message}")
+                    raise Exception(f"The value sets for the parameter '{errParam}' in JSON configuration file is \
+                        not allowed due to: {error.message}")
             
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
