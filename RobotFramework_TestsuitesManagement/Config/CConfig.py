@@ -339,8 +339,8 @@ Please remove one of them.\n"
                     raise Exception(f"The parameter {error.message}, but it's missing in JSON configuration file.")
                 else:
                     errParam = error.path.pop()
-                    logger.error(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
-                    raise Exception(f"Parameter '{errParam}' in JSON configuration file is not allowed due to: {error.message}")
+                    logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file!\n{error.message}")
+                    raise Exception(f"Parameter '{errParam}' with invalid value found in JSON configuration file!\n{error.message}")
             
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
@@ -885,11 +885,11 @@ Please remove one of them.\n"
         detail = ""
         if reason=="conflict_min":
             header = "Version conflict."
-            detail = f"\nThe configuration requires minimum Robotframework AIO version '{version1}'"
+            detail = f"\nThe test execution requires minimum Robotframework AIO version '{version1}'"
             detail +=f"\nbut the installed Robotframework AIO version is older         '{version2}'"
         elif reason=="conflict_max":
             header = "Version conflict."
-            detail = f"\nThe configuration requires maximum Robotframework AIO version '{version1}'"
+            detail = f"\nThe test execution requires maximum Robotframework AIO version '{version1}'"
             detail +=f"\nbut the installed Robotframework AIO version is younger       '{version2}'"
         elif reason=="wrong_minmax":
             header = "Wrong use of max/min version control in configuration."
