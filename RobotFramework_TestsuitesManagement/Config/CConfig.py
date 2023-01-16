@@ -15,7 +15,7 @@
 #
 # File: CConfig.py
 # Initially created by Mai Dinh Nam Son (RBVH/ECM11) / Nov-2020
-# Base on TML Framework automation concept
+# Based on TML Framework automation concept
 #
 # 2021-06-25: Mai Dinh Nam Son (RBVH/ECM1)
 #   - Adds CJsonDotDict class to convert json to dotdict object
@@ -42,16 +42,16 @@ from robot.libraries.BuiltIn import BuiltIn
 import pathlib
 
 # This is version information represents for the whole AIO bundle
-# It contains the core robotframework and relative resources such as:
-# testsuitesmanagement, testresultwebapptool, Eclipse for RobotFramework, ...
-# This information is used for Robotframework AIO version control 
+# It contains the core Robot Framework and relative resources such as:
+# RobotFramework_TestsuitesManagement, RobotLog2DB, VSCodium for Robot Framework, ...
+# This information is used for RobotFramework AIO version control 
 AIO_BUNDLE_NAME = "RobotFramework AIO"
 VERSION         = "0.6.0"
 VERSION_DATE    = "01.2023"
 
 class dotdict(dict):
     '''
-   Subclass of dict, with "dot" (attribute) access to keys.
+Subclass of dict, with "dot" (attribute) access to keys.
     '''
     __setattr__ = dict.__setitem__
     def __getattr__(self, item):
@@ -64,40 +64,42 @@ class dotdict(dict):
 
 class CConfig():
     '''
-   Defines the properties of configuration and holds the identified config files.
+Defines the properties of configuration and holds the identified config files.
 
-   The loading configuration method is divided into 4 levels, level1 is highest priority, Level4 is lowest priority.
+The loading configuration method is divided into 4 levels, level1 has the highest priority, Level4 has the lowest priority.
 
-   **Level1:** Handed over by command line argument.
+**Level1:** Handed over by command line argument
 
-   **Level2:** Read from content of json config file
+**Level2:** Read from content of json config file
 
-      .. code:: json
+   .. code:: json
 
-         {
-            "default": {
-               "name": "robot_config.json",
-               "path": ".../config/"
-            },
-            "variant_0": {
-               "name": "robot_config.json",
-               "path": ".../config/"
-            },
-            "variant_1": {
-               "name": "robot_config_variant_1.json",
-               "path": ".../config/"
-            },
-               ...
-               ...
-         }
+      {
+         "default": {
+            "name": "robot_config.json",
+            "path": ".../config/"
+         },
+         "variant_0": {
+            "name": "robot_config.json",
+            "path": ".../config/"
+         },
+         "variant_1": {
+            "name": "robot_config_variant_1.json",
+            "path": ".../config/"
+         },
+            ...
+            ...
+      }
 
-      According to the ``ConfigName``, Testsuites-Management package will choose the corresponding config file. 
-      ``".../config/"`` indicats the relative path to json config file, Testsuites-Management will recursively 
-      find the ``config`` folder.
+   According to the ``ConfigName``, RobotFramework_TestsuitesManagement will choose the corresponding config file.
+   ``".../config/"`` indicats the relative path to json config file, RobotFramework_TestsuitesManagement will recursively
+   find the ``config`` folder.
 
-   **Level3:** Read in testsuite folder ``/config/robot_config.json``
+**Level3:** Read in testsuite folder: ``/config/robot_config.json``
 
-   **Level4:** Read from RobotFramework AIO install folder ``/RobotFramework/defaultconfig/robot_config.json``
+**Level4:** Read from RobotFramework AIO installation folder:
+
+    ``/RobotFramework/defaultconfig/robot_config.json``
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
@@ -140,7 +142,7 @@ class CConfig():
     
     class CJsonDotDict():
         '''
-   The CJsonDotDict class converts json configuration object to dotdict
+The CJsonDotDict class converts json configuration object to dotdict
         '''
         def __init__(self):
             self.lTmpParam = ['CConfig.ddictJson']
@@ -151,13 +153,13 @@ class CConfig():
 
         def dotdictConvert(self, oJson):
             '''
-   This dotdictConvert method converts json object to dotdict.
+This dotdictConvert method converts json object to dotdict.
 
 **Arguments:**
 
 * ``oJson``
 
-   / *Condition*: required / *Type*: dict
+   / *Condition*: required / *Type*: dict /
 
    Json object which want to convert to dotdict.
 
@@ -205,10 +207,10 @@ class CConfig():
      
     def __new__(classtype, *args, **kwargs):
         '''
-   Makes the CConfig class to singleton.
-   
-   Checks to see if a __single exists already for this class. Compare class types instead of just looking 
-   for None so that subclasses will create their own __single objects. 
+Makes the CConfig class to singleton.
+
+Checks to see if a __single exists already for this class. Compare class types instead of just looking
+for None so that subclasses will create their own __single objects.
         '''
         if classtype != type(classtype.__single):
             classtype.__single = object.__new__(classtype)
@@ -221,7 +223,7 @@ class CConfig():
     @staticmethod
     def loadCfg(self):
         '''
-   This loadCfg method uses to load configuration's parameters from json files.
+This loadCfg method uses to load configuration's parameters from json files.
 
 **Arguments:**
 
@@ -391,19 +393,19 @@ Please remove one of them.\n"
         
     def __setGlobalVariable(self, key, value):
         '''
-   This method set RobotFramework AIO global variable from config object.
+This method set RobotFramework AIO global variable from config object.
 
 **Arguments:**
 
 * ``key``
 
-   / *Condition*: required / *Type*: string
+   / *Condition*: required / *Type*: string /
 
    key is set as global variable of RobotFramework AIO, user can call ${<key>} in test script.
 
 * ``value``
 
-   / *Condition*: required / *Type*: <variant datatypes>
+   / *Condition*: required / *Type*: <variant datatypes> /
 
 **Returns:**
 
@@ -449,7 +451,7 @@ Please remove one of them.\n"
             
     def __updateGlobalVariable(self):
         '''
-   This method updates preprocessor and global params to global variable of RobotFramework AIO.
+This method updates preprocessor and global params to global variable of RobotFramework AIO.
 
 **Arguments:**
 
@@ -485,7 +487,7 @@ Please remove one of them.\n"
         
     def __del__(self):
         '''
-   This destructor method.
+This destructor method.
 
 **Arguments:**
 
@@ -499,7 +501,7 @@ Please remove one of them.\n"
     
     def __loadConfigFileLevel2(self):
         '''
-   This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLevel2 == True.
+This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLevel2 == True.
 
 **Arguments:**
 
@@ -549,26 +551,26 @@ Please remove one of them.\n"
 
     def __sNormalizePath(self, sPath : str) -> str:
         '''
-   Python struggles with
+Python struggles with
 
-      - UNC paths
+   - UNC paths
 
-         e.g. ``\\hi-z4939\ccstg\....``
+      e.g. ``\\hi-z4939\ccstg\....``
 
 
-      - escape sequences in windows paths
+   - escape sequences in windows paths
 
-         e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result after 
-         processing it with an regexp would be ``c:\autotest   uner``
-    
-      In order to solve this problems any slash will be replaced from backslash to slash, 
-      only the two UNC backslashes must be kept if contained.
+      e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result after
+      processing it with an regexp would be ``c:\autotest   uner``
+
+   In order to solve this problems any slash will be replaced from backslash to slash,
+   only the two UNC backslashes must be kept if contained.
 
 **Arguments:**
 
 * ``sPath``
 
-   / *Condition*: required / *Type*: string
+   / *Condition*: required / *Type*: string /
 
    Absolute or relative path as input.
 
@@ -616,7 +618,7 @@ Please remove one of them.\n"
     @staticmethod
     def __getMachineName():
         '''
-   This __getMachineName method gets current machine name which is running the test.
+This __getMachineName method gets current machine name which is running the test.
 
 **Arguments:**
 
@@ -646,7 +648,7 @@ Please remove one of them.\n"
     @staticmethod
     def __getUserName():
         '''
-   This __getUserName method gets current account name login to run the test.
+This __getUserName method gets current account name login to run the test.
 
 **Arguments:**
 
@@ -683,11 +685,11 @@ Please remove one of them.\n"
     
     def verifyRbfwVersion(self):
         '''
-   This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version 
-   (if provided in the configuration file).
+This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version
+(if provided in the configuration file).
 
-   In case the current version is not between min and max version, then the execution of testsuite is terminated 
-   with "unknown" state
+In case the current version is not between min and max version, then the execution of testsuite is terminated
+with "unknown" state
 
 **Arguments:**
 
@@ -720,46 +722,46 @@ Please remove one of them.\n"
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
         '''
-   This bValidateMinVersion validates the current version with required minimun version.
+This bValidateMinVersion validates the current version with required minimun version.
 
 **Arguments:**
 
 * ``tCurrentVersion``
 
-   / *Condition*: required / *Type*: tuple
+  / *Condition*: required / *Type*: tuple /
 
-   Current RobotFramework AIO version.
+  Current RobotFramework AIO version.
 
 * ``tMinVersion``
 
-   / *Condition*: required / *Type*: tuple
+  / *Condition*: required / *Type*: tuple /
 
-   The minimum version of RobotFramework AIO.
+  The minimum version of RobotFramework AIO.
 
 **Returns:**
 
-* ``True or False``
+* ``True`` or ``False``
         '''
         return tCurrentVersion >= tMinVersion
 
     @staticmethod
     def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
         '''
-   This bValidateMaxVersion validates the current version with required minimun version.
+This bValidateMaxVersion validates the current version with required minimun version.
 
 **Arguments:**
 
 * ``tCurrentVersion``
 
-   / *Condition*: required / *Type*: tuple
+  / *Condition*: required / *Type*: tuple /
 
-   Current RobotFramework AIO version.
+  Current RobotFramework AIO version.
 
 * ``tMinVersion``
 
-   / *Condition*: required / *Type*: tuple
+  / *Condition*: required / *Type*: tuple /
 
-   The minimum version of RobotFramework AIO.
+  The minimum version of RobotFramework AIO.
 
 **Returns:**
 
@@ -770,22 +772,22 @@ Please remove one of them.\n"
     @staticmethod
     def bValidateSubVersion(sVersion):
         '''
-   This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple 
-   for version comparision.
+This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple
+for version comparision.
 
 **Arguments:**
 
 * ``sVersion``
 
-   / *Condition*: required / *Type*: string
+  / *Condition*: required / *Type*: string /
 
-   The version of RobotFramework AIO.
+  The version of RobotFramework AIO.
 
 **Returns:**
 
 * ``lSubVersion``
 
-   / *Type*: tuple /
+  / *Type*: tuple /
         '''
         lSubVersion = [0,0,0]
         oMatch = re.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
@@ -814,25 +816,26 @@ Please remove one of them.\n"
     @staticmethod
     def tupleVersion(sVersion):
         '''
-   This tupleVersion returns a tuple which contains the (major, minor, patch) version. 
-
-   (remaining content needs to be fixed and restored)
+This tupleVersion returns a tuple which contains the (major, minor, patch) version.
 
 **Arguments:**
 
 * ``sVersion``
 
-   / *Condition*: required / *Type*: string
+  / *Condition*: required / *Type*: string /
 
-   The version of RobotFramework AIO.
+  The version of RobotFramework AIO.
 
 **Returns:**
 
 * ``lVersion``
 
-   / *Type*: tuple /
+  / *Type*: tuple /
         '''
         # '''
+
+# TODO: (remaining content needs to be fixed and restored)
+
         # Return a tuple which contains the (major, minor, patch) version.
           # - In case minor/patch version is missing, it is set to 0.
             # E.g: 1   => 1.0.0
@@ -856,25 +859,25 @@ Please remove one of them.\n"
 
     def versioncontrol_error(self, reason, version1, version2):
         '''
-   Wrapper version control error log:
+Wrapper version control error log:
 
-      Log error message of version control due to reason and set to unknown state.
-
-      `reason` can only be "conflict_min", "conflict_max" and "wrong_minmax".
+Log error message of version control due to reason and set to unknown state.
 
 **Arguments:**
 
 * ``reason``
 
-   / *Condition*: required / *Type*: string
+  / *Condition*: required / *Type*: string /
+
+  ``reason`` can only be ``conflict_min``, ``conflict_max`` and ``wrong_minmax``.
 
 * ``version1``
 
-   / *Condition*: required / *Type*: string
+  / *Condition*: required / *Type*: string /
 
 * ``version2``
 
-   / *Condition*: required / *Type*: string
+  / *Condition*: required / *Type*: string /
 
 **Returns:**
 
@@ -885,16 +888,16 @@ Please remove one of them.\n"
         detail = ""
         if reason=="conflict_min":
             header = "Version conflict."
-            detail = f"\nThe test execution requires minimum Robotframework AIO version '{version1}'"
-            detail +=f"\nbut the installed Robotframework AIO version is older         '{version2}'"
+            detail = f"\nThe test execution requires minimum RobotFramework AIO version '{version1}'"
+            detail +=f"\nbut the installed RobotFramework AIO version is older         '{version2}'"
         elif reason=="conflict_max":
             header = "Version conflict."
-            detail = f"\nThe test execution requires maximum Robotframework AIO version '{version1}'"
-            detail +=f"\nbut the installed Robotframework AIO version is younger       '{version2}'"
+            detail = f"\nThe test execution requires maximum RobotFramework AIO version '{version1}'"
+            detail +=f"\nbut the installed RobotFramework AIO version is younger       '{version2}'"
         elif reason=="wrong_minmax":
             header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum Robotframework AIO version                 '{version1}'"
-            detail +=f"\nis younger than the configured maximum Robotframework AIO version '{version2}'"
+            detail = f"\nThe configured minimum RobotFramework AIO version                 '{version1}'"
+            detail +=f"\nis younger than the configured maximum RobotFramework AIO version '{version2}'"
             detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
         else:
             return
@@ -905,4 +908,4 @@ Please remove one of them.\n"
         f"\n{detail}\n"
         "\nPlease install the required RobotFramework AIO version." +
         f"\nYou can find an installer here: {sLocation}\n", "ERROR")
-        BuiltIn().unknown()        
+        BuiltIn().unknown()

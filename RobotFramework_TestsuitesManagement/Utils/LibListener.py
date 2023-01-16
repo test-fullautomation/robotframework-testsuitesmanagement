@@ -25,15 +25,15 @@ from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
     '''
-   This ``LibListener`` class defines the hook methods.
+This ``LibListener`` class defines the hook methods.
 
-   * ``_start_suite`` hooks to every starting testsuite of robot run.
+* ``_start_suite`` hooks to every starting testsuite of robot run.
 
-   * ``_end_suite`` hooks to every ending testsuite of robot run.
+* ``_end_suite`` hooks to every ending testsuite of robot run.
 
-   * ``_start_test`` hooks to every starting test case of robot run.
+* ``_start_test`` hooks to every starting test case of robot run.
 
-   * ``_end_test`` hooks to every ending test case of robot run.
+* ``_end_test`` hooks to every ending test case of robot run.
     '''
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
@@ -41,19 +41,19 @@ class LibListener(object):
     
     def _start_suite(self, data, result):
         '''
-   This _start_suite method hooks to every starting testsuite of robot run.
+This _start_suite method hooks to every starting testsuite of robot run.
 
 **Arguments:**
 
 * ``data``
 
-   / *Condition*: required / *Type*: dict
+  / *Condition*: required / *Type*: dict /
 
-   The data of current robot run.
+  The data of current robot run.
 
 * ``result``
 
-   / *Condition*: required / *Type*: Any
+  / *Condition*: required / *Type*: any /
 
 **Returns:**
 
@@ -121,19 +121,19 @@ class LibListener(object):
         
     def _end_suite(self, data, result):
         '''
-   This _end_suite method hooks to every ending testsuite of robot run.
+This _end_suite method hooks to every ending testsuite of robot run.
 
 **Arguments:**
 
 * ``data``
 
-   / *Condition*: required / *Type*: dict
+  / *Condition*: required / *Type*: dict /
 
-   The data of current robot run.
+  The data of current robot run.
 
 * ``result``
 
-   / *Condition*: required / *Type*: Any
+  / *Condition*: required / *Type*: any /
 
 **Returns:**
 
@@ -147,19 +147,19 @@ class LibListener(object):
         
     def _start_test(self, data, result):
         '''
-   This _start_test method hooks to every starting test case of robot run.
+This _start_test method hooks to every starting test case of robot run.
 
 **Arguments:**
 
 * ``data``
 
-   / *Condition*: required / *Type*: dict
+  / *Condition*: required / *Type*: dict /
 
-   The data of current robot run.
+  The data of current robot run.
 
 * ``result``
 
-   / *Condition*: required / *Type*: Any
+  / *Condition*: required / *Type*: any /
 
 **Returns:**
 
@@ -171,23 +171,22 @@ class LibListener(object):
         
     def _end_test(self, data, result):
         '''
-   This _end_test hooks to every ending test case of robot run.
+This _end_test hooks to every ending test case of robot run.
 
 **Arguments:**
 
 * ``data``
 
-   / *Condition*: required / *Type*: dict
+  / *Condition*: required / *Type*: dict /
 
-   The data of current robot run.
+  The data of current robot run.
 
 * ``result``
 
-   / *Condition*: required / *Type*: Any
+  / *Condition*: required / *Type*: any /
 
 **Returns:**
 
 * No return variable
         '''
         dispatch('scope_end', data.longname)
-        

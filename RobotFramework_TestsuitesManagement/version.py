@@ -17,7 +17,7 @@
 #
 # Initialy created by Tran Duy Ngoan(RBVH/ECM11) / October 2021
 #
-# This file provides the method to get the installed Robotframework AIo version
+# This file provides the method to get the installed RobotFramework AIO version
 #  
 # History:
 # 
@@ -30,7 +30,7 @@ from RobotFramework_TestsuitesManagement.Config import VERSION
 
 def robfwaio_version():
    '''
-   Return testsuitemanagement version as Robot framework AIO version
+Returns the version of the entire RobotFramework AIO bundle
    '''
    print(f"{VERSION}")
 
