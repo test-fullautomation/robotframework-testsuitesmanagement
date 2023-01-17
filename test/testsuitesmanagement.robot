@@ -66,7 +66,7 @@ Testsuites_Management_Test_02
    # TODO: needs to be clarified if this shall be valid or not:
    # should_be_equal    ${sMaximumVersion}    ${SUITE METADATA}[version]
    # alternatively hard coded:
-   should_be_equal    ${sMaximumVersion}    0.5.2
+   should_be_equal    ${sMaximumVersion}    1.0.0
 
 # --------------------------------------------------------------------------------------------------------------
 
