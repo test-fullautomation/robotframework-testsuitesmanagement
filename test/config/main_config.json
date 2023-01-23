@@ -18,7 +18,7 @@
 // The path to the robot_config*.json files depends on the test file location. A 
 // different number of ../ is required dependend on the directory depth of the test 
 // case location.
-// Therefore we use here three ... to tell the ROBFW to search from the test 
+// Therefore we use here three ... to tell the Robot Framework to search from the test 
 // file location up till the robot_config*.json files are found:
 // ./config/robot_config.json
 // ../config/robot_config.json
