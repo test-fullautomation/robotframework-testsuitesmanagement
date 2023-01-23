@@ -40,5 +40,3 @@ class ScopeStart(ScopeEvent):
     
 class ScopeEnd(ScopeEvent):
     name = 'scope_end'
-            
-            

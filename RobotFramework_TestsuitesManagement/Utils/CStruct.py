@@ -30,21 +30,20 @@
 
 class CStruct:
     '''
-   This ``CStruct`` class creates the given attributes dynamically at runtime.
+This ``CStruct`` class creates the given attributes dynamically at runtime.
     '''
 
     def __init__(self, *args, **kwargs):
         '''
-   The constructor __init__ creates the given attributes dynamically at runtime.
+The constructor __init__ creates the given attributes dynamically at runtime.
 
 **Arguments:**
 
-   Attributes to be created with the initial value.
+Attributes to be created with the initial value.
 
 **Returns:**
 
-   Accessible attributes.
+Accessible attributes.
         '''
         for k, v in kwargs.items():
             setattr(self, k, v)
-            

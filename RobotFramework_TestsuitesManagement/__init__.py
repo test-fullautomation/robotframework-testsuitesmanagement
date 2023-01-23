@@ -29,13 +29,13 @@ __version__ = '0.0.1'
 
 
 class RobotFramework_TestsuitesManagement(DynamicCore):
-    '''
-    **Class: RobotFramework_TestsuitesManagement**
+    # '''
+    # **Class: RobotFramework_TestsuitesManagement**
 
-       RobotFramework_TestsuitesManagement is the Bosch testing library for Robot Framework.
+       # RobotFramework_TestsuitesManagement is the Bosch testing library for Robot Framework.
 
-       RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
-    '''
+       # RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
+    # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__
     
