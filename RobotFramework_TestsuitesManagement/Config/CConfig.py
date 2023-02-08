@@ -122,10 +122,10 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     sLocalConfig      = ''
     lBuitInVariables  = []
     rConfigFiles   = CStruct(
-                                sLevel1 = False,
-                                sLevel2 = False,
-                                sLevel3 = False,
-                                sLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.json'
+                                bLevel1 = False,
+                                bLevel2 = False,
+                                bLevel3 = False,
+                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.json'
                             )
     
     rMetaData      = CStruct(
@@ -233,9 +233,9 @@ This loadCfg method uses to load configuration's parameters from json files.
 
 * No return variable
         '''
-        if not self.rConfigFiles.sLevel1:
-            if self.rConfigFiles.sLevel2:
-                self.rConfigFiles.sLevel4 = False
+        if not self.rConfigFiles.bLevel1:
+            if self.rConfigFiles.bLevel2:
+                self.rConfigFiles.bLevel4 = False
                 self.__loadConfigFileLevel2()
             else:
                 bLevel3Check = False
@@ -244,23 +244,23 @@ This loadCfg method uses to load configuration's parameters from json files.
                     for file in os.listdir(self.sTestcasePath + 'config'):
                         if file.split('.')[0] == sSuiteFileName.split('.')[0]:
                             self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + file
-                            self.rConfigFiles.sLevel4 = False
+                            self.rConfigFiles.bLevel4 = False
                             bLevel3Check = True
                             break
                     if not bLevel3Check:
                         if os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'):
                             self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'
-                            self.rConfigFiles.sLevel4 = False
+                            self.rConfigFiles.bLevel4 = False
                         else:
-                            self.rConfigFiles.sLevel3 = False
+                            self.rConfigFiles.bLevel3 = False
                             if not self.bConfigLoaded:
-                                #self.rConfigFiles.sLevel4 = True
+                                #self.rConfigFiles.bLevel4 = True
                                 sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
                                 self.sTestCfgFile = sDefaultConfig
                 else:
-                    self.rConfigFiles.sLevel3 = False
+                    self.rConfigFiles.bLevel3 = False
                     if not self.bConfigLoaded:
-                        #self.rConfigFiles.sLevel4 = True
+                        #self.rConfigFiles.bLevel4 = True
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
                         self.sTestCfgFile = sDefaultConfig
 
@@ -268,12 +268,12 @@ This loadCfg method uses to load configuration's parameters from json files.
                 self.sTestCfgFile = os.path.abspath(self.sTestCfgFile)
 
         if self.bConfigLoaded:
-            if self.rConfigFiles.sLevel1:
+            if self.rConfigFiles.bLevel1:
                 return
-            elif not self.rConfigFiles.sLevel2 and not self.rConfigFiles.sLevel3:
+            elif not self.rConfigFiles.bLevel2 and not self.rConfigFiles.bLevel3:
                 return
         
-        if self.rConfigFiles.sLevel1:
+        if self.rConfigFiles.bLevel1:
             if self.sConfigName != 'default':
                 errorMessage = f"Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n\
 It is not possible to use both together, because they belong to the same feature (the variant selection).\n\
@@ -501,7 +501,7 @@ This destructor method.
     
     def __loadConfigFileLevel2(self):
         '''
-This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLevel2 == True.
+This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLevel2 == True.
 
 **Arguments:**
 
