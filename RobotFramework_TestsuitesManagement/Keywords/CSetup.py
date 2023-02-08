@@ -99,7 +99,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
                 logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         else:
-            logger.info(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
+            logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
         logger.info(f"Suite Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}")
