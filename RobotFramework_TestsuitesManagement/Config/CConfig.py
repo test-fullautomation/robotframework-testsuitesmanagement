@@ -522,7 +522,8 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLev
             raise Exception
         if self.sConfigName not in oSuiteConfig:
             CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-        The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'"
+        The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}' \n \
+        Please find the suitable variant in this list: {list(oSuiteConfig.keys())}"
             logger.error(CConfig.sLoadedCfgError)
             return
 
