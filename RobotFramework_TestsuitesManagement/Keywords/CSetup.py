@@ -102,12 +102,12 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
 
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyRbfwVersion()
-        logger.info(f'Suite Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}')
-        logger.info(f'CfgFile Path: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}')
+        logger.info(f"Suite Path: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}'")
+        logger.info(f"CfgFile Path: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
-            logger.info(f'Local config file: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}')
-        logger.info(f'Number of test suites: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}')
-        logger.info(f'Total number of testcases: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}')
+            logger.info(f"Local config file: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}'")
+        logger.info(f"Number of test suites: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
+        logger.info(f"Total number of testcases: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}")
         
     @keyword
     def testsuite_teardown(self):
