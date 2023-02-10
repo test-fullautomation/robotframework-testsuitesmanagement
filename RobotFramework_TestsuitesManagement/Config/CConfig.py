@@ -538,7 +538,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.sLev
         The 'name' or 'path' property is not defined for the variant '{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
             return
-        if re.match("^\s*$", self.sTestCfgFile):
+        if self.sTestCfgFile.strip() == '':
             CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
         The configuration file name of variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
