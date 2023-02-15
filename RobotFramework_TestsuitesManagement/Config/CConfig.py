@@ -390,6 +390,10 @@ Please remove one of them.\n"
         else:
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
+
+        if len(oJsonPreprocessor.lUpdatedParams) > 0:
+            for param in oJsonPreprocessor.lUpdatedParams:
+                logger.info(f"The parameter '{param}' is updated")
         
     def __setGlobalVariable(self, key, value):
         '''
@@ -468,7 +472,6 @@ This method updates preprocessor and global params to global variable of RobotFr
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
-                    logger.info(f"The parameter {k.strip()} is updated")
                     continue
         except:
             pass
@@ -480,7 +483,6 @@ This method updates preprocessor and global params to global variable of RobotFr
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
-                    logger.info(f"The parameter {k.strip()} is updated")
                     continue
         except:
             pass  
