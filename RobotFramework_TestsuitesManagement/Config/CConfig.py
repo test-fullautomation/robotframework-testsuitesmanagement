@@ -310,13 +310,22 @@ Please remove one of them.\n"
         if self.sLocalConfig != '':
             try:
                 oLocalConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(self.sLocalConfig))
-                oJsonCfgData.update(oLocalConfig)
             except Exception as error:
                 CConfig.bLoadedCfg = False
                 CConfig.sLoadedCfgError = str(error)
                 logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}")
                 BuiltIn().unknown(CConfig.sLoadedCfgError)
                 raise Exception
+            
+            def __loadLocalConfig(oLocalConfig):
+                tmpDict = copy.deepcopy(oLocalConfig)
+                for k, v in tmpDict.items():
+                    if re.match('.*\${\s*', k):
+                        del oLocalConfig[k]
+                    elif isinstance(v, dict):
+                        __loadLocalConfig(oLocalConfig)
+                oJsonCfgData.update(oLocalConfig)
+            __loadLocalConfig(oLocalConfig)
 
         bJsonSchema = True    
         try:
