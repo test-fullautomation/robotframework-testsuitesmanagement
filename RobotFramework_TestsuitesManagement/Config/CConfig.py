@@ -717,19 +717,25 @@ with "unknown" state
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
+        if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
+            logger.info("Running without Robot Framework AIO version check!")
         if self.sMinVersion != '':
             tMinVersion = CConfig.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
             tMaxVersion = CConfig.tupleVersion(self.sMaxVersion)
-
+        bVersionCheck = True
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.versioncontrol_error('wrong_minmax', self.sMinVersion, self.sMaxVersion)
-
+            bVersionCheck = False
         if tMinVersion and not CConfig.bValidateMinVersion(tCurrentVersion, tMinVersion):
             self.versioncontrol_error('conflict_min', self.sMinVersion, sCurrentVersion)
-
+            bVersionCheck = False
         if tMaxVersion and not CConfig.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
             self.versioncontrol_error('conflict_max', self.sMaxVersion, sCurrentVersion)
+            bVersionCheck = False
+
+        if bVersionCheck:
+            logger.info("Robot Framework AIO version check passed!")
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
