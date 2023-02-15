@@ -520,17 +520,29 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             CConfig.sLoadedCfgError = str(error)
             logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
             raise Exception
-        
-        try:
-            defualtCfg = oSuiteConfig['default']['name']
-        except:
+        sListOfVariants = '\n'
+        for item in list(oSuiteConfig.keys()):
+            sListOfVariants = sListOfVariants + f"            - '{item}' \n"
+        if self.sConfigName not in oSuiteConfig:
             CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-                The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'"
+        The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}' \n \
+        Please find the suitable variant in this list: {sListOfVariants}"
             logger.error(CConfig.sLoadedCfgError)
             return
-        
-        self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
-        sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
+
+        try:
+            self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
+            sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
+        except:
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
+        The 'name' or 'path' property is not defined for the variant '{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'"
+            logger.error(CConfig.sLoadedCfgError)
+            return
+        if self.sTestCfgFile.strip() == '':
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
+        The configuration file name of variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'"
+            logger.error(CConfig.sLoadedCfgError)
+            return
             
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir
