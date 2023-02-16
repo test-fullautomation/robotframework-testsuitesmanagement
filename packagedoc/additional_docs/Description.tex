@@ -239,6 +239,9 @@ The name of the variant is provided in command line of the \rfwcore.
 
 This level requires that a variant configuration file is passed to the suite setup of the \pkg.
 
+Level 2 includes the automated selection of a default variant (in case of no variant name is provided in command line).
+Also this default variant has to be defined within the variant configuration file.
+
 \textbf{Level 3}
 
 The \pkg\ searches for parameter configuration files within a folder \plog{config} in current test suite folder.
@@ -477,6 +480,18 @@ a \rlog{config_file} and a \rlog{variant}. The \pkg\ throws an error in this cas
 But when additionally \rlog{--variable} is used to define a new value for a parameter that is already defined in one of the involved configuration files,
 then the configuration file value is overwritten by the command line value.
 
+\vspace{2ex}
+
+And even this is not all. The Robot Framework provides further possibilities to define parameters in command line, e.g. by
+\rlog{--variablefile}. \rlog{--variable} and \rlog{--variablefile} are Robot Framework mechanisms to define parameters, whereas
+\rlog{config_file} and \rlog{local_config} are corresponding \pkg\ mechanisms.
+
+The rules behind all are: \rlog{--variable} overrules \rlog{--variablefile}. Robot Framework mechanisms overrule \pkg\ mechanisms.
+
+To avoid the things becoming too much complicated, we urgently recommend not to mixup both mechanisms to define \textit{different values or the same parameters}.
+(overwriting a single variable only with \rlog{--variable} might be OK).
+
+
 % --------------------------------------------------------------------------------------------------------------
 \newpage
 
@@ -490,7 +505,7 @@ This means, at first we have to split all configuration parameters in
    \item common parameters that have the same value for all variants
 \end{enumerate}
 
-Placing those common parameters in every single variant specific parameter configuration file would craeate a lot of redundancy.
+Placing those common parameters in every single variant specific parameter configuration file would create a lot of redundancy.
 This would also complicate the maintenance.
 
 The solution is to use the variant specific configuration files only for variant specific parameters and to put all common parameters in
