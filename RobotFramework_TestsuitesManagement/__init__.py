@@ -25,8 +25,6 @@ from RobotFramework_TestsuitesManagement.Utils import LibListener
 from RobotFramework_TestsuitesManagement.Keywords import (CSetupKeywords, CGeneralKeywords)
 from RobotFramework_TestsuitesManagement.Config import VERSION
 
-__version__ = '0.0.1'
-
 
 class RobotFramework_TestsuitesManagement(DynamicCore):
     # '''
@@ -37,7 +35,7 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
        # RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
     # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    ROBOT_LIBRARY_VERSION = __version__
+    ROBOT_LIBRARY_VERSION = VERSION
     
     # '''
     # Constructor
