@@ -22,11 +22,11 @@
   // Version control information.
   "version": {
     "majorversion": "0",
-    "minorversion": "6",
+    "minorversion": "7",
     "patchversion": "0"
   },
-  "Maximum_version": "0.6.0",
-  "Minimum_version": "0.4.10",
+  "Maximum_version": "1.0.0",
+  "Minimum_version": "0.6.0",
   "TargetName" : "gen3flex@dlt",
   "Project": "G3g-config-level_1"
 }

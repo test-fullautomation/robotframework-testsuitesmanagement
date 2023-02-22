@@ -24,12 +24,7 @@
     "global": {
       "[import]": "./common/params_global_common.json",
       "[import]": "./common/sut.json",
-      "[import]": "./common/audio.json"
-    }
-  },
-  "preprocessor": {
-    "definitions": {
-      // FEATURE switches
+      "[import]": "./common/audio.json",
       "[import]": "./common/preprocessor_definitions_common.json"
     }
   },
