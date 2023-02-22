@@ -386,10 +386,10 @@ Please remove one of them.\n"
         except:
             pass  
         
-        try:
-            del oJsonCfgData['preprocessor']['definitions']
-        except:
-            pass 
+        # try:
+        #     del oJsonCfgData['preprocessor']['definitions']
+        # except:
+        #     pass 
         
         bDotdict = False
         dotdictObj = CConfig.CJsonDotDict()
@@ -481,16 +481,16 @@ This method updates preprocessor and global params to global variable of RobotFr
 
 * No return variable
         '''
-        try:
-            for k,v in self.oConfigParams['preprocessor']['definitions'].items():
-                if k in self.lBuitInVariables:
-                    continue
-                try:
-                    self.__setGlobalVariable(k, v)
-                except:
-                    continue
-        except:
-            pass
+        # try:
+        #     for k,v in self.oConfigParams['preprocessor']['definitions'].items():
+        #         if k in self.lBuitInVariables:
+        #             continue
+        #         try:
+        #             self.__setGlobalVariable(k, v)
+        #         except:
+        #             continue
+        # except:
+        #     pass
         
         try:
             for k,v in self.oConfigParams['params']['global'].items():

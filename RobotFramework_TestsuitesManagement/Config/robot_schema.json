@@ -41,10 +41,6 @@
 	    "global": {
 		}
 	  }
-	},
-	"preprocessor": {
-	  "definitions": {
-	  }
 	}
   },
   "required": ["Project", "WelcomeString", "TargetName"],
