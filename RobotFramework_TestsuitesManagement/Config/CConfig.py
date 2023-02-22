@@ -309,8 +309,8 @@ This loadCfg method uses to load configuration's parameters from json files.
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}\n")
-            BuiltIn().unknow('Loading of JSON configuration file failed!')
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
         if self.sLocalConfig != '':
@@ -386,10 +386,10 @@ This loadCfg method uses to load configuration's parameters from json files.
         except:
             pass  
         
-        try:
-            del oJsonCfgData['preprocessor']['definitions']
-        except:
-            pass 
+        # try:
+        #     del oJsonCfgData['preprocessor']['definitions']
+        # except:
+        #     pass 
         
         bDotdict = False
         dotdictObj = CConfig.CJsonDotDict()
@@ -481,16 +481,16 @@ This method updates preprocessor and global params to global variable of RobotFr
 
 * No return variable
         '''
-        try:
-            for k,v in self.oConfigParams['preprocessor']['definitions'].items():
-                if k in self.lBuitInVariables:
-                    continue
-                try:
-                    self.__setGlobalVariable(k, v)
-                except:
-                    continue
-        except:
-            pass
+        # try:
+        #     for k,v in self.oConfigParams['preprocessor']['definitions'].items():
+        #         if k in self.lBuitInVariables:
+        #             continue
+        #         try:
+        #             self.__setGlobalVariable(k, v)
+        #         except:
+        #             continue
+        # except:
+        #     pass
         
         try:
             for k,v in self.oConfigParams['params']['global'].items():
