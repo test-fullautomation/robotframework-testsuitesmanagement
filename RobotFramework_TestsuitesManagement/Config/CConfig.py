@@ -239,6 +239,14 @@ This loadCfg method uses to load configuration's parameters from json files.
                 self.rConfigFiles.bLevel4 = False
                 bConfigLevel2 = self.__loadConfigFileLevel2()
             else:
+                if r'${variant}' in BuiltIn().get_variables():
+                    logger.error(f"The variant variable is defined when executed robot with the value '{self.sConfigName}', " + \
+                                  "but there is no variant configuration file in RobotFramework_TestsuitesManagement.testsuite_setup \n" + \
+                                 f"          In case you want to execute robot with configuration level2 with variant '{self.sConfigName}': \n" + \
+                                  "             - Please put the path of the variant configuration file as the input parameter of " + \
+                                  "RobotFramework_TestsuitesManagement.testsuite_setup \n")
+                    BuiltIn().unknown('Loading configuration level 2 failed!')
+                    
                 bLevel3Check = False
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1:][0]
