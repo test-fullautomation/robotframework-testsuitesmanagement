@@ -276,14 +276,14 @@ This loadCfg method uses to load configuration's parameters from json files.
         
         if self.rConfigFiles.bLevel1:
             if self.sConfigName != 'default':
-                errorMessage = f"Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n\
-It is not possible to use both together, because they belong to the same feature (the variant selection).\n\
-Please remove one of them.\n"
+                errorMessage = "Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n" + \
+                               "          It is not possible to use both together, because they belong to the same feature (the variant selection).\n" + \
+                               "          Please remove one of them.\n"
                 logger.error(errorMessage)
                 BuiltIn().unknown('Redundant settings detected in command line!')
 
             if self.sTestCfgFile == '':
-                errorMessage = "The config_file input parameter is empty!!!"
+                errorMessage = "The config_file input parameter is empty!!!\n"
                 logger.error(errorMessage)
                 BuiltIn().unknown(errorMessage)
 
@@ -292,7 +292,7 @@ Please remove one of them.\n"
             return
 
         if not os.path.isfile(self.__sNormalizePath(self.sTestCfgFile)):
-            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!"
+            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!\n"
             logger.error(errorMessage)
             BuiltIn().unknown('The configuration file is not found!')
         
@@ -319,7 +319,7 @@ Please remove one of them.\n"
             except Exception as error:
                 CConfig.bLoadedCfg = False
                 CConfig.sLoadedCfgError = str(error)
-                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}")
+                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}\n")
                 BuiltIn().unknown('Loading local config failed!')
                 raise Exception
             
@@ -340,7 +340,7 @@ Please remove one of them.\n"
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
             bJsonSchema = False
-            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'")
+            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'\n")
             BuiltIn().unknown('Parse JSON schema file failed!')
     
         if bJsonSchema:
@@ -348,16 +348,16 @@ Please remove one of them.\n"
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
             except Exception as error:
                 if error.validator == 'additionalProperties':
-                    logger.error(f"Verification against JSON schema failed: '{error.message}'")
-                    logger.error("Additional properties are not allowed! \n \
-                    Please put the additional params into 'params': { 'global': {...}")
+                    logger.error(f"Verification against JSON schema failed: '{error.message}'\n" + \
+                                 "          Additional properties are not allowed! Please put the additional params into 'params': { 'global': {...} \n")
                     BuiltIn().unknown('JSON schema validation failed!')
                 elif error.validator == 'required':
-                    logger.error(f"The parameter {error.message}, but it's not set in JSON configuration file.")
+                    logger.error(f"The parameter {error.message}, but it's not set in JSON configuration file.\n")
                     BuiltIn().unknown('JSON schema validation failed!')
                 else:
                     errParam = error.path.pop()
-                    logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file!\n{error.message}")
+                    logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
+                                 f"          {error.message}\n")
                     BuiltIn().unknown('JSON schema validation failed!')
             
         self.sProjectName = oJsonCfgData['Project']
@@ -536,22 +536,22 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}\n")
             return False
         sListOfVariants = '\n'
         for item in list(oSuiteConfig.keys()):
             sListOfVariants = sListOfVariants + f"            - '{item}' \n"
         if not re.match(r'^[a-zA-Z0-9.\_\-\:@\$]+$', self.sConfigName):
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-        The variant name '{self.sConfigName}' is invalid. \n \
-        Please find the suitable variant in this list: {sListOfVariants}"
+            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
+                                      f"          The variant name '{self.sConfigName}' is invalid. \n" + \
+                                      f"          Please find the suitable variant in this list: {sListOfVariants}\n"
             logger.error(CConfig.sLoadedCfgError)
             return False
 
         if self.sConfigName not in oSuiteConfig:
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-        The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}' \n \
-        Please find the suitable variant in this list: {sListOfVariants}"
+            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
+                                     f"          The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}' \n" + \
+                                     f"          Please find the suitable variant in this list: {sListOfVariants}\n"
             logger.error(CConfig.sLoadedCfgError)
             return False
 
@@ -559,13 +559,15 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-        The 'name' or 'path' property is not defined for the variant '{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'"
+            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
+                                     "          The 'name' or 'path' property is not defined for the variant" + \
+                                    f"'{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'\n"
             logger.error(CConfig.sLoadedCfgError)
             return False
         if self.sTestCfgFile.strip() == '':
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \n \
-        The configuration file name of variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'"
+            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
+                                      f"          The configuration file name of variant '{self.sConfigName}' " + \
+                                      f"must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'\n"
             logger.error(CConfig.sLoadedCfgError)
             return False
             
