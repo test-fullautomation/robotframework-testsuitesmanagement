@@ -584,7 +584,11 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    raise Exception(f"Could not find out config directory: {sTestCfgDirStart}")
+                    CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
+                                             f"          Could not find out config directory: '{sTestCfgDirStart}' which is " + \
+                                             f"set in '{os.path.abspath(self.sTestSuiteCfg)}'\n" 
+                    logger.error(CConfig.sLoadedCfgError)
+                    return False
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
         return True
