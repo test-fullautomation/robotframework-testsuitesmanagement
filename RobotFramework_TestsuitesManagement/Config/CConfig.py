@@ -310,7 +310,7 @@ Please remove one of them.\n"
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
             logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
-            BuiltIn().unknow('Loading of JSON configuration file failed!')
+            BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
         if self.sLocalConfig != '':
