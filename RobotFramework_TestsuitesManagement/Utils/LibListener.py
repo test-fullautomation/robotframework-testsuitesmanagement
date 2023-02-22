@@ -83,7 +83,7 @@ This _start_suite method hooks to every starting testsuite of robot run.
 
             if '${localconfig}' in BuiltIn().get_variables()._keys:
                 if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
-                    CConfig.sLoadedCfgError = "local_config input must not be empty!!!"
+                    CConfig.sLoadedCfgError = "Local_config input must not be empty!!!\n"
                     logger.error(CConfig.sLoadedCfgError)
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
@@ -94,7 +94,7 @@ This _start_suite method hooks to every starting testsuite of robot run.
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
                 else:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    CConfig.sLoadedCfgError = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
+                    CConfig.sLoadedCfgError = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!\n"
                     logger.error(CConfig.sLoadedCfgError)
 
             if '${variant}' in BuiltIn().get_variables()._keys:

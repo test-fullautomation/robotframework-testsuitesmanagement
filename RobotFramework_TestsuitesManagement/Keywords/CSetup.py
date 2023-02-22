@@ -193,7 +193,7 @@ Loads a json file and returns a json object.
         else:
             oJsonFristLevel = oJsonPreprocessor.jsonLoad(jsonfile)
             if variant not in oJsonFristLevel:
-                logger.error(f"The variant: {variant} is not correct")
+                logger.error(f"The variant: {variant} is not correct!\n")
                 return {}
             jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)
