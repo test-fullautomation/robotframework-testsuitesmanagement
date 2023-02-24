@@ -368,15 +368,25 @@ This loadCfg method uses to load configuration's parameters from json files.
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
 
+        suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)
-        BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
-        BuiltIn().set_suite_metadata("version_hw", self.rMetaData.sVersionHW, top=True)
-        BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
         BuiltIn().set_suite_metadata("machine", self.__getMachineName(), top=True)
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
         BuiltIn().set_suite_metadata("version", VERSION, top=True)
+        if "version_sw" in suiteMetadata and self.rMetaData.sVersionSW == '':
+            pass
+        else:
+            BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
+        if "version_hw" in suiteMetadata and self.rMetaData.sVersionHW == '':
+            pass
+        else:
+            BuiltIn().set_suite_metadata("version_hw", self.rMetaData.sVersionHW, top=True)
+        if "version_test" in suiteMetadata and self.rMetaData.sVersionTest == '':
+            pass
+        else:
+            BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
         
         CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
         
