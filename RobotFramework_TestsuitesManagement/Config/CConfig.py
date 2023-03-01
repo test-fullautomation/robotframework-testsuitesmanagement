@@ -556,7 +556,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         sListOfVariants = '\n'
         for item in list(oSuiteConfig.keys()):
             sListOfVariants = sListOfVariants + f"            - '{item}' \n"
-        if not re.match(r'^[a-zA-Z0-9.\_\-\:@\$]+$', self.sConfigName):
+        if not re.match(r'^[a-zA-Z0-9.\u0080-\U0010FFFF\_\-\:@\$]+$', self.sConfigName):
             CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
                                       f"          The variant name '{self.sConfigName}' is invalid. \n" + \
                                       f"          Please find the suitable variant in this list: {sListOfVariants}\n"
