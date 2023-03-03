@@ -33,7 +33,13 @@ def subprocess_execution(testscript, args = ''):
                 command = '"' + os.environ['RobotPythonPath'] + '/python.exe" -m robot.run ' + os.path.abspath(testscript)
                 result = os.popen(command).read()
         else:
-            result = os.popen('robot ' + os.path.abspath(testscript)).read()
+            if args != '':
+                command = os.environ['RobotPythonPath'] + '/python3 -m robot.run ' + args + " " \
+                    + os.path.abspath(testscript)
+                result = os.popen(command).read()
+            else:
+                command = os.environ['RobotPythonPath'] + '/python3 -m robot.run ' + os.path.abspath(testscript)
+                result = os.popen(command).read()
     except:
         pass
     
