@@ -46,8 +46,8 @@ import pathlib
 # RobotFramework_TestsuitesManagement, RobotLog2DB, VSCodium for Robot Framework, ...
 # This information is used for RobotFramework AIO version control 
 AIO_BUNDLE_NAME = "RobotFramework AIO"
-VERSION         = "0.6.0"
-VERSION_DATE    = "01.2023"
+VERSION         = "0.7.0"
+VERSION_DATE    = "03.2023"
 
 class dotdict(dict):
     '''
