@@ -1,0 +1,40 @@
+==============================================================================
+20230324 14:59:36.837 - INFO - + START SUITE: Tsm-Testfile-2 [ ]
+==============================================================================
+20230324 14:59:36.845 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230324 14:59:36.867 - ERROR - Testsuite management - Loading configuration level 2 failed! 
+          The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.json' 
+          Please find the suitable variant in this list: 
+            - 'default' 
+            - 'variant1' 
+            - 'variant2' 
+            - 'SälfTest.ß.€.考.𠼭.𠼭' 
+            - 'nested_import' 
+            - 'cyclic_import' 
+            - 'version_control_01' 
+            - 'version_control_02' 
+            - 'version_control_03' 
+            - 'version_control_04' 
+            - 'version_control_05' 
+            - 'version_control_06' 
+            - 'version_control_07' 
+            - 'version_control_08' 
+            - 'version_control_09' 
+            - 'missing_param' 
+            - 'syntax_error' 
+            - 'syntax_error_within_import' 
+            - 'missing_imported_file'
+20230324 14:59:36.868 - UNKNOWN - Loading configuration level 2 failed!
+20230324 14:59:36.869 - DEBUG - Loading configuration level 2 failed!
+20230324 14:59:36.869 - INFO - +- END SETUP: tm.Testsuite Setup (24)
+------------------------------------------------------------------------------
+20230324 14:59:36.869 - INFO - +- START TEST: Test Case tsm-testfile-2 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:36.879 - INFO - +- END TEST: Test Case tsm-testfile-2 (1)
+------------------------------------------------------------------------------
+20230324 14:59:36.880 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:36.880 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:36.880 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230324 14:59:36.882 - INFO - + END SUITE: Tsm-Testfile-2 (153)
+==============================================================================

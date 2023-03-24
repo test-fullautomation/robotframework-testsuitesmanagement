@@ -1,0 +1,45 @@
+//  Copyright 2020-2022 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+
+  "Project"         : "RobotFramework Testsuites",
+  "TargetName"      : "Device_01",
+
+  // Content:
+  // * Parameters, defined here and overwritten in imported file
+  // * Parameters, defined here, overwritten in imported file and again overwritten after the import
+  // * Parameters, defined in imported file only
+
+  "params" : {
+              "global" : {
+                          "testdictionary_variant" : {},
+                          ${params}['global']['testdictionary_variant']['tdv_key_1'] : {},
+                          ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_1'] : "value_tdv_key_1_1",
+                          ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2'] : "value_tdv_key_1_2",
+                          "testlist_variant" : ["A", "B", "C"],
+                          "[import]"                                                                : "./tsm-test_config_common.json",
+                          "[import]"                                                                : "./import.1.1/tsm-test_config_nested.1.1.json",
+                          "teststring_variant"                                                      : "I am the variant 'nested' configuration of tsm-test",
+                          ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2'] : "value_tdv_key_1_2_after_import",
+                          ${params}['global']['testdictionary_variant']['tdv_key_2']['tdv_key_2_1'] : "value_tdv_key_2_1_after_import_new"
+                         }
+             }
+}
+

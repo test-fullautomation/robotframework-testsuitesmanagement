@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230324 14:59:43.138" rpa="false" schemaversion="2">
+<suite id="s1" name="Tsm-Testfile-2" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-2.robot">
+<kw name="Testsuite Setup" library="tm" type="SETUP">
+<arg>./config/tsm-test_variants.json</arg>
+<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
+checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
+<msg timestamp="20230324 14:59:43.300" level="FAIL">RecursionError: maximum recursion depth exceeded while calling a Python object</msg>
+<status status="FAIL" starttime="20230324 14:59:43.263" endtime="20230324 14:59:43.300"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-2">
+<doc>tsm-testfile-2</doc>
+<status status="FAIL" starttime="20230324 14:59:43.300" endtime="20230324 14:59:43.315">Parent suite setup failed:
+RecursionError: maximum recursion depth exceeded while calling a Python object</status>
+</test>
+<kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
+<doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
+it's defined here for future requirements.</doc>
+<msg timestamp="20230324 14:59:43.315" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230324 14:59:43.315" endtime="20230324 14:59:43.315"/>
+</kw>
+<status status="FAIL" starttime="20230324 14:59:43.152" endtime="20230324 14:59:43.315">Suite setup failed:
+RecursionError: maximum recursion depth exceeded while calling a Python object</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0" unknown="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" unknown="0" id="s1" name="Tsm-Testfile-2">Tsm-Testfile-2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

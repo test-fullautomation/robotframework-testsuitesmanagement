@@ -1,0 +1,20 @@
+==============================================================================
+20230324 14:59:48.170 - INFO - + START SUITE: Tsm-Testfile-2 [ ]
+==============================================================================
+20230324 14:59:48.182 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230324 14:59:48.210 - ERROR - Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
+          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
+20230324 14:59:48.211 - UNKNOWN - JSON schema validation failed!
+20230324 14:59:48.211 - DEBUG - JSON schema validation failed!
+20230324 14:59:48.211 - INFO - +- END SETUP: tm.Testsuite Setup (29)
+------------------------------------------------------------------------------
+20230324 14:59:48.212 - INFO - +- START TEST: Test Case tsm-testfile-2 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:48.214 - INFO - +- END TEST: Test Case tsm-testfile-2 (2)
+------------------------------------------------------------------------------
+20230324 14:59:48.215 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:48.215 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:48.215 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230324 14:59:48.217 - INFO - + END SUITE: Tsm-Testfile-2 (157)
+==============================================================================

@@ -1,0 +1,19 @@
+==============================================================================
+20230324 14:59:34.240 - INFO - + START SUITE: Tsm-Testfile-2 [ ]
+==============================================================================
+20230324 14:59:34.247 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230324 14:59:34.270 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.json': 'File 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING.json' is not existing!'
+20230324 14:59:34.287 - UNKNOWN - Loading of JSON configuration file failed!
+20230324 14:59:34.287 - DEBUG - Loading of JSON configuration file failed!
+20230324 14:59:34.287 - INFO - +- END SETUP: tm.Testsuite Setup (40)
+------------------------------------------------------------------------------
+20230324 14:59:34.288 - INFO - +- START TEST: Test Case tsm-testfile-2 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:34.291 - INFO - +- END TEST: Test Case tsm-testfile-2 (2)
+------------------------------------------------------------------------------
+20230324 14:59:34.291 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:34.291 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:34.291 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230324 14:59:34.293 - INFO - + END SUITE: Tsm-Testfile-2 (165)
+==============================================================================

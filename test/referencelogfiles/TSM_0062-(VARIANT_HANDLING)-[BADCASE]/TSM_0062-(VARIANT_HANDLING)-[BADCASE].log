@@ -1,0 +1,19 @@
+==============================================================================
+20230324 14:59:38.973 - INFO - + START SUITE: Tsm-Testfile-5-Err-2 [ ]
+==============================================================================
+20230324 14:59:38.978 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.json ]
+20230324 14:59:39.000 - ERROR - Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\I_AM_NOT_EXISTING_CONFIG_FOLDER\tsm-test_config_variant1.json'!
+20230324 14:59:39.001 - UNKNOWN - The configuration file is not found!
+20230324 14:59:39.001 - DEBUG - The configuration file is not found!
+20230324 14:59:39.001 - INFO - +- END SETUP: tm.Testsuite Setup (23)
+------------------------------------------------------------------------------
+20230324 14:59:39.002 - INFO - +- START TEST: Test Case tsm-testfile-5-err-2 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:39.005 - INFO - +- END TEST: Test Case tsm-testfile-5-err-2 (2)
+------------------------------------------------------------------------------
+20230324 14:59:39.006 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:39.006 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:39.006 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230324 14:59:39.013 - INFO - + END SUITE: Tsm-Testfile-5-Err-2 (143)
+==============================================================================

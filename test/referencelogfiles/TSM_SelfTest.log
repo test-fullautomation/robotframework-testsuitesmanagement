@@ -1,0 +1,374 @@
+====== [TEST] : 'TSM_0001-(VARIANT_HANDLING)-[GOODCASE]' / (1/46)
+
+[DESCRIPTION] : Without variant configuration file in suite setup of robot file; default config level 4
+[EXPECTATION] : Execution with config level 4
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0002-(VARIANT_HANDLING)-[GOODCASE]' / (2/46)
+
+[DESCRIPTION] : With variant configuration file in suite setup of robot file; default variant
+[EXPECTATION] : Execution with default variant
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0003-(VARIANT_HANDLING)-[GOODCASE]' / (3/46)
+
+[DESCRIPTION] : With variant name in command line / (variant1)
+[EXPECTATION] : Execution with selected variant 1
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0004-(VARIANT_HANDLING)-[GOODCASE]' / (4/46)
+
+[DESCRIPTION] : With variant name in command line / with 4 byte UTF-8 characters inside name
+[EXPECTATION] : Execution with selected variant
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0005-(VARIANT_HANDLING)-[GOODCASE]' / (5/46)
+
+[DESCRIPTION] : With parameter configuration file in command line / (tsm-test_config_variant2.json)
+[EXPECTATION] : Execution with selected variant 2
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0006-(VARIANT_HANDLING)-[GOODCASE]' / (6/46)
+
+[DESCRIPTION] : With parameter configuration file in command line / with 4 byte UTF-8 characters inside name
+[EXPECTATION] : Execution with selected config file for variant
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0007-(VARIANT_HANDLING)-[GOODCASE]' / (7/46)
+
+[DESCRIPTION] : With variant name and single parameter in command line / (variant1; teststring_variant)
+[EXPECTATION] : Single command line parameter value overwrites variant 1 configuration value
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0008-(VARIANT_HANDLING)-[GOODCASE]' / (8/46)
+
+[DESCRIPTION] : With parameter configuration file and single parameter in command line / (variant2; teststring_variant)
+[EXPECTATION] : Single command line parameter value overwrites variant 2 configuration value
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0009-(VARIANT_HANDLING)-[GOODCASE]' / (9/46)
+
+[DESCRIPTION] : With parameter configuration file taken from local config folder; robot file has same name as configuration file
+[EXPECTATION] : Configuration parameters taken from configuration file with same name as the robot file
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0010-(VARIANT_HANDLING)-[GOODCASE]' / (10/46)
+
+[DESCRIPTION] : With parameter configuration file taken from local config folder; robot file has another name as configuration file
+[EXPECTATION] : Configuration parameters taken from configuration file with predefined default name (robot_config.json)
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0050-(VARIANT_HANDLING)-[BADCASE]' / (11/46)
+
+[DESCRIPTION] : With missing parameter in parameter configuration file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0051-(VARIANT_HANDLING)-[BADCASE]' / (12/46)
+
+[DESCRIPTION] : With syntax error in parameter configuration file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0052-(VARIANT_HANDLING)-[BADCASE]' / (13/46)
+
+[DESCRIPTION] : With syntax error within imported parameter configuration file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0053-(VARIANT_HANDLING)-[BADCASE]' / (14/46)
+
+[DESCRIPTION] : With not existing imported parameter configuration file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0054-(VARIANT_HANDLING)-[BADCASE]' / (15/46)
+
+[DESCRIPTION] : With not existing imported parameter configuration file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0055-(VARIANT_HANDLING)-[BADCASE]' / (16/46)
+
+[DESCRIPTION] : Command line contains both: variant name and config file
+[EXPECTATION] : Both together is not accepted; test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0056-(VARIANT_HANDLING)-[BADCASE]' / (17/46)
+
+[DESCRIPTION] : Command line contains variant name, but no variant configuration file is given to suite setup
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0057-(VARIANT_HANDLING)-[BADCASE]' / (18/46)
+
+[DESCRIPTION] : Command line contains invalid variant name (not allowed characters in variant name)
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0058-(VARIANT_HANDLING)-[BADCASE]' / (19/46)
+
+[DESCRIPTION] : Command line contains unknown variant name (a variant with this name is not defined in variant configuration file)
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0059-(VARIANT_HANDLING)-[BADCASE]' / (20/46)
+
+[DESCRIPTION] : Command line contains unknown variant configuration file (a file with this name does not exist)
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0060-(VARIANT_HANDLING)-[BADCASE]' / (21/46)
+
+[DESCRIPTION] : Robot file refers to a variant configuration file with syntax errors
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0061-(VARIANT_HANDLING)-[BADCASE]' / (22/46)
+
+[DESCRIPTION] : Robot file refers to a variant configuration file with not existing parameter file for default variant
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0062-(VARIANT_HANDLING)-[BADCASE]' / (23/46)
+
+[DESCRIPTION] : Robot file refers to a variant configuration file with not existing path for variant1
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0063-(VARIANT_HANDLING)-[BADCASE]' / (24/46)
+
+[DESCRIPTION] : Robot file refers to a variant configuration file with with missing 'default' variant; a variant name is not given in command line
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0064-(VARIANT_HANDLING)-[BADCASE]' / (25/46)
+
+[DESCRIPTION] : A local config file is passed to command line parameter config_file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN; reason: a local config file is not a full configuration file
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0100-(LOCAL_CONFIG)-[GOODCASE]' / (26/46)
+
+[DESCRIPTION] : With variant1 name and local config file for bench2 given in command line
+[EXPECTATION] : Local config value overwrites initial value for parameter 'teststring_bench'
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0101-(LOCAL_CONFIG)-[GOODCASE]' / (27/46)
+
+[DESCRIPTION] : With variant2 configuration file and local config file for bench1 given in command line
+[EXPECTATION] : Local config value overwrites initial value for parameter 'teststring_bench'
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0102-(LOCAL_CONFIG)-[GOODCASE]' / (28/46)
+
+[DESCRIPTION] : With variant2 configuration file, local config file for bench1 and single parameter given in command line
+[EXPECTATION] : Command line value of 'teststring_bench' overwrites all other definitions (the initial one and the local config one)
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0103-(LOCAL_CONFIG)-[GOODCASE]' / (29/46)
+
+[DESCRIPTION] : With variant1 name given in command line and and local config file for bench2 given by environment variable
+[EXPECTATION] : Local config value overwrites initial value for parameter 'teststring_bench'
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0150-(LOCAL_CONFIG)-[BADCASE]' / (30/46)
+
+[DESCRIPTION] : A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN; reason: .......
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0151-(LOCAL_CONFIG)-[BADCASE]' / (31/46)
+
+[DESCRIPTION] : A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN; reason: .......
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0200-(NESTED_CONFIG)-[GOODCASE]' / (32/46)
+
+[DESCRIPTION] : Variant with multiple nested configuration files
+[EXPECTATION] : Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0250-(NESTED_CONFIG)-[BADCASE]' / (33/46)
+
+[DESCRIPTION] : Variant with multiple nested configuration files; cyclic import of JSON file
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0350-(SCHEMA_VALIDATION)-[BADCASE]' / (34/46)
+
+[DESCRIPTION] : Schema file for JSON configuration files is not available
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0351-(SCHEMA_VALIDATION)-[BADCASE]' / (35/46)
+
+[DESCRIPTION] : Schema file for JSON configuration files is invalid because of a syntax error
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0400-(VERSION_CONTROL)-[GOODCASE]' / (36/46)
+
+[DESCRIPTION] : 'Maximum_version' and 'Minimum_version' not defined
+[EXPECTATION] : Test is executed, because of the version control is optional
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0401-(VERSION_CONTROL)-[GOODCASE]' / (37/46)
+
+[DESCRIPTION] : 'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'
+[EXPECTATION] : Test is executed, because of the version control is optional
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0402-(VERSION_CONTROL)-[GOODCASE]' / (38/46)
+
+[DESCRIPTION] : Only 'Maximum_version' is defined
+[EXPECTATION] : Test is executed, because of the version control is optional
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0403-(VERSION_CONTROL)-[GOODCASE]' / (39/46)
+
+[DESCRIPTION] : Only 'Minimum_version' is defined
+[EXPECTATION] : Test is executed, because of the version control is optional
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0450-(VERSION_CONTROL)-[BADCASE]' / (40/46)
+
+[DESCRIPTION] : 'Maximum_version' is invalid (value is not a version number)
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0451-(VERSION_CONTROL)-[BADCASE]' / (41/46)
+
+[DESCRIPTION] : 'Minimum_version' is invalid (value contains blanks only)
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0452-(VERSION_CONTROL)-[BADCASE]' / (42/46)
+
+[DESCRIPTION] : 'Minimum_version' is bigger than 'Maximum_version'
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0453-(VERSION_CONTROL)-[BADCASE]' / (43/46)
+
+[DESCRIPTION] : 'Maximum_version' is smaller than current version
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0454-(VERSION_CONTROL)-[BADCASE]' / (44/46)
+
+[DESCRIPTION] : 'Minimum_version' is bigger than current version
+[EXPECTATION] : Test is not executed; error message; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0551-(ROBOT_CODE)-[BADCASE]' / (45/46)
+
+[DESCRIPTION] : Robot file contains keyword FAIL
+[EXPECTATION] : Test is executed up to position of keyword FAIL; test result is FAIL
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+====== [TEST] : 'TSM_0552-(ROBOT_CODE)-[BADCASE]' / (46/46)
+
+[DESCRIPTION] : Robot file contains keyword UNKNOWN
+[EXPECTATION] : Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
+    [COMMENT] : Single file execution
+
+Result: PASSED
+
+Component test PASSED
+
+Defined : 46
+PASSED  : 46
+FAILED  : 0
+UNKNOWN : 0

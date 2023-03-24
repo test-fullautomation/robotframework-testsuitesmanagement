@@ -1,0 +1,2 @@
+status\sstatus=".+?"
+stat\spass="\d+?"\sfail="\d+?"\sskip="\d+?"\sunknown="\d+?"

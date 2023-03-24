@@ -1,0 +1,19 @@
+==============================================================================
+20230324 14:59:32.640 - INFO - + START SUITE: Tsm-Testfile-2 [ ]
+==============================================================================
+20230324 14:59:32.647 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230324 14:59:32.674 - ERROR - The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
+20230324 14:59:32.675 - UNKNOWN - JSON schema validation failed!
+20230324 14:59:32.675 - DEBUG - JSON schema validation failed!
+20230324 14:59:32.675 - INFO - +- END SETUP: tm.Testsuite Setup (28)
+------------------------------------------------------------------------------
+20230324 14:59:32.676 - INFO - +- START TEST: Test Case tsm-testfile-2 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:32.684 - INFO - +- END TEST: Test Case tsm-testfile-2 (4)
+------------------------------------------------------------------------------
+20230324 14:59:32.684 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:32.685 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:32.685 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+==============================================================================
+20230324 14:59:32.691 - INFO - + END SUITE: Tsm-Testfile-2 (161)
+==============================================================================

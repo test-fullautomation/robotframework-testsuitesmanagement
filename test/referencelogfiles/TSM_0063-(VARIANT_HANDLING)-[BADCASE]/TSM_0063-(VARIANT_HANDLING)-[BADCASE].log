@@ -1,0 +1,22 @@
+==============================================================================
+20230324 14:59:39.500 - INFO - + START SUITE: Tsm-Testfile-6-Err-3 [ ]
+==============================================================================
+20230324 14:59:39.508 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.json ]
+20230324 14:59:39.532 - ERROR - Testsuite management - Loading configuration level 2 failed! 
+          The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.json' 
+          Please find the suitable variant in this list: 
+            - 'variant1'
+20230324 14:59:39.533 - UNKNOWN - Loading configuration level 2 failed!
+20230324 14:59:39.533 - DEBUG - Loading configuration level 2 failed!
+20230324 14:59:39.533 - INFO - +- END SETUP: tm.Testsuite Setup (25)
+------------------------------------------------------------------------------
+20230324 14:59:39.533 - INFO - +- START TEST: Test Case tsm-testfile-6-err-3 [ ]
+------------------------------------------------------------------------------
+20230324 14:59:39.538 - INFO - +- END TEST: Test Case tsm-testfile-6-err-3 (1)
+------------------------------------------------------------------------------
+20230324 14:59:39.538 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230324 14:59:39.538 - INFO - testsuite_teardown: Will be implemented later
+20230324 14:59:39.538 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230324 14:59:39.540 - INFO - + END SUITE: Tsm-Testfile-6-Err-3 (149)
+==============================================================================
