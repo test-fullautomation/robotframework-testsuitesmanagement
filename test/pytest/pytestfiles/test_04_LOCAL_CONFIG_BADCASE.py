@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 30.03.2023 - 13:46:50
+# 30.03.2023 - 18:52:55
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ from pytestlibs.CExecute import CExecute
 class Test_LOCAL_CONFIG_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: .......
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved",]
@@ -39,7 +39,7 @@ class Test_LOCAL_CONFIG_BADCASE:
       nReturn = CExecute.Execute("TSM_0150")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: .......
+   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested",]

@@ -435,7 +435,7 @@ Test Use Cases
 
    *Comment: Single file execution*
 
-   *Hint: Temporary change of installed schema file*
+   *Hint: Temporary modification of installed schema file*
 
 ----
 
@@ -565,7 +565,7 @@ Test Use Cases
 
    **Robot file contains keyword FAIL**
 
-   Expected: Test is executed up to position of keyword FAIL; test result is FAIL
+   Expected: Test is executed up to position of keyword FAIL; error message; test result is FAIL
 
    *Comment: Single file execution*
 
@@ -577,11 +577,59 @@ Test Use Cases
 
    **Robot file contains keyword UNKNOWN**
 
-   Expected: Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
+   Expected: Test is executed up to position of keyword UNKNOWN; error message; test result is UNKNOWN
 
    *Comment: Single file execution*
 
 ----
 
-Generated: 30.03.2023 - 16:40:49
+* **Test TSM_0553**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Call of not existing keyword in test code of robot file**
+
+   Expected: Test is executed up to position of keyword call; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0554**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Incomplete keyword 'FOR' in test code of robot file**
+
+   Expected: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0555**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Incomplete keyword 'IF/ELSE' in test code of robot file**
+
+   Expected: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0556**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Import of not existing library in robot file**
+
+   Expected: Test is not executed; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 30.03.2023 - 18:52:55
 

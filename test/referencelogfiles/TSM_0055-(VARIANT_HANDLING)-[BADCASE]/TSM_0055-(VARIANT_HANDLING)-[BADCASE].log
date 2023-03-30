@@ -1,17 +1,17 @@
 ==============================================================================
-20230330 13:39:10.520 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230330 18:55:21.492 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230330 13:39:10.528 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230330 13:39:10.528 - UNKNOWN - Exception occurred.
-20230330 13:39:10.529 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+20230330 18:55:21.496 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230330 18:55:21.496 - UNKNOWN - Exception occurred.
+20230330 18:55:21.497 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20230330 13:39:10.529 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230330 18:55:21.497 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230330 13:39:10.532 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230330 18:55:21.499 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230330 13:39:10.532 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230330 13:39:10.532 - INFO - testsuite_teardown: Will be implemented later
-20230330 13:39:10.532 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230330 18:55:21.499 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230330 18:55:21.499 - INFO - testsuite_teardown: Will be implemented later
+20230330 18:55:21.499 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230330 13:39:10.535 - INFO - + END SUITE: Tsm-Testfile-02 (115)
+20230330 18:55:21.501 - INFO - + END SUITE: Tsm-Testfile-02 (110)
 ==============================================================================

@@ -190,7 +190,7 @@ Test TSM_0350 / SCHEMA_VALIDATION / BADCASE
 Description: Schema file for JSON configuration files is not available
 Expectation: Test is not executed; error message; test result is UNKNOWN
 Comment....: Single file execution
-Hint.......: Temporary change of installed schema file
+Hint.......: Temporary modification of installed schema file
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0351 / SCHEMA_VALIDATION / BADCASE
 Description: Schema file for JSON configuration files is invalid because of a syntax error
@@ -244,13 +244,33 @@ Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0551 / ROBOT_CODE / BADCASE
 Description: Robot file contains keyword FAIL
-Expectation: Test is executed up to position of keyword FAIL; test result is FAIL
+Expectation: Test is executed up to position of keyword FAIL; error message; test result is FAIL
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0552 / ROBOT_CODE / BADCASE
 Description: Robot file contains keyword UNKNOWN
-Expectation: Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
+Expectation: Test is executed up to position of keyword UNKNOWN; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 30.03.2023 - 16:40:49
+Test TSM_0553 / ROBOT_CODE / BADCASE
+Description: Call of not existing keyword in test code of robot file
+Expectation: Test is executed up to position of keyword call; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0554 / ROBOT_CODE / BADCASE
+Description: Incomplete keyword 'FOR' in test code of robot file
+Expectation: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0555 / ROBOT_CODE / BADCASE
+Description: Incomplete keyword 'IF/ELSE' in test code of robot file
+Expectation: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0556 / ROBOT_CODE / BADCASE
+Description: Import of not existing library in robot file
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Generated: 30.03.2023 - 18:52:55
 

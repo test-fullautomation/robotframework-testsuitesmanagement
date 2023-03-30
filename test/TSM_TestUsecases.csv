@@ -47,3 +47,7 @@ TSM_0453|VERSION_CONTROL|BADCASE|'Maximum_version' is smaller than current versi
 TSM_0454|VERSION_CONTROL|BADCASE|'Minimum_version' is bigger than current version
 TSM_0551|ROBOT_CODE|BADCASE|Robot file contains keyword FAIL
 TSM_0552|ROBOT_CODE|BADCASE|Robot file contains keyword UNKNOWN
+TSM_0553|ROBOT_CODE|BADCASE|Call of not existing keyword in test code of robot file
+TSM_0554|ROBOT_CODE|BADCASE|Incomplete keyword 'FOR' in test code of robot file
+TSM_0555|ROBOT_CODE|BADCASE|Incomplete keyword 'IF/ELSE' in test code of robot file
+TSM_0556|ROBOT_CODE|BADCASE|Import of not existing library in robot file

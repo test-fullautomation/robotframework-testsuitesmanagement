@@ -26,6 +26,8 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 
+# Overview of executed robot files:
+
 # "tsm-testfile-01.robot"         # (without variant configuration)
 # "tsm-testfile-02.robot"         # (with variant configuration)
 # "tsm-testfile-03.robot"         # (with variant configuration and extended logging of parameters from nested configuration files)
@@ -34,7 +36,12 @@
 # "tsm-testfile-06-err-2.robot"   # (with variant configuration; JSON file contains not existing file and folder)
 # "tsm-testfile-07-err-3.robot"   # (with variant configuration; missing "default" variant)
 # "tsm-testfile-08-fail.robot"    # (with variant configuration; keyword FAIL)
-# "tsm-testfile-09-unknown.robot" # (with variant configuration; keyword UNKNOWN)
+# "tsm-testfile-09-state_unknown.robot"   # (with variant configuration and call of keyword UNKNOWN)
+# "tsm-testfile-10-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
+# "tsm-testfile-11-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
+# "tsm-testfile-12-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
+
+# "tsm-testfile-13-unknown_library.robot" # (with variant configuration and import of unknown library)
 
 # --------------------------------------------------------------------------------------------------------------
 
@@ -699,7 +706,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0551"
 dictUsecase['DESCRIPTION']      = "Robot file contains keyword FAIL"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword FAIL; test result is FAIL"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword FAIL; error message; test result is FAIL"
 dictUsecase['SECTION']          = "ROBOT_CODE"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -713,14 +720,73 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0552"
 dictUsecase['DESCRIPTION']      = "Robot file contains keyword UNKNOWN"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword UNKNOWN; error message; test result is UNKNOWN"
 dictUsecase['SECTION']          = "ROBOT_CODE"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-09-unknown.robot" # (with variant configuration; keyword UNKNOWN)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-09-state_unknown.robot" # (with variant configuration and call of keyword UNKNOWN)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0553"
+dictUsecase['DESCRIPTION']      = "Call of not existing keyword in test code of robot file"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword call; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-10-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0554"
+dictUsecase['DESCRIPTION']      = "Incomplete keyword 'FOR' in test code of robot file"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-11-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0555"
+dictUsecase['DESCRIPTION']      = "Incomplete keyword 'IF/ELSE' in test code of robot file"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-12-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0556"
+dictUsecase['DESCRIPTION']      = "Import of not existing library in robot file"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-13-unknown_library.robot" # (with variant configuration and import of unknown library)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+
+
+

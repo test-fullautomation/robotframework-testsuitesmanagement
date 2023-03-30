@@ -1,22 +1,22 @@
 ==============================================================================
-20230330 13:39:14.802 - INFO - + START SUITE: Tsm-Testfile-07-Err-3 [ ]
+20230330 18:55:25.494 - INFO - + START SUITE: Tsm-Testfile-07-Err-3 [ ]
 ==============================================================================
-20230330 13:39:14.809 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.json ]
-20230330 13:39:14.831 - ERROR - Testsuite management - Loading configuration level 2 failed! 
+20230330 18:55:25.497 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.json ]
+20230330 18:55:25.519 - ERROR - Testsuite management - Loading configuration level 2 failed! 
           The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.json' 
           Please find the suitable variant in this list: 
             - 'variant1'
-20230330 13:39:14.832 - UNKNOWN - Loading configuration level 2 failed!
-20230330 13:39:14.832 - DEBUG - Loading configuration level 2 failed!
-20230330 13:39:14.832 - INFO - +- END SETUP: tm.Testsuite Setup (23)
+20230330 18:55:25.521 - UNKNOWN - Loading configuration level 2 failed!
+20230330 18:55:25.521 - DEBUG - Loading configuration level 2 failed!
+20230330 18:55:25.521 - INFO - +- END SETUP: tm.Testsuite Setup (24)
 ------------------------------------------------------------------------------
-20230330 13:39:14.832 - INFO - +- START TEST: Test Case tsm-testfile-07-err-3 [ ]
+20230330 18:55:25.521 - INFO - +- START TEST: Test Case tsm-testfile-07-err-3 [ ]
 ------------------------------------------------------------------------------
-20230330 13:39:14.840 - INFO - +- END TEST: Test Case tsm-testfile-07-err-3 (4)
+20230330 18:55:25.523 - INFO - +- END TEST: Test Case tsm-testfile-07-err-3 (0)
 ------------------------------------------------------------------------------
-20230330 13:39:14.842 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230330 13:39:14.842 - INFO - testsuite_teardown: Will be implemented later
-20230330 13:39:14.842 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230330 18:55:25.523 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230330 18:55:25.523 - INFO - testsuite_teardown: Will be implemented later
+20230330 18:55:25.523 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230330 13:39:14.849 - INFO - + END SUITE: Tsm-Testfile-07-Err-3 (155)
+20230330 18:55:25.525 - INFO - + END SUITE: Tsm-Testfile-07-Err-3 (145)
 ==============================================================================

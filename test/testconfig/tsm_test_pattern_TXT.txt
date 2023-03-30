@@ -30,4 +30,8 @@ Could\snot\sset\svariable\s.+
 Loading\sconfiguration\slevel\s\d\sfailed
 Did\snot\sfind\sconfiguration\sfile:\s.+
 Not\sable\sto\sget\sa\sconfiguration\sfor\svariant\s.+
+I\smust\snot\sbe\sexecuted
 PARAMS-VERIFIKATION\s:\s.+
+FOR\sloop\shas\sno\sclosing\sEND
+IF\shas\sno\sclosing\sEND
+No\skeyword\swith\sname\s'.+?'\sfound

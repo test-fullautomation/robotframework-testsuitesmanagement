@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-07-err-3.robot (with variant configuration; JSON file contains not existing file and folder)
+# tsm-testfile-07-err-3.robot (with variant configuration; missing "default" variant)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -34,4 +34,5 @@ Test Case tsm-testfile-07-err-3
    Log    teststring_common : ${teststring_common} (tsm-testfile-07-err-3.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-07-err-3.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-07-err-3.robot)        console=yes
+   Log    I must not be executed    console=yes
 

@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 30.03.2023 - 13:46:50
+# 30.03.2023 - 18:52:55
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ from pytestlibs.CExecute import CExecute
 class Test_ROBOT_CODE_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed up to position of keyword FAIL; test result is FAIL
+   # Expected: Test is executed up to position of keyword FAIL; error message; test result is FAIL
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["Robot file contains keyword FAIL",]
@@ -39,12 +39,48 @@ class Test_ROBOT_CODE_BADCASE:
       nReturn = CExecute.Execute("TSM_0551")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
+   # Expected: Test is executed up to position of keyword UNKNOWN; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["Robot file contains keyword UNKNOWN",]
    )
    def test_TSM_0552(self, Description):
       nReturn = CExecute.Execute("TSM_0552")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed up to position of keyword call; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Call of not existing keyword in test code of robot file",]
+   )
+   def test_TSM_0553(self, Description):
+      nReturn = CExecute.Execute("TSM_0553")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Incomplete keyword 'FOR' in test code of robot file",]
+   )
+   def test_TSM_0554(self, Description):
+      nReturn = CExecute.Execute("TSM_0554")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Incomplete keyword 'IF/ELSE' in test code of robot file",]
+   )
+   def test_TSM_0555(self, Description):
+      nReturn = CExecute.Execute("TSM_0555")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Import of not existing library in robot file",]
+   )
+   def test_TSM_0556(self, Description):
+      nReturn = CExecute.Execute("TSM_0556")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

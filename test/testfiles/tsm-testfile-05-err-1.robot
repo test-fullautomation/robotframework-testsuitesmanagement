@@ -34,4 +34,4 @@ Test Case tsm-testfile-05-err-1
    Log    teststring_common : ${teststring_common} (tsm-testfile-05-err-1.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-05-err-1.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-05-err-1.robot)        console=yes
-
+   Log    I must not be executed    console=yes
