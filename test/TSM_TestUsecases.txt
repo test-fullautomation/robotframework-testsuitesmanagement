@@ -175,6 +175,11 @@ Description: Variant with multiple nested configuration files
 Expectation: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
 (Single file execution)
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0201 / NESTED_CONFIG / GOODCASE
+Description: Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)
+Expectation: Inside robot files all configuration parameters have proper value and are of proper data type
+(Single file execution)
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0250 / NESTED_CONFIG / BADCASE
 Description: Variant with multiple nested configuration files; cyclic import of JSON file
 Expectation: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
@@ -245,5 +250,5 @@ Description: Robot file contains keyword UNKNOWN
 Expectation: Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
 (Single file execution)
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 24.03.2023 - 16:32:46
+Generated: 30.03.2023 - 13:46:50
 

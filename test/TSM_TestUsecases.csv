@@ -32,6 +32,7 @@ TSM_0103|LOCAL_CONFIG|GOODCASE|With variant1 name given in command line and and 
 TSM_0150|LOCAL_CONFIG|BADCASE|A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved
 TSM_0151|LOCAL_CONFIG|BADCASE|A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested
 TSM_0200|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files
+TSM_0201|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)
 TSM_0250|NESTED_CONFIG|BADCASE|Variant with multiple nested configuration files; cyclic import of JSON file
 TSM_0350|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is not available
 TSM_0351|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is invalid because of a syntax error

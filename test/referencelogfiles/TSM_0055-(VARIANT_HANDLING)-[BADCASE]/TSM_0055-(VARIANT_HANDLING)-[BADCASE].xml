@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230324 14:59:35.178" rpa="false" schemaversion="2">
-<suite id="s1" name="Tsm-Testfile-2" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-2.robot">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230330 13:39:10.414" rpa="false" schemaversion="2">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230324 14:59:35.306" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230324 14:59:35.305" endtime="20230324 14:59:35.306"/>
+<msg timestamp="20230330 13:39:10.528" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230330 13:39:10.528" endtime="20230330 13:39:10.529"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-2">
-<doc>tsm-testfile-2</doc>
-<status status="UNKNOWN" starttime="20230324 14:59:35.306" endtime="20230324 14:59:35.307">Parent suite setup unknown:
+<test id="s1-t1" name="Test Case tsm-testfile-02">
+<doc>tsm-testfile-02</doc>
+<status status="UNKNOWN" starttime="20230330 13:39:10.529" endtime="20230330 13:39:10.530">Parent suite setup unknown:
 Exception occurred.</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230324 14:59:35.310" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230324 14:59:35.310" endtime="20230324 14:59:35.310"/>
+<msg timestamp="20230330 13:39:10.532" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230330 13:39:10.532" endtime="20230330 13:39:10.532"/>
 </kw>
-<status status="UNKNOWN" starttime="20230324 14:59:35.184" endtime="20230324 14:59:35.310">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230330 13:39:10.418" endtime="20230330 13:39:10.533">Suite setup unknown:
 Exception occurred.</status>
 </suite>
 <statistics>
@@ -29,11 +29,11 @@ Exception occurred.</status>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-2">Tsm-Testfile-2</stat>
+<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-02">Tsm-Testfile-02</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230324 14:59:35.304" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.
+<msg timestamp="20230330 13:39:10.526" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.
           It is not possible to use both together, because they belong to the same feature (the variant selection).
           Please remove one of them.
 </msg>

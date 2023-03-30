@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 24.03.2023 - 16:32:46
+# 30.03.2023 - 13:46:50
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -37,5 +37,14 @@ class Test_NESTED_CONFIG_GOODCASE:
    )
    def test_TSM_0200(self, Description):
       nReturn = CExecute.Execute("TSM_0200")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Inside robot files all configuration parameters have proper value and are of proper data type
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)",]
+   )
+   def test_TSM_0201(self, Description):
+      nReturn = CExecute.Execute("TSM_0201")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

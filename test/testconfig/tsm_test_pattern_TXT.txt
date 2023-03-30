@@ -30,3 +30,4 @@ Could\snot\sset\svariable\s.+
 Loading\sconfiguration\slevel\s\d\sfailed
 Did\snot\sfind\sconfiguration\sfile:\s.+
 Not\sable\sto\sget\sa\sconfiguration\sfor\svariant\s.+
+PARAMS-VERIFIKATION\s:\s.+

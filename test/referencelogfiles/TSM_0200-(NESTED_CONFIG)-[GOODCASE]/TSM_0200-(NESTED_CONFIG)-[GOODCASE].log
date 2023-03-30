@@ -1,94 +1,94 @@
 ==============================================================================
-20230324 14:59:43.801 - INFO - + START SUITE: Tsm-Testfile-3 [ ]
+20230330 13:39:19.137 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
 ==============================================================================
-20230324 14:59:43.817 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230324 14:59:43.841 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
-20230324 14:59:43.841 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230324 14:59:43.841 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230324 14:59:43.841 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230324 14:59:43.841 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230324 14:59:43.841 - INFO - Set suite metadata 'version_sw' to value ''.
-20230324 14:59:43.841 - INFO - Set suite metadata 'version_hw' to value ''.
-20230324 14:59:43.841 - INFO - Set suite metadata 'version_test' to value ''.
-20230324 14:59:43.857 - INFO - ${testdictionary_variant} = {'tdv_key_1': {'tdv_key_1_1': 'value_tdv_key_1_1_nested.1.1', 'tdv_key_1_2': 'value_tdv_key_1_2_after_import'}, 'tdv_key_2': {'tdv_key_2_1': 'value_tdv_key_2_1_after_import_new'}, 'tdv_key_3': {'tdv_k...
-20230324 14:59:43.857 - INFO - ${testlist_variant} = ['A', 'X', 'C']
-20230324 14:59:43.857 - INFO - ${teststring_common} = (1) I am the common teststring of imported 1.1 valid for all variants and all test benches
-20230324 14:59:43.857 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230324 14:59:43.857 - INFO - ${teststring_variant} = I am the variant 'nested' configuration of tsm-test
-20230324 14:59:43.857 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_1']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['teststring_common']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']['tdv_key_2_1']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']['tdv_key_3_1']' is updated
-20230324 14:59:43.857 - INFO - The parameter 'params['global']['testlist_variant'][1]' is updated
-20230324 14:59:43.857 - INFO - Running with configuration level 2
-20230324 14:59:43.857 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.1.json'
-20230324 14:59:43.857 - INFO - Robot Framework AIO version check passed!
-20230324 14:59:43.857 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230324 14:59:43.857 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.1.json'
-20230324 14:59:43.857 - INFO - Number of test suites: 1
-20230324 14:59:43.857 - INFO - Total number of testcases: 1
-20230324 14:59:43.857 - INFO - +- END SETUP: tm.Testsuite Setup (40)
+20230330 13:39:19.142 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230330 13:39:19.174 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
+20230330 13:39:19.174 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230330 13:39:19.176 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230330 13:39:19.176 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230330 13:39:19.176 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230330 13:39:19.176 - INFO - Set suite metadata 'version_sw' to value ''.
+20230330 13:39:19.176 - INFO - Set suite metadata 'version_hw' to value ''.
+20230330 13:39:19.176 - INFO - Set suite metadata 'version_test' to value ''.
+20230330 13:39:19.177 - INFO - ${testdictionary_variant} = {'tdv_key_1': {'tdv_key_1_1': 'value_tdv_key_1_1_nested.1.1', 'tdv_key_1_2': 'value_tdv_key_1_2_after_import'}, 'tdv_key_2': {'tdv_key_2_1': 'value_tdv_key_2_1_after_import_new'}, 'tdv_key_3': {'tdv_k...
+20230330 13:39:19.180 - INFO - ${testlist_variant} = ['A', 'X', 'C']
+20230330 13:39:19.181 - INFO - ${teststring_common} = (1) I am the common teststring of imported.1 valid for all variants and all test benches
+20230330 13:39:19.182 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230330 13:39:19.187 - INFO - ${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test
+20230330 13:39:19.188 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_1']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['teststring_common']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']['tdv_key_2_1']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']['tdv_key_3_1']' is updated
+20230330 13:39:19.188 - INFO - The parameter 'params['global']['testlist_variant'][1]' is updated
+20230330 13:39:19.188 - INFO - Running with configuration level 2
+20230330 13:39:19.189 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.1.json'
+20230330 13:39:19.189 - INFO - Robot Framework AIO version check passed!
+20230330 13:39:19.189 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230330 13:39:19.189 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.1.json'
+20230330 13:39:19.189 - INFO - Number of test suites: 1
+20230330 13:39:19.189 - INFO - Total number of testcases: 1
+20230330 13:39:19.189 - INFO - +- END SETUP: tm.Testsuite Setup (47)
 ------------------------------------------------------------------------------
-20230324 14:59:43.857 - INFO - +- START TEST: Test Case tsm-testfile-3 [ ]
+20230330 13:39:19.189 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
 ------------------------------------------------------------------------------
-20230324 14:59:43.857 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230324 14:59:43.857 - INFO - Test Count: 1
-20230324 14:59:43.857 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230330 13:39:19.190 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230330 13:39:19.190 - INFO - Test Count: 1
+20230330 13:39:19.191 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.857 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.857 - INFO - teststring_common : (1) I am the common teststring of imported 1.1 valid for all variants and all test benches (tsm-testfile-3.robot)
-20230324 14:59:43.857 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.191 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.191 - INFO - teststring_common : (1) I am the common teststring of imported.1 valid for all variants and all test benches (tsm-testfile-03.robot)
+20230330 13:39:19.193 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.857 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.857 - INFO - teststring_variant : I am the variant 'nested' configuration of tsm-test (tsm-testfile-3.robot)
-20230324 14:59:43.857 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.193 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.193 - INFO - teststring_variant : I am the variant 'nested.1' configuration of tsm-test (tsm-testfile-03.robot)
+20230330 13:39:19.194 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.194 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.194 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-03.robot)
+20230330 13:39:19.195 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_1_1 : ${testdictionary_variant.tdv_key_1.tdv_key_1_1} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testdictionary_variant/tdv_key_1_1 : value_tdv_key_1_1_nested.1.1 (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.195 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_1_1 : ${testdictionary_variant.tdv_key_1.tdv_key_1_1} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.195 - INFO - testdictionary_variant/tdv_key_1_1 : value_tdv_key_1_1_nested.1.1 (tsm-testfile-03.robot)
+20230330 13:39:19.196 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_1_2 : ${testdictionary_variant.tdv_key_1.tdv_key_1_2} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testdictionary_variant/tdv_key_1_2 : value_tdv_key_1_2_after_import (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.196 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_1_2 : ${testdictionary_variant.tdv_key_1.tdv_key_1_2} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.196 - INFO - testdictionary_variant/tdv_key_1_2 : value_tdv_key_1_2_after_import (tsm-testfile-03.robot)
+20230330 13:39:19.197 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_2_1 : ${testdictionary_variant.tdv_key_2.tdv_key_2_1} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testdictionary_variant/tdv_key_2_1 : value_tdv_key_2_1_after_import_new (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.197 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_2_1 : ${testdictionary_variant.tdv_key_2.tdv_key_2_1} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.198 - INFO - testdictionary_variant/tdv_key_2_1 : value_tdv_key_2_1_after_import_new (tsm-testfile-03.robot)
+20230330 13:39:19.198 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_3_1 : ${testdictionary_variant.tdv_key_3.tdv_key_3_1} (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testdictionary_variant/tdv_key_3_1 : value_tdv_key_3_1_nested.1.1.1 (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.199 - INFO - +-- START KEYWORD: BuiltIn.Log [ testdictionary_variant/tdv_key_3_1 : ${testdictionary_variant.tdv_key_3.tdv_key_3_1} (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.199 - INFO - testdictionary_variant/tdv_key_3_1 : value_tdv_key_3_1_nested.1.1.1 (tsm-testfile-03.robot)
+20230330 13:39:19.200 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[0] : ${testlist_variant}[0] (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testlist_variant[0] : A (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.200 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[0] : ${testlist_variant}[0] (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.200 - INFO - testlist_variant[0] : A (tsm-testfile-03.robot)
+20230330 13:39:19.201 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[1] : ${testlist_variant}[1] (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testlist_variant[1] : X (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.201 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[1] : ${testlist_variant}[1] (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.201 - INFO - testlist_variant[1] : X (tsm-testfile-03.robot)
+20230330 13:39:19.202 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[2] : ${testlist_variant}[2] (tsm-testfile-3.robot) | console=yes ]
-20230324 14:59:43.872 - INFO - testlist_variant[2] : C (tsm-testfile-3.robot)
-20230324 14:59:43.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230330 13:39:19.202 - INFO - +-- START KEYWORD: BuiltIn.Log [ testlist_variant[2] : ${testlist_variant}[2] (tsm-testfile-03.robot) | console=yes ]
+20230330 13:39:19.202 - INFO - testlist_variant[2] : C (tsm-testfile-03.robot)
+20230330 13:39:19.203 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230324 14:59:43.872 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230324 14:59:43.872 - INFO - testcase_teardown: Will be implemented later
-20230324 14:59:43.872 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230330 13:39:19.203 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230330 13:39:19.203 - INFO - testcase_teardown: Will be implemented later
+20230330 13:39:19.203 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230324 14:59:43.872 - INFO - +- END TEST: Test Case tsm-testfile-3 (15)
+20230330 13:39:19.212 - INFO - +- END TEST: Test Case tsm-testfile-03 (14)
 ------------------------------------------------------------------------------
-20230324 14:59:43.872 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230324 14:59:43.872 - INFO - testsuite_teardown: Will be implemented later
-20230324 14:59:43.872 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230330 13:39:19.213 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230330 13:39:19.213 - INFO - testsuite_teardown: Will be implemented later
+20230330 13:39:19.214 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230324 14:59:43.872 - INFO - + END SUITE: Tsm-Testfile-3 (171)
+20230330 13:39:19.215 - INFO - + END SUITE: Tsm-Testfile-03 (184)
 ==============================================================================

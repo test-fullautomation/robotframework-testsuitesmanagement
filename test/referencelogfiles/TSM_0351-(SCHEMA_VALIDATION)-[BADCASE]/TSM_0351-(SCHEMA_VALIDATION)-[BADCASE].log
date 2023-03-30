@@ -1,19 +1,19 @@
 ==============================================================================
-20230324 14:59:45.460 - INFO - + START SUITE: Tsm-Testfile-2 [ ]
+20230330 13:39:21.445 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230324 14:59:45.472 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230324 14:59:45.504 - ERROR - Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
-20230324 14:59:45.504 - UNKNOWN - Parse JSON schema file failed!
-20230324 14:59:45.504 - DEBUG - Parse JSON schema file failed!
-20230324 14:59:45.505 - INFO - +- END SETUP: tm.Testsuite Setup (33)
+20230330 13:39:21.453 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230330 13:39:21.479 - ERROR - Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
+20230330 13:39:21.479 - UNKNOWN - Parse JSON schema file failed!
+20230330 13:39:21.480 - DEBUG - Parse JSON schema file failed!
+20230330 13:39:21.480 - INFO - +- END SETUP: tm.Testsuite Setup (27)
 ------------------------------------------------------------------------------
-20230324 14:59:45.505 - INFO - +- START TEST: Test Case tsm-testfile-2 [ ]
+20230330 13:39:21.480 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230324 14:59:45.508 - INFO - +- END TEST: Test Case tsm-testfile-2 (1)
+20230330 13:39:21.490 - INFO - +- END TEST: Test Case tsm-testfile-02 (5)
 ------------------------------------------------------------------------------
-20230324 14:59:45.508 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230324 14:59:45.509 - INFO - testsuite_teardown: Will be implemented later
-20230324 14:59:45.509 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230330 13:39:21.491 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230330 13:39:21.491 - INFO - testsuite_teardown: Will be implemented later
+20230330 13:39:21.491 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230324 14:59:45.511 - INFO - + END SUITE: Tsm-Testfile-2 (159)
+20230330 13:39:21.494 - INFO - + END SUITE: Tsm-Testfile-02 (158)
 ==============================================================================

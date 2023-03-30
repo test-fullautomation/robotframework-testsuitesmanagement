@@ -399,6 +399,18 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0201**
+
+  [NESTED_CONFIG / GOODCASE]
+
+   **Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)**
+
+   Expected: Inside robot files all configuration parameters have proper value and are of proper data type
+
+  (*Single file execution*)
+
+----
+
 * **Test TSM_0250**
 
   [NESTED_CONFIG / BADCASE]
@@ -567,5 +579,5 @@ Test Use Cases
 
 ----
 
-Generated: 24.03.2023 - 16:32:46
+Generated: 30.03.2023 - 13:46:50
 

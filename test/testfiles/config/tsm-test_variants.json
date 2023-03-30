@@ -30,10 +30,14 @@
                              "name": "tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.json",
                              "path": "./config/"
                            },
-  "nested_import" : {
-                      "name": "tsm-test_config_nested.1.json",
-                      "path": "./config/"
-                    },
+  "nested_import_1" : {
+                        "name": "tsm-test_config_nested.1.json",
+                        "path": "./config/"
+                      },
+  "nested_import_2" : {
+                        "name": "tsm-test_config_nested.2.json",
+                        "path": "./config/"
+                      },
   "cyclic_import" : {
                       "name": "tsm-test_config_cyclic.1.json",
                       "path": "./config/"
