@@ -20,7 +20,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 24.03.2023
+# 30.03.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -191,18 +191,26 @@ RobotFramework_TestsuitesManagement<br>Test Cases
          SECTION          = dictUsecase['SECTION']
          SUBSECTION       = dictUsecase['SUBSECTION']
          COMMENT          = dictUsecase['COMMENT']
+         # optional ones
+         HINT = None
+         if "HINT" in dictUsecase:
+            HINT = dictUsecase['HINT']
 
          oPyTestListFile_RST.Write(f"* **Test {TESTID}**", 1)
          oPyTestListFile_RST.Write(f"  [{SECTION} / {SUBSECTION}]", 1)
          oPyTestListFile_RST.Write(f"   **{DESCRIPTION}**", 1)
          oPyTestListFile_RST.Write(f"   Expected: {EXPECTATION}", 1)
-         oPyTestListFile_RST.Write(f"  (*{COMMENT}*)", 1)
+         oPyTestListFile_RST.Write(f"   *Comment: {COMMENT}*", 1)
+         if HINT is not None:
+            oPyTestListFile_RST.Write(f"   *Hint: {HINT}*", 1)
          oPyTestListFile_RST.Write(f"----", 1)
 
          oPyTestListFile_TXT.Write(f"Test {TESTID} / {SECTION} / {SUBSECTION}")
          oPyTestListFile_TXT.Write(f"Description: {DESCRIPTION}")
          oPyTestListFile_TXT.Write(f"Expectation: {EXPECTATION}")
-         oPyTestListFile_TXT.Write(f"({COMMENT})")
+         oPyTestListFile_TXT.Write(f"Comment....: {COMMENT}")
+         if HINT is not None:
+            oPyTestListFile_TXT.Write(f"Hint.......: {HINT}")
          oPyTestListFile_TXT.Write(120*"-")
 
          oPyTestListFile_CSV.Write(f"{TESTID}|{SECTION}|{SUBSECTION}|{DESCRIPTION}")
@@ -235,7 +243,8 @@ RobotFramework_TestsuitesManagement<br>Test Cases
 <td colspan="1" valign="center" bgcolor="#F5F5F5" align="left">
 <font size="2" face="Arial" color="#595959"><i>
 ####DESCRIPTION####<br>
-Expected: ####EXPECTATION####
+Expected: ####EXPECTATION####<br>
+Comment: ####COMMENT########HINT####
 </i></font></td>
 
 """
@@ -250,6 +259,12 @@ Expected: ####EXPECTATION####
          sOut = sOut.replace('####TEXTCOLOR####', TEXTCOLOR)
          sOut = sOut.replace('####DESCRIPTION####', DESCRIPTION)
          sOut = sOut.replace('####EXPECTATION####', EXPECTATION)
+         sOut = sOut.replace('####COMMENT####', COMMENT)
+         if HINT is None:
+            sOut = sOut.replace('####HINT####', "")
+         else:
+            sReplace = f"<br>\nHint: {HINT}"
+            sOut = sOut.replace('####HINT####', sReplace)
          oPyTestListFile_HTML.Write(sOut)
 
          oPyTestListFile_HTML.Write("</tr>")

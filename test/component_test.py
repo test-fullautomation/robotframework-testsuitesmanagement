@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 24.03.2023 / v. 0.1.0
+# 30.03.2023 / v. 0.1.0
 # initial prototype
 #
 # --------------------------------------------------------------------------------------------------------------
@@ -229,6 +229,9 @@ for dictUsecase in listofdictUsecases:
    ADDITIONALPARAMS = dictUsecase['ADDITIONALPARAMS']
    EXPECTEDRETURN   = dictUsecase['EXPECTEDRETURN']
    # optional ones
+   HINT = None
+   if "HINT" in dictUsecase:
+      HINT = dictUsecase['HINT']
    PRESTEP = None
    if "PRESTEP" in dictUsecase:
       PRESTEP = dictUsecase['PRESTEP']
@@ -260,6 +263,11 @@ for dictUsecase in listofdictUsecases:
    if SILENT is False:
       print(COLBY + sOut)
    oSelfTestLogFile.Write(sOut)
+   if HINT is not None:
+      sOut = f"       [HINT] : {HINT}"
+      if SILENT is False:
+         print(COLBY + sOut)
+      oSelfTestLogFile.Write(sOut)
    sOut = f"    [COMMENT] : {COMMENT}"
    if SILENT is False:
       print(COLBY + sOut)

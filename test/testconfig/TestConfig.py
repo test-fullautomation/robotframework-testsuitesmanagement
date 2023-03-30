@@ -41,6 +41,7 @@
 listofdictUsecases = []
 
 # the following keys are optional, all other keys are mandatory.
+# dictUsecase['HINT']             = None
 # dictUsecase['PRESTEP']          = None
 # dictUsecase['POSTSTEP']         = None
 # dictUsecase['LOGCOMPARE']       = None
@@ -450,6 +451,7 @@ dictUsecase['EXPECTATION']      = "Local config value overwrites initial value f
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Temporary change of environment (ROBOT_LOCAL_CONFIG)"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
@@ -463,7 +465,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0150"
 dictUsecase['DESCRIPTION']      = "A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: ......."
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -477,7 +479,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0151"
 dictUsecase['DESCRIPTION']      = "A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: ......."
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line"
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -540,6 +542,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "SCHEMA_VALIDATION"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Temporary modification of installed schema file"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""

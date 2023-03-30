@@ -23,7 +23,7 @@ Test Use Cases
 
    Expected: Execution with config level 4
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -35,7 +35,7 @@ Test Use Cases
 
    Expected: Execution with default variant
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -47,7 +47,7 @@ Test Use Cases
 
    Expected: Execution with selected variant 1
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -59,7 +59,7 @@ Test Use Cases
 
    Expected: Execution with selected variant
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -71,7 +71,7 @@ Test Use Cases
 
    Expected: Execution with selected variant 2
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -83,7 +83,7 @@ Test Use Cases
 
    Expected: Execution with selected config file for variant
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -95,7 +95,7 @@ Test Use Cases
 
    Expected: Single command line parameter value overwrites variant 1 configuration value
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -107,7 +107,7 @@ Test Use Cases
 
    Expected: Single command line parameter value overwrites variant 2 configuration value
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -119,7 +119,7 @@ Test Use Cases
 
    Expected: Configuration parameters taken from configuration file with same name as the robot file
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -131,7 +131,7 @@ Test Use Cases
 
    Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -143,7 +143,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -155,7 +155,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -167,7 +167,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -179,7 +179,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -191,7 +191,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -203,7 +203,7 @@ Test Use Cases
 
    Expected: Both together is not accepted; test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -215,7 +215,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -227,7 +227,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -239,7 +239,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -251,7 +251,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -263,7 +263,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -275,7 +275,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -287,7 +287,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -299,7 +299,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -311,7 +311,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN; reason: a local config file is not a full configuration file
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -323,7 +323,7 @@ Test Use Cases
 
    Expected: Local config value overwrites initial value for parameter 'teststring_bench'
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -335,7 +335,7 @@ Test Use Cases
 
    Expected: Local config value overwrites initial value for parameter 'teststring_bench'
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -347,7 +347,7 @@ Test Use Cases
 
    Expected: Command line value of 'teststring_bench' overwrites all other definitions (the initial one and the local config one)
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -359,7 +359,9 @@ Test Use Cases
 
    Expected: Local config value overwrites initial value for parameter 'teststring_bench'
 
-  (*Single file execution*)
+   *Comment: Single file execution*
+
+   *Hint: Temporary change of environment (ROBOT_LOCAL_CONFIG)*
 
 ----
 
@@ -369,9 +371,9 @@ Test Use Cases
 
    **A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved**
 
-   Expected: Test is not executed; error message; test result is UNKNOWN; reason: .......
+   Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -381,9 +383,9 @@ Test Use Cases
 
    **A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested**
 
-   Expected: Test is not executed; error message; test result is UNKNOWN; reason: .......
+   Expected: Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -395,7 +397,7 @@ Test Use Cases
 
    Expected: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -407,7 +409,7 @@ Test Use Cases
 
    Expected: Inside robot files all configuration parameters have proper value and are of proper data type
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -419,7 +421,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -431,7 +433,9 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
+
+   *Hint: Temporary change of installed schema file*
 
 ----
 
@@ -443,7 +447,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -455,7 +459,7 @@ Test Use Cases
 
    Expected: Test is executed, because of the version control is optional
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -467,7 +471,7 @@ Test Use Cases
 
    Expected: Test is executed, because of the version control is optional
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -479,7 +483,7 @@ Test Use Cases
 
    Expected: Test is executed, because of the version control is optional
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -491,7 +495,7 @@ Test Use Cases
 
    Expected: Test is executed, because of the version control is optional
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -503,7 +507,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -515,7 +519,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -527,7 +531,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -539,7 +543,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -551,7 +555,7 @@ Test Use Cases
 
    Expected: Test is not executed; error message; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -563,7 +567,7 @@ Test Use Cases
 
    Expected: Test is executed up to position of keyword FAIL; test result is FAIL
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
@@ -575,9 +579,9 @@ Test Use Cases
 
    Expected: Test is executed up to position of keyword UNKNOWN; test result is UNKNOWN
 
-  (*Single file execution*)
+   *Comment: Single file execution*
 
 ----
 
-Generated: 30.03.2023 - 13:46:50
+Generated: 30.03.2023 - 16:40:49
 
