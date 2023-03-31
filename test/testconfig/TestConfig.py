@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 30.03.2023
+# 31.03.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -40,6 +40,8 @@
 # "tsm-testfile-10-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
 # "tsm-testfile-11-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
 # "tsm-testfile-12-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
+# "tsm-testfile-14-unknown_parameter_1.robot"  # (with variant configuration and assignment of unknown dictionary key)
+# "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
 
 # "tsm-testfile-13-unknown_library.robot" # (with variant configuration and import of unknown library)
 
@@ -170,7 +172,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0009"
-dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from local config folder; robot file has same name as configuration file"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file"
 dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with same name as the robot file"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
@@ -184,7 +186,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0010"
-dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from local config folder; robot file has another name as configuration file"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file"
 dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with predefined default name (robot_config.json)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
@@ -192,6 +194,20 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "configfoldertests/tsm-cft-testfile-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0011"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)"
+dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value"
+dictUsecase['SECTION']          = "VARIANT_HANDLING"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "configfoldertests/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable teststring_variant:\"command line value of teststring_variant\""
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
@@ -781,6 +797,34 @@ dictUsecase['SECTION']          = "ROBOT_CODE"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-13-unknown_library.robot" # (with variant configuration and import of unknown library)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0557"
+dictUsecase['DESCRIPTION']      = "Assignment of unknown parameter in test code of robot file"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-14-unknown_parameter_1.robot" # (with variant configuration and assignment of unknown dictionary key)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0558"
+dictUsecase['DESCRIPTION']      = "Assignment of parameter to unknown dictionary subkey in test code of robot file"
+dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-15-unknown_parameter_2.robot" # (with variant configuration and parameter assignment to unknown dictionary subkey)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 256

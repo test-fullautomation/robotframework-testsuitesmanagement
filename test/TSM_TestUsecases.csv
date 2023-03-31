@@ -8,8 +8,9 @@ TSM_0005|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command 
 TSM_0006|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line / with 4 byte UTF-8 characters inside name
 TSM_0007|VARIANT_HANDLING|GOODCASE|With variant name and single parameter in command line / (variant1; teststring_variant)
 TSM_0008|VARIANT_HANDLING|GOODCASE|With parameter configuration file and single parameter in command line / (variant2; teststring_variant)
-TSM_0009|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from local config folder; robot file has same name as configuration file
-TSM_0010|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from local config folder; robot file has another name as configuration file
+TSM_0009|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file
+TSM_0010|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file
+TSM_0011|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)
 TSM_0050|VARIANT_HANDLING|BADCASE|With missing parameter in parameter configuration file
 TSM_0051|VARIANT_HANDLING|BADCASE|With syntax error in parameter configuration file
 TSM_0052|VARIANT_HANDLING|BADCASE|With syntax error within imported parameter configuration file
@@ -51,3 +52,5 @@ TSM_0553|ROBOT_CODE|BADCASE|Call of not existing keyword in test code of robot f
 TSM_0554|ROBOT_CODE|BADCASE|Incomplete keyword 'FOR' in test code of robot file
 TSM_0555|ROBOT_CODE|BADCASE|Incomplete keyword 'IF/ELSE' in test code of robot file
 TSM_0556|ROBOT_CODE|BADCASE|Import of not existing library in robot file
+TSM_0557|ROBOT_CODE|BADCASE|Assignment of unknown parameter in test code of robot file
+TSM_0558|ROBOT_CODE|BADCASE|Assignment of parameter to unknown dictionary subkey in test code of robot file

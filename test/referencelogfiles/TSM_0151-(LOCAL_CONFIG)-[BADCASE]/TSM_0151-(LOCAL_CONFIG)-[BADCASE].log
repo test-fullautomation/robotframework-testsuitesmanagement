@@ -1,9 +1,9 @@
 ==============================================================================
-20230330 18:55:29.116 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230331 13:49:10.012 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230330 18:55:29.119 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230330 18:55:29.162 - FAIL - RecursionError: maximum recursion depth exceeded while calling a Python object
-20230330 18:55:29.163 - DEBUG - Traceback (most recent call last):
+20230331 13:49:10.016 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230331 13:49:10.054 - FAIL - RecursionError: maximum recursion depth exceeded while calling a Python object
+20230331 13:49:10.054 - DEBUG - Traceback (most recent call last):
   File "D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\__init__.py", line 65, in run_keyword
     return DynamicCore.run_keyword(self, name, args, kwargs)
   File "D:\RobotFramework\python39\lib\site-packages\robotlibcore.py", line 122, in run_keyword
@@ -35,15 +35,15 @@
     y[deepcopy(key, memo)] = deepcopy(value, memo)
   File "D:\RobotFramework\python39\lib\copy.py", line 137, in deepcopy
     d = id(x)
-20230330 18:55:29.163 - INFO - +- END SETUP: tm.Testsuite Setup (44)
+20230331 13:49:10.054 - INFO - +- END SETUP: tm.Testsuite Setup (39)
 ------------------------------------------------------------------------------
-20230330 18:55:29.163 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230331 13:49:10.054 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230330 18:55:29.165 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230331 13:49:10.054 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20230330 18:55:29.166 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230330 18:55:29.166 - INFO - testsuite_teardown: Will be implemented later
-20230330 18:55:29.166 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230331 13:49:10.054 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230331 13:49:10.054 - INFO - testsuite_teardown: Will be implemented later
+20230331 13:49:10.054 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230330 18:55:29.167 - INFO - + END SUITE: Tsm-Testfile-02 (151)
+20230331 13:49:10.054 - INFO - + END SUITE: Tsm-Testfile-02 (143)
 ==============================================================================

@@ -35,3 +35,5 @@ PARAMS-VERIFIKATION\s:\s.+
 FOR\sloop\shas\sno\sclosing\sEND
 IF\shas\sno\sclosing\sEND
 No\skeyword\swith\sname\s'.+?'\sfound
+Dictionary\s'.+?'\shas\sno\skey\s'.+?'
+Invalid\svariable\sname\s'.+?'

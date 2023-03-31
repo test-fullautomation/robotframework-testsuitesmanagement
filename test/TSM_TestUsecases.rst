@@ -115,7 +115,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file taken from local config folder; robot file has same name as configuration file**
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file**
 
    Expected: Configuration parameters taken from configuration file with same name as the robot file
 
@@ -127,9 +127,21 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file taken from local config folder; robot file has another name as configuration file**
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file**
 
    Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0011**
+
+  [VARIANT_HANDLING / GOODCASE]
+
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)**
+
+   Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
 
    *Comment: Single file execution*
 
@@ -631,5 +643,29 @@ Test Use Cases
 
 ----
 
-Generated: 30.03.2023 - 18:52:55
+* **Test TSM_0557**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Assignment of unknown parameter in test code of robot file**
+
+   Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0558**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Assignment of parameter to unknown dictionary subkey in test code of robot file**
+
+   Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 31.03.2023 - 13:48:45
 

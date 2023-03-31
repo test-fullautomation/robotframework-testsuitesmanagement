@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 30.03.2023 - 18:52:55
+# 31.03.2023 - 13:48:45
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ class Test_VARIANT_HANDLING_GOODCASE:
    # Expected: Configuration parameters taken from configuration file with same name as the robot file
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["With parameter configuration file taken from local config folder; robot file has same name as configuration file",]
+      "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file",]
    )
    def test_TSM_0009(self, Description):
       nReturn = CExecute.Execute("TSM_0009")
@@ -114,9 +114,18 @@ class Test_VARIANT_HANDLING_GOODCASE:
    # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["With parameter configuration file taken from local config folder; robot file has another name as configuration file",]
+      "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file",]
    )
    def test_TSM_0010(self, Description):
       nReturn = CExecute.Execute("TSM_0010")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)",]
+   )
+   def test_TSM_0011(self, Description):
+      nReturn = CExecute.Execute("TSM_0011")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
