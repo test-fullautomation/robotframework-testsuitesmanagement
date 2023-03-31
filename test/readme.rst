@@ -114,9 +114,9 @@ capital letters only (with the underline as separator character).
 Log file comparison
 -------------------
 
-Current log files are compared with reference log files, that are log files from previous executions.
-The user has to check them manually. In case of the user decides that the content of the log file is
-like expected and shall be used as reference, the file has to be stored within the folder
+As part of the component test current log files are compared with reference log files, that are log files from previous executions.
+After a test case has been changed or in case of new test cases, the user has to check the current log files of these tests - and in case of
+he decides that the content is like expected and shall be used as reference, these files have to be copied to the folder
 
 .. code::
 
