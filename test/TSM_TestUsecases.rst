@@ -437,6 +437,30 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0251**
+
+  [NESTED_CONFIG / BADCASE]
+
+   **Assignment of unknown dictionary key in imported JSON configuration file**
+
+   Expected: Test is not executed; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0252**
+
+  [NESTED_CONFIG / BADCASE]
+
+   **Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file**
+
+   Expected: Test is not executed; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
 * **Test TSM_0350**
 
   [SCHEMA_VALIDATION / BADCASE]
@@ -647,7 +671,7 @@ Test Use Cases
 
   [ROBOT_CODE / BADCASE]
 
-   **Assignment of unknown parameter in test code of robot file**
+   **Assignment of unknown dictionary key in test code of robot file**
 
    Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
 
@@ -659,7 +683,7 @@ Test Use Cases
 
   [ROBOT_CODE / BADCASE]
 
-   **Assignment of parameter to unknown dictionary subkey in test code of robot file**
+   **Assignment of known parameter to unknown dictionary subkey in test code of robot file**
 
    Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
 
@@ -667,5 +691,5 @@ Test Use Cases
 
 ----
 
-Generated: 31.03.2023 - 13:48:45
+Generated: 31.03.2023 - 16:52:41
 

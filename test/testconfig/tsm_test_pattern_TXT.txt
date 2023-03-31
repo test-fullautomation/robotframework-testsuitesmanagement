@@ -25,8 +25,6 @@ JSON\sschema\svalidation\sfailed
 Running\swithout\sRobot\sFramework\sAIO\sversion\scheck!
 Robot\sFramework\sAIO\sversion\scheck\spassed!
 Could\snot\sparse\sconfiguration\sJSON\sschema\sfile
-Loading\sof\sJSON\sconfiguration\sfile\sfailed
-Could\snot\sset\svariable\s.+
 Loading\sconfiguration\slevel\s\d\sfailed
 Did\snot\sfind\sconfiguration\sfile:\s.+
 Not\sable\sto\sget\sa\sconfiguration\sfor\svariant\s.+
@@ -37,3 +35,5 @@ IF\shas\sno\sclosing\sEND
 No\skeyword\swith\sname\s'.+?'\sfound
 Dictionary\s'.+?'\shas\sno\skey\s'.+?'
 Invalid\svariable\sname\s'.+?'
+The\svariable\s'.+'\sis\snot\savailable!
+Could\snot\sset\svariable\s.+

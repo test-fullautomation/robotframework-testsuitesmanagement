@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 31.03.2023 - 13:48:45
+# 31.03.2023 - 16:52:41
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -87,7 +87,7 @@ class Test_ROBOT_CODE_BADCASE:
    # Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of unknown parameter in test code of robot file",]
+      "Description", ["Assignment of unknown dictionary key in test code of robot file",]
    )
    def test_TSM_0557(self, Description):
       nReturn = CExecute.Execute("TSM_0557")
@@ -96,7 +96,7 @@ class Test_ROBOT_CODE_BADCASE:
    # Expected: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of parameter to unknown dictionary subkey in test code of robot file",]
+      "Description", ["Assignment of known parameter to unknown dictionary subkey in test code of robot file",]
    )
    def test_TSM_0558(self, Description):
       nReturn = CExecute.Execute("TSM_0558")

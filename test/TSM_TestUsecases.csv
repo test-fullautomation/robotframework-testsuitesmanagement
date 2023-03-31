@@ -35,6 +35,8 @@ TSM_0151|LOCAL_CONFIG|BADCASE|A parameter config file for variant1 is passed to 
 TSM_0200|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files
 TSM_0201|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)
 TSM_0250|NESTED_CONFIG|BADCASE|Variant with multiple nested configuration files; cyclic import of JSON file
+TSM_0251|NESTED_CONFIG|BADCASE|Assignment of unknown dictionary key in imported JSON configuration file
+TSM_0252|NESTED_CONFIG|BADCASE|Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file
 TSM_0350|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is not available
 TSM_0351|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is invalid because of a syntax error
 TSM_0400|VERSION_CONTROL|GOODCASE|'Maximum_version' and 'Minimum_version' not defined
@@ -52,5 +54,5 @@ TSM_0553|ROBOT_CODE|BADCASE|Call of not existing keyword in test code of robot f
 TSM_0554|ROBOT_CODE|BADCASE|Incomplete keyword 'FOR' in test code of robot file
 TSM_0555|ROBOT_CODE|BADCASE|Incomplete keyword 'IF/ELSE' in test code of robot file
 TSM_0556|ROBOT_CODE|BADCASE|Import of not existing library in robot file
-TSM_0557|ROBOT_CODE|BADCASE|Assignment of unknown parameter in test code of robot file
-TSM_0558|ROBOT_CODE|BADCASE|Assignment of parameter to unknown dictionary subkey in test code of robot file
+TSM_0557|ROBOT_CODE|BADCASE|Assignment of unknown dictionary key in test code of robot file
+TSM_0558|ROBOT_CODE|BADCASE|Assignment of known parameter to unknown dictionary subkey in test code of robot file

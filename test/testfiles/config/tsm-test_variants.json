@@ -93,5 +93,13 @@
   "missing_imported_file" : {
                               "name": "tsm-test_config_missing_imported_file.json",
                               "path": "./config/"
-                            }
+                            },
+  "invalid_assignment_1" : {
+                             "name": "tsm-test_config_invalid_assignment_1.json",
+                             "path": "./config/"
+                           },
+  "invalid_assignment_2" : {
+                             "name": "tsm-test_config_invalid_assignment_2.json",
+                             "path": "./config/"
+                           }
 }

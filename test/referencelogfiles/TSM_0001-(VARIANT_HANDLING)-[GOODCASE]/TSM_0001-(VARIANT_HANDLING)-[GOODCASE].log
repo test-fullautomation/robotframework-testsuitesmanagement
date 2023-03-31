@@ -1,44 +1,44 @@
 ==============================================================================
-20230331 13:48:53.464 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20230331 16:51:44.941 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20230331 13:48:53.472 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20230331 13:48:53.495 - INFO - Set suite metadata 'project' to value 'Generic'.
-20230331 13:48:53.496 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230331 13:48:53.497 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230331 13:48:53.498 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230331 13:48:53.498 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230331 13:48:53.498 - INFO - Set suite metadata 'version_sw' to value ''.
-20230331 13:48:53.498 - INFO - Set suite metadata 'version_hw' to value ''.
-20230331 13:48:53.498 - INFO - Set suite metadata 'version_test' to value ''.
-20230331 13:48:53.499 - INFO - ${CONFIG} = {'Project': 'Generic', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'version': {'majorversion': '0', 'minorversion': '6', 'pa...
-20230331 13:48:53.499 - WARN - Running with configuration level 4! 
+20230331 16:51:44.948 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20230331 16:51:44.973 - INFO - Set suite metadata 'project' to value 'Generic'.
+20230331 16:51:44.973 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230331 16:51:44.975 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230331 16:51:44.975 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230331 16:51:44.975 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230331 16:51:44.975 - INFO - Set suite metadata 'version_sw' to value ''.
+20230331 16:51:44.975 - INFO - Set suite metadata 'version_hw' to value ''.
+20230331 16:51:44.975 - INFO - Set suite metadata 'version_test' to value ''.
+20230331 16:51:44.976 - INFO - ${CONFIG} = {'Project': 'Generic', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'version': {'majorversion': '0', 'minorversion': '6', 'pa...
+20230331 16:51:44.976 - WARN - Running with configuration level 4! 
 Selected configuration file 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'
-20230331 13:48:53.500 - INFO - Robot Framework AIO version check passed!
-20230331 13:48:53.500 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230331 13:48:53.500 - INFO - CfgFile Path: 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'
-20230331 13:48:53.500 - INFO - Number of test suites: 1
-20230331 13:48:53.500 - INFO - Total number of testcases: 1
-20230331 13:48:53.500 - INFO - +- END SETUP: tm.Testsuite Setup (28)
+20230331 16:51:44.977 - INFO - Robot Framework AIO version check passed!
+20230331 16:51:44.977 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230331 16:51:44.977 - INFO - CfgFile Path: 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'
+20230331 16:51:44.977 - INFO - Number of test suites: 1
+20230331 16:51:44.977 - INFO - Total number of testcases: 1
+20230331 16:51:44.977 - INFO - +- END SETUP: tm.Testsuite Setup (29)
 ------------------------------------------------------------------------------
-20230331 13:48:53.500 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20230331 16:51:44.977 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20230331 13:48:53.501 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230331 13:48:53.501 - INFO - Test Count: 1
-20230331 13:48:53.502 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230331 16:51:44.978 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230331 16:51:44.978 - INFO - Test Count: 1
+20230331 16:51:44.979 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:48:53.502 - INFO - +-- START KEYWORD: BuiltIn.Log [ tsm-testfile-01 | console=yes ]
-20230331 13:48:53.502 - INFO - tsm-testfile-01
-20230331 13:48:53.503 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230331 16:51:44.979 - INFO - +-- START KEYWORD: BuiltIn.Log [ tsm-testfile-01 | console=yes ]
+20230331 16:51:44.979 - INFO - tsm-testfile-01
+20230331 16:51:44.982 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:48:53.503 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230331 13:48:53.503 - INFO - testcase_teardown: Will be implemented later
-20230331 13:48:53.503 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230331 16:51:44.982 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230331 16:51:44.983 - INFO - testcase_teardown: Will be implemented later
+20230331 16:51:44.983 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20230331 13:48:53.504 - INFO - +- END TEST: Test Case tsm-testfile-01 (3)
+20230331 16:51:44.984 - INFO - +- END TEST: Test Case tsm-testfile-01 (6)
 ------------------------------------------------------------------------------
-20230331 13:48:53.505 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230331 13:48:53.505 - INFO - testsuite_teardown: Will be implemented later
-20230331 13:48:53.505 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230331 16:51:44.985 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230331 16:51:44.985 - INFO - testsuite_teardown: Will be implemented later
+20230331 16:51:44.985 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230331 13:48:53.507 - INFO - + END SUITE: Tsm-Testfile-01 (146)
+20230331 16:51:44.990 - INFO - + END SUITE: Tsm-Testfile-01 (153)
 ==============================================================================

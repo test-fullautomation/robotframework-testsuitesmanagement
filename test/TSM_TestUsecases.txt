@@ -191,6 +191,16 @@ Description: Variant with multiple nested configuration files; cyclic import of 
 Expectation: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0251 / NESTED_CONFIG / BADCASE
+Description: Assignment of unknown dictionary key in imported JSON configuration file
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0252 / NESTED_CONFIG / BADCASE
+Description: Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0350 / SCHEMA_VALIDATION / BADCASE
 Description: Schema file for JSON configuration files is not available
 Expectation: Test is not executed; error message; test result is UNKNOWN
@@ -278,14 +288,14 @@ Expectation: Test is not executed; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0557 / ROBOT_CODE / BADCASE
-Description: Assignment of unknown parameter in test code of robot file
+Description: Assignment of unknown dictionary key in test code of robot file
 Expectation: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0558 / ROBOT_CODE / BADCASE
-Description: Assignment of parameter to unknown dictionary subkey in test code of robot file
+Description: Assignment of known parameter to unknown dictionary subkey in test code of robot file
 Expectation: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 31.03.2023 - 13:48:45
+Generated: 31.03.2023 - 16:52:41
 

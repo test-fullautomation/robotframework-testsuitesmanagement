@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230331 13:48:59.273" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230331 16:51:50.772" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230331 13:48:59.416" level="ERROR">The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
+<msg timestamp="20230331 16:51:50.920" level="ERROR">The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
 </msg>
-<msg timestamp="20230331 13:48:59.417" level="UNKNOWN">JSON schema validation failed!</msg>
-<status status="UNKNOWN" starttime="20230331 13:48:59.386" endtime="20230331 13:48:59.417"/>
+<msg timestamp="20230331 16:51:50.921" level="UNKNOWN">JSON schema validation failed!</msg>
+<status status="UNKNOWN" starttime="20230331 16:51:50.892" endtime="20230331 16:51:50.921"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230331 13:48:59.417" endtime="20230331 13:48:59.418">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230331 16:51:50.921" endtime="20230331 16:51:50.922">Parent suite setup unknown:
 JSON schema validation failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230331 13:48:59.421" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230331 13:48:59.421" endtime="20230331 13:48:59.421"/>
+<msg timestamp="20230331 16:51:50.926" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230331 16:51:50.926" endtime="20230331 16:51:50.926"/>
 </kw>
-<status status="UNKNOWN" starttime="20230331 13:48:59.278" endtime="20230331 13:48:59.421">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230331 16:51:50.778" endtime="20230331 16:51:50.926">Suite setup unknown:
 JSON schema validation failed!</status>
 </suite>
 <statistics>
@@ -35,7 +35,7 @@ JSON schema validation failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230331 13:48:59.416" level="ERROR">The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
+<msg timestamp="20230331 16:51:50.920" level="ERROR">The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
 </msg>
 </errors>
 </robot>

@@ -1,0 +1,19 @@
+==============================================================================
+20230331 16:52:03.801 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20230331 16:52:03.809 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230331 16:52:03.834 - ERROR - Loading of JSON configuration file failed! Reason: The variable 'params['global']['dTestDict']['I-am-not-existing']' is not available!
+20230331 16:52:03.835 - UNKNOWN - Loading of JSON configuration file failed!
+20230331 16:52:03.835 - DEBUG - Loading of JSON configuration file failed!
+20230331 16:52:03.835 - INFO - +- END SETUP: tm.Testsuite Setup (26)
+------------------------------------------------------------------------------
+20230331 16:52:03.835 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20230331 16:52:03.849 - INFO - +- END TEST: Test Case tsm-testfile-02 (7)
+------------------------------------------------------------------------------
+20230331 16:52:03.850 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230331 16:52:03.850 - INFO - testsuite_teardown: Will be implemented later
+20230331 16:52:03.850 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+==============================================================================
+20230331 16:52:03.853 - INFO - + END SUITE: Tsm-Testfile-02 (153)
+==============================================================================

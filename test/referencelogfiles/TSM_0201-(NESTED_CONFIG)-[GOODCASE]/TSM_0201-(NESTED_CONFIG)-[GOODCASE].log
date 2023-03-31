@@ -1,208 +1,208 @@
 ==============================================================================
-20230331 13:49:11.119 - INFO - + START SUITE: Tsm-Testfile-04 [ ]
+20230331 16:52:02.648 - INFO - + START SUITE: Tsm-Testfile-04 [ ]
 ==============================================================================
-20230331 13:49:11.119 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230331 13:49:11.163 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
-20230331 13:49:11.163 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230331 13:49:11.178 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230331 13:49:11.178 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230331 13:49:11.178 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230331 13:49:11.178 - INFO - Set suite metadata 'version_sw' to value ''.
-20230331 13:49:11.178 - INFO - Set suite metadata 'version_hw' to value ''.
-20230331 13:49:11.178 - INFO - Set suite metadata 'version_test' to value ''.
-20230331 13:49:11.178 - INFO - ${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test
-20230331 13:49:11.178 - INFO - ${int_val} = 123
-20230331 13:49:11.178 - INFO - ${float_val} = 4.56
-20230331 13:49:11.178 - INFO - ${bool_val_1} = True
-20230331 13:49:11.178 - INFO - ${bool_val_2} = True
-20230331 13:49:11.178 - INFO - ${bool_val_3} = False
-20230331 13:49:11.178 - INFO - ${bool_val_4} = False
-20230331 13:49:11.178 - INFO - ${none_val} = None
-20230331 13:49:11.178 - INFO - ${null_val} = None
-20230331 13:49:11.178 - INFO - ${certain_teststring} = updated value of certain teststring (2.1.1)
-20230331 13:49:11.178 - INFO - ${list_val} = ['updated list', 1, 2.2, 'A', True, True, False, False, None, None]
-20230331 13:49:11.178 - INFO - ${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...
-20230331 13:49:11.194 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230331 13:49:11.209 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230331 13:49:11.209 - INFO - ${I_am_a_new_int} = 123
-20230331 13:49:11.209 - INFO - ${I_am_a_new_str} = I am a new str value (2.1.1)
-20230331 13:49:11.209 - INFO - ${I_am_a_new_None} = None
-20230331 13:49:11.209 - INFO - ${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}
-20230331 13:49:11.209 - INFO - ${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']
-20230331 13:49:11.209 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_1']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_111']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_112']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_113']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_2']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_211']' is updated
-20230331 13:49:11.209 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_212']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_213']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_214']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']['subsubkey_221']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']['subsubkey_222']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['dotted.key.name']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['certain_teststring']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['list_val']' is updated
-20230331 13:49:11.219 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['I_am_a_new_key']' is updated
-20230331 13:49:11.219 - INFO - Running with configuration level 2
-20230331 13:49:11.219 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.2.json'
-20230331 13:49:11.219 - INFO - Robot Framework AIO version check passed!
-20230331 13:49:11.219 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230331 13:49:11.219 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.2.json'
-20230331 13:49:11.219 - INFO - Number of test suites: 1
-20230331 13:49:11.219 - INFO - Total number of testcases: 1
-20230331 13:49:11.219 - INFO - +- END SETUP: tm.Testsuite Setup (100)
+20230331 16:52:02.656 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230331 16:52:02.697 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
+20230331 16:52:02.697 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230331 16:52:02.699 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230331 16:52:02.700 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230331 16:52:02.700 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230331 16:52:02.700 - INFO - Set suite metadata 'version_sw' to value ''.
+20230331 16:52:02.700 - INFO - Set suite metadata 'version_hw' to value ''.
+20230331 16:52:02.700 - INFO - Set suite metadata 'version_test' to value ''.
+20230331 16:52:02.701 - INFO - ${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test
+20230331 16:52:02.701 - INFO - ${int_val} = 123
+20230331 16:52:02.702 - INFO - ${float_val} = 4.56
+20230331 16:52:02.702 - INFO - ${bool_val_1} = True
+20230331 16:52:02.703 - INFO - ${bool_val_2} = True
+20230331 16:52:02.704 - INFO - ${bool_val_3} = False
+20230331 16:52:02.704 - INFO - ${bool_val_4} = False
+20230331 16:52:02.705 - INFO - ${none_val} = None
+20230331 16:52:02.706 - INFO - ${null_val} = None
+20230331 16:52:02.706 - INFO - ${certain_teststring} = updated value of certain teststring (2.1.1)
+20230331 16:52:02.707 - INFO - ${list_val} = ['updated list', 1, 2.2, 'A', True, True, False, False, None, None]
+20230331 16:52:02.708 - INFO - ${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...
+20230331 16:52:02.728 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230331 16:52:02.729 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230331 16:52:02.733 - INFO - ${I_am_a_new_int} = 123
+20230331 16:52:02.734 - INFO - ${I_am_a_new_str} = I am a new str value (2.1.1)
+20230331 16:52:02.735 - INFO - ${I_am_a_new_None} = None
+20230331 16:52:02.736 - INFO - ${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}
+20230331 16:52:02.736 - INFO - ${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']
+20230331 16:52:02.737 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_1']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_111']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_112']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_1']['subkey_11']['subsubkey_113']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_2']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_211']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_212']' is updated
+20230331 16:52:02.737 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_213']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_21']['subsubkey_214']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']['subsubkey_221']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_22']['subsubkey_222']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['dotted.key.name']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['certain_teststring']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['list_val']' is updated
+20230331 16:52:02.738 - INFO - The parameter 'params['global']['dict_val']['key_2']['subkey_23']['I_am_a_new_key']' is updated
+20230331 16:52:02.738 - INFO - Running with configuration level 2
+20230331 16:52:02.738 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.2.json'
+20230331 16:52:02.738 - INFO - Robot Framework AIO version check passed!
+20230331 16:52:02.738 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230331 16:52:02.738 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_nested.2.json'
+20230331 16:52:02.738 - INFO - Number of test suites: 1
+20230331 16:52:02.738 - INFO - Total number of testcases: 1
+20230331 16:52:02.739 - INFO - +- END SETUP: tm.Testsuite Setup (82)
 ------------------------------------------------------------------------------
-20230331 13:49:11.219 - INFO - +- START TEST: Test Case tsm-testfile-04 [ ]
+20230331 16:52:02.739 - INFO - +- START TEST: Test Case tsm-testfile-04 [ ]
 ------------------------------------------------------------------------------
-20230331 13:49:11.219 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230331 13:49:11.219 - INFO - Test Count: 1
-20230331 13:49:11.219 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230331 16:52:02.740 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230331 16:52:02.740 - INFO - Test Count: 1
+20230331 16:52:02.741 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.WelcomeString} | PARAMS-VERIFIKATION : (CONFIG.WelcomeString) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : (CONFIG.WelcomeString) : [STR]  :  'Hello... Robot Framework is running now!'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.741 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.WelcomeString} | PARAMS-VERIFIKATION : (CONFIG.WelcomeString) ]
+20230331 16:52:02.741 - INFO - PARAMS-VERIFIKATION : (CONFIG.WelcomeString) : [STR]  :  'Hello... Robot Framework is running now!'
+20230331 16:52:02.742 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'RobotFramework Testsuites'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.742 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230331 16:52:02.742 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'RobotFramework Testsuites'
+20230331 16:52:02.743 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.TargetName} | PARAMS-VERIFIKATION : (CONFIG.TargetName) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : (CONFIG.TargetName) : [STR]  :  'Device_01'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.743 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.TargetName} | PARAMS-VERIFIKATION : (CONFIG.TargetName) ]
+20230331 16:52:02.743 - INFO - PARAMS-VERIFIKATION : (CONFIG.TargetName) : [STR]  :  'Device_01'
+20230331 16:52:02.744 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[WelcomeString] | PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString]) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString]) : [STR]  :  'Hello... Robot Framework is running now!'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.744 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[WelcomeString] | PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString]) ]
+20230331 16:52:02.744 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString]) : [STR]  :  'Hello... Robot Framework is running now!'
+20230331 16:52:02.745 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[Project] | PARAMS-VERIFIKATION : ({CONFIG}[Project]) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[Project]) : [STR]  :  'RobotFramework Testsuites'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.745 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[Project] | PARAMS-VERIFIKATION : ({CONFIG}[Project]) ]
+20230331 16:52:02.745 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[Project]) : [STR]  :  'RobotFramework Testsuites'
+20230331 16:52:02.746 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[TargetName] | PARAMS-VERIFIKATION : ({CONFIG}[TargetName]) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[TargetName]) : [STR]  :  'Device_01'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.746 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[TargetName] | PARAMS-VERIFIKATION : ({CONFIG}[TargetName]) ]
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[TargetName]) : [STR]  :  'Device_01'
+20230331 16:52:02.746 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG} | PARAMS-VERIFIKATION : ({CONFIG}) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/1) > {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '1.0.0'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/3) > {Minimum_version} [STR]  :  '0.6.0'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/4) > {Project} [STR]  :  'RobotFramework Testsuites'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/5) > {TargetName} [STR]  :  'Device_01'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/6) > {params} [DOTDICT]  :  {}
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.746 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG} | PARAMS-VERIFIKATION : ({CONFIG}) ]
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/1) > {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '1.0.0'
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/3) > {Minimum_version} [STR]  :  '0.6.0'
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/4) > {Project} [STR]  :  'RobotFramework Testsuites'
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/5) > {TargetName} [STR]  :  'Device_01'
+20230331 16:52:02.746 - INFO - PARAMS-VERIFIKATION : ({CONFIG}) : [DOTDICT] (6/6) > {params} [DOTDICT]  :  {}
+20230331 16:52:02.747 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val} | PARAMS-VERIFIKATION : ({dict_val}) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/1) > {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/2) > {subsubkey_112} [INT]  :  123
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/3) > {subsubkey_113} [FLOAT]  :  4.56
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/1) > {subsubkey_211} [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/2) > {subsubkey_212} [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/3) > {subsubkey_213} [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/4) > {subsubkey_214} [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/1) > {subsubkey_221} [NONE]  :  None
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/2) > {subsubkey_222} [NONE]  :  None
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/1) > {subsubkey_231} [STR]  :  'initial value of certain teststring'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/1) > [STR]  :  'initial list'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/2) > [INT]  :  1
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/3) > [FLOAT]  :  2.2
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/4) > [STR]  :  'A'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/5) > [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/6) > [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/7) > [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/8) > [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/9) > [NONE]  :  None
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/10) > [NONE]  :  None
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/3) > {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/4) > {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.747 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val} | PARAMS-VERIFIKATION : ({dict_val}) ]
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/1) > {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/2) > {subsubkey_112} [INT]  :  123
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/3) > {subsubkey_113} [FLOAT]  :  4.56
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/1) > {subsubkey_211} [BOOL]  :  True
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/2) > {subsubkey_212} [BOOL]  :  True
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/3) > {subsubkey_213} [BOOL]  :  False
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/4) > {subsubkey_214} [BOOL]  :  False
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/1) > {subsubkey_221} [NONE]  :  None
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/2) > {subsubkey_222} [NONE]  :  None
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/1) > {subsubkey_231} [STR]  :  'initial value of certain teststring'
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/1) > [STR]  :  'initial list'
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/2) > [INT]  :  1
+20230331 16:52:02.747 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/3) > [FLOAT]  :  2.2
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/4) > [STR]  :  'A'
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/5) > [BOOL]  :  True
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/6) > [BOOL]  :  True
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/7) > [BOOL]  :  False
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/8) > [BOOL]  :  False
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/9) > [NONE]  :  None
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/2) > {subsubkey_232} [LIST] (10/10) > [NONE]  :  None
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/3) > {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'
+20230331 16:52:02.748 - INFO - PARAMS-VERIFIKATION : ({dict_val}) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (4/4) > {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'
+20230331 16:52:02.749 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val} | PARAMS-VERIFIKATION : ({list_val}) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/1) > [STR]  :  'updated list'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/2) > [INT]  :  1
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/3) > [FLOAT]  :  2.2
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/4) > [STR]  :  'A'
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/5) > [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/6) > [BOOL]  :  True
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/7) > [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/8) > [BOOL]  :  False
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/9) > [NONE]  :  None
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/10) > [NONE]  :  None
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.749 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val} | PARAMS-VERIFIKATION : ({list_val}) ]
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/1) > [STR]  :  'updated list'
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/2) > [INT]  :  1
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/3) > [FLOAT]  :  2.2
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/4) > [STR]  :  'A'
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/5) > [BOOL]  :  True
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/6) > [BOOL]  :  True
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/7) > [BOOL]  :  False
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/8) > [BOOL]  :  False
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/9) > [NONE]  :  None
+20230331 16:52:02.749 - INFO - PARAMS-VERIFIKATION : ({list_val}) : [LIST] (10/10) > [NONE]  :  None
+20230331 16:52:02.750 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${certain_teststring} | PARAMS-VERIFIKATION : ({certain_teststring}) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({certain_teststring}) : [STR]  :  'updated value of certain teststring (2.1.1)'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.750 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${certain_teststring} | PARAMS-VERIFIKATION : ({certain_teststring}) ]
+20230331 16:52:02.750 - INFO - PARAMS-VERIFIKATION : ({certain_teststring}) : [STR]  :  'updated value of certain teststring (2.1.1)'
+20230331 16:52:02.750 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val[0]} | PARAMS-VERIFIKATION : ({list_val[0]}) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({list_val[0]}) : [STR]  :  'updated list'
-20230331 13:49:11.219 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.751 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val[0]} | PARAMS-VERIFIKATION : ({list_val[0]}) ]
+20230331 16:52:02.751 - INFO - PARAMS-VERIFIKATION : ({list_val[0]}) : [STR]  :  'updated list'
+20230331 16:52:02.752 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.219 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_231] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231]) ]
-20230331 13:49:11.219 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231]) : [STR]  :  'initial value of certain teststring'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.752 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_231] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231]) ]
+20230331 16:52:02.752 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231]) : [STR]  :  'initial value of certain teststring'
+20230331 16:52:02.753 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_231} | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231}) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231}) : [STR]  :  'initial value of certain teststring'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.753 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_231} | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231}) ]
+20230331 16:52:02.753 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231}) : [STR]  :  'initial value of certain teststring'
+20230331 16:52:02.754 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0]) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0]) : [STR]  :  'initial list'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.754 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0]) ]
+20230331 16:52:02.754 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0]) : [STR]  :  'initial list'
+20230331 16:52:02.755 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0]) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0]) : [STR]  :  'initial list'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.755 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0]) ]
+20230331 16:52:02.755 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0]) : [STR]  :  'initial list'
+20230331 16:52:02.756 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name]) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name]) : [STR]  :  'updated dotted key name value (2.1.1)'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.756 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name]) ]
+20230331 16:52:02.756 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name]) : [STR]  :  'updated dotted key name value (2.1.1)'
+20230331 16:52:02.757 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23}[dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name]) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name]) : [STR]  :  'updated dotted key name value (2.1.1)'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.757 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23}[dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name]) ]
+20230331 16:52:02.757 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name]) : [STR]  :  'updated dotted key name value (2.1.1)'
+20230331 16:52:02.757 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_int} | PARAMS-VERIFIKATION : ({I_am_a_new_int}) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_int}) : [INT]  :  123
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.758 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_int} | PARAMS-VERIFIKATION : ({I_am_a_new_int}) ]
+20230331 16:52:02.758 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_int}) : [INT]  :  123
+20230331 16:52:02.758 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_str} | PARAMS-VERIFIKATION : ({I_am_a_new_str}) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_str}) : [STR]  :  'I am a new str value (2.1.1)'
-20230331 13:49:11.234 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.758 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_str} | PARAMS-VERIFIKATION : ({I_am_a_new_str}) ]
+20230331 16:52:02.759 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_str}) : [STR]  :  'I am a new str value (2.1.1)'
+20230331 16:52:02.759 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.234 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_None} | PARAMS-VERIFIKATION : ({I_am_a_new_None}) ]
-20230331 13:49:11.234 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_None}) : [NONE]  :  None
-20230331 13:49:11.241 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (7)
+20230331 16:52:02.759 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_None} | PARAMS-VERIFIKATION : ({I_am_a_new_None}) ]
+20230331 16:52:02.759 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_None}) : [NONE]  :  None
+20230331 16:52:02.760 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.241 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_dict} | PARAMS-VERIFIKATION : ({I_am_a_new_dict}) ]
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict}) : [DOTDICT] (2/1) > {new_dict_key_1} [STR]  :  'new_dict_key_1_value'
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict}) : [DOTDICT] (2/2) > {new_dict_key_2} [STR]  :  'new_dict_key_2_value'
-20230331 13:49:11.241 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.760 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_dict} | PARAMS-VERIFIKATION : ({I_am_a_new_dict}) ]
+20230331 16:52:02.760 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict}) : [DOTDICT] (2/1) > {new_dict_key_1} [STR]  :  'new_dict_key_1_value'
+20230331 16:52:02.760 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict}) : [DOTDICT] (2/2) > {new_dict_key_2} [STR]  :  'new_dict_key_2_value'
+20230331 16:52:02.760 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.241 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_list} | PARAMS-VERIFIKATION : ({I_am_a_new_list}) ]
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/1) > [STR]  :  'I'
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/2) > [STR]  :  'am'
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/3) > [STR]  :  'a'
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/4) > [STR]  :  'new'
-20230331 13:49:11.241 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/5) > [STR]  :  'list'
-20230331 13:49:11.241 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230331 16:52:02.760 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_list} | PARAMS-VERIFIKATION : ({I_am_a_new_list}) ]
+20230331 16:52:02.761 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/1) > [STR]  :  'I'
+20230331 16:52:02.761 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/2) > [STR]  :  'am'
+20230331 16:52:02.761 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/3) > [STR]  :  'a'
+20230331 16:52:02.761 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/4) > [STR]  :  'new'
+20230331 16:52:02.761 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list}) : [LIST] (5/5) > [STR]  :  'list'
+20230331 16:52:02.761 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230331 13:49:11.241 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230331 13:49:11.241 - INFO - testcase_teardown: Will be implemented later
-20230331 13:49:11.241 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230331 16:52:02.761 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230331 16:52:02.761 - INFO - testcase_teardown: Will be implemented later
+20230331 16:52:02.762 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20230331 13:49:11.241 - INFO - +- END TEST: Test Case tsm-testfile-04 (22)
+20230331 16:52:02.763 - INFO - +- END TEST: Test Case tsm-testfile-04 (23)
 ------------------------------------------------------------------------------
-20230331 13:49:11.241 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230331 13:49:11.241 - INFO - testsuite_teardown: Will be implemented later
-20230331 13:49:11.241 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230331 16:52:02.764 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230331 16:52:02.764 - INFO - testsuite_teardown: Will be implemented later
+20230331 16:52:02.764 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230331 13:49:11.241 - INFO - + END SUITE: Tsm-Testfile-04 (237)
+20230331 16:52:02.766 - INFO - + END SUITE: Tsm-Testfile-04 (232)
 ==============================================================================

@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 31.03.2023 - 13:48:45
+# 31.03.2023 - 16:52:41
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -37,5 +37,23 @@ class Test_NESTED_CONFIG_BADCASE:
    )
    def test_TSM_0250(self, Description):
       nReturn = CExecute.Execute("TSM_0250")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Assignment of unknown dictionary key in imported JSON configuration file",]
+   )
+   def test_TSM_0251(self, Description):
+      nReturn = CExecute.Execute("TSM_0251")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file",]
+   )
+   def test_TSM_0252(self, Description):
+      nReturn = CExecute.Execute("TSM_0252")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

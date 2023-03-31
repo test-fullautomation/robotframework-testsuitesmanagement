@@ -36,14 +36,13 @@
 # "tsm-testfile-06-err-2.robot"   # (with variant configuration; JSON file contains not existing file and folder)
 # "tsm-testfile-07-err-3.robot"   # (with variant configuration; missing "default" variant)
 # "tsm-testfile-08-fail.robot"    # (with variant configuration; keyword FAIL)
-# "tsm-testfile-09-state_unknown.robot"   # (with variant configuration and call of keyword UNKNOWN)
-# "tsm-testfile-10-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
+# "tsm-testfile-09-state_unknown.robot"        # (with variant configuration and call of keyword UNKNOWN)
+# "tsm-testfile-10-unknown_keyword.robot"      # (with variant configuration and call of not existing keyword)
 # "tsm-testfile-11-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
 # "tsm-testfile-12-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
+# "tsm-testfile-13-unknown_library.robot"      # (with variant configuration and import of unknown library)
 # "tsm-testfile-14-unknown_parameter_1.robot"  # (with variant configuration and assignment of unknown dictionary key)
 # "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
-
-# "tsm-testfile-13-unknown_library.robot" # (with variant configuration and import of unknown library)
 
 # --------------------------------------------------------------------------------------------------------------
 
@@ -557,6 +556,34 @@ dictUsecase['EXPECTEDRETURN']   = 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0251"
+dictUsecase['DESCRIPTION']      = "Assignment of unknown dictionary key in imported JSON configuration file"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "NESTED_CONFIG"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"invalid_assignment_1\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0252"
+dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "NESTED_CONFIG"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"invalid_assignment_2\""
+dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0350"
@@ -805,7 +832,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0557"
-dictUsecase['DESCRIPTION']      = "Assignment of unknown parameter in test code of robot file"
+dictUsecase['DESCRIPTION']      = "Assignment of unknown dictionary key in test code of robot file"
 dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
 dictUsecase['SECTION']          = "ROBOT_CODE"
 dictUsecase['SUBSECTION']       = "BADCASE"
@@ -819,7 +846,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0558"
-dictUsecase['DESCRIPTION']      = "Assignment of parameter to unknown dictionary subkey in test code of robot file"
+dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkey in test code of robot file"
 dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
 dictUsecase['SECTION']          = "ROBOT_CODE"
 dictUsecase['SUBSECTION']       = "BADCASE"
