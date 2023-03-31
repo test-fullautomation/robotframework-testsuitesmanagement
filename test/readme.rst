@@ -46,7 +46,7 @@ The log files of the test execution can be found in folder
 
 Caution:
 
-  The complete log files folder testlogfiles will be deleted at the beginning of every component test execution.
+  The complete log files folder ``testlogfiles`` will be deleted at the beginning of every component test execution.
   Do not place any manually generated content here.
 
 Per default all test cases defined in ``TestConfig.py``, are executed. Alternatively a single test case can
@@ -180,7 +180,9 @@ Web application support
 Test results can be shown on a database supported web page. The software that is required to enable this, can be found here:
 
 `https://github.com/test-fullautomation/testresultwebapp <https://github.com/test-fullautomation/testresultwebapp>`_
+
 `https://github.com/test-fullautomation/python-pytestlog2db <https://github.com/test-fullautomation/python-pytestlog2db>`_ (``pytestlog2db.py``)
+
 `https://github.com/test-fullautomation/robotframework-robotlog2db <https://github.com/test-fullautomation/robotframework-robotlog2db>`_ (``robotlog2db.py``)
 
 The ``testresultwebapp`` provides the web page (a so called dashboard displaying the results), ``pytestlog2db.py`` writes test results
@@ -192,7 +194,7 @@ of the Robot Framework. The problem now is: We cannot let ``robotlog2db.py`` wri
 immediately - because the decision if a test case was successful or not, is not made inside these log files. This decision is made
 one level higher (within the component test script ``component_test.py``).
 
-Therefore we need a possibility to create a new XML result file that contain the results of this component test and can be computed
+Therefore we need a possibility to create a new XML result file that contain all test case results of this component test and can be computed
 by one of the ``2db`` applications.
 
 This is realized in the following way:
@@ -204,7 +206,7 @@ With the command line option
    --codedump
 
 ``component_test.py`` creates for every combination of ``SECTION`` and ``SUBSECTION`` a ``pytest`` file containing all test cases belonging to this
-combination. Every test case inside these ``pytest`` files does nothing else than calling ``component_test.py`` with the test id of this test case.
+combination. Every test case inside these ``pytest`` files does nothing else than calling ``component_test.py`` with the ``TESTID`` of this test case.
 Therefore the same code is executed, but because of the Python ``pytest`` module is involved now, we have an XML result log file in
 ``pytest`` format available. And this XML file can be computed by ``pytestlog2db.py``.
 
@@ -288,7 +290,7 @@ Advanced features: PRESTEP and POSTSTEP
 It might be required to do some certain things before a test case is executed and also after the execution.
 
 For example a test case requires an environment variable. This environment variable has to be created before the execution
-and to be removed afterthe execution.
+and to be removed after the execution.
 
 For every additional step a separate function is required that has to be implemented in
 
@@ -298,8 +300,10 @@ For every additional step a separate function is required that has to be impleme
 
 Inside ``TestConfig.py`` where all test acses are configured, the execution of these additional steps can be triggered in this way:
 
-dictUsecase['PRESTEP']  = "LocalConfigEnvVar_Create"
-dictUsecase['POSTSTEP'] = "LocalConfigEnvVar_Delete"
+.. code::
+
+   dictUsecase['PRESTEP']  = "LocalConfigEnvVar_Create"
+   dictUsecase['POSTSTEP'] = "LocalConfigEnvVar_Delete"
 
 With ``LocalConfigEnvVar_Create`` and ``LocalConfigEnvVar_Delete`` are the function names.
 
