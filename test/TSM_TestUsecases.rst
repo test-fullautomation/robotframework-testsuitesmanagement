@@ -691,5 +691,17 @@ Test Use Cases
 
 ----
 
-Generated: 03.04.2023 - 13:58:56
+* **Test TSM_0600**
+
+  [RETURN_VALUE / GOODCASE]
+
+   **Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)**
+
+   Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 03.04.2023 - 18:06:03
 

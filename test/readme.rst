@@ -207,7 +207,7 @@ Such indicator strings have to be listed in this file:
 
    testconfig/tsm_test_ignore_pattern_TXT.txt
 
-Every line in the current log file that contains one of the *ignore* patterns in this file, will be skipped during both
+Every line in the current log file that contains one of the *ignore* patterns in this ignore pattern file, will be skipped during both
 the log file pre check and the log file comparison.
 
 The content is interpreted as string (**not** as regular expression) and is applied to the debug log file in TXT format only
@@ -269,7 +269,7 @@ Call of a single test case in command line:
 
 .. code::
 
-   component_test.py --testid="TSM_00001"
+   component_test.py --testid="TSM_0001"
 
 Corresponding ``pytest`` file containing the call of this test:
 

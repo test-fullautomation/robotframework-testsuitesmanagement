@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 31.03.2023
+# 03.04.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -43,6 +43,7 @@
 # "tsm-testfile-13-unknown_library.robot"      # (with variant configuration and import of unknown library)
 # "tsm-testfile-14-unknown_parameter_1.robot"  # (with variant configuration and assignment of unknown dictionary key)
 # "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
+# "tsm-testfile-16-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 
 # --------------------------------------------------------------------------------------------------------------
 
@@ -858,6 +859,50 @@ dictUsecase['EXPECTEDRETURN']   = 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0600"
+dictUsecase['DESCRIPTION']      = "Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)"
+dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
+dictUsecase['SECTION']          = "RETURN_VALUE"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-16-several_tests.robot" # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 1027
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------
+
+# Computation of return values:
+# =============================
+
+# failed  = min(failed, 250)
+# unknown = min(unknown, 250)
+
+# ret_val = (unknown_test << 8) | failed_test
+
+# failed  = ret_val & 0xff
+# unknown = (ret_val >> 8) & 0xff
+
+# -----------------------------
+
+# failed  : 0
+# unknown : 1
+# ret_val : 256
+
+# failed  : 3
+# unknown : 4
+# ret_val : 1027
+
+# --------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 

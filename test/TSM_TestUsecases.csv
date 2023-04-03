@@ -56,3 +56,4 @@ TSM_0555|ROBOT_CODE|BADCASE|Incomplete keyword 'IF/ELSE' in test code of robot f
 TSM_0556|ROBOT_CODE|BADCASE|Import of not existing library in robot file
 TSM_0557|ROBOT_CODE|BADCASE|Assignment of unknown dictionary key in test code of robot file
 TSM_0558|ROBOT_CODE|BADCASE|Assignment of known parameter to unknown dictionary subkey in test code of robot file
+TSM_0600|RETURN_VALUE|GOODCASE|Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)
