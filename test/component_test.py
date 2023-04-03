@@ -499,6 +499,7 @@ for dictUsecase in listofdictUsecases:
             print(COLBY + "passed")
             print()
             print(COLBY + f"    Test '{TESTFULLNAME}': log file checks passed") # related to both: (1/2) and (2/2) !!!
+            print()
          else:
             print()
             printerror(sResult) # without FormatResult!
@@ -522,7 +523,6 @@ for dictUsecase in listofdictUsecases:
 
    # -- if nothing went wrong up to here, the test is passed:
    nCntPassedUsecases = nCntPassedUsecases + 1
-   print()
    print(COLBG + f"    Test '{TESTFULLNAME}' passed")
    print()
    oSelfTestLogFile.Write("Result: PASSED", 1)
