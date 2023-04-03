@@ -146,6 +146,7 @@ PYTHONVERSION  = oConfig.Get('PYTHONVERSION')
 
 PATTERNFILE_TXT         = oConfig.Get('PATTERNFILE_TXT')
 PATTERNFILE_XML         = oConfig.Get('PATTERNFILE_XML')
+IGNOREPATTERNFILE_TXT   = oConfig.Get('IGNOREPATTERNFILE_TXT')
 TESTFILESFOLDER         = oConfig.Get('TESTFILESFOLDER')
 TESTLOGFILESFOLDER      = oConfig.Get('TESTLOGFILESFOLDER')
 SELFTESTLOGFILE         = oConfig.Get('SELFTESTLOGFILE')
@@ -449,11 +450,12 @@ for dictUsecase in listofdictUsecases:
       print(COLBY + "Log file check 1/2: debug log file in text format")
       print()
 
-      bIdentical, bSuccess, sResult = oComparison.Compare(TESTLOGFILE_TXT, REFERENCELOGFILE_TXT, sPatternFile=PATTERNFILE_TXT)
+      bIdentical, bSuccess, sResult = oComparison.Compare(TESTLOGFILE_TXT, REFERENCELOGFILE_TXT, sPatternFile=PATTERNFILE_TXT, sIgnorePatternFile=IGNOREPATTERNFILE_TXT)
 
       print(f"(1) Test log file      : {TESTLOGFILE_TXT}")
       print(f"(2) Reference log file : {REFERENCELOGFILE_TXT}")
       print(f"(3) Pattern file       : {PATTERNFILE_TXT}")
+      print(f"(3) 'Ignore' pattern   : {IGNOREPATTERNFILE_TXT}")
       print()
 
       if bSuccess is not True:
