@@ -25,13 +25,21 @@ Table of content
 ----------------
 
 `Execution`_
+
 `Test case results`_
+
 `Naming conventions`_
+
 `Log file pre check`_
+
 `Log file comparison`_
+
 `Ignore pattern`_
+
 `Web application support`_
+
 `Test case documentation`_
+
 `Advanced features: PRESTEP and POSTSTEP`_
 
 ----
