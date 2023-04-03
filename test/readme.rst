@@ -21,6 +21,21 @@ XC-CT/ECA3-Queckenstedt
 
 ----
 
+Table of content
+----------------
+
+`Execution`_
+`Test case results`_
+`Naming conventions`_
+`Log file pre check`_
+`Log file comparison`_
+`Ignore pattern`_
+`Web application support`_
+`Test case documentation`_
+`Advanced features: PRESTEP and POSTSTEP`_
+
+----
+
 Execution
 ---------
 
@@ -61,6 +76,8 @@ The ``TESTID`` is part of the test case configuration in ``TestConfig.py``.
 Another possibility is available to execute the component test (under ``pytest`` conditions). This is
 described in one of the next parts of this readme.
 
+TOC_
+
 ----
 
 Test case results
@@ -79,6 +96,8 @@ the current test log file and the reference log file, the result of the test cas
 
 The return value of ``component_test.py`` is 0 in case of all test cases are ``PASSED`` (and no internal
 errors happened), otherwise 1 (the return value currently does not distinguish between FAILED and UNKNOWN).
+
+TOC_
 
 ----
 
@@ -113,6 +132,8 @@ The log files of this test case are placed within a folder with the same name.
 To ensure an unique look&feel of all names, the content of ``SECTION`` and ``SUBSECTION`` should be written in
 capital letters only (with the underline as separator character).
 
+TOC_
+
 ----
 
 Log file pre check
@@ -129,6 +150,8 @@ The forbidden patterns have to be listed in this file:
 
 The content is interpreted as string (**not** as regular expression) and is applied to the debug log file in TXT format only
 (and not also to the XML log file).
+
+TOC_
 
 ----
 
@@ -193,6 +216,8 @@ is defined) with the optional
 
 as part of the definition.
 
+TOC_
+
 ----
 
 Ignore pattern
@@ -212,6 +237,8 @@ the log file pre check and the log file comparison.
 
 The content is interpreted as string (**not** as regular expression) and is applied to the debug log file in TXT format only
 (and not also to the XML log file).
+
+TOC_
 
 ----
 
@@ -297,6 +324,8 @@ The ``pytest`` XML log file can be found here:
 
    pytest/logfiles/PyTestLog.xml
 
+TOC_
+
 ----
 
 Test case documentation
@@ -322,6 +351,8 @@ test case overview lists in the following formats:
    TSM_TestUsecases.html
    TSM_TestUsecases.rst
    TSM_TestUsecases.txt
+
+TOC_
 
 ----
 
@@ -350,3 +381,4 @@ With ``LocalConfigEnvVar_Create`` and ``LocalConfigEnvVar_Delete`` are the funct
 
 The usage of ``PRESTEP`` and ``POSTSTEP`` is optional.
 
+.. _TOC: `Table of content`_
