@@ -17,7 +17,7 @@ Component test of RobotFramework_TestsuitesManagement
 
 XC-CT/ECA3-Queckenstedt
 
-31.03.2023
+03.04.2023
 
 ----
 
@@ -66,15 +66,19 @@ described in one of the next parts of this readme.
 Test case results
 -----------------
 
-The result of a single test case depends on the return value of the Robot Framework (like defined
-with ``EXPECTEDRETURN`` in ``TestConfig.py``) and on the result of a log file comparison.
-If both is passed, the result of the test case is ``PASSED``. Otherwise: In case of internal errors
+The result of a single test case depends on the following topics:
+
+* The return value of the Robot Framework (like defined with ``EXPECTEDRETURN`` in ``TestConfig.py``)
+* The result of a log file pre check searching for forbidden patterns (content that is **not** expected in log files)
+* The result of a log file comparison (of current log file with reference log file)
+
+If all is passed, the result of the test case is ``PASSED``. Otherwise: In case of internal errors
 the result of the test case is ``UNKNOWN``, in case of the return value is not like expected or in case
-of any deviation between the current test log files and the reference log files, the result of the
-test case is ``FAILED``.
+of any forbidden content has been found in the current log file or in case of a deviation is detected between
+the current test log file and the reference log file, the result of the test case is ``FAILED``.
 
 The return value of ``component_test.py`` is 0 in case of all test cases are ``PASSED`` (and no internal
-errors happened), otherwise 1.
+errors happened), otherwise 1 (the return value currently does not distinguish between FAILED and UNKNOWN).
 
 ----
 
@@ -108,6 +112,23 @@ The log files of this test case are placed within a folder with the same name.
 
 To ensure an unique look&feel of all names, the content of ``SECTION`` and ``SUBSECTION`` should be written in
 capital letters only (with the underline as separator character).
+
+----
+
+Log file pre check
+------------------
+
+The log file pre check searches in the current log file for entries that are **not** expected. In case of such a *forbidden*
+content has been found, the pre check fails.
+
+The forbidden patterns have to be listed in this file:
+
+.. code::
+
+   testconfig/tsm_test_not_pattern_TXT.txt
+
+The content is interpreted as string (**not** as regular expression) and is applied to the debug log file in TXT format only
+(and not also to the XML log file).
 
 ----
 
@@ -171,6 +192,26 @@ is defined) with the optional
    dictUsecase['LOGCOMPARE'] = False
 
 as part of the definition.
+
+----
+
+Ignore pattern
+--------------
+
+Some lines in the debug log file in TXT format contain redundant informations and are therefore irrelevant for this
+component test (especially lines indicating the start and the end of tests, setups, teardowns and keywords).
+
+Such indicator strings have to be listed in this file:
+
+.. code::
+
+   testconfig/tsm_test_ignore_pattern_TXT.txt
+
+Every line in the current log file that contains one of the *ignore* patterns in this file, will be skipped during both
+the log file pre check and the log file comparison.
+
+The content is interpreted as string (**not** as regular expression) and is applied to the debug log file in TXT format only
+(and not also to the XML log file).
 
 ----
 

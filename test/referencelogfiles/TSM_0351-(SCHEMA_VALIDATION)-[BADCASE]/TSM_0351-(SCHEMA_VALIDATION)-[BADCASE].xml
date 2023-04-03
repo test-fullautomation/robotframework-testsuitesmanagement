@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230331 16:52:05.277" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230403 13:57:04.206" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230331 16:52:05.419" level="ERROR">Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
+<msg timestamp="20230403 13:57:04.344" level="ERROR">Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
 </msg>
-<msg timestamp="20230331 16:52:05.420" level="UNKNOWN">Parse JSON schema file failed!</msg>
-<status status="UNKNOWN" starttime="20230331 16:52:05.392" endtime="20230331 16:52:05.420"/>
+<msg timestamp="20230403 13:57:04.345" level="UNKNOWN">Parse JSON schema file failed!</msg>
+<status status="UNKNOWN" starttime="20230403 13:57:04.319" endtime="20230403 13:57:04.345"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230331 16:52:05.420" endtime="20230331 16:52:05.421">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230403 13:57:04.345" endtime="20230403 13:57:04.346">Parent suite setup unknown:
 Parse JSON schema file failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230331 16:52:05.425" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230331 16:52:05.425" endtime="20230331 16:52:05.425"/>
+<msg timestamp="20230403 13:57:04.357" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230403 13:57:04.356" endtime="20230403 13:57:04.357"/>
 </kw>
-<status status="UNKNOWN" starttime="20230331 16:52:05.283" endtime="20230331 16:52:05.425">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230403 13:57:04.210" endtime="20230403 13:57:04.357">Suite setup unknown:
 Parse JSON schema file failed!</status>
 </suite>
 <statistics>
@@ -35,7 +35,7 @@ Parse JSON schema file failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230331 16:52:05.419" level="ERROR">Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
+<msg timestamp="20230403 13:57:04.344" level="ERROR">Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
 </msg>
 </errors>
 </robot>

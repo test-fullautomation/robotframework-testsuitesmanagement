@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 30.03.2023 / v. 0.1.0
+# 03.04.2023 / v. 0.1.0
 # initial prototype
 #
 # --------------------------------------------------------------------------------------------------------------
@@ -48,6 +48,7 @@ from libs.CConfig import CConfig
 from libs.CCodePatterns import CCodePatterns
 from libs.CAdditionalSteps import CAdditionalSteps
 from libs.CGenCode import CGenCode
+from libs.CTextCheck import CTextCheck
 
 from testconfig.TestConfig import *
 
@@ -206,6 +207,14 @@ nCntUsecases        = 0
 nCntPassedUsecases  = 0
 nCntFailedUsecases  = 0
 nCntUnknownUsecases = 0
+
+# -- initialize the text check module
+oTextCheck = None
+try:
+   oTextCheck = CTextCheck(oConfig)
+except Exception as ex:
+   printerror(CString.FormatResult(THISSCRIPTNAME, bSuccess=None, sResult=str(ex)))
+   sys.exit(ERROR)
 
 # -- initialize the comparison module
 # Maybe within the following loop we detect that LOGCOMPARE is False. But even so we want to create this class object only once,
@@ -371,9 +380,44 @@ for dictUsecase in listofdictUsecases:
       print()
       bSuccess = False
       sResult  = f"Robot Framework returned not expected value {nReturn}"
-      printerror(CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult))
+      sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
+      printerror(sResult)
+      oSelfTestLogFile.Write(sResult)
+      print()
       nCntFailedUsecases = nCntFailedUsecases + 1
       printerror(f"Test '{TESTFULLNAME}' failed\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
+      oSelfTestLogFile.Write("Result: FAILED", 1)
+      listTestsNotPassed.append(TESTFULLNAME)
+      continue # for dictUsecase in listofdictUsecases:
+
+   # --------------------------------------------------------------------------------------------------------------
+
+   # -- log file pre check (check for forbidden patterns)
+   bCheckResult, bSuccess, sResult = oTextCheck.TextCheck(TESTLOGFILE_TXT)
+   if bSuccess is not True:
+      print()
+      sResult = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
+      printerror(sResult)
+      oSelfTestLogFile.Write(sResult)
+      print()
+      nCntUnknownUsecases = nCntUnknownUsecases + 1
+      printerror(f"Test '{TESTFULLNAME}' result: UNKNOWN\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
+      oSelfTestLogFile.Write("Result: UNKNOWN", 1)
+      listTestsNotPassed.append(TESTFULLNAME)
+      continue # for dictUsecase in listofdictUsecases:
+   if bCheckResult is None:
+      print(COLBY + "No forbidden patterns defined, log file pre check skipped")
+      print()
+   elif bCheckResult is True:
+      print(COLBY + "Log file pre check for forbidden patterns passed")
+      print()
+   else:
+      print()
+      printerror(sResult)
+      oSelfTestLogFile.Write(sResult)
+      print()
+      nCntFailedUsecases = nCntFailedUsecases + 1
+      printerror(f"Test '{TESTFULLNAME}' result: FAILED\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
       oSelfTestLogFile.Write("Result: FAILED", 1)
       listTestsNotPassed.append(TESTFULLNAME)
       continue # for dictUsecase in listofdictUsecases:
@@ -422,7 +466,11 @@ for dictUsecase in listofdictUsecases:
          listTestsNotPassed.append(TESTFULLNAME)
          continue # for dictUsecase in listofdictUsecases:
       else:
-         if bIdentical is False:
+         if bIdentical is True:
+            print(COLBY + "passed")
+            print()
+            # now continue with log file check 2/2
+         else:
             print()
             printerror(sResult) # without FormatResult!
             nCntFailedUsecases = nCntFailedUsecases + 1
@@ -430,7 +478,6 @@ for dictUsecase in listofdictUsecases:
             oSelfTestLogFile.Write("Result: FAILED", 1)
             listTestsNotPassed.append(TESTFULLNAME)
             continue # for dictUsecase in listofdictUsecases:
-         # in case of bIdentical is True: continue with log file check 2/2
       # eof else - if bSuccess is not True:
 
       # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -447,7 +494,9 @@ for dictUsecase in listofdictUsecases:
       if bSuccess is True:
          if bIdentical is True:
             print()
-            print(COLBY + f"    Test '{TESTFULLNAME}': log file check passed") # related to both: (1/2) and (2/2) !!!
+            print(COLBY + "passed")
+            print()
+            print(COLBY + f"    Test '{TESTFULLNAME}': log file checks passed") # related to both: (1/2) and (2/2) !!!
          else:
             print()
             printerror(sResult) # without FormatResult!

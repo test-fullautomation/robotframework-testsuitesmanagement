@@ -20,7 +20,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 24.03.2023
+# 03.04.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -88,6 +88,17 @@ class CConfig():
 
       # -- configuration: test environment
       # TODO maybe later: get this from external JSON config file
+
+      NOTPATTERNFILE_TXT = f"{REFERENCEPATH}/testconfig/tsm_test_not_pattern_TXT.txt"
+      if os.path.isfile(NOTPATTERNFILE_TXT) is False:
+         raise Exception(CString.FormatResult(sMethod, False, f"'Not' pattern file not found: '{NOTPATTERNFILE_TXT}'"))
+      self.__dictConfig['NOTPATTERNFILE_TXT'] = NOTPATTERNFILE_TXT # needed for log file pre check
+
+      IGNOREPATTERNFILE_TXT = f"{REFERENCEPATH}/testconfig/tsm_test_ignore_pattern_TXT.txt"
+      if os.path.isfile(IGNOREPATTERNFILE_TXT) is False:
+         raise Exception(CString.FormatResult(sMethod, False, f"'Ignore' pattern file not found: '{IGNOREPATTERNFILE_TXT}'"))
+      self.__dictConfig['IGNOREPATTERNFILE_TXT'] = IGNOREPATTERNFILE_TXT
+
       PATTERNFILE_TXT = f"{REFERENCEPATH}/testconfig/tsm_test_pattern_TXT.txt"
       if os.path.isfile(PATTERNFILE_TXT) is False:
          raise Exception(CString.FormatResult(sMethod, False, f"Pattern file not found: '{PATTERNFILE_TXT}'"))
@@ -215,6 +226,7 @@ class CConfig():
          print()
          printerror(f"Configuration parameter '{sName}' not existing")
          # from here it's standard output:
+         print()
          print("Use instead one of:")
          self.PrintConfigKeys()
          return None # returning 'None' in case of key is not existing !!!

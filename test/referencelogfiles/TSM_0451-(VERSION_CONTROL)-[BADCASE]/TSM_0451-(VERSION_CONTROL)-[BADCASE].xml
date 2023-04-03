@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230331 16:52:08.476" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230403 13:57:07.598" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230331 16:52:08.623" level="ERROR">Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
+<msg timestamp="20230403 13:57:07.738" level="ERROR">Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
           '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
 </msg>
-<msg timestamp="20230331 16:52:08.624" level="UNKNOWN">JSON schema validation failed!</msg>
-<status status="UNKNOWN" starttime="20230331 16:52:08.594" endtime="20230331 16:52:08.624"/>
+<msg timestamp="20230403 13:57:07.740" level="UNKNOWN">JSON schema validation failed!</msg>
+<status status="UNKNOWN" starttime="20230403 13:57:07.711" endtime="20230403 13:57:07.740"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230331 16:52:08.624" endtime="20230331 16:52:08.626">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230403 13:57:07.740" endtime="20230403 13:57:07.741">Parent suite setup unknown:
 JSON schema validation failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230331 16:52:08.629" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230331 16:52:08.629" endtime="20230331 16:52:08.629"/>
+<msg timestamp="20230403 13:57:07.743" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230403 13:57:07.743" endtime="20230403 13:57:07.743"/>
 </kw>
-<status status="UNKNOWN" starttime="20230331 16:52:08.480" endtime="20230331 16:52:08.629">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230403 13:57:07.601" endtime="20230403 13:57:07.743">Suite setup unknown:
 JSON schema validation failed!</status>
 </suite>
 <statistics>
@@ -36,7 +36,7 @@ JSON schema validation failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230331 16:52:08.623" level="ERROR">Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
+<msg timestamp="20230403 13:57:07.738" level="ERROR">Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
           '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
 </msg>
 </errors>

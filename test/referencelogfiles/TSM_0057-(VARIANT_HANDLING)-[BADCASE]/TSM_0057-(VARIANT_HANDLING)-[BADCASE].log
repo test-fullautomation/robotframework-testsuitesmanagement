@@ -1,8 +1,8 @@
 ==============================================================================
-20230331 16:51:54.532 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230403 13:56:52.921 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230331 16:51:54.539 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230331 16:51:54.563 - ERROR - Testsuite management - Loading configuration level 2 failed! 
+20230403 13:56:52.928 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230403 13:56:52.952 - ERROR - Testsuite management - Loading configuration level 2 failed! 
           The variant name 'in/va/lid' is invalid. 
           Please find the suitable variant in this list: 
             - 'default' 
@@ -27,17 +27,17 @@
             - 'missing_imported_file' 
             - 'invalid_assignment_1' 
             - 'invalid_assignment_2'
-20230331 16:51:54.564 - UNKNOWN - Loading configuration level 2 failed!
-20230331 16:51:54.564 - DEBUG - Loading configuration level 2 failed!
-20230331 16:51:54.564 - INFO - +- END SETUP: tm.Testsuite Setup (25)
+20230403 13:56:52.953 - UNKNOWN - Loading configuration level 2 failed!
+20230403 13:56:52.953 - DEBUG - Loading configuration level 2 failed!
+20230403 13:56:52.953 - INFO - +- END SETUP: tm.Testsuite Setup (25)
 ------------------------------------------------------------------------------
-20230331 16:51:54.565 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230403 13:56:52.954 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230331 16:51:54.568 - INFO - +- END TEST: Test Case tsm-testfile-02 (2)
+20230403 13:56:52.958 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230331 16:51:54.569 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230331 16:51:54.569 - INFO - testsuite_teardown: Will be implemented later
-20230331 16:51:54.569 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230403 13:56:52.958 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230403 13:56:52.958 - INFO - testsuite_teardown: Will be implemented later
+20230403 13:56:52.958 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230331 16:51:54.571 - INFO - + END SUITE: Tsm-Testfile-02 (138)
+20230403 13:56:52.967 - INFO - + END SUITE: Tsm-Testfile-02 (145)
 ==============================================================================
