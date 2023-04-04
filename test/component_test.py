@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 03.04.2023 / v. 0.1.0
+# 04.04.2023 / v. 0.1.0
 # initial prototype
 #
 # --------------------------------------------------------------------------------------------------------------
@@ -299,10 +299,22 @@ for dictUsecase in listofdictUsecases:
    listCmdLineParts.append(f"\"{TESTLOGFILE_TXT}\"")
    if ADDITIONALPARAMS is not None:
       listCmdLineParts.append(f"{ADDITIONALPARAMS}")
+
+   if ( (TESTFILENAME is not None) and (TESTFOLDERNAME is not None) ):
+      print()
+      bSuccess = None
+      sResult  = "Both is defined: 'TESTFILENAME' and 'TESTFOLDERNAME', but only one of them is allowed"
+      printerror(CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult))
+      print()
+      nCntUnknownUsecases = nCntUnknownUsecases + 1
+      printerror(f"Test '{TESTFULLNAME}' result: UNKNOWN\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
+      oSelfTestLogFile.Write("Result: UNKNOWN", 1)
+      listTestsNotPassed.append(TESTFULLNAME)
+      continue # for dictUsecase in listofdictUsecases:
    if TESTFILENAME is not None:
       listCmdLineParts.append(f"\"{TESTFILESFOLDER}/{TESTFILENAME}\"")
-   # later ... # elif TESTFOLDERNAME is not None:
-      # # listCmdLineParts.append(f"\"{sTutorialRootPath}/{dictUsecase['TUTORIALNAME']}/{dictUsecase['EXERCISENAME']}/{TESTFOLDERNAME}\"")
+   elif TESTFOLDERNAME is not None:
+      listCmdLineParts.append(f"\"{TESTFILESFOLDER}/{TESTFOLDERNAME}\"")
    else:
       # invalid
       pass

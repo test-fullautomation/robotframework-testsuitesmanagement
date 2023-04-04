@@ -1,19 +1,19 @@
 ==============================================================================
-20230403 13:57:03.755 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230404 10:03:50.983 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230403 13:57:03.762 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230403 13:57:03.786 - ERROR - Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
-20230403 13:57:03.787 - UNKNOWN - Parse JSON schema file failed!
-20230403 13:57:03.787 - DEBUG - Parse JSON schema file failed!
-20230403 13:57:03.787 - INFO - +- END SETUP: tm.Testsuite Setup (25)
+20230404 10:03:50.983 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230404 10:03:51.008 - ERROR - Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
+20230404 10:03:51.008 - UNKNOWN - Parse JSON schema file failed!
+20230404 10:03:51.008 - DEBUG - Parse JSON schema file failed!
+20230404 10:03:51.008 - INFO - +- END SETUP: tm.Testsuite Setup (25)
 ------------------------------------------------------------------------------
-20230403 13:57:03.788 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230404 10:03:51.008 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230403 13:57:03.799 - INFO - +- END TEST: Test Case tsm-testfile-02 (3)
+20230404 10:03:51.023 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20230403 13:57:03.799 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230403 13:57:03.800 - INFO - testsuite_teardown: Will be implemented later
-20230403 13:57:03.800 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230404 10:03:51.023 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230404 10:03:51.023 - INFO - testsuite_teardown: Will be implemented later
+20230404 10:03:51.023 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230403 13:57:03.802 - INFO - + END SUITE: Tsm-Testfile-02 (145)
+20230404 10:03:51.023 - INFO - + END SUITE: Tsm-Testfile-02 (155)
 ==============================================================================

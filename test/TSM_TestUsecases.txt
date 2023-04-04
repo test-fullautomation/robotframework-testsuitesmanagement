@@ -298,9 +298,14 @@ Expectation: Test is executed up to position of invalid assignment; error messag
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0600 / RETURN_VALUE / GOODCASE
-Description: Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)
+Description: Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)
 Expectation: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 03.04.2023 - 18:06:03
+Test TSM_0700 / RETURN_VALUE / GOODCASE
+Description: Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)
+Expectation: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+Comment....: Folder execution
+------------------------------------------------------------------------------------------------------------------------
+Generated: 04.04.2023 - 10:04:27
 

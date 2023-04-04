@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230403 13:57:10.968" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 10:03:58.281" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-10-Unknown Keyword" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-10-unknown_keyword.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230403 13:57:11.123" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
-<msg timestamp="20230403 13:57:11.123" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230403 13:57:11.125" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230403 13:57:11.126" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230403 13:57:11.126" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230403 13:57:11.127" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230403 13:57:11.128" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230403 13:57:11.095" endtime="20230403 13:57:11.128"/>
+<msg timestamp="20230404 10:03:58.433" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
+<msg timestamp="20230404 10:03:58.433" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20230404 10:03:58.435" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20230404 10:03:58.436" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20230404 10:03:58.436" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
+<msg timestamp="20230404 10:03:58.436" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20230404 10:03:58.436" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20230404 10:03:58.436" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20230404 10:03:58.437" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20230404 10:03:58.437" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20230404 10:03:58.438" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg timestamp="20230404 10:03:58.438" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20230404 10:03:58.438" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20230404 10:03:58.438" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230404 10:03:58.439" level="INFO">Robot Framework AIO version check passed!</msg>
+<msg timestamp="20230404 10:03:58.439" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230404 10:03:58.439" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230404 10:03:58.439" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230404 10:03:58.439" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230404 10:03:58.405" endtime="20230404 10:03:58.439"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-10-unknown_keyword">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:57:11.130" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230403 13:57:11.129" endtime="20230403 13:57:11.130"/>
+<msg timestamp="20230404 10:03:58.440" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230404 10:03:58.440" endtime="20230404 10:03:58.440"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_common : ${teststring_common} (tsm-testfile-10-unknown_keyword.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:57:11.130" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-10-unknown_keyword.robot)</msg>
-<status status="PASS" starttime="20230403 13:57:11.130" endtime="20230403 13:57:11.130"/>
+<msg timestamp="20230404 10:03:58.441" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-10-unknown_keyword.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:58.441" endtime="20230404 10:03:58.442"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_variant : ${teststring_variant} (tsm-testfile-10-unknown_keyword.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:57:11.134" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-10-unknown_keyword.robot)</msg>
-<status status="PASS" starttime="20230403 13:57:11.134" endtime="20230403 13:57:11.134"/>
+<msg timestamp="20230404 10:03:58.443" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-10-unknown_keyword.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:58.442" endtime="20230404 10:03:58.443"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_bench : ${teststring_bench} (tsm-testfile-10-unknown_keyword.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:57:11.135" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-10-unknown_keyword.robot)</msg>
-<status status="PASS" starttime="20230403 13:57:11.135" endtime="20230403 13:57:11.135"/>
+<msg timestamp="20230404 10:03:58.444" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-10-unknown_keyword.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:58.444" endtime="20230404 10:03:58.444"/>
 </kw>
 <kw name="I am the not existing keyword and therefore syntax error">
-<msg timestamp="20230403 13:57:11.137" level="UNKNOWN">No keyword with name 'I am the not existing keyword and therefore syntax error' found.</msg>
-<status status="UNKNOWN" starttime="20230403 13:57:11.137" endtime="20230403 13:57:11.137"/>
+<msg timestamp="20230404 10:03:58.446" level="UNKNOWN">No keyword with name 'I am the not existing keyword and therefore syntax error' found.</msg>
+<status status="UNKNOWN" starttime="20230404 10:03:58.446" endtime="20230404 10:03:58.446"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230403 13:57:11.137" endtime="20230403 13:57:11.137"/>
+<status status="NOT RUN" starttime="20230404 10:03:58.447" endtime="20230404 10:03:58.447"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:57:11.138" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230403 13:57:11.138" endtime="20230403 13:57:11.138"/>
+<msg timestamp="20230404 10:03:58.448" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 10:03:58.447" endtime="20230404 10:03:58.448"/>
 </kw>
 <doc>tsm-testfile-10-unknown_keyword</doc>
-<status status="UNKNOWN" starttime="20230403 13:57:11.128" endtime="20230403 13:57:11.138">No keyword with name 'I am the not existing keyword and therefore syntax error' found.</status>
+<status status="UNKNOWN" starttime="20230404 10:03:58.439" endtime="20230404 10:03:58.448">No keyword with name 'I am the not existing keyword and therefore syntax error' found.</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:57:11.140" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230403 13:57:11.140" endtime="20230403 13:57:11.140"/>
+<msg timestamp="20230404 10:03:58.450" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 10:03:58.450" endtime="20230404 10:03:58.450"/>
 </kw>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">RobotFramework Testsuites</meta>
@@ -87,7 +87,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="UNKNOWN" starttime="20230403 13:57:10.974" endtime="20230403 13:57:11.140"/>
+<status status="UNKNOWN" starttime="20230404 10:03:58.285" endtime="20230404 10:03:58.450"/>
 </suite>
 <statistics>
 <total>

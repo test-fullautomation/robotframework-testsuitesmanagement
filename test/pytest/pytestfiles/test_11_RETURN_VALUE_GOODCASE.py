@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 03.04.2023 - 18:06:03
+# 04.04.2023 - 10:04:27
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -33,9 +33,18 @@ class Test_RETURN_VALUE_GOODCASE:
    # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)",]
+      "Description", ["Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)",]
    )
    def test_TSM_0600(self, Description):
       nReturn = CExecute.Execute("TSM_0600")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+   # (Folder execution)
+   @pytest.mark.parametrize(
+      "Description", ["Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)",]
+   )
+   def test_TSM_0700(self, Description):
+      nReturn = CExecute.Execute("TSM_0700")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

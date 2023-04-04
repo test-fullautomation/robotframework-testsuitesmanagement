@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230403 13:56:45.010" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 10:03:31.894" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230403 13:56:45.160" level="INFO">Running with configuration level 1</msg>
-<msg timestamp="20230403 13:56:45.161" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230403 13:56:45.161" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230403 13:56:45.161" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'</msg>
-<msg timestamp="20230403 13:56:45.161" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230403 13:56:45.161" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230403 13:56:45.160" endtime="20230403 13:56:45.161"/>
+<msg timestamp="20230404 10:03:32.048" level="INFO">Running with configuration level 1</msg>
+<msg timestamp="20230404 10:03:32.048" level="INFO">Robot Framework AIO version check passed!</msg>
+<msg timestamp="20230404 10:03:32.048" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230404 10:03:32.049" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'</msg>
+<msg timestamp="20230404 10:03:32.049" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230404 10:03:32.049" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230404 10:03:32.048" endtime="20230404 10:03:32.049"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:56:45.162" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230403 13:56:45.162" endtime="20230403 13:56:45.162"/>
+<msg timestamp="20230404 10:03:32.050" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230404 10:03:32.050" endtime="20230404 10:03:32.050"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_common : ${teststring_common} (tsm-testfile-02.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:56:45.163" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)</msg>
-<status status="PASS" starttime="20230403 13:56:45.163" endtime="20230403 13:56:45.163"/>
+<msg timestamp="20230404 10:03:32.051" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:32.051" endtime="20230404 10:03:32.051"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_variant : ${teststring_variant} (tsm-testfile-02.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:56:45.167" level="INFO">teststring_variant : I am the 'variant2' configuration of tsm-test (tsm-testfile-02.robot)</msg>
-<status status="PASS" starttime="20230403 13:56:45.166" endtime="20230403 13:56:45.167"/>
+<msg timestamp="20230404 10:03:32.051" level="INFO">teststring_variant : I am the 'variant2' configuration of tsm-test (tsm-testfile-02.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:32.051" endtime="20230404 10:03:32.053"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>teststring_bench : ${teststring_bench} (tsm-testfile-02.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230403 13:56:45.168" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-02.robot)</msg>
-<status status="PASS" starttime="20230403 13:56:45.167" endtime="20230403 13:56:45.168"/>
+<msg timestamp="20230404 10:03:32.055" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-02.robot)</msg>
+<status status="PASS" starttime="20230404 10:03:32.055" endtime="20230404 10:03:32.056"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:56:45.171" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230403 13:56:45.171" endtime="20230403 13:56:45.171"/>
+<msg timestamp="20230404 10:03:32.058" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 10:03:32.056" endtime="20230404 10:03:32.058"/>
 </kw>
 <doc>tsm-testfile-02</doc>
-<status status="PASS" starttime="20230403 13:56:45.161" endtime="20230403 13:56:45.171"/>
+<status status="PASS" starttime="20230404 10:03:32.049" endtime="20230404 10:03:32.058"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230403 13:56:45.173" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230403 13:56:45.173" endtime="20230403 13:56:45.173"/>
+<msg timestamp="20230404 10:03:32.060" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 10:03:32.060" endtime="20230404 10:03:32.060"/>
 </kw>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">RobotFramework Testsuites</meta>
@@ -64,7 +64,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230403 13:56:45.021" endtime="20230403 13:56:45.173"/>
+<status status="PASS" starttime="20230404 10:03:31.899" endtime="20230404 10:03:32.060"/>
 </suite>
 <statistics>
 <total>

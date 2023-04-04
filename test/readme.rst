@@ -389,4 +389,6 @@ With ``LocalConfigEnvVar_Create`` and ``LocalConfigEnvVar_Delete`` are the funct
 
 The usage of ``PRESTEP`` and ``POSTSTEP`` is optional.
 
+TOC_
+
 .. _TOC: `Table of content`_

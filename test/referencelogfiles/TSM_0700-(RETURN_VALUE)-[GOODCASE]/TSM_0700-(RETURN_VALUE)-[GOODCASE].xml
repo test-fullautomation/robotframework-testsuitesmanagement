@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 10:04:02.420" rpa="false" schemaversion="2">
+<suite id="s1" name="Testsuitestest" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest">
+<kw name="Testsuite Setup" library="tm" type="SETUP">
+<arg>../config/tsm-test_variants.json</arg>
+<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
+checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
+<msg timestamp="20230404 10:04:02.563" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
+<msg timestamp="20230404 10:04:02.563" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20230404 10:04:02.565" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20230404 10:04:02.566" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20230404 10:04:02.566" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
+<msg timestamp="20230404 10:04:02.566" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20230404 10:04:02.566" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20230404 10:04:02.566" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20230404 10:04:02.567" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20230404 10:04:02.567" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20230404 10:04:02.568" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg timestamp="20230404 10:04:02.568" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20230404 10:04:02.568" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20230404 10:04:02.568" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230404 10:04:02.569" level="INFO">Robot Framework AIO version check passed!</msg>
+<msg timestamp="20230404 10:04:02.569" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest'</msg>
+<msg timestamp="20230404 10:04:02.569" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230404 10:04:02.569" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230404 10:04:02.569" level="INFO">Total number of testcases: 18</msg>
+<status status="PASS" starttime="20230404 10:04:02.534" endtime="20230404 10:04:02.569"/>
+</kw>
+<suite id="s1-s1" name="001" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001">
+<suite id="s1-s1-s1" name="001-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001\001-01">
+<suite id="s1-s1-s1-s1" name="001-01-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001\001-01\001-01-01">
+<suite id="s1-s1-s1-s1-s1" name="Tsm-Tst-Testfile-001-01-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001\001-01\001-01-01\tsm-tst-testfile-001-01-01.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Test Case tsm-tst-testfile-001-01-01-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.581" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.581" endtime="20230404 10:04:02.582"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.583" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.582" endtime="20230404 10:04:02.583"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.584" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.583" endtime="20230404 10:04:02.584"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.585" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.585" endtime="20230404 10:04:02.585"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.586" endtime="20230404 10:04:02.586"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-01-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.580" endtime="20230404 10:04:02.586">AssertionError</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Test Case tsm-tst-testfile-001-01-01-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.591" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.590" endtime="20230404 10:04:02.591"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.592" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.591" endtime="20230404 10:04:02.592"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.597" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.597" endtime="20230404 10:04:02.597"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.601" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.601" endtime="20230404 10:04:02.601"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.602" endtime="20230404 10:04:02.602"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-01-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.588" endtime="20230404 10:04:02.602">Exception occurred.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Test Case tsm-tst-testfile-001-01-01-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.605" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.605" endtime="20230404 10:04:02.605"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.606" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.606" endtime="20230404 10:04:02.607"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.607" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.607" endtime="20230404 10:04:02.608"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-01-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.604" endtime="20230404 10:04:02.608"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.579" endtime="20230404 10:04:02.610"/>
+</suite>
+<status status="UNKNOWN" starttime="20230404 10:04:02.577" endtime="20230404 10:04:02.617"/>
+</suite>
+<suite id="s1-s1-s1-s2" name="Tsm-Tst-Testfile-001-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001\001-01\tsm-tst-testfile-001-01.robot">
+<test id="s1-s1-s1-s2-t1" name="Test Case tsm-tst-testfile-001-01-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.628" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.628" endtime="20230404 10:04:02.628"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.632" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.632" endtime="20230404 10:04:02.632"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.633" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.633" endtime="20230404 10:04:02.633"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.634" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.634" endtime="20230404 10:04:02.634"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.635" endtime="20230404 10:04:02.635"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.626" endtime="20230404 10:04:02.635">AssertionError</status>
+</test>
+<test id="s1-s1-s1-s2-t2" name="Test Case tsm-tst-testfile-001-01-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.638" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.638" endtime="20230404 10:04:02.638"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.639" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.639" endtime="20230404 10:04:02.639"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.640" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.640" endtime="20230404 10:04:02.640"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.641" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.640" endtime="20230404 10:04:02.641"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.641" endtime="20230404 10:04:02.641"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.637" endtime="20230404 10:04:02.642">Exception occurred.</status>
+</test>
+<test id="s1-s1-s1-s2-t3" name="Test Case tsm-tst-testfile-001-01-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.649" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.648" endtime="20230404 10:04:02.649"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.650" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.649" endtime="20230404 10:04:02.650"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.651" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.650" endtime="20230404 10:04:02.651"/>
+</kw>
+<doc>tsm-tst-testfile-001-01-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.648" endtime="20230404 10:04:02.652"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.622" endtime="20230404 10:04:02.653"/>
+</suite>
+<status status="UNKNOWN" starttime="20230404 10:04:02.573" endtime="20230404 10:04:02.655"/>
+</suite>
+<suite id="s1-s1-s2" name="Tsm-Tst-Testfile-001" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\001\tsm-tst-testfile-001.robot">
+<test id="s1-s1-s2-t1" name="Test Case tsm-tst-testfile-001-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.665" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.665" endtime="20230404 10:04:02.665"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.666" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.666" endtime="20230404 10:04:02.666"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.667" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.667" endtime="20230404 10:04:02.667"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.668" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.668" endtime="20230404 10:04:02.668"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.669" endtime="20230404 10:04:02.669"/>
+</kw>
+<doc>tsm-tst-testfile-001-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.664" endtime="20230404 10:04:02.670">AssertionError</status>
+</test>
+<test id="s1-s1-s2-t2" name="Test Case tsm-tst-testfile-001-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.672" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.672" endtime="20230404 10:04:02.672"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.675" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.674" endtime="20230404 10:04:02.675"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.679" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.679" endtime="20230404 10:04:02.679"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.681" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.679" endtime="20230404 10:04:02.681"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.681" endtime="20230404 10:04:02.681"/>
+</kw>
+<doc>tsm-tst-testfile-001-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.671" endtime="20230404 10:04:02.682">Exception occurred.</status>
+</test>
+<test id="s1-s1-s2-t3" name="Test Case tsm-tst-testfile-001-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.684" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.684" endtime="20230404 10:04:02.684"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.685" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.685" endtime="20230404 10:04:02.685"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.686" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.686" endtime="20230404 10:04:02.686"/>
+</kw>
+<doc>tsm-tst-testfile-001-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.684" endtime="20230404 10:04:02.687"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.657" endtime="20230404 10:04:02.688"/>
+</suite>
+<status status="UNKNOWN" starttime="20230404 10:04:02.569" endtime="20230404 10:04:02.695"/>
+</suite>
+<suite id="s1-s2" name="002" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\002">
+<suite id="s1-s2-s1" name="002-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\002\002-01">
+<suite id="s1-s2-s1-s1" name="Tsm-Tst-Testfile-002-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\002\002-01\tsm-tst-testfile-002-01.robot">
+<test id="s1-s2-s1-s1-t1" name="Test Case tsm-tst-testfile-002-01-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.704" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.704" endtime="20230404 10:04:02.706"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.710" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.710" endtime="20230404 10:04:02.710"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.711" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.711" endtime="20230404 10:04:02.711"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.712" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.712" endtime="20230404 10:04:02.712"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.713" endtime="20230404 10:04:02.713"/>
+</kw>
+<doc>tsm-tst-testfile-002-01-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.703" endtime="20230404 10:04:02.713">AssertionError</status>
+</test>
+<test id="s1-s2-s1-s1-t2" name="Test Case tsm-tst-testfile-002-01-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.716" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.716" endtime="20230404 10:04:02.716"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.717" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.717" endtime="20230404 10:04:02.717"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.718" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.718" endtime="20230404 10:04:02.718"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.719" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.719" endtime="20230404 10:04:02.719"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.720" endtime="20230404 10:04:02.720"/>
+</kw>
+<doc>tsm-tst-testfile-002-01-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.715" endtime="20230404 10:04:02.722">Exception occurred.</status>
+</test>
+<test id="s1-s2-s1-s1-t3" name="Test Case tsm-tst-testfile-002-01-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.732" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.732" endtime="20230404 10:04:02.733"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.734" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.733" endtime="20230404 10:04:02.734"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.735" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.734" endtime="20230404 10:04:02.736"/>
+</kw>
+<doc>tsm-tst-testfile-002-01-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.728" endtime="20230404 10:04:02.737"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.702" endtime="20230404 10:04:02.741"/>
+</suite>
+<status status="UNKNOWN" starttime="20230404 10:04:02.699" endtime="20230404 10:04:02.743"/>
+</suite>
+<suite id="s1-s2-s2" name="Tsm-Tst-Testfile-002" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\002\tsm-tst-testfile-002.robot">
+<test id="s1-s2-s2-t1" name="Test Case tsm-tst-testfile-002-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.758" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.757" endtime="20230404 10:04:02.758"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.759" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.759" endtime="20230404 10:04:02.759"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.760" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.760" endtime="20230404 10:04:02.760"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.761" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.761" endtime="20230404 10:04:02.761"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.762" endtime="20230404 10:04:02.762"/>
+</kw>
+<doc>tsm-tst-testfile-002-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.754" endtime="20230404 10:04:02.762">AssertionError</status>
+</test>
+<test id="s1-s2-s2-t2" name="Test Case tsm-tst-testfile-002-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.764" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.764" endtime="20230404 10:04:02.764"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.765" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.765" endtime="20230404 10:04:02.765"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.768" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.768" endtime="20230404 10:04:02.768"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.772" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.772" endtime="20230404 10:04:02.772"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.773" endtime="20230404 10:04:02.773"/>
+</kw>
+<doc>tsm-tst-testfile-002-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.763" endtime="20230404 10:04:02.773">Exception occurred.</status>
+</test>
+<test id="s1-s2-s2-t3" name="Test Case tsm-tst-testfile-002-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.779" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.779" endtime="20230404 10:04:02.779"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.780" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.780" endtime="20230404 10:04:02.780"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.781" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.781" endtime="20230404 10:04:02.781"/>
+</kw>
+<doc>tsm-tst-testfile-002-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.775" endtime="20230404 10:04:02.782"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.751" endtime="20230404 10:04:02.785"/>
+</suite>
+<status status="UNKNOWN" starttime="20230404 10:04:02.697" endtime="20230404 10:04:02.792"/>
+</suite>
+<suite id="s1-s3" name="Tsm-Tst-Testfile-1" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\tsm-tst-testfile-1.robot">
+<test id="s1-s3-t1" name="Test Case tsm-tst-testfile-1-A">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.798" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.798" endtime="20230404 10:04:02.800"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.800" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.800" endtime="20230404 10:04:02.801"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [A])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.805" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [A])</msg>
+<status status="PASS" starttime="20230404 10:04:02.804" endtime="20230404 10:04:02.805"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.806" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230404 10:04:02.806" endtime="20230404 10:04:02.806"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.806" endtime="20230404 10:04:02.807"/>
+</kw>
+<doc>tsm-tst-testfile-1-A</doc>
+<status status="FAIL" starttime="20230404 10:04:02.797" endtime="20230404 10:04:02.807">AssertionError</status>
+</test>
+<test id="s1-s3-t2" name="Test Case tsm-tst-testfile-1-B">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.809" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.809" endtime="20230404 10:04:02.809"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.810" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.810" endtime="20230404 10:04:02.810"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [B])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.811" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [B])</msg>
+<status status="PASS" starttime="20230404 10:04:02.811" endtime="20230404 10:04:02.811"/>
+</kw>
+<kw name="Unknown" library="BuiltIn">
+<doc>Unknown the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230404 10:04:02.812" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230404 10:04:02.812" endtime="20230404 10:04:02.812"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>I must not be executed</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230404 10:04:02.813" endtime="20230404 10:04:02.813"/>
+</kw>
+<doc>tsm-tst-testfile-1-B</doc>
+<status status="UNKNOWN" starttime="20230404 10:04:02.809" endtime="20230404 10:04:02.815">Exception occurred.</status>
+</test>
+<test id="s1-s3-t3" name="Test Case tsm-tst-testfile-1-C">
+<kw name="Log" library="BuiltIn">
+<arg>teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.818" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.818" endtime="20230404 10:04:02.818"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.819" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.819" endtime="20230404 10:04:02.819"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [C])</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230404 10:04:02.820" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [C])</msg>
+<status status="PASS" starttime="20230404 10:04:02.820" endtime="20230404 10:04:02.821"/>
+</kw>
+<doc>tsm-tst-testfile-1-C</doc>
+<status status="PASS" starttime="20230404 10:04:02.815" endtime="20230404 10:04:02.821"/>
+</test>
+<status status="UNKNOWN" starttime="20230404 10:04:02.795" endtime="20230404 10:04:02.822"/>
+</suite>
+<meta name="machine">HI7-C-0005Y</meta>
+<meta name="project">RobotFramework Testsuites</meta>
+<meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
+<meta name="testtool">Robot Framework 4.1.3 (Python 3.9.16 on win32)</meta>
+<meta name="version">0.7.0</meta>
+<meta name="version_hw"/>
+<meta name="version_sw"/>
+<meta name="version_test"/>
+<status status="UNKNOWN" starttime="20230404 10:04:02.424" endtime="20230404 10:04:02.824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="6" skip="0" unknown="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="6" skip="0" unknown="6" id="s1" name="Testsuitestest">Testsuitestest</stat>
+<stat pass="3" fail="3" skip="0" unknown="3" id="s1-s1" name="001">Testsuitestest.001</stat>
+<stat pass="2" fail="2" skip="0" unknown="2" id="s1-s1-s1" name="001-01">Testsuitestest.001.001-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s1-s1-s1" name="001-01-01">Testsuitestest.001.001-01.001-01-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s1-s1-s1-s1" name="Tsm-Tst-Testfile-001-01-01">Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s1-s1-s2" name="Tsm-Tst-Testfile-001-01">Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s1-s2" name="Tsm-Tst-Testfile-001">Testsuitestest.001.Tsm-Tst-Testfile-001</stat>
+<stat pass="2" fail="2" skip="0" unknown="2" id="s1-s2" name="002">Testsuitestest.002</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s2-s1" name="002-01">Testsuitestest.002.002-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s2-s1-s1" name="Tsm-Tst-Testfile-002-01">Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s2-s2" name="Tsm-Tst-Testfile-002">Testsuitestest.002.Tsm-Tst-Testfile-002</stat>
+<stat pass="1" fail="1" skip="0" unknown="1" id="s1-s3" name="Tsm-Tst-Testfile-1">Testsuitestest.Tsm-Tst-Testfile-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

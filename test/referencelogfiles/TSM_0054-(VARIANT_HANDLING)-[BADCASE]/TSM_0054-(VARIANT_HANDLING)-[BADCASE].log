@@ -1,19 +1,19 @@
 ==============================================================================
-20230403 13:56:51.310 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230404 10:03:38.540 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230403 13:56:51.318 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230403 13:56:51.341 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.json': 'File 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING.json' is not existing!'
-20230403 13:56:51.342 - UNKNOWN - Loading of JSON configuration file failed!
-20230403 13:56:51.342 - DEBUG - Loading of JSON configuration file failed!
-20230403 13:56:51.342 - INFO - +- END SETUP: tm.Testsuite Setup (24)
+20230404 10:03:38.548 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230404 10:03:38.572 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.json': 'File 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING.json' is not existing!'
+20230404 10:03:38.573 - UNKNOWN - Loading of JSON configuration file failed!
+20230404 10:03:38.574 - DEBUG - Loading of JSON configuration file failed!
+20230404 10:03:38.574 - INFO - +- END SETUP: tm.Testsuite Setup (26)
 ------------------------------------------------------------------------------
-20230403 13:56:51.342 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230404 10:03:38.574 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230403 13:56:51.348 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230404 10:03:38.578 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230403 13:56:51.348 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230403 13:56:51.348 - INFO - testsuite_teardown: Will be implemented later
-20230403 13:56:51.349 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230404 10:03:38.579 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230404 10:03:38.579 - INFO - testsuite_teardown: Will be implemented later
+20230404 10:03:38.579 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230403 13:56:51.358 - INFO - + END SUITE: Tsm-Testfile-02 (142)
+20230404 10:03:38.581 - INFO - + END SUITE: Tsm-Testfile-02 (142)
 ==============================================================================

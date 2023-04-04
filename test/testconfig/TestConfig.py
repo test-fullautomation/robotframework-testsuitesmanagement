@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 03.04.2023
+# 04.04.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -44,6 +44,11 @@
 # "tsm-testfile-14-unknown_parameter_1.robot"  # (with variant configuration and assignment of unknown dictionary key)
 # "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
 # "tsm-testfile-16-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
+#
+# configfoldertests/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
+#
+# testsuitestest # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
 
 # --------------------------------------------------------------------------------------------------------------
 
@@ -862,7 +867,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0600"
-dictUsecase['DESCRIPTION']      = "Robot file containing several tests, some PASSED, some FAILED (3), some UNKNOWN (4)"
+dictUsecase['DESCRIPTION']      = "Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)"
 dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
 dictUsecase['SECTION']          = "RETURN_VALUE"
 dictUsecase['SUBSECTION']       = "GOODCASE"
@@ -871,6 +876,21 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-16-several_tests.robot" # (conta
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 1027
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0700"
+dictUsecase['DESCRIPTION']      = "Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)"
+dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
+dictUsecase['SECTION']          = "RETURN_VALUE"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Folder execution"
+dictUsecase['TESTFILENAME']     = None
+dictUsecase['TESTFOLDERNAME']   = "testsuitestest" # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 1542
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -897,6 +917,11 @@ del dictUsecase
 # failed  : 3
 # unknown : 4
 # ret_val : 1027
+
+# testsuitestest:
+# failed  : 6
+# unknown : 6
+# ret_val : 1542
 
 # --------------------------------------------------------------------------------------------------------------
 

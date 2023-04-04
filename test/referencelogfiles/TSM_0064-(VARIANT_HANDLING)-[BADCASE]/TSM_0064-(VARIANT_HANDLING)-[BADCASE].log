@@ -1,18 +1,18 @@
 ==============================================================================
-20230403 13:56:56.846 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20230404 10:03:44.054 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20230403 13:56:56.875 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20230403 13:56:56.875 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
-20230403 13:56:56.875 - DEBUG - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
-20230403 13:56:56.875 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20230404 10:03:44.083 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20230404 10:03:44.083 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+20230404 10:03:44.084 - DEBUG - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+20230404 10:03:44.084 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20230403 13:56:56.876 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20230404 10:03:44.084 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20230403 13:56:56.882 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
+20230404 10:03:44.088 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
 ------------------------------------------------------------------------------
-20230403 13:56:56.882 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230403 13:56:56.883 - INFO - testsuite_teardown: Will be implemented later
-20230403 13:56:56.883 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230404 10:03:44.089 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230404 10:03:44.089 - INFO - testsuite_teardown: Will be implemented later
+20230404 10:03:44.089 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230403 13:56:56.893 - INFO - + END SUITE: Tsm-Testfile-01 (143)
+20230404 10:03:44.093 - INFO - + END SUITE: Tsm-Testfile-01 (138)
 ==============================================================================
