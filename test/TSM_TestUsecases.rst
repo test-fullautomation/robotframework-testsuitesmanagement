@@ -727,5 +727,17 @@ Test Use Cases
 
 ----
 
-Generated: 04.04.2023 - 15:47:50
+* **Test TSM_0800**
+
+  [JSON_DOTDICT / GOODCASE]
+
+   **Nested imports of JSON files with dotdict syntax**
+
+   Expected: dotdict syntax in JSON files is possible
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 04.04.2023 - 19:35:08
 

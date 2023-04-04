@@ -59,3 +59,4 @@ TSM_0557|ROBOT_CODE|BADCASE|Assignment of unknown dictionary key in test code of
 TSM_0558|ROBOT_CODE|BADCASE|Assignment of known parameter to unknown dictionary subkey in test code of robot file
 TSM_0600|RETURN_VALUE|GOODCASE|Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)
 TSM_0700|RETURN_VALUE|GOODCASE|Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)
+TSM_0800|JSON_DOTDICT|GOODCASE|Nested imports of JSON files with dotdict syntax

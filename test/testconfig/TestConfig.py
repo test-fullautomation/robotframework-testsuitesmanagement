@@ -45,6 +45,7 @@
 # "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
 # "tsm-testfile-16-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 # "tsm-testfile-17.robot" # (without variant configuration but parameter logging, config_file expected in command line)
+# "tsm-testfile-18-dotdict_syntax.robot" # (with variant configuration and extended parameter logging for dotdict syntax in JSON files)
 #
 # configfoldertests/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -906,6 +907,21 @@ dictUsecase['TESTFILENAME']     = None
 dictUsecase['TESTFOLDERNAME']   = "testsuitestest" # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 1542
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0800"
+dictUsecase['DESCRIPTION']      = "Nested imports of JSON files with dotdict syntax"
+dictUsecase['EXPECTATION']      = "dotdict syntax in JSON files is possible"
+dictUsecase['SECTION']          = "JSON_DOTDICT"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-18-dotdict_syntax.robot" # (with variant configuration and extended parameter logging for dotdict syntax in JSON files)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"json_dotdict\""
+dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------

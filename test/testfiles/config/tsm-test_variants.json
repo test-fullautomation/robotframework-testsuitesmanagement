@@ -26,6 +26,10 @@
                  "name": "tsm-test_config_variant2.json",
                  "path": "./config/"
                },
+  "json_dotdict" : {
+                     "name": "tsm-test_config_json_dotdict.json",
+                     "path": "./config/"
+                   },
   "SälfTest.ß.€.考.𠼭.𠼭" : {
                              "name": "tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.json",
                              "path": "./config/"
