@@ -26,46 +26,51 @@ Expectation: Execution with default variant
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0003 / VARIANT_HANDLING / GOODCASE
-Description: With variant name in command line / (variant1)
+Description: With variant name in command line and with variant configuration file in suite setup of robot file / (variant1)
 Expectation: Execution with selected variant 1
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0004 / VARIANT_HANDLING / GOODCASE
-Description: With variant name in command line / with 4 byte UTF-8 characters inside name
+Description: With variant name in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside variant name
 Expectation: Execution with selected variant
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0005 / VARIANT_HANDLING / GOODCASE
-Description: With parameter configuration file in command line / (tsm-test_config_variant2.json)
+Description: With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)
 Expectation: Execution with selected variant 2
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0006 / VARIANT_HANDLING / GOODCASE
-Description: With parameter configuration file in command line / with 4 byte UTF-8 characters inside name
+Description: With parameter configuration file in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside name
 Expectation: Execution with selected config file for variant
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0007 / VARIANT_HANDLING / GOODCASE
-Description: With variant name and single parameter in command line / (variant1; teststring_variant)
-Expectation: Single command line parameter value overwrites variant 1 configuration value
+Description: With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup
+Expectation: Execution with selected variant 2
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0008 / VARIANT_HANDLING / GOODCASE
-Description: With parameter configuration file and single parameter in command line / (variant2; teststring_variant)
-Expectation: Single command line parameter value overwrites variant 2 configuration value
+Description: With variant name and single parameter in command line and with variant configuration file in suite setup of robot file / (variant1; teststring_variant)
+Expectation: Single command line parameter value overwrites variant 1 configuration value
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0009 / VARIANT_HANDLING / GOODCASE
+Description: With parameter configuration file and single parameter in command line and with variant configuration file in suite setup of robot file / (variant2; teststring_variant)
+Expectation: Single command line parameter value overwrites variant 2 configuration value
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0010 / VARIANT_HANDLING / GOODCASE
 Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file
 Expectation: Configuration parameters taken from configuration file with same name as the robot file
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Test TSM_0010 / VARIANT_HANDLING / GOODCASE
+Test TSM_0011 / VARIANT_HANDLING / GOODCASE
 Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file
 Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Test TSM_0011 / VARIANT_HANDLING / GOODCASE
+Test TSM_0012 / VARIANT_HANDLING / GOODCASE
 Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)
 Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
 Comment....: Single file execution
@@ -307,5 +312,5 @@ Description: Folder with several robot files (6) containing several tests, some 
 Expectation: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
 Comment....: Folder execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 04.04.2023 - 10:04:27
+Generated: 04.04.2023 - 15:47:50
 

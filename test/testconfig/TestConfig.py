@@ -44,6 +44,7 @@
 # "tsm-testfile-14-unknown_parameter_1.robot"  # (with variant configuration and assignment of unknown dictionary key)
 # "tsm-testfile-15-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
 # "tsm-testfile-16-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
+# "tsm-testfile-17.robot" # (without variant configuration but parameter logging, config_file expected in command line)
 #
 # configfoldertests/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -70,7 +71,7 @@ dictUsecase['EXPECTATION']      = "Execution with config level 4"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -84,7 +85,7 @@ dictUsecase['EXPECTATION']      = "Execution with default variant"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -93,12 +94,12 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0003"
-dictUsecase['DESCRIPTION']      = "With variant name in command line / (variant1)"
+dictUsecase['DESCRIPTION']      = "With variant name in command line and with variant configuration file in suite setup of robot file / (variant1)"
 dictUsecase['EXPECTATION']      = "Execution with selected variant 1"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -107,12 +108,12 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0004"
-dictUsecase['DESCRIPTION']      = "With variant name in command line / with 4 byte UTF-8 characters inside name"
+dictUsecase['DESCRIPTION']      = "With variant name in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside variant name"
 dictUsecase['EXPECTATION']      = "Execution with selected variant"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"SälfTest.ß.€.考.𠼭.𠼭\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -121,12 +122,12 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0005"
-dictUsecase['DESCRIPTION']      = "With parameter configuration file in command line / (tsm-test_config_variant2.json)"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)"
 dictUsecase['EXPECTATION']      = "Execution with selected variant 2"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/tsm-test_config_variant2.json\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -135,12 +136,12 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0006"
-dictUsecase['DESCRIPTION']      = "With parameter configuration file in command line / with 4 byte UTF-8 characters inside name"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside name"
 dictUsecase['EXPECTATION']      = "Execution with selected config file for variant"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.json\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -149,12 +150,26 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0007"
-dictUsecase['DESCRIPTION']      = "With variant name and single parameter in command line / (variant1; teststring_variant)"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup"
+dictUsecase['EXPECTATION']      = "Execution with selected variant 2"
+dictUsecase['SECTION']          = "VARIANT_HANDLING"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-17.robot" # (without variant configuration but parameter logging, config_file expected in command line)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/tsm-test_config_variant2.json\"" # path relative to position of robot file
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0008"
+dictUsecase['DESCRIPTION']      = "With variant name and single parameter in command line and with variant configuration file in suite setup of robot file / (variant1; teststring_variant)"
 dictUsecase['EXPECTATION']      = "Single command line parameter value overwrites variant 1 configuration value"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\" --variable teststring_variant:\"command line value of teststring_variant\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -162,13 +177,13 @@ listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0008"
-dictUsecase['DESCRIPTION']      = "With parameter configuration file and single parameter in command line / (variant2; teststring_variant)"
+dictUsecase['TESTID']           = "TSM_0009"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file and single parameter in command line and with variant configuration file in suite setup of robot file / (variant2; teststring_variant)"
 dictUsecase['EXPECTATION']      = "Single command line parameter value overwrites variant 2 configuration value"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/tsm-test_config_variant2.json\" --variable teststring_variant:\"command line value of teststring_variant\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -176,7 +191,7 @@ listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0009"
+dictUsecase['TESTID']           = "TSM_0010"
 dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file"
 dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with same name as the robot file"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
@@ -190,7 +205,7 @@ listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0010"
+dictUsecase['TESTID']           = "TSM_0011"
 dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file"
 dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with predefined default name (robot_config.json)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
@@ -204,7 +219,7 @@ listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0011"
+dictUsecase['TESTID']           = "TSM_0012"
 dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)"
 dictUsecase['EXPECTATION']      = "Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
@@ -225,7 +240,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"missing_param\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -239,7 +254,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"syntax_error\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -253,7 +268,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"syntax_error_within_import\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -267,7 +282,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -281,7 +296,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -296,7 +311,7 @@ dictUsecase['EXPECTATION']      = "Both together is not accepted; test is not ex
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\" --variable config_file:\"./config/tsm-test_config_variant2.json\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -310,7 +325,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -324,7 +339,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"in/va/lid\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -338,7 +353,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"I_AM_NOT_DEFINED\""
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -352,7 +367,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/I_AM_NOT_EXISTING.json\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = 256
@@ -437,7 +452,7 @@ dictUsecase['EXPECTATION']      = "Local config value overwrites initial value f
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\" --variable local_config:\"./localconfig/tsm-test_localconfig_bench2.json\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -451,7 +466,7 @@ dictUsecase['EXPECTATION']      = "Local config value overwrites initial value f
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable config_file:\"./config/tsm-test_config_variant2.json\" --variable local_config:\"./localconfig/tsm-test_localconfig_bench1.json\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -465,7 +480,7 @@ dictUsecase['EXPECTATION']      = "Command line value of 'teststring_bench' over
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable teststring_bench:\"'teststring_bench' command line value\" --variable config_file:\"./config/tsm-test_config_variant2.json\" --variable local_config:\"./localconfig/tsm-test_localconfig_bench1.json\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -480,7 +495,7 @@ dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Temporary change of environment (ROBOT_LOCAL_CONFIG)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = f"--variable variant:\"variant1\""
 dictUsecase['PRESTEP']          = "LocalConfigEnvVar_Create"
@@ -894,7 +909,7 @@ dictUsecase['EXPECTEDRETURN']   = 1542
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
-
+#TM***
 # --------------------------------------------------------------------------------------------------------------
 
 # Computation of return values:

@@ -32,18 +32,21 @@ Test Teardown     tm.testcase_teardown
 
 Test Case tsm-testfile-16-several_tests-1-passed
    [documentation]    tsm-testfile-16-several_tests-1-passed
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
 
 Test Case tsm-testfile-16-several_tests-2-passed
    [documentation]    tsm-testfile-16-several_tests-2-passed
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
 
 Test Case tsm-testfile-16-several_tests-3-failed
    [documentation]    tsm-testfile-16-several_tests-3-failed
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -54,6 +57,7 @@ Test Case tsm-testfile-16-several_tests-3-failed
 
 Test Case tsm-testfile-16-several_tests-4-failed
    [documentation]    tsm-testfile-16-several_tests-4-failed
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -64,6 +68,7 @@ Test Case tsm-testfile-16-several_tests-4-failed
 
 Test Case tsm-testfile-16-several_tests-5-failed
    [documentation]    tsm-testfile-16-several_tests-5-failed
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -74,6 +79,7 @@ Test Case tsm-testfile-16-several_tests-5-failed
 
 Test Case tsm-testfile-16-several_tests-6-unknown
    [documentation]    tsm-testfile-16-several_tests-6-unknown
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -84,6 +90,7 @@ Test Case tsm-testfile-16-several_tests-6-unknown
 
 Test Case tsm-testfile-16-several_tests-7-unknown
    [documentation]    tsm-testfile-16-several_tests-7-unknown
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -94,6 +101,7 @@ Test Case tsm-testfile-16-several_tests-7-unknown
 
 Test Case tsm-testfile-16-several_tests-8-unknown
    [documentation]    tsm-testfile-16-several_tests-8-unknown
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes
@@ -104,6 +112,7 @@ Test Case tsm-testfile-16-several_tests-8-unknown
 
 Test Case tsm-testfile-16-several_tests-9-unknown
    [documentation]    tsm-testfile-16-several_tests-9-unknown
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)        console=yes

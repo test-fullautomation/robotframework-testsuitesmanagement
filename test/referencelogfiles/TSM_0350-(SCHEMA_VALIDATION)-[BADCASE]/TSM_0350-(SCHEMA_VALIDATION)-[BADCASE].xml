@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 10:03:50.853" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 15:46:52.461" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230404 10:03:51.008" level="ERROR">Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
+<msg timestamp="20230404 15:46:52.617" level="ERROR">Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
 </msg>
-<msg timestamp="20230404 10:03:51.008" level="UNKNOWN">Parse JSON schema file failed!</msg>
-<status status="UNKNOWN" starttime="20230404 10:03:50.983" endtime="20230404 10:03:51.008"/>
+<msg timestamp="20230404 15:46:52.617" level="UNKNOWN">Parse JSON schema file failed!</msg>
+<status status="UNKNOWN" starttime="20230404 15:46:52.585" endtime="20230404 15:46:52.617"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230404 10:03:51.008" endtime="20230404 10:03:51.008">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230404 15:46:52.617" endtime="20230404 15:46:52.617">Parent suite setup unknown:
 Parse JSON schema file failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 10:03:51.023" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 10:03:51.023" endtime="20230404 10:03:51.023"/>
+<msg timestamp="20230404 15:46:52.628" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 15:46:52.628" endtime="20230404 15:46:52.628"/>
 </kw>
-<status status="UNKNOWN" starttime="20230404 10:03:50.868" endtime="20230404 10:03:51.023">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230404 15:46:52.475" endtime="20230404 15:46:52.628">Suite setup unknown:
 Parse JSON schema file failed!</status>
 </suite>
 <statistics>
@@ -35,7 +35,7 @@ Parse JSON schema file failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230404 10:03:51.008" level="ERROR">Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
+<msg timestamp="20230404 15:46:52.617" level="ERROR">Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
 </msg>
 </errors>
 </robot>

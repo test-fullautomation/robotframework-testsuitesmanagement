@@ -31,6 +31,7 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-testfile-08-fail
    [documentation]    tsm-testfile-08-fail
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-08-fail.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-08-fail.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-08-fail.robot)        console=yes

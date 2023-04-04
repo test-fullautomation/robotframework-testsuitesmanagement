@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 10:03:56.555" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 15:46:58.189" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230404 10:03:56.701" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
-<msg timestamp="20230404 10:03:56.701" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230404 10:03:56.703" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230404 10:03:56.704" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230404 10:03:56.705" level="INFO">${teststring_variant} = I am the 'version_control_09' configuration of tsm-test</msg>
-<msg timestamp="20230404 10:03:56.705" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '10.0.0', 'Minimum_version': '9.0.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20230404 10:03:56.705" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230404 10:03:56.705" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json'</msg>
-<msg timestamp="20230404 10:03:56.706" level="ERROR">Version conflict.
+<msg timestamp="20230404 15:46:58.337" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_version_control.09'.</msg>
+<msg timestamp="20230404 15:46:58.337" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20230404 15:46:58.339" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20230404 15:46:58.339" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20230404 15:46:58.339" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
+<msg timestamp="20230404 15:46:58.340" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20230404 15:46:58.340" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20230404 15:46:58.340" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20230404 15:46:58.340" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20230404 15:46:58.341" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20230404 15:46:58.341" level="INFO">${teststring_variant} = I am the 'version_control_09' configuration of tsm-test</msg>
+<msg timestamp="20230404 15:46:58.342" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '10.0.0', 'Minimum_version': '9.0.0', 'Project': 'tsm-test_config_version_control.09', 'TargetName': 'Device_01', 'para...</msg>
+<msg timestamp="20230404 15:46:58.342" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20230404 15:46:58.342" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json'</msg>
+<msg timestamp="20230404 15:46:58.342" level="ERROR">Version conflict.
 Testsuite : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
 config    : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json
 
@@ -29,29 +29,29 @@ but the installed RobotFramework AIO version is older         '0.7.0'
 Please install the required RobotFramework AIO version.
 You can find an installer here: \\bosch.com\dfsrb\DfsDE\DIV\CM\DI\Projects\Common\RobotFramework\Releases
 </msg>
-<msg timestamp="20230404 10:03:56.707" level="UNKNOWN">Version control error!!!</msg>
-<status status="UNKNOWN" starttime="20230404 10:03:56.670" endtime="20230404 10:03:56.707"/>
+<msg timestamp="20230404 15:46:58.343" level="UNKNOWN">Version control error!!!</msg>
+<status status="UNKNOWN" starttime="20230404 15:46:58.309" endtime="20230404 15:46:58.343"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230404 10:03:56.707" endtime="20230404 10:03:56.708">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230404 15:46:58.343" endtime="20230404 15:46:58.345">Parent suite setup unknown:
 Version control error!!!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 10:03:56.712" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 10:03:56.712" endtime="20230404 10:03:56.712"/>
+<msg timestamp="20230404 15:46:58.348" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230404 15:46:58.348" endtime="20230404 15:46:58.348"/>
 </kw>
 <meta name="machine">HI7-C-0005Y</meta>
-<meta name="project">RobotFramework Testsuites</meta>
+<meta name="project">tsm-test_config_version_control.09</meta>
 <meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
 <meta name="testtool">Robot Framework 4.1.3 (Python 3.9.16 on win32)</meta>
 <meta name="version">0.7.0</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="UNKNOWN" starttime="20230404 10:03:56.558" endtime="20230404 10:03:56.713">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230404 15:46:58.193" endtime="20230404 15:46:58.348">Suite setup unknown:
 Version control error!!!</status>
 </suite>
 <statistics>
@@ -65,7 +65,7 @@ Version control error!!!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230404 10:03:56.706" level="ERROR">Version conflict.
+<msg timestamp="20230404 15:46:58.342" level="ERROR">Version conflict.
 Testsuite : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
 config    : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json
 

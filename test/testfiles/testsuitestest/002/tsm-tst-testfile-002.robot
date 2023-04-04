@@ -20,10 +20,13 @@
 
 *** Settings ***
 
+Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
+
 *** Test Cases ***
 
 Test Case tsm-tst-testfile-002-A
    [documentation]    tsm-tst-testfile-002-A
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [A])      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [A])    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [A])        console=yes
@@ -34,6 +37,7 @@ Test Case tsm-tst-testfile-002-A
 
 Test Case tsm-tst-testfile-002-B
    [documentation]    tsm-tst-testfile-002-B
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [B])      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [B])    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [B])        console=yes
@@ -44,6 +48,7 @@ Test Case tsm-tst-testfile-002-B
 
 Test Case tsm-tst-testfile-002-C
    [documentation]    tsm-tst-testfile-002-C
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [C])      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [C])    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [C])        console=yes

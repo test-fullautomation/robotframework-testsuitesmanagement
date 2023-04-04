@@ -24,7 +24,7 @@
   "Maximum_version" : "1.0.0",
   "Minimum_version" : "0.6.0",
 
-  "Project"         : "RobotFramework Testsuites",
+  "Project"         : "tsm-test_config_nested.1",
   "TargetName"      : "Device_01",
 
   "params" : {

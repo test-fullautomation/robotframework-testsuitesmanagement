@@ -1,302 +1,338 @@
 ==============================================================================
-20230404 10:04:01.852 - INFO - + START SUITE: Tsm-Testfile-16-Several Tests [ ]
+20230404 15:47:03.397 - INFO - + START SUITE: Tsm-Testfile-16-Several Tests [ ]
 ==============================================================================
-20230404 10:04:01.859 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230404 10:04:01.890 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
-20230404 10:04:01.890 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230404 10:04:01.892 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230404 10:04:01.893 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230404 10:04:01.893 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230404 10:04:01.893 - INFO - Set suite metadata 'version_sw' to value ''.
-20230404 10:04:01.893 - INFO - Set suite metadata 'version_hw' to value ''.
-20230404 10:04:01.893 - INFO - Set suite metadata 'version_test' to value ''.
-20230404 10:04:01.894 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230404 10:04:01.894 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230404 10:04:01.895 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230404 10:04:01.895 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'RobotFramework Testsuites', 'TargetName': 'Device_01', 'params': {}}
-20230404 10:04:01.895 - INFO - Running with configuration level 2
-20230404 10:04:01.895 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230404 10:04:01.896 - INFO - Robot Framework AIO version check passed!
-20230404 10:04:01.896 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230404 10:04:01.896 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230404 10:04:01.896 - INFO - Number of test suites: 1
-20230404 10:04:01.896 - INFO - Total number of testcases: 9
-20230404 10:04:01.896 - INFO - +- END SETUP: tm.Testsuite Setup (37)
+20230404 15:47:03.402 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230404 15:47:03.430 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230404 15:47:03.430 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230404 15:47:03.432 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230404 15:47:03.432 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230404 15:47:03.432 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230404 15:47:03.432 - INFO - Set suite metadata 'version_sw' to value ''.
+20230404 15:47:03.432 - INFO - Set suite metadata 'version_hw' to value ''.
+20230404 15:47:03.432 - INFO - Set suite metadata 'version_test' to value ''.
+20230404 15:47:03.433 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230404 15:47:03.433 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230404 15:47:03.434 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230404 15:47:03.434 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230404 15:47:03.435 - INFO - Running with configuration level 2
+20230404 15:47:03.435 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230404 15:47:03.435 - INFO - Robot Framework AIO version check passed!
+20230404 15:47:03.435 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230404 15:47:03.435 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230404 15:47:03.435 - INFO - Number of test suites: 1
+20230404 15:47:03.435 - INFO - Total number of testcases: 9
+20230404 15:47:03.435 - INFO - +- END SETUP: tm.Testsuite Setup (33)
 ------------------------------------------------------------------------------
-20230404 10:04:01.896 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-1-passed [ ]
+20230404 15:47:03.435 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-1-passed [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.897 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.897 - INFO - Test Count: 1
-20230404 10:04:01.898 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.436 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.437 - INFO - Test Count: 1
+20230404 15:47:03.437 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.898 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.898 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.899 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.437 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.438 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.438 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.899 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.899 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.900 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.438 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.438 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.439 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.900 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.900 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.901 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.439 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.439 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.441 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.901 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.901 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.901 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.441 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.442 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.443 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.443 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.443 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.443 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.902 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-1-passed (5)
+20230404 15:47:03.445 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-1-passed (8)
 ------------------------------------------------------------------------------
-20230404 10:04:01.902 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-2-passed [ ]
+20230404 15:47:03.445 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-2-passed [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.903 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.903 - INFO - Test Count: 2
-20230404 10:04:01.903 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.446 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.446 - INFO - Test Count: 2
+20230404 15:47:03.446 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.903 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.903 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.904 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.446 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.447 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.447 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.904 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.904 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.905 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.447 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.447 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.448 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.905 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.905 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.906 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.448 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.449 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.449 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.906 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.906 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.906 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.449 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.450 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.452 - INFO - +-- END KEYWORD: BuiltIn.Log (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.452 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.452 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.452 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.907 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-2-passed (4)
+20230404 15:47:03.456 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-2-passed (7)
 ------------------------------------------------------------------------------
-20230404 10:04:01.907 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-3-failed [ ]
+20230404 15:47:03.457 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-3-failed [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.908 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.908 - INFO - Test Count: 3
-20230404 10:04:01.908 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.459 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.460 - INFO - Test Count: 3
+20230404 15:47:03.460 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.908 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.909 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.909 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.461 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.462 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.463 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.909 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.910 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.910 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.463 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.464 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.467 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.910 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.911 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.911 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.467 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.468 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.469 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.911 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
-20230404 10:04:01.912 - FAIL - AssertionError
-20230404 10:04:01.912 - DEBUG - Traceback (most recent call last):
+20230404 15:47:03.469 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.470 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.474 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.474 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
+20230404 15:47:03.475 - FAIL - AssertionError
+20230404 15:47:03.475 - DEBUG - Traceback (most recent call last):
   None
-20230404 10:04:01.912 - INFO - +-- END KEYWORD: BuiltIn.Fail (1)
+20230404 15:47:03.475 - INFO - +-- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.912 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.915 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.476 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.476 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.915 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.915 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.916 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.476 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.476 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.477 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20230404 10:04:01.919 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-3-failed (9)
+20230404 15:47:03.479 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-3-failed (20)
 ------------------------------------------------------------------------------
-20230404 10:04:01.919 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-4-failed [ ]
+20230404 15:47:03.480 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-4-failed [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.919 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.920 - INFO - Test Count: 4
-20230404 10:04:01.920 - INFO - +-- END SETUP: tm.Testcase Setup (1)
+20230404 15:47:03.480 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.480 - INFO - Test Count: 4
+20230404 15:47:03.483 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.920 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.920 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.921 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.483 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.484 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.484 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.921 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.921 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.922 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.484 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.484 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.485 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.922 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.922 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.923 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.486 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.486 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.490 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.923 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
-20230404 10:04:01.923 - FAIL - AssertionError
-20230404 10:04:01.923 - DEBUG - Traceback (most recent call last):
+20230404 15:47:03.491 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.492 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.494 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.494 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
+20230404 15:47:03.495 - FAIL - AssertionError
+20230404 15:47:03.495 - DEBUG - Traceback (most recent call last):
   None
-20230404 10:04:01.923 - INFO - +-- END KEYWORD: BuiltIn.Fail (0)
+20230404 15:47:03.496 - INFO - +-- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.924 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.924 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.497 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.499 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.924 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.924 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.925 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.499 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.499 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.499 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.925 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-4-failed (6)
+20230404 15:47:03.505 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-4-failed (20)
 ------------------------------------------------------------------------------
-20230404 10:04:01.925 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-5-failed [ ]
+20230404 15:47:03.505 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-5-failed [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.926 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.926 - INFO - Test Count: 5
-20230404 10:04:01.926 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.506 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.506 - INFO - Test Count: 5
+20230404 15:47:03.506 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.926 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.926 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.927 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.506 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.507 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.507 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.927 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.927 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.928 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.507 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.507 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.508 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.928 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.928 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.932 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.508 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.508 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.509 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.932 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
-20230404 10:04:01.933 - FAIL - AssertionError
-20230404 10:04:01.933 - DEBUG - Traceback (most recent call last):
+20230404 15:47:03.509 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.509 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.510 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.510 - INFO - +-- START KEYWORD: BuiltIn.Fail [ ]
+20230404 15:47:03.510 - FAIL - AssertionError
+20230404 15:47:03.510 - DEBUG - Traceback (most recent call last):
   None
-20230404 10:04:01.933 - INFO - +-- END KEYWORD: BuiltIn.Fail (1)
+20230404 15:47:03.511 - INFO - +-- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.933 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.934 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.511 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.511 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.934 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.934 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.934 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.511 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.512 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.514 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20230404 10:04:01.941 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-5-failed (9)
+20230404 15:47:03.515 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-5-failed (9)
 ------------------------------------------------------------------------------
-20230404 10:04:01.941 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-6-unknown [ ]
+20230404 15:47:03.516 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-6-unknown [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.942 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.942 - INFO - Test Count: 6
-20230404 10:04:01.943 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.519 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.519 - INFO - Test Count: 6
+20230404 15:47:03.519 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.943 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.943 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.945 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.520 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.520 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.520 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.945 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.945 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.946 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.521 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.521 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.521 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.946 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.946 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.950 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.522 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.522 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.523 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.950 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 10:04:01.950 - UNKNOWN - Exception occurred.
-20230404 10:04:01.951 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
+20230404 15:47:03.523 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.523 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.523 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.951 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.951 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.524 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
+20230404 15:47:03.524 - UNKNOWN - Exception occurred.
+20230404 15:47:03.524 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.952 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.952 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.952 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.524 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.524 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.525 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.525 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.525 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.954 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-6-unknown (11)
+20230404 15:47:03.527 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-6-unknown (9)
 ------------------------------------------------------------------------------
-20230404 10:04:01.954 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-7-unknown [ ]
+20230404 15:47:03.527 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-7-unknown [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.955 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.955 - INFO - Test Count: 7
-20230404 10:04:01.955 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.529 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.529 - INFO - Test Count: 7
+20230404 15:47:03.529 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.956 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.956 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.956 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.529 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.530 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.530 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.957 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.957 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.957 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.530 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.530 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.531 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.958 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.958 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.959 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.531 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.531 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.536 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.959 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 10:04:01.959 - UNKNOWN - Exception occurred.
-20230404 10:04:01.960 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
+20230404 15:47:03.536 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.537 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.539 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.961 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.961 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.539 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
+20230404 15:47:03.540 - UNKNOWN - Exception occurred.
+20230404 15:47:03.541 - INFO - +-- END KEYWORD: BuiltIn.Unknown (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.961 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.961 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.962 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.541 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.545 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.545 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.545 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.546 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.968 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-7-unknown (8)
+20230404 15:47:03.553 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-7-unknown (19)
 ------------------------------------------------------------------------------
-20230404 10:04:01.969 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-8-unknown [ ]
+20230404 15:47:03.554 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-8-unknown [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.973 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.973 - INFO - Test Count: 8
-20230404 10:04:01.973 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.555 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.556 - INFO - Test Count: 8
+20230404 15:47:03.556 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.974 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.974 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.976 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.557 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.558 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.560 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.976 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.976 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.980 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.561 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.561 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.563 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.980 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.980 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.981 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230404 15:47:03.563 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.563 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.569 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.981 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 10:04:01.982 - UNKNOWN - Exception occurred.
-20230404 10:04:01.982 - INFO - +-- END KEYWORD: BuiltIn.Unknown (1)
+20230404 15:47:03.569 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.570 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.570 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.982 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.983 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.570 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
+20230404 15:47:03.570 - UNKNOWN - Exception occurred.
+20230404 15:47:03.572 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.983 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.983 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.983 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.572 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.573 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.573 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.573 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.576 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20230404 10:04:01.985 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-8-unknown (15)
+20230404 15:47:03.581 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-8-unknown (23)
 ------------------------------------------------------------------------------
-20230404 10:04:01.986 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-9-unknown [ ]
+20230404 15:47:03.581 - INFO - +- START TEST: Test Case tsm-testfile-16-several_tests-9-unknown [ ]
 ------------------------------------------------------------------------------
-20230404 10:04:01.986 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230404 10:04:01.986 - INFO - Test Count: 9
-20230404 10:04:01.986 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230404 15:47:03.582 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230404 15:47:03.582 - INFO - Test Count: 9
+20230404 15:47:03.583 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.987 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.987 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.987 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.583 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230404 15:47:03.583 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230404 15:47:03.584 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.988 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.988 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.988 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.584 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.584 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.586 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.989 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
-20230404 10:04:01.989 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
-20230404 10:04:01.990 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.586 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.586 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.587 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.990 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 10:04:01.990 - UNKNOWN - Exception occurred.
-20230404 10:04:01.991 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
+20230404 15:47:03.587 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot) | console=yes ]
+20230404 15:47:03.587 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)
+20230404 15:47:03.591 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.991 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 10:04:01.991 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230404 15:47:03.592 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
+20230404 15:47:03.592 - UNKNOWN - Exception occurred.
+20230404 15:47:03.592 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 10:04:01.992 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230404 10:04:01.992 - INFO - testcase_teardown: Will be implemented later
-20230404 10:04:01.992 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230404 15:47:03.593 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230404 15:47:03.593 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230404 15:47:03.593 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230404 15:47:03.593 - INFO - testcase_teardown: Will be implemented later
+20230404 15:47:03.594 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230404 10:04:01.998 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-9-unknown (7)
+20230404 15:47:03.599 - INFO - +- END TEST: Test Case tsm-testfile-16-several_tests-9-unknown (13)
 ------------------------------------------------------------------------------
-20230404 10:04:01.998 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230404 10:04:01.998 - INFO - testsuite_teardown: Will be implemented later
-20230404 10:04:01.998 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230404 15:47:03.600 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230404 15:47:03.600 - INFO - testsuite_teardown: Will be implemented later
+20230404 15:47:03.600 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230404 10:04:02.004 - INFO - + END SUITE: Tsm-Testfile-16-Several Tests (263)
+20230404 15:47:03.602 - INFO - + END SUITE: Tsm-Testfile-16-Several Tests (312)
 ==============================================================================

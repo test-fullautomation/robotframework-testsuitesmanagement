@@ -21,6 +21,6 @@
   //            },
   "variant1": {
                "name": "tsm-test_config_variant1.json",
-               "path": "./I_AM_NOT_EXISTING_CONFIG_FOLDER/"
+               "path": "./config/"
               }
 }

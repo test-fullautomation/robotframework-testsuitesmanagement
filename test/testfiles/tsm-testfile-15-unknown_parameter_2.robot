@@ -38,6 +38,7 @@ Test Teardown     tm.testcase_teardown
 
 Test Case tsm-testfile-15-unknown_parameter_2
    [documentation]    tsm-testfile-15-unknown_parameter_2
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-15-unknown_parameter_2.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-15-unknown_parameter_2.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-15-unknown_parameter_2.robot)        console=yes

@@ -43,7 +43,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With variant name in command line / (variant1)**
+   **With variant name in command line and with variant configuration file in suite setup of robot file / (variant1)**
 
    Expected: Execution with selected variant 1
 
@@ -55,7 +55,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With variant name in command line / with 4 byte UTF-8 characters inside name**
+   **With variant name in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside variant name**
 
    Expected: Execution with selected variant
 
@@ -67,7 +67,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file in command line / (tsm-test_config_variant2.json)**
+   **With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)**
 
    Expected: Execution with selected variant 2
 
@@ -79,7 +79,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file in command line / with 4 byte UTF-8 characters inside name**
+   **With parameter configuration file in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside name**
 
    Expected: Execution with selected config file for variant
 
@@ -91,9 +91,9 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With variant name and single parameter in command line / (variant1; teststring_variant)**
+   **With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup**
 
-   Expected: Single command line parameter value overwrites variant 1 configuration value
+   Expected: Execution with selected variant 2
 
    *Comment: Single file execution*
 
@@ -103,7 +103,19 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file and single parameter in command line / (variant2; teststring_variant)**
+   **With variant name and single parameter in command line and with variant configuration file in suite setup of robot file / (variant1; teststring_variant)**
+
+   Expected: Single command line parameter value overwrites variant 1 configuration value
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0009**
+
+  [VARIANT_HANDLING / GOODCASE]
+
+   **With parameter configuration file and single parameter in command line and with variant configuration file in suite setup of robot file / (variant2; teststring_variant)**
 
    Expected: Single command line parameter value overwrites variant 2 configuration value
 
@@ -111,7 +123,7 @@ Test Use Cases
 
 ----
 
-* **Test TSM_0009**
+* **Test TSM_0010**
 
   [VARIANT_HANDLING / GOODCASE]
 
@@ -123,7 +135,7 @@ Test Use Cases
 
 ----
 
-* **Test TSM_0010**
+* **Test TSM_0011**
 
   [VARIANT_HANDLING / GOODCASE]
 
@@ -135,7 +147,7 @@ Test Use Cases
 
 ----
 
-* **Test TSM_0011**
+* **Test TSM_0012**
 
   [VARIANT_HANDLING / GOODCASE]
 
@@ -715,5 +727,5 @@ Test Use Cases
 
 ----
 
-Generated: 04.04.2023 - 10:04:27
+Generated: 04.04.2023 - 15:47:50
 

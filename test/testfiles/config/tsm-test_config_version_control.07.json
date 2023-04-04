@@ -20,7 +20,7 @@
   "Maximum_version" : "0.0.1",
   "Minimum_version" : "10.0.0",
 
-  "Project"         : "RobotFramework Testsuites",
+  "Project"         : "tsm-test_config_version_control.07",
   "TargetName"      : "Device_01",
 
   "params" : {

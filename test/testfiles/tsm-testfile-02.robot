@@ -21,6 +21,7 @@
 *** Settings ***
 
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
 Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
 Suite Teardown    tm.testsuite_teardown
@@ -30,6 +31,7 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-testfile-02
    [documentation]    tsm-testfile-02
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-02.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-02.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-02.robot)        console=yes

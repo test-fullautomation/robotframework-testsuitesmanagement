@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-05-err-1.robot (with variant configuration; JSON file contains syntax errors)
+# tsm-testfile-17.robot (without variant configuration but parameter logging, config_file expected in command line)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -23,16 +23,16 @@
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants_err_1.json
+Suite Setup       tm.testsuite_setup
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-05-err-1
-   [documentation]    tsm-testfile-05-err-1
+Test Case tsm-testfile-17
+   [documentation]    tsm-testfile-17
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-05-err-1.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-05-err-1.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-05-err-1.robot)        console=yes
-   Log    I must not be executed    console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-17.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-17.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-17.robot)        console=yes
+

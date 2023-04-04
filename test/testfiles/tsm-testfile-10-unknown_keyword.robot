@@ -31,6 +31,7 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-testfile-10-unknown_keyword
    [documentation]    tsm-testfile-10-unknown_keyword
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
    Log    teststring_common : ${teststring_common} (tsm-testfile-10-unknown_keyword.robot)      console=yes
    Log    teststring_variant : ${teststring_variant} (tsm-testfile-10-unknown_keyword.robot)    console=yes
    Log    teststring_bench : ${teststring_bench} (tsm-testfile-10-unknown_keyword.robot)        console=yes
