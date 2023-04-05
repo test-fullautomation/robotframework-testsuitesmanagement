@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-17.robot (without variant configuration but parameter logging, config_file expected in command line)
+# tsm-testfile-15-unknown_library.robot (with variant configuration and import of unknown library)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -23,16 +23,18 @@
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup
+Library    I.Am.The.Unknown.Library.And.Therefore.An.Error
+
+Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-17
-   [documentation]    tsm-testfile-17
+Test Case tsm-testfile-15-unknown_library
+   [documentation]    tsm-testfile-15-unknown_library
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-17.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-17.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-17.robot)        console=yes
-
+   Log    teststring_common : ${teststring_common} (tsm-testfile-15-unknown_library.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-15-unknown_library.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-15-unknown_library.robot)        console=yes
+   Log    I must not be executed    console=yes

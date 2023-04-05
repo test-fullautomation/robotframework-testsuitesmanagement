@@ -1,509 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 15:47:03.282" rpa="false" schemaversion="2">
-<suite id="s1" name="Tsm-Testfile-16-Several Tests" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-16-several_tests.robot">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230405 17:49:35.798" rpa="false" schemaversion="2">
+<suite id="s1" name="Tsm-Testfile-18-Several Tests" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-18-several_tests.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230404 15:47:03.430" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
-<msg timestamp="20230404 15:47:03.430" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230404 15:47:03.432" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230404 15:47:03.433" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230404 15:47:03.433" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230404 15:47:03.434" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
-<msg timestamp="20230404 15:47:03.434" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230404 15:47:03.435" level="INFO">Total number of testcases: 9</msg>
-<status status="PASS" starttime="20230404 15:47:03.402" endtime="20230404 15:47:03.435"/>
+<msg timestamp="20230405 17:49:35.948" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
+<msg timestamp="20230405 17:49:35.948" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20230405 17:49:35.950" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20230405 17:49:35.951" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20230405 17:49:35.952" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">Robot Framework AIO version check passed!</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230405 17:49:35.953" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'</msg>
+<msg timestamp="20230405 17:49:35.954" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230405 17:49:35.954" level="INFO">Total number of testcases: 9</msg>
+<status status="PASS" starttime="20230405 17:49:35.921" endtime="20230405 17:49:35.954"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-16-several_tests-1-passed">
+<test id="s1-t1" name="Test Case tsm-testfile-18-several_tests-1-passed">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.437" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230404 15:47:03.436" endtime="20230404 15:47:03.437"/>
+<msg timestamp="20230405 17:49:35.955" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230405 17:49:35.955" endtime="20230405 17:49:35.955"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.438" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.437" endtime="20230404 15:47:03.438"/>
+<msg timestamp="20230405 17:49:35.956" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:35.956" endtime="20230405 17:49:35.956"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.438" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.438" endtime="20230404 15:47:03.438"/>
+<msg timestamp="20230405 17:49:35.957" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.957" endtime="20230405 17:49:35.957"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.439" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.439" endtime="20230404 15:47:03.440"/>
+<msg timestamp="20230405 17:49:35.962" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.962" endtime="20230405 17:49:35.962"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.442" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.441" endtime="20230404 15:47:03.442"/>
+<msg timestamp="20230405 17:49:35.963" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.963" endtime="20230405 17:49:35.964"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.443" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.443" endtime="20230404 15:47:03.443"/>
+<msg timestamp="20230405 17:49:35.967" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:35.967" endtime="20230405 17:49:35.967"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-1-passed</doc>
-<status status="PASS" starttime="20230404 15:47:03.435" endtime="20230404 15:47:03.443"/>
+<doc>tsm-testfile-18-several_tests-1-passed</doc>
+<status status="PASS" starttime="20230405 17:49:35.954" endtime="20230405 17:49:35.967"/>
 </test>
-<test id="s1-t2" name="Test Case tsm-testfile-16-several_tests-2-passed">
+<test id="s1-t2" name="Test Case tsm-testfile-18-several_tests-2-passed">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.446" level="INFO">Test Count: 2</msg>
-<status status="PASS" starttime="20230404 15:47:03.446" endtime="20230404 15:47:03.446"/>
+<msg timestamp="20230405 17:49:35.970" level="INFO">Test Count: 2</msg>
+<status status="PASS" starttime="20230405 17:49:35.970" endtime="20230405 17:49:35.970"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.447" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.446" endtime="20230404 15:47:03.447"/>
+<msg timestamp="20230405 17:49:35.971" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:35.971" endtime="20230405 17:49:35.971"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.447" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.447" endtime="20230404 15:47:03.448"/>
+<msg timestamp="20230405 17:49:35.972" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.972" endtime="20230405 17:49:35.972"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.449" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.448" endtime="20230404 15:47:03.449"/>
+<msg timestamp="20230405 17:49:35.973" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.973" endtime="20230405 17:49:35.973"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.450" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.449" endtime="20230404 15:47:03.451"/>
+<msg timestamp="20230405 17:49:35.976" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.976" endtime="20230405 17:49:35.976"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.452" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.452" endtime="20230404 15:47:03.452"/>
+<msg timestamp="20230405 17:49:35.977" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:35.977" endtime="20230405 17:49:35.977"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-2-passed</doc>
-<status status="PASS" starttime="20230404 15:47:03.445" endtime="20230404 15:47:03.452"/>
+<doc>tsm-testfile-18-several_tests-2-passed</doc>
+<status status="PASS" starttime="20230405 17:49:35.969" endtime="20230405 17:49:35.977"/>
 </test>
-<test id="s1-t3" name="Test Case tsm-testfile-16-several_tests-3-failed">
+<test id="s1-t3" name="Test Case tsm-testfile-18-several_tests-3-failed">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.460" level="INFO">Test Count: 3</msg>
-<status status="PASS" starttime="20230404 15:47:03.459" endtime="20230404 15:47:03.460"/>
+<msg timestamp="20230405 17:49:35.982" level="INFO">Test Count: 3</msg>
+<status status="PASS" starttime="20230405 17:49:35.981" endtime="20230405 17:49:35.982"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.462" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.461" endtime="20230404 15:47:03.462"/>
+<msg timestamp="20230405 17:49:35.982" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:35.982" endtime="20230405 17:49:35.982"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.464" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.463" endtime="20230404 15:47:03.464"/>
+<msg timestamp="20230405 17:49:35.983" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.983" endtime="20230405 17:49:35.983"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.468" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.467" endtime="20230404 15:47:03.468"/>
+<msg timestamp="20230405 17:49:35.984" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.984" endtime="20230405 17:49:35.984"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.470" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.469" endtime="20230404 15:47:03.470"/>
+<msg timestamp="20230405 17:49:35.985" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:35.985" endtime="20230405 17:49:35.986"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.475" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230404 15:47:03.474" endtime="20230404 15:47:03.475"/>
+<msg timestamp="20230405 17:49:35.986" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230405 17:49:35.986" endtime="20230405 17:49:35.986"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.475" endtime="20230404 15:47:03.476"/>
+<status status="NOT RUN" starttime="20230405 17:49:35.987" endtime="20230405 17:49:35.987"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.476" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.476" endtime="20230404 15:47:03.477"/>
+<msg timestamp="20230405 17:49:35.988" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:35.988" endtime="20230405 17:49:35.988"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-3-failed</doc>
-<status status="FAIL" starttime="20230404 15:47:03.457" endtime="20230404 15:47:03.477">AssertionError</status>
+<doc>tsm-testfile-18-several_tests-3-failed</doc>
+<status status="FAIL" starttime="20230405 17:49:35.981" endtime="20230405 17:49:35.988">AssertionError</status>
 </test>
-<test id="s1-t4" name="Test Case tsm-testfile-16-several_tests-4-failed">
+<test id="s1-t4" name="Test Case tsm-testfile-18-several_tests-4-failed">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.480" level="INFO">Test Count: 4</msg>
-<status status="PASS" starttime="20230404 15:47:03.480" endtime="20230404 15:47:03.481"/>
+<msg timestamp="20230405 17:49:35.999" level="INFO">Test Count: 4</msg>
+<status status="PASS" starttime="20230405 17:49:35.997" endtime="20230405 17:49:35.999"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.484" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.483" endtime="20230404 15:47:03.484"/>
+<msg timestamp="20230405 17:49:36.001" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:35.999" endtime="20230405 17:49:36.001"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.484" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.484" endtime="20230404 15:47:03.485"/>
+<msg timestamp="20230405 17:49:36.003" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.002" endtime="20230405 17:49:36.003"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.486" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.486" endtime="20230404 15:47:03.486"/>
+<msg timestamp="20230405 17:49:36.008" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.007" endtime="20230405 17:49:36.009"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.492" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.491" endtime="20230404 15:47:03.492"/>
+<msg timestamp="20230405 17:49:36.011" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.011" endtime="20230405 17:49:36.012"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.495" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230404 15:47:03.494" endtime="20230404 15:47:03.495"/>
+<msg timestamp="20230405 17:49:36.016" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230405 17:49:36.015" endtime="20230405 17:49:36.016"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.497" endtime="20230404 15:47:03.497"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.016" endtime="20230405 17:49:36.016"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.499" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.499" endtime="20230404 15:47:03.499"/>
+<msg timestamp="20230405 17:49:36.017" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.017" endtime="20230405 17:49:36.017"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-4-failed</doc>
-<status status="FAIL" starttime="20230404 15:47:03.479" endtime="20230404 15:47:03.499">AssertionError</status>
+<doc>tsm-testfile-18-several_tests-4-failed</doc>
+<status status="FAIL" starttime="20230405 17:49:35.995" endtime="20230405 17:49:36.017">AssertionError</status>
 </test>
-<test id="s1-t5" name="Test Case tsm-testfile-16-several_tests-5-failed">
+<test id="s1-t5" name="Test Case tsm-testfile-18-several_tests-5-failed">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.506" level="INFO">Test Count: 5</msg>
-<status status="PASS" starttime="20230404 15:47:03.506" endtime="20230404 15:47:03.506"/>
+<msg timestamp="20230405 17:49:36.019" level="INFO">Test Count: 5</msg>
+<status status="PASS" starttime="20230405 17:49:36.019" endtime="20230405 17:49:36.019"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.507" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.506" endtime="20230404 15:47:03.507"/>
+<msg timestamp="20230405 17:49:36.020" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:36.020" endtime="20230405 17:49:36.020"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.507" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.507" endtime="20230404 15:47:03.508"/>
+<msg timestamp="20230405 17:49:36.021" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.021" endtime="20230405 17:49:36.021"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.508" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.508" endtime="20230404 15:47:03.509"/>
+<msg timestamp="20230405 17:49:36.022" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.022" endtime="20230405 17:49:36.023"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.509" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.509" endtime="20230404 15:47:03.510"/>
+<msg timestamp="20230405 17:49:36.029" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.028" endtime="20230405 17:49:36.029"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.510" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230404 15:47:03.510" endtime="20230404 15:47:03.510"/>
+<msg timestamp="20230405 17:49:36.030" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20230405 17:49:36.030" endtime="20230405 17:49:36.030"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.511" endtime="20230404 15:47:03.511"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.030" endtime="20230405 17:49:36.031"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.512" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.511" endtime="20230404 15:47:03.512"/>
+<msg timestamp="20230405 17:49:36.031" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.031" endtime="20230405 17:49:36.031"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-5-failed</doc>
-<status status="FAIL" starttime="20230404 15:47:03.505" endtime="20230404 15:47:03.514">AssertionError</status>
+<doc>tsm-testfile-18-several_tests-5-failed</doc>
+<status status="FAIL" starttime="20230405 17:49:36.018" endtime="20230405 17:49:36.032">AssertionError</status>
 </test>
-<test id="s1-t6" name="Test Case tsm-testfile-16-several_tests-6-unknown">
+<test id="s1-t6" name="Test Case tsm-testfile-18-several_tests-6-unknown">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.519" level="INFO">Test Count: 6</msg>
-<status status="PASS" starttime="20230404 15:47:03.519" endtime="20230404 15:47:03.519"/>
+<msg timestamp="20230405 17:49:36.034" level="INFO">Test Count: 6</msg>
+<status status="PASS" starttime="20230405 17:49:36.034" endtime="20230405 17:49:36.034"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.520" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.520" endtime="20230404 15:47:03.520"/>
+<msg timestamp="20230405 17:49:36.035" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:36.035" endtime="20230405 17:49:36.035"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.521" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.520" endtime="20230404 15:47:03.521"/>
+<msg timestamp="20230405 17:49:36.037" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.036" endtime="20230405 17:49:36.037"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.522" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.522" endtime="20230404 15:47:03.522"/>
+<msg timestamp="20230405 17:49:36.038" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.038" endtime="20230405 17:49:36.038"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.523" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.523" endtime="20230404 15:47:03.523"/>
+<msg timestamp="20230405 17:49:36.041" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.041" endtime="20230405 17:49:36.042"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.524" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230404 15:47:03.524" endtime="20230404 15:47:03.524"/>
+<msg timestamp="20230405 17:49:36.043" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:36.043" endtime="20230405 17:49:36.043"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.524" endtime="20230404 15:47:03.524"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.043" endtime="20230405 17:49:36.043"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.525" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.525" endtime="20230404 15:47:03.525"/>
+<msg timestamp="20230405 17:49:36.044" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.044" endtime="20230405 17:49:36.044"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-6-unknown</doc>
-<status status="UNKNOWN" starttime="20230404 15:47:03.516" endtime="20230404 15:47:03.525">Exception occurred.</status>
+<doc>tsm-testfile-18-several_tests-6-unknown</doc>
+<status status="UNKNOWN" starttime="20230405 17:49:36.034" endtime="20230405 17:49:36.045">Exception occurred.</status>
 </test>
-<test id="s1-t7" name="Test Case tsm-testfile-16-several_tests-7-unknown">
+<test id="s1-t7" name="Test Case tsm-testfile-18-several_tests-7-unknown">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.529" level="INFO">Test Count: 7</msg>
-<status status="PASS" starttime="20230404 15:47:03.529" endtime="20230404 15:47:03.529"/>
+<msg timestamp="20230405 17:49:36.047" level="INFO">Test Count: 7</msg>
+<status status="PASS" starttime="20230405 17:49:36.046" endtime="20230405 17:49:36.047"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.530" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.529" endtime="20230404 15:47:03.530"/>
+<msg timestamp="20230405 17:49:36.048" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:36.047" endtime="20230405 17:49:36.048"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.530" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.530" endtime="20230404 15:47:03.530"/>
+<msg timestamp="20230405 17:49:36.048" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.048" endtime="20230405 17:49:36.049"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.531" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.531" endtime="20230404 15:47:03.531"/>
+<msg timestamp="20230405 17:49:36.049" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.049" endtime="20230405 17:49:36.050"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.537" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.536" endtime="20230404 15:47:03.537"/>
+<msg timestamp="20230405 17:49:36.052" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.052" endtime="20230405 17:49:36.052"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.540" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230404 15:47:03.539" endtime="20230404 15:47:03.540"/>
+<msg timestamp="20230405 17:49:36.062" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:36.061" endtime="20230405 17:49:36.062"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.541" endtime="20230404 15:47:03.541"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.062" endtime="20230405 17:49:36.063"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.545" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.545" endtime="20230404 15:47:03.545"/>
+<msg timestamp="20230405 17:49:36.063" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.063" endtime="20230405 17:49:36.063"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-7-unknown</doc>
-<status status="UNKNOWN" starttime="20230404 15:47:03.527" endtime="20230404 15:47:03.546">Exception occurred.</status>
+<doc>tsm-testfile-18-several_tests-7-unknown</doc>
+<status status="UNKNOWN" starttime="20230405 17:49:36.046" endtime="20230405 17:49:36.064">Exception occurred.</status>
 </test>
-<test id="s1-t8" name="Test Case tsm-testfile-16-several_tests-8-unknown">
+<test id="s1-t8" name="Test Case tsm-testfile-18-several_tests-8-unknown">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.556" level="INFO">Test Count: 8</msg>
-<status status="PASS" starttime="20230404 15:47:03.555" endtime="20230404 15:47:03.556"/>
+<msg timestamp="20230405 17:49:36.069" level="INFO">Test Count: 8</msg>
+<status status="PASS" starttime="20230405 17:49:36.068" endtime="20230405 17:49:36.069"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.558" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.557" endtime="20230404 15:47:03.559"/>
+<msg timestamp="20230405 17:49:36.070" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:36.069" endtime="20230405 17:49:36.070"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.561" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.561" endtime="20230404 15:47:03.561"/>
+<msg timestamp="20230405 17:49:36.070" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.070" endtime="20230405 17:49:36.070"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.563" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.563" endtime="20230404 15:47:03.564"/>
+<msg timestamp="20230405 17:49:36.072" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.072" endtime="20230405 17:49:36.072"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.570" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.569" endtime="20230404 15:47:03.570"/>
+<msg timestamp="20230405 17:49:36.073" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.073" endtime="20230405 17:49:36.073"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.570" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230404 15:47:03.570" endtime="20230404 15:47:03.570"/>
+<msg timestamp="20230405 17:49:36.074" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:36.074" endtime="20230405 17:49:36.074"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.572" endtime="20230404 15:47:03.572"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.075" endtime="20230405 17:49:36.075"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.573" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.573" endtime="20230404 15:47:03.574"/>
+<msg timestamp="20230405 17:49:36.075" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.075" endtime="20230405 17:49:36.075"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-8-unknown</doc>
-<status status="UNKNOWN" starttime="20230404 15:47:03.553" endtime="20230404 15:47:03.576">Exception occurred.</status>
+<doc>tsm-testfile-18-several_tests-8-unknown</doc>
+<status status="UNKNOWN" starttime="20230405 17:49:36.066" endtime="20230405 17:49:36.075">Exception occurred.</status>
 </test>
-<test id="s1-t9" name="Test Case tsm-testfile-16-several_tests-9-unknown">
+<test id="s1-t9" name="Test Case tsm-testfile-18-several_tests-9-unknown">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.582" level="INFO">Test Count: 9</msg>
-<status status="PASS" starttime="20230404 15:47:03.582" endtime="20230404 15:47:03.582"/>
+<msg timestamp="20230405 17:49:36.078" level="INFO">Test Count: 9</msg>
+<status status="PASS" starttime="20230405 17:49:36.078" endtime="20230405 17:49:36.078"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : (CONFIG.Project)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230404 15:47:03.583" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230404 15:47:03.583" endtime="20230404 15:47:03.583"/>
+<msg timestamp="20230405 17:49:36.079" level="INFO">PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20230405 17:49:36.078" endtime="20230405 17:49:36.079"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_common : ${teststring_common} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_common : ${teststring_common} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.584" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.584" endtime="20230404 15:47:03.584"/>
+<msg timestamp="20230405 17:49:36.079" level="INFO">teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.079" endtime="20230405 17:49:36.080"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_variant : ${teststring_variant} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_variant : ${teststring_variant} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.586" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.586" endtime="20230404 15:47:03.586"/>
+<msg timestamp="20230405 17:49:36.080" level="INFO">teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.080" endtime="20230405 17:49:36.081"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>teststring_bench : ${teststring_bench} (tsm-testfile-16-several_tests.robot)</arg>
+<arg>teststring_bench : ${teststring_bench} (tsm-testfile-18-several_tests.robot)</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230404 15:47:03.587" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-16-several_tests.robot)</msg>
-<status status="PASS" starttime="20230404 15:47:03.587" endtime="20230404 15:47:03.587"/>
+<msg timestamp="20230405 17:49:36.083" level="INFO">teststring_bench : I am the teststring containing the default value for all test benches (tsm-testfile-18-several_tests.robot)</msg>
+<status status="PASS" starttime="20230405 17:49:36.083" endtime="20230405 17:49:36.083"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230404 15:47:03.592" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230404 15:47:03.592" endtime="20230404 15:47:03.592"/>
+<msg timestamp="20230405 17:49:36.084" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:36.084" endtime="20230405 17:49:36.084"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230404 15:47:03.592" endtime="20230404 15:47:03.593"/>
+<status status="NOT RUN" starttime="20230405 17:49:36.085" endtime="20230405 17:49:36.085"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.593" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.593" endtime="20230404 15:47:03.593"/>
+<msg timestamp="20230405 17:49:36.086" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.086" endtime="20230405 17:49:36.086"/>
 </kw>
-<doc>tsm-testfile-16-several_tests-9-unknown</doc>
-<status status="UNKNOWN" starttime="20230404 15:47:03.581" endtime="20230404 15:47:03.594">Exception occurred.</status>
+<doc>tsm-testfile-18-several_tests-9-unknown</doc>
+<status status="UNKNOWN" starttime="20230405 17:49:36.077" endtime="20230405 17:49:36.086">Exception occurred.</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:47:03.600" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:47:03.600" endtime="20230404 15:47:03.600"/>
+<msg timestamp="20230405 17:49:36.089" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:36.088" endtime="20230405 17:49:36.089"/>
 </kw>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">tsm-test_config_variant1</meta>
@@ -513,7 +513,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="UNKNOWN" starttime="20230404 15:47:03.288" endtime="20230404 15:47:03.600"/>
+<status status="UNKNOWN" starttime="20230405 17:49:35.805" endtime="20230405 17:49:36.089"/>
 </suite>
 <statistics>
 <total>
@@ -522,7 +522,7 @@ it's defined here for future requirements.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="3" skip="0" unknown="4" id="s1" name="Tsm-Testfile-16-Several Tests">Tsm-Testfile-16-Several Tests</stat>
+<stat pass="2" fail="3" skip="0" unknown="4" id="s1" name="Tsm-Testfile-18-Several Tests">Tsm-Testfile-18-Several Tests</stat>
 </suite>
 </statistics>
 <errors>

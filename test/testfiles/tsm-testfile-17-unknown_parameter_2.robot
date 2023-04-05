@@ -14,27 +14,35 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-13-unknown_library.robot (with variant configuration and import of unknown library)
+# tsm-testfile-17-unknown_parameter_2.robot (with variant configuration and parameter assignment to unknown dictionary subkey)
 #
 # --------------------------------------------------------------------------------------------------------------
 
 *** Settings ***
 
+Library    Collections
+
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
-
-Library    I.Am.The.Unknown.Library.And.Therefore.An.Error
 
 Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
+*** Variables ***
+
+&{dTestDict}    kVal_1=Val_1
+
 *** Test Cases ***
-Test Case tsm-testfile-13-unknown_library
-   [documentation]    tsm-testfile-13-unknown_library
+
+Test Case tsm-testfile-17-unknown_parameter_2
+   [documentation]    tsm-testfile-17-unknown_parameter_2
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-13-unknown_library.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-13-unknown_library.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-13-unknown_library.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-17-unknown_parameter_2.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-17-unknown_parameter_2.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-17-unknown_parameter_2.robot)        console=yes
+
+   Set To Dictionary    ${dTestDict}[I-am-not-existing]    kVal_new    ${dTestDict}[kVal_1]
+
    Log    I must not be executed    console=yes

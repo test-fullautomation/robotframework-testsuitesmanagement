@@ -14,35 +14,26 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-15-unknown_parameter_2.robot (with variant configuration and parameter assignment to unknown dictionary subkey)
+# tsm-testfile-09-err-3.robot (with variant configuration; missing "default" variant)
 #
 # --------------------------------------------------------------------------------------------------------------
 
 *** Settings ***
 
-Library    Collections
-
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
+Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants_err_3.json
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
-*** Variables ***
-
-&{dTestDict}    kVal_1=Val_1
-
 *** Test Cases ***
-
-Test Case tsm-testfile-15-unknown_parameter_2
-   [documentation]    tsm-testfile-15-unknown_parameter_2
+Test Case tsm-testfile-09-err-3
+   [documentation]    tsm-testfile-09-err-3
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-15-unknown_parameter_2.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-15-unknown_parameter_2.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-15-unknown_parameter_2.robot)        console=yes
-
-   Set To Dictionary    ${dTestDict}[I-am-not-existing]    kVal_new    ${dTestDict}[kVal_1]
-
+   Log    teststring_common : ${teststring_common} (tsm-testfile-09-err-3.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-09-err-3.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-09-err-3.robot)        console=yes
    Log    I must not be executed    console=yes
+

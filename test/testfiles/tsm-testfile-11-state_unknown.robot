@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-11-keyword_incomplete_1.robot (with variant configuration and call of incomplete keyword FOR)
+# tsm-testfile-11-state_unknown.robot (with variant configuration and call of keyword UNKNOWN)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,15 +29,13 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-11-keyword_incomplete_1
-   [documentation]    tsm-testfile-11-keyword_incomplete_1
+Test Case tsm-testfile-11-state_unknown
+   [documentation]    tsm-testfile-11-state_unknown
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-11-keyword_incomplete_1.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-11-keyword_incomplete_1.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-11-keyword_incomplete_1.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-11-state_unknown.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-11-state_unknown.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-11-state_unknown.robot)        console=yes
 
-   FOR    ${index}    IN RANGE    0    2
-       log    === index : ${index}    console=yes
-   # END # is missing
+   UNKNOWN
 
    Log    I must not be executed    console=yes

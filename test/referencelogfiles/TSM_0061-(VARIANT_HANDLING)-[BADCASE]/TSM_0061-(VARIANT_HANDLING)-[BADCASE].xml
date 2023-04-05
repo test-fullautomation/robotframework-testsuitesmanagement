@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 15:46:43.907" rpa="false" schemaversion="2">
-<suite id="s1" name="Tsm-Testfile-06-Err-2" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-06-err-2.robot">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230405 17:49:16.040" rpa="false" schemaversion="2">
+<suite id="s1" name="Tsm-Testfile-08-Err-2" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-08-err-2.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants_err_2.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230404 15:46:44.047" level="ERROR">Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.json'!
+<msg timestamp="20230405 17:49:16.188" level="ERROR">Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.json'!
 </msg>
-<msg timestamp="20230404 15:46:44.048" level="UNKNOWN">The configuration file is not found!</msg>
-<status status="UNKNOWN" starttime="20230404 15:46:44.025" endtime="20230404 15:46:44.048"/>
+<msg timestamp="20230405 17:49:16.189" level="UNKNOWN">The configuration file is not found!</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:16.165" endtime="20230405 17:49:16.189"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-06-err-2">
-<doc>tsm-testfile-06-err-2</doc>
-<status status="UNKNOWN" starttime="20230404 15:46:44.048" endtime="20230404 15:46:44.049">Parent suite setup unknown:
+<test id="s1-t1" name="Test Case tsm-testfile-08-err-2">
+<doc>tsm-testfile-08-err-2</doc>
+<status status="UNKNOWN" starttime="20230405 17:49:16.189" endtime="20230405 17:49:16.190">Parent suite setup unknown:
 The configuration file is not found!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:46:44.053" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:46:44.053" endtime="20230404 15:46:44.053"/>
+<msg timestamp="20230405 17:49:16.194" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:16.194" endtime="20230405 17:49:16.194"/>
 </kw>
-<status status="UNKNOWN" starttime="20230404 15:46:43.912" endtime="20230404 15:46:44.053">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230405 17:49:16.045" endtime="20230405 17:49:16.194">Suite setup unknown:
 The configuration file is not found!</status>
 </suite>
 <statistics>
@@ -31,11 +31,11 @@ The configuration file is not found!</status>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-06-Err-2">Tsm-Testfile-06-Err-2</stat>
+<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-08-Err-2">Tsm-Testfile-08-Err-2</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230404 15:46:44.047" level="ERROR">Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.json'!
+<msg timestamp="20230405 17:49:16.188" level="ERROR">Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.json'!
 </msg>
 </errors>
 </robot>

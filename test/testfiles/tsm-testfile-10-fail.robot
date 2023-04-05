@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-08-fail.robot (with variant configuration)
+# tsm-testfile-10-fail.robot (with variant configuration)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,12 +29,12 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-08-fail
-   [documentation]    tsm-testfile-08-fail
+Test Case tsm-testfile-10-fail
+   [documentation]    tsm-testfile-10-fail
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-08-fail.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-08-fail.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-08-fail.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-10-fail.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-10-fail.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-10-fail.robot)        console=yes
 
    FAIL
 

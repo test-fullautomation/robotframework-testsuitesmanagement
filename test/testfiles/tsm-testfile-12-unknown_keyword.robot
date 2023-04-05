@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-07-err-3.robot (with variant configuration; missing "default" variant)
+# tsm-testfile-12-unknown_keyword.robot (with variant configuration and call of not existing keyword)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -23,17 +23,19 @@
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants_err_3.json
+Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-07-err-3
-   [documentation]    tsm-testfile-07-err-3
+Test Case tsm-testfile-12-unknown_keyword
+   [documentation]    tsm-testfile-12-unknown_keyword
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-07-err-3.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-07-err-3.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-07-err-3.robot)        console=yes
-   Log    I must not be executed    console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-12-unknown_keyword.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-12-unknown_keyword.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-12-unknown_keyword.robot)        console=yes
 
+   I am the not existing keyword and therefore syntax error
+
+   Log    I must not be executed    console=yes

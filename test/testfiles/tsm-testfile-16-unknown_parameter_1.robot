@@ -14,11 +14,13 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-09-state_unknown.robot (with variant configuration and call of keyword UNKNOWN)
+# tsm-testfile-16-unknown_parameter_1.robot (with variant configuration and assignment of unknown dictionary key)
 #
 # --------------------------------------------------------------------------------------------------------------
 
 *** Settings ***
+
+Library    Collections
 
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
@@ -28,14 +30,19 @@ Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
-*** Test Cases ***
-Test Case tsm-testfile-09-state_unknown
-   [documentation]    tsm-testfile-09-state_unknown
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-09-state_unknown.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-09-state_unknown.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-09-state_unknown.robot)        console=yes
+*** Variables ***
 
-   UNKNOWN
+&{dTestDict}    kVal_1=Val_1
+
+*** Test Cases ***
+
+Test Case tsm-testfile-16-unknown_parameter_1
+   [documentation]    tsm-testfile-16-unknown_parameter_1
+   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
+   Log    teststring_common : ${teststring_common} (tsm-testfile-16-unknown_parameter_1.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-16-unknown_parameter_1.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-16-unknown_parameter_1.robot)        console=yes
+
+   Set To Dictionary    ${dTestDict}[kVal_1]    kVal_new    ${dTestDict}[I-am-not-existing]
 
    Log    I must not be executed    console=yes

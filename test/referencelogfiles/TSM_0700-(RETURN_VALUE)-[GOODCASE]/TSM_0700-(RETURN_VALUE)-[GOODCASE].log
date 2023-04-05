@@ -1,527 +1,527 @@
 ==============================================================================
-20230404 15:47:04.113 - INFO - + START SUITE: Testsuitestest [ ]
+20230405 17:49:36.616 - INFO - + START SUITE: Testsuitestest [ ]
 ==============================================================================
-20230404 15:47:04.120 - INFO - +- START SETUP: tm.Testsuite Setup [ ../config/tsm-test_variants.json ]
-20230404 15:47:04.148 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20230404 15:47:04.149 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230404 15:47:04.150 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230404 15:47:04.150 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230404 15:47:04.150 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230404 15:47:04.150 - INFO - Set suite metadata 'version_sw' to value ''.
-20230404 15:47:04.150 - INFO - Set suite metadata 'version_hw' to value ''.
-20230404 15:47:04.150 - INFO - Set suite metadata 'version_test' to value ''.
-20230404 15:47:04.152 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230404 15:47:04.152 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230404 15:47:04.153 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230404 15:47:04.153 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20230404 15:47:04.154 - INFO - Running with configuration level 2
-20230404 15:47:04.154 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'
-20230404 15:47:04.154 - INFO - Robot Framework AIO version check passed!
-20230404 15:47:04.154 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest'
-20230404 15:47:04.154 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'
-20230404 15:47:04.154 - INFO - Number of test suites: 1
-20230404 15:47:04.154 - INFO - Total number of testcases: 18
-20230404 15:47:04.154 - INFO - +- END SETUP: tm.Testsuite Setup (34)
+20230405 17:49:36.623 - INFO - +- START SETUP: tm.Testsuite Setup [ ../config/tsm-test_variants.json ]
+20230405 17:49:36.652 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230405 17:49:36.652 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230405 17:49:36.654 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230405 17:49:36.655 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230405 17:49:36.655 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230405 17:49:36.655 - INFO - Set suite metadata 'version_sw' to value ''.
+20230405 17:49:36.655 - INFO - Set suite metadata 'version_hw' to value ''.
+20230405 17:49:36.655 - INFO - Set suite metadata 'version_test' to value ''.
+20230405 17:49:36.656 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230405 17:49:36.656 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230405 17:49:36.657 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230405 17:49:36.658 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230405 17:49:36.658 - INFO - Running with configuration level 2
+20230405 17:49:36.658 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'
+20230405 17:49:36.658 - INFO - Robot Framework AIO version check passed!
+20230405 17:49:36.658 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest'
+20230405 17:49:36.658 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.json'
+20230405 17:49:36.658 - INFO - Number of test suites: 1
+20230405 17:49:36.658 - INFO - Total number of testcases: 18
+20230405 17:49:36.658 - INFO - +- END SETUP: tm.Testsuite Setup (35)
 ==============================================================================
-20230404 15:47:04.156 - INFO - +- START SUITE: Testsuitestest.001 [ ]
+20230405 17:49:36.660 - INFO - +- START SUITE: Testsuitestest.001 [ ]
 ==============================================================================
-20230404 15:47:04.158 - INFO - +-- START SUITE: Testsuitestest.001.001-01 [ ]
+20230405 17:49:36.664 - INFO - +-- START SUITE: Testsuitestest.001.001-01 [ ]
 ==============================================================================
-20230404 15:47:04.166 - INFO - +--- START SUITE: Testsuitestest.001.001-01.001-01-01 [ ]
+20230405 17:49:36.668 - INFO - +--- START SUITE: Testsuitestest.001.001-01.001-01-01 [ ]
 ==============================================================================
-20230404 15:47:04.180 - INFO - +---- START SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 [ ]
+20230405 17:49:36.688 - INFO - +---- START SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 [ ]
 ==============================================================================
-20230404 15:47:04.181 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-A [ ]
+20230405 17:49:36.690 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.182 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.182 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.183 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.697 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.698 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.698 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.183 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
-20230404 15:47:04.183 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [A])
-20230404 15:47:04.184 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.698 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
+20230405 17:49:36.698 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [A])
+20230405 17:49:36.699 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.184 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
-20230404 15:47:04.185 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [A])
-20230404 15:47:04.191 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.699 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
+20230405 17:49:36.699 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [A])
+20230405 17:49:36.700 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.191 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
-20230404 15:47:04.192 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [A])
-20230404 15:47:04.192 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.700 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [A]) | console=yes ]
+20230405 17:49:36.701 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [A])
+20230405 17:49:36.701 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.193 - INFO - +------ START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.193 - FAIL - AssertionError
-20230404 15:47:04.193 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.701 - INFO - +------ START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.702 - FAIL - AssertionError
+20230405 17:49:36.702 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.194 - INFO - +------ END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.702 - INFO - +------ END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.194 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.194 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.703 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.704 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.196 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-A (13)
+20230405 17:49:36.710 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-A (14)
 ------------------------------------------------------------------------------
-20230404 15:47:04.196 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-B [ ]
+20230405 17:49:36.711 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.197 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.197 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.199 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.711 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.712 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.712 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.199 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
-20230404 15:47:04.199 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [B])
-20230404 15:47:04.200 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.712 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
+20230405 17:49:36.712 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [B])
+20230405 17:49:36.715 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.200 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
-20230404 15:47:04.200 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [B])
-20230404 15:47:04.205 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.715 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
+20230405 17:49:36.716 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [B])
+20230405 17:49:36.716 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.205 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
-20230404 15:47:04.205 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [B])
-20230404 15:47:04.206 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.716 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [B]) | console=yes ]
+20230405 17:49:36.717 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [B])
+20230405 17:49:36.717 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.206 - INFO - +------ START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.206 - UNKNOWN - Exception occurred.
-20230404 15:47:04.207 - INFO - +------ END KEYWORD: BuiltIn.Unknown (0)
+20230405 17:49:36.718 - INFO - +------ START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.718 - UNKNOWN - Exception occurred.
+20230405 17:49:36.719 - INFO - +------ END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.207 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.207 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.720 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.721 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.209 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-B (11)
+20230405 17:49:36.726 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-B (10)
 ------------------------------------------------------------------------------
-20230404 15:47:04.209 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-C [ ]
+20230405 17:49:36.726 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.209 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.210 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.210 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.726 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.727 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.728 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.210 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
-20230404 15:47:04.211 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [C])
-20230404 15:47:04.211 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.728 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
+20230405 17:49:36.728 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01-01.robot [C])
+20230405 17:49:36.729 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.212 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
-20230404 15:47:04.212 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [C])
-20230404 15:47:04.212 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.729 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
+20230405 17:49:36.729 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01-01.robot [C])
+20230405 17:49:36.730 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.213 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
-20230404 15:47:04.213 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [C])
-20230404 15:47:04.215 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.730 - INFO - +------ START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01-01.robot [C]) | console=yes ]
+20230405 17:49:36.730 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01-01.robot [C])
+20230405 17:49:36.731 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.223 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-C (6)
+20230405 17:49:36.731 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-C (5)
 ------------------------------------------------------------------------------
-20230404 15:47:04.225 - INFO - +---- END SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 (56)
+20230405 17:49:36.733 - INFO - +---- END SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 (62)
 ==============================================================================
-20230404 15:47:04.228 - INFO - +--- END SUITE: Testsuitestest.001.001-01.001-01-01 (61)
+20230405 17:49:36.742 - INFO - +--- END SUITE: Testsuitestest.001.001-01.001-01-01 (66)
 ==============================================================================
-20230404 15:47:04.230 - INFO - +--- START SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 [ ]
+20230405 17:49:36.749 - INFO - +--- START SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 [ ]
 ==============================================================================
-20230404 15:47:04.231 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-A [ ]
+20230405 17:49:36.752 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.236 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.236 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.237 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.755 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.756 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.757 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.237 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
-20230404 15:47:04.237 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [A])
-20230404 15:47:04.238 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.757 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
+20230405 17:49:36.757 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [A])
+20230405 17:49:36.759 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.238 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
-20230404 15:47:04.238 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [A])
-20230404 15:47:04.239 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.759 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
+20230405 17:49:36.759 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [A])
+20230405 17:49:36.761 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.239 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
-20230404 15:47:04.239 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [A])
-20230404 15:47:04.240 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.761 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [A]) | console=yes ]
+20230405 17:49:36.761 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [A])
+20230405 17:49:36.762 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.240 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.240 - FAIL - AssertionError
-20230404 15:47:04.240 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.762 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.763 - FAIL - AssertionError
+20230405 17:49:36.763 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.240 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.763 - INFO - +----- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.241 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.241 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.764 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.764 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230404 15:47:04.243 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-A (10)
+20230405 17:49:36.773 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-A (12)
 ------------------------------------------------------------------------------
-20230404 15:47:04.244 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-B [ ]
+20230405 17:49:36.773 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.248 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.248 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.248 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.777 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.778 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.779 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.249 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
-20230404 15:47:04.249 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [B])
-20230404 15:47:04.249 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.779 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
+20230405 17:49:36.779 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [B])
+20230405 17:49:36.781 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.250 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
-20230404 15:47:04.250 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [B])
-20230404 15:47:04.254 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.781 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
+20230405 17:49:36.782 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [B])
+20230405 17:49:36.783 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.254 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
-20230404 15:47:04.255 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [B])
-20230404 15:47:04.256 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.783 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [B]) | console=yes ]
+20230405 17:49:36.783 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [B])
+20230405 17:49:36.786 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.256 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.256 - UNKNOWN - Exception occurred.
-20230404 15:47:04.257 - INFO - +----- END KEYWORD: BuiltIn.Unknown (0)
+20230405 17:49:36.786 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.787 - UNKNOWN - Exception occurred.
+20230405 17:49:36.787 - INFO - +----- END KEYWORD: BuiltIn.Unknown (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.257 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.257 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.787 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.788 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230404 15:47:04.259 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-B (14)
+20230405 17:49:36.790 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-B (15)
 ------------------------------------------------------------------------------
-20230404 15:47:04.260 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-C [ ]
+20230405 17:49:36.790 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.261 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.262 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.262 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.791 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.791 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.792 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.263 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
-20230404 15:47:04.263 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [C])
-20230404 15:47:04.266 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.792 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
+20230405 17:49:36.792 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001-01.robot [C])
+20230405 17:49:36.793 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.266 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
-20230404 15:47:04.266 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [C])
-20230404 15:47:04.267 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.793 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
+20230405 17:49:36.794 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001-01.robot [C])
+20230405 17:49:36.794 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.267 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
-20230404 15:47:04.267 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [C])
-20230404 15:47:04.268 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.795 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001-01.robot [C]) | console=yes ]
+20230405 17:49:36.795 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001-01.robot [C])
+20230405 17:49:36.804 - INFO - +----- END KEYWORD: BuiltIn.Log (2)
 ------------------------------------------------------------------------------
-20230404 15:47:04.269 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-C (9)
+20230405 17:49:36.805 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-C (14)
 ------------------------------------------------------------------------------
-20230404 15:47:04.272 - INFO - +--- END SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 (41)
+20230405 17:49:36.810 - INFO - +--- END SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 (63)
 ==============================================================================
-20230404 15:47:04.274 - INFO - +-- END SUITE: Testsuitestest.001.001-01 (115)
+20230405 17:49:36.817 - INFO - +-- END SUITE: Testsuitestest.001.001-01 (148)
 ==============================================================================
-20230404 15:47:04.276 - INFO - +-- START SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 [ ]
+20230405 17:49:36.820 - INFO - +-- START SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 [ ]
 ==============================================================================
-20230404 15:47:04.281 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-A [ ]
+20230405 17:49:36.821 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.281 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.282 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.282 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.821 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.822 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.822 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.282 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [A]) | console=yes ]
-20230404 15:47:04.282 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [A])
-20230404 15:47:04.283 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.822 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [A]) | console=yes ]
+20230405 17:49:36.822 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [A])
+20230405 17:49:36.824 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.283 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [A]) | console=yes ]
-20230404 15:47:04.283 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [A])
-20230404 15:47:04.284 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.824 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [A]) | console=yes ]
+20230405 17:49:36.824 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [A])
+20230405 17:49:36.824 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.284 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [A]) | console=yes ]
-20230404 15:47:04.284 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [A])
-20230404 15:47:04.286 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.824 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [A]) | console=yes ]
+20230405 17:49:36.824 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [A])
+20230405 17:49:36.825 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.286 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.286 - FAIL - AssertionError
-20230404 15:47:04.286 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.825 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.826 - FAIL - AssertionError
+20230405 17:49:36.826 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.286 - INFO - +---- END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.827 - INFO - +---- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.286 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.287 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.827 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.828 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.289 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-A (6)
+20230405 17:49:36.835 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-A (8)
 ------------------------------------------------------------------------------
-20230404 15:47:04.289 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-B [ ]
+20230405 17:49:36.835 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.289 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.290 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.290 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.840 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.841 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.842 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.290 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [B]) | console=yes ]
-20230404 15:47:04.290 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [B])
-20230404 15:47:04.297 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.842 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [B]) | console=yes ]
+20230405 17:49:36.842 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [B])
+20230405 17:49:36.843 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.297 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [B]) | console=yes ]
-20230404 15:47:04.297 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [B])
-20230404 15:47:04.298 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.844 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [B]) | console=yes ]
+20230405 17:49:36.844 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [B])
+20230405 17:49:36.847 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.298 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [B]) | console=yes ]
-20230404 15:47:04.298 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [B])
-20230404 15:47:04.299 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.847 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [B]) | console=yes ]
+20230405 17:49:36.848 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [B])
+20230405 17:49:36.848 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.299 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.299 - UNKNOWN - Exception occurred.
-20230404 15:47:04.300 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
+20230405 17:49:36.849 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.849 - UNKNOWN - Exception occurred.
+20230405 17:49:36.849 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.300 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.300 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.849 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.850 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230404 15:47:04.302 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-B (11)
+20230405 17:49:36.851 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-B (15)
 ------------------------------------------------------------------------------
-20230404 15:47:04.302 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-C [ ]
+20230405 17:49:36.851 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.302 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.303 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.303 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.851 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.852 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.852 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.303 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [C]) | console=yes ]
-20230404 15:47:04.304 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [C])
-20230404 15:47:04.305 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.852 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-001.robot [C]) | console=yes ]
+20230405 17:49:36.853 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-001.robot [C])
+20230405 17:49:36.853 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.305 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [C]) | console=yes ]
-20230404 15:47:04.305 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [C])
-20230404 15:47:04.306 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.853 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-001.robot [C]) | console=yes ]
+20230405 17:49:36.854 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-001.robot [C])
+20230405 17:49:36.854 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.306 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [C]) | console=yes ]
-20230404 15:47:04.306 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [C])
-20230404 15:47:04.311 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.854 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-001.robot [C]) | console=yes ]
+20230405 17:49:36.855 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-001.robot [C])
+20230405 17:49:36.855 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230404 15:47:04.313 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-C (10)
+20230405 17:49:36.856 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-C (4)
 ------------------------------------------------------------------------------
-20230404 15:47:04.318 - INFO - +-- END SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 (39)
+20230405 17:49:36.866 - INFO - +-- END SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 (39)
 ==============================================================================
-20230404 15:47:04.320 - INFO - +- END SUITE: Testsuitestest.001 (164)
+20230405 17:49:36.872 - INFO - +- END SUITE: Testsuitestest.001 (208)
 ==============================================================================
-20230404 15:47:04.322 - INFO - +- START SUITE: Testsuitestest.002 [ ]
+20230405 17:49:36.874 - INFO - +- START SUITE: Testsuitestest.002 [ ]
 ==============================================================================
-20230404 15:47:04.325 - INFO - +-- START SUITE: Testsuitestest.002.002-01 [ ]
+20230405 17:49:36.880 - INFO - +-- START SUITE: Testsuitestest.002.002-01 [ ]
 ==============================================================================
-20230404 15:47:04.330 - INFO - +--- START SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 [ ]
+20230405 17:49:36.883 - INFO - +--- START SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 [ ]
 ==============================================================================
-20230404 15:47:04.331 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-A [ ]
+20230405 17:49:36.884 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.332 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.332 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.333 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.885 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.885 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.886 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.333 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
-20230404 15:47:04.333 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [A])
-20230404 15:47:04.334 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.886 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
+20230405 17:49:36.886 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [A])
+20230405 17:49:36.887 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.334 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
-20230404 15:47:04.334 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [A])
-20230404 15:47:04.335 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.887 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
+20230405 17:49:36.887 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [A])
+20230405 17:49:36.888 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.335 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
-20230404 15:47:04.335 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [A])
-20230404 15:47:04.336 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.888 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [A]) | console=yes ]
+20230405 17:49:36.888 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [A])
+20230405 17:49:36.889 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.336 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.336 - FAIL - AssertionError
-20230404 15:47:04.336 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.889 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.889 - FAIL - AssertionError
+20230405 17:49:36.889 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.336 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.890 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.336 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.339 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.891 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.891 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.344 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-A (8)
+20230405 17:49:36.897 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-A (7)
 ------------------------------------------------------------------------------
-20230404 15:47:04.344 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-B [ ]
+20230405 17:49:36.898 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.344 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.345 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.346 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.903 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.903 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.904 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.346 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
-20230404 15:47:04.346 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [B])
-20230404 15:47:04.347 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.904 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
+20230405 17:49:36.904 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [B])
+20230405 17:49:36.907 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.347 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
-20230404 15:47:04.347 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [B])
-20230404 15:47:04.348 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.907 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
+20230405 17:49:36.907 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [B])
+20230405 17:49:36.908 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.348 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
-20230404 15:47:04.348 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [B])
-20230404 15:47:04.349 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.908 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [B]) | console=yes ]
+20230405 17:49:36.909 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [B])
+20230405 17:49:36.912 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.349 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.349 - UNKNOWN - Exception occurred.
-20230404 15:47:04.350 - INFO - +----- END KEYWORD: BuiltIn.Unknown (1)
+20230405 17:49:36.912 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.913 - UNKNOWN - Exception occurred.
+20230405 17:49:36.914 - INFO - +----- END KEYWORD: BuiltIn.Unknown (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.350 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.350 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.914 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.914 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.353 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-B (6)
+20230405 17:49:36.917 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-B (17)
 ------------------------------------------------------------------------------
-20230404 15:47:04.353 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-C [ ]
+20230405 17:49:36.917 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.355 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.355 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.356 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.917 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.918 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.918 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.356 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
-20230404 15:47:04.356 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [C])
-20230404 15:47:04.357 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.918 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
+20230405 17:49:36.919 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002-01.robot [C])
+20230405 17:49:36.919 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.357 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
-20230404 15:47:04.357 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [C])
-20230404 15:47:04.361 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.919 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
+20230405 17:49:36.920 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002-01.robot [C])
+20230405 17:49:36.921 - INFO - +----- END KEYWORD: BuiltIn.Log (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.361 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
-20230404 15:47:04.361 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [C])
-20230404 15:47:04.362 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.921 - INFO - +----- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [C]) | console=yes ]
+20230405 17:49:36.921 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002-01.robot [C])
+20230405 17:49:36.926 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.363 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-C (9)
+20230405 17:49:36.926 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-C (9)
 ------------------------------------------------------------------------------
-20230404 15:47:04.365 - INFO - +--- END SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 (35)
+20230405 17:49:36.928 - INFO - +--- END SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 (45)
 ==============================================================================
-20230404 15:47:04.367 - INFO - +-- END SUITE: Testsuitestest.002.002-01 (41)
+20230405 17:49:36.930 - INFO - +-- END SUITE: Testsuitestest.002.002-01 (51)
 ==============================================================================
-20230404 15:47:04.369 - INFO - +-- START SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 [ ]
+20230405 17:49:36.933 - INFO - +-- START SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 [ ]
 ==============================================================================
-20230404 15:47:04.375 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-A [ ]
+20230405 17:49:36.934 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.375 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.376 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.376 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.934 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.935 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.937 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.376 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [A]) | console=yes ]
-20230404 15:47:04.376 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [A])
-20230404 15:47:04.377 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.937 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [A]) | console=yes ]
+20230405 17:49:36.937 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [A])
+20230405 17:49:36.941 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.377 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [A]) | console=yes ]
-20230404 15:47:04.377 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [A])
-20230404 15:47:04.378 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.941 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [A]) | console=yes ]
+20230405 17:49:36.941 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [A])
+20230405 17:49:36.942 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.378 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [A]) | console=yes ]
-20230404 15:47:04.379 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [A])
-20230404 15:47:04.379 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.942 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [A]) | console=yes ]
+20230405 17:49:36.942 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [A])
+20230405 17:49:36.943 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.379 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.379 - FAIL - AssertionError
-20230404 15:47:04.379 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.943 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.943 - FAIL - AssertionError
+20230405 17:49:36.944 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.379 - INFO - +---- END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.944 - INFO - +---- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.380 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.380 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.944 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.944 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.382 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-A (6)
+20230405 17:49:36.946 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-A (12)
 ------------------------------------------------------------------------------
-20230404 15:47:04.382 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-B [ ]
+20230405 17:49:36.947 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.382 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.383 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.384 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.947 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.947 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.948 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.384 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [B]) | console=yes ]
-20230404 15:47:04.385 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [B])
-20230404 15:47:04.385 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.948 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [B]) | console=yes ]
+20230405 17:49:36.948 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [B])
+20230405 17:49:36.949 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.385 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [B]) | console=yes ]
-20230404 15:47:04.386 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [B])
-20230404 15:47:04.390 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.949 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [B]) | console=yes ]
+20230405 17:49:36.949 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [B])
+20230405 17:49:36.950 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.390 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [B]) | console=yes ]
-20230404 15:47:04.390 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [B])
-20230404 15:47:04.391 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.950 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [B]) | console=yes ]
+20230405 17:49:36.950 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [B])
+20230405 17:49:36.956 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.391 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.391 - UNKNOWN - Exception occurred.
-20230404 15:47:04.392 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
+20230405 17:49:36.956 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.956 - UNKNOWN - Exception occurred.
+20230405 17:49:36.956 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.392 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.393 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.957 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.957 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.394 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-B (11)
+20230405 17:49:36.960 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-B (11)
 ------------------------------------------------------------------------------
-20230404 15:47:04.394 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-C [ ]
+20230405 17:49:36.961 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.395 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.395 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.396 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230405 17:49:36.961 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.961 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.962 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.396 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [C]) | console=yes ]
-20230404 15:47:04.396 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [C])
-20230404 15:47:04.397 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.962 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-002.robot [C]) | console=yes ]
+20230405 17:49:36.962 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-002.robot [C])
+20230405 17:49:36.965 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.397 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [C]) | console=yes ]
-20230404 15:47:04.397 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [C])
-20230404 15:47:04.398 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.965 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-002.robot [C]) | console=yes ]
+20230405 17:49:36.966 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-002.robot [C])
+20230405 17:49:36.966 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.398 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [C]) | console=yes ]
-20230404 15:47:04.398 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [C])
-20230404 15:47:04.401 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.966 - INFO - +---- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-002.robot [C]) | console=yes ]
+20230405 17:49:36.967 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-002.robot [C])
+20230405 17:49:36.969 - INFO - +---- END KEYWORD: BuiltIn.Log (2)
 ------------------------------------------------------------------------------
-20230404 15:47:04.405 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-C (7)
+20230405 17:49:36.973 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-C (9)
 ------------------------------------------------------------------------------
-20230404 15:47:04.407 - INFO - +-- END SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 (38)
+20230405 17:49:36.975 - INFO - +-- END SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 (43)
 ==============================================================================
-20230404 15:47:04.410 - INFO - +- END SUITE: Testsuitestest.002 (87)
+20230405 17:49:36.977 - INFO - +- END SUITE: Testsuitestest.002 (103)
 ==============================================================================
-20230404 15:47:04.412 - INFO - +- START SUITE: Testsuitestest.Tsm-Tst-Testfile-1 [ ]
+20230405 17:49:36.979 - INFO - +- START SUITE: Testsuitestest.Tsm-Tst-Testfile-1 [ ]
 ==============================================================================
-20230404 15:47:04.413 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-A [ ]
+20230405 17:49:36.980 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-A [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.413 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.414 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.415 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.981 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.981 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.982 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.416 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [A]) | console=yes ]
-20230404 15:47:04.416 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [A])
-20230404 15:47:04.416 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.982 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [A]) | console=yes ]
+20230405 17:49:36.982 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [A])
+20230405 17:49:36.985 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.417 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [A]) | console=yes ]
-20230404 15:47:04.417 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [A])
-20230404 15:47:04.422 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.985 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [A]) | console=yes ]
+20230405 17:49:36.985 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [A])
+20230405 17:49:36.989 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.422 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [A]) | console=yes ]
-20230404 15:47:04.422 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [A])
-20230404 15:47:04.423 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.989 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [A]) | console=yes ]
+20230405 17:49:36.989 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [A])
+20230405 17:49:36.991 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.423 - INFO - +--- START KEYWORD: BuiltIn.Fail [ ]
-20230404 15:47:04.423 - FAIL - AssertionError
-20230404 15:47:04.423 - DEBUG - Traceback (most recent call last):
+20230405 17:49:36.991 - INFO - +--- START KEYWORD: BuiltIn.Fail [ ]
+20230405 17:49:36.991 - FAIL - AssertionError
+20230405 17:49:36.991 - DEBUG - Traceback (most recent call last):
   None
-20230404 15:47:04.424 - INFO - +--- END KEYWORD: BuiltIn.Fail (0)
+20230405 17:49:36.991 - INFO - +--- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.424 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.424 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:36.991 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:36.992 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.426 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-A (11)
+20230405 17:49:36.994 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-A (12)
 ------------------------------------------------------------------------------
-20230404 15:47:04.426 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-B [ ]
+20230405 17:49:36.994 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-B [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.426 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.427 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.427 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:36.994 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:36.995 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:36.995 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.427 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [B]) | console=yes ]
-20230404 15:47:04.428 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [B])
-20230404 15:47:04.428 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.995 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [B]) | console=yes ]
+20230405 17:49:36.995 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [B])
+20230405 17:49:36.996 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.429 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [B]) | console=yes ]
-20230404 15:47:04.429 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [B])
-20230404 15:47:04.431 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.996 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [B]) | console=yes ]
+20230405 17:49:36.996 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [B])
+20230405 17:49:36.997 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.431 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [B]) | console=yes ]
-20230404 15:47:04.431 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [B])
-20230404 15:47:04.435 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:36.997 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [B]) | console=yes ]
+20230405 17:49:36.997 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [B])
+20230405 17:49:36.998 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.435 - INFO - +--- START KEYWORD: BuiltIn.Unknown [ ]
-20230404 15:47:04.435 - UNKNOWN - Exception occurred.
-20230404 15:47:04.436 - INFO - +--- END KEYWORD: BuiltIn.Unknown (0)
+20230405 17:49:36.998 - INFO - +--- START KEYWORD: BuiltIn.Unknown [ ]
+20230405 17:49:36.998 - UNKNOWN - Exception occurred.
+20230405 17:49:37.000 - INFO - +--- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.436 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230404 15:47:04.436 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230405 17:49:37.000 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230405 17:49:37.001 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230404 15:47:04.439 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-B (11)
+20230405 17:49:37.006 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-B (7)
 ------------------------------------------------------------------------------
-20230404 15:47:04.439 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-C [ ]
+20230405 17:49:37.006 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-C [ ]
 ------------------------------------------------------------------------------
-20230404 15:47:04.439 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230404 15:47:04.440 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230404 15:47:04.440 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230405 17:49:37.007 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230405 17:49:37.007 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230405 17:49:37.008 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.440 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [C]) | console=yes ]
-20230404 15:47:04.440 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [C])
-20230404 15:47:04.441 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:37.008 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-tst-testfile-1.robot [C]) | console=yes ]
+20230405 17:49:37.008 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-tst-testfile-1.robot [C])
+20230405 17:49:37.009 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.441 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [C]) | console=yes ]
-20230404 15:47:04.441 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [C])
-20230404 15:47:04.442 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:37.009 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-tst-testfile-1.robot [C]) | console=yes ]
+20230405 17:49:37.009 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-tst-testfile-1.robot [C])
+20230405 17:49:37.010 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230404 15:47:04.442 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [C]) | console=yes ]
-20230404 15:47:04.442 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [C])
-20230404 15:47:04.443 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
+20230405 17:49:37.010 - INFO - +--- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-tst-testfile-1.robot [C]) | console=yes ]
+20230405 17:49:37.010 - INFO - teststring_bench : I am the teststring containing the default value for all test benches (tsm-tst-testfile-1.robot [C])
+20230405 17:49:37.011 - INFO - +--- END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230404 15:47:04.444 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-C (4)
+20230405 17:49:37.012 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-C (5)
 ------------------------------------------------------------------------------
-20230404 15:47:04.453 - INFO - +- END SUITE: Testsuitestest.Tsm-Tst-Testfile-1 (34)
+20230405 17:49:37.014 - INFO - +- END SUITE: Testsuitestest.Tsm-Tst-Testfile-1 (35)
 ==============================================================================
-20230404 15:47:04.458 - INFO - + END SUITE: Testsuitestest (439)
+20230405 17:49:37.023 - INFO - + END SUITE: Testsuitestest (500)
 ==============================================================================

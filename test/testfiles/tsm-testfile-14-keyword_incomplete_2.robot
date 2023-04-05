@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-10-unknown_keyword.robot (with variant configuration and call of not existing keyword)
+# tsm-testfile-14-keyword_incomplete_2.robot (with variant configuration and call of incomplete keyword IF/ELSE)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,13 +29,17 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-10-unknown_keyword
-   [documentation]    tsm-testfile-10-unknown_keyword
+Test Case tsm-testfile-14-keyword_incomplete_2
+   [documentation]    tsm-testfile-14-keyword_incomplete_2
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-10-unknown_keyword.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-10-unknown_keyword.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-10-unknown_keyword.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-14-keyword_incomplete_2.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-14-keyword_incomplete_2.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-14-keyword_incomplete_2.robot)        console=yes
 
-   I am the not existing keyword and therefore syntax error
+   IF    1 == 1
+       log    === it is    console=yes
+   ELSE
+       log    === it is not    console=yes
+   # END # is missing
 
    Log    I must not be executed    console=yes

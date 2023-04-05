@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-12-keyword_incomplete_2.robot (with variant configuration and call of incomplete keyword IF/ELSE)
+# tsm-testfile-07-err-1.robot (with variant configuration; JSON file contains syntax errors)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -23,23 +23,16 @@
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
+Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants_err_1.json
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-12-keyword_incomplete_2
-   [documentation]    tsm-testfile-12-keyword_incomplete_2
+Test Case tsm-testfile-07-err-1
+   [documentation]    tsm-testfile-07-err-1
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-12-keyword_incomplete_2.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-12-keyword_incomplete_2.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-12-keyword_incomplete_2.robot)        console=yes
-
-   IF    1 == 1
-       log    === it is    console=yes
-   ELSE
-       log    === it is not    console=yes
-   # END # is missing
-
+   Log    teststring_common : ${teststring_common} (tsm-testfile-07-err-1.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-07-err-1.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-07-err-1.robot)        console=yes
    Log    I must not be executed    console=yes

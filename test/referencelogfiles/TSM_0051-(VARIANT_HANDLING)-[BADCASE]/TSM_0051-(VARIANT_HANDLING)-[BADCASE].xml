@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230404 15:46:38.452" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230405 17:49:10.468" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230404 15:46:38.621" level="ERROR">Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.json': 'Expecting property name enclosed in double quotes: line 25 column 3 (char 239)'</msg>
-<msg timestamp="20230404 15:46:38.622" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
-<status status="UNKNOWN" starttime="20230404 15:46:38.585" endtime="20230404 15:46:38.622"/>
+<msg timestamp="20230405 17:49:10.626" level="ERROR">Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.json': 'Expecting property name enclosed in double quotes: line 25 column 3 (char 239)'</msg>
+<msg timestamp="20230405 17:49:10.627" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
+<status status="UNKNOWN" starttime="20230405 17:49:10.600" endtime="20230405 17:49:10.627"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230404 15:46:38.622" endtime="20230404 15:46:38.626">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230405 17:49:10.627" endtime="20230405 17:49:10.628">Parent suite setup unknown:
 Loading of JSON configuration file failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230404 15:46:38.631" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230404 15:46:38.631" endtime="20230404 15:46:38.631"/>
+<msg timestamp="20230405 17:49:10.633" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230405 17:49:10.633" endtime="20230405 17:49:10.633"/>
 </kw>
-<status status="UNKNOWN" starttime="20230404 15:46:38.460" endtime="20230404 15:46:38.631">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230405 17:49:10.474" endtime="20230405 17:49:10.633">Suite setup unknown:
 Loading of JSON configuration file failed!</status>
 </suite>
 <statistics>
@@ -34,6 +34,6 @@ Loading of JSON configuration file failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230404 15:46:38.621" level="ERROR">Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.json': 'Expecting property name enclosed in double quotes: line 25 column 3 (char 239)'</msg>
+<msg timestamp="20230405 17:49:10.626" level="ERROR">Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.json': 'Expecting property name enclosed in double quotes: line 25 column 3 (char 239)'</msg>
 </errors>
 </robot>

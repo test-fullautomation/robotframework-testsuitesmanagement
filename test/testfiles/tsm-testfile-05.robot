@@ -14,35 +14,25 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-14-unknown_parameter_1.robot (with variant configuration and assignment of unknown dictionary key)
+# tsm-testfile-05.robot (without variant configuration but parameter logging, config_file expected in command line)
 #
 # --------------------------------------------------------------------------------------------------------------
 
 *** Settings ***
 
-Library    Collections
-
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
+Suite Setup       tm.testsuite_setup
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
-*** Variables ***
-
-&{dTestDict}    kVal_1=Val_1
-
 *** Test Cases ***
-
-Test Case tsm-testfile-14-unknown_parameter_1
-   [documentation]    tsm-testfile-14-unknown_parameter_1
+Test Case tsm-testfile-05
+   [documentation]    tsm-testfile-05
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-14-unknown_parameter_1.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-14-unknown_parameter_1.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-14-unknown_parameter_1.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-05.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-05.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-05.robot)        console=yes
 
-   Set To Dictionary    ${dTestDict}[kVal_1]    kVal_new    ${dTestDict}[I-am-not-existing]
-
-   Log    I must not be executed    console=yes

@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-06-err-2.robot (with variant configuration; JSON file contains not existing file and folder)
+# tsm-testfile-08-err-2.robot (with variant configuration; JSON file contains not existing file and folder)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,10 +29,10 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-06-err-2
-   [documentation]    tsm-testfile-06-err-2
+Test Case tsm-testfile-08-err-2
+   [documentation]    tsm-testfile-08-err-2
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-06-err-2.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-06-err-2.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-06-err-2.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-08-err-2.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-08-err-2.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-08-err-2.robot)        console=yes
    Log    I must not be executed    console=yes

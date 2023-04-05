@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-18-dotdict_syntax.robot (with variant configuration and extended parameter logging for dotdict syntax in JSON files)
+# tsm-testfile-06-dotdict_syntax.robot (with variant configuration and extended parameter logging for dotdict syntax in JSON files)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,12 +29,12 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-testfile-18-dotdict_syntax
-   [documentation]    tsm-testfile-18-dotdict_syntax
+Test Case tsm-testfile-06-dotdict_syntax
+   [documentation]    tsm-testfile-06-dotdict_syntax
    rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-18-dotdict_syntax.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-18-dotdict_syntax.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-18-dotdict_syntax.robot)        console=yes
+   Log    teststring_common : ${teststring_common} (tsm-testfile-06-dotdict_syntax.robot)      console=yes
+   Log    teststring_variant : ${teststring_variant} (tsm-testfile-06-dotdict_syntax.robot)    console=yes
+   Log    teststring_bench : ${teststring_bench} (tsm-testfile-06-dotdict_syntax.robot)        console=yes
 
    rf.extensions.pretty_print    ${dTestDict}    PARAMS-VERIFIKATION : (dTestDict)
 
