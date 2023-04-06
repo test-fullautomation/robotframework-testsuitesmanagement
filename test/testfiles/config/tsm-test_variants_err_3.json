@@ -15,12 +15,12 @@
 
 {
   // "default" is missing"
-  // "default": {
-  //              "name": "tsm-test_config_default.json",
-  //              "path": "./config/"
-  //            },
-  "variant1": {
-               "name": "tsm-test_config_variant1.json",
-               "path": "./config/"
-              }
+  // "default" : {
+  //               "name" : "tsm-test_config_default.json",
+  //               "path" : "./config/"
+  //             },
+  "variant1" : {
+                "name" : "tsm-test_config_variant1.json",
+                "path" : "./config/"
+               }
 }

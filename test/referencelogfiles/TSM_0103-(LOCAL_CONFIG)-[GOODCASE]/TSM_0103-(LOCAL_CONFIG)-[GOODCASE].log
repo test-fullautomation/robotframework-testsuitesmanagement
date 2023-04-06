@@ -1,61 +1,61 @@
 ==============================================================================
-20230405 17:49:20.187 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230406 14:42:29.781 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230405 17:49:20.194 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230405 17:49:20.225 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20230405 17:49:20.225 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230405 17:49:20.227 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230405 17:49:20.227 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230405 17:49:20.227 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230405 17:49:20.227 - INFO - Set suite metadata 'version_sw' to value ''.
-20230405 17:49:20.227 - INFO - Set suite metadata 'version_hw' to value ''.
-20230405 17:49:20.227 - INFO - Set suite metadata 'version_test' to value ''.
-20230405 17:49:20.228 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230405 17:49:20.229 - INFO - ${teststring_bench} = I am the 'bench2' configuration of tsm-test
-20230405 17:49:20.229 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230405 17:49:20.230 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20230405 17:49:20.230 - INFO - The parameter 'params['global']['teststring_bench']' is updated
-20230405 17:49:20.230 - INFO - Running with configuration level 2
-20230405 17:49:20.230 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230405 17:49:20.230 - INFO - Robot Framework AIO version check passed!
-20230405 17:49:20.230 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230405 17:49:20.230 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230405 17:49:20.230 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench2.json'
-20230405 17:49:20.230 - INFO - Number of test suites: 1
-20230405 17:49:20.230 - INFO - Total number of testcases: 1
-20230405 17:49:20.230 - INFO - +- END SETUP: tm.Testsuite Setup (36)
+20230406 14:42:29.791 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230406 14:42:29.823 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230406 14:42:29.823 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230406 14:42:29.825 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230406 14:42:29.825 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230406 14:42:29.825 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230406 14:42:29.825 - INFO - Set suite metadata 'version_sw' to value ''.
+20230406 14:42:29.825 - INFO - Set suite metadata 'version_hw' to value ''.
+20230406 14:42:29.825 - INFO - Set suite metadata 'version_test' to value ''.
+20230406 14:42:29.826 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230406 14:42:29.826 - INFO - ${teststring_bench} = I am the 'bench2' configuration of tsm-test
+20230406 14:42:29.827 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230406 14:42:29.827 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230406 14:42:29.827 - INFO - The parameter 'params['global']['teststring_bench']' is updated
+20230406 14:42:29.828 - INFO - Running with configuration level 2
+20230406 14:42:29.828 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230406 14:42:29.828 - INFO - Robot Framework AIO version check passed!
+20230406 14:42:29.828 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230406 14:42:29.828 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230406 14:42:29.828 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench2.json'
+20230406 14:42:29.828 - INFO - Number of test suites: 1
+20230406 14:42:29.828 - INFO - Total number of testcases: 1
+20230406 14:42:29.828 - INFO - +- END SETUP: tm.Testsuite Setup (37)
 ------------------------------------------------------------------------------
-20230405 17:49:20.231 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230406 14:42:29.828 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230405 17:49:20.232 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230405 17:49:20.232 - INFO - Test Count: 1
-20230405 17:49:20.232 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230406 14:42:29.829 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230406 14:42:29.830 - INFO - Test Count: 1
+20230406 14:42:29.830 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:20.232 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230405 17:49:20.233 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
-20230405 17:49:20.233 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230406 14:42:29.830 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230406 14:42:29.830 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant1'
+20230406 14:42:29.831 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:20.233 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:20.234 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)
-20230405 17:49:20.234 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230406 14:42:29.831 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.832 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)
+20230406 14:42:29.832 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:20.234 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:20.235 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-02.robot)
-20230405 17:49:20.238 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230406 14:42:29.832 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.833 - INFO - teststring_variant : I am the 'variant1' configuration of tsm-test (tsm-testfile-02.robot)
+20230406 14:42:29.834 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:20.238 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:20.239 - INFO - teststring_bench : I am the 'bench2' configuration of tsm-test (tsm-testfile-02.robot)
-20230405 17:49:20.239 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230406 14:42:29.834 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.834 - INFO - teststring_bench : I am the 'bench2' configuration of tsm-test (tsm-testfile-02.robot)
+20230406 14:42:29.835 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:20.239 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230405 17:49:20.240 - INFO - testcase_teardown: Will be implemented later
-20230405 17:49:20.240 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
+20230406 14:42:29.835 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230406 14:42:29.835 - INFO - testcase_teardown: Will be implemented later
+20230406 14:42:29.835 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230405 17:49:20.241 - INFO - +- END TEST: Test Case tsm-testfile-02 (10)
+20230406 14:42:29.836 - INFO - +- END TEST: Test Case tsm-testfile-02 (7)
 ------------------------------------------------------------------------------
-20230405 17:49:20.241 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230405 17:49:20.242 - INFO - testsuite_teardown: Will be implemented later
-20230405 17:49:20.242 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230406 14:42:29.837 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230406 14:42:29.837 - INFO - testsuite_teardown: Will be implemented later
+20230406 14:42:29.837 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230405 17:49:20.244 - INFO - + END SUITE: Tsm-Testfile-02 (171)
+20230406 14:42:29.843 - INFO - + END SUITE: Tsm-Testfile-02 (172)
 ==============================================================================

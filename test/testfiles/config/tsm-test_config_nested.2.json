@@ -25,15 +25,18 @@
   "params" : {
               "global" : {
                            "teststring_variant" : "I am the variant 'nested.2' configuration of tsm-test",
-                           "int_val" : 123,
-                           "float_val" : 4.56,
-                           "bool_val_1" : True,
-                           "bool_val_2" : true,
-                           "bool_val_3" : False,
-                           "bool_val_4" : false,
-                           "none_val" : None,
-                           "null_val" : null,
+                           //
+                           "int_val"            : 123,
+                           "float_val"          : 4.56,
+                           "bool_val_1"         : True,
+                           "bool_val_2"         : true,
+                           "bool_val_3"         : False,
+                           "bool_val_4"         : false,
+                           "none_val"           : None,
+                           "null_val"           : null,
+                           //
                            "certain_teststring" : "initial value of certain teststring",
+                           //
                            "list_val" : ["initial list", 1, 2.2, "A", true, True, false, False, None, null],
                            "dict_val" : {},
                            ${params}['global']['dict_val']['key_1'] : {},
@@ -54,6 +57,7 @@
                            ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']   : ${params}['global']['certain_teststring'],
                            ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']   : ${params}['global']['list_val'],
                            ${params}['global']['dict_val']['key_2']['subkey_23']['dotted.key.name'] : "initial dotted key name value",
+                           //
                            "[import]" : "./tsm-test_config_common.json",
                            "[import]" : "./import.2/tsm-test_config_nested.2.1.json"
                          }

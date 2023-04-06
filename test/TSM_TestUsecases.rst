@@ -739,5 +739,53 @@ Test Use Cases
 
 ----
 
-Generated: 04.04.2023 - 19:35:08
+* **Test TSM_0900**
+
+  [PARAMETER_PRIORITY / GOODCASE]
+
+   **Test with several sources of parameters: config file (selected by variant name), local config and variable file**
+
+   Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0901**
+
+  [PARAMETER_PRIORITY / GOODCASE]
+
+   **Test with several sources of parameters: config file, local config, variable file**
+
+   Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0902**
+
+  [PARAMETER_PRIORITY / GOODCASE]
+
+   **Test with several sources of parameters: config file (selected by variant name), local config, variable file and single variable in command line**
+
+   Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0903**
+
+  [PARAMETER_PRIORITY / GOODCASE]
+
+   **Test with several sources of parameters: config file, local config, variable file and single variable in command line**
+
+   Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 06.04.2023 - 14:44:14
 

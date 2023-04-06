@@ -34,8 +34,10 @@
                           ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_1'] : "value_tdv_key_1_1",
                           ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2'] : "value_tdv_key_1_2",
                           "testlist_variant"                                                        : ["A", "B", "C"],
+                          //
                           "[import]"                                                                : "./tsm-test_config_common.json",
                           "[import]"                                                                : "./import.1/tsm-test_config_nested.1.1.json",
+                          //
                           "teststring_variant"                                                      : "I am the variant 'nested.1' configuration of tsm-test",
                           ${params}['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2'] : "value_tdv_key_1_2_after_import",
                           ${params}['global']['testdictionary_variant']['tdv_key_2']['tdv_key_2_1'] : "value_tdv_key_2_1_after_import_new"

@@ -1,19 +1,19 @@
 ==============================================================================
-20230405 17:49:10.010 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230406 14:42:19.714 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230405 17:49:10.018 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230405 17:49:10.047 - ERROR - The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
-20230405 17:49:10.048 - UNKNOWN - JSON schema validation failed!
-20230405 17:49:10.048 - DEBUG - JSON schema validation failed!
-20230405 17:49:10.049 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20230406 14:42:19.721 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230406 14:42:19.750 - ERROR - The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
+20230406 14:42:19.751 - UNKNOWN - JSON schema validation failed!
+20230406 14:42:19.751 - DEBUG - JSON schema validation failed!
+20230406 14:42:19.752 - INFO - +- END SETUP: tm.Testsuite Setup (30)
 ------------------------------------------------------------------------------
-20230405 17:49:10.049 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230406 14:42:19.752 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230405 17:49:10.057 - INFO - +- END TEST: Test Case tsm-testfile-02 (6)
+20230406 14:42:19.760 - INFO - +- END TEST: Test Case tsm-testfile-02 (2)
 ------------------------------------------------------------------------------
-20230405 17:49:10.058 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230405 17:49:10.058 - INFO - testsuite_teardown: Will be implemented later
-20230405 17:49:10.058 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230406 14:42:19.760 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230406 14:42:19.760 - INFO - testsuite_teardown: Will be implemented later
+20230406 14:42:19.761 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230405 17:49:10.060 - INFO - + END SUITE: Tsm-Testfile-02 (166)
+20230406 14:42:19.763 - INFO - + END SUITE: Tsm-Testfile-02 (160)
 ==============================================================================

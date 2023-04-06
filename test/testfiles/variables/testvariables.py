@@ -13,13 +13,12 @@
 #  limitations under the License.
 #################################################################################
 
-# definition of some test variables
+# overwrite common configuration value
+teststring_common = "I am the 'teststring_common' value taken from variablefile 'testvariables.py'"
+# overwrite variant configuration value
+teststring_variant = "I am the 'teststring_variant' value taken from variablefile 'testvariables.py'"
+# overwrite bench configuration value
+teststring_bench = "I am the 'teststring_bench' value taken from variablefile 'testvariables.py'"
 
-string_val    = "variable file test string"
-int_val       = 234
-float_val     = 5.67
-list_val      = ['A', 'B', 'C']
-dict_val      = {'A' : 1, 'B' : 2, 'C' : 3}
-bool_true_val = True
-none_val      = None
-
+# introduce new parameters
+variablefile_val = "I am the 'variablefile_val' value taken from variablefile 'testvariables.py'"

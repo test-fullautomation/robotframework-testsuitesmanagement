@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 04.04.2023 / v. 0.1.0
+# 06.04.2023 / v. 0.1.0
 # initial prototype
 #
 # --------------------------------------------------------------------------------------------------------------
@@ -248,6 +248,9 @@ for dictUsecase in listofdictUsecases:
    POSTSTEP = None
    if "POSTSTEP" in dictUsecase:
       POSTSTEP = dictUsecase['POSTSTEP']
+   VARIABLEFILE = None
+   if "VARIABLEFILE" in dictUsecase:
+      VARIABLEFILE = dictUsecase['VARIABLEFILE']
    LOGCOMPARE = oConfig.Get('LOGCOMPARE')
    if "LOGCOMPARE" in dictUsecase:
       # local value of use case overwrites global configuration value
@@ -299,7 +302,9 @@ for dictUsecase in listofdictUsecases:
    listCmdLineParts.append(f"\"{TESTLOGFILE_TXT}\"")
    if ADDITIONALPARAMS is not None:
       listCmdLineParts.append(f"{ADDITIONALPARAMS}")
-
+   if VARIABLEFILE is not None:
+      VARIABLEFILE = CString.NormalizePath(VARIABLEFILE, sReferencePathAbs=TESTFILESFOLDER) # to make the path to this file relative to the position of the executed robot file (and not relative to the position of this script)
+      listCmdLineParts.append(f"--variablefile \"{VARIABLEFILE}\"")
    if ( (TESTFILENAME is not None) and (TESTFOLDERNAME is not None) ):
       print()
       bSuccess = None

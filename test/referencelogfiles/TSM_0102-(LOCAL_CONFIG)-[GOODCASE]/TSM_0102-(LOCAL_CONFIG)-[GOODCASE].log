@@ -1,47 +1,47 @@
 ==============================================================================
-20230405 17:49:19.602 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230406 14:42:29.211 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230405 17:49:19.644 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230405 17:49:19.644 - INFO - Running with configuration level 1
-20230405 17:49:19.645 - INFO - Robot Framework AIO version check passed!
-20230405 17:49:19.645 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230405 17:49:19.645 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'
-20230405 17:49:19.645 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.json'
-20230405 17:49:19.645 - INFO - Number of test suites: 1
-20230405 17:49:19.645 - INFO - Total number of testcases: 1
-20230405 17:49:19.645 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+20230406 14:42:29.247 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230406 14:42:29.247 - INFO - Running with configuration level 1
+20230406 14:42:29.248 - INFO - Robot Framework AIO version check passed!
+20230406 14:42:29.248 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230406 14:42:29.248 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'
+20230406 14:42:29.248 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.json'
+20230406 14:42:29.248 - INFO - Number of test suites: 1
+20230406 14:42:29.248 - INFO - Total number of testcases: 1
+20230406 14:42:29.248 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20230405 17:49:19.645 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230406 14:42:29.249 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230405 17:49:19.647 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230405 17:49:19.647 - INFO - Test Count: 1
-20230405 17:49:19.647 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230406 14:42:29.250 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230406 14:42:29.250 - INFO - Test Count: 1
+20230406 14:42:29.250 - INFO - +-- END SETUP: tm.Testcase Setup (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:19.647 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230405 17:49:19.648 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant2'
-20230405 17:49:19.648 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230406 14:42:29.250 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230406 14:42:29.251 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_variant2'
+20230406 14:42:29.252 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:19.648 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:19.649 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)
-20230405 17:49:19.650 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230406 14:42:29.252 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.252 - INFO - teststring_common : I am the common teststring valid for all variants and all test benches (tsm-testfile-02.robot)
+20230406 14:42:29.253 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:19.650 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:19.650 - INFO - teststring_variant : I am the 'variant2' configuration of tsm-test (tsm-testfile-02.robot)
-20230405 17:49:19.651 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230406 14:42:29.253 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.253 - INFO - teststring_variant : I am the 'variant2' configuration of tsm-test (tsm-testfile-02.robot)
+20230406 14:42:29.254 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:19.651 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-02.robot) | console=yes ]
-20230405 17:49:19.651 - INFO - teststring_bench : 'teststring_bench' command line value (tsm-testfile-02.robot)
-20230405 17:49:19.652 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230406 14:42:29.254 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-02.robot) | console=yes ]
+20230406 14:42:29.254 - INFO - teststring_bench : 'teststring_bench' command line value (tsm-testfile-02.robot)
+20230406 14:42:29.255 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230405 17:49:19.653 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230405 17:49:19.653 - INFO - testcase_teardown: Will be implemented later
-20230405 17:49:19.653 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230406 14:42:29.255 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230406 14:42:29.255 - INFO - testcase_teardown: Will be implemented later
+20230406 14:42:29.256 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230405 17:49:19.655 - INFO - +- END TEST: Test Case tsm-testfile-02 (8)
+20230406 14:42:29.257 - INFO - +- END TEST: Test Case tsm-testfile-02 (8)
 ------------------------------------------------------------------------------
-20230405 17:49:19.655 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230405 17:49:19.655 - INFO - testsuite_teardown: Will be implemented later
-20230405 17:49:19.655 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230406 14:42:29.257 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230406 14:42:29.257 - INFO - testsuite_teardown: Will be implemented later
+20230406 14:42:29.257 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230405 17:49:19.658 - INFO - + END SUITE: Tsm-Testfile-02 (166)
+20230406 14:42:29.259 - INFO - + END SUITE: Tsm-Testfile-02 (159)
 ==============================================================================

@@ -14,12 +14,12 @@
 //**************************************************************************
 
 {
-   ${params}['global']['certain_teststring']                                   : "updated value of certain teststring (2.1.1)",
-   ${params}['global']['list_val']                                             : ["updated list", 1, 2.2, "A", true, True, false, False, None, null],
-   ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']      : ${params}['global']['certain_teststring'],
-   ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']      : ${params}['global']['list_val'],
-   ${params}['global']['dict_val']['key_2']['subkey_23']['dotted.key.name']    : "updated dotted key name value (2.1.1)",
-   ${params}['global']['dict_val']['key_2']['subkey_23']['I_am_a_new_key'] : "I am a new key value (2.1.1)",
+   ${params}['global']['certain_teststring']                                : "updated value of certain teststring (2.1.1)",
+   ${params}['global']['list_val']                                          : ["updated list", 1, 2.2, "A", true, True, false, False, None, null],
+   ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']   : ${params}['global']['certain_teststring'],
+   ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']   : ${params}['global']['list_val'],
+   ${params}['global']['dict_val']['key_2']['subkey_23']['dotted.key.name'] : "updated dotted key name value (2.1.1)",
+   ${params}['global']['dict_val']['key_2']['subkey_23']['I_am_a_new_key']  : "I am a new key value (2.1.1)",
    "I_am_a_new_int"  : 123,
    "I_am_a_new_str"  : "I am a new str value (2.1.1)",
    "I_am_a_new_None" : None,

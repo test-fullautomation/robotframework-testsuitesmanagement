@@ -15,15 +15,15 @@
 
 {
   "default" : {
-                "name": "tsm-test_config_default.json",
-                "path": "./config/"
+                "name" : "tsm-test_config_default.json",
+                "path" : "./config/"
               },
   "variant1" : {
-                 "name": "tsm-test_config_variant1.json",
-                 "path": "./config/"
+                 "name" : "tsm-test_config_variant1.json",
+                 "path" : "./config/"
                },
   "variant2" : {
-                 "name": "tsm-test_config_variant2.json",
-                 "path": "./config/"
+                 "name" : "tsm-test_config_variant2.json",
+                 "path" : "./config/"
                }
 }

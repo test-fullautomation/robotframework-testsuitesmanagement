@@ -1,0 +1,51 @@
+==============================================================================
+20230406 14:43:25.086 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
+==============================================================================
+20230406 14:43:25.122 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230406 14:43:25.123 - INFO - Running with configuration level 1
+20230406 14:43:25.123 - INFO - Robot Framework AIO version check passed!
+20230406 14:43:25.123 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230406 14:43:25.123 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.json'
+20230406 14:43:25.123 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench2.json'
+20230406 14:43:25.123 - INFO - Number of test suites: 1
+20230406 14:43:25.123 - INFO - Total number of testcases: 1
+20230406 14:43:25.123 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+------------------------------------------------------------------------------
+20230406 14:43:25.124 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
+------------------------------------------------------------------------------
+20230406 14:43:25.125 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230406 14:43:25.125 - INFO - Test Count: 1
+20230406 14:43:25.125 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.125 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
+20230406 14:43:25.126 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'tsm-test_config_parameter_priority'
+20230406 14:43:25.127 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.127 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-testfile-19-parameter_priority.robot) | console=yes ]
+20230406 14:43:25.127 - INFO - teststring_common : I am the 'teststring_common' value taken from variablefile 'testvariables.py' (tsm-testfile-19-parameter_priority.robot)
+20230406 14:43:25.128 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.128 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-testfile-19-parameter_priority.robot) | console=yes ]
+20230406 14:43:25.128 - INFO - teststring_variant : I am the 'teststring_variant' value taken from variablefile 'testvariables.py' (tsm-testfile-19-parameter_priority.robot)
+20230406 14:43:25.129 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.129 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-testfile-19-parameter_priority.robot) | console=yes ]
+20230406 14:43:25.129 - INFO - teststring_bench : I am the 'teststring_bench' value taken from variablefile 'testvariables.py' (tsm-testfile-19-parameter_priority.robot)
+20230406 14:43:25.130 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.130 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${variablefile_val} | PARAMS-VERIFIKATION : ({variablefile_val}) ]
+20230406 14:43:25.130 - INFO - PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from command line'
+20230406 14:43:25.131 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230406 14:43:25.131 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230406 14:43:25.131 - INFO - testcase_teardown: Will be implemented later
+20230406 14:43:25.131 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+------------------------------------------------------------------------------
+20230406 14:43:25.133 - INFO - +- END TEST: Test Case tsm-testfile-19-parameter_priority (7)
+------------------------------------------------------------------------------
+20230406 14:43:25.133 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230406 14:43:25.133 - INFO - testsuite_teardown: Will be implemented later
+20230406 14:43:25.133 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230406 14:43:25.135 - INFO - + END SUITE: Tsm-Testfile-19-Parameter Priority (161)
+==============================================================================

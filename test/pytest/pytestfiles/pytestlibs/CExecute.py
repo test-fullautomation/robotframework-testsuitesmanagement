@@ -20,7 +20,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 24.03.2023
+# 06.04.2023
 #
 # **************************************************************************************************************
 
@@ -40,7 +40,7 @@ class CExecute(object):
       """
       """
       sThisFilePath = os.path.dirname(CString.NormalizePath(__file__))
-      sPython         = CString.NormalizePath(sys.executable)
+      sPython       = CString.NormalizePath(sys.executable)
       sTestScript   = CString.NormalizePath("../../../component_test.py", sReferencePathAbs=sThisFilePath)
       print(f"(debug) sTestScript: {sTestScript}")
       listCmdLineParts = []
