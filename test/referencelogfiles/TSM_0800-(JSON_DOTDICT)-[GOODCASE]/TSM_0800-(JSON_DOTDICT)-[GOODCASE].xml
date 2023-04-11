@@ -1,107 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 12:16:43.588" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 15:56:26.746" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-06-Dotdict Syntax" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-06-dotdict_syntax.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230411 12:16:43.734" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_json_dotdict'.</msg>
-<msg timestamp="20230411 12:16:43.734" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230411 12:16:43.736" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230411 12:16:43.737" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230411 12:16:43.738" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230411 12:16:43.738" level="INFO">${teststring_variant} = I am the 'json_dotdict' configuration of tsm-test</msg>
-<msg timestamp="20230411 12:16:43.739" level="INFO">${dTestDict} = {'ddKeyA': {'ddKeyA_2': 'ddKeyA_2_value'}, 'ddKeyB': 'ddKeyB_value'}</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">The parameter 'params['global']['dTestDict']['ddKeyA']' is updated</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_json_dotdict.json'</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_json_dotdict.json'</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230411 12:16:43.742" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230411 12:16:43.707" endtime="20230411 12:16:43.742"/>
+<msg timestamp="20230411 15:56:26.892" level="ERROR">Loading of JSON configuration file failed! Reason: The variable 'params.global.dTestDict.ddKeyA['ddKeyA_2']' is not available!</msg>
+<msg timestamp="20230411 15:56:26.893" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
+<status status="UNKNOWN" starttime="20230411 15:56:26.865" endtime="20230411 15:56:26.893"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-06-dotdict_syntax">
-<kw name="Testcase Setup" library="tm" type="SETUP">
-<doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:43.743" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230411 12:16:43.743" endtime="20230411 12:16:43.744"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${CONFIG.Project}</arg>
-<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.744" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'tsm-test_config_json_dotdict'</msg>
-<status status="PASS" starttime="20230411 12:16:43.744" endtime="20230411 12:16:43.745"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${teststring_common}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.746" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230411 12:16:43.746" endtime="20230411 12:16:43.746"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${teststring_variant}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.746" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the 'json_dotdict' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230411 12:16:43.746" endtime="20230411 12:16:43.747"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${teststring_bench}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.747" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230411 12:16:43.747" endtime="20230411 12:16:43.748"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${dTestDict}</arg>
-<arg>PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.748" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (2/1) &gt; {ddKeyA} [DOTDICT] (1/1) &gt; {ddKeyA_2} [STR]  :  'ddKeyA_2_value'</msg>
-<msg timestamp="20230411 12:16:43.749" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (2/2) &gt; {ddKeyB} [STR]  :  'ddKeyB_value'</msg>
-<status status="PASS" starttime="20230411 12:16:43.748" endtime="20230411 12:16:43.749"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
-<arg>${ddKeyB_param}</arg>
-<arg>PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:43.750" level="UNKNOWN">Variable '${ddKeyB_param}' not found.</msg>
-<status status="UNKNOWN" starttime="20230411 12:16:43.749" endtime="20230411 12:16:43.750"/>
-</kw>
-<kw name="Testcase Teardown" library="tm" type="TEARDOWN">
-<doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:43.751" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230411 12:16:43.751" endtime="20230411 12:16:43.751"/>
-</kw>
 <doc>tsm-testfile-06-dotdict_syntax</doc>
-<status status="UNKNOWN" starttime="20230411 12:16:43.742" endtime="20230411 12:16:43.751">Variable '${ddKeyB_param}' not found.</status>
+<status status="UNKNOWN" starttime="20230411 15:56:26.894" endtime="20230411 15:56:26.895">Parent suite setup unknown:
+Loading of JSON configuration file failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:43.754" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230411 12:16:43.754" endtime="20230411 12:16:43.754"/>
+<msg timestamp="20230411 15:56:26.897" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230411 15:56:26.897" endtime="20230411 15:56:26.897"/>
 </kw>
-<meta name="machine">HI7-C-0005Y</meta>
-<meta name="project">tsm-test_config_json_dotdict</meta>
-<meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 4.1.3 (Python 3.9.16 on win32)</meta>
-<meta name="version">0.7.0</meta>
-<meta name="version_hw"/>
-<meta name="version_sw"/>
-<meta name="version_test"/>
-<status status="UNKNOWN" starttime="20230411 12:16:43.594" endtime="20230411 12:16:43.754"/>
+<status status="UNKNOWN" starttime="20230411 15:56:26.752" endtime="20230411 15:56:26.897">Suite setup unknown:
+Loading of JSON configuration file failed!</status>
 </suite>
 <statistics>
 <total>
@@ -114,5 +34,6 @@ it's defined here for future requirements.</doc>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230411 15:56:26.892" level="ERROR">Loading of JSON configuration file failed! Reason: The variable 'params.global.dTestDict.ddKeyA['ddKeyA_2']' is not available!</msg>
 </errors>
 </robot>

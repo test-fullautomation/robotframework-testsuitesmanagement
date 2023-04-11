@@ -22,25 +22,22 @@
   "Project"         : "tsm-test_config_json_dotdict",
   "TargetName"      : "Device_01",
 
-// waiting for:
-// https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/145
-
   "params" : {
               "global" : {
                           "[import]"           : "./tsm-test_config_common.json",
+                          //
                           "teststring_variant" : "I am the 'json_dotdict' configuration of tsm-test",
+                          //
                           "dTestDict"          : {"ddKeyA" : "ddKeyA_value", "ddKeyB" : "ddKeyB_value"},
                           "ddKeyB_param"       : ${params.global.dTestDict.ddKeyB},
-                          ${params}['global']['dTestDict']['ddKeyA'] : {"ddKeyA_2" : "ddKeyA_2_value"}
-                          // [ ERROR ] Loading of JSON configuration file failed! Reason: The variable 'params['global']['dTestDict']['ddKeyA']['ddKeyA_2']' is not available!
-                          // "ddKeyA_2_param_1" : ${params.global.dTestDict.ddKeyA.ddKeyA_2},
-                          // 'Expecting property name enclosed in double quotes: line 35 column 26 (char 857)'
-                          // "ddKeyA_2_param_2" : ${params.global.dTestDict.ddKeyA}['ddKeyA_2'],
-                          // 'Expecting property name enclosed in double quotes: line 38 column 26 (char 941)'
-                          // "ddKeyA_2_param_3" : ${params.global.dTestDict}['ddKeyA']['ddKeyA_2'],
-                          // [ ERROR ] Loading of JSON configuration file failed! Reason: The variable 'params.global['dTestDict']['ddKeyA']['ddKeyA_2']' is not available!
-                          // "ddKeyA_2_param_4" : ${params.global}['dTestDict']['ddKeyA']['ddKeyA_2'],
-                          // "[import]" : "./import.dotdict/tsm-test_config_json_more_dotdict.json"
+                          ${params}['global']['dTestDict']['ddKeyA'] : {"ddKeyA_2" : "ddKeyA_2_value"},
+                          //
+                          "ddKeyA_2_param_1" : ${params.global.dTestDict.ddKeyA.ddKeyA_2},
+                          "ddKeyA_2_param_2" : ${params.global.dTestDict.ddKeyA}['ddKeyA_2'],
+                          "ddKeyA_2_param_3" : ${params.global.dTestDict}['ddKeyA']['ddKeyA_2'],
+                          "ddKeyA_2_param_4" : ${params.global}['dTestDict']['ddKeyA']['ddKeyA_2'],
+                          //
+                          "[import]" : "./import.dotdict/tsm-test_config_json_more_dotdict.json"
                          }
              }
 }

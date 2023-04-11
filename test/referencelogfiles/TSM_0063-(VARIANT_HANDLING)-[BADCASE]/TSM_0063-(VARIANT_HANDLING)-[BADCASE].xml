@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 12:16:25.333" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 15:56:08.502" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-09-Err-3" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-09-err-3.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants_err_3.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230411 12:16:25.472" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
+<msg timestamp="20230411 15:56:08.652" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
           The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.json' 
           Please find the suitable variant in this list: 
             - 'variant1' 
 
 </msg>
-<msg timestamp="20230411 12:16:25.473" level="UNKNOWN">Loading configuration level 2 failed!</msg>
-<status status="UNKNOWN" starttime="20230411 12:16:25.452" endtime="20230411 12:16:25.473"/>
+<msg timestamp="20230411 15:56:08.653" level="UNKNOWN">Loading configuration level 2 failed!</msg>
+<status status="UNKNOWN" starttime="20230411 15:56:08.632" endtime="20230411 15:56:08.653"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-09-err-3">
 <doc>tsm-testfile-09-err-3</doc>
-<status status="UNKNOWN" starttime="20230411 12:16:25.474" endtime="20230411 12:16:25.475">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230411 15:56:08.653" endtime="20230411 15:56:08.655">Parent suite setup unknown:
 Loading configuration level 2 failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:25.477" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230411 12:16:25.477" endtime="20230411 12:16:25.477"/>
+<msg timestamp="20230411 15:56:08.656" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230411 15:56:08.656" endtime="20230411 15:56:08.656"/>
 </kw>
-<status status="UNKNOWN" starttime="20230411 12:16:25.337" endtime="20230411 12:16:25.477">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230411 15:56:08.507" endtime="20230411 15:56:08.656">Suite setup unknown:
 Loading configuration level 2 failed!</status>
 </suite>
 <statistics>
@@ -39,7 +39,7 @@ Loading configuration level 2 failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230411 12:16:25.472" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
+<msg timestamp="20230411 15:56:08.652" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
           The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.json' 
           Please find the suitable variant in this list: 
             - 'variant1' 

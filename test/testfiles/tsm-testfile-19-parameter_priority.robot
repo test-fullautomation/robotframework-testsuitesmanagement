@@ -38,5 +38,3 @@ Test Case tsm-testfile-19-parameter_priority
 
    rf.extensions.pretty_print    ${variablefile_val}    PARAMS-VERIFIKATION : ({variablefile_val})
 
-
-

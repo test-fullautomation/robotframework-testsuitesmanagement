@@ -40,25 +40,38 @@ Test Case tsm-testfile-06-dotdict_syntax
 
    rf.extensions.pretty_print    ${ddKeyB_param}    PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax)
 
-   # waiting for:
-   # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/145
-   #
-   # rf.extensions.pretty_print    ${ddKeyA_2_param_1}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyA_2_param_2}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyA_2_param_3}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyA_2_param_4}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyB_2_param_1}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyB_2_param_2}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyB_2_param_3}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyA_2_param_1}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyA_2_param_2}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyA_2_param_3}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyA_2_param_4}    PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyB_2_param_1}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyB_2_param_2}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyB_2_param_3}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
 
-   # rf.extensions.pretty_print    ${dTestDict.ddKeyA.ddKeyA_2_param_1}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA.ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${dTestDict.ddKeyB.ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB.ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyA.ddKeyA_2_param_1}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA.ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyB.ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB.ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
 
-   # rf.extensions.pretty_print    ${dTestDict.ddKeyA}[ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA}[ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${dTestDict.ddKeyB}[ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB}[ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyA}[ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA}[ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyB}[ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB}[ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
 
-   # rf.extensions.pretty_print    ${dTestDict}[ddKeyA][ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyA][ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
-   # rf.extensions.pretty_print    ${dTestDict}[ddKeyB][ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyB][ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict}[ddKeyA][ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyA][ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict}[ddKeyB][ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyB][ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
+
+   # This test is executed with only one single configuration; therefore all parameter values are fix. We can check them already here:
+
+   Should Be Equal    ${ddKeyB_param}        ddKeyB_value
+   Should Be Equal    ${ddKeyA_2_param}      ddKeyA_2_value
+
+   Should Be Equal    ${ddKeyA_2_param_1}    ddKeyA_2_value
+   Should Be Equal    ${ddKeyA_2_param_2}    ddKeyA_2_value
+   Should Be Equal    ${ddKeyA_2_param_3}    ddKeyA_2_value
+   Should Be Equal    ${ddKeyA_2_param_4}    ddKeyA_2_value
+
+   Should Be Equal    ${ddKeyB_2_param_1}    ddKeyB_2_value
+   Should Be Equal    ${ddKeyB_2_param_2}    ddKeyB_2_value
+   Should Be Equal    ${ddKeyB_2_param_3}    ddKeyB_2_value
+   Should Be Equal    ${ddKeyB_2_param_4}    ddKeyB_2_value
+
 
 

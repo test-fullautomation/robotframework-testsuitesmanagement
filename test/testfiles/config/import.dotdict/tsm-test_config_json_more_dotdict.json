@@ -14,7 +14,10 @@
 //**************************************************************************
 
 {
+  "ddKeyA_2_param"   : ${params.global.dTestDict.ddKeyA.ddKeyA_2},
+
   ${params}['global']['dTestDict']['ddKeyB'] : {"ddKeyB_2" : "ddKeyB_2_value"},
+
   "ddKeyB_2_param_1" : ${params.global.dTestDict.ddKeyB.ddKeyB_2},
   "ddKeyB_2_param_2" : ${params.global.dTestDict.ddKeyB}['ddKeyB_2'],
   "ddKeyB_2_param_3" : ${params.global.dTestDict}['ddKeyB']['ddKeyB_2'],

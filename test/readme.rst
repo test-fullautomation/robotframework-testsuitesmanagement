@@ -17,7 +17,7 @@ Component test of RobotFramework_TestsuitesManagement
 
 XC-CT/ECA3-Queckenstedt
 
-03.04.2023
+11.04.2023
 
 ----
 
@@ -41,6 +41,8 @@ Table of content
 `Test case documentation`_
 
 `Advanced features: PRESTEP and POSTSTEP`_
+
+`List of test cases`_
 
 ----
 
@@ -378,7 +380,7 @@ For every additional step a separate function is required that has to be impleme
 
    libs/CAdditionalSteps.py
 
-Inside ``TestConfig.py`` where all test acses are configured, the execution of these additional steps can be triggered in this way:
+Inside ``TestConfig.py`` where all test cases are configured, the execution of these additional steps can be triggered in this way:
 
 .. code::
 
@@ -390,5 +392,16 @@ With ``LocalConfigEnvVar_Create`` and ``LocalConfigEnvVar_Delete`` are the funct
 The usage of ``PRESTEP`` and ``POSTSTEP`` is optional.
 
 TOC_
+
+
+List of test cases
+------------------
+
+A complete list of all implemented test cases can be found here:
+
+`TSM_TestUsecases.html <https://htmlpreview.github.io/?https://github.com/test-fullautomation/robotframework-testsuitesmanagement/tree/develop/test/TSM_TestUsecases.html>`_
+
+TOC_
+
 
 .. _TOC: `Table of content`_

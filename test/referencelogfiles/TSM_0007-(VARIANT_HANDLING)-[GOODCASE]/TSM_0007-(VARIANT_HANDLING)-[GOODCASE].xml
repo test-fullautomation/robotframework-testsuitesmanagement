@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 12:16:15.454" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 15:55:58.664" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-05" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-05.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230411 12:16:15.597" level="INFO">Running with configuration level 1</msg>
-<msg timestamp="20230411 12:16:15.597" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230411 12:16:15.597" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230411 12:16:15.597" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'</msg>
-<msg timestamp="20230411 12:16:15.597" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230411 12:16:15.597" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230411 12:16:15.597" endtime="20230411 12:16:15.598"/>
+<msg timestamp="20230411 15:55:58.828" level="INFO">Running with configuration level 1</msg>
+<msg timestamp="20230411 15:55:58.828" level="INFO">Robot Framework AIO version check passed!</msg>
+<msg timestamp="20230411 15:55:58.828" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230411 15:55:58.829" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'</msg>
+<msg timestamp="20230411 15:55:58.829" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230411 15:55:58.829" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230411 15:55:58.828" endtime="20230411 15:55:58.829"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-05">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:15.599" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230411 12:16:15.599" endtime="20230411 12:16:15.599"/>
+<msg timestamp="20230411 15:55:58.830" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230411 15:55:58.830" endtime="20230411 15:55:58.830"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-05)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:15.600" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-05) : [STR]  :  'tsm-test_config_variant2'</msg>
-<status status="PASS" starttime="20230411 12:16:15.600" endtime="20230411 12:16:15.600"/>
+<msg timestamp="20230411 15:55:58.831" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-05) : [STR]  :  'tsm-test_config_variant2'</msg>
+<status status="PASS" starttime="20230411 15:55:58.831" endtime="20230411 15:55:58.832"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-05)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:15.601" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-05) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230411 12:16:15.601" endtime="20230411 12:16:15.602"/>
+<msg timestamp="20230411 15:55:58.833" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-05) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20230411 15:55:58.833" endtime="20230411 15:55:58.833"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-05)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:15.602" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-05) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230411 12:16:15.602" endtime="20230411 12:16:15.603"/>
+<msg timestamp="20230411 15:55:58.834" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-05) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20230411 15:55:58.834" endtime="20230411 15:55:58.834"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-05)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230411 12:16:15.603" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-05) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230411 12:16:15.603" endtime="20230411 12:16:15.604"/>
+<msg timestamp="20230411 15:55:58.835" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-05) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20230411 15:55:58.835" endtime="20230411 15:55:58.836"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:15.605" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230411 12:16:15.604" endtime="20230411 12:16:15.605"/>
+<msg timestamp="20230411 15:55:58.836" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230411 15:55:58.836" endtime="20230411 15:55:58.836"/>
 </kw>
 <doc>tsm-testfile-05</doc>
-<status status="PASS" starttime="20230411 12:16:15.598" endtime="20230411 12:16:15.605"/>
+<status status="PASS" starttime="20230411 15:55:58.829" endtime="20230411 15:55:58.837"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230411 12:16:15.606" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230411 12:16:15.606" endtime="20230411 12:16:15.606"/>
+<msg timestamp="20230411 15:55:58.837" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230411 15:55:58.837" endtime="20230411 15:55:58.837"/>
 </kw>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">tsm-test_config_variant2</meta>
@@ -70,7 +70,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230411 12:16:15.458" endtime="20230411 12:16:15.606"/>
+<status status="PASS" starttime="20230411 15:55:58.677" endtime="20230411 15:55:58.838"/>
 </suite>
 <statistics>
 <total>

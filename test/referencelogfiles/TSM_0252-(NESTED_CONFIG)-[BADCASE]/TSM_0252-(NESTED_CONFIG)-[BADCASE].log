@@ -1,19 +1,19 @@
 ==============================================================================
-20230411 12:16:31.851 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230411 15:56:15.029 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230411 12:16:31.856 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230411 12:16:31.880 - ERROR - Loading of JSON configuration file failed! Reason: Could not set variable 'params['global']['dTestDict']['I-am-not-existing']['I-am-not-existing']' with value 'Val_1'!
-20230411 12:16:31.881 - UNKNOWN - Loading of JSON configuration file failed!
-20230411 12:16:31.891 - DEBUG - Loading of JSON configuration file failed!
-20230411 12:16:31.891 - INFO - +- END SETUP: tm.Testsuite Setup (35)
+20230411 15:56:15.032 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230411 15:56:15.058 - ERROR - Loading of JSON configuration file failed! Reason: Could not set variable 'params['global']['dTestDict']['I-am-not-existing']['I-am-not-existing']' with value 'Val_1'!
+20230411 15:56:15.058 - UNKNOWN - Loading of JSON configuration file failed!
+20230411 15:56:15.058 - DEBUG - Loading of JSON configuration file failed!
+20230411 15:56:15.059 - INFO - +- END SETUP: tm.Testsuite Setup (27)
 ------------------------------------------------------------------------------
-20230411 12:16:31.891 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230411 15:56:15.059 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230411 12:16:31.895 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230411 15:56:15.062 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230411 12:16:31.895 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230411 12:16:31.895 - INFO - testsuite_teardown: Will be implemented later
-20230411 12:16:31.895 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230411 15:56:15.062 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230411 15:56:15.062 - INFO - testsuite_teardown: Will be implemented later
+20230411 15:56:15.062 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230411 12:16:31.898 - INFO - + END SUITE: Tsm-Testfile-02 (151)
+20230411 15:56:15.064 - INFO - + END SUITE: Tsm-Testfile-02 (143)
 ==============================================================================
