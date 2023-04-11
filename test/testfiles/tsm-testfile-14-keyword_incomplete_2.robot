@@ -31,10 +31,10 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-testfile-14-keyword_incomplete_2
    [documentation]    tsm-testfile-14-keyword_incomplete_2
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-testfile-14-keyword_incomplete_2.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-14-keyword_incomplete_2.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-14-keyword_incomplete_2.robot)        console=yes
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-14-keyword_incomplete_2)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-14-keyword_incomplete_2)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-14-keyword_incomplete_2)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-14-keyword_incomplete_2)
 
    IF    1 == 1
        log    === it is    console=yes

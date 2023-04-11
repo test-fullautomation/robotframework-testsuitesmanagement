@@ -1,20 +1,20 @@
 ==============================================================================
-20230406 14:42:38.528 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230411 12:16:36.103 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230406 14:42:38.535 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230406 14:42:38.562 - ERROR - Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
+20230411 12:16:36.107 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230411 12:16:36.133 - ERROR - Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
           '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
-20230406 14:42:38.564 - UNKNOWN - JSON schema validation failed!
-20230406 14:42:38.564 - DEBUG - JSON schema validation failed!
-20230406 14:42:38.564 - INFO - +- END SETUP: tm.Testsuite Setup (29)
+20230411 12:16:36.134 - UNKNOWN - JSON schema validation failed!
+20230411 12:16:36.134 - DEBUG - JSON schema validation failed!
+20230411 12:16:36.134 - INFO - +- END SETUP: tm.Testsuite Setup (28)
 ------------------------------------------------------------------------------
-20230406 14:42:38.564 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230411 12:16:36.134 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230406 14:42:38.567 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230411 12:16:36.137 - INFO - +- END TEST: Test Case tsm-testfile-02 (2)
 ------------------------------------------------------------------------------
-20230406 14:42:38.568 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230406 14:42:38.568 - INFO - testsuite_teardown: Will be implemented later
-20230406 14:42:38.568 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230411 12:16:36.137 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230411 12:16:36.137 - INFO - testsuite_teardown: Will be implemented later
+20230411 12:16:36.139 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (2)
 ==============================================================================
-20230406 14:42:38.571 - INFO - + END SUITE: Tsm-Testfile-02 (157)
+20230411 12:16:36.139 - INFO - + END SUITE: Tsm-Testfile-02 (146)
 ==============================================================================

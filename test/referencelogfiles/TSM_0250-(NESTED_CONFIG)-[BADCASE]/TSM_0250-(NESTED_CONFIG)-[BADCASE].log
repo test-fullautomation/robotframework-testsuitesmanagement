@@ -1,19 +1,19 @@
 ==============================================================================
-20230406 14:42:32.830 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
+20230411 12:16:30.808 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
 ==============================================================================
-20230406 14:42:32.838 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230406 14:42:32.862 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\tsm-test_config_cyclic.2.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\import.cyclic\tsm-test_config_cyclic.3.json': 'Cyclic imported json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_cyclic.1.json'!'''
-20230406 14:42:32.863 - UNKNOWN - Loading of JSON configuration file failed!
-20230406 14:42:32.863 - DEBUG - Loading of JSON configuration file failed!
-20230406 14:42:32.863 - INFO - +- END SETUP: tm.Testsuite Setup (25)
+20230411 12:16:30.813 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230411 12:16:30.836 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\tsm-test_config_cyclic.2.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\import.cyclic\tsm-test_config_cyclic.3.json': 'Cyclic imported json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_cyclic.1.json'!'''
+20230411 12:16:30.836 - UNKNOWN - Loading of JSON configuration file failed!
+20230411 12:16:30.836 - DEBUG - Loading of JSON configuration file failed!
+20230411 12:16:30.836 - INFO - +- END SETUP: tm.Testsuite Setup (23)
 ------------------------------------------------------------------------------
-20230406 14:42:32.863 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
+20230411 12:16:30.837 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
 ------------------------------------------------------------------------------
-20230406 14:42:32.870 - INFO - +- END TEST: Test Case tsm-testfile-03 (1)
+20230411 12:16:30.839 - INFO - +- END TEST: Test Case tsm-testfile-03 (2)
 ------------------------------------------------------------------------------
-20230406 14:42:32.870 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230406 14:42:32.871 - INFO - testsuite_teardown: Will be implemented later
-20230406 14:42:32.871 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230411 12:16:30.839 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230411 12:16:30.839 - INFO - testsuite_teardown: Will be implemented later
+20230411 12:16:30.840 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230406 14:42:32.876 - INFO - + END SUITE: Tsm-Testfile-03 (158)
+20230411 12:16:30.843 - INFO - + END SUITE: Tsm-Testfile-03 (148)
 ==============================================================================

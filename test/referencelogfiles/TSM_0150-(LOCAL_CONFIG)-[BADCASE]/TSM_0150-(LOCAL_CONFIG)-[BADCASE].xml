@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230406 14:42:30.243" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230411 12:16:28.453" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230406 14:42:30.402" level="FAIL">RecursionError: maximum recursion depth exceeded while calling a Python object</msg>
-<status status="FAIL" starttime="20230406 14:42:30.356" endtime="20230406 14:42:30.402"/>
+<msg timestamp="20230411 12:16:28.597" level="FAIL">RecursionError: maximum recursion depth exceeded while calling a Python object</msg>
+<status status="FAIL" starttime="20230411 12:16:28.559" endtime="20230411 12:16:28.598"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01">
 <doc>tsm-testfile-01</doc>
-<status status="FAIL" starttime="20230406 14:42:30.402" endtime="20230406 14:42:30.403">Parent suite setup failed:
+<status status="FAIL" starttime="20230411 12:16:28.598" endtime="20230411 12:16:28.599">Parent suite setup failed:
 RecursionError: maximum recursion depth exceeded while calling a Python object</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230406 14:42:30.406" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230406 14:42:30.406" endtime="20230406 14:42:30.406"/>
+<msg timestamp="20230411 12:16:28.601" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230411 12:16:28.601" endtime="20230411 12:16:28.601"/>
 </kw>
-<status status="FAIL" starttime="20230406 14:42:30.247" endtime="20230406 14:42:30.406">Suite setup failed:
+<status status="FAIL" starttime="20230411 12:16:28.458" endtime="20230411 12:16:28.602">Suite setup failed:
 RecursionError: maximum recursion depth exceeded while calling a Python object</status>
 </suite>
 <statistics>

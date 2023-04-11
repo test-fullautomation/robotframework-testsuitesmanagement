@@ -32,16 +32,14 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-testfile-03
    [documentation]    tsm-testfile-03
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-
-   Log    teststring_common : ${teststring_common} (tsm-testfile-03.robot)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-testfile-03.robot)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-testfile-03.robot)        console=yes
-   Log    testdictionary_variant/tdv_key_1_1 : ${testdictionary_variant.tdv_key_1.tdv_key_1_1} (tsm-testfile-03.robot)        console=yes
-   Log    testdictionary_variant/tdv_key_1_2 : ${testdictionary_variant.tdv_key_1.tdv_key_1_2} (tsm-testfile-03.robot)        console=yes
-   Log    testdictionary_variant/tdv_key_2_1 : ${testdictionary_variant.tdv_key_2.tdv_key_2_1} (tsm-testfile-03.robot)        console=yes
-   Log    testdictionary_variant/tdv_key_3_1 : ${testdictionary_variant.tdv_key_3.tdv_key_3_1} (tsm-testfile-03.robot)        console=yes
-   Log    testlist_variant[0] : ${testlist_variant}[0] (tsm-testfile-03.robot)        console=yes
-   Log    testlist_variant[1] : ${testlist_variant}[1] (tsm-testfile-03.robot)        console=yes
-   Log    testlist_variant[2] : ${testlist_variant}[2] (tsm-testfile-03.robot)        console=yes
-
+   rf.extensions.pretty_print    ${CONFIG.Project}                                  PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${teststring_common}                               PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${teststring_variant}                              PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${teststring_bench}                                PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testdictionary_variant.tdv_key_1.tdv_key_1_1}    PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_1} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testdictionary_variant.tdv_key_1.tdv_key_1_2}    PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_2} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testdictionary_variant.tdv_key_2.tdv_key_2_1}    PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_2.tdv_key_2_1} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testdictionary_variant.tdv_key_3.tdv_key_3_1}    PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_3.tdv_key_3_1} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testlist_variant}[0]                             PARAMS-VERIFIKATION : ({testlist_variant}[0]} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testlist_variant}[1]                             PARAMS-VERIFIKATION : ({testlist_variant}[1]} / tsm-testfile-03)
+   rf.extensions.pretty_print    ${testlist_variant}[2]                             PARAMS-VERIFIKATION : ({testlist_variant}[2]} / tsm-testfile-03)

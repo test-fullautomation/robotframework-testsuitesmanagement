@@ -26,10 +26,10 @@ Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
 Test Case tsm-tst-testfile-002-01-A
    [documentation]    tsm-tst-testfile-002-01-A
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [A])      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [A])    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [A])        console=yes
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-A)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-A)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-A)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-A)
 
    FAIL
 
@@ -37,10 +37,10 @@ Test Case tsm-tst-testfile-002-01-A
 
 Test Case tsm-tst-testfile-002-01-B
    [documentation]    tsm-tst-testfile-002-01-B
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [B])      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [B])    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [B])        console=yes
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-B)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-B)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-B)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-B)
 
    UNKNOWN
 
@@ -48,7 +48,7 @@ Test Case tsm-tst-testfile-002-01-B
 
 Test Case tsm-tst-testfile-002-01-C
    [documentation]    tsm-tst-testfile-002-01-C
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-tst-testfile-002-01.robot [C])      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-tst-testfile-002-01.robot [C])    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-tst-testfile-002-01.robot [C])        console=yes
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-C)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-C)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-C)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-C)

@@ -45,35 +45,34 @@ Test Case tsm-testfile-04
    # rf.extensions.pretty_print also prints the data type, therefore it can be checked, if values like 123 are really realized as
    # integer value or as string.
 
-   rf.extensions.pretty_print    ${CONFIG.WelcomeString}    PARAMS-VERIFIKATION : (CONFIG.WelcomeString)
-   rf.extensions.pretty_print    ${CONFIG.Project}          PARAMS-VERIFIKATION : (CONFIG.Project)
-   rf.extensions.pretty_print    ${CONFIG.TargetName}       PARAMS-VERIFIKATION : (CONFIG.TargetName)
+   rf.extensions.pretty_print    ${CONFIG.WelcomeString}    PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${CONFIG.Project}          PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${CONFIG.TargetName}       PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${CONFIG}[WelcomeString]   PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString])
-   rf.extensions.pretty_print    ${CONFIG}[Project]         PARAMS-VERIFIKATION : ({CONFIG}[Project])
-   rf.extensions.pretty_print    ${CONFIG}[TargetName]      PARAMS-VERIFIKATION : ({CONFIG}[TargetName])
+   rf.extensions.pretty_print    ${CONFIG}[WelcomeString]   PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${CONFIG}[Project]         PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${CONFIG}[TargetName]      PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${CONFIG}                  PARAMS-VERIFIKATION : ({CONFIG})
+   rf.extensions.pretty_print    ${CONFIG}                  PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${dict_val}                PARAMS-VERIFIKATION : ({dict_val})
-   rf.extensions.pretty_print    ${list_val}                PARAMS-VERIFIKATION : ({list_val})
+   rf.extensions.pretty_print    ${dict_val}                PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${list_val}                PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${certain_teststring}      PARAMS-VERIFIKATION : ({certain_teststring})
-   rf.extensions.pretty_print    ${list_val[0]}             PARAMS-VERIFIKATION : ({list_val[0]})
+   rf.extensions.pretty_print    ${certain_teststring}      PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${list_val[0]}             PARAMS-VERIFIKATION : ({list_val[0]} / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][subsubkey_231]       PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231])
-   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23.subsubkey_231}          PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231})
+   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][subsubkey_231]       PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23.subsubkey_231}          PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][subsubkey_232][0]    PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0])
-   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23.subsubkey_232}[0]       PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0])
+   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][subsubkey_232][0]    PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23.subsubkey_232}[0]       PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][dotted.key.name]     PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name])
-   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23}[dotted.key.name]       PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name])
+   rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][dotted.key.name]     PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${dict_val.key_2.subkey_23}[dotted.key.name]       PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04)
 
-   rf.extensions.pretty_print    ${I_am_a_new_int}     PARAMS-VERIFIKATION : ({I_am_a_new_int})
-   rf.extensions.pretty_print    ${I_am_a_new_str}     PARAMS-VERIFIKATION : ({I_am_a_new_str})
-   rf.extensions.pretty_print    ${I_am_a_new_None}    PARAMS-VERIFIKATION : ({I_am_a_new_None})
-   rf.extensions.pretty_print    ${I_am_a_new_dict}    PARAMS-VERIFIKATION : ({I_am_a_new_dict})
-   rf.extensions.pretty_print    ${I_am_a_new_list}    PARAMS-VERIFIKATION : ({I_am_a_new_list})
-
+   rf.extensions.pretty_print    ${I_am_a_new_int}     PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${I_am_a_new_str}     PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${I_am_a_new_None}    PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${I_am_a_new_dict}    PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${I_am_a_new_list}    PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04)
 

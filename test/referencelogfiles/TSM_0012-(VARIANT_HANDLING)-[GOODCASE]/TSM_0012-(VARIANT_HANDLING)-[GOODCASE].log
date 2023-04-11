@@ -1,58 +1,58 @@
 ==============================================================================
-20230406 14:42:19.146 - INFO - + START SUITE: Tsm-Cft-Testfile-2 [ ]
+20230411 12:16:18.254 - INFO - + START SUITE: Tsm-Cft-Testfile-2 [ ]
 ==============================================================================
-20230406 14:42:19.154 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20230406 14:42:19.178 - INFO - Set suite metadata 'project' to value 'robot_config'.
-20230406 14:42:19.178 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230406 14:42:19.180 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230406 14:42:19.180 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230406 14:42:19.180 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230406 14:42:19.180 - INFO - Set suite metadata 'version_sw' to value ''.
-20230406 14:42:19.180 - INFO - Set suite metadata 'version_hw' to value ''.
-20230406 14:42:19.181 - INFO - Set suite metadata 'version_test' to value ''.
-20230406 14:42:19.181 - INFO - ${teststring_common} = I am the common (cft) teststring valid for all variants and all test benches
-20230406 14:42:19.182 - INFO - ${teststring_bench} = I am the (cft) teststring containing the default value for all test benches
-20230406 14:42:19.182 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}
-20230406 14:42:19.182 - INFO - Running with configuration level 3
-20230406 14:42:19.182 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
-20230406 14:42:19.183 - INFO - Robot Framework AIO version check passed!
-20230406 14:42:19.183 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\'
-20230406 14:42:19.183 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
-20230406 14:42:19.183 - INFO - Number of test suites: 1
-20230406 14:42:19.183 - INFO - Total number of testcases: 1
-20230406 14:42:19.183 - INFO - +- END SETUP: tm.Testsuite Setup (29)
+20230411 12:16:18.259 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20230411 12:16:18.280 - INFO - Set suite metadata 'project' to value 'robot_config'.
+20230411 12:16:18.280 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230411 12:16:18.282 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230411 12:16:18.283 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230411 12:16:18.283 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230411 12:16:18.283 - INFO - Set suite metadata 'version_sw' to value ''.
+20230411 12:16:18.283 - INFO - Set suite metadata 'version_hw' to value ''.
+20230411 12:16:18.283 - INFO - Set suite metadata 'version_test' to value ''.
+20230411 12:16:18.283 - INFO - ${teststring_common} = I am the common (cft) teststring valid for all variants and all test benches
+20230411 12:16:18.284 - INFO - ${teststring_bench} = I am the (cft) teststring containing the default value for all test benches
+20230411 12:16:18.285 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}
+20230411 12:16:18.285 - INFO - Running with configuration level 3
+20230411 12:16:18.285 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
+20230411 12:16:18.285 - INFO - Robot Framework AIO version check passed!
+20230411 12:16:18.285 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\'
+20230411 12:16:18.285 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
+20230411 12:16:18.285 - INFO - Number of test suites: 1
+20230411 12:16:18.285 - INFO - Total number of testcases: 1
+20230411 12:16:18.285 - INFO - +- END SETUP: tm.Testsuite Setup (26)
 ------------------------------------------------------------------------------
-20230406 14:42:19.183 - INFO - +- START TEST: Test Case tsm-cft-testfile-2 [ ]
+20230411 12:16:18.286 - INFO - +- START TEST: Test Case tsm-cft-testfile-2 [ ]
 ------------------------------------------------------------------------------
-20230406 14:42:19.184 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230406 14:42:19.184 - INFO - Test Count: 1
-20230406 14:42:19.185 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230411 12:16:18.287 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230411 12:16:18.287 - INFO - Test Count: 1
+20230411 12:16:18.287 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230406 14:42:19.185 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : (CONFIG.Project) ]
-20230406 14:42:19.185 - INFO - PARAMS-VERIFIKATION : (CONFIG.Project) : [STR]  :  'robot_config'
-20230406 14:42:19.186 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230411 12:16:18.287 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-testfile-2) ]
+20230411 12:16:18.287 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-testfile-2) : [STR]  :  'robot_config'
+20230411 12:16:18.288 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230406 14:42:19.186 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_common : ${teststring_common} (tsm-cft-testfile-2.robot with robot_config.json) | console=yes ]
-20230406 14:42:19.187 - INFO - teststring_common : I am the common (cft) teststring valid for all variants and all test benches (tsm-cft-testfile-2.robot with robot_config.json)
-20230406 14:42:19.190 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230411 12:16:18.288 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-testfile-2) ]
+20230411 12:16:18.288 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-testfile-2) : [STR]  :  'I am the common (cft) teststring valid for all variants and all test benches'
+20230411 12:16:18.290 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230406 14:42:19.190 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_variant : ${teststring_variant} (tsm-cft-testfile-2.robot with robot_config.json) | console=yes ]
-20230406 14:42:19.190 - INFO - teststring_variant : command line value of teststring_variant (tsm-cft-testfile-2.robot with robot_config.json)
-20230406 14:42:19.191 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230411 12:16:18.290 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-testfile-2) ]
+20230411 12:16:18.290 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-testfile-2) : [STR]  :  'command line value of teststring_variant'
+20230411 12:16:18.291 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230406 14:42:19.191 - INFO - +-- START KEYWORD: BuiltIn.Log [ teststring_bench : ${teststring_bench} (tsm-cft-testfile-2.robot with robot_config.json) | console=yes ]
-20230406 14:42:19.192 - INFO - teststring_bench : I am the (cft) teststring containing the default value for all test benches (tsm-cft-testfile-2.robot with robot_config.json)
-20230406 14:42:19.192 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+20230411 12:16:18.291 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-testfile-2) ]
+20230411 12:16:18.291 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-testfile-2) : [STR]  :  'I am the (cft) teststring containing the default value for all test benches'
+20230411 12:16:18.292 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230406 14:42:19.193 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230406 14:42:19.193 - INFO - testcase_teardown: Will be implemented later
-20230406 14:42:19.193 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230411 12:16:18.292 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230411 12:16:18.292 - INFO - testcase_teardown: Will be implemented later
+20230411 12:16:18.292 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230406 14:42:19.194 - INFO - +- END TEST: Test Case tsm-cft-testfile-2 (10)
+20230411 12:16:18.293 - INFO - +- END TEST: Test Case tsm-cft-testfile-2 (7)
 ------------------------------------------------------------------------------
-20230406 14:42:19.195 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230406 14:42:19.195 - INFO - testsuite_teardown: Will be implemented later
-20230406 14:42:19.195 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230411 12:16:18.293 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230411 12:16:18.293 - INFO - testsuite_teardown: Will be implemented later
+20230411 12:16:18.293 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230406 14:42:19.197 - INFO - + END SUITE: Tsm-Cft-Testfile-2 (161)
+20230411 12:16:18.295 - INFO - + END SUITE: Tsm-Cft-Testfile-2 (150)
 ==============================================================================

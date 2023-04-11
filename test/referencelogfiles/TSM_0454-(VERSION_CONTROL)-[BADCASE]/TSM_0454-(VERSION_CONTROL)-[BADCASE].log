@@ -1,22 +1,22 @@
 ==============================================================================
-20230406 14:42:40.233 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230411 12:16:37.638 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230406 14:42:40.238 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230406 14:42:40.266 - INFO - Set suite metadata 'project' to value 'tsm-test_config_version_control.09'.
-20230406 14:42:40.266 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230406 14:42:40.268 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230406 14:42:40.269 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230406 14:42:40.269 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230406 14:42:40.269 - INFO - Set suite metadata 'version_sw' to value ''.
-20230406 14:42:40.269 - INFO - Set suite metadata 'version_hw' to value ''.
-20230406 14:42:40.269 - INFO - Set suite metadata 'version_test' to value ''.
-20230406 14:42:40.269 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230406 14:42:40.270 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230406 14:42:40.270 - INFO - ${teststring_variant} = I am the 'version_control_09' configuration of tsm-test
-20230406 14:42:40.271 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '10.0.0', 'Minimum_version': '9.0.0', 'Project': 'tsm-test_config_version_control.09', 'TargetName': 'Device_01', 'para...
-20230406 14:42:40.271 - INFO - Running with configuration level 2
-20230406 14:42:40.271 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json'
-20230406 14:42:40.271 - ERROR - Version conflict.
+20230411 12:16:37.642 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230411 12:16:37.669 - INFO - Set suite metadata 'project' to value 'tsm-test_config_version_control.09'.
+20230411 12:16:37.669 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230411 12:16:37.671 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230411 12:16:37.671 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230411 12:16:37.671 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230411 12:16:37.671 - INFO - Set suite metadata 'version_sw' to value ''.
+20230411 12:16:37.671 - INFO - Set suite metadata 'version_hw' to value ''.
+20230411 12:16:37.671 - INFO - Set suite metadata 'version_test' to value ''.
+20230411 12:16:37.672 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230411 12:16:37.672 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230411 12:16:37.673 - INFO - ${teststring_variant} = I am the 'version_control_09' configuration of tsm-test
+20230411 12:16:37.673 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '10.0.0', 'Minimum_version': '9.0.0', 'Project': 'tsm-test_config_version_control.09', 'TargetName': 'Device_01', 'para...
+20230411 12:16:37.673 - INFO - Running with configuration level 2
+20230411 12:16:37.673 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json'
+20230411 12:16:37.674 - ERROR - Version conflict.
 Testsuite : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
 config    : C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_version_control.09.json
 
@@ -25,17 +25,17 @@ but the installed RobotFramework AIO version is older         '0.7.0'
 
 Please install the required RobotFramework AIO version.
 You can find an installer here: \\bosch.com\dfsrb\DfsDE\DIV\CM\DI\Projects\Common\RobotFramework\Releases
-20230406 14:42:40.272 - UNKNOWN - Version control error!!!
-20230406 14:42:40.272 - DEBUG - Version control error!!!
-20230406 14:42:40.273 - INFO - +- END SETUP: tm.Testsuite Setup (34)
+20230411 12:16:37.675 - UNKNOWN - Version control error!!!
+20230411 12:16:37.675 - DEBUG - Version control error!!!
+20230411 12:16:37.675 - INFO - +- END SETUP: tm.Testsuite Setup (33)
 ------------------------------------------------------------------------------
-20230406 14:42:40.273 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230411 12:16:37.675 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230406 14:42:40.282 - INFO - +- END TEST: Test Case tsm-testfile-02 (7)
+20230411 12:16:37.678 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230406 14:42:40.282 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230406 14:42:40.282 - INFO - testsuite_teardown: Will be implemented later
-20230406 14:42:40.283 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20230411 12:16:37.678 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230411 12:16:37.678 - INFO - testsuite_teardown: Will be implemented later
+20230411 12:16:37.679 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230406 14:42:40.291 - INFO - + END SUITE: Tsm-Testfile-02 (161)
+20230411 12:16:37.681 - INFO - + END SUITE: Tsm-Testfile-02 (150)
 ==============================================================================

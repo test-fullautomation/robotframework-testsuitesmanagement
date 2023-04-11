@@ -31,8 +31,8 @@ Test Teardown     tm.testcase_teardown
 *** Test Cases ***
 Test Case tsm-cft-testfile-2
    [documentation]    tsm-cft-testfile-2
-   rf.extensions.pretty_print    ${CONFIG.Project}    PARAMS-VERIFIKATION : (CONFIG.Project)
-   Log    teststring_common : ${teststring_common} (tsm-cft-testfile-2.robot with robot_config.json)      console=yes
-   Log    teststring_variant : ${teststring_variant} (tsm-cft-testfile-2.robot with robot_config.json)    console=yes
-   Log    teststring_bench : ${teststring_bench} (tsm-cft-testfile-2.robot with robot_config.json)        console=yes
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-testfile-2)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-testfile-2)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-testfile-2)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-testfile-2)
 
