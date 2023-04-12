@@ -83,14 +83,16 @@ Test Case tsm-testfile-04
 
    # This test is executed with only one single configuration; therefore all parameter values are fix. We can check them already here:
 
+   Should Be Equal    ${dict_val}['key_2']['subkey_23']['certain_teststring_initial']    initial value of certain teststring
+   Should Be Equal    ${dict_val.key_2.subkey_23.certain_teststring_initial}             initial value of certain teststring
    Should Be Equal    ${certain_teststring}    updated value of certain teststring (2.1.1)
-   Should Be Equal    ${list_val}[0]    updated list
-   Should Be Equal    ${list_val}[9][keyA]    keyA_val
-   Should Be Equal    ${list_val}[10][2]    ${True}
-   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_231]       initial value of certain teststring
-   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_231}          initial value of certain teststring
-   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_232][0]    initial list
-   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_232}[0]       initial list
+   Should Be Equal    ${list_val}[0]           updated list
+   Should Be Equal    ${list_val}[9][keyA]     keyA_val
+   Should Be Equal    ${list_val}[10][2]       ${True}
+   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_231]       updated value of certain teststring (2.1.1)
+   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_231}          updated value of certain teststring (2.1.1)
+   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_232][0]    updated list
+   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_232}[0]       updated list
    Should Be Equal    ${dict_val}[key_2][subkey_23][dotted.key.name]     updated dotted key name value (2.1.1)
    Should Be Equal    ${dict_val.key_2.subkey_23}[dotted.key.name]       updated dotted key name value (2.1.1)
    Should Be Equal    ${I_am_a_new_int}    ${123}

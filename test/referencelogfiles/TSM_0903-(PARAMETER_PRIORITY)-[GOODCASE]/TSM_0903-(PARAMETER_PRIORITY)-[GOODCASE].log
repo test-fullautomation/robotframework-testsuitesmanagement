@@ -1,51 +1,51 @@
 ==============================================================================
-20230412 11:04:29.594 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
+20230412 13:25:29.442 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
 ==============================================================================
-20230412 11:04:29.628 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230412 11:04:29.629 - INFO - Running with configuration level 1
-20230412 11:04:29.629 - INFO - Robot Framework AIO version check passed!
-20230412 11:04:29.629 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230412 11:04:29.630 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.json'
-20230412 11:04:29.630 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench2.json'
-20230412 11:04:29.630 - INFO - Number of test suites: 1
-20230412 11:04:29.630 - INFO - Total number of testcases: 1
-20230412 11:04:29.630 - INFO - +- END SETUP: tm.Testsuite Setup (2)
+20230412 13:25:29.489 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:29.489 - INFO - Running with configuration level 1
+20230412 13:25:29.489 - INFO - Robot Framework AIO version check passed!
+20230412 13:25:29.489 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230412 13:25:29.490 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.json'
+20230412 13:25:29.490 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench2.json'
+20230412 13:25:29.490 - INFO - Number of test suites: 1
+20230412 13:25:29.490 - INFO - Total number of testcases: 1
+20230412 13:25:29.490 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20230412 11:04:29.630 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
+20230412 13:25:29.490 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
 ------------------------------------------------------------------------------
-20230412 11:04:29.631 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230412 11:04:29.631 - INFO - Test Count: 1
-20230412 11:04:29.632 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230412 13:25:29.491 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230412 13:25:29.491 - INFO - Test Count: 1
+20230412 13:25:29.492 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.632 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) ]
-20230412 11:04:29.632 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'
-20230412 11:04:29.633 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 13:25:29.492 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) ]
+20230412 13:25:29.492 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'
+20230412 13:25:29.493 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.633 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) ]
-20230412 11:04:29.634 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''
-20230412 11:04:29.636 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 13:25:29.493 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) ]
+20230412 13:25:29.493 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''
+20230412 13:25:29.494 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.636 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) ]
-20230412 11:04:29.636 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from variablefile 'testvariables.py''
-20230412 11:04:29.637 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 13:25:29.494 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) ]
+20230412 13:25:29.495 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from variablefile 'testvariables.py''
+20230412 13:25:29.497 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.637 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) ]
-20230412 11:04:29.638 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''
-20230412 11:04:29.638 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 13:25:29.497 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) ]
+20230412 13:25:29.497 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''
+20230412 13:25:29.498 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.638 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${variablefile_val} | PARAMS-VERIFIKATION : ({variablefile_val}) ]
-20230412 11:04:29.639 - INFO - PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from command line'
-20230412 11:04:29.640 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 13:25:29.498 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${variablefile_val} | PARAMS-VERIFIKATION : ({variablefile_val}) ]
+20230412 13:25:29.498 - INFO - PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from command line'
+20230412 13:25:29.499 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230412 11:04:29.640 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230412 11:04:29.640 - INFO - testcase_teardown: Will be implemented later
-20230412 11:04:29.640 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230412 13:25:29.499 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230412 13:25:29.499 - INFO - testcase_teardown: Will be implemented later
+20230412 13:25:29.499 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230412 11:04:29.641 - INFO - +- END TEST: Test Case tsm-testfile-19-parameter_priority (10)
+20230412 13:25:29.500 - INFO - +- END TEST: Test Case tsm-testfile-19-parameter_priority (9)
 ------------------------------------------------------------------------------
-20230412 11:04:29.642 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230412 11:04:29.642 - INFO - testsuite_teardown: Will be implemented later
-20230412 11:04:29.642 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230412 13:25:29.500 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:29.501 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:29.501 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230412 11:04:29.644 - INFO - + END SUITE: Tsm-Testfile-19-Parameter Priority (159)
+20230412 13:25:29.503 - INFO - + END SUITE: Tsm-Testfile-19-Parameter Priority (165)
 ==============================================================================

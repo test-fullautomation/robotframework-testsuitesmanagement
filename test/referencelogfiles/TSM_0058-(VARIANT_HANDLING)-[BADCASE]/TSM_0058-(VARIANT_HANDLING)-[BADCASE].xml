@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230412 11:04:05.057" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230412 13:25:05.530" rpa="false" schemaversion="2">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.json</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230412 11:04:05.204" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
+<msg timestamp="20230412 13:25:05.674" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
           The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.json' 
           Please find the suitable variant in this list: 
             - 'default' 
@@ -34,21 +34,21 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             - 'parameter_priority' 
 
 </msg>
-<msg timestamp="20230412 11:04:05.205" level="UNKNOWN">Loading configuration level 2 failed!</msg>
-<status status="UNKNOWN" starttime="20230412 11:04:05.178" endtime="20230412 11:04:05.205"/>
+<msg timestamp="20230412 13:25:05.676" level="UNKNOWN">Loading configuration level 2 failed!</msg>
+<status status="UNKNOWN" starttime="20230412 13:25:05.652" endtime="20230412 13:25:05.676"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230412 11:04:05.206" endtime="20230412 11:04:05.207">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230412 13:25:05.676" endtime="20230412 13:25:05.677">Parent suite setup unknown:
 Loading configuration level 2 failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230412 11:04:05.211" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230412 11:04:05.211" endtime="20230412 11:04:05.211"/>
+<msg timestamp="20230412 13:25:05.684" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230412 13:25:05.684" endtime="20230412 13:25:05.684"/>
 </kw>
-<status status="UNKNOWN" starttime="20230412 11:04:05.061" endtime="20230412 11:04:05.211">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230412 13:25:05.536" endtime="20230412 13:25:05.684">Suite setup unknown:
 Loading configuration level 2 failed!</status>
 </suite>
 <statistics>
@@ -62,7 +62,7 @@ Loading configuration level 2 failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230412 11:04:05.204" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
+<msg timestamp="20230412 13:25:05.674" level="ERROR">Testsuite management - Loading configuration level 2 failed! 
           The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.json' 
           Please find the suitable variant in this list: 
             - 'default' 

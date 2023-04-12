@@ -1,19 +1,19 @@
 ==============================================================================
-20230412 11:04:01.951 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230412 13:25:02.527 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230412 11:04:01.951 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230412 11:04:01.982 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error_within_import.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_common_with_syntax_error.json': 'Expecting property name enclosed in double quotes: line 19 column 4 (char 120)''
-20230412 11:04:01.982 - UNKNOWN - Loading of JSON configuration file failed!
-20230412 11:04:01.982 - DEBUG - Loading of JSON configuration file failed!
-20230412 11:04:01.982 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20230412 13:25:02.527 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:02.558 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error_within_import.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_common_with_syntax_error.json': 'Expecting property name enclosed in double quotes: line 19 column 4 (char 120)''
+20230412 13:25:02.558 - UNKNOWN - Loading of JSON configuration file failed!
+20230412 13:25:02.558 - DEBUG - Loading of JSON configuration file failed!
+20230412 13:25:02.558 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20230412 11:04:01.982 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230412 13:25:02.558 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230412 11:04:01.982 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20230412 13:25:02.564 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20230412 11:04:01.982 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230412 11:04:01.982 - INFO - testsuite_teardown: Will be implemented later
-20230412 11:04:01.982 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230412 13:25:02.564 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:02.564 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:02.564 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230412 11:04:01.982 - INFO - + END SUITE: Tsm-Testfile-02 (137)
+20230412 13:25:02.564 - INFO - + END SUITE: Tsm-Testfile-02 (152)
 ==============================================================================
