@@ -1,66 +1,66 @@
 ==============================================================================
-20230411 15:56:24.988 - INFO - + START SUITE: Tsm-Testfile-17-Unknown Parameter 2 [ ]
+20230412 11:04:25.162 - INFO - + START SUITE: Tsm-Testfile-17-Unknown Parameter 2 [ ]
 ==============================================================================
-20230411 15:56:24.992 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230411 15:56:25.016 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20230411 15:56:25.017 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230411 15:56:25.018 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230411 15:56:25.019 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230411 15:56:25.019 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230411 15:56:25.019 - INFO - Set suite metadata 'version_sw' to value ''.
-20230411 15:56:25.019 - INFO - Set suite metadata 'version_hw' to value ''.
-20230411 15:56:25.019 - INFO - Set suite metadata 'version_test' to value ''.
-20230411 15:56:25.019 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230411 15:56:25.020 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230411 15:56:25.021 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230411 15:56:25.021 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20230411 15:56:25.021 - INFO - Running with configuration level 2
-20230411 15:56:25.021 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230411 15:56:25.022 - INFO - Robot Framework AIO version check passed!
-20230411 15:56:25.022 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230411 15:56:25.022 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
-20230411 15:56:25.022 - INFO - Number of test suites: 1
-20230411 15:56:25.022 - INFO - Total number of testcases: 1
-20230411 15:56:25.022 - INFO - +- END SETUP: tm.Testsuite Setup (30)
+20230412 11:04:25.166 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 11:04:25.192 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230412 11:04:25.192 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230412 11:04:25.195 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230412 11:04:25.195 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
+20230412 11:04:25.195 - INFO - Set suite metadata 'version' to value '0.7.0'.
+20230412 11:04:25.195 - INFO - Set suite metadata 'version_sw' to value ''.
+20230412 11:04:25.195 - INFO - Set suite metadata 'version_hw' to value ''.
+20230412 11:04:25.195 - INFO - Set suite metadata 'version_test' to value ''.
+20230412 11:04:25.196 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230412 11:04:25.196 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230412 11:04:25.197 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230412 11:04:25.197 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230412 11:04:25.198 - INFO - Running with configuration level 2
+20230412 11:04:25.198 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230412 11:04:25.198 - INFO - Robot Framework AIO version check passed!
+20230412 11:04:25.198 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230412 11:04:25.198 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.json'
+20230412 11:04:25.198 - INFO - Number of test suites: 1
+20230412 11:04:25.198 - INFO - Total number of testcases: 1
+20230412 11:04:25.198 - INFO - +- END SETUP: tm.Testsuite Setup (32)
 ------------------------------------------------------------------------------
-20230411 15:56:25.022 - INFO - +- START TEST: Test Case tsm-testfile-17-unknown_parameter_2 [ ]
+20230412 11:04:25.198 - INFO - +- START TEST: Test Case tsm-testfile-17-unknown_parameter_2 [ ]
 ------------------------------------------------------------------------------
-20230411 15:56:25.023 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230411 15:56:25.023 - INFO - Test Count: 1
-20230411 15:56:25.024 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230412 11:04:25.200 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230412 11:04:25.200 - INFO - Test Count: 1
+20230412 11:04:25.200 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.024 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-17-unknown_parameter_2) ]
-20230411 15:56:25.024 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'tsm-test_config_variant1'
-20230411 15:56:25.028 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 11:04:25.200 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-17-unknown_parameter_2) ]
+20230412 11:04:25.201 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'tsm-test_config_variant1'
+20230412 11:04:25.202 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.028 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-17-unknown_parameter_2) ]
-20230411 15:56:25.028 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230411 15:56:25.030 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230412 11:04:25.202 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-17-unknown_parameter_2) ]
+20230412 11:04:25.202 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230412 11:04:25.203 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.030 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-17-unknown_parameter_2) ]
-20230411 15:56:25.031 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230411 15:56:25.032 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230412 11:04:25.203 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-17-unknown_parameter_2) ]
+20230412 11:04:25.203 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230412 11:04:25.205 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.032 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-17-unknown_parameter_2) ]
-20230411 15:56:25.032 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230411 15:56:25.033 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230412 11:04:25.205 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-17-unknown_parameter_2) ]
+20230412 11:04:25.205 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-17-unknown_parameter_2) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230412 11:04:25.206 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.033 - INFO - +-- START KEYWORD: Collections.Set To Dictionary [ ${dTestDict}[I-am-not-existing] | kVal_new | ${dTestDict}[kVal_1] ]
-20230411 15:56:25.034 - UNKNOWN - Dictionary '${dTestDict}' has no key 'I-am-not-existing'.
-20230411 15:56:25.034 - INFO - +-- END KEYWORD: Collections.Set To Dictionary (1)
+20230412 11:04:25.206 - INFO - +-- START KEYWORD: Collections.Set To Dictionary [ ${dTestDict}[I-am-not-existing] | kVal_new | ${dTestDict}[kVal_1] ]
+20230412 11:04:25.206 - UNKNOWN - Dictionary '${dTestDict}' has no key 'I-am-not-existing'.
+20230412 11:04:25.207 - INFO - +-- END KEYWORD: Collections.Set To Dictionary (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.034 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230411 15:56:25.034 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20230412 11:04:25.207 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230412 11:04:25.207 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230411 15:56:25.034 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230411 15:56:25.035 - INFO - testcase_teardown: Will be implemented later
-20230411 15:56:25.035 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
+20230412 11:04:25.207 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230412 11:04:25.207 - INFO - testcase_teardown: Will be implemented later
+20230412 11:04:25.208 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230411 15:56:25.037 - INFO - +- END TEST: Test Case tsm-testfile-17-unknown_parameter_2 (13)
+20230412 11:04:25.210 - INFO - +- END TEST: Test Case tsm-testfile-17-unknown_parameter_2 (10)
 ------------------------------------------------------------------------------
-20230411 15:56:25.037 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230411 15:56:25.037 - INFO - testsuite_teardown: Will be implemented later
-20230411 15:56:25.037 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230412 11:04:25.210 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 11:04:25.210 - INFO - testsuite_teardown: Will be implemented later
+20230412 11:04:25.210 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230411 15:56:25.039 - INFO - + END SUITE: Tsm-Testfile-17-Unknown Parameter 2 (165)
+20230412 11:04:25.213 - INFO - + END SUITE: Tsm-Testfile-17-Unknown Parameter 2 (163)
 ==============================================================================

@@ -1,19 +1,19 @@
 ==============================================================================
-20230411 15:56:26.861 - INFO - + START SUITE: Tsm-Testfile-06-Dotdict Syntax [ ]
+20230412 11:04:27.336 - INFO - + START SUITE: Tsm-Testfile-06-Dotdict Syntax [ ]
 ==============================================================================
-20230411 15:56:26.865 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230411 15:56:26.892 - ERROR - Loading of JSON configuration file failed! Reason: The variable 'params.global.dTestDict.ddKeyA['ddKeyA_2']' is not available!
-20230411 15:56:26.893 - UNKNOWN - Loading of JSON configuration file failed!
-20230411 15:56:26.893 - DEBUG - Loading of JSON configuration file failed!
-20230411 15:56:26.894 - INFO - +- END SETUP: tm.Testsuite Setup (28)
+20230412 11:04:27.345 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 11:04:27.374 - ERROR - Loading of JSON configuration file failed! Reason: The variable 'params.global.dTestDict.ddKeyA['ddKeyA_2']' is not available!
+20230412 11:04:27.375 - UNKNOWN - Loading of JSON configuration file failed!
+20230412 11:04:27.375 - DEBUG - Loading of JSON configuration file failed!
+20230412 11:04:27.376 - INFO - +- END SETUP: tm.Testsuite Setup (30)
 ------------------------------------------------------------------------------
-20230411 15:56:26.894 - INFO - +- START TEST: Test Case tsm-testfile-06-dotdict_syntax [ ]
+20230412 11:04:27.376 - INFO - +- START TEST: Test Case tsm-testfile-06-dotdict_syntax [ ]
 ------------------------------------------------------------------------------
-20230411 15:56:26.896 - INFO - +- END TEST: Test Case tsm-testfile-06-dotdict_syntax (1)
+20230412 11:04:27.386 - INFO - +- END TEST: Test Case tsm-testfile-06-dotdict_syntax (6)
 ------------------------------------------------------------------------------
-20230411 15:56:26.897 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230411 15:56:26.897 - INFO - testsuite_teardown: Will be implemented later
-20230411 15:56:26.897 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230412 11:04:27.386 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 11:04:27.387 - INFO - testsuite_teardown: Will be implemented later
+20230412 11:04:27.387 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230411 15:56:26.899 - INFO - + END SUITE: Tsm-Testfile-06-Dotdict Syntax (145)
+20230412 11:04:27.389 - INFO - + END SUITE: Tsm-Testfile-06-Dotdict Syntax (164)
 ==============================================================================

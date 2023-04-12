@@ -34,10 +34,25 @@
                            "bool_val_4"         : false,
                            "none_val"           : None,
                            "null_val"           : null,
+                           "mini_dict_val"      : {"keyA" : "keyA_val", "keyB" : "keyB_val"},
+                           "mini_list_val"      : ["A", 1, True],
                            //
                            "certain_teststring" : "initial value of certain teststring",
                            //
-                           "list_val" : ["initial list", 1, 2.2, "A", true, True, false, False, None, null],
+                           // list_val version with hard coded values
+                           // "list_val" : ["initial list", 1, 2.2, true, True, false, False, None, null, {"keyA" : "keyA_val", "keyB" : "keyB_val"}, ["A", 1, True]],
+                           // list_val version with parameters used
+                           "list_val" : ["initial list",
+                                         ${params}['global']['int_val'],
+                                         ${params}['global']['float_val'],
+                                         ${params}['global']['bool_val_1'],
+                                         ${params}['global']['bool_val_2'],
+                                         ${params}['global']['bool_val_3'],
+                                         ${params}['global']['bool_val_4'],
+                                         ${params}['global']['none_val'],
+                                         ${params}['global']['null_val'],
+                                         ${params}['global']['mini_dict_val'],
+                                         ${params}['global']['mini_list_val']],
                            "dict_val" : {},
                            ${params}['global']['dict_val']['key_1'] : {},
                            ${params}['global']['dict_val']['key_1']['subkey_11'] : {},

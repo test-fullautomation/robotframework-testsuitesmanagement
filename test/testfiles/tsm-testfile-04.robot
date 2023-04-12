@@ -59,7 +59,12 @@ Test Case tsm-testfile-04
    rf.extensions.pretty_print    ${list_val}                PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04)
 
    rf.extensions.pretty_print    ${certain_teststring}      PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04)
-   rf.extensions.pretty_print    ${list_val[0]}             PARAMS-VERIFIKATION : ({list_val[0]} / tsm-testfile-04)
+   rf.extensions.pretty_print    ${list_val}[0]             PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${list_val}[9]             PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04)
+
+   # mix of indices and keys:
+   rf.extensions.pretty_print    ${list_val}[9][keyA]       PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04)
+   rf.extensions.pretty_print    ${list_val}[10][2]         PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04)
 
    rf.extensions.pretty_print    ${dict_val}[key_2][subkey_23][subsubkey_231]       PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04)
    rf.extensions.pretty_print    ${dict_val.key_2.subkey_23.subsubkey_231}          PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04)
@@ -76,3 +81,25 @@ Test Case tsm-testfile-04
    rf.extensions.pretty_print    ${I_am_a_new_dict}    PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04)
    rf.extensions.pretty_print    ${I_am_a_new_list}    PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04)
 
+   # This test is executed with only one single configuration; therefore all parameter values are fix. We can check them already here:
+
+   Should Be Equal    ${certain_teststring}    updated value of certain teststring (2.1.1)
+   Should Be Equal    ${list_val}[0]    updated list
+   Should Be Equal    ${list_val}[9][keyA]    keyA_val
+   Should Be Equal    ${list_val}[10][2]    ${True}
+   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_231]       initial value of certain teststring
+   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_231}          initial value of certain teststring
+   Should Be Equal    ${dict_val}[key_2][subkey_23][subsubkey_232][0]    initial list
+   Should Be Equal    ${dict_val.key_2.subkey_23.subsubkey_232}[0]       initial list
+   Should Be Equal    ${dict_val}[key_2][subkey_23][dotted.key.name]     updated dotted key name value (2.1.1)
+   Should Be Equal    ${dict_val.key_2.subkey_23}[dotted.key.name]       updated dotted key name value (2.1.1)
+   Should Be Equal    ${I_am_a_new_int}    ${123}
+   Should Be Equal    ${I_am_a_new_str}    I am a new str value (2.1.1)
+   Should Be Equal    ${I_am_a_new_None}   ${None}
+   Should Be Equal    ${I_am_a_new_dict}[new_dict_key_1]   new_dict_key_1_value
+   Should Be Equal    ${I_am_a_new_dict}[new_dict_key_2]   new_dict_key_2_value
+   Should Be Equal    ${I_am_a_new_list}[0]    I
+   Should Be Equal    ${I_am_a_new_list}[1]    am
+   Should Be Equal    ${I_am_a_new_list}[2]    a
+   Should Be Equal    ${I_am_a_new_list}[3]    new
+   Should Be Equal    ${I_am_a_new_list}[4]    list
