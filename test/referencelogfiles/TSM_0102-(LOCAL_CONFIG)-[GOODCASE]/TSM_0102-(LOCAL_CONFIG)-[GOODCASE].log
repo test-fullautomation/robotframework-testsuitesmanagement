@@ -1,0 +1,47 @@
+==============================================================================
+20230412 13:25:10.402 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20230412 13:25:10.439 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:10.439 - INFO - Running with configuration level 1
+20230412 13:25:10.439 - INFO - Robot Framework AIO version check passed!
+20230412 13:25:10.439 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230412 13:25:10.439 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'
+20230412 13:25:10.439 - INFO - Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.json'
+20230412 13:25:10.439 - INFO - Number of test suites: 1
+20230412 13:25:10.439 - INFO - Total number of testcases: 1
+20230412 13:25:10.440 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+------------------------------------------------------------------------------
+20230412 13:25:10.440 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20230412 13:25:10.441 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230412 13:25:10.441 - INFO - Test Count: 1
+20230412 13:25:10.441 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230412 13:25:10.441 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) ]
+20230412 13:25:10.442 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_variant2'
+20230412 13:25:10.444 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230412 13:25:10.444 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) ]
+20230412 13:25:10.444 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230412 13:25:10.445 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230412 13:25:10.445 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) ]
+20230412 13:25:10.446 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'variant2' configuration of tsm-test'
+20230412 13:25:10.447 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230412 13:25:10.447 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) ]
+20230412 13:25:10.447 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  ''teststring_bench' command line value'
+20230412 13:25:10.448 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20230412 13:25:10.449 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230412 13:25:10.449 - INFO - testcase_teardown: Will be implemented later
+20230412 13:25:10.449 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+------------------------------------------------------------------------------
+20230412 13:25:10.451 - INFO - +- END TEST: Test Case tsm-testfile-02 (9)
+------------------------------------------------------------------------------
+20230412 13:25:10.451 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:10.451 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:10.451 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230412 13:25:10.455 - INFO - + END SUITE: Tsm-Testfile-02 (158)
+==============================================================================

@@ -1,0 +1,81 @@
+//  Copyright 2020-2022 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+// Content:
+// * multiple and nested imports
+// * parameters of several relevant data types
+// * overwritten and new parameters at all import levels
+
+{
+
+  "[import]" : "./tsm-test_config_toplevel.json",
+
+  "params" : {
+              "global" : {
+                           "teststring_variant" : "I am the variant 'nested.2' configuration of tsm-test",
+                           //
+                           "int_val"            : 123,
+                           "float_val"          : 4.56,
+                           "bool_val_1"         : True,
+                           "bool_val_2"         : true,
+                           "bool_val_3"         : False,
+                           "bool_val_4"         : false,
+                           "none_val"           : None,
+                           "null_val"           : null,
+                           "mini_dict_val"      : {"keyA" : "keyA_val", "keyB" : "keyB_val"},
+                           "mini_list_val"      : ["A", 1, True],
+                           //
+                           "certain_teststring" : "initial value of certain teststring",
+                           //
+                           // list_val version with hard coded values
+                           // "list_val" : ["initial list", 1, 2.2, true, True, false, False, None, null, {"keyA" : "keyA_val", "keyB" : "keyB_val"}, ["A", 1, True]],
+                           // list_val version with parameters used
+                           "list_val" : ["initial list",
+                                         ${params}['global']['int_val'],
+                                         ${params}['global']['float_val'],
+                                         ${params}['global']['bool_val_1'],
+                                         ${params}['global']['bool_val_2'],
+                                         ${params}['global']['bool_val_3'],
+                                         ${params}['global']['bool_val_4'],
+                                         ${params}['global']['none_val'],
+                                         ${params}['global']['null_val'],
+                                         ${params}['global']['mini_dict_val'],
+                                         ${params}['global']['mini_list_val']],
+                           "dict_val" : {},
+                           ${params}['global']['dict_val']['key_1'] : {},
+                           ${params}['global']['dict_val']['key_1']['subkey_11'] : {},
+                           ${params}['global']['dict_val']['key_1']['subkey_11']['subsubkey_111']              : ${params}['global']['teststring_variant'],
+                           ${params}['global']['dict_val']['key_1']['subkey_11']['subsubkey_112']              : ${params}['global']['int_val'],
+                           ${params}['global']['dict_val']['key_1']['subkey_11']['subsubkey_113']              : ${params}['global']['float_val'],
+                           ${params}['global']['dict_val']['key_2'] : {},
+                           ${params}['global']['dict_val']['key_2']['subkey_21'] : {},
+                           ${params}['global']['dict_val']['key_2']['subkey_21']['subsubkey_211']              : ${params}['global']['bool_val_1'],
+                           ${params}['global']['dict_val']['key_2']['subkey_21']['subsubkey_212']              : ${params}['global']['bool_val_2'],
+                           ${params}['global']['dict_val']['key_2']['subkey_21']['subsubkey_213']              : ${params}['global']['bool_val_3'],
+                           ${params}['global']['dict_val']['key_2']['subkey_21']['subsubkey_214']              : ${params}['global']['bool_val_4'],
+                           ${params}['global']['dict_val']['key_2']['subkey_22'] : {},
+                           ${params}['global']['dict_val']['key_2']['subkey_22']['subsubkey_221']              : ${params}['global']['none_val'],
+                           ${params}['global']['dict_val']['key_2']['subkey_22']['subsubkey_222']              : ${params}['global']['null_val'],
+                           ${params}['global']['dict_val']['key_2']['subkey_23'] : {},
+                           ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_231']              : ${params}['global']['certain_teststring'],
+                           ${params}['global']['dict_val']['key_2']['subkey_23']['subsubkey_232']              : ${params}['global']['list_val'],
+                           ${params}['global']['dict_val']['key_2']['subkey_23']['certain_teststring_initial'] : ${params}['global']['certain_teststring'],
+                           ${params}['global']['dict_val']['key_2']['subkey_23']['dotted.key.name']            : "initial dotted key name value",
+                           //
+                           "[import]" : "./tsm-test_config_common.json",
+                           "[import]" : "./import.2/tsm-test_config_nested.2.1.json"
+                         }
+             }
+}

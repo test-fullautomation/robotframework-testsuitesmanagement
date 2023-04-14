@@ -1,0 +1,19 @@
+==============================================================================
+20230412 13:25:13.143 - INFO - + START SUITE: Tsm-Testfile-04 [ ]
+==============================================================================
+20230412 13:25:13.149 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:13.182 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.2.json': 'Expecting ',' delimiter: line 46 column 3 (char 1148)'
+20230412 13:25:13.183 - UNKNOWN - Loading of JSON configuration file failed!
+20230412 13:25:13.183 - DEBUG - Loading of JSON configuration file failed!
+20230412 13:25:13.183 - INFO - +- END SETUP: tm.Testsuite Setup (34)
+------------------------------------------------------------------------------
+20230412 13:25:13.183 - INFO - +- START TEST: Test Case tsm-testfile-04 [ ]
+------------------------------------------------------------------------------
+20230412 13:25:13.188 - INFO - +- END TEST: Test Case tsm-testfile-04 (1)
+------------------------------------------------------------------------------
+20230412 13:25:13.188 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:13.188 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:13.188 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230412 13:25:13.191 - INFO - + END SUITE: Tsm-Testfile-04 (157)
+==============================================================================

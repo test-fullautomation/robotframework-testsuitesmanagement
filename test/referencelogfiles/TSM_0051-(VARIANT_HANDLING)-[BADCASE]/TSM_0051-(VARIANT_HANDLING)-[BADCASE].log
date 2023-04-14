@@ -1,0 +1,19 @@
+==============================================================================
+20230412 13:25:01.995 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20230412 13:25:02.010 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:02.026 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.json': 'Expecting property name enclosed in double quotes: line 25 column 3 (char 239)'
+20230412 13:25:02.026 - UNKNOWN - Loading of JSON configuration file failed!
+20230412 13:25:02.026 - DEBUG - Loading of JSON configuration file failed!
+20230412 13:25:02.026 - INFO - +- END SETUP: tm.Testsuite Setup (16)
+------------------------------------------------------------------------------
+20230412 13:25:02.026 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20230412 13:25:02.041 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+------------------------------------------------------------------------------
+20230412 13:25:02.041 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:02.041 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:02.041 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230412 13:25:02.041 - INFO - + END SUITE: Tsm-Testfile-02 (154)
+==============================================================================

@@ -1,0 +1,19 @@
+==============================================================================
+20230412 13:25:15.325 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20230412 13:25:15.334 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230412 13:25:15.355 - ERROR - Could not parse configuration JSON schema file: '[Errno 2] No such file or directory: 'D:\\RobotFramework\\python39\\lib\\site-packages\\RobotFramework_TestsuitesManagement\\Config\\robot_schema.json''
+20230412 13:25:15.356 - UNKNOWN - Parse JSON schema file failed!
+20230412 13:25:15.356 - DEBUG - Parse JSON schema file failed!
+20230412 13:25:15.356 - INFO - +- END SETUP: tm.Testsuite Setup (22)
+------------------------------------------------------------------------------
+20230412 13:25:15.356 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20230412 13:25:15.361 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+------------------------------------------------------------------------------
+20230412 13:25:15.362 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230412 13:25:15.362 - INFO - testsuite_teardown: Will be implemented later
+20230412 13:25:15.362 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230412 13:25:15.367 - INFO - + END SUITE: Tsm-Testfile-02 (153)
+==============================================================================
