@@ -17,7 +17,7 @@ Component test of RobotFramework_TestsuitesManagement
 
 XC-CT/ECA3-Queckenstedt
 
-11.04.2023
+14.04.2023
 
 ----
 
@@ -399,7 +399,7 @@ List of test cases
 
 A complete list of all implemented test cases can be found here:
 
-`TSM_TestUsecases.html <https://htmlpreview.github.io/?https://github.com/test-fullautomation/robotframework-testsuitesmanagement/tree/develop/test/TSM_TestUsecases.html>`_
+`TSM_TestUsecases.html <https://htmlpreview.github.io/?https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/test/TSM_TestUsecases.html>`_
 
 TOC_
 
