@@ -1,0 +1,52 @@
+name: Publish robotframework-testsuitesmanagement to PyPI
+
+on:
+  push:
+    tags:
+      - "rel/*.*.*"
+      - "rel/*.*.*.*"
+
+jobs:
+  build-n-publish:
+      name: Build and publish to PyPI
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout source
+          uses: actions/checkout@v2
+
+        - name: Set up Python
+          uses: actions/setup-python@v4.3.0
+          with:
+            python-version: "3.9"
+
+        - name: Install dependencies
+          run: |
+            sudo apt-get install -y pandoc
+            sudo apt-get install -y texlive-latex-*
+            python -m pip install --upgrade build twine colorama pypandoc wheel GenPackageDoc PythonExtensionsCollection
+
+        - name: Build source and wheel distributions
+          run: |
+            python setup.py sdist bdist_wheel
+            twine check --strict dist/*
+
+        - name: Publish distribution to PyPI
+          uses: pypa/gh-action-pypi-publish@release/v1
+          with:
+            password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
+            # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
+
+        - name: Get Asset name
+          run: |
+            export PKG=$(ls dist/ | grep tar)
+            set -- $PKG
+            echo "name=$1" >> $GITHUB_ENV
+
+        - name: Create/Update GitHub Release
+          id: create_update_release
+          uses: ncipollo/release-action@v1
+          with:
+            allowUpdates: true
+            omitNameDuringUpdate: true
+            artifacts: dist/${{ env.name }}
