@@ -83,7 +83,7 @@ Test Case tsm-testfile-04
 
    # This test is executed with only one single configuration; therefore all parameter values are fix. We can check them already here:
 
-   Should Be Equal    ${dict_val}['key_2']['subkey_23']['certain_teststring_initial']    initial value of certain teststring
+   Should Be Equal    ${dict_val}[key_2][subkey_23][certain_teststring_initial]    initial value of certain teststring
    Should Be Equal    ${dict_val.key_2.subkey_23.certain_teststring_initial}             initial value of certain teststring
    Should Be Equal    ${certain_teststring}    updated value of certain teststring (2.1.1)
    Should Be Equal    ${list_val}[0]           updated list
