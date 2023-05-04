@@ -24,7 +24,7 @@ jobs:
           run: |
             sudo apt-get install -y pandoc
             sudo apt-get install -y texlive-latex-*
-            python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection robotframework robotframework-pythonlibcore
+            python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection JsonPreprocessor robotframework robotframework-pythonlibcore jsonschema lxml
 
         - name: Build source and wheel distributions
           run: |

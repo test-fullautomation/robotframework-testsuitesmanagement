@@ -13,7 +13,7 @@
    "DEVELOPMENTSTATUS" : "Development Status :: 4 - Beta",
    "INTENDEDAUDIENCE" : "Intended Audience :: Developers",
    "TOPIC" : "Topic :: Software Development",
-   "INSTALLREQUIRES" : ["JsonPreprocessor","dotdict","robotframework","robotframework-pythonlibcore"],
+   "INSTALLREQUIRES" : ["JsonPreprocessor","dotdict","robotframework","robotframework-pythonlibcore","jsonschema","lxml"],
    "PACKAGEDATA" : ["*.pdf","./Config/*.json"],
    "PACKAGEDOC" : "./packagedoc",
    "CONSOLESCRIPTS" : ["robfwaio_version = RobotFramework_TestsuitesManagement.version:robfwaio_version"]
