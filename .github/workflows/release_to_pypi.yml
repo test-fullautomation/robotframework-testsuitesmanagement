@@ -37,16 +37,10 @@ jobs:
             password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
             # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
 
-        - name: Get Asset name
-          run: |
-            export PKG=$(ls dist/ | grep tar)
-            set -- $PKG
-            echo "name=$1" >> $GITHUB_ENV
-
         - name: Create/Update GitHub Release
           id: create_update_release
           uses: ncipollo/release-action@v1
           with:
             allowUpdates: true
             omitNameDuringUpdate: true
-            artifacts: dist/${{ env.name }}
+            artifacts: dist/*
