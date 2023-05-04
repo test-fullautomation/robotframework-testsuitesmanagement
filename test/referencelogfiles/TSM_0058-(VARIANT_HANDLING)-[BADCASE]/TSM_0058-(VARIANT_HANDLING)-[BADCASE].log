@@ -1,8 +1,8 @@
 ==============================================================================
-20230412 13:25:05.645 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230503 13:54:22.422 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230412 13:25:05.652 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230412 13:25:05.674 - ERROR - Testsuite management - Loading configuration level 2 failed! 
+20230503 13:54:22.437 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:22.453 - ERROR - Testsuite management - Loading configuration level 2 failed! 
           The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.json' 
           Please find the suitable variant in this list: 
             - 'default' 
@@ -29,17 +29,17 @@
             - 'invalid_assignment_1' 
             - 'invalid_assignment_2' 
             - 'parameter_priority'
-20230412 13:25:05.676 - UNKNOWN - Loading configuration level 2 failed!
-20230412 13:25:05.676 - DEBUG - Loading configuration level 2 failed!
-20230412 13:25:05.676 - INFO - +- END SETUP: tm.Testsuite Setup (24)
+20230503 13:54:22.453 - UNKNOWN - Loading configuration level 2 failed!
+20230503 13:54:22.453 - DEBUG - Loading configuration level 2 failed!
+20230503 13:54:22.453 - INFO - +- END SETUP: tm.Testsuite Setup (16)
 ------------------------------------------------------------------------------
-20230412 13:25:05.676 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230503 13:54:22.453 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230412 13:25:05.684 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230503 13:54:22.472 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20230412 13:25:05.684 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230412 13:25:05.684 - INFO - testsuite_teardown: Will be implemented later
-20230412 13:25:05.684 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230503 13:54:22.472 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230503 13:54:22.472 - INFO - testsuite_teardown: Will be implemented later
+20230503 13:54:22.472 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230412 13:25:05.691 - INFO - + END SUITE: Tsm-Testfile-02 (148)
+20230503 13:54:22.472 - INFO - + END SUITE: Tsm-Testfile-02 (140)
 ==============================================================================
