@@ -24,6 +24,7 @@ jobs:
           run: |
             sudo apt-get install -y pandoc
             sudo apt-get install -y texlive-latex-*
+            echo "GENDOC_LATEXPATH=$(dirname $(which pdflatex))" >> $GITHUB_ENV
             python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection JsonPreprocessor robotframework robotframework-pythonlibcore jsonschema lxml
 
         - name: Build source and wheel distributions
@@ -43,4 +44,5 @@ jobs:
           with:
             allowUpdates: true
             omitNameDuringUpdate: true
+            makeLatest: true
             artifacts: dist/*
