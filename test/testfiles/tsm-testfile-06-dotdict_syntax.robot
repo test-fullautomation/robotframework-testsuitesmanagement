@@ -49,16 +49,17 @@ Test Case tsm-testfile-06-dotdict_syntax
    rf.extensions.pretty_print    ${ddKeyB_2_param_3}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax)
    rf.extensions.pretty_print    ${ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
 
-   rf.extensions.pretty_print    ${dTestDict.ddKeyA.ddKeyA_2_param_1}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA.ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)
-   rf.extensions.pretty_print    ${dTestDict.ddKeyB.ddKeyB_2_param_4}    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB.ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)
-
-   rf.extensions.pretty_print    ${dTestDict.ddKeyA}[ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyA}[ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
-   rf.extensions.pretty_print    ${dTestDict.ddKeyB}[ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict.ddKeyB}[ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
-
-   rf.extensions.pretty_print    ${dTestDict}[ddKeyA][ddKeyA_2_param_1]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyA][ddKeyA_2_param_1] / tsm-testfile-06-dotdict_syntax)
-   rf.extensions.pretty_print    ${dTestDict}[ddKeyB][ddKeyB_2_param_4]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyB][ddKeyB_2_param_4] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3}       PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3]      PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3]     PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax)
+   rf.extensions.pretty_print    ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3]    PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax)
 
    # This test is executed with only one single configuration; therefore all parameter values are fix. We can check them already here:
+
+   Should Be Equal    ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3}        ddKeyC_3_value
+   Should Be Equal    ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3]       ddKeyC_3_value
+   Should Be Equal    ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3]      ddKeyC_3_value
+   Should Be Equal    ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3]     ddKeyC_3_value
 
    Should Be Equal    ${ddKeyB_param}        ddKeyB_value
    Should Be Equal    ${ddKeyA_2_param}      ddKeyA_2_value
