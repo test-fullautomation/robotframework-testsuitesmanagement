@@ -34,6 +34,7 @@ from jsonschema import validate
 from builtins import staticmethod
 
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
+from PythonExtensionsCollection.String.CString import CString
 
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
@@ -296,7 +297,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             BuiltIn().unknown('Loading configuration level 2 failed!')
             return
 
-        if not os.path.isfile(self.__sNormalizePath(self.sTestCfgFile)):
+        if not os.path.isfile(CString.NormalizePath(self.sTestCfgFile)):
             errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!\n"
             logger.error(errorMessage)
             BuiltIn().unknown('The configuration file is not found!')
@@ -310,7 +311,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             ROBFW_AIO_Data.update({key:v})
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
         try:
-            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(self.sTestCfgFile))
+            oJsonCfgData = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestCfgFile))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -320,7 +321,7 @@ This loadCfg method uses to load configuration's parameters from json files.
 
         if self.sLocalConfig != '':
             try:
-                oLocalConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(self.sLocalConfig))
+                oLocalConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sLocalConfig))
             except Exception as error:
                 CConfig.bLoadedCfg = False
                 CConfig.sLoadedCfgError = str(error)
@@ -545,7 +546,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
-            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.__sNormalizePath(os.path.abspath(self.sTestSuiteCfg)))
+            oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -587,13 +588,13 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir
             sTestCfgDir = sTestCfgDir[4:]
-            if os.path.exists(self.__sNormalizePath(os.path.abspath('./' + sTestCfgDir))):
+            if os.path.exists(CString.NormalizePath('./' + sTestCfgDir)):
                 sTestCfgDir = './' + sTestCfgDir
             else:
                 bFoundTestCfgDir = False
                 for i in range(0, 30):
                     sTestCfgDir = '../' + sTestCfgDir
-                    if os.path.exists(self.__sNormalizePath(os.path.abspath(sTestCfgDir))):
+                    if os.path.exists(CString.NormalizePath(sTestCfgDir)):
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
