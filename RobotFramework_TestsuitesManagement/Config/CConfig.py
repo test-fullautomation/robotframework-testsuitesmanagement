@@ -39,6 +39,7 @@ from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
 from robot.version import get_full_version, get_version
 from robot.libraries.BuiltIn import BuiltIn
+from robot.utils.dotdict import DotDict
 import pathlib
 
 # This is version information represents for the whole AIO bundle
@@ -48,18 +49,6 @@ import pathlib
 AIO_BUNDLE_NAME = "RobotFramework AIO"
 VERSION         = "0.7.0"
 VERSION_DATE    = "03.2023"
-
-class dotdict(dict):
-    '''
-Subclass of dict, with "dot" (attribute) access to keys.
-    '''
-    __setattr__ = dict.__setitem__
-    def __getattr__(self, item):
-        try:
-            return self[item]
-        except KeyError as error:
-            raise AttributeError from error
-    __delattr__ = dict.__delitem__
 
 
 class CConfig():
@@ -138,7 +127,7 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     # Common configuration parameters 
     sWelcomeString  = None
     sTargetName     = None
-    ddictJson = dotdict()
+    ddictJson = DotDict()
     
     class CJsonDotDict():
         '''
@@ -148,7 +137,7 @@ The CJsonDotDict class converts json configuration object to dotdict
             self.lTmpParam = ['CConfig.ddictJson']
             
         def __del__(self):
-            CConfig.ddictJson = dotdict()
+            CConfig.ddictJson = DotDict()
             del self.lTmpParam
 
         def dotdictConvert(self, oJson):
@@ -178,7 +167,7 @@ This dotdictConvert method converts json object to dotdict.
                     self.lTmpParam.append(k)
                     for i in self.lTmpParam:
                         sExec = i if i==self.lTmpParam[0] else sExec + "." + i
-                    sExec = sExec + " = dotdict(" + str(v) + ")"
+                    sExec = sExec + " = DotDict(" + str(v) + ")"
                     try:
                         exec(sExec, globals())
                     except:
@@ -193,7 +182,7 @@ This dotdictConvert method converts json object to dotdict.
                             self.lTmpParam.append(k+"["+str(n)+"]")
                             for i in self.lTmpParam:
                                 sExec = i if i == self.lTmpParam[0] else sExec + "." + i
-                            sExec = sExec + " = dotdict(" + str(item) + ")"
+                            sExec = sExec + " = DotDict(" + str(item) + ")"
                             try:
                                 exec(sExec, globals())
                             except:
