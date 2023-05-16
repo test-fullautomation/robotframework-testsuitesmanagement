@@ -272,7 +272,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                         self.sTestCfgFile = sDefaultConfig
 
             if self.sTestCfgFile != '':                      
-                self.sTestCfgFile = os.path.abspath(self.sTestCfgFile)
+                self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
 
         if self.bConfigLoaded:
             if self.rConfigFiles.bLevel1:
@@ -297,7 +297,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             BuiltIn().unknown('Loading configuration level 2 failed!')
             return
 
-        if not os.path.isfile(CString.NormalizePath(self.sTestCfgFile)):
+        if not os.path.isfile(self.sTestCfgFile):
             errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!\n"
             logger.error(errorMessage)
             BuiltIn().unknown('The configuration file is not found!')
@@ -311,7 +311,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             ROBFW_AIO_Data.update({key:v})
         oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
         try:
-            oJsonCfgData = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestCfgFile))
+            oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = str(error)
@@ -592,86 +592,24 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                 sTestCfgDir = './' + sTestCfgDir
             else:
                 bFoundTestCfgDir = False
+                sCheckCfgDir = ''
                 for i in range(0, 30):
                     sTestCfgDir = '../' + sTestCfgDir
-                    if os.path.exists(CString.NormalizePath(sTestCfgDir)):
+                    if sCheckCfgDir == CString.NormalizePath(sTestCfgDir):
+                        break
+                    else:
+                        sCheckCfgDir = CString.NormalizePath(sTestCfgDir)
+                    if os.path.exists(sCheckCfgDir):
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
                     CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                             f"          Could not find out config directory: '{sTestCfgDirStart}' which is " + \
-                                             f"set in '{os.path.abspath(self.sTestSuiteCfg)}'\n" 
+                                             f"          Could not find out config directory: '{sTestCfgDirStart}'"
                     logger.error(CConfig.sLoadedCfgError)
                     return False
                 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
         return True
-
-    def __sNormalizePath(self, sPath : str) -> str:
-        '''
-Python struggles with
-
-   - UNC paths
-
-      e.g. ``\\hi-z4939\ccstg\....``
-
-
-   - escape sequences in windows paths
-
-      e.g. ``c:\autotest\tuner   \t`` will be interpreted as tab, the result after
-      processing it with an regexp would be ``c:\autotest   uner``
-
-   In order to solve this problems any slash will be replaced from backslash to slash,
-   only the two UNC backslashes must be kept if contained.
-
-**Arguments:**
-
-* ``sPath``
-
-   / *Condition*: required / *Type*: string /
-
-   Absolute or relative path as input.
-
-   Allows environment variables with ``%variable%`` or ``${variable}`` syntax.
-
-**Returns:**
-
-* ``sPath``
-
-   / *Type*: string /
-
-   Normalized path as string
-        '''
-        # make all backslashes to slash, but mask
-        # UNC indicator \\ before and restore after.
-        def __mkslash(sPath : str) -> str:
-            if sPath.strip()=='':
-                return ''
-     
-            sNPath=re.sub(r"\\\\",r"#!#!#",sPath.strip())
-            sNPath=re.sub(r"\\",r"/",sNPath)
-            sNPath=re.sub(r"#!#!#",r"\\\\",sNPath)
-          
-            return sNPath               
-            if sPath.strip()=='':
-                return ''
-      
-        # TML Syntax uses %Name%-syntax to reference an system- or framework
-        # environment variable. Linux requires ${Name} to do the same.
-        # Therefore change on Linux systems to ${Name}-syntax to make
-        # expandvars working here, too.
-        # This makes same TML code working on both platforms
-        if platform.system().lower()!="windows":
-            sPath=re.sub("%(.*?)%","${\\1}",sPath)
-      
-        #in a windows system normpath turns all slashes to backslash
-        #this is unwanted. Therefore turn back after normpath execution.
-        sNPath=os.path.normpath(os.path.expandvars(sPath.strip()))
-        #make all backslashes to slash, but mask
-        #UNC indicator \\ before and restore after.
-        sNPath=__mkslash(sNPath)
-      
-        return sNPath
     
     @staticmethod
     def __getMachineName():
