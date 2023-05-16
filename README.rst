@@ -43,19 +43,30 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
 2. Installation via GitHub (recommended for developers)
 
-   Clone the **RobotFramework_TestsuitesManagement** repository to your machine.
+   a. Clone the **RobotFramework_TestsuitesManagement** repository to your machine
 
-   .. code::
+      .. code::
 
-      git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+         git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
    `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
 
-   Use the following command to install **RobotFramework_TestsuitesManagement**:
+   b. Install dependencies
 
-   .. code::
+      **RobotFramework_TestsuitesManagement** requires some additional Python libraries. Before you install the cloned repository sources
+      you have to install the dependencies manually. The names of all related packages you can find in the file ``requirements.txt``
+      in the repository root folder. Use pip to install them:
 
-      setup.py install
+      .. code::
+
+         pip install -r requirements.txt
+
+   c. Use the following command to install **RobotFramework_TestsuitesManagement**:
+
+      .. code::
+
+         setup.py install
+
 
 Package Documentation
 ---------------------
