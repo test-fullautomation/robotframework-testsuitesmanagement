@@ -15,10 +15,10 @@
 20230503 13:54:17.155 - INFO - ${teststring_variant} = I am the 'robot_config' configuration of tsm-test
 20230503 13:54:17.155 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}
 20230503 13:54:17.155 - INFO - Running with configuration level 3
-20230503 13:54:17.155 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
+20230503 13:54:17.155 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.jsonp'
 20230503 13:54:17.155 - INFO - Robot Framework AIO version check passed!
 20230503 13:54:17.155 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\'
-20230503 13:54:17.156 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.json'
+20230503 13:54:17.156 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests\config\robot_config.jsonp'
 20230503 13:54:17.156 - INFO - Number of test suites: 1
 20230503 13:54:17.156 - INFO - Total number of testcases: 1
 20230503 13:54:17.156 - INFO - +- END SETUP: tm.Testsuite Setup (27)

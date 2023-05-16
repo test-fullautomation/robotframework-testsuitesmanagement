@@ -1,11 +1,11 @@
 ==============================================================================
 20230503 13:54:13.884 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:13.929 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:13.929 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:13.929 - INFO - Running with configuration level 1
 20230503 13:54:13.930 - INFO - Robot Framework AIO version check passed!
 20230503 13:54:13.930 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230503 13:54:13.930 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'
+20230503 13:54:13.930 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.jsonp'
 20230503 13:54:13.930 - INFO - Number of test suites: 1
 20230503 13:54:13.930 - INFO - Total number of testcases: 1
 20230503 13:54:13.930 - INFO - +- END SETUP: tm.Testsuite Setup (1)

@@ -1,8 +1,8 @@
 ==============================================================================
 20230503 13:54:24.000 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
 ==============================================================================
-20230503 13:54:24.000 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.json ]
-20230503 13:54:24.016 - ERROR - Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.json'!
+20230503 13:54:24.000 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+20230503 13:54:24.016 - ERROR - Did not find configuration file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING_FILE.jsonp'!
 20230503 13:54:24.031 - UNKNOWN - The configuration file is not found!
 20230503 13:54:24.031 - DEBUG - The configuration file is not found!
 20230503 13:54:24.031 - INFO - +- END SETUP: tm.Testsuite Setup (31)

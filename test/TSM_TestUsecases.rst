@@ -67,7 +67,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)**
+   **With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.jsonp)**
 
    Expected: Execution with selected variant 2
 
@@ -91,7 +91,7 @@ Test Use Cases
 
   [VARIANT_HANDLING / GOODCASE]
 
-   **With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup**
+   **With parameter configuration file in command line (tsm-test_config_variant2.jsonp) and robot file without variant configuration in suite setup**
 
    Expected: Execution with selected variant 2
 
@@ -141,7 +141,7 @@ Test Use Cases
 
    **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file**
 
-   Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
+   Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp)
 
    *Comment: Single file execution*
 
@@ -153,7 +153,7 @@ Test Use Cases
 
    **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)**
 
-   Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
+   Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp); single command line parameter value overwrites variant 'robot_config' configuration value
 
    *Comment: Single file execution*
 
@@ -787,5 +787,5 @@ Test Use Cases
 
 ----
 
-Generated: 12.04.2023 - 13:26:18
+Generated: 16.05.2023 - 14:23:56
 

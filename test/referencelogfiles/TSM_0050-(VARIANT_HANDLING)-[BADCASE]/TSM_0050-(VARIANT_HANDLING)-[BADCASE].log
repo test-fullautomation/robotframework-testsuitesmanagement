@@ -1,7 +1,7 @@
 ==============================================================================
 20230503 13:54:18.224 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:18.231 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:18.231 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:18.257 - ERROR - The parameter 'WelcomeString' is a required property, but it's not set in JSON configuration file.
 20230503 13:54:18.258 - UNKNOWN - JSON schema validation failed!
 20230503 13:54:18.258 - DEBUG - JSON schema validation failed!
