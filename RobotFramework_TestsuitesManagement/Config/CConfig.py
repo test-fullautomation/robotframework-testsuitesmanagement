@@ -779,6 +779,9 @@ with "unknown" state
             self.versioncontrol_error('conflict_max', self.sMaxVersion, sCurrentVersion)
             bVersionCheck = False
 
+        if bVersionCheck:
+            logger.info("Robot Framework AIO version check passed!")
+
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
         '''
