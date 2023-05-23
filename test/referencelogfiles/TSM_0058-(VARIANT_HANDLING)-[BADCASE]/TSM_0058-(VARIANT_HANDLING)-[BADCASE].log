@@ -1,9 +1,9 @@
 ==============================================================================
 20230503 13:54:22.422 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:22.437 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:22.437 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:22.453 - ERROR - Testsuite management - Loading configuration level 2 failed! 
-          The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.json' 
+          The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp' 
           Please find the suitable variant in this list: 
             - 'default' 
             - 'variant1' 

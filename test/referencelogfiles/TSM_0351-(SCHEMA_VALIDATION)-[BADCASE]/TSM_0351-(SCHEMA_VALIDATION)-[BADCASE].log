@@ -1,7 +1,7 @@
 ==============================================================================
 20230503 13:54:32.618 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:32.626 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:32.626 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:32.652 - ERROR - Could not parse configuration JSON schema file: 'Extra data: line 48 column 2 (char 1017)'
 20230503 13:54:32.653 - UNKNOWN - Parse JSON schema file failed!
 20230503 13:54:32.653 - DEBUG - Parse JSON schema file failed!

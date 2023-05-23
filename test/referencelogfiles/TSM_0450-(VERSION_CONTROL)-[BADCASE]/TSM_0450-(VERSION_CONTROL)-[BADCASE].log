@@ -1,7 +1,7 @@
 ==============================================================================
 20230503 13:54:35.306 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:35.314 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:35.314 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:35.339 - ERROR - Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
           'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
 20230503 13:54:35.341 - UNKNOWN - JSON schema validation failed!

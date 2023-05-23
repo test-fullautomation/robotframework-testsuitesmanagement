@@ -1,7 +1,7 @@
 ==============================================================================
 20230503 13:54:22.973 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:23.000 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:23.000 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:23.000 - UNKNOWN - Exception occurred.
 20230503 13:54:23.000 - INFO - +- END SETUP: tm.Testsuite Setup (0)
 ------------------------------------------------------------------------------

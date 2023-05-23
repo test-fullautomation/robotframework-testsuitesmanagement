@@ -20,7 +20,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 20.03.2023
+# 15.05.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -156,7 +156,7 @@ class CAdditionalSteps():
 
    def __LocalConfigEnvVar_Create(self):
       TESTFILESFOLDER = self.__oConfig.Get('TESTFILESFOLDER')
-      sLocalConfigFile = f"{TESTFILESFOLDER}/localconfig/tsm-test_localconfig_bench2.json"
+      sLocalConfigFile = f"{TESTFILESFOLDER}/localconfig/tsm-test_localconfig_bench2.jsonp"
       if not os.path.isfile(sLocalConfigFile):
          bSuccess = None
          sResult  = "Missing file '{sLocalConfigFile}'"

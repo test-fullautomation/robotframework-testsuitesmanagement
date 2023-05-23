@@ -25,7 +25,7 @@ Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 
 Library    I.Am.The.Unknown.Library.And.Therefore.An.Error
 
-Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.json
+Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.jsonp
 Suite Teardown    tm.testsuite_teardown
 Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown

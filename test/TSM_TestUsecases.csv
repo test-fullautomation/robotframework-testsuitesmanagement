@@ -4,9 +4,9 @@ TSM_0001|VARIANT_HANDLING|GOODCASE|Without variant configuration file in suite s
 TSM_0002|VARIANT_HANDLING|GOODCASE|With variant configuration file in suite setup of robot file; default variant
 TSM_0003|VARIANT_HANDLING|GOODCASE|With variant name in command line and with variant configuration file in suite setup of robot file / (variant1)
 TSM_0004|VARIANT_HANDLING|GOODCASE|With variant name in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside variant name
-TSM_0005|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)
+TSM_0005|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.jsonp)
 TSM_0006|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line and with variant configuration file in suite setup of robot file / with 4 byte UTF-8 characters inside name
-TSM_0007|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup
+TSM_0007|VARIANT_HANDLING|GOODCASE|With parameter configuration file in command line (tsm-test_config_variant2.jsonp) and robot file without variant configuration in suite setup
 TSM_0008|VARIANT_HANDLING|GOODCASE|With variant name and single parameter in command line and with variant configuration file in suite setup of robot file / (variant1; teststring_variant)
 TSM_0009|VARIANT_HANDLING|GOODCASE|With parameter configuration file and single parameter in command line and with variant configuration file in suite setup of robot file / (variant2; teststring_variant)
 TSM_0010|VARIANT_HANDLING|GOODCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file
@@ -27,6 +27,8 @@ TSM_0061|VARIANT_HANDLING|BADCASE|Robot file refers to a variant configuration f
 TSM_0062|VARIANT_HANDLING|BADCASE|Robot file refers to a variant configuration file with not existing path for variant1
 TSM_0063|VARIANT_HANDLING|BADCASE|Robot file refers to a variant configuration file with with missing 'default' variant; a variant name is not given in command line
 TSM_0064|VARIANT_HANDLING|BADCASE|A local config file is passed to command line parameter config_file
+TSM_0065|VARIANT_HANDLING|BADCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp
+TSM_0066|VARIANT_HANDLING|BADCASE|With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp
 TSM_0100|LOCAL_CONFIG|GOODCASE|With variant1 name and local config file for bench2 given in command line
 TSM_0101|LOCAL_CONFIG|GOODCASE|With variant2 configuration file and local config file for bench1 given in command line
 TSM_0102|LOCAL_CONFIG|GOODCASE|With variant2 configuration file, local config file for bench1 and single parameter given in command line

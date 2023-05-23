@@ -1,7 +1,7 @@
 ==============================================================================
 20230503 13:54:35.836 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:35.844 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
+20230503 13:54:35.844 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230503 13:54:35.870 - ERROR - Parameter 'Minimum_version' with invalid value found in JSON configuration file! 
           '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
 20230503 13:54:35.872 - UNKNOWN - JSON schema validation failed!
