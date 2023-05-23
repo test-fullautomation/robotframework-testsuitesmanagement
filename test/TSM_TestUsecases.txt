@@ -150,6 +150,16 @@ Description: A local config file is passed to command line parameter config_file
 Expectation: Test is not executed; error message; test result is UNKNOWN; reason: a local config file is not a full configuration file
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0065 / VARIANT_HANDLING / BADCASE
+Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0066 / VARIANT_HANDLING / BADCASE
+Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0100 / LOCAL_CONFIG / GOODCASE
 Description: With variant1 name and local config file for bench2 given in command line
 Expectation: Local config value overwrites initial value for parameter 'teststring_bench'
@@ -337,5 +347,5 @@ Description: Test with several sources of parameters: config file, local config,
 Expectation: Accordingly to the priority of the enlisted sources all parameters have proper values finally
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 16.05.2023 - 14:23:56
+Generated: 23.05.2023 - 15:45:58
 

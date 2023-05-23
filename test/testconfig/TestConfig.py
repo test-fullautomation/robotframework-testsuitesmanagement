@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 15.05.2023
+# 23.05.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -48,8 +48,10 @@
 # "tsm-testfile-18-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 # "tsm-testfile-19-parameter_priority.robot"   # (with variant configuration and extended parameter logging for parameters from different sources)
 #
-# configfoldertests/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
-# configfoldertests/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests1/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests1/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests2/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
+# configfoldertests2/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
 #
 # testsuitestest # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
 
@@ -200,7 +202,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests/tsm-cft-testfile-1.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -214,7 +216,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -228,7 +230,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable teststring_variant:\"command line value of teststring_variant\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -444,6 +446,36 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./localconfig/tsm-test_localconfig_bench1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0065"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "VARIANT_HANDLING"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-1.robot"
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = None
+dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['LOGCOMPARE']       = None # !!! error handling not yet implemented / reference log file not yet available !!!
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0066"
+dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['SECTION']          = "VARIANT_HANDLING"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = None
+dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['LOGCOMPARE']       = None # !!! error handling not yet implemented / reference log file not yet available !!!
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------

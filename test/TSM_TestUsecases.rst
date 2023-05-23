@@ -339,6 +339,30 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0065**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp**
+
+   Expected: Test is not executed; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0066**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp**
+
+   Expected: Test is not executed; error message; test result is UNKNOWN
+
+   *Comment: Single file execution*
+
+----
+
 * **Test TSM_0100**
 
   [LOCAL_CONFIG / GOODCASE]
@@ -787,5 +811,5 @@ Test Use Cases
 
 ----
 
-Generated: 16.05.2023 - 14:23:56
+Generated: 23.05.2023 - 15:45:58
 

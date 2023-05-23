@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 15.05.2023
+# 23.05.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #TM***
@@ -471,7 +471,7 @@ for dictUsecase in listofdictUsecases:
       print(f"(1) Test log file      : {TESTLOGFILE_TXT}")
       print(f"(2) Reference log file : {REFERENCELOGFILE_TXT}")
       print(f"(3) Pattern file       : {PATTERNFILE_TXT}")
-      print(f"(3) 'Ignore' pattern   : {IGNOREPATTERNFILE_TXT}")
+      print(f"(4) 'Ignore' pattern   : {IGNOREPATTERNFILE_TXT}")
       print()
 
       if bSuccess is not True:
