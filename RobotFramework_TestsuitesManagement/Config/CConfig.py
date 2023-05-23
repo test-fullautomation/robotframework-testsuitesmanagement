@@ -243,11 +243,11 @@ This loadCfg method uses to load configuration's parameters from json files.
                             bLevel3Check = True
                             break
                     if not bLevel3Check:
-                        if os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'):
-                            self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'
-                            self.rConfigFiles.bLevel4 = False
-                        elif os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.jsonp'):
+                        if os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.jsonp'):
                             self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.jsonp'
+                            self.rConfigFiles.bLevel4 = False
+                        elif os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'):
+                            self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'
                             self.rConfigFiles.bLevel4 = False
                         else:
                             self.rConfigFiles.bLevel3 = False
