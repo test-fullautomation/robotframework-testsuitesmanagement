@@ -753,6 +753,7 @@ with "unknown" state
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
             logger.info("Running without Robot Framework AIO version check!")
+            return
         if self.sMinVersion != '':
             tMinVersion = CConfig.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
