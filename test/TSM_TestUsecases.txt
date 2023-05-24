@@ -312,6 +312,11 @@ Description: Assignment of known parameter to unknown dictionary subkey in test 
 Expectation: Test is executed up to position of invalid assignment; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0559 / ROBOT_CODE / BADCASE
+Description: Robot file with several tests; one test contains keyword FATAL ERROR
+Expectation: Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0600 / RETURN_VALUE / GOODCASE
 Description: Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)
 Expectation: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
@@ -347,5 +352,5 @@ Description: Test with several sources of parameters: config file, local config,
 Expectation: Accordingly to the priority of the enlisted sources all parameters have proper values finally
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 23.05.2023 - 15:45:58
+Generated: 24.05.2023 - 20:42:16
 

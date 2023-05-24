@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 23.05.2023 - 15:45:58
+# 24.05.2023 - 20:42:16
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -100,5 +100,14 @@ class Test_ROBOT_CODE_BADCASE:
    )
    def test_TSM_0558(self, Description):
       nReturn = CExecute.Execute("TSM_0558")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Robot file with several tests; one test contains keyword FATAL ERROR",]
+   )
+   def test_TSM_0559(self, Description):
+      nReturn = CExecute.Execute("TSM_0559")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
