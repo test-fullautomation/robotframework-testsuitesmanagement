@@ -89,9 +89,9 @@ different ways.
     -   Use the following command to install
         **RobotFramework_TestsuitesManagement**:
 
-        > ``` 
-        > setup.py install
-        > ```
+        ``` 
+        setup.py install
+        ```
 
 ## Package Documentation
 

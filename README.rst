@@ -81,9 +81,9 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
    * Use the following command to install **RobotFramework_TestsuitesManagement**:
 
-      .. code::
+     .. code::
 
-         setup.py install
+        setup.py install
 
 
 Package Documentation
