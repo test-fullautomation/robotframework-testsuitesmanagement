@@ -64,6 +64,8 @@ To realize a concrete test suites management for your project, you need to
    \item identify the parameters that have the same value in all variants and test benches.
 \end{itemize}
 
+\newpage
+
 After this
 
 \begin{itemize}
@@ -72,7 +74,12 @@ After this
          with the path to the corresponding parameter configuration file.
 \end{itemize}
 
-The content of these configuration files is described in the next section.
+Basically all configuration files of the \pkg\ are implemented in JSON format. This format is extended by some useful features like
+code comments and imports (nested configuration files). This is explained in more detail in the following chapters.
+These features cause deviations from standard JSON format. To give applications like editors or syntax checkers a chance to handle
+these deviations (without invalid findings), all JSON configurations files of the \pkg\ have the extension \pcode{.jsonp}, instead of \pcode{.json}.
+
+The content of the configuration files is described in the next section.
 
 % --------------------------------------------------------------------------------------------------------------
 
@@ -80,24 +87,24 @@ The content of these configuration files is described in the next section.
 
 \textbf{1. variant configuration file}
 
-This file configures the access to all variant dependent \plog{robot_config*.json} files.
+This file configures the access to all variant dependent \plog{robot_config*.jsonp} files.
 
 \begin{pythoncode}
 {
   "default": {
-               "name": "robot_execution_config.json",
+               "name": "robot_execution_config.jsonp",
                "path": ".../config/"
              },
   "variant_1": {
-                 "name": "robot_config_variant_1.json",
+                 "name": "robot_config_variant_1.jsonp",
                  "path": ".../config/"
                },
   "variant_2": {
-                 "name": "robot_config_variant_2.json",
+                 "name": "robot_config_variant_2.jsonp",
                  "path": ".../config/"
                },
   "variant_3": {
-                 "name": "robot_config_variant_3.json",
+                 "name": "robot_config_variant_3.jsonp",
                  "path": ".../config/"
                }
 }
@@ -108,23 +115,23 @@ The example above contains definitions for three variants with names:\\
 This default configuration becomes active in case of no certain variant name is provided when the test suite is being executed.
 
 Another aspect is important: the \textbf{three dots}.
-The path to the \plog{robot_config*.json} files depends on the test file location. A
+The path to the \plog{robot_config*.jsonp} files depends on the test file location. A
 different number of \plog{../} is required dependent on the directory depth of the test
 case location.
 
 Therefore we use here three dots to tell the \pkg\ to search from the test
-file location up till the \plog{robot_config*.json} files are found:
+file location up till the \plog{robot_config*.jsonp} files are found:
 
 \begin{pythonlog}
-./config/robot_config.json
-../config/robot_config.json
-../../config/robot_config.json
-../../../config/robot_config.json
+./config/robot_config.jsonp
+../config/robot_config.jsonp
+../../config/robot_config.jsonp
+../../../config/robot_config.jsonp
 \end{pythonlog}
 
 and so on.
 
-Hint: The paths to the \plog{robot_config*.json} files are relative to the position of the test suite - \textbf{and not relative to the position of the
+Hint: The paths to the \plog{robot_config*.jsonp} files are relative to the position of the test suite - \textbf{and not relative to the position of the
 mapping file in which they are defined!} You are free to move your test suites one or more level up or down in the file system, but using the
 three dots notation enables you to let the position of the \plog{config} folder unchanged.
 
@@ -323,7 +330,7 @@ the \pkg\ falls back to the default configuration (level 4).
 In case you want to realize a variant handling you have to provide the path and the name of a variants configuration file to the \rcode{testsuite_setup}:
 
 \begin{robotcode}
-Suite Setup    tm.testsuite_setup    ./config/exercise_variants.json
+Suite Setup    tm.testsuite_setup    ./config/exercise_variants.jsonp
 \end{robotcode}
 
 To ease the analysis of a test execution, the log file contains informations about the selected level and the path and the name of the used
@@ -331,11 +338,11 @@ configuration file, for example:
 
 \begin{robotlog}
 Running with configuration level: 2
-CfgFile Path: ./config/exercise_config.json
+CfgFile Path: ./config/exercise_config.jsonp
 \end{robotlog}
 
-Please consider: The \rcode{testsuite_setup} requires a variants configuration file (in the example above: \plog{exercise_variants.json}) - whereas
-the log file contains the resulting parameter configuration file (in the example above: \plog{exercise_config.json}), that is selected depending
+Please consider: The \rcode{testsuite_setup} requires a variants configuration file (in the example above: \plog{exercise_variants.jsonp}) - whereas
+the log file contains the resulting parameter configuration file (in the example above: \plog{exercise_config.jsonp}), that is selected depending
 on the name of the variant provided in command line of the \rfwcore.
 
 % --------------------------------------------------------------------------------------------------------------
@@ -364,11 +371,11 @@ This \rlog{config} folder has to be placed in the same folder than the test suit
 Parameter configuration files within this folder are considered under two different conditions:
 
 \begin{itemize}
-   \item The configuration file has the name \rlog{robot_config.json}. That is a fix name predefined by the \pkg.
+   \item The configuration file has the name \rlog{robot_config.jsonp}. That is a fix name predefined by the \pkg.
    \item The configuration file has the same name than a robot file inside the test suites folder, e.g.:
          \begin{itemize}
             \item Name of test suite file: \rlog{example.robot}
-            \item Path and name of corresponding parameter configuration file: \rlog{./config/example.json}
+            \item Path and name of corresponding parameter configuration file: \rlog{./config/example.jsonp}
          \end{itemize}
          With this rule it is possible to give every test suite in a certain folder an own individual configuration.
 \end{itemize}
@@ -519,22 +526,22 @@ This can be done in the following way:
 For example we have the following variant specific configuration files:
 
 \begin{pythonlog}
-config/config_variant1.json
-config/config_variant2.json
+config/config_variant1.jsonp
+config/config_variant2.jsonp
 \end{pythonlog}
 
 Additionaly we have a configuration file with common parameters:
 
 \begin{pythonlog}
-config/config_common.json
+config/config_common.jsonp
 \end{pythonlog}
 
-The import of \rlog{config_common.json} into \rlog{config_variant1.json} and into \rlog{config_variant2.json} is possible in the following way:
+The import of \rlog{config_common.jsonp} into \rlog{config_variant1.jsonp} and into \rlog{config_variant2.jsonp} is possible in the following way:
 
 \begin{pythonlog}
 "params" : {
             "global": {
-                       "[import]"   : "./config_common.json",
+                       "[import]"   : "./config_common.jsonp",
                        "teststring" : "variant specific value"
                       }
            }

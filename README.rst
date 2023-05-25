@@ -43,19 +43,48 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
 2. Installation via GitHub (recommended for developers)
 
-   Clone the **RobotFramework_TestsuitesManagement** repository to your machine.
+   * Clone the **RobotFramework_TestsuitesManagement** repository to your machine
 
-   .. code::
+     .. code::
 
-      git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
+        git clone https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git
 
-   `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
+     `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
 
-   Use the following command to install **RobotFramework_TestsuitesManagement**:
+   * Install dependencies
 
-   .. code::
+     **RobotFramework_TestsuitesManagement** requires some additional Python libraries. Before you install the cloned repository sources
+     you have to install the dependencies manually. The names of all related packages you can find in the file ``requirements.txt``
+     in the repository root folder. Use pip to install them:
 
-      setup.py install
+     .. code::
+
+        pip install -r requirements.txt
+
+     Additionally install **LaTeX** (recommended: TeX Live). This is used to render the documentation.
+
+   * Configure dependencies
+
+     The installation of **RobotFramework_TestsuitesManagement** includes to generate the documentation in PDF format. This is done by
+     an application called **GenPackageDoc**, that is part of the installation dependencies (see ``requirements.txt``).
+
+     **GenPackageDoc** uses **LaTeX** to generate the documentation in PDF format. Therefore **GenPackageDoc** needs to know where to find
+     **LaTeX**. This is defined in the **GenPackageDoc** configuration file
+
+     .. code::
+
+        packagedoc\packagedoc_config.json
+
+     Before you start the installation you have to introduce the following environment variable, that is used in ``packagedoc_config.json``:
+
+     - ``GENDOC_LATEXPATH`` : path to ``pdflatex`` executable
+
+   * Use the following command to install **RobotFramework_TestsuitesManagement**:
+
+     .. code::
+
+        setup.py install
+
 
 Package Documentation
 ---------------------
