@@ -316,8 +316,10 @@ This loadCfg method uses to load configuration's parameters from json files.
             oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
             CConfig.bLoadedCfg = False
-            CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            CConfig.sLoadedCfgError = ''
+            for item in str(error).split(': \''):
+                CConfig.sLoadedCfgError += f"{item}\n                  "
+            logger.error(f"Loading of JSON configuration file failed! \n          Reason: {CConfig.sLoadedCfgError}")
             BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
@@ -343,7 +345,7 @@ This loadCfg method uses to load configuration's parameters from json files.
 
         bJsonSchema = True    
         try:
-            sSchemaFile=str(pathlib.Path(__file__).parent.absolute() / "robot_schema.json")
+            sSchemaFile=str(pathlib.Path(__file__).parent.absolute() / "configuration_schema.json")
             with open(sSchemaFile) as f:
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
@@ -359,7 +361,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                     logger.error(f"Verification against JSON schema failed: '{error.message}'\n" + \
                                  "          Please put the additional params into 'params': { 'global': {...} \n")
                 elif error.validator == 'required':
-                    logger.error(f"The parameter {error.message}, but it's not set in JSON configuration file.\n")
+                    logger.error(f"The parameter {error.message} in configuration file {self.sTestCfgFile}.\n")
                 else:
                     errParam = error.path.pop()
                     logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
@@ -551,8 +553,10 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
         except Exception as error:
             CConfig.bLoadedCfg = False
-            CConfig.sLoadedCfgError = str(error)
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}\n")
+            CConfig.sLoadedCfgError = ''
+            for item in str(error).split(': \''):
+                CConfig.sLoadedCfgError += f"{item}\n                  "
+            logger.error(f"Loading of JSON configuration file failed! \n          Reason: {CConfig.sLoadedCfgError}\n")
             return False
         sListOfVariants = '\n'
         for item in list(oSuiteConfig.keys()):

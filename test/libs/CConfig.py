@@ -142,7 +142,7 @@ class CConfig():
          raise Exception(CString.FormatResult(sMethod, bSuccess, sResult))
       self.__dictConfig['SITEPACKAGES'] = SITEPACKAGES
 
-      self.__dictConfig['CONFIGSCHEMAFILE'] = f"{SITEPACKAGES}/RobotFramework_TestsuitesManagement/Config/robot_schema.json"
+      self.__dictConfig['CONFIGSCHEMAFILE'] = f"{SITEPACKAGES}/RobotFramework_TestsuitesManagement/Config/configuration_schema.json"
 
       # -- configuration: command line
 
