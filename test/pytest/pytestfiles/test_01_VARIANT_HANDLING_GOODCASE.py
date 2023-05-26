@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 12.04.2023 - 13:26:18
+# 23.05.2023 - 15:45:58
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -69,7 +69,7 @@ class Test_VARIANT_HANDLING_GOODCASE:
    # Expected: Execution with selected variant 2
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)",]
+      "Description", ["With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.jsonp)",]
    )
    def test_TSM_0005(self, Description):
       nReturn = CExecute.Execute("TSM_0005")
@@ -87,7 +87,7 @@ class Test_VARIANT_HANDLING_GOODCASE:
    # Expected: Execution with selected variant 2
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup",]
+      "Description", ["With parameter configuration file in command line (tsm-test_config_variant2.jsonp) and robot file without variant configuration in suite setup",]
    )
    def test_TSM_0007(self, Description):
       nReturn = CExecute.Execute("TSM_0007")
@@ -120,7 +120,7 @@ class Test_VARIANT_HANDLING_GOODCASE:
       nReturn = CExecute.Execute("TSM_0010")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
+   # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp)
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file",]
@@ -129,7 +129,7 @@ class Test_VARIANT_HANDLING_GOODCASE:
       nReturn = CExecute.Execute("TSM_0011")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
+   # Expected: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp); single command line parameter value overwrites variant 'robot_config' configuration value
    # (Single file execution)
    @pytest.mark.parametrize(
       "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)",]

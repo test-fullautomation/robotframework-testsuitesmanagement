@@ -36,7 +36,7 @@ Expectation: Execution with selected variant
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0005 / VARIANT_HANDLING / GOODCASE
-Description: With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.json)
+Description: With parameter configuration file in command line and with variant configuration file in suite setup of robot file / (tsm-test_config_variant2.jsonp)
 Expectation: Execution with selected variant 2
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ Expectation: Execution with selected config file for variant
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0007 / VARIANT_HANDLING / GOODCASE
-Description: With parameter configuration file in command line (tsm-test_config_variant2.json) and robot file without variant configuration in suite setup
+Description: With parameter configuration file in command line (tsm-test_config_variant2.jsonp) and robot file without variant configuration in suite setup
 Expectation: Execution with selected variant 2
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
@@ -67,12 +67,12 @@ Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0011 / VARIANT_HANDLING / GOODCASE
 Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file
-Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.json)
+Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp)
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0012 / VARIANT_HANDLING / GOODCASE
 Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file; single parameter in command line (teststring_variant)
-Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.json); single command line parameter value overwrites variant 'robot_config' configuration value
+Expectation: Configuration parameters taken from configuration file with predefined default name (robot_config.jsonp); single command line parameter value overwrites variant 'robot_config' configuration value
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0050 / VARIANT_HANDLING / BADCASE
@@ -148,6 +148,16 @@ Comment....: Single file execution
 Test TSM_0064 / VARIANT_HANDLING / BADCASE
 Description: A local config file is passed to command line parameter config_file
 Expectation: Test is not executed; error message; test result is UNKNOWN; reason: a local config file is not a full configuration file
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0065 / VARIANT_HANDLING / BADCASE
+Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0066 / VARIANT_HANDLING / BADCASE
+Description: With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp
+Expectation: Test is not executed; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0100 / LOCAL_CONFIG / GOODCASE
@@ -337,5 +347,5 @@ Description: Test with several sources of parameters: config file, local config,
 Expectation: Accordingly to the priority of the enlisted sources all parameters have proper values finally
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 12.04.2023 - 13:26:18
+Generated: 23.05.2023 - 15:45:58
 

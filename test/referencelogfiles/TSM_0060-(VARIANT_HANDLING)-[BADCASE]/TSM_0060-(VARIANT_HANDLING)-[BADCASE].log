@@ -1,8 +1,8 @@
 ==============================================================================
 20230503 13:54:23.489 - INFO - + START SUITE: Tsm-Testfile-07-Err-1 [ ]
 ==============================================================================
-20230503 13:54:23.500 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_1.json ]
-20230503 13:54:23.516 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.json': 'Expecting property name enclosed in double quotes: line 6 column 3 (char 125)'
+20230503 13:54:23.500 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_1.jsonp ]
+20230503 13:54:23.516 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp': 'Expecting property name enclosed in double quotes: line 6 column 3 (char 125)'
 20230503 13:54:23.516 - UNKNOWN - Loading configuration level 2 failed!
 20230503 13:54:23.516 - DEBUG - Loading configuration level 2 failed!
 20230503 13:54:23.516 - INFO - +- END SETUP: tm.Testsuite Setup (16)

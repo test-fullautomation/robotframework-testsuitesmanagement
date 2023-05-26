@@ -1,8 +1,8 @@
 ==============================================================================
 20230503 13:54:30.507 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
 ==============================================================================
-20230503 13:54:30.507 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.json ]
-20230503 13:54:30.532 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\tsm-test_config_cyclic.2.json': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\import.cyclic\tsm-test_config_cyclic.3.json': 'Cyclic imported json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_cyclic.1.json'!'''
+20230503 13:54:30.507 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230503 13:54:30.532 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\tsm-test_config_cyclic.2.jsonp': 'json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\import.cyclic\import.cyclic\tsm-test_config_cyclic.3.jsonp': 'Cyclic imported json file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_cyclic.1.jsonp'!'''
 20230503 13:54:30.532 - UNKNOWN - Loading of JSON configuration file failed!
 20230503 13:54:30.532 - DEBUG - Loading of JSON configuration file failed!
 20230503 13:54:30.532 - INFO - +- END SETUP: tm.Testsuite Setup (25)

@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 12.04.2023 - 13:26:18
+# 23.05.2023 - 15:45:58
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -163,5 +163,23 @@ class Test_VARIANT_HANDLING_BADCASE:
    )
    def test_TSM_0064(self, Description):
       nReturn = CExecute.Execute("TSM_0064")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp",]
+   )
+   def test_TSM_0065(self, Description):
+      nReturn = CExecute.Execute("TSM_0065")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp",]
+   )
+   def test_TSM_0066(self, Description):
+      nReturn = CExecute.Execute("TSM_0066")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

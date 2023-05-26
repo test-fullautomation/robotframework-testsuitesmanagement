@@ -1,9 +1,9 @@
 ==============================================================================
 20230503 13:54:25.041 - INFO - + START SUITE: Tsm-Testfile-09-Err-3 [ ]
 ==============================================================================
-20230503 13:54:25.049 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.json ]
+20230503 13:54:25.049 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.jsonp ]
 20230503 13:54:25.068 - ERROR - Testsuite management - Loading configuration level 2 failed! 
-          The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.json' 
+          The variant 'default' is not defined in 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp' 
           Please find the suitable variant in this list: 
             - 'variant1'
 20230503 13:54:25.069 - UNKNOWN - Loading configuration level 2 failed!
