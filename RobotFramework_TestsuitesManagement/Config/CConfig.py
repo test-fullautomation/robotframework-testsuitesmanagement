@@ -345,7 +345,7 @@ This loadCfg method uses to load configuration's parameters from json files.
 
         bJsonSchema = True    
         try:
-            sSchemaFile=str(pathlib.Path(__file__).parent.absolute() / "robot_schema.json")
+            sSchemaFile=str(pathlib.Path(__file__).parent.absolute() / "configuration_schema.json")
             with open(sSchemaFile) as f:
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:

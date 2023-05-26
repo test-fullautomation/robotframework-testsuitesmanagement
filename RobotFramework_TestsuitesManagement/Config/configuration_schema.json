@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "./Config/robot_schema.json",
+  "$id": "./Config/configuration_schema.json",
   "title": "robot_config",
   "description": "ROBFW AIO configuration file in json format",
   "type": "object",
