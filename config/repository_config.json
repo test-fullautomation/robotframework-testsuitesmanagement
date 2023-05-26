@@ -14,7 +14,7 @@
    "INTENDEDAUDIENCE" : "Intended Audience :: Developers",
    "TOPIC" : "Topic :: Software Development",
    "INSTALLREQUIRES" : ["JsonPreprocessor","dotdict","robotframework","robotframework-pythonlibcore","jsonschema","lxml"],
-   "PACKAGEDATA" : ["*.pdf","./Config/*.json"],
+   "PACKAGEDATA" : ["*.pdf","./Config/*.json","./Config/*.jsonp"],
    "PACKAGEDOC" : "./packagedoc",
    "CONSOLESCRIPTS" : ["robfwaio_version = RobotFramework_TestsuitesManagement.version:robfwaio_version"]
 }
