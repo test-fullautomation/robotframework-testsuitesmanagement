@@ -727,6 +727,18 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0559**
+
+  [ROBOT_CODE / BADCASE]
+
+   **Robot file with several tests; one test contains keyword FATAL ERROR**
+
+   Expected: Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED
+
+   *Comment: Single file execution*
+
+----
+
 * **Test TSM_0600**
 
   [RETURN_VALUE / GOODCASE]
@@ -811,5 +823,5 @@ Test Use Cases
 
 ----
 
-Generated: 23.05.2023 - 15:45:58
+Generated: 24.05.2023 - 20:42:16
 

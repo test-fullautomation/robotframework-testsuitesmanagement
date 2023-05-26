@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 23.05.2023
+# 24.05.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -47,6 +47,7 @@
 # "tsm-testfile-17-unknown_parameter_2.robot"  # (with variant configuration and parameter assignment to unknown dictionary subkey)
 # "tsm-testfile-18-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 # "tsm-testfile-19-parameter_priority.robot"   # (with variant configuration and extended parameter logging for parameters from different sources)
+# "tsm-testfile-20-fatal_error.robot"          # (with variant configuration and several tests; keyword FATAL ERROR)
 #
 # configfoldertests1/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -914,6 +915,21 @@ dictUsecase['EXPECTEDRETURN']   = 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0559"
+dictUsecase['DESCRIPTION']      = "Robot file with several tests; one test contains keyword FATAL ERROR"
+dictUsecase['EXPECTATION']      = "Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED"
+dictUsecase['SECTION']          = "ROBOT_CODE"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-20-fatal_error.robot" # (with variant configuration and several tests; keyword FATAL ERROR)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = 513 # 1 x failed; 2 x unknown
+dictUsecase['LOGCOMPARE']       = None # !!! reference log file not yet available !!!
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0600"
@@ -1026,10 +1042,15 @@ del dictUsecase
 # Computation of return values:
 # =============================
 
-# failed  = min(failed, 250)
-# unknown = min(unknown, 250)
+# failed  = 1
+# unknown = 2
+
+# failed_test  = min(failed, 250)
+# unknown_test = min(unknown, 250)
 
 # ret_val = (unknown_test << 8) | failed_test
+
+# print(f"--- ret_val: {ret_val}")
 
 # failed  = ret_val & 0xff
 # unknown = (ret_val >> 8) & 0xff
@@ -1043,6 +1064,10 @@ del dictUsecase
 # failed  : 3
 # unknown : 4
 # ret_val : 1027
+
+# failed  : 2
+# unknown : 2
+# ret_val : 513
 
 # testsuitestest:
 # failed  : 6
