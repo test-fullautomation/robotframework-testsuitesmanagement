@@ -34,6 +34,7 @@ from jsonschema import validate
 from builtins import staticmethod
 
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
+from PythonExtensionsCollection.String.CString import CString
 
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
@@ -243,16 +244,26 @@ This loadCfg method uses to load configuration's parameters from json files.
                             bLevel3Check = True
                             break
                     if not bLevel3Check:
-                        if os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.jsonp'):
-                            self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.jsonp'
+                        sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
+                        sJsonFile1    = f"{sConfigFolder}/robot_config.jsonp"
+                        sJsonFile2    = f"{sConfigFolder}/robot_config.json" # still supported alternative extension
+
+                        if os.path.isfile(sJsonFile1) and os.path.isfile(sJsonFile2):
+                            errorMessage = "Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!\n" + \
+                                            f"* file 1: '{sJsonFile1}'\n" + \
+                                            f"* file 2: '{sJsonFile2}'\n" + \
+                                            "Please decide which one to keep and which one to remove. Both together are not allowed."
+                            logger.error(errorMessage)
+                            BuiltIn().unknown("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
+                        elif os.path.isfile(sJsonFile1):
+                            self.sTestCfgFile = sJsonFile1
                             self.rConfigFiles.bLevel4 = False
-                        elif os.path.isfile(self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'):
-                            self.sTestCfgFile = self.sTestcasePath + 'config' + os.path.sep + 'robot_config.json'
+                        elif os.path.isfile(sJsonFile2):
+                            self.sTestCfgFile = sJsonFile2
                             self.rConfigFiles.bLevel4 = False
-                        else:
+                        else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                             self.rConfigFiles.bLevel3 = False
                             if not self.bConfigLoaded:
-                                #self.rConfigFiles.bLevel4 = True
                                 sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
                                 self.sTestCfgFile = sDefaultConfig
                 else:
