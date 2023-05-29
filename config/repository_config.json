@@ -16,5 +16,5 @@
    "INSTALLREQUIRES" : ["JsonPreprocessor","dotdict","robotframework","robotframework-pythonlibcore","jsonschema","lxml"],
    "PACKAGEDATA" : ["*.pdf","./Config/*.json","./Config/*.jsonp"],
    "PACKAGEDOC" : "./packagedoc",
-   "CONSOLESCRIPTS" : ["robfwaio_version = RobotFramework_TestsuitesManagement.version:robfwaio_version"]
+   "CONSOLESCRIPTS" : ["robfwaio_version = RobotFramework_TestsuitesManagement.Config:bundle_version"]
 }

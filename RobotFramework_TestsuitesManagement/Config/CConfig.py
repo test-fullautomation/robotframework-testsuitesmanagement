@@ -42,14 +42,43 @@ from robot.version import get_full_version, get_version
 from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
+from RobotFramework_TestsuitesManagement.version import VERSION, VERSION_DATE
 
-# This is version information represents for the whole AIO bundle
-# It contains the core Robot Framework and relative resources such as:
-# RobotFramework_TestsuitesManagement, RobotLog2DB, VSCodium for Robot Framework, ...
-# This information is used for RobotFramework AIO version control 
-AIO_BUNDLE_NAME = "RobotFramework AIO"
-VERSION         = "0.8.0"
-VERSION_DATE    = "05.2023"
+INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
+BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
+BUNDLE_VERSION = VERSION
+BUNDLE_VERSION_DATE = VERSION_DATE
+
+# Load package context file
+context_filename = "package_context.json"
+context_filepath = os.path.join(os.path.dirname(__file__), context_filename)
+context_config = None
+
+if os.path.isfile(context_filepath):
+    if os.stat(context_filepath).st_size == 0:
+        logger.warn(f"The '{context_filepath}' file is existing but empty.")
+    else:
+        try:
+            with open(context_filepath) as f:
+                context_config = json.load(f)        
+        except Exception as reason:
+            logger.error(f"Cannot load the '{context_filepath}' file. Reason: {reason}")
+            exit(1)
+
+        if ('installer_location' in context_config) and context_config['installer_location']:
+            INSTALLER_LOCATION = context_config['installer_location']
+        if ('bundle_name' in context_config) and context_config['bundle_name']:
+            BUNDLE_NAME = context_config['bundle_name']
+        if ('bundle_version' in context_config) and context_config['bundle_version']:
+            BUNDLE_VERSION = context_config['bundle_version']
+        if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
+            BUNDLE_VERSION = context_config['bundle_version_date']
+
+def bundle_version():
+   '''
+Returns the version of the entire RobotFramework AIO bundle
+   '''
+   print(f"{BUNDLE_VERSION}")
 
 
 class CConfig():
@@ -382,7 +411,7 @@ This loadCfg method uses to load configuration's parameters from json files.
         BuiltIn().set_suite_metadata("machine", self.__getMachineName(), top=True)
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
-        BuiltIn().set_suite_metadata("version", VERSION, top=True)
+        BuiltIn().set_suite_metadata("bundle_version", BUNDLE_VERSION, top=True)
         if "version_sw" in suiteMetadata and self.rMetaData.sVersionSW == '':
             pass
         else:
@@ -701,7 +730,7 @@ with "unknown" state
 
 * No return variable
         '''
-        sCurrentVersion = VERSION
+        sCurrentVersion = BUNDLE_VERSION
         tCurrentVersion = CConfig.tupleVersion(sCurrentVersion)
         
         # Verify format of provided min and max versions then parse to tuples
@@ -892,21 +921,21 @@ Log error message of version control due to reason and set to unknown state.
 
 * No return variable
         '''
-        sLocation = "\\\\bosch.com\\dfsrb\\DfsDE\\DIV\\CM\\DI\\Projects\\Common\\RobotFramework\\Releases"
+
         header = ""
         detail = ""
         if reason=="conflict_min":
             header = "Version conflict."
-            detail = f"\nThe test execution requires minimum RobotFramework AIO version '{version1}'"
-            detail +=f"\nbut the installed RobotFramework AIO version is older         '{version2}'"
+            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{version1}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{version2}'"
         elif reason=="conflict_max":
             header = "Version conflict."
-            detail = f"\nThe test execution requires maximum RobotFramework AIO version '{version1}'"
-            detail +=f"\nbut the installed RobotFramework AIO version is younger       '{version2}'"
+            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{version1}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{version2}'"
         elif reason=="wrong_minmax":
             header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum RobotFramework AIO version                 '{version1}'"
-            detail +=f"\nis younger than the configured maximum RobotFramework AIO version '{version2}'"
+            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{version1}'"
+            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{version2}'"
             detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
         else:
             return
@@ -915,6 +944,9 @@ Log error message of version control due to reason and set to unknown state.
         f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
         f"\nconfig    : {self.sTestCfgFile}" +
         f"\n{detail}\n"
-        "\nPlease install the required RobotFramework AIO version." +
-        f"\nYou can find an installer here: {sLocation}\n", "ERROR")
+        f"\nPlease install the required {BUNDLE_NAME} version." +
+        f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
         BuiltIn().unknown('Version control error!!!')
+
+if __name__ == "__main__":
+    bundle_version()
