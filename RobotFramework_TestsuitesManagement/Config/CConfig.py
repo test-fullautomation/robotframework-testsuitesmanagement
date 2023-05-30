@@ -85,11 +85,11 @@ The loading configuration method is divided into 4 levels, level1 has the highes
    ``".../config/"`` indicats the relative path to json config file, RobotFramework_TestsuitesManagement will recursively
    find the ``config`` folder.
 
-**Level3:** Read in testsuite folder: ``/config/robot_config.json``
+**Level3:** Read in testsuite folder: ``/config/robot_config.jsonp``
 
 **Level4:** Read from RobotFramework AIO installation folder:
 
-    ``/RobotFramework/defaultconfig/robot_config.json``
+    ``/RobotFramework/defaultconfig/robot_config.jsonp``
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
@@ -264,13 +264,13 @@ This loadCfg method uses to load configuration's parameters from json files.
                         else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                             self.rConfigFiles.bLevel3 = False
                             if not self.bConfigLoaded:
-                                sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                                sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                                 self.sTestCfgFile = sDefaultConfig
                 else:
                     self.rConfigFiles.bLevel3 = False
                     if not self.bConfigLoaded:
                         #self.rConfigFiles.bLevel4 = True
-                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                         self.sTestCfgFile = sDefaultConfig
 
             if self.sTestCfgFile != '':                      
