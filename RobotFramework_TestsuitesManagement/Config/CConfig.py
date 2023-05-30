@@ -72,7 +72,7 @@ if os.path.isfile(context_filepath):
         if ('bundle_version' in context_config) and context_config['bundle_version']:
             BUNDLE_VERSION = context_config['bundle_version']
         if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
-            BUNDLE_VERSION = context_config['bundle_version_date']
+            BUNDLE_VERSION_DATE = context_config['bundle_version_date']
 
 def bundle_version():
    '''
