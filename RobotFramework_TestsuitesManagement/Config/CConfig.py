@@ -66,15 +66,15 @@ The loading configuration method is divided into 4 levels, level1 has the highes
 
       {
          "default": {
-            "name": "robot_config.json",
+            "name": "robot_config.jsonp",
             "path": ".../config/"
          },
          "variant_0": {
-            "name": "robot_config.json",
+            "name": "robot_config.jsonp",
             "path": ".../config/"
          },
          "variant_1": {
-            "name": "robot_config_variant_1.json",
+            "name": "robot_config_variant_1.jsonp",
             "path": ".../config/"
          },
             ...
@@ -115,7 +115,7 @@ The loading configuration method is divided into 4 levels, level1 has the highes
                                 bLevel1 = False,
                                 bLevel2 = False,
                                 bLevel3 = False,
-                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.json'
+                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
                             )
     
     rMetaData      = CStruct(
