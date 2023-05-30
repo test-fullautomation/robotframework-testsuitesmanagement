@@ -76,10 +76,23 @@ if os.path.isfile(context_filepath):
 
 def bundle_version():
    '''
-Returns the version of the entire RobotFramework AIO bundle
+This function prints out the package version which is:
+
+- RobotFramework_TestsuitesManagement version when this module is installed
+stand-alone (via `pip` or directly from sourcecode)
+
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO 
+package
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
    '''
    print(f"{BUNDLE_VERSION}")
-
 
 class CConfig():
     '''
@@ -714,13 +727,21 @@ This __getUserName method gets current account name login to run the test.
         
         return sUserName
     
-    def verifyRbfwVersion(self):
+    def verifyVersion(self):
         '''
-This verifyRbfwVersion validates the current RobotFramework AIO version with maximum and minimum version
-(if provided in the configuration file).
+This verifyVersion validates the current package version with maximum and 
+minimum version (if provided in the configuration file).
 
-In case the current version is not between min and max version, then the execution of testsuite is terminated
-with "unknown" state
+The package version is:
+
+- RobotFramework_TestsuitesManagement version when this module is installed
+stand-alone (via `pip` or directly from sourcecode)
+
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO 
+package
+
+In case the current version is not between min and max version, then the 
+execution of testsuite is terminated with "unknown" state
 
 **Arguments:**
 
@@ -755,7 +776,7 @@ with "unknown" state
             bVersionCheck = False
 
         if bVersionCheck:
-            logger.info("Robot Framework AIO version check passed!")
+            logger.info(f"{BUNDLE_NAME} version check passed!")
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
@@ -768,13 +789,13 @@ This bValidateMinVersion validates the current version with required minimun ver
 
   / *Condition*: required / *Type*: tuple /
 
-  Current RobotFramework AIO version.
+  Current package version.
 
 * ``tMinVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  The minimum version of RobotFramework AIO.
+  The minimum version of package.
 
 **Returns:**
 
@@ -793,13 +814,13 @@ This bValidateMaxVersion validates the current version with required minimun ver
 
   / *Condition*: required / *Type*: tuple /
 
-  Current RobotFramework AIO version.
+  Current package version.
 
 * ``tMinVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  The minimum version of RobotFramework AIO.
+  The minimum version of package.
 
 **Returns:**
 
@@ -810,8 +831,8 @@ This bValidateMaxVersion validates the current version with required minimun ver
     @staticmethod
     def bValidateSubVersion(sVersion):
         '''
-This bValidateSubVersion validates the format of provided sub version and parse it into sub tuple
-for version comparision.
+This bValidateSubVersion validates the format of provided sub version and parse 
+it into sub tuple for version comparision.
 
 **Arguments:**
 
@@ -819,7 +840,7 @@ for version comparision.
 
   / *Condition*: required / *Type*: string /
 
-  The version of RobotFramework AIO.
+  The version of package.
 
 **Returns:**
 
@@ -856,31 +877,30 @@ for version comparision.
         '''
 This tupleVersion returns a tuple which contains the (major, minor, patch) version.
 
+In case minor/patch version is missing, it is set to 0.
+E.g: "1" is transformed to "1.0.0" and "1.1" is transformed to "1.1.0"
+            
+This tupleVersion also support version which contains Alpha (a), Beta (b) or 
+Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
+
 **Arguments:**
 
 * ``sVersion``
 
   / *Condition*: required / *Type*: string /
 
-  The version of RobotFramework AIO.
+  The version of package.
 
 **Returns:**
 
 * ``lVersion``
 
   / *Type*: tuple /
+
+  A tuple which contains the (major, minor, patch) version.
+
+
         '''
-        # '''
-
-# TODO: (remaining content needs to be fixed and restored)
-
-        # Return a tuple which contains the (major, minor, patch) version.
-          # - In case minor/patch version is missing, it is set to 0.
-            # E.g: 1   => 1.0.0
-                 # 1.1 => 1.1.0
-          # - Support version contains Alpha (a), Beta (b) or Release candidate (rc):
-            # E.g: 1.2rc3, 1.2.1b1, ...
-        # '''
         lVersion = sVersion.split(".")
         if len(lVersion) == 1:
             lVersion.extend(["0", "0"])
