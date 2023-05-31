@@ -1,0 +1,22 @@
+==============================================================================
+20230531 13:31:03.257 - INFO - + START SUITE: Tsm-Cft-Testfile-2 [ ]
+==============================================================================
+20230531 13:31:03.265 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20230531 13:31:03.266 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+* file 1: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'
+* file 2: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'
+Please decide which one to keep and which one to remove. Both together are not allowed.
+20230531 13:31:03.268 - UNKNOWN - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+20230531 13:31:03.268 - DEBUG - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+20230531 13:31:03.268 - INFO - +- END SETUP: tm.Testsuite Setup (3)
+------------------------------------------------------------------------------
+20230531 13:31:03.268 - INFO - +- START TEST: Test Case tsm-cft-testfile-2 (BADCASE) [ ]
+------------------------------------------------------------------------------
+20230531 13:31:03.271 - INFO - +- END TEST: Test Case tsm-cft-testfile-2 (BADCASE) (1)
+------------------------------------------------------------------------------
+20230531 13:31:03.271 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 13:31:03.271 - INFO - testsuite_teardown: Will be implemented later
+20230531 13:31:03.271 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230531 13:31:03.274 - INFO - + END SUITE: Tsm-Cft-Testfile-2 (117)
+==============================================================================

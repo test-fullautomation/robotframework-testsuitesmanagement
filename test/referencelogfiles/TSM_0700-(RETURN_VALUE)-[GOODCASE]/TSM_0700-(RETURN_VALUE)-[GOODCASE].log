@@ -1,527 +1,533 @@
 ==============================================================================
-20230503 13:54:42.925 - INFO - + START SUITE: Testsuitestest [ ]
+20230531 13:04:33.823 - INFO - + START SUITE: Testsuitestest [ ]
 ==============================================================================
-20230503 13:54:42.933 - INFO - +- START SETUP: tm.Testsuite Setup [ ../config/tsm-test_variants.jsonp ]
-20230503 13:54:42.959 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20230503 13:54:42.959 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230503 13:54:42.961 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230503 13:54:42.962 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.
-20230503 13:54:42.962 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230503 13:54:42.962 - INFO - Set suite metadata 'version_sw' to value ''.
-20230503 13:54:42.962 - INFO - Set suite metadata 'version_hw' to value ''.
-20230503 13:54:42.962 - INFO - Set suite metadata 'version_test' to value ''.
-20230503 13:54:42.962 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230503 13:54:42.963 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230503 13:54:42.964 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230503 13:54:42.964 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20230503 13:54:42.964 - INFO - Running with configuration level 2
-20230503 13:54:42.964 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.jsonp'
-20230503 13:54:42.964 - INFO - Robot Framework AIO version check passed!
-20230503 13:54:42.964 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest'
-20230503 13:54:42.965 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest\config\tsm-test_config_variant1.jsonp'
-20230503 13:54:42.965 - INFO - Number of test suites: 1
-20230503 13:54:42.965 - INFO - Total number of testcases: 18
-20230503 13:54:42.965 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+20230531 13:04:33.835 - INFO - +- START SETUP: tm.Testsuite Setup [ ../config/tsm-test_variants.jsonp ]
+20230531 13:04:33.849 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230531 13:04:33.864 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230531 13:04:33.866 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230531 13:04:33.866 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
+20230531 13:04:33.866 - INFO - Set suite metadata 'bundle_version' to value '0.8.0.0'.
+20230531 13:04:33.866 - INFO - Set suite metadata 'version_sw' to value ''.
+20230531 13:04:33.866 - INFO - Set suite metadata 'version_hw' to value ''.
+20230531 13:04:33.866 - INFO - Set suite metadata 'version_test' to value ''.
+20230531 13:04:33.867 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230531 13:04:33.867 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230531 13:04:33.868 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230531 13:04:33.868 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230531 13:04:33.868 - INFO - Running with configuration level 2
+20230531 13:04:33.868 - INFO - Parameters loaded from 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/testsuitestest/config/tsm-test_config_variant1.jsonp'
+20230531 13:04:33.868 - INFO - RobotFramework AIO version check passed!
+20230531 13:04:33.868 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\testsuitestest'
+20230531 13:04:33.868 - INFO - CfgFile Path: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/testsuitestest/config/tsm-test_config_variant1.jsonp'
+20230531 13:04:33.869 - INFO - Number of test suites: 1
+20230531 13:04:33.869 - INFO - Total number of testcases: 18
+20230531 13:04:33.869 - INFO - +- END SETUP: tm.Testsuite Setup (34)
 ==============================================================================
-20230503 13:54:42.966 - INFO - +- START SUITE: Testsuitestest.001 [ ]
+20230531 13:04:33.870 - INFO - +- START SUITE: Testsuitestest.001 [ ]
 ==============================================================================
-20230503 13:54:42.970 - INFO - +-- START SUITE: Testsuitestest.001.001-01 [ ]
+20230531 13:04:33.874 - INFO - +-- START SUITE: Testsuitestest.001.001-01 [ ]
 ==============================================================================
-20230503 13:54:42.981 - INFO - +--- START SUITE: Testsuitestest.001.001-01.001-01-01 [ ]
+20230531 13:04:33.878 - INFO - +--- START SUITE: Testsuitestest.001.001-01.001-01-01 [ ]
 ==============================================================================
-20230503 13:54:42.996 - INFO - +---- START SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 [ ]
+20230531 13:04:33.890 - INFO - +---- START SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 [ ]
 ==============================================================================
-20230503 13:54:42.997 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-A [ ]
+20230531 13:04:33.892 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.004 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-A) ]
-20230503 13:54:43.004 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.005 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.896 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-A) ]
+20230531 13:04:33.898 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:33.901 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.005 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-A) ]
-20230503 13:54:43.006 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.010 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.902 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-A) ]
+20230531 13:04:33.903 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:33.912 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.010 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-A) ]
-20230503 13:54:43.010 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.011 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.912 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-A) ]
+20230531 13:04:33.913 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:33.916 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.011 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-A) ]
-20230503 13:54:43.011 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.016 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.917 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-A) ]
+20230531 13:04:33.918 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:33.921 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.016 - INFO - +------ START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.016 - FAIL - AssertionError
-20230503 13:54:43.017 - DEBUG - Traceback (most recent call last):
+20230531 13:04:33.921 - INFO - +------ START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:33.922 - FAIL - AssertionError
+20230531 13:04:33.922 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.017 - INFO - +------ END KEYWORD: BuiltIn.Fail (1)
+AssertionError
+20230531 13:04:33.924 - INFO - +------ END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.017 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.018 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:33.924 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:33.925 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230503 13:54:43.020 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-A (21)
+20230531 13:04:33.936 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-A (35)
 ------------------------------------------------------------------------------
-20230503 13:54:43.020 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-B [ ]
+20230531 13:04:33.936 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.020 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-B) ]
-20230503 13:54:43.021 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.022 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.942 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-B) ]
+20230531 13:04:33.943 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:33.944 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.022 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-B) ]
-20230503 13:54:43.022 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.023 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.944 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-B) ]
+20230531 13:04:33.944 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:33.948 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.023 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-B) ]
-20230503 13:54:43.023 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.024 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.948 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-B) ]
+20230531 13:04:33.949 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:33.950 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.024 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-B) ]
-20230503 13:54:43.024 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.026 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.950 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-B) ]
+20230531 13:04:33.950 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:33.951 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.026 - INFO - +------ START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.026 - UNKNOWN - Exception occurred.
-20230503 13:54:43.027 - INFO - +------ END KEYWORD: BuiltIn.Unknown (0)
+20230531 13:04:33.951 - INFO - +------ START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:33.951 - UNKNOWN - Exception occurred.
+20230531 13:04:33.951 - INFO - +------ END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.027 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.027 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:33.951 - INFO - +------ START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:33.953 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
 ------------------------------------------------------------------------------
-20230503 13:54:43.029 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-B (7)
+20230531 13:04:33.959 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-B (18)
 ------------------------------------------------------------------------------
-20230503 13:54:43.029 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-C [ ]
+20230531 13:04:33.959 - INFO - +----- START TEST: Test Case tsm-tst-testfile-001-01-01-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.030 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-C) ]
-20230503 13:54:43.030 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.032 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.960 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-C) ]
+20230531 13:04:33.961 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:33.964 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.032 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-C) ]
-20230503 13:54:43.032 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.033 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.964 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-C) ]
+20230531 13:04:33.964 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:33.965 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.033 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-C) ]
-20230503 13:54:43.033 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.035 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.965 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-C) ]
+20230531 13:04:33.965 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:33.969 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.035 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-C) ]
-20230503 13:54:43.036 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.036 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:33.970 - INFO - +------ START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-C) ]
+20230531 13:04:33.970 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:33.971 - INFO - +------ END KEYWORD: rf.extensions.Pretty Print (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.040 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-C (7)
+20230531 13:04:33.976 - INFO - +----- END TEST: Test Case tsm-tst-testfile-001-01-01-C (12)
 ------------------------------------------------------------------------------
-20230503 13:54:43.046 - INFO - +---- END SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 (56)
+20230531 13:04:33.978 - INFO - +---- END SUITE: Testsuitestest.001.001-01.001-01-01.Tsm-Tst-Testfile-001-01-01 (97)
 ==============================================================================
-20230503 13:54:43.049 - INFO - +--- END SUITE: Testsuitestest.001.001-01.001-01-01 (66)
+20230531 13:04:33.980 - INFO - +--- END SUITE: Testsuitestest.001.001-01.001-01-01 (101)
 ==============================================================================
-20230503 13:54:43.051 - INFO - +--- START SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 [ ]
+20230531 13:04:33.982 - INFO - +--- START SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 [ ]
 ==============================================================================
-20230503 13:54:43.052 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-A [ ]
+20230531 13:04:33.983 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.053 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-A) ]
-20230503 13:54:43.053 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.055 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.986 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-A) ]
+20230531 13:04:33.987 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:33.990 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.056 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-A) ]
-20230503 13:54:43.056 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.057 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.990 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-A) ]
+20230531 13:04:33.990 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:33.991 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.057 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-A) ]
-20230503 13:54:43.057 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.060 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.991 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-A) ]
+20230531 13:04:33.991 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:33.992 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.061 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-A) ]
-20230503 13:54:43.061 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.062 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:33.992 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-A) ]
+20230531 13:04:33.992 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:33.997 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.062 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.062 - FAIL - AssertionError
-20230503 13:54:43.062 - DEBUG - Traceback (most recent call last):
+20230531 13:04:33.997 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:33.997 - FAIL - AssertionError
+20230531 13:04:33.997 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.062 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
+AssertionError
+20230531 13:04:33.998 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.063 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.063 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20230531 13:04:33.998 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:33.998 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.065 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-A (11)
+20230531 13:04:34.005 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-A (15)
 ------------------------------------------------------------------------------
-20230503 13:54:43.065 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-B [ ]
+20230531 13:04:34.006 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.067 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-B) ]
-20230503 13:54:43.068 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.068 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.007 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-B) ]
+20230531 13:04:34.007 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.008 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.068 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-B) ]
-20230503 13:54:43.069 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.073 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.008 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-B) ]
+20230531 13:04:34.008 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.009 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.073 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-B) ]
-20230503 13:54:43.073 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.074 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.009 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-B) ]
+20230531 13:04:34.009 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.010 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.074 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-B) ]
-20230503 13:54:43.074 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.078 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.010 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-B) ]
+20230531 13:04:34.010 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.011 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.078 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.078 - UNKNOWN - Exception occurred.
-20230503 13:54:43.079 - INFO - +----- END KEYWORD: BuiltIn.Unknown (0)
+20230531 13:04:34.011 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:34.011 - UNKNOWN - Exception occurred.
+20230531 13:04:34.012 - INFO - +----- END KEYWORD: BuiltIn.Unknown (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.079 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.079 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.012 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.012 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.081 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-B (14)
+20230531 13:04:34.014 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-B (7)
 ------------------------------------------------------------------------------
-20230503 13:54:43.081 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-C [ ]
+20230531 13:04:34.014 - INFO - +---- START TEST: Test Case tsm-tst-testfile-001-01-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.082 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-C) ]
-20230503 13:54:43.082 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.083 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.014 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-C) ]
+20230531 13:04:34.015 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-01-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.020 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.083 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-C) ]
-20230503 13:54:43.083 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.084 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.020 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-C) ]
+20230531 13:04:34.020 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.022 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.084 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-C) ]
-20230503 13:54:43.084 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.085 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.022 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-C) ]
+20230531 13:04:34.022 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.023 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.085 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-C) ]
-20230503 13:54:43.085 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.088 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (3)
+20230531 13:04:34.023 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-C) ]
+20230531 13:04:34.023 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.026 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.092 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-C (7)
+20230531 13:04:34.028 - INFO - +---- END TEST: Test Case tsm-tst-testfile-001-01-C (12)
 ------------------------------------------------------------------------------
-20230503 13:54:43.095 - INFO - +--- END SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 (43)
+20230531 13:04:34.037 - INFO - +--- END SUITE: Testsuitestest.001.001-01.Tsm-Tst-Testfile-001-01 (48)
 ==============================================================================
-20230503 13:54:43.103 - INFO - +-- END SUITE: Testsuitestest.001.001-01 (127)
+20230531 13:04:34.039 - INFO - +-- END SUITE: Testsuitestest.001.001-01 (164)
 ==============================================================================
-20230503 13:54:43.105 - INFO - +-- START SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 [ ]
+20230531 13:04:34.042 - INFO - +-- START SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 [ ]
 ==============================================================================
-20230503 13:54:43.106 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-A [ ]
+20230531 13:04:34.042 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.110 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-A) ]
-20230503 13:54:43.110 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.111 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.043 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-A) ]
+20230531 13:04:34.043 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.044 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.111 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-A) ]
-20230503 13:54:43.111 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.112 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.044 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-A) ]
+20230531 13:04:34.044 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.045 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.112 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-A) ]
-20230503 13:54:43.112 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.113 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.045 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-A) ]
+20230531 13:04:34.045 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.046 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.113 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-A) ]
-20230503 13:54:43.113 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.115 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.046 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-A) ]
+20230531 13:04:34.046 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.052 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.115 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.115 - FAIL - AssertionError
-20230503 13:54:43.115 - DEBUG - Traceback (most recent call last):
+20230531 13:04:34.052 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:34.053 - FAIL - AssertionError
+20230531 13:04:34.053 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.115 - INFO - +---- END KEYWORD: BuiltIn.Fail (0)
+AssertionError
+20230531 13:04:34.053 - INFO - +---- END KEYWORD: BuiltIn.Fail (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.115 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.115 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.053 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.053 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.116 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-A (9)
+20230531 13:04:34.055 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-A (12)
 ------------------------------------------------------------------------------
-20230503 13:54:43.117 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-B [ ]
+20230531 13:04:34.055 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.119 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-B) ]
-20230503 13:54:43.120 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.120 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.058 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-B) ]
+20230531 13:04:34.059 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.059 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.120 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-B) ]
-20230503 13:54:43.121 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.125 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.060 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-B) ]
+20230531 13:04:34.060 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.065 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.125 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-B) ]
-20230503 13:54:43.125 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.127 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.065 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-B) ]
+20230531 13:04:34.065 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.066 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.127 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-B) ]
-20230503 13:54:43.127 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.128 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.066 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-B) ]
+20230531 13:04:34.066 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.070 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.128 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.128 - UNKNOWN - Exception occurred.
-20230503 13:54:43.128 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
+20230531 13:04:34.070 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:34.070 - UNKNOWN - Exception occurred.
+20230531 13:04:34.071 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.128 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.129 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.071 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.071 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.130 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-B (13)
+20230531 13:04:34.073 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-B (16)
 ------------------------------------------------------------------------------
-20230503 13:54:43.130 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-C [ ]
+20230531 13:04:34.073 - INFO - +--- START TEST: Test Case tsm-tst-testfile-001-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.131 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-C) ]
-20230503 13:54:43.131 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.134 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.073 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-C) ]
+20230531 13:04:34.074 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-001-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.074 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.134 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-C) ]
-20230503 13:54:43.134 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.135 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.074 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-C) ]
+20230531 13:04:34.075 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-001-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.075 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.135 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-C) ]
-20230503 13:54:43.135 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.141 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.075 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-C) ]
+20230531 13:04:34.076 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-001-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.076 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.141 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-C) ]
-20230503 13:54:43.142 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.142 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.076 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-C) ]
+20230531 13:04:34.076 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-001-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.077 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ------------------------------------------------------------------------------
-20230503 13:54:43.144 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-C (13)
+20230531 13:04:34.080 - INFO - +--- END TEST: Test Case tsm-tst-testfile-001-C (4)
 ------------------------------------------------------------------------------
-20230503 13:54:43.146 - INFO - +-- END SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 (41)
+20230531 13:04:34.090 - INFO - +-- END SUITE: Testsuitestest.001.Tsm-Tst-Testfile-001 (41)
 ==============================================================================
-20230503 13:54:43.150 - INFO - +- END SUITE: Testsuitestest.001 (182)
+20230531 13:04:34.103 - INFO - +- END SUITE: Testsuitestest.001 (221)
 ==============================================================================
-20230503 13:54:43.152 - INFO - +- START SUITE: Testsuitestest.002 [ ]
+20230531 13:04:34.107 - INFO - +- START SUITE: Testsuitestest.002 [ ]
 ==============================================================================
-20230503 13:54:43.156 - INFO - +-- START SUITE: Testsuitestest.002.002-01 [ ]
+20230531 13:04:34.110 - INFO - +-- START SUITE: Testsuitestest.002.002-01 [ ]
 ==============================================================================
-20230503 13:54:43.159 - INFO - +--- START SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 [ ]
+20230531 13:04:34.115 - INFO - +--- START SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 [ ]
 ==============================================================================
-20230503 13:54:43.165 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-A [ ]
+20230531 13:04:34.117 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.166 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-A) ]
-20230503 13:54:43.167 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.168 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.117 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-A) ]
+20230531 13:04:34.118 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.120 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.168 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-A) ]
-20230503 13:54:43.168 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.172 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.121 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-A) ]
+20230531 13:04:34.121 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.122 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.172 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-A) ]
-20230503 13:54:43.172 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.173 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.122 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-A) ]
+20230531 13:04:34.122 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.126 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.173 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-A) ]
-20230503 13:54:43.173 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.174 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.126 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-A) ]
+20230531 13:04:34.127 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.128 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.174 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.174 - FAIL - AssertionError
-20230503 13:54:43.174 - DEBUG - Traceback (most recent call last):
+20230531 13:04:34.128 - INFO - +----- START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:34.128 - FAIL - AssertionError
+20230531 13:04:34.128 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.175 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
+AssertionError
+20230531 13:04:34.128 - INFO - +----- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.175 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.175 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.128 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.129 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.177 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-A (11)
+20230531 13:04:34.132 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-A (12)
 ------------------------------------------------------------------------------
-20230503 13:54:43.178 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-B [ ]
+20230531 13:04:34.132 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.178 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-B) ]
-20230503 13:54:43.179 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.179 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.133 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-B) ]
+20230531 13:04:34.133 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.134 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.179 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-B) ]
-20230503 13:54:43.180 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.183 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (2)
+20230531 13:04:34.134 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-B) ]
+20230531 13:04:34.134 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.135 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.184 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-B) ]
-20230503 13:54:43.184 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.187 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.135 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-B) ]
+20230531 13:04:34.135 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.136 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.187 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-B) ]
-20230503 13:54:43.187 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.188 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.136 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-B) ]
+20230531 13:04:34.136 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.138 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.188 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.189 - UNKNOWN - Exception occurred.
-20230503 13:54:43.189 - INFO - +----- END KEYWORD: BuiltIn.Unknown (1)
+20230531 13:04:34.138 - INFO - +----- START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:34.138 - UNKNOWN - Exception occurred.
+20230531 13:04:34.138 - INFO - +----- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.189 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.190 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.138 - INFO - +----- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.138 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.195 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-B (12)
+20230531 13:04:34.141 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-B (6)
 ------------------------------------------------------------------------------
-20230503 13:54:43.195 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-C [ ]
+20230531 13:04:34.142 - INFO - +---- START TEST: Test Case tsm-tst-testfile-002-01-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.197 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-C) ]
-20230503 13:54:43.197 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.199 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.146 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-C) ]
+20230531 13:04:34.146 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-01-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.147 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.199 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-C) ]
-20230503 13:54:43.199 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.202 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.147 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-C) ]
+20230531 13:04:34.147 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.148 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.202 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-C) ]
-20230503 13:54:43.202 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.204 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.148 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-C) ]
+20230531 13:04:34.148 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.151 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.204 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-C) ]
-20230503 13:54:43.204 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.205 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.151 - INFO - +----- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-C) ]
+20230531 13:04:34.151 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-01-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.152 - INFO - +----- END KEYWORD: rf.extensions.Pretty Print (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.206 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-C (10)
+20230531 13:04:34.155 - INFO - +---- END TEST: Test Case tsm-tst-testfile-002-01-C (11)
 ------------------------------------------------------------------------------
-20230503 13:54:43.207 - INFO - +--- END SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 (49)
+20230531 13:04:34.161 - INFO - +--- END SUITE: Testsuitestest.002.002-01.Tsm-Tst-Testfile-002-01 (43)
 ==============================================================================
-20230503 13:54:43.209 - INFO - +-- END SUITE: Testsuitestest.002.002-01 (53)
+20230531 13:04:34.164 - INFO - +-- END SUITE: Testsuitestest.002.002-01 (53)
 ==============================================================================
-20230503 13:54:43.211 - INFO - +-- START SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 [ ]
+20230531 13:04:34.166 - INFO - +-- START SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 [ ]
 ==============================================================================
-20230503 13:54:43.217 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-A [ ]
+20230531 13:04:34.168 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.218 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-A) ]
-20230503 13:54:43.219 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.219 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.168 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-A) ]
+20230531 13:04:34.169 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.169 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.220 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-A) ]
-20230503 13:54:43.220 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.220 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.169 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-A) ]
+20230531 13:04:34.170 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.172 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.221 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-A) ]
-20230503 13:54:43.221 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.223 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.172 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-A) ]
+20230531 13:04:34.172 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.176 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.224 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-A) ]
-20230503 13:54:43.224 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.224 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.176 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-A) ]
+20230531 13:04:34.176 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.177 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.225 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.225 - FAIL - AssertionError
-20230503 13:54:43.225 - DEBUG - Traceback (most recent call last):
+20230531 13:04:34.177 - INFO - +---- START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:34.177 - FAIL - AssertionError
+20230531 13:04:34.177 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.225 - INFO - +---- END KEYWORD: BuiltIn.Fail (0)
+AssertionError
+20230531 13:04:34.177 - INFO - +---- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.225 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.226 - INFO - +---- END KEYWORD: BuiltIn.Log (1)
+20230531 13:04:34.177 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.178 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.233 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-A (9)
+20230531 13:04:34.179 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-A (10)
 ------------------------------------------------------------------------------
-20230503 13:54:43.233 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-B [ ]
+20230531 13:04:34.179 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.233 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-B) ]
-20230503 13:54:43.234 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.235 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.183 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-B) ]
+20230531 13:04:34.183 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.184 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.235 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-B) ]
-20230503 13:54:43.235 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.236 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.184 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-B) ]
+20230531 13:04:34.184 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.188 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.236 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-B) ]
-20230503 13:54:43.236 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.237 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.189 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-B) ]
+20230531 13:04:34.189 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.190 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.237 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-B) ]
-20230503 13:54:43.237 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.238 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.190 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-B) ]
+20230531 13:04:34.190 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.194 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.238 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.239 - UNKNOWN - Exception occurred.
-20230503 13:54:43.239 - INFO - +---- END KEYWORD: BuiltIn.Unknown (1)
+20230531 13:04:34.194 - INFO - +---- START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:34.194 - UNKNOWN - Exception occurred.
+20230531 13:04:34.194 - INFO - +---- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.239 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.240 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.195 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.195 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.241 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-B (7)
+20230531 13:04:34.197 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-B (16)
 ------------------------------------------------------------------------------
-20230503 13:54:43.241 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-C [ ]
+20230531 13:04:34.197 - INFO - +--- START TEST: Test Case tsm-tst-testfile-002-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.241 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-C) ]
-20230503 13:54:43.242 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.248 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (2)
+20230531 13:04:34.198 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-C) ]
+20230531 13:04:34.198 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-002-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.199 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.248 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-C) ]
-20230503 13:54:43.248 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.249 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.199 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-C) ]
+20230531 13:04:34.199 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-002-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.200 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.249 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-C) ]
-20230503 13:54:43.249 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.249 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.200 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-C) ]
+20230531 13:04:34.200 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-002-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.201 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.249 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-C) ]
-20230503 13:54:43.250 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.250 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.201 - INFO - +---- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-C) ]
+20230531 13:04:34.201 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-002-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.203 - INFO - +---- END KEYWORD: rf.extensions.Pretty Print (1)
 ------------------------------------------------------------------------------
-20230503 13:54:43.252 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-C (10)
+20230531 13:04:34.207 - INFO - +--- END TEST: Test Case tsm-tst-testfile-002-C (6)
 ------------------------------------------------------------------------------
-20230503 13:54:43.259 - INFO - +-- END SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 (43)
+20230531 13:04:34.210 - INFO - +-- END SUITE: Testsuitestest.002.Tsm-Tst-Testfile-002 (43)
 ==============================================================================
-20230503 13:54:43.265 - INFO - +- END SUITE: Testsuitestest.002 (109)
+20230531 13:04:34.212 - INFO - +- END SUITE: Testsuitestest.002 (107)
 ==============================================================================
-20230503 13:54:43.267 - INFO - +- START SUITE: Testsuitestest.Tsm-Tst-Testfile-1 [ ]
+20230531 13:04:34.214 - INFO - +- START SUITE: Testsuitestest.Tsm-Tst-Testfile-1 [ ]
 ==============================================================================
-20230503 13:54:43.268 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-A [ ]
+20230531 13:04:34.215 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-A [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.268 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-A) ]
-20230503 13:54:43.269 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-A) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.270 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.215 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-A) ]
+20230531 13:04:34.215 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-A) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.216 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.270 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-A) ]
-20230503 13:54:43.270 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.271 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.216 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-A) ]
+20230531 13:04:34.216 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-A) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.219 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.271 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-A) ]
-20230503 13:54:43.271 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.272 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.219 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-A) ]
+20230531 13:04:34.219 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-A) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.223 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.272 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-A) ]
-20230503 13:54:43.272 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.273 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.223 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-A) ]
+20230531 13:04:34.223 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-A) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.225 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.273 - INFO - +--- START KEYWORD: BuiltIn.Fail [ ]
-20230503 13:54:43.273 - FAIL - AssertionError
-20230503 13:54:43.273 - DEBUG - Traceback (most recent call last):
+20230531 13:04:34.225 - INFO - +--- START KEYWORD: BuiltIn.Fail [ ]
+20230531 13:04:34.225 - FAIL - AssertionError
+20230531 13:04:34.225 - DEBUG - Traceback (most recent call last):
   None
-20230503 13:54:43.275 - INFO - +--- END KEYWORD: BuiltIn.Fail (0)
+AssertionError
+20230531 13:04:34.225 - INFO - +--- END KEYWORD: BuiltIn.Fail (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.275 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.276 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.225 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.226 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.281 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-A (8)
+20230531 13:04:34.228 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-A (11)
 ------------------------------------------------------------------------------
-20230503 13:54:43.282 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-B [ ]
+20230531 13:04:34.228 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-B [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.282 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-B) ]
-20230503 13:54:43.283 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-B) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.284 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.228 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-B) ]
+20230531 13:04:34.229 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-B) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.229 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.284 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-B) ]
-20230503 13:54:43.284 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.285 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.229 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-B) ]
+20230531 13:04:34.230 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-B) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.230 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.285 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-B) ]
-20230503 13:54:43.285 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.291 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.230 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-B) ]
+20230531 13:04:34.231 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-B) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.231 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.291 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-B) ]
-20230503 13:54:43.291 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.292 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 13:04:34.231 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-B) ]
+20230531 13:04:34.231 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-B) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.232 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.292 - INFO - +--- START KEYWORD: BuiltIn.Unknown [ ]
-20230503 13:54:43.292 - UNKNOWN - Exception occurred.
-20230503 13:54:43.293 - INFO - +--- END KEYWORD: BuiltIn.Unknown (0)
+20230531 13:04:34.232 - INFO - +--- START KEYWORD: BuiltIn.Unknown [ ]
+20230531 13:04:34.232 - UNKNOWN - Exception occurred.
+20230531 13:04:34.233 - INFO - +--- END KEYWORD: BuiltIn.Unknown (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.293 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230503 13:54:43.293 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20230531 13:04:34.233 - INFO - +--- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 13:04:34.234 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
 ------------------------------------------------------------------------------
-20230503 13:54:43.295 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-B (12)
+20230531 13:04:34.239 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-B (7)
 ------------------------------------------------------------------------------
-20230503 13:54:43.296 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-C [ ]
+20230531 13:04:34.240 - INFO - +-- START TEST: Test Case tsm-tst-testfile-1-C [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:43.296 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-C) ]
-20230503 13:54:43.297 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-C) : [STR]  :  'tsm-test_config_variant1'
-20230503 13:54:43.297 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.242 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-C) ]
+20230531 13:04:34.244 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-tst-testfile-1-C) : [STR]  :  'tsm-test_config_variant1'
+20230531 13:04:34.246 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.297 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-C) ]
-20230503 13:54:43.298 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230503 13:54:43.298 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.246 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-C) ]
+20230531 13:04:34.247 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-tst-testfile-1-C) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 13:04:34.251 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.298 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-C) ]
-20230503 13:54:43.299 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230503 13:54:43.299 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.252 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-C) ]
+20230531 13:04:34.252 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-tst-testfile-1-C) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 13:04:34.254 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230503 13:54:43.299 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-C) ]
-20230503 13:54:43.300 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230503 13:54:43.300 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 13:04:34.254 - INFO - +--- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-C) ]
+20230531 13:04:34.254 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-tst-testfile-1-C) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 13:04:34.257 - INFO - +--- END KEYWORD: rf.extensions.Pretty Print (1)
 ------------------------------------------------------------------------------
-20230503 13:54:43.301 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-C (5)
+20230531 13:04:34.259 - INFO - +-- END TEST: Test Case tsm-tst-testfile-1-C (18)
 ------------------------------------------------------------------------------
-20230503 13:54:43.303 - INFO - +- END SUITE: Testsuitestest.Tsm-Tst-Testfile-1 (36)
+20230531 13:04:34.262 - INFO - +- END SUITE: Testsuitestest.Tsm-Tst-Testfile-1 (47)
 ==============================================================================
-20230503 13:54:43.310 - INFO - + END SUITE: Testsuitestest (472)
+20230531 13:04:34.264 - INFO - + END SUITE: Testsuitestest (537)
 ==============================================================================

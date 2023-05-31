@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230503 13:54:13.768" rpa="false" schemaversion="2">
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:26.552" rpa="false" schemaversion="3">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
-<arg>./config/tsm-test_variants.json</arg>
+<arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230503 13:54:13.929" level="INFO">Running with configuration level 1</msg>
-<msg timestamp="20230503 13:54:13.930" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230503 13:54:13.930" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230503 13:54:13.930" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.json'</msg>
-<msg timestamp="20230503 13:54:13.930" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230503 13:54:13.930" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230503 13:54:13.929" endtime="20230503 13:54:13.930"/>
+<msg timestamp="20230531 12:48:26.704" level="INFO">Running with configuration level 1</msg>
+<msg timestamp="20230531 12:48:26.704" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20230531 12:48:26.704" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230531 12:48:26.705" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.jsonp'</msg>
+<msg timestamp="20230531 12:48:26.705" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230531 12:48:26.705" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230531 12:48:26.703" endtime="20230531 12:48:26.705"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-02">
+<test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:13.932" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230503 13:54:13.931" endtime="20230503 13:54:13.932"/>
+<msg timestamp="20230531 12:48:26.706" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230531 12:48:26.706" endtime="20230531 12:48:26.706"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230503 13:54:13.933" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_variant2'</msg>
-<status status="PASS" starttime="20230503 13:54:13.932" endtime="20230503 13:54:13.933"/>
+<msg timestamp="20230531 12:48:26.707" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_variant2'</msg>
+<status status="PASS" starttime="20230531 12:48:26.707" endtime="20230531 12:48:26.707"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230503 13:54:13.934" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230503 13:54:13.934" endtime="20230503 13:54:13.934"/>
+<msg timestamp="20230531 12:48:26.709" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20230531 12:48:26.708" endtime="20230531 12:48:26.709"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230503 13:54:13.937" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230503 13:54:13.937" endtime="20230503 13:54:13.938"/>
+<msg timestamp="20230531 12:48:26.717" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20230531 12:48:26.717" endtime="20230531 12:48:26.717"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230503 13:54:13.939" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230503 13:54:13.939" endtime="20230503 13:54:13.939"/>
+<msg timestamp="20230531 12:48:26.718" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20230531 12:48:26.718" endtime="20230531 12:48:26.718"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:13.940" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:13.940" endtime="20230503 13:54:13.940"/>
+<msg timestamp="20230531 12:48:26.724" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 12:48:26.724" endtime="20230531 12:48:26.724"/>
 </kw>
 <doc>tsm-testfile-02</doc>
-<status status="PASS" starttime="20230503 13:54:13.930" endtime="20230503 13:54:13.940"/>
+<status status="PASS" starttime="20230531 12:48:26.705" endtime="20230531 12:48:26.724"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:13.943" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:13.942" endtime="20230503 13:54:13.943"/>
+<msg timestamp="20230531 12:48:26.726" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 12:48:26.726" endtime="20230531 12:48:26.726"/>
 </kw>
+<meta name="bundle_version">0.8.0.0</meta>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">tsm-test_config_variant2</meta>
 <meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 4.1.3 (Python 3.9.16 on win32)</meta>
-<meta name="version">0.7.0</meta>
+<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230503 13:54:13.780" endtime="20230503 13:54:13.943"/>
+<status status="PASS" starttime="20230531 12:48:26.563" endtime="20230531 12:48:26.726"/>
 </suite>
 <statistics>
 <total>

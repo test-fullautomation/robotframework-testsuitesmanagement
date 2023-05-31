@@ -1,69 +1,69 @@
 ==============================================================================
-20230504 14:19:14.563 - INFO - + START SUITE: Tsm-Testfile-13-Keyword Incomplete 1 [ ]
+20230531 12:57:24.921 - INFO - + START SUITE: Tsm-Testfile-13-Keyword Incomplete 1 [ ]
 ==============================================================================
-20230504 14:19:14.571 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230504 14:19:14.598 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20230504 14:19:14.598 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230504 14:19:14.600 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230504 14:19:14.600 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
-20230504 14:19:14.600 - INFO - Set suite metadata 'version' to value '0.7.0'.
-20230504 14:19:14.600 - INFO - Set suite metadata 'version_sw' to value ''.
-20230504 14:19:14.600 - INFO - Set suite metadata 'version_hw' to value ''.
-20230504 14:19:14.601 - INFO - Set suite metadata 'version_test' to value ''.
-20230504 14:19:14.601 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230504 14:19:14.601 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230504 14:19:14.602 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20230504 14:19:14.602 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20230504 14:19:14.603 - INFO - Running with configuration level 2
-20230504 14:19:14.603 - INFO - Parameters loaded from 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.jsonp'
-20230504 14:19:14.603 - INFO - Robot Framework AIO version check passed!
-20230504 14:19:14.603 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
-20230504 14:19:14.603 - INFO - CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.jsonp'
-20230504 14:19:14.603 - INFO - Number of test suites: 1
-20230504 14:19:14.603 - INFO - Total number of testcases: 1
-20230504 14:19:14.603 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+20230531 12:57:24.928 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230531 12:57:24.943 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20230531 12:57:24.959 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230531 12:57:24.959 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230531 12:57:24.959 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
+20230531 12:57:24.959 - INFO - Set suite metadata 'bundle_version' to value '0.8.0.0'.
+20230531 12:57:24.959 - INFO - Set suite metadata 'version_sw' to value ''.
+20230531 12:57:24.959 - INFO - Set suite metadata 'version_hw' to value ''.
+20230531 12:57:24.959 - INFO - Set suite metadata 'version_test' to value ''.
+20230531 12:57:24.959 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230531 12:57:24.959 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230531 12:57:24.959 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20230531 12:57:24.959 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20230531 12:57:24.959 - INFO - Running with configuration level 2
+20230531 12:57:24.959 - INFO - Parameters loaded from 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+20230531 12:57:24.959 - INFO - RobotFramework AIO version check passed!
+20230531 12:57:24.959 - INFO - Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'
+20230531 12:57:24.959 - INFO - CfgFile Path: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+20230531 12:57:24.959 - INFO - Number of test suites: 1
+20230531 12:57:24.959 - INFO - Total number of testcases: 1
+20230531 12:57:24.959 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20230504 14:19:14.604 - INFO - +- START TEST: Test Case tsm-testfile-13-keyword_incomplete_1 [ ]
+20230531 12:57:24.959 - INFO - +- START TEST: Test Case tsm-testfile-13-keyword_incomplete_1 [ ]
 ------------------------------------------------------------------------------
-20230504 14:19:14.605 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230504 14:19:14.605 - INFO - Test Count: 1
-20230504 14:19:14.605 - INFO - +-- END SETUP: tm.Testcase Setup (1)
+20230531 12:57:24.959 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230531 12:57:24.959 - INFO - Test Count: 1
+20230531 12:57:24.959 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.605 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-13-keyword_incomplete_1) ]
-20230504 14:19:14.606 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'tsm-test_config_variant1'
-20230504 14:19:14.607 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 12:57:24.959 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-13-keyword_incomplete_1) ]
+20230531 12:57:24.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'tsm-test_config_variant1'
+20230531 12:57:24.959 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.607 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-13-keyword_incomplete_1) ]
-20230504 14:19:14.607 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230504 14:19:14.608 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230531 12:57:24.959 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-13-keyword_incomplete_1) ]
+20230531 12:57:24.959 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230531 12:57:24.959 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.608 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-13-keyword_incomplete_1) ]
-20230504 14:19:14.608 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20230504 14:19:14.609 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 12:57:24.959 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-13-keyword_incomplete_1) ]
+20230531 12:57:24.959 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20230531 12:57:24.959 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.609 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-13-keyword_incomplete_1) ]
-20230504 14:19:14.609 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230504 14:19:14.610 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230531 12:57:24.959 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-13-keyword_incomplete_1) ]
+20230531 12:57:24.959 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-13-keyword_incomplete_1) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230531 12:57:24.959 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.610 - INFO - +-- START FOR: ${index} IN RANGE [ 0 | 2 ] [ ]
-20230504 14:19:14.610 - INFO - +--- START ITERATION: ${index} =  [ ]
-20230504 14:19:14.610 - INFO - +---- START KEYWORD: BuiltIn.Log [ === index : ${index} | console=yes ]
-20230504 14:19:14.610 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
-20230504 14:19:14.610 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20230504 14:19:14.610 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
-20230504 14:19:14.610 - INFO - +--- END ITERATION: ${index} =  (0)
-20230504 14:19:14.610 - UNKNOWN - FOR loop must have closing END.
-20230504 14:19:14.611 - INFO - +-- END FOR: ${index} IN RANGE [ 0 | 2 ] (0)
+20230531 12:57:24.959 - INFO - +-- START FOR: ${index} IN RANGE [ 0 | 2 ] [ ]
+20230531 12:57:24.959 - INFO - +--- START ITERATION: ${index} =  [ ]
+20230531 12:57:24.959 - INFO - +---- START KEYWORD: BuiltIn.Log [ === index : ${index} | console=yes ]
+20230531 12:57:24.959 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230531 12:57:24.959 - INFO - +---- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20230531 12:57:24.959 - INFO - +---- END KEYWORD: BuiltIn.Log (0)
+20230531 12:57:24.959 - INFO - +--- END ITERATION: ${index} =  (0)
+20230531 12:57:24.959 - UNKNOWN - FOR loop must have closing END.
+20230531 12:57:24.975 - INFO - +-- END FOR: ${index} IN RANGE [ 0 | 2 ] (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230504 14:19:14.611 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230504 14:19:14.611 - INFO - testcase_teardown: Will be implemented later
-20230504 14:19:14.612 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230531 12:57:24.975 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230531 12:57:24.975 - INFO - testcase_teardown: Will be implemented later
+20230531 12:57:24.975 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230504 14:19:14.614 - INFO - +- END TEST: Test Case tsm-testfile-13-keyword_incomplete_1 (9)
+20230531 12:57:24.975 - INFO - +- END TEST: Test Case tsm-testfile-13-keyword_incomplete_1 (16)
 ------------------------------------------------------------------------------
-20230504 14:19:14.614 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230504 14:19:14.614 - INFO - testsuite_teardown: Will be implemented later
-20230504 14:19:14.614 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230531 12:57:24.975 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 12:57:24.975 - INFO - testsuite_teardown: Will be implemented later
+20230531 12:57:24.975 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230504 14:19:14.616 - INFO - + END SUITE: Tsm-Testfile-13-Keyword Incomplete 1 (154)
+20230531 12:57:24.975 - INFO - + END SUITE: Tsm-Testfile-13-Keyword Incomplete 1 (161)
 ==============================================================================

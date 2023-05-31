@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230526 15:53:41.311" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:47.682" rpa="false" schemaversion="3">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230526 15:53:41.447" level="ERROR">Loading of JSON configuration file failed! 
+<msg timestamp="20230531 12:48:47.817" level="ERROR">Loading of JSON configuration file failed! 
           Reason: The variable '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
                   </msg>
-<msg timestamp="20230526 15:53:41.448" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
-<status status="UNKNOWN" starttime="20230526 15:53:41.437" endtime="20230526 15:53:41.448"/>
+<msg timestamp="20230531 12:48:47.817" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
+<status status="UNKNOWN" starttime="20230531 12:48:47.804" endtime="20230531 12:48:47.817"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20230526 15:53:41.448" endtime="20230526 15:53:41.449">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230531 12:48:47.817" endtime="20230531 12:48:47.818">Parent suite setup unknown:
 Loading of JSON configuration file failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230526 15:53:41.451" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230526 15:53:41.451" endtime="20230526 15:53:41.451"/>
+<msg timestamp="20230531 12:48:47.824" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 12:48:47.824" endtime="20230531 12:48:47.824"/>
 </kw>
-<status status="UNKNOWN" starttime="20230526 15:53:41.317" endtime="20230526 15:53:41.451">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230531 12:48:47.686" endtime="20230531 12:48:47.825">Suite setup unknown:
 Loading of JSON configuration file failed!</status>
 </suite>
 <statistics>
@@ -36,7 +36,7 @@ Loading of JSON configuration file failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230526 15:53:41.447" level="ERROR">Loading of JSON configuration file failed! 
+<msg timestamp="20230531 12:48:47.817" level="ERROR">Loading of JSON configuration file failed! 
           Reason: The variable '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
                   </msg>
 </errors>

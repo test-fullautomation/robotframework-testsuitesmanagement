@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230503 13:54:28.100" rpa="false" schemaversion="2">
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:44.438" rpa="false" schemaversion="3">
 <suite id="s1" name="Tsm-Testfile-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230503 13:54:28.249" level="FAIL">RecursionError: maximum recursion depth exceeded while calling a Python object</msg>
-<status status="FAIL" starttime="20230503 13:54:28.210" endtime="20230503 13:54:28.249"/>
+<msg timestamp="20230531 12:48:44.552" level="ERROR">Did not find configuration file: 'D:/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.json'!
+</msg>
+<msg timestamp="20230531 12:48:44.552" level="UNKNOWN">The configuration file is not found!</msg>
+<status status="UNKNOWN" starttime="20230531 12:48:44.552" endtime="20230531 12:48:44.552"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-01">
+<test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="FAIL" starttime="20230503 13:54:28.249" endtime="20230503 13:54:28.250">Parent suite setup failed:
-RecursionError: maximum recursion depth exceeded while calling a Python object</status>
+<status status="UNKNOWN" starttime="20230531 12:48:44.552" endtime="20230531 12:48:44.552">Parent suite setup unknown:
+The configuration file is not found!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:28.257" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:28.257" endtime="20230503 13:54:28.257"/>
+<msg timestamp="20230531 12:48:44.552" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 12:48:44.552" endtime="20230531 12:48:44.552"/>
 </kw>
-<status status="FAIL" starttime="20230503 13:54:28.106" endtime="20230503 13:54:28.257">Suite setup failed:
-RecursionError: maximum recursion depth exceeded while calling a Python object</status>
+<status status="UNKNOWN" starttime="20230531 12:48:44.452" endtime="20230531 12:48:44.552">Suite setup unknown:
+The configuration file is not found!</status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0" unknown="0">All Tests</stat>
+<stat pass="0" fail="0" skip="0" unknown="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" unknown="0" id="s1" name="Tsm-Testfile-01">Tsm-Testfile-01</stat>
+<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-01">Tsm-Testfile-01</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230531 12:48:44.552" level="ERROR">Did not find configuration file: 'D:/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.json'!
+</msg>
 </errors>
 </robot>
