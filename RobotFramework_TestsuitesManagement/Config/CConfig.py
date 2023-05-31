@@ -66,15 +66,15 @@ The loading configuration method is divided into 4 levels, level1 has the highes
 
       {
          "default": {
-            "name": "robot_config.json",
+            "name": "robot_config.jsonp",
             "path": ".../config/"
          },
          "variant_0": {
-            "name": "robot_config.json",
+            "name": "robot_config.jsonp",
             "path": ".../config/"
          },
          "variant_1": {
-            "name": "robot_config_variant_1.json",
+            "name": "robot_config_variant_1.jsonp",
             "path": ".../config/"
          },
             ...
@@ -85,11 +85,11 @@ The loading configuration method is divided into 4 levels, level1 has the highes
    ``".../config/"`` indicats the relative path to json config file, RobotFramework_TestsuitesManagement will recursively
    find the ``config`` folder.
 
-**Level3:** Read in testsuite folder: ``/config/robot_config.json``
+**Level3:** Read in testsuite folder: ``/config/robot_config.jsonp``
 
 **Level4:** Read from RobotFramework AIO installation folder:
 
-    ``/RobotFramework/defaultconfig/robot_config.json``
+    ``/RobotFramework/defaultconfig/robot_config.jsonp``
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
@@ -115,7 +115,7 @@ The loading configuration method is divided into 4 levels, level1 has the highes
                                 bLevel1 = False,
                                 bLevel2 = False,
                                 bLevel3 = False,
-                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.json'
+                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
                             )
     
     rMetaData      = CStruct(
