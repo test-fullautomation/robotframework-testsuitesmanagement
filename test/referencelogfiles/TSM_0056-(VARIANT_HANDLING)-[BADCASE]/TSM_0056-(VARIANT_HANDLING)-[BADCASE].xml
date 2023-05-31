@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230503 13:54:21.250" rpa="false" schemaversion="2">
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:35.360" rpa="false" schemaversion="3">
 <suite id="s1" name="Tsm-Testfile-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230503 13:54:21.359" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available. 
+<msg timestamp="20230531 12:48:35.505" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available. 
           A variant configuration file must be available when executing robot with configuration level 2. 
 </msg>
-<msg timestamp="20230503 13:54:21.359" level="UNKNOWN">Loading configuration level 2 failed!</msg>
-<status status="UNKNOWN" starttime="20230503 13:54:21.359" endtime="20230503 13:54:21.359"/>
+<msg timestamp="20230531 12:48:35.507" level="UNKNOWN">Loading configuration level 2 failed!</msg>
+<status status="UNKNOWN" starttime="20230531 12:48:35.505" endtime="20230531 12:48:35.507"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-01">
+<test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20230503 13:54:21.359" endtime="20230503 13:54:21.359">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20230531 12:48:35.507" endtime="20230531 12:48:35.508">Parent suite setup unknown:
 Loading configuration level 2 failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:21.359" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:21.359" endtime="20230503 13:54:21.359"/>
+<msg timestamp="20230531 12:48:35.510" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 12:48:35.510" endtime="20230531 12:48:35.510"/>
 </kw>
-<status status="UNKNOWN" starttime="20230503 13:54:21.262" endtime="20230503 13:54:21.359">Suite setup unknown:
+<status status="UNKNOWN" starttime="20230531 12:48:35.377" endtime="20230531 12:48:35.510">Suite setup unknown:
 Loading configuration level 2 failed!</status>
 </suite>
 <statistics>
@@ -35,7 +35,7 @@ Loading configuration level 2 failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230503 13:54:21.359" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available. 
+<msg timestamp="20230531 12:48:35.505" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available. 
           A variant configuration file must be available when executing robot with configuration level 2. 
 </msg>
 </errors>

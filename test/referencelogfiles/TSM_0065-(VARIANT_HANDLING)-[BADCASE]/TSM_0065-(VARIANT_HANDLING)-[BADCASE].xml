@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 13:29:52.451" rpa="false" schemaversion="3">
+<suite id="s1" name="Tsm-Cft-Testfile-1" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\configfoldertests2\tsm-cft-testfile-1.robot">
+<kw name="Testsuite Setup" library="tm" type="SETUP">
+<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
+checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
+<msg timestamp="20230531 13:29:52.574" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+* file 1: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-testfile-1.jsonp'
+* file 2: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-testfile-1.json'
+Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+<msg timestamp="20230531 13:29:52.574" level="UNKNOWN">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
+<status status="UNKNOWN" starttime="20230531 13:29:52.574" endtime="20230531 13:29:52.574"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-cft-testfile-1 (BADCASE)" line="32">
+<doc>tsm-cft-testfile-1 (BADCASE)</doc>
+<status status="UNKNOWN" starttime="20230531 13:29:52.574" endtime="20230531 13:29:52.574">Parent suite setup unknown:
+Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</status>
+</test>
+<kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
+<doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
+it's defined here for future requirements.</doc>
+<msg timestamp="20230531 13:29:52.574" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 13:29:52.574" endtime="20230531 13:29:52.574"/>
+</kw>
+<status status="UNKNOWN" starttime="20230531 13:29:52.460" endtime="20230531 13:29:52.574">Suite setup unknown:
+Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="0" skip="0" unknown="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Cft-Testfile-1">Tsm-Cft-Testfile-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230531 13:29:52.574" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+* file 1: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-testfile-1.jsonp'
+* file 2: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-testfile-1.json'
+Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+</errors>
+</robot>

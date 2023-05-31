@@ -1,19 +1,21 @@
 ==============================================================================
-20230503 13:54:18.745 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230531 12:48:32.441 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:18.753 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230503 13:54:18.775 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp': 'Expecting property name enclosed in double quotes: line 7 column 3 (char 221)'
-20230503 13:54:18.776 - UNKNOWN - Loading of JSON configuration file failed!
-20230503 13:54:18.776 - DEBUG - Loading of JSON configuration file failed!
-20230503 13:54:18.776 - INFO - +- END SETUP: tm.Testsuite Setup (23)
+20230531 12:48:32.450 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230531 12:48:32.457 - ERROR - Loading of JSON configuration file failed! 
+          Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
+                  Expecting property name enclosed in double quotes: line 7 column 3 (char 221)'
+20230531 12:48:32.458 - UNKNOWN - Loading of JSON configuration file failed!
+20230531 12:48:32.458 - DEBUG - Loading of JSON configuration file failed!
+20230531 12:48:32.458 - INFO - +- END SETUP: tm.Testsuite Setup (8)
 ------------------------------------------------------------------------------
-20230503 13:54:18.776 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230531 12:48:32.458 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:18.781 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20230531 12:48:32.469 - INFO - +- END TEST: Test Case tsm-testfile-02 (9)
 ------------------------------------------------------------------------------
-20230503 13:54:18.782 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230503 13:54:18.782 - INFO - testsuite_teardown: Will be implemented later
-20230503 13:54:18.782 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230531 12:48:32.470 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 12:48:32.470 - INFO - testsuite_teardown: Will be implemented later
+20230531 12:48:32.470 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230503 13:54:18.784 - INFO - + END SUITE: Tsm-Testfile-02 (141)
+20230531 12:48:32.479 - INFO - + END SUITE: Tsm-Testfile-02 (147)
 ==============================================================================

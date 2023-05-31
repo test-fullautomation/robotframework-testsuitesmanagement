@@ -1,17 +1,17 @@
 ==============================================================================
-20230503 13:54:20.875 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20230531 12:48:34.869 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230503 13:54:20.875 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230503 13:54:20.875 - UNKNOWN - Exception occurred.
-20230503 13:54:20.875 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20230531 12:48:34.877 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230531 12:48:34.878 - UNKNOWN - Exception occurred.
+20230531 12:48:34.878 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20230503 13:54:20.875 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20230531 12:48:34.878 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:20.875 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20230531 12:48:34.881 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230503 13:54:20.875 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230503 13:54:20.875 - INFO - testsuite_teardown: Will be implemented later
-20230503 13:54:20.875 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230531 12:48:34.882 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 12:48:34.882 - INFO - testsuite_teardown: Will be implemented later
+20230531 12:48:34.882 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230503 13:54:20.890 - INFO - + END SUITE: Tsm-Testfile-02 (107)
+20230531 12:48:34.888 - INFO - + END SUITE: Tsm-Testfile-02 (123)
 ==============================================================================

@@ -22,8 +22,8 @@ Wrong\suse\sof
 Please\scorrect\sthe\svalues\sof
 Parameter\s'.+'\swith\sinvalid\svalue\sfound\sin\sJSON\sconfiguration\sfile
 JSON\sschema\svalidation\sfailed
-Running\swithout\sRobot\sFramework\sAIO\sversion\scheck!
-Robot\sFramework\sAIO\sversion\scheck\spassed!
+Running\swithout\sRobotFramework\sAIO\sversion\scheck!
+RobotFramework\sAIO\sversion\scheck\spassed!
 Could\snot\sparse\sconfiguration\sJSON\sschema\sfile
 Loading\sconfiguration\slevel\s\d\sfailed
 Did\snot\sfind\sconfiguration\sfile:\s.+

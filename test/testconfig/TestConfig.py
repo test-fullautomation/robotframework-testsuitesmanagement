@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 24.05.2023
+# 31.05.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -461,7 +461,6 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 256
-dictUsecase['LOGCOMPARE']       = None # !!! error handling not yet implemented / reference log file not yet available !!!
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -476,7 +475,6 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 256
-dictUsecase['LOGCOMPARE']       = None # !!! error handling not yet implemented / reference log file not yet available !!!
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -925,8 +923,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-20-fatal_error.robot" # (with variant configuration and several tests; keyword FATAL ERROR)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 513 # 1 x failed; 2 x unknown
-dictUsecase['LOGCOMPARE']       = None # !!! reference log file not yet available !!!
+dictUsecase['EXPECTEDRETURN']   = 513 # 1 x failed; 2 x unknown / !! not yet adapted to: https://github.com/test-fullautomation/robotframework/issues/25 !!!
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------

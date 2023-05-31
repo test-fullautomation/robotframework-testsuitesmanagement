@@ -1,19 +1,21 @@
 ==============================================================================
-20230503 13:54:23.489 - INFO - + START SUITE: Tsm-Testfile-07-Err-1 [ ]
+20230531 12:48:37.907 - INFO - + START SUITE: Tsm-Testfile-07-Err-1 [ ]
 ==============================================================================
-20230503 13:54:23.500 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_1.jsonp ]
-20230503 13:54:23.516 - ERROR - Loading of JSON configuration file failed! Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp': 'Expecting property name enclosed in double quotes: line 6 column 3 (char 125)'
-20230503 13:54:23.516 - UNKNOWN - Loading configuration level 2 failed!
-20230503 13:54:23.516 - DEBUG - Loading configuration level 2 failed!
-20230503 13:54:23.516 - INFO - +- END SETUP: tm.Testsuite Setup (16)
+20230531 12:48:37.911 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_1.jsonp ]
+20230531 12:48:37.912 - ERROR - Loading of JSON configuration file failed! 
+          Reason: json file 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp'
+                  Expecting property name enclosed in double quotes: line 6 column 3 (char 126)'
+20230531 12:48:37.914 - UNKNOWN - Loading configuration level 2 failed!
+20230531 12:48:37.914 - DEBUG - Loading configuration level 2 failed!
+20230531 12:48:37.914 - INFO - +- END SETUP: tm.Testsuite Setup (3)
 ------------------------------------------------------------------------------
-20230503 13:54:23.516 - INFO - +- START TEST: Test Case tsm-testfile-07-err-1 [ ]
+20230531 12:48:37.914 - INFO - +- START TEST: Test Case tsm-testfile-07-err-1 [ ]
 ------------------------------------------------------------------------------
-20230503 13:54:23.516 - INFO - +- END TEST: Test Case tsm-testfile-07-err-1 (0)
+20230531 12:48:37.917 - INFO - +- END TEST: Test Case tsm-testfile-07-err-1 (1)
 ------------------------------------------------------------------------------
-20230503 13:54:23.516 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230503 13:54:23.516 - INFO - testsuite_teardown: Will be implemented later
-20230503 13:54:23.516 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230531 12:48:37.917 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 12:48:37.917 - INFO - testsuite_teardown: Will be implemented later
+20230531 12:48:37.917 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230503 13:54:23.516 - INFO - + END SUITE: Tsm-Testfile-07-Err-1 (127)
+20230531 12:48:37.919 - INFO - + END SUITE: Tsm-Testfile-07-Err-1 (117)
 ==============================================================================

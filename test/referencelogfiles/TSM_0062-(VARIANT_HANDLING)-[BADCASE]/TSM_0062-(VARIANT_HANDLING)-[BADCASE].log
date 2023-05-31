@@ -1,19 +1,19 @@
 ==============================================================================
-20230526 15:42:22.509 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
+20230531 12:48:39.135 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
 ==============================================================================
-20230526 15:42:22.517 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
-20230526 15:42:22.521 - ERROR - Did not find configuration file: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/I_AM_NOT_EXISTING_CONFIG_FOLDER/tsm-test_config_variant1.jsonp'!
-20230526 15:42:22.522 - UNKNOWN - The configuration file is not found!
-20230526 15:42:22.522 - DEBUG - The configuration file is not found!
-20230526 15:42:22.522 - INFO - +- END SETUP: tm.Testsuite Setup (5)
+20230531 12:48:39.143 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+20230531 12:48:39.147 - ERROR - Did not find configuration file: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/I_AM_NOT_EXISTING_CONFIG_FOLDER/tsm-test_config_variant1.jsonp'!
+20230531 12:48:39.148 - UNKNOWN - The configuration file is not found!
+20230531 12:48:39.148 - DEBUG - The configuration file is not found!
+20230531 12:48:39.148 - INFO - +- END SETUP: tm.Testsuite Setup (5)
 ------------------------------------------------------------------------------
-20230526 15:42:22.523 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2 [ ]
+20230531 12:48:39.149 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2 [ ]
 ------------------------------------------------------------------------------
-20230526 15:42:22.530 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (1)
+20230531 12:48:39.153 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (2)
 ------------------------------------------------------------------------------
-20230526 15:42:22.531 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230526 15:42:22.531 - INFO - testsuite_teardown: Will be implemented later
-20230526 15:42:22.531 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230531 12:48:39.153 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230531 12:48:39.154 - INFO - testsuite_teardown: Will be implemented later
+20230531 12:48:39.154 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20230526 15:42:22.533 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (128)
+20230531 12:48:39.159 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (129)
 ==============================================================================
