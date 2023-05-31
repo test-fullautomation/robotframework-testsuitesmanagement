@@ -33,8 +33,6 @@ TSM_0100|LOCAL_CONFIG|GOODCASE|With variant1 name and local config file for benc
 TSM_0101|LOCAL_CONFIG|GOODCASE|With variant2 configuration file and local config file for bench1 given in command line
 TSM_0102|LOCAL_CONFIG|GOODCASE|With variant2 configuration file, local config file for bench1 and single parameter given in command line
 TSM_0103|LOCAL_CONFIG|GOODCASE|With variant1 name given in command line and and local config file for bench2 given by environment variable
-TSM_0150|LOCAL_CONFIG|BADCASE|A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved
-TSM_0151|LOCAL_CONFIG|BADCASE|A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested
 TSM_0200|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files
 TSM_0201|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)
 TSM_0250|NESTED_CONFIG|BADCASE|Variant with multiple nested configuration files; cyclic import of JSON file

@@ -181,16 +181,6 @@ Expectation: Local config value overwrites initial value for parameter 'teststri
 Comment....: Single file execution
 Hint.......: Temporary change of environment (ROBOT_LOCAL_CONFIG)
 ------------------------------------------------------------------------------------------------------------------------
-Test TSM_0150 / LOCAL_CONFIG / BADCASE
-Description: A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved
-Expectation: Test is not executed; error message; test result is UNKNOWN
-Comment....: Single file execution
-------------------------------------------------------------------------------------------------------------------------
-Test TSM_0151 / LOCAL_CONFIG / BADCASE
-Description: A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested
-Expectation: Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line
-Comment....: Single file execution
-------------------------------------------------------------------------------------------------------------------------
 Test TSM_0200 / NESTED_CONFIG / GOODCASE
 Description: Variant with multiple nested configuration files
 Expectation: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
@@ -352,5 +342,5 @@ Description: Test with several sources of parameters: config file, local config,
 Expectation: Accordingly to the priority of the enlisted sources all parameters have proper values finally
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 24.05.2023 - 20:42:16
+Generated: 31.05.2023 - 15:27:30
 

@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_05_NESTED_CONFIG_GOODCASE.py
+# test_07_VERSION_CONTROL_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 23.05.2023 - 15:45:58
+# 31.05.2023 - 15:27:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,42 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_NESTED_CONFIG_GOODCASE:
+class Test_VERSION_CONTROL_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files",]
+      "Description", ["'Maximum_version' and 'Minimum_version' not defined",]
    )
-   def test_TSM_0200(self, Description):
-      nReturn = CExecute.Execute("TSM_0200")
+   def test_TSM_0400(self, Description):
+      nReturn = CExecute.Execute("TSM_0400")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Inside robot files all configuration parameters have proper value and are of proper data type
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)",]
+      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
    )
-   def test_TSM_0201(self, Description):
-      nReturn = CExecute.Execute("TSM_0201")
+   def test_TSM_0401(self, Description):
+      nReturn = CExecute.Execute("TSM_0401")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Maximum_version' is defined",]
+   )
+   def test_TSM_0402(self, Description):
+      nReturn = CExecute.Execute("TSM_0402")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Minimum_version' is defined",]
+   )
+   def test_TSM_0403(self, Description):
+      nReturn = CExecute.Execute("TSM_0403")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
