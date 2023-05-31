@@ -163,8 +163,18 @@ of a parameter configuration file containing only the most important parameters.
 
 \pcode{Project}, \pcode{WelcomeString} and \pcode{TargetName} are simple strings that can be used anyhow. \pcode{Maximum_version}
 and \pcode{Minimum_version} are part of a version control mechanism: In case of the version of the currently installed
-\rfwcore\ is outside the range between \pcode{Minimum_version} and \pcode{Maximum_version}, the test execution stops
+software is outside the range between \pcode{Minimum_version} and \pcode{Maximum_version}, the test execution stops
 with an error message.
+
+What is the meaning of "currently installed software"?
+
+\begin{itemize}
+   \item The first possibility is that the \pkg\ runs stand-alone, that means, it is not part of a larger bundle (like the \rfw).
+         The installation from PyPi or GitHub causes such a stand-alone installation. In this case the component version of
+         the \pkg\ itself is used for a version control against \pcode{Minimum_version} and \pcode{Maximum_version}.
+   \item The second possibility is that the \pkg\ runs as part of the \rfw. In this case the version of the entire \rfw\ is used
+         for a version control instead.
+\end{itemize}
 
 The version control mechanism is optional. In case you do not need to have your tests under version control, you can set 
 the versions to the value \pcode{null}.
@@ -177,7 +187,7 @@ the versions to the value \pcode{null}.
 As an alternative it is also possible to remove \pcode{Minimum_version} and \pcode{Maximum_version} completely.
 
 In case you define only one single version number, only this version number is considered. The following combination
-makes sure, that the installed \rfwcore\ at least is of version 0.6.0, but there is no upper version limit:
+makes sure, that the installed software at least is of version 0.6.0, but there is no upper version limit:
 
 \begin{pythoncode}
 "Maximum_version" : null,
