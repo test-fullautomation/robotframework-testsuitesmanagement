@@ -413,30 +413,6 @@ Test Use Cases
 
 ----
 
-* **Test TSM_0150**
-
-  [LOCAL_CONFIG / BADCASE]
-
-   **A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved**
-
-   Expected: Test is not executed; error message; test result is UNKNOWN
-
-   *Comment: Single file execution*
-
-----
-
-* **Test TSM_0151**
-
-  [LOCAL_CONFIG / BADCASE]
-
-   **A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested**
-
-   Expected: Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line
-
-   *Comment: Single file execution*
-
-----
-
 * **Test TSM_0200**
 
   [NESTED_CONFIG / GOODCASE]
@@ -823,5 +799,5 @@ Test Use Cases
 
 ----
 
-Generated: 24.05.2023 - 20:42:16
+Generated: 31.05.2023 - 15:27:30
 

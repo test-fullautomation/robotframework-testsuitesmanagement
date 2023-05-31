@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_07_SCHEMA_VALIDATION_BADCASE.py
+# test_10_RETURN_VALUE_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 23.05.2023 - 15:45:58
+# 31.05.2023 - 15:27:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_SCHEMA_VALIDATION_BADCASE:
+class Test_RETURN_VALUE_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Schema file for JSON configuration files is not available",]
+      "Description", ["Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)",]
    )
-   def test_TSM_0350(self, Description):
-      nReturn = CExecute.Execute("TSM_0350")
+   def test_TSM_0600(self, Description):
+      nReturn = CExecute.Execute("TSM_0600")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
-   # (Single file execution)
+   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+   # (Folder execution)
    @pytest.mark.parametrize(
-      "Description", ["Schema file for JSON configuration files is invalid because of a syntax error",]
+      "Description", ["Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)",]
    )
-   def test_TSM_0351(self, Description):
-      nReturn = CExecute.Execute("TSM_0351")
+   def test_TSM_0700(self, Description):
+      nReturn = CExecute.Execute("TSM_0700")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

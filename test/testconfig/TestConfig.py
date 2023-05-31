@@ -539,33 +539,40 @@ listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0150"
-dictUsecase['DESCRIPTION']      = "A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "LOCAL_CONFIG"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
-dictUsecase['EXPECTEDRETURN']   = 1 # has to be changed later
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
+
+# # # 31.05.2023
+# # # Use case currently under discussion
+# # # Waiting for: https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/134
+# dictUsecase = {}
+# dictUsecase['TESTID']           = "TSM_0150"
+# dictUsecase['DESCRIPTION']      = "A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved"
+# dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+# dictUsecase['SECTION']          = "LOCAL_CONFIG"
+# dictUsecase['SUBSECTION']       = "BADCASE"
+# dictUsecase['COMMENT']          = "Single file execution"
+# dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
+# dictUsecase['TESTFOLDERNAME']   = None
+# dictUsecase['ADDITIONALPARAMS'] = "--variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
+# dictUsecase['EXPECTEDRETURN']   = 256
+# listofdictUsecases.append(dictUsecase)
+# del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0151"
-dictUsecase['DESCRIPTION']      = "A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line"
-dictUsecase['SECTION']          = "LOCAL_CONFIG"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant2\" --variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
-dictUsecase['EXPECTEDRETURN']   = 1 # has to be changed later
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
+# # # 31.05.2023
+# # # Use case currently under discussion
+# # # Waiting for: https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/134
+# dictUsecase = {}
+# dictUsecase['TESTID']           = "TSM_0151"
+# dictUsecase['DESCRIPTION']      = "A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested"
+# dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+# dictUsecase['SECTION']          = "LOCAL_CONFIG"
+# dictUsecase['SUBSECTION']       = "BADCASE"
+# dictUsecase['COMMENT']          = "Single file execution"
+# dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+# dictUsecase['TESTFOLDERNAME']   = None
+# dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant2\" --variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
+# dictUsecase['EXPECTEDRETURN']   = 256
+# listofdictUsecases.append(dictUsecase)
+# del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}

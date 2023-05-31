@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230503 13:54:11.664" rpa="false" schemaversion="2">
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 14:32:55.751" rpa="false" schemaversion="3">
 <suite id="s1" name="Tsm-Testfile-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230503 13:54:11.804" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
-<msg timestamp="20230503 13:54:11.804" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 4.1.3 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'version' to value '0.7.0'.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230503 13:54:11.806" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230503 13:54:11.807" level="INFO">${CONFIG} = {'Project': 'RobotFramework Testsuites', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'version': {'majorversion': '0', 'minor...</msg>
-<msg timestamp="20230503 13:54:11.807" level="WARN">Running with configuration level 4! 
-Selected configuration file 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'</msg>
-<msg timestamp="20230503 13:54:11.807" level="INFO">Robot Framework AIO version check passed!</msg>
-<msg timestamp="20230503 13:54:11.807" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230503 13:54:11.807" level="INFO">CfgFile Path: 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'</msg>
-<msg timestamp="20230503 13:54:11.808" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230503 13:54:11.808" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230503 13:54:11.774" endtime="20230503 13:54:11.808"/>
+<msg timestamp="20230531 14:32:55.862" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
+<msg timestamp="20230531 14:32:55.878" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20230531 14:32:55.880" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20230531 14:32:55.881" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20230531 14:32:55.881" level="INFO">Set suite metadata 'bundle_version' to value '0.8.0.0'.</msg>
+<msg timestamp="20230531 14:32:55.881" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20230531 14:32:55.881" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20230531 14:32:55.881" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20230531 14:32:55.882" level="INFO">${CONFIG} = {'Project': 'RobotFramework Testsuites', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'version': {'majorversion': '0', 'minor...</msg>
+<msg timestamp="20230531 14:32:55.882" level="WARN">Running with configuration level 4! 
+Selected configuration file 'D:/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'</msg>
+<msg timestamp="20230531 14:32:55.883" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20230531 14:32:55.883" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230531 14:32:55.883" level="INFO">CfgFile Path: 'D:/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'</msg>
+<msg timestamp="20230531 14:32:55.883" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230531 14:32:55.883" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230531 14:32:55.856" endtime="20230531 14:32:55.883"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-01">
+<test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:11.809" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230503 13:54:11.809" endtime="20230503 13:54:11.809"/>
+<msg timestamp="20230531 14:32:55.884" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230531 14:32:55.884" endtime="20230531 14:32:55.884"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>tsm-testfile-01</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230503 13:54:11.810" level="INFO">tsm-testfile-01</msg>
-<status status="PASS" starttime="20230503 13:54:11.810" endtime="20230503 13:54:11.811"/>
+<msg timestamp="20230531 14:32:55.885" level="INFO">tsm-testfile-01</msg>
+<status status="PASS" starttime="20230531 14:32:55.884" endtime="20230531 14:32:55.885"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:11.811" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:11.811" endtime="20230503 13:54:11.811"/>
+<msg timestamp="20230531 14:32:55.886" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 14:32:55.886" endtime="20230531 14:32:55.886"/>
 </kw>
 <doc>tsm-testfile-01</doc>
-<status status="PASS" starttime="20230503 13:54:11.808" endtime="20230503 13:54:11.811"/>
+<status status="PASS" starttime="20230531 14:32:55.883" endtime="20230531 14:32:55.886"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230503 13:54:11.813" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230503 13:54:11.813" endtime="20230503 13:54:11.813"/>
+<msg timestamp="20230531 14:32:55.888" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230531 14:32:55.888" endtime="20230531 14:32:55.888"/>
 </kw>
+<meta name="bundle_version">0.8.0.0</meta>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">RobotFramework Testsuites</meta>
 <meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 4.1.3 (Python 3.9.16 on win32)</meta>
-<meta name="version">0.7.0</meta>
+<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230503 13:54:11.668" endtime="20230503 13:54:11.813"/>
+<status status="PASS" starttime="20230531 14:32:55.757" endtime="20230531 14:32:55.888"/>
 </suite>
 <statistics>
 <total>
@@ -72,7 +72,7 @@ it's defined here for future requirements.</doc>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230503 13:54:11.807" level="WARN">Running with configuration level 4! 
-Selected configuration file 'D:\RobotFramework\python39\lib\site-packages\RobotFramework_TestsuitesManagement\Config\robot_config.json'</msg>
+<msg timestamp="20230531 14:32:55.882" level="WARN">Running with configuration level 4! 
+Selected configuration file 'D:/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'</msg>
 </errors>
 </robot>

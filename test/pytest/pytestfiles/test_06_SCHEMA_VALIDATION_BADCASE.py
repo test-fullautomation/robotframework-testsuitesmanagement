@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_04_LOCAL_CONFIG_BADCASE.py
+# test_06_SCHEMA_VALIDATION_BADCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 23.05.2023 - 15:45:58
+# 31.05.2023 - 15:27:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_LOCAL_CONFIG_BADCASE:
+class Test_SCHEMA_VALIDATION_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
    # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved",]
+      "Description", ["Schema file for JSON configuration files is not available",]
    )
-   def test_TSM_0150(self, Description):
-      nReturn = CExecute.Execute("TSM_0150")
+   def test_TSM_0350(self, Description):
+      nReturn = CExecute.Execute("TSM_0350")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: 'variant' and 'local_config' belog to the same feature, therefore only one of them is allowed in command line
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested",]
+      "Description", ["Schema file for JSON configuration files is invalid because of a syntax error",]
    )
-   def test_TSM_0151(self, Description):
-      nReturn = CExecute.Execute("TSM_0151")
+   def test_TSM_0351(self, Description):
+      nReturn = CExecute.Execute("TSM_0351")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
