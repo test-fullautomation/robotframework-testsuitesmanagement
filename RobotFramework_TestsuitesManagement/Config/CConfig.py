@@ -301,12 +301,12 @@ This loadCfg method uses to load configuration's parameters from json files.
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                         self.rConfigFiles.bLevel3 = False
                         if not self.bConfigLoaded:
-                            sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                            sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                             self.sTestCfgFile = sDefaultConfig
                 else:
                     self.rConfigFiles.bLevel3 = False
                     if not self.bConfigLoaded:
-                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.json")
+                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                         self.sTestCfgFile = sDefaultConfig
 
             if self.sTestCfgFile != '':                      
