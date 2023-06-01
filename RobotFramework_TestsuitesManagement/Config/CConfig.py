@@ -752,7 +752,7 @@ execution of testsuite is terminated with "unknown" state
         tMinVersion = None
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
-            logger.info("Running without Robot Framework AIO version check!")
+            logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
         if self.sMinVersion != '':
             tMinVersion = CConfig.tupleVersion(self.sMinVersion)
