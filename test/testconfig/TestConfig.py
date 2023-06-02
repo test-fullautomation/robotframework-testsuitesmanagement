@@ -22,7 +22,15 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 31.05.2023
+# 02.06.2023
+#
+# --------------------------------------------------------------------------------------------------------------
+#
+# Temporary measure / 02.06.2023
+#
+# Because of the return value computation in RobotFramework AIO is currently under discussion, in all BADCASE tests,
+# that cause a return value != 0, the 'EXPECTEDRETURN' is set to None.
+# This deactivates the return value check.
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -249,7 +257,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_param\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -263,7 +271,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -277,7 +285,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error_within_import\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -291,7 +299,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -305,10 +313,9 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
-
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0055"
@@ -320,7 +327,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\" --variable config_file:\"./config/tsm-test_config_variant2.jsonp\"" # path relative to position of robot file
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -334,7 +341,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -348,7 +355,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"in/va/lid\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -362,7 +369,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"I_AM_NOT_DEFINED\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -376,7 +383,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/I_AM_NOT_EXISTING.jsonp\"" # path relative to position of robot file
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -390,7 +397,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-07-err-1.robot" # (with variant configuration; JSON file contains syntax errors)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -404,7 +411,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant configuration; JSON file contains not existing file and folder)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -418,7 +425,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant configuration; JSON file contains not existing file and folder)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -432,7 +439,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-09-err-3.robot" # (with variant configuration; missing "default" variant)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -446,7 +453,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./localconfig/tsm-test_localconfig_bench1.jsonp\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -460,7 +467,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -474,7 +481,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -553,7 +560,7 @@ del dictUsecase
 # dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant configuration)
 # dictUsecase['TESTFOLDERNAME']   = None
 # dictUsecase['ADDITIONALPARAMS'] = "--variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
-# dictUsecase['EXPECTEDRETURN']   = 256
+# dictUsecase['EXPECTEDRETURN']   = None # 256
 # listofdictUsecases.append(dictUsecase)
 # del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -570,7 +577,7 @@ del dictUsecase
 # dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 # dictUsecase['TESTFOLDERNAME']   = None
 # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant2\" --variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
-# dictUsecase['EXPECTEDRETURN']   = 256
+# dictUsecase['EXPECTEDRETURN']   = None # 256
 # listofdictUsecases.append(dictUsecase)
 # del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -614,7 +621,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-03.robot" # (with variant configuration and extended logging of parameters from nested configuration files)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"cyclic_import\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -628,7 +635,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"invalid_assignment_1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -642,7 +649,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"invalid_assignment_2\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -660,7 +667,7 @@ dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['PRESTEP']          = "ConfigSchemaFile_Remove"
 dictUsecase['POSTSTEP']         = "ConfigSchemaFile_Restore"
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -676,7 +683,7 @@ dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['PRESTEP']          = "ConfigSchemaFile_MakeInvalid"
 dictUsecase['POSTSTEP']         = "ConfigSchemaFile_Restore"
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -747,7 +754,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_05\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -761,7 +768,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_06\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -775,7 +782,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_07\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -789,7 +796,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_08\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -803,7 +810,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_09\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -818,7 +825,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-10-fail.robot" # (with variant configuration; keyword FAIL)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 1
+dictUsecase['EXPECTEDRETURN']   = None # 1
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -832,7 +839,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-11-state_unknown.robot" # (with variant configuration and call of keyword UNKNOWN)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -846,7 +853,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-12-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -860,7 +867,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-13-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -874,7 +881,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-14-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -888,7 +895,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-15-unknown_library.robot" # (with variant configuration and import of unknown library)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -902,7 +909,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-16-unknown_parameter_1.robot" # (with variant configuration and assignment of unknown dictionary key)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -916,7 +923,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-17-unknown_parameter_2.robot" # (with variant configuration and parameter assignment to unknown dictionary subkey)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 256
+dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -930,7 +937,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-20-fatal_error.robot" # (with variant configuration and several tests; keyword FATAL ERROR)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 513 # 1 x failed; 2 x unknown / !! not yet adapted to: https://github.com/test-fullautomation/robotframework/issues/25 !!!
+dictUsecase['EXPECTEDRETURN']   = None # 513 # 1 x failed; 2 x unknown / !! not yet adapted to: https://github.com/test-fullautomation/robotframework/issues/25 !!!
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -945,7 +952,7 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-18-several_tests.robot" # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 1027
+dictUsecase['EXPECTEDRETURN']   = None # 1027
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
@@ -960,7 +967,7 @@ dictUsecase['COMMENT']          = "Folder execution"
 dictUsecase['TESTFILENAME']     = None
 dictUsecase['TESTFOLDERNAME']   = "testsuitestest" # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = 1542
+dictUsecase['EXPECTEDRETURN']   = None # 1542
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
