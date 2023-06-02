@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 23.05.2023
+# 02.06.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #TM***
@@ -392,20 +392,21 @@ for dictUsecase in listofdictUsecases:
 
    # --------------------------------------------------------------------------------------------------------------
 
-   if nReturn != EXPECTEDRETURN:
-      # result from subprocess.call()
-      print()
-      bSuccess = False
-      sResult  = f"Robot Framework returned not expected value {nReturn}"
-      sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
-      printerror(sResult)
-      oSelfTestLogFile.Write(sResult)
-      print()
-      nCntFailedUsecases = nCntFailedUsecases + 1
-      printerror(f"Test '{TESTFULLNAME}' failed\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
-      oSelfTestLogFile.Write("Result: FAILED", 1)
-      listTestsNotPassed.append(TESTFULLNAME)
-      continue # for dictUsecase in listofdictUsecases:
+   if EXPECTEDRETURN is not None:
+      if nReturn != EXPECTEDRETURN:
+         # result from subprocess.call()
+         print()
+         bSuccess = False
+         sResult  = f"Robot Framework returned not expected value {nReturn}"
+         sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
+         printerror(sResult)
+         oSelfTestLogFile.Write(sResult)
+         print()
+         nCntFailedUsecases = nCntFailedUsecases + 1
+         printerror(f"Test '{TESTFULLNAME}' failed\n[DESCRIPTION]: {DESCRIPTION}\n[EXPECTATION]: {EXPECTATION}\n[COMMENT]: {COMMENT}")
+         oSelfTestLogFile.Write("Result: FAILED", 1)
+         listTestsNotPassed.append(TESTFULLNAME)
+         continue # for dictUsecase in listofdictUsecases:
 
    # --------------------------------------------------------------------------------------------------------------
 
