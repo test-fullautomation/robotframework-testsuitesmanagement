@@ -206,17 +206,6 @@ Description: Assignment of known parameter to unknown dictionary subkey in impor
 Expectation: Test is not executed; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Test TSM_0350 / SCHEMA_VALIDATION / BADCASE
-Description: Schema file for JSON configuration files is not available
-Expectation: Test is not executed; error message; test result is UNKNOWN
-Comment....: Single file execution
-Hint.......: Temporary modification of installed schema file
-------------------------------------------------------------------------------------------------------------------------
-Test TSM_0351 / SCHEMA_VALIDATION / BADCASE
-Description: Schema file for JSON configuration files is invalid because of a syntax error
-Expectation: Test is not executed; error message; test result is UNKNOWN
-Comment....: Single file execution
-------------------------------------------------------------------------------------------------------------------------
 Test TSM_0400 / VERSION_CONTROL / GOODCASE
 Description: 'Maximum_version' and 'Minimum_version' not defined
 Expectation: Test is executed, because of the version control is optional
@@ -342,5 +331,5 @@ Description: Test with several sources of parameters: config file, local config,
 Expectation: Accordingly to the priority of the enlisted sources all parameters have proper values finally
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 31.05.2023 - 15:27:30
+Generated: 06.06.2023 - 15:28:28
 

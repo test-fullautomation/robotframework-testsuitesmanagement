@@ -473,32 +473,6 @@ Test Use Cases
 
 ----
 
-* **Test TSM_0350**
-
-  [SCHEMA_VALIDATION / BADCASE]
-
-   **Schema file for JSON configuration files is not available**
-
-   Expected: Test is not executed; error message; test result is UNKNOWN
-
-   *Comment: Single file execution*
-
-   *Hint: Temporary modification of installed schema file*
-
-----
-
-* **Test TSM_0351**
-
-  [SCHEMA_VALIDATION / BADCASE]
-
-   **Schema file for JSON configuration files is invalid because of a syntax error**
-
-   Expected: Test is not executed; error message; test result is UNKNOWN
-
-   *Comment: Single file execution*
-
-----
-
 * **Test TSM_0400**
 
   [VERSION_CONTROL / GOODCASE]
@@ -799,5 +773,5 @@ Test Use Cases
 
 ----
 
-Generated: 31.05.2023 - 15:27:30
+Generated: 06.06.2023 - 15:28:28
 

@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_07_VERSION_CONTROL_GOODCASE.py
+# test_07_VERSION_CONTROL_BADCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 31.05.2023 - 15:27:30
+# 06.06.2023 - 15:28:29
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,42 +27,51 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_VERSION_CONTROL_GOODCASE:
+class Test_VERSION_CONTROL_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed, because of the version control is optional
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["'Maximum_version' and 'Minimum_version' not defined",]
+      "Description", ["'Maximum_version' is invalid (value is not a version number)",]
    )
-   def test_TSM_0400(self, Description):
-      nReturn = CExecute.Execute("TSM_0400")
+   def test_TSM_0450(self, Description):
+      nReturn = CExecute.Execute("TSM_0450")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed, because of the version control is optional
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
+      "Description", ["'Minimum_version' is invalid (value contains blanks only)",]
    )
-   def test_TSM_0401(self, Description):
-      nReturn = CExecute.Execute("TSM_0401")
+   def test_TSM_0451(self, Description):
+      nReturn = CExecute.Execute("TSM_0451")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed, because of the version control is optional
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Only 'Maximum_version' is defined",]
+      "Description", ["'Minimum_version' is bigger than 'Maximum_version'",]
    )
-   def test_TSM_0402(self, Description):
-      nReturn = CExecute.Execute("TSM_0402")
+   def test_TSM_0452(self, Description):
+      nReturn = CExecute.Execute("TSM_0452")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is executed, because of the version control is optional
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Only 'Minimum_version' is defined",]
+      "Description", ["'Maximum_version' is smaller than current version",]
    )
-   def test_TSM_0403(self, Description):
-      nReturn = CExecute.Execute("TSM_0403")
+   def test_TSM_0453(self, Description):
+      nReturn = CExecute.Execute("TSM_0453")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["'Minimum_version' is bigger than current version",]
+   )
+   def test_TSM_0454(self, Description):
+      nReturn = CExecute.Execute("TSM_0454")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

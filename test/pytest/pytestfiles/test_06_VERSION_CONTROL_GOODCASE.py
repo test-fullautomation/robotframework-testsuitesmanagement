@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_06_SCHEMA_VALIDATION_BADCASE.py
+# test_06_VERSION_CONTROL_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 31.05.2023 - 15:27:30
+# 06.06.2023 - 15:28:29
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,42 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_SCHEMA_VALIDATION_BADCASE:
+class Test_VERSION_CONTROL_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Schema file for JSON configuration files is not available",]
+      "Description", ["'Maximum_version' and 'Minimum_version' not defined",]
    )
-   def test_TSM_0350(self, Description):
-      nReturn = CExecute.Execute("TSM_0350")
+   def test_TSM_0400(self, Description):
+      nReturn = CExecute.Execute("TSM_0400")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Schema file for JSON configuration files is invalid because of a syntax error",]
+      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
    )
-   def test_TSM_0351(self, Description):
-      nReturn = CExecute.Execute("TSM_0351")
+   def test_TSM_0401(self, Description):
+      nReturn = CExecute.Execute("TSM_0401")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Maximum_version' is defined",]
+   )
+   def test_TSM_0402(self, Description):
+      nReturn = CExecute.Execute("TSM_0402")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Minimum_version' is defined",]
+   )
+   def test_TSM_0403(self, Description):
+      nReturn = CExecute.Execute("TSM_0403")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
