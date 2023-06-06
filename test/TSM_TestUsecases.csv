@@ -38,8 +38,6 @@ TSM_0201|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files
 TSM_0250|NESTED_CONFIG|BADCASE|Variant with multiple nested configuration files; cyclic import of JSON file
 TSM_0251|NESTED_CONFIG|BADCASE|Assignment of unknown dictionary key in imported JSON configuration file
 TSM_0252|NESTED_CONFIG|BADCASE|Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file
-TSM_0350|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is not available
-TSM_0351|SCHEMA_VALIDATION|BADCASE|Schema file for JSON configuration files is invalid because of a syntax error
 TSM_0400|VERSION_CONTROL|GOODCASE|'Maximum_version' and 'Minimum_version' not defined
 TSM_0401|VERSION_CONTROL|GOODCASE|'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'
 TSM_0402|VERSION_CONTROL|GOODCASE|Only 'Maximum_version' is defined

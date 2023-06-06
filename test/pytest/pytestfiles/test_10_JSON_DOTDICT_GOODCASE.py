@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_10_RETURN_VALUE_GOODCASE.py
+# test_10_JSON_DOTDICT_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 31.05.2023 - 15:27:30
+# 06.06.2023 - 15:28:29
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,15 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_RETURN_VALUE_GOODCASE:
+class Test_JSON_DOTDICT_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+   # Expected: dotdict syntax in JSON files is possible
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)",]
+      "Description", ["Nested imports of JSON files with dotdict syntax",]
    )
-   def test_TSM_0600(self, Description):
-      nReturn = CExecute.Execute("TSM_0600")
-      assert nReturn == 0
-# --------------------------------------------------------------------------------------------------------------
-   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
-   # (Folder execution)
-   @pytest.mark.parametrize(
-      "Description", ["Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)",]
-   )
-   def test_TSM_0700(self, Description):
-      nReturn = CExecute.Execute("TSM_0700")
+   def test_TSM_0800(self, Description):
+      nReturn = CExecute.Execute("TSM_0800")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
