@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230612 17:48:18.728" rpa="false" schemaversion="3">
+<suite id="s1" name="Tsm-Testfile-21-Data Integrity" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-21-data_integrity.robot">
+<kw name="Testsuite Setup" library="tm" type="SETUP">
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
+checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
+<msg timestamp="20230612 17:48:18.918" level="INFO">Running with configuration level 1</msg>
+<msg timestamp="20230612 17:48:18.918" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20230612 17:48:18.918" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20230612 17:48:18.919" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_data_integrity_2.jsonp'</msg>
+<msg timestamp="20230612 17:48:18.919" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20230612 17:48:18.919" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20230612 17:48:18.918" endtime="20230612 17:48:18.919"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-21-data_integrity" line="33">
+<kw name="Testcase Setup" library="tm" type="SETUP">
+<doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
+it's defined here for future requirements.</doc>
+<msg timestamp="20230612 17:48:18.920" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20230612 17:48:18.920" endtime="20230612 17:48:18.920"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${CONFIG.Project}</arg>
+<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20230612 17:48:18.921" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) : [STR]  :  'tsm-test_config_data_integrity_2'</msg>
+<status status="PASS" starttime="20230612 17:48:18.921" endtime="20230612 17:48:18.921"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${teststring_common}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20230612 17:48:18.922" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20230612 17:48:18.922" endtime="20230612 17:48:18.923"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${teststring_variant}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20230612 17:48:18.924" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the variant 'data_integrity_2' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20230612 17:48:18.923" endtime="20230612 17:48:18.924"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${teststring_bench}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20230612 17:48:18.925" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20230612 17:48:18.924" endtime="20230612 17:48:18.925"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${teststring_data_integrity}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20230612 17:48:18.926" level="INFO">PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) : [STR]  :  'Ä.1/B.2C.3$D.4&amp;E.5?F.6=G.7#H.8~I.9§J.10,{K.11};L.12@M.12"N.13/Ö.14%1P.15;(Q.16),[R.17],
+next line	tabulator'</msg>
+<status status="PASS" starttime="20230612 17:48:18.925" endtime="20230612 17:48:18.926"/>
+</kw>
+<kw name="Testcase Teardown" library="tm" type="TEARDOWN">
+<doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
+it's defined here for future requirements.</doc>
+<msg timestamp="20230612 17:48:18.927" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230612 17:48:18.927" endtime="20230612 17:48:18.927"/>
+</kw>
+<doc>tsm-testfile-21-data_integrity</doc>
+<status status="PASS" starttime="20230612 17:48:18.919" endtime="20230612 17:48:18.927"/>
+</test>
+<kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
+<doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
+it's defined here for future requirements.</doc>
+<msg timestamp="20230612 17:48:18.929" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20230612 17:48:18.929" endtime="20230612 17:48:18.929"/>
+</kw>
+<meta name="bundle_version">0.8.1.2</meta>
+<meta name="machine">HI7-C-0005Y</meta>
+<meta name="project">tsm-test_config_data_integrity_2</meta>
+<meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
+<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
+<meta name="version_hw"/>
+<meta name="version_sw"/>
+<meta name="version_test"/>
+<status status="PASS" starttime="20230612 17:48:18.746" endtime="20230612 17:48:18.929"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0" unknown="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" unknown="0" id="s1" name="Tsm-Testfile-21-Data Integrity">Tsm-Testfile-21-Data Integrity</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

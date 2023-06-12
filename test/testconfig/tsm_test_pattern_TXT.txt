@@ -14,6 +14,7 @@ teststring\s:.+
 teststring_common\s:.+
 teststring_variant\s:.+
 teststring_bench\s:.+
+teststring_data_integrity\s:.+
 testlist_variant.+
 testdictionary_variant.+
 Version\scontrol\serror

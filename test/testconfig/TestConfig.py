@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 06.06.2023
+# 12.06.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -60,6 +60,7 @@
 # "tsm-testfile-18-several_tests".robot"       # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
 # "tsm-testfile-19-parameter_priority.robot"   # (with variant configuration and extended parameter logging for parameters from different sources)
 # "tsm-testfile-20-fatal_error.robot"          # (with variant configuration and several tests; keyword FATAL ERROR)
+# "tsm-testfile-21-data_integrity.robot"       # (with variant configuration and additional log strings to test the data integrity)
 #
 # configfoldertests1/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -1058,8 +1059,42 @@ dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1000"
+dictUsecase['DESCRIPTION']      = "Test with test string containing several separator characters and blanks"
+dictUsecase['EXPECTATION']      = "Test string is handed over to Robot Framework and printed to log file unchanged"
+dictUsecase['SECTION']          = "DATA_INTEGRITY"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-21-data_integrity.robot" # (with variant configuration and additional log strings to test the data integrity)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/tsm-test_config_data_integrity_1.jsonp\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1001"
+dictUsecase['DESCRIPTION']      = "Test with test string containing more special characters, masked special characters and escape sequences"
+dictUsecase['EXPECTATION']      = "Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)"
+dictUsecase['SECTION']          = "DATA_INTEGRITY"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-21-data_integrity.robot" # (with variant configuration and additional log strings to test the data integrity)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/tsm-test_config_data_integrity_2.jsonp\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+
+
+
+# --------------------------------------------------------------------------------------------------------------
 #TM***
 # --------------------------------------------------------------------------------------------------------------
+
+# >> computation under construction in RobotFramework_AIO
 
 # Computation of return values:
 # =============================
