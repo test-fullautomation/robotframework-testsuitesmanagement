@@ -773,5 +773,29 @@ Test Use Cases
 
 ----
 
-Generated: 06.06.2023 - 15:28:28
+* **Test TSM_1000**
+
+  [DATA_INTEGRITY / GOODCASE]
+
+   **Test with test string containing several separator characters and blanks**
+
+   Expected: Test string is handed over to Robot Framework and printed to log file unchanged
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1001**
+
+  [DATA_INTEGRITY / GOODCASE]
+
+   **Test with test string containing more special characters, masked special characters and escape sequences**
+
+   Expected: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 12.06.2023 - 17:49:59
 
