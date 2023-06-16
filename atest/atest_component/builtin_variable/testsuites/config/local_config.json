@@ -2,7 +2,6 @@
 // Override here default configuration according to real test bench configuration
    
 {
-    "WelcomeString" : "Test local config!",
     ${params}['global']['gGlobalString'] : "Local configuration test!",
     ${params}['global']['testNewVar'] : 9.999, // ${params}['global']['gGlobalFloatParam'],
     ${params}['global']['gGlobalIntParam'] : 1901,

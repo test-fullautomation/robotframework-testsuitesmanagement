@@ -377,7 +377,26 @@ This loadCfg method uses to load configuration's parameters from json files.
                     elif isinstance(v, dict):
                         __loadLocalConfig(oLocalConfig)
                 oJsonCfgData.update(oLocalConfig)
-            __loadLocalConfig(oLocalConfig)
+
+            isLocalConfig = True
+            if "WelcomeString" in oLocalConfig:
+                errorMessage = f"Loading local config failed with file: {self.sLocalConfig} \n\
+          The mandatory \"WelcomeString\" element of configuration file is found in local config file \n\
+          Wrong local config file was chosen, please check!!!"
+                isLocalConfig = False
+
+            elif "default" in oLocalConfig:
+                errorMessage = f"Loading local config failed with file: {self.sLocalConfig} \n\
+          The variant \"default\" element of the variant configuration in the configuration level 2 is found in local config file \n\
+          Wrong local config file was chosen, please check!!!"
+                isLocalConfig = False
+
+            else:
+                __loadLocalConfig(oLocalConfig)
+                
+            if not isLocalConfig:
+                logger.error(errorMessage)
+                BuiltIn().unknown('Loading local config failed!')
 
         bJsonSchema = True    
         try:

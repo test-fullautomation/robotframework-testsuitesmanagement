@@ -24,7 +24,6 @@ Test Teardown    testsuites.testcase_teardown
 *** Test Cases ***
 Test builtin Variable with Config level 1
     Log   ${CONFIG}
-    Should Be Equal   ${CONFIG.WelcomeString}    Test local config!
     Should Be Equal    ${gGlobalFloatParam}    ${1.999}
     Should Be Equal    ${gGlobalIntParam}    ${92}
     Should Be Equal    ${gGlobalString}    BuiltIn variables test
