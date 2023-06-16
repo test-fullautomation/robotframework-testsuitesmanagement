@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_11_PARAMETER_PRIORITY_GOODCASE.py
+# test_06_NESTED_CONFIG_BADCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 06.06.2023 - 15:28:29
+# 16.06.2023 - 16:46:18
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,42 +27,33 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_PARAMETER_PRIORITY_GOODCASE:
+class Test_NESTED_CONFIG_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file (selected by variant name), local config and variable file",]
+      "Description", ["Variant with multiple nested configuration files; cyclic import of JSON file",]
    )
-   def test_TSM_0900(self, Description):
-      nReturn = CExecute.Execute("TSM_0900")
+   def test_TSM_0250(self, Description):
+      nReturn = CExecute.Execute("TSM_0250")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file, local config, variable file",]
+      "Description", ["Assignment of unknown dictionary key in imported JSON configuration file",]
    )
-   def test_TSM_0901(self, Description):
-      nReturn = CExecute.Execute("TSM_0901")
+   def test_TSM_0251(self, Description):
+      nReturn = CExecute.Execute("TSM_0251")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file (selected by variant name), local config, variable file and single variable in command line",]
+      "Description", ["Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file",]
    )
-   def test_TSM_0902(self, Description):
-      nReturn = CExecute.Execute("TSM_0902")
-      assert nReturn == 0
-# --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
-   # (Single file execution)
-   @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file, local config, variable file and single variable in command line",]
-   )
-   def test_TSM_0903(self, Description):
-      nReturn = CExecute.Execute("TSM_0903")
+   def test_TSM_0252(self, Description):
+      nReturn = CExecute.Execute("TSM_0252")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

@@ -20,6 +20,7 @@ testdictionary_variant.+
 Version\scontrol\serror
 The\stest\sexecution\srequires
 Wrong\suse\sof
+Wrong\slocal\sconfig\sfile\swas\schosen
 Please\scorrect\sthe\svalues\sof
 Parameter\s'.+'\swith\sinvalid\svalue\sfound\sin\sJSON\sconfiguration\sfile
 JSON\sschema\svalidation\sfailed

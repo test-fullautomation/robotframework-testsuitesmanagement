@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_05_NESTED_CONFIG_BADCASE.py
+# test_04_LOCAL_CONFIG_BADCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 06.06.2023 - 15:28:29
+# 16.06.2023 - 16:46:18
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,33 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_NESTED_CONFIG_BADCASE:
+class Test_LOCAL_CONFIG_BADCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
+   # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files; cyclic import of JSON file",]
+      "Description", ["A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved",]
    )
-   def test_TSM_0250(self, Description):
-      nReturn = CExecute.Execute("TSM_0250")
+   def test_TSM_0150(self, Description):
+      nReturn = CExecute.Execute("TSM_0150")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
    # Expected: Test is not executed; error message; test result is UNKNOWN
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of unknown dictionary key in imported JSON configuration file",]
+      "Description", ["A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested",]
    )
-   def test_TSM_0251(self, Description):
-      nReturn = CExecute.Execute("TSM_0251")
-      assert nReturn == 0
-# --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
-   # (Single file execution)
-   @pytest.mark.parametrize(
-      "Description", ["Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file",]
-   )
-   def test_TSM_0252(self, Description):
-      nReturn = CExecute.Execute("TSM_0252")
+   def test_TSM_0151(self, Description):
+      nReturn = CExecute.Execute("TSM_0151")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

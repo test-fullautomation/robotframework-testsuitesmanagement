@@ -181,6 +181,16 @@ Expectation: Local config value overwrites initial value for parameter 'teststri
 Comment....: Single file execution
 Hint.......: Temporary change of environment (ROBOT_LOCAL_CONFIG)
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0150 / LOCAL_CONFIG / BADCASE
+Description: A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0151 / LOCAL_CONFIG / BADCASE
+Description: A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested
+Expectation: Test is not executed; error message; test result is UNKNOWN
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0200 / NESTED_CONFIG / GOODCASE
 Description: Variant with multiple nested configuration files
 Expectation: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
@@ -341,5 +351,5 @@ Description: Test with test string containing more special characters, masked sp
 Expectation: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 12.06.2023 - 17:49:59
+Generated: 16.06.2023 - 16:46:18
 
