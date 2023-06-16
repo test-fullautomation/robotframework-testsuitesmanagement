@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -17,25 +17,25 @@ Library    ../../resources/atest_libs.py    WITH NAME    testlibs
 
 *** Test Cases ***
 Test BuiltIn Variables From Command 01
-    [Documentation]    Test builtIn variables from command line with configuration level 1. 
+    [Documentation]    Test builtIn variables from command line with configuration level 1.
     ${check}=    Subprocess Execution    ./testsuites/builtin_variable_with_config_level_1.robot    --variable gGlobalString:"BuiltIn variables test" --variablefile ../../testdata/templates.py --log builtin_variable_with_config_level_1.html
     Log    ${check}
     Should Be Equal    ${check}    Passed
 
 Test BuiltIn Variables From Command 02
-    [Documentation]    Test builtIn variables from command line with configuration level 2. 
+    [Documentation]    Test builtIn variables from command line with configuration level 2.
     ${check}=    Subprocess Execution    ./testsuites/builtin_variable_with_config_level_2.robot    --variable variant:variant_2 --variable gGlobalString:"BuiltIn variables test" --variablefile ../../testdata/templates.py --log builtin_variable_with_config_level_2.html
     Log    ${check}
     Should Be Equal    ${check}    Passed
 
 Test BuiltIn Variables From Command 03
-    [Documentation]    Test builtIn variables from command line with configuration level 3. 
+    [Documentation]    Test builtIn variables from command line with configuration level 3.
     ${check}=    Subprocess Execution    ./testsuites/builtin_variable_with_config_level_3.robot    --variable gGlobalString:"BuiltIn variables test" --variablefile ../../testdata/templates.py --log builtin_variable_with_config_level_3.html
     Log    ${check}
     Should Be Equal    ${check}    Passed
 
 Test BuiltIn Variables From Command 04
-    [Documentation]    Test builtIn variables from command line with local configuration feature. 
+    [Documentation]    Test builtIn variables from command line with local configuration feature.
     ${check}=    Subprocess Execution    ./testsuites/builtin_variable_with_local_config.robot    --variable variant:variant_2 --variable local_config:./config/local_config.json --variable gGlobalString:"BuiltIn variables test" --variablefile ../../testdata/templates.py --log builtin_variable_with_local_config.html
     Log    ${check}
     Should Be Equal    ${check}    Passed

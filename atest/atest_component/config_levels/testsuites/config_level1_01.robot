@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -13,10 +13,10 @@
 #  limitations under the License.
 #######################################################################
 #
-#  Configures with level 1 only 
+#  Configures with level 1 only
 #  Set ${config_file}   ../../general_config/test_config_level_1.json
-#  It's similar with execute robot test script with --variable config_file:../../general_config/test_config_level_1.json 
-# 
+#  It's similar with execute robot test script with --variable config_file:../../general_config/test_config_level_1.json
+#
 #######################################################################
 
 *** Variables ***

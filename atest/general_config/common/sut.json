@@ -1,4 +1,4 @@
-//  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+//  Copyright 2020-2023 Robert Bosch GmbH
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -13,10 +13,10 @@
 //  limitations under the License.
 /////////////////////////////////////////////////////////////////////////////
 //
-// Copyright (c) 2021 Robert Bosch Car Multimedia GmbH, Hildesheim
+// Copyright (c) 2021 Robert Bosch GmbH, Hildesheim
 //
 // Copyright notice:
-// This software is property of Robert Bosch Car Multimedia GmbH
+// This software is property of Robert Bosch GmbH
 // Unauthorized duplication and disclosure to third parties is forbidden.
 //
 /////////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@
   										 }
   						  }
   			          },
-  	
+
   			"audio": {
  					 "volume": {
   	    							"bSupported": true,
@@ -75,8 +75,8 @@
   			           "software": {
     								"sVersion": "BITS_20.16.0",
     								"NaviData.sVersion": "Navi-EU"
-  						           } 
-  			          }       
+  						           }
+  			          }
   		  }
 
 }

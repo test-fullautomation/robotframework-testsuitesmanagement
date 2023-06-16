@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 #
 #  Using level 2 configuration also sets in this test suite ../../general_config/testsuites_config.json
 #  The variant is set variant_2
-# 
+#
 #######################################################################
 
 *** Variables ***

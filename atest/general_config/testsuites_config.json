@@ -1,4 +1,4 @@
-//  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+//  Copyright 2020-2023 Robert Bosch GmbH
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 //  Author: Mai Dinh Nam Son
 //  This file defines all possible variants and the corresponding configuration
 //  file which need to be loaded.
-//  This file need to be included at the start of Robot testing in order to 
+//  This file need to be included at the start of Robot testing in order to
 //  make variant switching possible and properly working.
 //
 //*****************************************************************************
@@ -23,10 +23,10 @@
 // The file configures the access to all variant dependent robot_config*.json
 // files.
 //
-// The path to the robot_config*.json files depends on the test file location. A 
-// different number of ../ is required dependend on the directory depth of the test 
+// The path to the robot_config*.json files depends on the test file location. A
+// different number of ../ is required dependend on the directory depth of the test
 // case location.
-// Therefore we use here three ... to tell the ROBFW to search from the test 
+// Therefore we use here three ... to tell the ROBFW to search from the test
 // file location up till the robot_config*.json files are found:
 // ./config/robot_config.json
 // ../config/robot_config.json

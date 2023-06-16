@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
   ``sTestsuiteCfgFile=''`` and variable ``config_file`` is not set RobotFramework AIO will check for configuration
   level 3, and level 4.
 
-  ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and variable ``config_file`` is not set RobotFramework AIO 
+  ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and variable ``config_file`` is not set RobotFramework AIO
   will load configuration level 2.
 
 **Returns:**
@@ -102,7 +102,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             logger.info(f"Local config file: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}'")
         logger.info(f"Number of test suites: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
         logger.info(f"Total number of testcases: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}")
-        
+
     @keyword
     def testsuite_teardown(self):
         '''
@@ -110,7 +110,7 @@ This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently th
 it's defined here for future requirements.
         '''
         logger.info('testsuite_teardown: Will be implemented later')
-        
+
     @keyword
     def testcase_setup(self):
         '''
@@ -118,7 +118,7 @@ This testcase_setup defines the ``Testcase Setup`` keyword, currently this keywo
 it's defined here for future requirements.
         '''
         logger.info(f"Test Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount}")
-        
+
     @keyword
     def testcase_teardown(self):
         '''
@@ -126,7 +126,7 @@ This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this
 it's defined here for future requirements.
         '''
         logger.info('testcase_teardown: Will be implemented later')
-        
+
 class CGeneralKeywords(object):
     '''
 This CGeneralKeywords class defines the keywords which will be using in RobotFramework AIO test script.
@@ -137,7 +137,7 @@ This CGeneralKeywords class defines the keywords which will be using in RobotFra
 
 In case new robot keyword is required, it will be defined and implemented in this class.
     '''
-     
+
     @keyword
     def get_config(self):
         '''
@@ -154,7 +154,7 @@ This get_config defines the ``Get Config`` keyword gets the current config objec
   / *Type*: json /
         '''
         return copy.deepcopy(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.oConfigParams)
-    
+
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):
         '''

@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,25 +18,25 @@ from .Event import Event
 
 
 class ScopeEvent(Event):
-    
+
     def __init__(self, scope, action, *args, **kwargs):
         self.scope = scope
         self.action = action
         self.args = args
         self.kwargs = kwargs
-        
+
         if scope == 'current':
             suite = BuiltIn().get_variable_value('${SUITE NAME}')
             test = BuiltIn().get_variable_value('${TEST NAME}', '')
             self.scope = suite + '.' + test if test != '' else suite
-            
+
     def trigger(self, *args, **kwargs):
         if args[0] == self.scope:
             self.action(*self.args, **self.kwargs)
-            
-       
+
+
 class ScopeStart(ScopeEvent):
     name = 'scope_start'
-    
+
 class ScopeEnd(ScopeEvent):
     name = 'scope_end'

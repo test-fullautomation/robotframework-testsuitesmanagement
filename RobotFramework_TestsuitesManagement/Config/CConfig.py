@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -60,7 +60,7 @@ if os.path.isfile(context_filepath):
     else:
         try:
             with open(context_filepath) as f:
-                context_config = json.load(f)        
+                context_config = json.load(f)
         except Exception as reason:
             logger.error(f"Cannot load the '{context_filepath}' file. Reason: {reason}")
             exit(1)
@@ -81,7 +81,7 @@ This function prints out the package version which is:
 - RobotFramework_TestsuitesManagement version when this module is installed
 stand-alone (via `pip` or directly from sourcecode)
 
-- RobotFramework AIO version when this module is bundled with RobotFramework AIO 
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO
 package
 
 **Arguments:**
@@ -159,26 +159,26 @@ The loading configuration method is divided into 4 levels, level1 has the highes
                                 bLevel3 = False,
                                 bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
                             )
-    
+
     rMetaData      = CStruct(
                                 sVersionSW = '',
                                 sVersionHW     = '',
                                 sVersionTest   = '',
                                 sROBFWVersion  = get_full_version('Robot Framework')
                             )
-    
-    # Common configuration parameters 
+
+    # Common configuration parameters
     sWelcomeString  = None
     sTargetName     = None
     ddictJson = DotDict()
-    
+
     class CJsonDotDict():
         '''
 The CJsonDotDict class converts json configuration object to dotdict
         '''
         def __init__(self):
             self.lTmpParam = ['CConfig.ddictJson']
-            
+
         def __del__(self):
             CConfig.ddictJson = DotDict()
             del self.lTmpParam
@@ -203,7 +203,7 @@ This dotdictConvert method converts json object to dotdict.
             '''
             if len(self.lTmpParam) == 1:
                 CConfig.ddictJson.update(oJson)
-                
+
             for k,v in oJson.items():
                 sExec = ""
                 if isinstance(v, dict):
@@ -216,7 +216,7 @@ This dotdictConvert method converts json object to dotdict.
                     except:
                         logger.info(f"Could not convert: {sExec} to dotdict")
                         pass
-                    
+
                     self.dotdictConvert(v)
                 elif isinstance(v, list):
                     n = 0
@@ -231,12 +231,12 @@ This dotdictConvert method converts json object to dotdict.
                             except:
                                 logger.info(f"Could not convert: {sExec} to dotdict")
                                 pass
-                            
+
                             self.dotdictConvert(item)
                         n = n+1
             self.lTmpParam = self.lTmpParam[:-1]
             return CConfig.ddictJson
-     
+
     def __new__(classtype, *args, **kwargs):
         '''
 Makes the CConfig class to singleton.
@@ -250,7 +250,7 @@ for None so that subclasses will create their own __single objects.
 
     def __init__(self):
         pass
-        
+
 
     @staticmethod
     def loadCfg(self):
@@ -275,7 +275,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                     logger.error(f"Not able to get a configuration for variant '{self.sConfigName}' because of a variant configuration file is not available. \n" + \
                                   "          A variant configuration file must be available when executing robot with configuration level 2. \n")
                     BuiltIn().unknown('Loading configuration level 2 failed!')
-                    
+
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
                     sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1:][0]
@@ -309,7 +309,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                         self.sTestCfgFile = sDefaultConfig
 
-            if self.sTestCfgFile != '':                      
+            if self.sTestCfgFile != '':
                 self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
 
         if self.bConfigLoaded:
@@ -317,7 +317,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                 return
             elif not self.rConfigFiles.bLevel2 and not self.rConfigFiles.bLevel3:
                 return
-        
+
         if self.rConfigFiles.bLevel1:
             if self.sConfigName != 'default':
                 errorMessage = "Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n" + \
@@ -339,7 +339,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!\n"
             logger.error(errorMessage)
             BuiltIn().unknown('The configuration file is not found!')
-        
+
         robotCoreData = BuiltIn().get_variables()
         ROBFW_AIO_Data = {}
         for k, v in robotCoreData.items():
@@ -368,7 +368,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                 logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}\n")
                 BuiltIn().unknown('Loading local config failed!')
                 raise Exception
-            
+
             def __loadLocalConfig(oLocalConfig):
                 tmpDict = copy.deepcopy(oLocalConfig)
                 for k, v in tmpDict.items():
@@ -393,12 +393,12 @@ This loadCfg method uses to load configuration's parameters from json files.
 
             else:
                 __loadLocalConfig(oLocalConfig)
-                
+
             if not isLocalConfig:
                 logger.error(errorMessage)
                 BuiltIn().unknown('Loading local config failed!')
 
-        bJsonSchema = True    
+        bJsonSchema = True
         try:
             sSchemaFile=str(pathlib.Path(__file__).parent.absolute() / "configuration_schema.json")
             with open(sSchemaFile) as f:
@@ -407,7 +407,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             bJsonSchema = False
             logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'\n")
             BuiltIn().unknown('Parse JSON schema file failed!')
-    
+
         if bJsonSchema:
             try:
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
@@ -422,7 +422,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                     logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
                                  f"          {error.message}\n")
                 BuiltIn().unknown('JSON schema validation failed!')
-            
+
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
         self.sWelcomeString = oJsonCfgData['WelcomeString']
@@ -450,20 +450,20 @@ This loadCfg method uses to load configuration's parameters from json files.
             pass
         else:
             BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
-        
+
         CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
-        
+
         self.__updateGlobalVariable()
-        try:    
+        try:
             del oJsonCfgData['params']['global']
         except:
-            pass  
-        
+            pass
+
         # try:
         #     del oJsonCfgData['preprocessor']['definitions']
         # except:
-        #     pass 
-        
+        #     pass
+
         bDotdict = False
         dotdictObj = CConfig.CJsonDotDict()
         try:
@@ -473,7 +473,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             logger.info("Could not convert JSON config to dotdict!!!")
             pass
         del dotdictObj
-        
+
         if bDotdict:
             BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
         else:
@@ -483,7 +483,7 @@ This loadCfg method uses to load configuration's parameters from json files.
         if len(oJsonPreprocessor.lUpdatedParams) > 0:
             for param in oJsonPreprocessor.lUpdatedParams:
                 logger.info(f"The parameter '{param}' is updated")
-        
+
     def __setGlobalVariable(self, key, value):
         '''
 This method set RobotFramework AIO global variable from config object.
@@ -539,9 +539,9 @@ This method set RobotFramework AIO global variable from config object.
                 else:
                     tmpList.append(item)
             BuiltIn().set_global_variable(f"${{{k.strip()}}}", tmpList)
-        else:         
+        else:
             BuiltIn().set_global_variable(f"${{{k.strip()}}}", v)
-            
+
     def __updateGlobalVariable(self):
         '''
 This method updates preprocessor and global params to global variable of RobotFramework AIO.
@@ -564,7 +564,7 @@ This method updates preprocessor and global params to global variable of RobotFr
         #             continue
         # except:
         #     pass
-        
+
         try:
             for k,v in self.oConfigParams['params']['global'].items():
                 if k in self.lBuitInVariables:
@@ -574,8 +574,8 @@ This method updates preprocessor and global params to global variable of RobotFr
                 except:
                     continue
         except:
-            pass  
-        
+            pass
+
     def __del__(self):
         '''
 This destructor method.
@@ -589,7 +589,7 @@ This destructor method.
 * No return variable
         '''
         pass
-    
+
     def __loadConfigFileLevel2(self) -> bool:
         '''
 This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLevel2 == True.
@@ -602,7 +602,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
 
 * No return variable
         '''
-        
+
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
@@ -645,7 +645,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                                       f"must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'\n"
             logger.error(CConfig.sLoadedCfgError)
             return False
-            
+
         if sTestCfgDir.startswith('.../'):
             sTestCfgDirStart = sTestCfgDir
             sTestCfgDir = sTestCfgDir[4:]
@@ -668,10 +668,10 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                                              f"          Could not find out config directory: '{sTestCfgDirStart}'"
                     logger.error(CConfig.sLoadedCfgError)
                     return False
-                
+
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
         return True
-    
+
     @staticmethod
     def __getMachineName():
         '''
@@ -699,9 +699,9 @@ This __getMachineName method gets current machine name which is running the test
                 sMachineName = os.getenv("COMPUTERNAME",'')
             except:
                 pass
-            
+
         return sMachineName
-    
+
     @staticmethod
     def __getUserName():
         '''
@@ -728,21 +728,21 @@ This __getUserName method gets current account name login to run the test.
             try:
                 GetUserNameEx = ctypes.windll.secur32.GetUserNameExW
                 NameDisplay = 3
-                
+
                 size = ctypes.pointer(ctypes.c_ulong(0))
                 GetUserNameEx(NameDisplay, None, size)
-                
+
                 nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
                 GetUserNameEx(NameDisplay, nameBuffer, size)
                 sUserName = nameBuffer.value
             except:
                 pass
-        
+
         return sUserName
-    
+
     def verifyVersion(self):
         '''
-This verifyVersion validates the current package version with maximum and 
+This verifyVersion validates the current package version with maximum and
 minimum version (if provided in the configuration file).
 
 The package version is:
@@ -750,10 +750,10 @@ The package version is:
 - RobotFramework_TestsuitesManagement version when this module is installed
 stand-alone (via `pip` or directly from sourcecode)
 
-- RobotFramework AIO version when this module is bundled with RobotFramework AIO 
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO
 package
 
-In case the current version is not between min and max version, then the 
+In case the current version is not between min and max version, then the
 execution of testsuite is terminated with "unknown" state
 
 **Arguments:**
@@ -766,7 +766,7 @@ execution of testsuite is terminated with "unknown" state
         '''
         sCurrentVersion = BUNDLE_VERSION
         tCurrentVersion = CConfig.tupleVersion(sCurrentVersion)
-        
+
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
@@ -844,7 +844,7 @@ This bValidateMaxVersion validates the current version with required minimun ver
     @staticmethod
     def bValidateSubVersion(sVersion):
         '''
-This bValidateSubVersion validates the format of provided sub version and parse 
+This bValidateSubVersion validates the format of provided sub version and parse
 it into sub tuple for version comparision.
 
 **Arguments:**
@@ -875,16 +875,16 @@ it into sub tuple for version comparision.
                     lSubVersion[1] = 2
             else:
                 lSubVersion[1] = 3
-            
+
             if oMatch.group(3):
                 lSubVersion[2] = int(oMatch.group(3))
             else:
                 lSubVersion[2] = 0
-            
+
             return tuple(lSubVersion)
         else:
             raise Exception("Wrong format in version info")
-            
+
     @staticmethod
     def tupleVersion(sVersion):
         '''
@@ -892,8 +892,8 @@ This tupleVersion returns a tuple which contains the (major, minor, patch) versi
 
 In case minor/patch version is missing, it is set to 0.
 E.g: "1" is transformed to "1.0.0" and "1.1" is transformed to "1.1.0"
-            
-This tupleVersion also support version which contains Alpha (a), Beta (b) or 
+
+This tupleVersion also support version which contains Alpha (a), Beta (b) or
 Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
 
 **Arguments:**
@@ -920,7 +920,7 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
         elif len(lVersion) == 2:
             lVersion.append("0")
         elif len(lVersion) >= 3:
-            # Just ignore and remove the remaining 
+            # Just ignore and remove the remaining
             lVersion = lVersion[:3]
         try:
             # verify the version info is a number
@@ -972,7 +972,7 @@ Log error message of version control due to reason and set to unknown state.
             detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
         else:
             return
-        
+
         BuiltIn().log(f"{header}" +
         f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
         f"\nconfig    : {self.sTestCfgFile}" +

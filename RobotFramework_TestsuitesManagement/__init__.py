@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
     # '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = VERSION
-    
+
     # '''
     # Constructor
     # Args:
@@ -47,12 +47,12 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
     def __init__(self, timeout=10.0):
         self.timeout = timeout
         self._running_on_failure_keyword = False
-        self.run_on_failure_keyword = None # will update later 
+        self.run_on_failure_keyword = None # will update later
         libraries = [CSetupKeywords(), CGeneralKeywords()]
         self.ROBOT_LIBRARY_LISTENER = LibListener()
         self._running_keyword = None
         DynamicCore.__init__(self, libraries)
-    
+
     # '''
     # Method: run_keyword
     # Args:
@@ -66,7 +66,7 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
         except Exception:
             self.failure_occurred()
             raise
-        
+
     # '''
     # Method: get_keyword_tags
     # Args:
@@ -77,7 +77,7 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
     def get_keyword_tags(self, name):
         tags = list(DynamicCore.get_keyword_tags(self, name))
         return tags
-        
+
     # '''
     # Method: get_keyword_documentation
     # Args:
@@ -87,16 +87,16 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
     # '''
     def get_keyword_documentation(self, name):
         return DynamicCore.get_keyword_documentation(self, name)
-    
+
     # '''
     # Method: failure_occurred is executed when RobotFramework_TestsuitesManagement keyword fails.
-    # By default, executes the registered run-on-failure keyword. RobotFramework_TestsuitesManagement can 
+    # By default, executes the registered run-on-failure keyword. RobotFramework_TestsuitesManagement can
     # overwrite this hook method in case provides custom functionality instead.
     # Args:
         # None
     # Returns:
         # None
-    # '''        
+    # '''
     def failure_occurred(self):
         if self._running_on_failure_keyword or not self.run_on_failure_keyword:
             return None
@@ -110,6 +110,6 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
 
 class CTestsuitesCfg():
     oConfig = None
-    
+
     def __init__(self):
         pass

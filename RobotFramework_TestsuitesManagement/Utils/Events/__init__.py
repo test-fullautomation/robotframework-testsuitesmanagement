@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -25,13 +25,13 @@ def on(event_name, *args, **kwargs):
     for event in _registered_events:
         if event.name == event_name:
             _events.append(event(*args, **kwargs))
-            return 
-        
+            return
+
 def dispatch(event_name, *args, **kwargs):
     for event in _events:
         if event.name == event_name:
             event.trigger(*args, **kwargs)
-            
+
 def register_event(event):
     for registered_event in _registered_events:
         if event.name == registered_event.name:

@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ from robot.api import logger
 
 @keyword
 def subprocess_execution(testscript, args = ''):
-    
+
     curDir = os.getcwd()
     suite_dir = os.path.dirname(BuiltIn().get_variable_value("${SUITE_SOURCE}"))
     os.chdir(suite_dir)
@@ -42,7 +42,7 @@ def subprocess_execution(testscript, args = ''):
                 result = os.popen(command).read()
     except:
         pass
-    
+
     if '| PASS |' in result:
         logger.info(result)
         os.chdir(curDir)
