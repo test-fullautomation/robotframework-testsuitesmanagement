@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_12_DATA_INTEGRITY_GOODCASE.py
+# test_07_VERSION_CONTROL_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 12.06.2023 - 17:49:59
+# 16.06.2023 - 16:46:18
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,42 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_DATA_INTEGRITY_GOODCASE:
+class Test_VERSION_CONTROL_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with test string containing several separator characters and blanks",]
+      "Description", ["'Maximum_version' and 'Minimum_version' not defined",]
    )
-   def test_TSM_1000(self, Description):
-      nReturn = CExecute.Execute("TSM_1000")
+   def test_TSM_0400(self, Description):
+      nReturn = CExecute.Execute("TSM_0400")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with test string containing more special characters, masked special characters and escape sequences",]
+      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
    )
-   def test_TSM_1001(self, Description):
-      nReturn = CExecute.Execute("TSM_1001")
+   def test_TSM_0401(self, Description):
+      nReturn = CExecute.Execute("TSM_0401")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Maximum_version' is defined",]
+   )
+   def test_TSM_0402(self, Description):
+      nReturn = CExecute.Execute("TSM_0402")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Minimum_version' is defined",]
+   )
+   def test_TSM_0403(self, Description):
+      nReturn = CExecute.Execute("TSM_0403")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

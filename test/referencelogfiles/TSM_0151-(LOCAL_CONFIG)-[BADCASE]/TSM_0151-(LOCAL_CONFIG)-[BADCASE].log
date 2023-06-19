@@ -1,0 +1,21 @@
+==============================================================================
+20230616 16:36:18.523 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20230616 16:36:18.528 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230616 16:36:18.535 - ERROR - Loading local config failed with file: D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.jsonp 
+          The mandatory "WelcomeString" element of configuration file is found in local config file 
+          Wrong local config file was chosen, please check!!!
+20230616 16:36:18.536 - UNKNOWN - Loading local config failed!
+20230616 16:36:18.536 - DEBUG - Loading local config failed!
+20230616 16:36:18.536 - INFO - +- END SETUP: tm.Testsuite Setup (9)
+------------------------------------------------------------------------------
+20230616 16:36:18.537 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20230616 16:36:18.539 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+------------------------------------------------------------------------------
+20230616 16:36:18.539 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230616 16:36:18.539 - INFO - testsuite_teardown: Will be implemented later
+20230616 16:36:18.539 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20230616 16:36:18.542 - INFO - + END SUITE: Tsm-Testfile-02 (124)
+==============================================================================

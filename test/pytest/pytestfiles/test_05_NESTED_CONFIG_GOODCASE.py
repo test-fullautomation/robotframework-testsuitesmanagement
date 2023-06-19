@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_09_RETURN_VALUE_GOODCASE.py
+# test_05_NESTED_CONFIG_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 06.06.2023 - 15:28:29
+# 16.06.2023 - 16:46:18
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_RETURN_VALUE_GOODCASE:
+class Test_NESTED_CONFIG_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
+   # Expected: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)",]
+      "Description", ["Variant with multiple nested configuration files",]
    )
-   def test_TSM_0600(self, Description):
-      nReturn = CExecute.Execute("TSM_0600")
+   def test_TSM_0200(self, Description):
+      nReturn = CExecute.Execute("TSM_0200")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests
-   # (Folder execution)
+   # Expected: Inside robot files all configuration parameters have proper value and are of proper data type
+   # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)",]
+      "Description", ["Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)",]
    )
-   def test_TSM_0700(self, Description):
-      nReturn = CExecute.Execute("TSM_0700")
+   def test_TSM_0201(self, Description):
+      nReturn = CExecute.Execute("TSM_0201")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

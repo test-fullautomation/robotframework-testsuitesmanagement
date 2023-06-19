@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_04_NESTED_CONFIG_GOODCASE.py
+# test_11_JSON_DOTDICT_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 06.06.2023 - 15:28:28
+# 16.06.2023 - 16:46:18
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,15 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_NESTED_CONFIG_GOODCASE:
+class Test_JSON_DOTDICT_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
+   # Expected: dotdict syntax in JSON files is possible
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files",]
+      "Description", ["Nested imports of JSON files with dotdict syntax",]
    )
-   def test_TSM_0200(self, Description):
-      nReturn = CExecute.Execute("TSM_0200")
-      assert nReturn == 0
-# --------------------------------------------------------------------------------------------------------------
-   # Expected: Inside robot files all configuration parameters have proper value and are of proper data type
-   # (Single file execution)
-   @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)",]
-   )
-   def test_TSM_0201(self, Description):
-      nReturn = CExecute.Execute("TSM_0201")
+   def test_TSM_0800(self, Description):
+      nReturn = CExecute.Execute("TSM_0800")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
