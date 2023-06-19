@@ -1,4 +1,4 @@
-.. Copyright 2020-2022 Robert Bosch GmbH
+.. Copyright 2020-2023 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -131,7 +131,7 @@ Example: The test case name of a ``GOODCASE`` test of the variant handling with 
 
    TSM_0001-(VARIANT_HANDLING)-[GOODCASE]
 
-With: 
+With:
 
 * ``TSM_0001``" is the ``TESTID``
 * ``VARIANT_HANDLING`` is the ``SECTION`` (*to ease the readability the* ``SECTION`` *is encapsulated in round brackets*)
@@ -200,7 +200,7 @@ The comparison is based on a set of regular expressions, that are used to create
 And these subsets are compared (not the entire log files itself). This is to ensure that irrelevant content like
 timestamps or operating system dependent path separators do not harm the results.
 
-The regular expressions are defined in the following pattern files: 
+The regular expressions are defined in the following pattern files:
 
 .. code::
 

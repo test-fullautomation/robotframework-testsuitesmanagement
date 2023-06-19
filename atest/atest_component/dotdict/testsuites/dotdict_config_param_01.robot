@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ Test Teardown    testsuites.testcase_teardown
 *** Test Cases ***
 Test Dotdict Config Params 001
     Log   ${CONFIG}
-    Should Be Equal    ${CONFIG.Project}    ${CONFIG}[Project] 
-    Should Be Equal    ${CONFIG.WelcomeString}    ${CONFIG}[WelcomeString] 
+    Should Be Equal    ${CONFIG.Project}    ${CONFIG}[Project]
+    Should Be Equal    ${CONFIG.WelcomeString}    ${CONFIG}[WelcomeString]
     Should Be Equal    ${CONFIG.TargetName}    ${CONFIG}[TargetName]
     Should Be Equal    ${CONFIG.Maximum_version}    ${CONFIG}[Maximum_version]
     Should Be Equal    ${CONFIG.Minimum_version}    ${CONFIG}[Minimum_version]

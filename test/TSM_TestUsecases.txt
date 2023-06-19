@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-Copyright 2020-2022 Robert Bosch GmbH
+Copyright 2020-2023 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -351,5 +351,5 @@ Description: Test with test string containing more special characters, masked sp
 Expectation: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 16.06.2023 - 16:46:18
+Generated: 16.06.2023 - 17:06:28
 

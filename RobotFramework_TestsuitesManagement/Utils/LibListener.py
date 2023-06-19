@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ This ``LibListener`` class defines the hook methods.
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LISTENER_API_VERSION = 3
-    
+
     def _start_suite(self, data, result):
         '''
 This _start_suite method hooks to every starting testsuite of robot run.
@@ -68,7 +68,7 @@ This _start_suite method hooks to every starting testsuite of robot run.
         else:
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = data.source
         os.chdir(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath)
-        
+
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount == 0:
             test_suite = None
             test_suite = data
@@ -114,11 +114,11 @@ This _start_suite method hooks to every starting testsuite of robot run.
                 except:
                     RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg = False
                     pass
-                    
+
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount)
         dispatch('scope_start', data.longname)
-        
+
     def _end_suite(self, data, result):
         '''
 This _end_suite method hooks to every ending testsuite of robot run.
@@ -144,7 +144,7 @@ This _end_suite method hooks to every ending testsuite of robot run.
         if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile = ''
         dispatch('scope_end', data.longname)
-        
+
     def _start_test(self, data, result):
         '''
 This _start_test method hooks to every starting test case of robot run.
@@ -168,7 +168,7 @@ This _start_test method hooks to every starting test case of robot run.
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount += 1
         BuiltIn().set_global_variable("${TESTCOUNT}", RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount)
         dispatch('scope_start', data.longname)
-        
+
     def _end_test(self, data, result):
         '''
 This _end_test hooks to every ending test case of robot run.

@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch Car Multimedia GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #  The variant is not defined -> load default config (robot_config_variant_1.json)
 #  The configuration level 3 also setup.
 #  But the configuration level 2 is higher priority
-# 
+#
 #######################################################################
 
 *** Settings ***

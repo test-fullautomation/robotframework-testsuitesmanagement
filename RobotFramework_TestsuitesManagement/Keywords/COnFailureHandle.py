@@ -1,4 +1,4 @@
-#  Copyright 2020-2022 Robert Bosch GmbH
+#  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@ from robot.api.deco import keyword, not_keyword
 from robot.utils import is_string
 
 class COnFailureHandle():
-    
+
     @not_keyword
     def is_noney(self, item):
         return item is None or is_string(item) and item.upper() == 'NONE'
-    
+
     # @keyword
     # def register_keyword_run_on_failure(self, keyword):
     #     '''

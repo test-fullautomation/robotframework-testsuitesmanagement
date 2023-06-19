@@ -1,10 +1,10 @@
 // Initially created by Pollerspoeck Thomas (CM-AI/PJ-CMD) / 30.10.2017
 // Override here default configuration according to real test bench configuration
-   
+
 {
     ${params}['global']['gGlobalString'] : "Local configuration test!",
     ${params}['global']['testNewVar'] : 9.999, // ${params}['global']['gGlobalFloatParam'],
     ${params}['global']['gGlobalIntParam'] : 1901,
     ${params}['global']['gGlobalFloatParam'] : 1.123
- }   
- 
+ }
+

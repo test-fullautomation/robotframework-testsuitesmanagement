@@ -1,6 +1,6 @@
 % --------------------------------------------------------------------------------------------------------------
 %
-% Copyright 2020-2022 Robert Bosch GmbH
+% Copyright 2020-2023 Robert Bosch GmbH
 
 % Licensed under the Apache License, Version 2.0 (the "License");
 % you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ tests of several variants and test executions on several test benches, no change
 The outcome is that another position has to be introduced to store values for variant and test bench specific parameters.
 And a possibility has to be provided to dynamically make either the one or the other set of values vailable during the execution of
 tests - depending on outer circumstances like "\textit{which variant?}" and "\textit{which test bench?}".
-Those dynamic configuration values are stored within separate configuration files in JSON format and the \pkg\ makes the values 
+Those dynamic configuration values are stored within separate configuration files in JSON format and the \pkg\ makes the values
 available globally during the test execution.
 
 Two different kinds of JSON configuration files are involved:
@@ -176,7 +176,7 @@ What is the meaning of "currently installed software"?
          for a version control instead.
 \end{itemize}
 
-The version control mechanism is optional. In case you do not need to have your tests under version control, you can set 
+The version control mechanism is optional. In case you do not need to have your tests under version control, you can set
 the versions to the value \pcode{null}.
 
 \begin{pythoncode}
