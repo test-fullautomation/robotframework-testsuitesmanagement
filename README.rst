@@ -92,6 +92,10 @@ Package Documentation
 A detailed documentation of the **RobotFramework_TestsuitesManagement** can be found here:
 `RobotFramework_TestsuitesManagement.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 
+For self-study also a tutorial is available containing lots of examples.
+Here you find the rendered `tutorial documentation <https://htmlpreview.github.io/?https://github.com/test-fullautomation/robotframework-tutorial/blob/develop/900_building_testsuites/building_testsuites.html>`_.
+
+
 Feedback
 --------
 
