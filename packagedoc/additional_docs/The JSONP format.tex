@@ -533,14 +533,14 @@ To access an element of a list and a key of a dictionary, we change the content 
    // import of componentB parameters
    "[import]" : "./componentB.jsonp",
    //
-   "list_element_0" : "${componentB_param_1}[0]",
+   "list_element_0" : ${componentB_param_1}[0],
    "dict_key_2_2"   : ${common_param_2}['common_key_2_2']
 }
 \end{pythoncode}
 
-\textbf{!!! CAUTION}: Code neeeds to be adapted (remove quotes) after
+\textbf{!!! CAUTION}:
 \href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/85}{issues/85}
-is resolved \textbf{!!!}
+\textbf{!!!}
 
 \textbf{Outcome:}
 
@@ -797,14 +797,12 @@ In the following example we create a composite data structure and demonstate how
    // a) standard notation
    "dict_1_key_2_value_2_standard" : ${params}[0]['dict_1_key_2'][1],
    // b) dotdict notation
-   // "dict_1_key_2_value_2_dotdict" : ${params.0.dict_1_key_2.1},
-   // -> 'The variable '${params}['0']['dict_1_key_2']['1']' is not available!'
+   "dict_1_key_2_value_2_dotdict" : ${params.0.dict_1_key_2.1},
    //
    // c) standard notation
    "dict_2_A_key_2_value_2_standard" : ${params}[1]['dict_2_key_2']['dict_2_A_key_2'][1]
    // d) dotdict notation
-   // "dict_2_A_key_2_value_2_dotdict" : ${params.1.dict_2_key_2.dict_2_A_key_2.1}
-   // -> 'The variable '${params}['1']['dict_2_key_2']['dict_2_A_key_2']['1']' is not available!'
+   "dict_2_A_key_2_value_2_dotdict" : ${params.1.dict_2_key_2.dict_2_A_key_2.1}
 }
 \end{pythoncode}
 
@@ -830,11 +828,6 @@ the expressions (like \pcode{$\{params.1.dict_2_key_2.dict_2_A_key_2.1\}}) becom
                               'dict_2_A_key_2': ['dict_2_A_key_2 value 1',
                                                  'dict_2_A_key_2 value 2']}}]}
 \end{pythonlog}
-
-% --------------------------------------------------------------------------------------------------------------
-% === to be reworked and extended after issued are solved
-% --------------------------------------------------------------------------------------------------------------
-
 
 % --------------------------------------------------------------------------------------------------------------
 
@@ -876,7 +869,7 @@ generates dynamic parameter names.
 {'component': 'componentA',
  'item_number': 1,
  'project': 'Test',
- 'project)_message_str(1': "Component 'componentA' has version 1.23",
+ 'Test_message_1': "Component 'componentA' has version 1.23",
  'version': 1.23}
 \end{pythonlog}
 
@@ -896,17 +889,12 @@ To demonstrate this, we change the JSON file to:
    "component"      : "componentA",
    "composite_data" : ["AB", 12, True, null, {"kA" : "kAval", "kB" : "kBval"}],
    //
-   "test_parameter" : "Key values of component '${component}' are ${composite_data}"
+   "test_parameter" : "Key values of component '${component}' are: ${composite_data}"
 }
 \end{pythoncode}
 
 \textbf{!!! Caution:} substitution bug:
 \href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/92}{issues/92} \textbf{!!!}
-
-Not working currently:
-\begin{pythoncode}
-   "test_parameter" : "Key values of component '${component}' are: ${composite_data}"
-\end{pythoncode}
 
 \vspace{2ex}
 
@@ -915,7 +903,7 @@ Not working currently:
 \begin{pythonlog}
 {'component': 'componentA',
  'composite_data': ['AB', 12, True, None, {'kA': 'kAval', 'kB': 'kBval'}],
- 'test_parameter': "Key values of component 'componentA' are ['AB', 12, True, "
+ 'test_parameter': "Key values of component 'componentA' are: ['AB', 12, True, "
                    "None, {'kA': 'kAval', 'kB': 'kBval'}]"}
 \end{pythonlog}
 
@@ -925,10 +913,10 @@ Now we try to do the same on the left hand side of the colon:
 
 \begin{pythoncode}
 {
-   "value"          : "string value",
+   "param"          : "string value",
    "composite_data" : ["AB", 12, True, null, {"kA" : "kAval", "kB" : "kBval"}],
    //
-   "test_parameter_${composite_data}" : ${value}
+   "test_parameter_${composite_data}" : ${param}
 }
 \end{pythoncode}
 
@@ -943,6 +931,41 @@ Now we try to do the same on the left hand side of the colon:
 \textbf{!!! Caution:}
 \href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/69#issuecomment-1589581903}{issues/69 issuecomment-1589581903} \textbf{!!!}
 
+\vspace{2ex}
+
+\textbf{Substitution vs. overwriting}
+
+\vspace{2ex}
+
+With the last example in this section we take a deeper look at the syntax difference between substitution and overwriting.
+
+\begin{pythoncode}
+{
+   "param1"    : "ABC",
+   "param2"    : "XYZ",
+   //
+   ${param2}   : ${param1},
+   "${param2}" : ${param1}
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textit{Overwriting:}
+
+With \pcode{$\{param2\}   : $\{param1\}} the initial value \pcode{"XYZ"} of parameter \pcode{param2} is overwritten with the value \pcode{"ABC"}
+of parameter \pcode{param1}.
+
+\vspace{2ex}
+
+\textit{Substitution:}
+
+With \pcode{"$\{param2\}" : $\{param1\}} a new parameter with name \pcode{XYZ} (the value of \pcode{param2}) and value \pcode{"ABC"}
+is created.
+
+\vspace{2ex}
+
+The quotes around \pcode{$\{param2\}} make the difference.
 
 % --------------------------------------------------------------------------------------------------------------
 
