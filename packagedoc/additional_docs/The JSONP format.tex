@@ -933,39 +933,62 @@ Now we try to do the same on the left hand side of the colon:
 
 \vspace{2ex}
 
-\textbf{Substitution vs. overwriting}
+\textbf{Overwriting vs. substitution}
 
 \vspace{2ex}
 
-With the last example in this section we take a deeper look at the syntax difference between substitution and overwriting.
+With the last two examples in this section we take a deeper look at the syntax difference between overwriting and substitution.
+
+\vspace{2ex}
+
+\textbf{1. Overwriting:}
+
+With \pcode{$\{param2\} : $\{param1\}} the initial value \pcode{"XYZ"} of parameter \pcode{param2} is overwritten with the value \pcode{"ABC"}
+of parameter \pcode{param1}.
+
+\begin{pythoncode}
+{
+   "param1"  : "ABC",
+   "param2"  : "XYZ",
+   //
+   ${param2} : ${param1},
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Result:}
+
+\begin{pythonlog}
+{"param1" : "ABC",
+ "param2" : "ABC"}
+\end{pythonlog}
+
+\vspace{2ex}
+
+\textbf{2. Substitution:}
+
+With \pcode{"$\{param2\}" : $\{param1\}} a new parameter with name \pcode{XYZ} (the value of \pcode{param2}) and value \pcode{"ABC"}
+is created.
 
 \begin{pythoncode}
 {
    "param1"    : "ABC",
    "param2"    : "XYZ",
    //
-   ${param2}   : ${param1},
-   "${param2}" : ${param1}
+   "${param2}" : ${param1},
 }
 \end{pythoncode}
 
 \vspace{2ex}
 
-\textit{Overwriting:}
+\textbf{Result:}
 
-With \pcode{$\{param2\}   : $\{param1\}} the initial value \pcode{"XYZ"} of parameter \pcode{param2} is overwritten with the value \pcode{"ABC"}
-of parameter \pcode{param1}.
-
-\vspace{2ex}
-
-\textit{Substitution:}
-
-With \pcode{"$\{param2\}" : $\{param1\}} a new parameter with name \pcode{XYZ} (the value of \pcode{param2}) and value \pcode{"ABC"}
-is created.
-
-\vspace{2ex}
-
-The quotes around \pcode{$\{param2\}} make the difference.
+\begin{pythonlog}
+{"param1" : "ABC",
+ "param2" : "XYZ",
+ "XYZ" : "ABC"}
+\end{pythonlog}
 
 % --------------------------------------------------------------------------------------------------------------
 
