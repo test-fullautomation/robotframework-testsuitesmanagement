@@ -3,7 +3,7 @@
 ==============================================================================
 20230531 12:48:48.401 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20230531 12:48:48.411 - ERROR - Loading of JSON configuration file failed! 
-          Reason: Could not set variable 'params['global']['dTestDict']['I-am-not-existing']['I-am-not-existing']' with value 'Val_1'!
+          Reason: Could not set variable 'params['global']['dTestDict']['I-am-not-existing']['I-am-not-existing']' with value 'Val_1'! Reason
 20230531 12:48:48.412 - UNKNOWN - Loading of JSON configuration file failed!
 20230531 12:48:48.412 - DEBUG - Loading of JSON configuration file failed!
 20230531 12:48:48.412 - INFO - +- END SETUP: tm.Testsuite Setup (11)
