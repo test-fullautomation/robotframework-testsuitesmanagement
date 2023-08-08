@@ -2,8 +2,8 @@
 20230531 12:48:40.331 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
 20230531 12:48:40.342 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20230531 12:48:40.342 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
-20230531 12:48:40.342 - DEBUG - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+20230531 12:48:40.342 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
+20230531 12:48:40.342 - DEBUG - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
 20230531 12:48:40.343 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
 20230531 12:48:40.343 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]

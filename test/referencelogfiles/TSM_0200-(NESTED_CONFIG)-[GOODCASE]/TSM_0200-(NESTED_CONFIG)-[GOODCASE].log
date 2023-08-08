@@ -16,15 +16,6 @@
 20230531 12:48:45.757 - INFO - ${teststring_common} = (1) I am the common teststring of imported.1 valid for all variants and all test benches
 20230531 12:48:45.761 - INFO - ${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test
 20230531 12:48:45.763 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_nested.1', 'TargetName': 'Device_01', 'params': {}}
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['teststring_common']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_1']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_3']['tdv_key_3_1']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testlist_variant'][1]' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_1']['tdv_key_1_2']' is updated
-20230531 12:48:45.763 - INFO - The parameter 'params['global']['testdictionary_variant']['tdv_key_2']['tdv_key_2_1']' is updated
 20230531 12:48:45.763 - INFO - Running with configuration level 2
 20230531 12:48:45.763 - INFO - Parameters loaded from 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.1.jsonp'
 20230531 12:48:45.764 - INFO - RobotFramework AIO version check passed!

@@ -9,7 +9,6 @@ Number\sof\stest\ssuites:\s\d+
 Total\snumber\sof\stestcases:\s\d+
 Suite\sCount:\s\d+
 Total\stestcases\sin.+
-.+(The parameter\s.+\sis updated)
 teststring\s:.+
 teststring_common\s:.+
 teststring_variant\s:.+
