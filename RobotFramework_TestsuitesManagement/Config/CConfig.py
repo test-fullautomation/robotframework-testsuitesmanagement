@@ -480,8 +480,8 @@ This loadCfg method uses to load configuration's parameters from json files.
             BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
 
-        if len(oJsonPreprocessor.lUpdatedParams) > 0:
-            for param in oJsonPreprocessor.lUpdatedParams:
+        if len(oJsonPreprocessor.dUpdatedParams) > 0:
+            for param in oJsonPreprocessor.dUpdatedParams:
                 logger.info(f"The parameter '{param}' is updated")
 
     def __setGlobalVariable(self, key, value):
