@@ -61,12 +61,12 @@ This _start_suite method hooks to every starting testsuite of robot run.
         '''
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig = CConfig()
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = ''
-        if os.path.isfile(data.source):
+        if os.path.isfile(data.source.__str__()):
             RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = ''
-            for item in data.source.split(os.path.sep)[:-1]:
+            for item in data.source.__str__().split(os.path.sep)[:-1]:
                 RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath += item + os.path.sep
         else:
-            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = data.source
+            RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath = data.source.__str__()
         os.chdir(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath)
 
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount == 0:
