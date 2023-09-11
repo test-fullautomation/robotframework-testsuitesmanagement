@@ -5,6 +5,13 @@ on:
     tags:
       - "rel/*.*.*"
       - "rel/*.*.*.*"
+  pull_request:
+    types:
+      - closed
+      - opened
+      - synchronize
+    branches: 
+      - develop
 
 jobs:
   build-n-publish:
