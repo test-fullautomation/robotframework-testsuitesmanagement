@@ -14,5 +14,5 @@
 //**************************************************************************
 
 {
-    ${params}['global']['dTestDict']['I-am-not-existing']['I-am-not-existing'] : ${params}['global']['dTestDict']['kVal_1']
+    ${params}['global']['dTestDict']['kVal_2']['I-am-not-existing']['I-am-not-existing'] : ${params}['global']['dTestDict']['kVal_1']
 }

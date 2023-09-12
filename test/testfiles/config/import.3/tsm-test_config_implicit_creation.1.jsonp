@@ -15,5 +15,5 @@
 
 {
    "dTestDict" : {"kVal_1" : "Val_1"},
-   "[import]"  : "./import.3.err.1/tsm-test_config_invalid_assignment_1.1.1.jsonp"
+   "[import]"  : "./import.3.1/tsm-test_config_implicit_creation.1.1.jsonp"
 }

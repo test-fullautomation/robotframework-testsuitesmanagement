@@ -102,10 +102,10 @@
                              "name" : "tsm-test_config_invalid_assignment_1.jsonp",
                              "path" : "./config/"
                            },
-  "invalid_assignment_2" : {
-                             "name" : "tsm-test_config_invalid_assignment_2.jsonp",
-                             "path" : "./config/"
-                           },
+  "implicit_creation" : {
+                           "name" : "tsm-test_config_implicit_creation.jsonp",
+                           "path" : "./config/"
+                        },
   "parameter_priority" : {
                            "name" : "tsm-test_config_parameter_priority.jsonp",
                            "path" : "./config/"
