@@ -61,6 +61,7 @@
 # "tsm-testfile-19-parameter_priority.robot"   # (with variant configuration and extended parameter logging for parameters from different sources)
 # "tsm-testfile-20-fatal_error.robot"          # (with variant configuration and several tests; keyword FATAL ERROR)
 # "tsm-testfile-21-data_integrity.robot"       # (with variant configuration and additional log strings to test the data integrity)
+# "tsm-testfile-22-implicit_creation.robot"    # (with variant configuration and additional log strings to test the implicit creation)
 #
 # configfoldertests1/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -637,20 +638,6 @@ dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0252"
-dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "NESTED_CONFIG"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"invalid_assignment_2\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------
@@ -1080,7 +1067,22 @@ dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/tsm-test_co
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
-
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1100"
+dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file"
+dictUsecase['EXPECTATION']      = "Missing subkeys are created (implicit creation of data structures)"
+dictUsecase['SECTION']          = "IMPLICIT_CREATION"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-22-implicit_creation.robot" # (with variant configuration and additional log strings to test the implicit creation)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"implicit_creation\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
 
 
 # --------------------------------------------------------------------------------------------------------------

@@ -19,13 +19,14 @@
   "Maximum_version" : "1.0.0",
   "Minimum_version" : "0.6.0",
 
-  "Project"         : "tsm-test_config_invalid_assignment_2",
+  "Project"         : "tsm-test_config_implicit_creation",
   "TargetName"      : "Device_01",
 
   "params" : {
               "global" : {
-                          "teststring_variant" : "I am the 'invalid_assignment_2' configuration of tsm-test",
-                          "[import]"           : "./import.3.err/tsm-test_config_invalid_assignment_2.1.jsonp"
+                          "[import]"           : "./tsm-test_config_common.jsonp",
+                          "teststring_variant" : "I am the 'implicit_creation' configuration of tsm-test",
+                          "[import]"           : "./import.3/tsm-test_config_implicit_creation.1.jsonp"
                          }
              }
 }

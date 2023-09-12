@@ -25,7 +25,7 @@
   "params" : {
               "global" : {
                           "teststring_variant" : "I am the 'invalid_assignment_1' configuration of tsm-test",
-                          "[import]"           : "./import.3.err/tsm-test_config_invalid_assignment_1.1.jsonp"
+                          "[import]"           : "./import.4.err/tsm-test_config_invalid_assignment_1.1.jsonp"
                          }
              }
 }
