@@ -1,64 +1,65 @@
 ==============================================================================
-20230912 15:28:33.577 - INFO - + START SUITE: Tsm-Testfile-22-Implicit Creation [ ]
+20230914 12:57:43.145 - INFO - + START SUITE: Tsm-Testfile-22-Implicit Creation [ ]
 ==============================================================================
-20230912 15:28:33.580 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230912 15:28:33.596 - INFO - Set suite metadata 'project' to value 'tsm-test_config_implicit_creation'.
-20230912 15:28:33.611 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
-20230912 15:28:33.613 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
-20230912 15:28:33.613 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
-20230912 15:28:33.614 - INFO - Set suite metadata 'bundle_version' to value '0.8.0.0'.
-20230912 15:28:33.614 - INFO - Set suite metadata 'version_sw' to value ''.
-20230912 15:28:33.614 - INFO - Set suite metadata 'version_hw' to value ''.
-20230912 15:28:33.614 - INFO - Set suite metadata 'version_test' to value ''.
-20230912 15:28:33.614 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20230912 15:28:33.615 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20230912 15:28:33.615 - INFO - ${teststring_variant} = I am the 'implicit_creation' configuration of tsm-test
-20230912 15:28:33.616 - INFO - ${dTestDict} = {'kVal_1': 'Val_1'}
-20230912 15:28:33.616 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation', 'TargetName': 'Device_01', 'params...
-20230912 15:28:33.616 - INFO - Running with configuration level 2
-20230912 15:28:33.616 - INFO - Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'
-20230912 15:28:33.617 - INFO - RobotFramework AIO version check passed!
-20230912 15:28:33.617 - INFO - Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20230912 15:28:33.617 - INFO - CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'
-20230912 15:28:33.617 - INFO - Number of test suites: 1
-20230912 15:28:33.617 - INFO - Total number of testcases: 1
-20230912 15:28:33.617 - INFO - +- END SETUP: tm.Testsuite Setup (37)
+20230914 12:57:43.148 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20230914 12:57:43.165 - INFO - Set suite metadata 'project' to value 'tsm-test_config_implicit_creation'.
+20230914 12:57:43.181 - INFO - Set suite metadata 'machine' to value 'HI7-C-0005Y'.
+20230914 12:57:43.183 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.
+20230914 12:57:43.183 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
+20230914 12:57:43.184 - INFO - Set suite metadata 'bundle_version' to value '0.8.0.0'.
+20230914 12:57:43.184 - INFO - Set suite metadata 'version_sw' to value ''.
+20230914 12:57:43.184 - INFO - Set suite metadata 'version_hw' to value ''.
+20230914 12:57:43.184 - INFO - Set suite metadata 'version_test' to value ''.
+20230914 12:57:43.185 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20230914 12:57:43.185 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20230914 12:57:43.185 - INFO - ${teststring_variant} = I am the 'implicit_creation' configuration of tsm-test
+20230914 12:57:43.186 - INFO - ${dTestDict} = {'kVal_1': 'Val_1', 'kVal_2': {'I-am-not-existing': {'I-am-not-existing': 'Val_1'}}}
+20230914 12:57:43.187 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation', 'TargetName': 'Device_01', 'params...
+20230914 12:57:43.187 - INFO - Running with configuration level 2
+20230914 12:57:43.187 - INFO - Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'
+20230914 12:57:43.187 - INFO - RobotFramework AIO version check passed!
+20230914 12:57:43.187 - INFO - Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20230914 12:57:43.187 - INFO - CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'
+20230914 12:57:43.187 - INFO - Number of test suites: 1
+20230914 12:57:43.187 - INFO - Total number of testcases: 1
+20230914 12:57:43.187 - INFO - +- END SETUP: tm.Testsuite Setup (39)
 ------------------------------------------------------------------------------
-20230912 15:28:33.617 - INFO - +- START TEST: Test Case tsm-testfile-22-implicit_creation [ ]
+20230914 12:57:43.188 - INFO - +- START TEST: Test Case tsm-testfile-22-implicit_creation [ ]
 ------------------------------------------------------------------------------
-20230912 15:28:33.618 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20230912 15:28:33.618 - INFO - Test Count: 1
-20230912 15:28:33.619 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20230914 12:57:43.189 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20230914 12:57:43.189 - INFO - Test Count: 1
+20230914 12:57:43.189 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.619 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation) ]
-20230912 15:28:33.619 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation) : [STR]  :  'tsm-test_config_implicit_creation'
-20230912 15:28:33.620 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230914 12:57:43.189 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation) ]
+20230914 12:57:43.190 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation) : [STR]  :  'tsm-test_config_implicit_creation'
+20230914 12:57:43.190 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.620 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation) ]
-20230912 15:28:33.620 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20230912 15:28:33.621 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230914 12:57:43.191 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation) ]
+20230914 12:57:43.191 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20230914 12:57:43.191 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.621 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation) ]
-20230912 15:28:33.621 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the 'implicit_creation' configuration of tsm-test'
-20230912 15:28:33.621 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20230914 12:57:43.192 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation) ]
+20230914 12:57:43.192 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the 'implicit_creation' configuration of tsm-test'
+20230914 12:57:43.192 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.622 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation) ]
-20230912 15:28:33.622 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20230912 15:28:33.622 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230914 12:57:43.193 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation) ]
+20230914 12:57:43.193 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20230914 12:57:43.193 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.622 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict} | PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) ]
-20230912 15:28:33.623 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) : [DOTDICT] (1/1) > {kVal_1} [STR]  :  'Val_1'
-20230912 15:28:33.623 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20230914 12:57:43.194 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict} | PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) ]
+20230914 12:57:43.194 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) : [DOTDICT] (2/1) > {kVal_1} [STR]  :  'Val_1'
+20230914 12:57:43.194 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) : [DOTDICT] (2/2) > {kVal_2} [DOTDICT] (1/1) > {I-am-not-existing} [DOTDICT] (1/1) > {I-am-not-existing} [STR]  :  'Val_1'
+20230914 12:57:43.195 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20230912 15:28:33.623 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20230912 15:28:33.623 - INFO - testcase_teardown: Will be implemented later
-20230912 15:28:33.624 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20230914 12:57:43.195 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20230914 12:57:43.195 - INFO - testcase_teardown: Will be implemented later
+20230914 12:57:43.195 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20230912 15:28:33.624 - INFO - +- END TEST: Test Case tsm-testfile-22-implicit_creation (7)
+20230914 12:57:43.196 - INFO - +- END TEST: Test Case tsm-testfile-22-implicit_creation (8)
 ------------------------------------------------------------------------------
-20230912 15:28:33.625 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230912 15:28:33.625 - INFO - testsuite_teardown: Will be implemented later
-20230912 15:28:33.625 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20230914 12:57:43.197 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20230914 12:57:43.197 - INFO - testsuite_teardown: Will be implemented later
+20230914 12:57:43.197 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230912 15:28:33.626 - INFO - + END SUITE: Tsm-Testfile-22-Implicit Creation (182)
+20230914 12:57:43.198 - INFO - + END SUITE: Tsm-Testfile-22-Implicit Creation (180)
 ==============================================================================
