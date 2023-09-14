@@ -211,11 +211,6 @@ Description: Assignment of unknown dictionary key in imported JSON configuration
 Expectation: Test is not executed; error message; test result is UNKNOWN
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Test TSM_0252 / NESTED_CONFIG / BADCASE
-Description: Assignment of known parameter to unknown dictionary subkey in imported JSON configuration file
-Expectation: Test is not executed; error message; test result is UNKNOWN
-Comment....: Single file execution
-------------------------------------------------------------------------------------------------------------------------
 Test TSM_0400 / VERSION_CONTROL / GOODCASE
 Description: 'Maximum_version' and 'Minimum_version' not defined
 Expectation: Test is executed, because of the version control is optional
@@ -351,5 +346,10 @@ Description: Test with test string containing more special characters, masked sp
 Expectation: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 16.06.2023 - 17:06:28
+Test TSM_1100 / IMPLICIT_CREATION / GOODCASE
+Description: Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file
+Expectation: Missing subkeys are created (implicit creation of data structures)
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Generated: 14.09.2023 - 13:10:37
 
