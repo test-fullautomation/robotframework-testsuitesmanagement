@@ -54,3 +54,52 @@ jobs:
             omitNameDuringUpdate: true
             makeLatest: true
             artifacts: dist/*
+
+  trigger-build-aio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger RobotFramework AIO
+        run: |
+          # Get branch created merge request
+          PULL_REQUEST_BRANCH="${{ github.head_ref }}"
+          curl -X POST https://api.github.com/repos/test-fullautomation/RobotFramework_AIO/dispatches \
+          --header 'authorization: Bearer ${{ secrets.ACTIONS_KEY }}' \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          --data '{"event_type": "Triggered by other workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "branch": "'"$PULL_REQUEST_BRANCH"'" }}'
+
+  status-build-aio:
+    runs-on: ubuntu-latest
+    needs: trigger-build-aio
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Wait for Build AIO Pipeline Completion
+        id: wait-for-pipeline
+        run: |
+          # Get status build of pipeline AIO
+          while [[ "$(gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs --jq '.workflow_runs | sort_by(.created_at) | last | .status')" != "completed" ]]; do
+            sleep 60  # Wait 60s before check it again
+          done
+
+      - name: Get pipeline result
+        id: pipeline
+        run: |
+          # Get result of pipeline AIO
+          gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs --jq '.workflow_runs | sort_by(.created_at) | last | .conclusion' > pipeline_status.txt
+          gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs --jq '.workflow_runs | sort_by(.created_at) | last | .html_url' > pipeline_link.txt
+
+      - name: Report status
+        run: |
+          # Read result from file
+          pipeline_status=$(cat pipeline_status.txt)
+
+          # Check result pipeline and report
+          if [[ "$pipeline_status" == "success" ]]; then
+            echo "Pipeline RobotFramework AIO success."
+          else
+            echo "Pipeline RobotFramework AIO is not succeed."
+            echo "Details at link: $pipeline_link"
+            # Notify fail build AIO pipeline
+            exit 1
+          fi
