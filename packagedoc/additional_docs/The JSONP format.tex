@@ -471,9 +471,10 @@ This is the initial content of \plog{componentB.2.jsonp}:
 
 \begin{itemize}
    \item Existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
-   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, the entire expression must \textit{not}
-         be encapsulated in quotes. 
-   \item The dollar operator keeps the data type of the referenced parameter.
+   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required any more
+         to encapsulate this expression in quotes.
+   \item Without quotes, the dollar operator keeps the data type of the referenced parameter. If you use quotes, the value of the used parameter
+         will be of type \pcode{str}.
 \end{itemize}
 
 \textbf{Outcome:}
@@ -513,8 +514,8 @@ In case of \pcode{int_val} is of type \pcode{int}, also \pcode{int_val_b} will b
 
 \newpage
 
-Like mentioned in the rules above, dollar operator expressions must \textit{not} be encapsulated in quotes.
-But nevertheless it is possible to use quotes. In case of:
+Like mentioned in the rules above, it is not required any more to encapsulate dollar operator expressions at the right hand side of the
+colon in quotes. But nevertheless it is possible to use quotes. In case of:
 
 \begin{pythoncode}
 "int_val_b"            : "${int_val}",
@@ -537,10 +538,6 @@ To access an element of a list and a key of a dictionary, we change the content 
    "dict_key_2_2"   : ${common_param_2}['common_key_2_2']
 }
 \end{pythoncode}
-
-\textbf{!!! CAUTION}:
-\href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/85}{issues/85}
-\textbf{!!!}
 
 \textbf{Outcome:}
 
@@ -576,7 +573,7 @@ Again we change the content of file \plog{componentB.2.jsonp}:
 \end{pythoncode}
 
 The dollar operator syntax at the left hand side of the colon is the same than previously used on the right hand side.
-The entire expression must \textit{not} be encapsulated in quotes.
+The entire expression at the left hand side of the colon must \textit{not} be encapsulated in quotes in this case.
 
 \textbf{Outcome:}
 
@@ -806,9 +803,6 @@ In the following example we create a composite data structure and demonstate how
 }
 \end{pythoncode}
 
-\textbf{!!! Caution:} dotdict bug:
-\href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/89}{issues/89} \textbf{!!!}
-
 \newpage
 
 \textbf{Outcome:}
@@ -872,9 +866,6 @@ generates dynamic parameter names.
  'Test_message_1': "Component 'componentA' has version 1.23",
  'version': 1.23}
 \end{pythonlog}
-
-\textbf{!!! Caution:} substitution bug:
-\href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/91}{issues/91} \textbf{!!!}
 
 \textit{We recommend to use simple data types for this kind of substitution only!}
 
