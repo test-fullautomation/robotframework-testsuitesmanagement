@@ -279,8 +279,8 @@ This loadCfg method uses to load configuration's parameters from json files.
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
                     sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1:][0]
-                    sJsonFile1 = f"{sConfigFolder}/{sSuiteFileName.split('.')[0]}.jsonp"
-                    sJsonFile2 = f"{sConfigFolder}/{sSuiteFileName.split('.')[0]}.json"
+                    sJsonFile1 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.jsonp"
+                    sJsonFile2 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.json"
                     if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2):
                         sJsonFile1    = f"{sConfigFolder}/robot_config.jsonp"
                         sJsonFile2    = f"{sConfigFolder}/robot_config.json" # still supported alternative extension
