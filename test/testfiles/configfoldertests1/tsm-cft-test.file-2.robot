@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-cft-testfile-1.robot (without variant configuration)
+# tsm-cft-test.file-2.robot (without variant configuration)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -29,13 +29,10 @@ Test Setup        tm.testcase_setup
 Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
-Test Case tsm-cft-testfile-1 (BADCASE)
-   [documentation]    tsm-cft-testfile-1 (BADCASE)
-
-   Log    I must not be executed    console=yes
-
-   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-testfile-1 / BADCASE)
-   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-testfile-1 / BADCASE)
-   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-testfile-1 / BADCASE)
-   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-testfile-1 / BADCASE)
+Test Case tsm-cft-test.file-2
+   [documentation]    tsm-cft-test.file-2
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-test.file-2)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-test.file-2)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-test.file-2)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-test.file-2)
 
