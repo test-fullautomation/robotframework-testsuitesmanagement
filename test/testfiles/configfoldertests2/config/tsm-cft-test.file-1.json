@@ -19,13 +19,13 @@
   "Maximum_version" : "1.0.0",
   "Minimum_version" : "0.6.0",
 
-  "Project"         : "tsm-cft-testfile-1",
+  "Project"         : "tsm-cft-test.file-1",
   "TargetName"      : "Device_01",
 
   "params" : {
               "global" : {
                           "[import]"           : "./tsm-cft-test_config_common.jsonp",
-                          "teststring_variant" : "I am the 'tsm-cft-testfile-1' configuration of tsm-test"
+                          "teststring_variant" : "I am the 'tsm-cft-test.file-1' configuration of tsm-test"
                          }
              }
 }

@@ -58,11 +58,27 @@ if os.path.isfile(context_filepath):
     if os.stat(context_filepath).st_size == 0:
         logger.warn(f"The '{context_filepath}' file is existing but empty.")
     else:
+        package_context_schema = {
+            "type": "object",
+            'additionalProperties': False,
+            "properties": {
+                "installer_location": {"type": "string"},
+                "bundle_name": {"type": "string"},
+                "bundle_version": {"type": "string"},
+                "bundle_version_date": {"type": "string"}
+            }
+        }
         try:
             with open(context_filepath) as f:
                 context_config = json.load(f)
         except Exception as reason:
             logger.error(f"Cannot load the '{context_filepath}' file. Reason: {reason}")
+            exit(1)
+        
+        try:
+            validate(instance=context_config, schema=package_context_schema)
+        except Exception as reason:
+            logger.error(f"Invalid '{context_filepath}' file. Reason: {reason}")
             exit(1)
 
         if ('installer_location' in context_config) and context_config['installer_location']:

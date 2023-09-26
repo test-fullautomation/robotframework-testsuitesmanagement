@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 12.06.2023
+# 18.09.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -63,10 +63,10 @@
 # "tsm-testfile-21-data_integrity.robot"       # (with variant configuration and additional log strings to test the data integrity)
 # "tsm-testfile-22-implicit_creation.robot"    # (with variant configuration and additional log strings to test the implicit creation)
 #
-# configfoldertests1/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
-# configfoldertests1/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
-# configfoldertests2/tsm-cft-testfile-1.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
-# configfoldertests2/tsm-cft-testfile-2.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
+# configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
+# configfoldertests2/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
+# configfoldertests2/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files) / badcase: both: json + jsonp
 #
 # testsuitestest # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
 
@@ -217,7 +217,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-1.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-test.file-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -231,7 +231,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-test.file-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -245,7 +245,7 @@ dictUsecase['EXPECTATION']      = "Configuration parameters taken from configura
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests1/tsm-cft-test.file-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable teststring_variant:\"command line value of teststring_variant\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -470,7 +470,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-1.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
@@ -484,7 +484,7 @@ dictUsecase['EXPECTATION']      = "Test is not executed; error message; test res
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-testfile-2.robot"
+dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
