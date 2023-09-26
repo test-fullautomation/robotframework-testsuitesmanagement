@@ -63,7 +63,7 @@ jobs:
           # Get branch created merge request
           PULL_REQUEST_BRANCH="${{ github.head_ref }}"
           curl -X POST https://api.github.com/repos/test-fullautomation/RobotFramework_AIO/dispatches \
-          --header 'authorization: Bearer ${{ secrets.ACTIONS_KEY }}' \
+          --header 'authorization: Bearer ${{ secrets.PAT_THONG }}' \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           --data '{"event_type": "Triggered by other workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "branch": "'"$PULL_REQUEST_BRANCH"'" }}'
 
