@@ -12,6 +12,8 @@ on:
       - synchronize
     branches: 
       - develop
+env:
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   build-n-publish:
@@ -70,6 +72,7 @@ jobs:
   status-build-aio:
     runs-on: ubuntu-latest
     needs: trigger-build-aio
+    minutes: 90  # Setting timeout for job
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
