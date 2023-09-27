@@ -72,7 +72,7 @@ jobs:
   status-build-aio:
     runs-on: ubuntu-latest
     needs: trigger-build-aio
-    minutes: 90  # Setting timeout for job
+    timeout-minutes: 90  # Timeout after 90 minutes
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
