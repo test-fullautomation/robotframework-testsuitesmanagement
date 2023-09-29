@@ -82,6 +82,7 @@ jobs:
         run: |
           # Get the recently triggered pipeline ID
           PIPELINE_ID=$(gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs --jq '.workflow_runs | sort_by(.created_at) | last | .id')
+          echo $PIPELINE_ID > pipeline_id.txt
 
           # Check the status of the PIPELINE_ID in a loop
           while [[ "$(gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq '.status')" != "completed" ]]; do
@@ -92,13 +93,16 @@ jobs:
       - name: Get pipeline result
         id: pipeline
         run: |
+          # Read the PIPELINE_ID from the saved file
+          PIPELINE_ID=$(cat pipeline_id.txt)
+
           # Get result of pipeline AIO
           gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq .conclusion > pipeline_status.txt
           gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq .html_url > pipeline_link.txt
 
       - name: Report status
         run: |
-          # Read result from file
+          # Read result from the saved file
           PIPELINE_STATUS=$(cat pipeline_status.txt)
           PIPELINE_LINK=$(cat pipeline_link.txt)
 
