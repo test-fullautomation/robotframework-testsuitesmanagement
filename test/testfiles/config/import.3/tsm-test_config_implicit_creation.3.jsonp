@@ -14,5 +14,6 @@
 //**************************************************************************
 
 {
-    ${params}['global']['dTestDict']['kVal_2']['I-am-not-existing']['I-am-not-existing'] : ${params}['global']['dTestDict']['kVal_1']
+   "dTestDict" : {"kVal_1" : "Val_1"},
+   "[import]"  : "./import.3.1/tsm-test_config_implicit_creation.3.1.jsonp"
 }
