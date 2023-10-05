@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 14.09.2023 - 13:10:37
+# 05.10.2023 - 15:39:52
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -37,5 +37,14 @@ class Test_IMPLICIT_CREATION_GOODCASE:
    )
    def test_TSM_1100(self, Description):
       nReturn = CExecute.Execute("TSM_1100")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Missing subkeys are created (implicit creation of data structures)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)",]
+   )
+   def test_TSM_1101(self, Description):
+      nReturn = CExecute.Execute("TSM_1101")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
