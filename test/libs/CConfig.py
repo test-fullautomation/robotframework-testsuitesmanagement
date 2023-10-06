@@ -20,7 +20,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 03.04.2023
+# 06.10.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -114,16 +114,6 @@ class CConfig():
          raise Exception(CString.FormatResult(sMethod, False, f"Testfiles folder not found: '{TESTFILESFOLDER}'"))
       self.__dictConfig['TESTFILESFOLDER'] = TESTFILESFOLDER
 
-      TESTLOGFILESFOLDER = f"{REFERENCEPATH}/testlogfiles"
-      oFolder = CFolder(TESTLOGFILESFOLDER)
-      bSuccess, sResult = oFolder.Create(bOverwrite=True, bRecursive=True)
-      del oFolder
-      if bSuccess is not True:
-         raise Exception(CString.FormatResult(sMethod, bSuccess, sResult))
-      self.__dictConfig['TESTLOGFILESFOLDER'] = TESTLOGFILESFOLDER
-
-      self.__dictConfig['SELFTESTLOGFILE'] = f"{TESTLOGFILESFOLDER}/TSM_SelfTest.log"
-
       REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles"
       if os.path.isdir(REFERENCELOGFILESFOLDER) is False:
          raise Exception(CString.FormatResult(sMethod, False, f"Reference log files folder not found: '{REFERENCELOGFILESFOLDER}'"))
@@ -152,6 +142,7 @@ class CConfig():
       oCmdLineParser.add_argument('--codedump', action='store_true', help='If True, creates pytest code and test lists; default: False')
       oCmdLineParser.add_argument('--configdump', action='store_true', help='If True, basic configuration values are dumped to console; default: False')
       oCmdLineParser.add_argument('--skiplogcompare', action='store_true', help='If True, the log file comparison is skipped; default: False') # e.g. in case of reference log files are not yet existing
+      oCmdLineParser.add_argument('--logfile', type=str, help='Path and name of self test log file (optional)')
 
       oCmdLineArgs = oCmdLineParser.parse_args()
 
@@ -160,21 +151,21 @@ class CConfig():
          TESTID = str(oCmdLineArgs.testid).strip()
       self.__dictConfig['TESTID'] = TESTID
 
-      bSilent = False
+      SILENT = False # TODO: check if really is requited
       if oCmdLineArgs.silent != None:
-         bSilent = oCmdLineArgs.silent
-      self.__dictConfig['SILENT'] = bSilent
+         SILENT = oCmdLineArgs.silent
+      self.__dictConfig['SILENT'] = SILENT
 
-      bCodeDump = False
+      CODEDUMP = False
       if oCmdLineArgs.codedump != None:
-         bCodeDump = oCmdLineArgs.codedump
-      self.__dictConfig['CODEDUMP'] = bCodeDump
+         CODEDUMP = oCmdLineArgs.codedump
+      self.__dictConfig['CODEDUMP'] = CODEDUMP
       # if True: script quits after config dump
 
-      bConfigDump = False
+      CONFIGDUMP = False
       if oCmdLineArgs.configdump != None:
-         bConfigDump = oCmdLineArgs.configdump
-      self.__dictConfig['CONFIGDUMP'] = bConfigDump
+         CONFIGDUMP = oCmdLineArgs.configdump
+      self.__dictConfig['CONFIGDUMP'] = CONFIGDUMP
       # if True: script quits after config dump
 
       LOGCOMPARE = True
@@ -186,8 +177,33 @@ class CConfig():
             LOGCOMPARE = True
       self.__dictConfig['LOGCOMPARE'] = LOGCOMPARE
 
-      # dump of basic configuration parameters to console
-      self.DumpConfig()
+      # -- log file and output folders
+      sLogFileName = "TSM_SelfTest.log"
+      if TESTID is not None:
+         if ';' not in TESTID:
+            # in case of a single TESTID is given in command line, we add this ID to the log file name
+            # (support of pytest, where every test case is executed separately)
+            sLogFileName = f"TSM_SelfTest_{TESTID}.log"
+
+      # default
+      SELFTESTLOGFILE = f"{REFERENCEPATH}/testlogfiles/{sLogFileName}"
+
+      if oCmdLineArgs.logfile != None:
+         # command line overwrites default log file location
+         SELFTESTLOGFILE = CString.NormalizePath(oCmdLineArgs.logfile, sReferencePathAbs=REFERENCEPATH)
+
+      TESTLOGFILESFOLDER = os.path.dirname(SELFTESTLOGFILE)
+
+      # update config
+      self.__dictConfig['SELFTESTLOGFILE']    = SELFTESTLOGFILE
+      self.__dictConfig['TESTLOGFILESFOLDER'] = TESTLOGFILESFOLDER
+
+      # -- create output folder
+      oFolder = CFolder(TESTLOGFILESFOLDER)
+      bSuccess, sResult = oFolder.Create(bOverwrite=False, bRecursive=True)
+      del oFolder
+      if bSuccess is not True:
+         raise Exception(CString.FormatResult(sMethod, bSuccess, sResult))
 
    # eof def __init__(self, sCalledBy=None):
 
@@ -196,12 +212,16 @@ class CConfig():
 
    def DumpConfig(self):
       """Prints all configuration values to console."""
+      listFormattedOutputLines = []
       # -- printing configuration to console
       print()
       # PrettyPrint(self.__dictConfig, sPrefix="Config")
       for key, value in self.__dictConfig.items():
-         print(key.rjust(30, ' ') + " : " + str(value))
+         sLine = key.rjust(32, ' ') + " : " + str(value)
+         print(sLine)
+         listFormattedOutputLines.append(sLine)
       print()
+      return listFormattedOutputLines
    # eof def DumpConfig(self):
 
    # --------------------------------------------------------------------------------------------------------------
@@ -233,6 +253,16 @@ class CConfig():
       else:
          return self.__dictConfig[sName]
    # eof def Get(self, sName=None):
+
+   # --------------------------------------------------------------------------------------------------------------
+   #TM***
+
+   def Set(self, sName=None, sValue=None):
+      """Sets a new configuration parameter."""
+      sName  = f"{sName}"
+      sValue = f"{sValue}"
+      self.__dictConfig[sName] = sValue
+   # eof def Set(self, sName=None, sValue=None):
 
    # --------------------------------------------------------------------------------------------------------------
    #TM***

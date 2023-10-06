@@ -22,12 +22,14 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 06.10.2023
+VERSION      = "0.1.0"
+VERSION_DATE = "06.10.2023"
 #
 # --------------------------------------------------------------------------------------------------------------
 #TM***
 # TOC:
 # [TESTCONFIG]
+# [PRELIMINARIES]
 # [CODEDUMP]
 # [ADDITIONALSTEPS]
 # [EXECUTION]
@@ -43,6 +45,9 @@ from PythonExtensionsCollection.File.CFile import CFile
 from PythonExtensionsCollection.Utils.CUtils import *
 from PythonExtensionsCollection.Comparison.CComparison import CComparison
 
+from RobotFramework_TestsuitesManagement.version import VERSION as SUT_VERSION
+from RobotFramework_TestsuitesManagement.version import VERSION_DATE as SUT_VERSION_DATE
+
 from libs.CConfig import CConfig
 from libs.CCodePatterns import CCodePatterns
 from libs.CAdditionalSteps import CAdditionalSteps
@@ -56,19 +61,33 @@ col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED
 COLBY = col.Style.BRIGHT + col.Fore.YELLOW
 COLBG = col.Style.BRIGHT + col.Fore.GREEN
+COLBB = col.Style.BRIGHT + col.Fore.BLUE
 
 SUCCESS = 0
 ERROR   = 1
 
 # --------------------------------------------------------------------------------------------------------------
 
-def printerror(sMsg):
-   sys.stderr.write(COLBR + f"Error: {sMsg}!\n\n")
+def printerror(sMsg, prefix=None):
+   if prefix is None:
+      sError = COLBR + f"{sMsg}\n\n"
+   else:
+      sError = COLBR + f"{prefix}:\n{sMsg}\n\n"
+   sys.stderr.write(sError)
+
+def printunknown(sMsg, prefix=None):
+   if prefix is None:
+      sUnknown = COLBB + f"{sMsg}\n\n"
+   else:
+      sUnknown = COLBB + f"{prefix}:\n{sMsg}\n\n"
+   sys.stderr.write(sUnknown)
 
 # --------------------------------------------------------------------------------------------------------------
 # [TESTCONFIG]
+# --------------------------------------------------------------------------------------------------------------
+#TM***
 
-# -- initialize configuration
+# -- initialize and dump test configuration
 
 oConfig = None
 try:
@@ -79,18 +98,99 @@ except Exception as ex:
    print()
    sys.exit(ERROR)
 
-# --------------------------------------------------------------------------------------------------------------
-# some special functions
-# (with premature end of execution = no test execution)
-# --------------------------------------------------------------------------------------------------------------
+# update version and date of this app
+oConfig.Set("VERSION", VERSION)
+oConfig.Set("VERSION_DATE", VERSION_DATE)
+THISSCRIPTNAME = oConfig.Get('THISSCRIPTNAME')
+THISSCRIPTFULLNAME = f"{THISSCRIPTNAME} v. {VERSION} / {VERSION_DATE}"
+oConfig.Set("THISSCRIPTFULLNAME", THISSCRIPTFULLNAME)
+
+# add information about system under test
+SUT_FULL_NAME = f"RobotFramework_TestsuitesManagement v. {SUT_VERSION} / {SUT_VERSION_DATE}"
+oConfig.Set("SUT_FULL_NAME", SUT_FULL_NAME)
+
+# dump configuration values to screen
+listConfigLines = oConfig.DumpConfig()
 
 CONFIGDUMP = oConfig.Get('CONFIGDUMP')
 if CONFIGDUMP is True:
-   # currently config is already dumped in constructor of CConfig; => nothing more to do here
+   # if that's all, we have nothing more to do
    sys.exit(SUCCESS)
+
+
+# --------------------------------------------------------------------------------------------------------------
+# [PRELIMINARIES]
+# --------------------------------------------------------------------------------------------------------------
+#TM***
+
+# -- start logging
+SELFTESTLOGFILE = oConfig.Get('SELFTESTLOGFILE')
+oSelfTestLogFile = CFile(SELFTESTLOGFILE)
+NOW = time.strftime('%d.%m.%Y - %H:%M:%S')
+oSelfTestLogFile.Write(f"{THISSCRIPTFULLNAME} started at: {NOW}\n")
+oSelfTestLogFile.Write(listConfigLines) # from DumpConfig() called above
+oSelfTestLogFile.Write()
+
+# -- prepare TESTIDs
+
+# ('listofdictUsecases' is imported directly from test\testconfig\TestConfig.py)
+
+TESTID = oConfig.Get('TESTID')
+
+if TESTID is not None:
+   listTESTIDs = TESTID.split(';')
+   listofdictUsecasesSubset = []
+   for sTESTID in listTESTIDs:
+      sTESTID = sTESTID.strip()
+      for dictUsecase in listofdictUsecases:
+         if sTESTID == dictUsecase['TESTID']:
+            listofdictUsecasesSubset.append(dictUsecase)
+   # eof for sTESTID in listTESTIDs:
+   if len(listofdictUsecasesSubset) == 0:
+      bSuccess = False
+      sResult  = f"Test ID '{TESTID}' not defined"
+      sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
+      print()
+      printerror(sResult)
+      print()
+      printerror(sResult)
+      oSelfTestLogFile.Write(sResult, 1)
+      del oSelfTestLogFile
+      sys.exit(ERROR)
+   del listofdictUsecases
+   listofdictUsecases = listofdictUsecasesSubset
+# eof if TESTID is not None:
+
+# -- check for duplicate test IDs
+# Test IDs are used to identify and select test cases. They have to be unique.
+
+listIDs = []
+listDuplicates = []
+for dictUsecase in listofdictUsecases:
+   TESTID = dictUsecase['TESTID']
+   if TESTID in listIDs:
+      listDuplicates.append(TESTID)
+   else:
+      listIDs.append(TESTID)
+# eof for dictUsecase in listofdictUsecases:
+if len(listDuplicates) > 0:
+   sDuplicates = "[" + ", ".join(listDuplicates) + "]"
+   bSuccess = False
+   sResult  = f"Duplicate test IDs found in test configuration: {sDuplicates}\nTest IDs are used to identify and select test cases. They have to be unique"
+   sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
+   print()
+   printerror(sResult)
+   print()
+   oSelfTestLogFile.Write(sResult, 1)
+   del oSelfTestLogFile
+   sys.exit(ERROR)
+
 
 # --------------------------------------------------------------------------------------------------------------
 # [CODEDUMP]
+# special function (with premature end of execution = no test execution)
+# --------------------------------------------------------------------------------------------------------------
+#TM***
 
 CODEDUMP = oConfig.Get('CODEDUMP')
 if CODEDUMP is True:
@@ -98,16 +198,24 @@ if CODEDUMP is True:
    try:
       oCodeGenerator = CGenCode(oConfig)
    except Exception as ex:
+      bSuccess = None
+      sResult  = str(ex)
+      sResult  = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
       print()
-      printerror(CString.FormatResult("(main)", None, str(ex)))
+      printerror(sResult)
       print()
+      oSelfTestLogFile.Write(sResult, 1)
+      del oSelfTestLogFile
       sys.exit(ERROR)
 
    bSuccess, sResult = oCodeGenerator.GenCode()
    if bSuccess is not True:
+      sResult = CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult)
       print()
-      printerror(CString.FormatResult("(main)", bSuccess, sResult))
+      printerror(sResult)
       print()
+      oSelfTestLogFile.Write(sResult, 1)
+      del oSelfTestLogFile
       sys.exit(ERROR)
 
    print(COLBG + f"{sResult}\n")
@@ -115,8 +223,11 @@ if CODEDUMP is True:
    # after code dump nothing more to do here
    sys.exit(SUCCESS)
 
+
 # --------------------------------------------------------------------------------------------------------------
 # [ADDITIONALSTEPS]
+# --------------------------------------------------------------------------------------------------------------
+#TM***
 
 oAdditionalSteps = None
 try:
@@ -128,9 +239,9 @@ except Exception as ex:
    sys.exit(ERROR)
 
 
-# **************************************************************************************************************
+# --------------------------------------------------------------------------------------------------------------
 # [EXECUTION]
-# **************************************************************************************************************
+# --------------------------------------------------------------------------------------------------------------
 #TM***
 
 # -- get some configuration values required for execution
@@ -151,54 +262,10 @@ TESTLOGFILESFOLDER      = oConfig.Get('TESTLOGFILESFOLDER')
 SELFTESTLOGFILE         = oConfig.Get('SELFTESTLOGFILE')
 REFERENCELOGFILESFOLDER = oConfig.Get('REFERENCELOGFILESFOLDER')
 
-TESTID   = oConfig.Get('TESTID')
-SILENT   = oConfig.Get('SILENT')
-
-# -- start logging
-oSelfTestLogFile = CFile(SELFTESTLOGFILE)
+SILENT = oConfig.Get('SILENT')  # TODO: check if still required
 
 print("Executing test cases")
 print()
-
-nNrOfUsecases = 0
-
-if TESTID is not None:
-   listofdictUsecasesSubset = []
-   for dictUsecase in listofdictUsecases:
-      if TESTID == dictUsecase['TESTID']:
-         listofdictUsecasesSubset.append(dictUsecase)
-         break # currently assumed that there is only one TESTID provided (maybe later more than one)
-   if len(listofdictUsecasesSubset) == 0:
-      bSuccess = False
-      sResult  = f"Test ID '{TESTID}' not defined"
-      printerror(CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult))
-      sys.exit(ERROR)
-   del listofdictUsecases
-   listofdictUsecases = listofdictUsecasesSubset
-# eof if TESTID is not None:
-
-# --------------------------------------------------------------------------------------------------------------
-
-# -- check for duplicate test IDs
-# Test IDs are used to identify and select test cases. They have to be unique.
-
-listIDs = []
-listDuplicates = []
-for dictUsecase in listofdictUsecases:
-   TESTID = dictUsecase['TESTID']
-   if TESTID in listIDs:
-      listDuplicates.append(TESTID)
-   else:
-      listIDs.append(TESTID)
-# eof for dictUsecase in listofdictUsecases:
-if len(listDuplicates) > 0:
-   sDuplicates = "[" + ", ".join(listDuplicates) + "]"
-   bSuccess = False
-   sResult  = f"Duplicate test IDs found: {sDuplicates}\nTest IDs are used to identify and select test cases. They have to be unique"
-   printerror(CString.FormatResult(THISSCRIPTNAME, bSuccess, sResult))
-   sys.exit(ERROR)
-
-# --------------------------------------------------------------------------------------------------------------
 
 nNrOfUsecases = len(listofdictUsecases)
 
@@ -262,7 +329,7 @@ for dictUsecase in listofdictUsecases:
    REFERENCELOGFILE_XML      = f"{REFERENCELOGFILESFOLDER}/{TESTFULLNAME}/{TESTFULLNAME}.xml"
    CURRENTTESTLOGFILESFOLDER = f"{TESTLOGFILESFOLDER}/{TESTFULLNAME}"
 
-   sOut = f"====== [TEST] : '{TESTFULLNAME}' / ({nCntUsecases}/{nNrOfUsecases})"
+   sOut = f"====== [START OF TEST] : '{TESTFULLNAME}' / ({nCntUsecases}/{nNrOfUsecases})"
    if SILENT is False:
       print(COLBY + sOut)
       print()
