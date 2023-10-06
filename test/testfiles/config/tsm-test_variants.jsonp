@@ -113,5 +113,9 @@
   "parameter_priority" : {
                            "name" : "tsm-test_config_parameter_priority.jsonp",
                            "path" : "./config/"
-                         }
+                         },
+  "composite_expressions_1" : {
+                                "name" : "tsm-test_config_composite_expressions_1.jsonp",
+                                "path" : "./config/"
+                              }
 }

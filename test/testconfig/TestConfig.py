@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 05.10.2023
+# 06.10.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -63,6 +63,7 @@
 # "tsm-testfile-21-data_integrity.robot"       # (with variant configuration and additional log strings to test the data integrity)
 # "tsm-testfile-22-implicit_creation_1.robot"  # (with variant configuration and additional log strings to test the implicit creation)
 # "tsm-testfile-23-implicit_creation_2.robot"  # (with variant configuration and additional log strings to test the implicit creation)
+# "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -1094,6 +1095,21 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-23-implicit_creation_2.robot" # (with variant configuration and additional log strings to test the implicit creation)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"implicit_creation_2\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1200"
+dictUsecase['DESCRIPTION']      = "JSON file containing several string concatenations in separate lines"
+dictUsecase['EXPECTATION']      = "Resulting strings available during test execution"
+dictUsecase['SECTION']          = "COMPOSITE_EXPRESSIONS"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"composite_expressions_1\""
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
