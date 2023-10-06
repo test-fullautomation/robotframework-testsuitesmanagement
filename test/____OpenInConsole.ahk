@@ -1,1 +1,0 @@
-Run, %comspec% /k, ./
