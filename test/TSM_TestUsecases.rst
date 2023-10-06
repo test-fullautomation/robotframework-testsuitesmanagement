@@ -833,5 +833,17 @@ Test Use Cases
 
 ----
 
-Generated: 05.10.2023 - 15:39:52
+* **Test TSM_1200**
+
+  [COMPOSITE_EXPRESSIONS / GOODCASE]
+
+   **JSON file containing several string concatenations in separate lines**
+
+   Expected: Resulting strings available during test execution
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 06.10.2023 - 10:11:21
 
