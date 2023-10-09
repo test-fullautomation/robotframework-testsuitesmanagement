@@ -1,100 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230914 12:57:43.014" rpa="false" schemaversion="3">
-<suite id="s1" name="Tsm-Testfile-22-Implicit Creation" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-22-implicit_creation.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20231009 14:38:09.844" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-22-Implicit Creation 1" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-22-implicit_creation_1.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230914 12:57:43.165" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_implicit_creation'.</msg>
-<msg timestamp="20230914 12:57:43.181" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230914 12:57:43.183" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230914 12:57:43.183" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230914 12:57:43.184" level="INFO">Set suite metadata 'bundle_version' to value '0.8.0.0'.</msg>
-<msg timestamp="20230914 12:57:43.184" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230914 12:57:43.184" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230914 12:57:43.184" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230914 12:57:43.185" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230914 12:57:43.185" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230914 12:57:43.185" level="INFO">${teststring_variant} = I am the 'implicit_creation' configuration of tsm-test</msg>
-<msg timestamp="20230914 12:57:43.186" level="INFO">Could not convert: CConfig.ddictJson.kVal_2.I-am-not-existing = DotDict({'I-am-not-existing': 'Val_1'}) to dotdict</msg>
-<msg timestamp="20230914 12:57:43.186" level="INFO">${dTestDict} = {'kVal_1': 'Val_1', 'kVal_2': {'I-am-not-existing': {'I-am-not-existing': 'Val_1'}}}</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation', 'TargetName': 'Device_01', 'params...</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">RobotFramework AIO version check passed!</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation.jsonp'</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230914 12:57:43.187" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230914 12:57:43.148" endtime="20230914 12:57:43.187"/>
+<msg timestamp="20231009 14:38:10.004" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_1'.</msg>
+<msg timestamp="20231009 14:38:10.019" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'bundle_version' to value '0.8.2.2'.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20231009 14:38:10.021" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20231009 14:38:10.022" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20231009 14:38:10.023" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20231009 14:38:10.023" level="INFO">${teststring_variant} = I am the 'implicit_creation_1' configuration of tsm-test</msg>
+<msg timestamp="20231009 14:38:10.024" level="INFO">${dTestDict} = {'kVal_1': 'Val_1', 'kVal_2': {'I_am_not_existing_1': {'I_am_not_existing_2': 'Val_1'}}, 'kVal_3': {'I_am_not_existing_3': {'I_am_not_existing_4': 'Val_1_extended'}}, 'kVal_3b': {'I_am_not_existing_3b...</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_1', 'TargetName': 'Device_01', 'para...</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_1.jsonp'</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_1.jsonp'</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20231009 14:38:10.025" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20231009 14:38:09.972" endtime="20231009 14:38:10.026"/>
 </kw>
-<test id="s1-t1" name="Test Case tsm-testfile-22-implicit_creation" line="33">
+<test id="s1-t1" name="Test Case tsm-testfile-22-implicit_creation_1" line="33">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230914 12:57:43.189" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230914 12:57:43.189" endtime="20230914 12:57:43.189"/>
+<msg timestamp="20231009 14:38:10.027" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20231009 14:38:10.027" endtime="20231009 14:38:10.027"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
-<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation)</arg>
+<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230914 12:57:43.190" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation) : [STR]  :  'tsm-test_config_implicit_creation'</msg>
-<status status="PASS" starttime="20230914 12:57:43.189" endtime="20230914 12:57:43.190"/>
+<msg timestamp="20231009 14:38:10.028" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'tsm-test_config_implicit_creation_1'</msg>
+<status status="PASS" starttime="20231009 14:38:10.027" endtime="20231009 14:38:10.028"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation)</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230914 12:57:43.191" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230914 12:57:43.191" endtime="20230914 12:57:43.191"/>
+<msg timestamp="20231009 14:38:10.029" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20231009 14:38:10.029" endtime="20231009 14:38:10.029"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation)</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230914 12:57:43.192" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the 'implicit_creation' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230914 12:57:43.192" endtime="20230914 12:57:43.192"/>
+<msg timestamp="20231009 14:38:10.030" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the 'implicit_creation_1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20231009 14:38:10.029" endtime="20231009 14:38:10.030"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
-<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation)</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230914 12:57:43.193" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230914 12:57:43.193" endtime="20230914 12:57:43.193"/>
+<msg timestamp="20231009 14:38:10.031" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20231009 14:38:10.030" endtime="20231009 14:38:10.031"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict}</arg>
-<arg>PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation)</arg>
+<arg>PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230914 12:57:43.194" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) : [DOTDICT] (2/1) &gt; {kVal_1} [STR]  :  'Val_1'</msg>
-<msg timestamp="20230914 12:57:43.194" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation) : [DOTDICT] (2/2) &gt; {kVal_2} [DOTDICT] (1/1) &gt; {I-am-not-existing} [DOTDICT] (1/1) &gt; {I-am-not-existing} [STR]  :  'Val_1'</msg>
-<status status="PASS" starttime="20230914 12:57:43.194" endtime="20230914 12:57:43.194"/>
+<msg timestamp="20231009 14:38:10.031" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/1) &gt; {kVal_1} [STR]  :  'Val_1'</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/2) &gt; {kVal_2} [DOTDICT] (1/1) &gt; {I_am_not_existing_1} [DOTDICT] (1/1) &gt; {I_am_not_existing_2} [STR]  :  'Val_1'</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/3) &gt; {kVal_3} [DOTDICT] (1/1) &gt; {I_am_not_existing_3} [DOTDICT] (1/1) &gt; {I_am_not_existing_4} [STR]  :  'Val_1_extended'</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/4) &gt; {kVal_3b} [DOTDICT] (1/1) &gt; {I_am_not_existing_3b} [DOTDICT] (1/1) &gt; {I_am_not_existing_4b} [STR]  :  'Val_1'</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/1) &gt; {A} [INT]  :  1</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/2) &gt; {B} [LIST] (2/1) &gt; [INT]  :  1</msg>
+<msg timestamp="20231009 14:38:10.032" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/2) &gt; {B} [LIST] (2/2) &gt; [INT]  :  2</msg>
+<msg timestamp="20231009 14:38:10.033" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/3) &gt; {kVal_4D} [DOTDICT] (1/1) &gt; {kVal_4E} [DOTDICT] (1/1) &gt; {kVal_4F} [DOTDICT] (1/1) &gt; {kVal_4G} [DOTDICT] (2/1) &gt; {C} [INT]  :  2</msg>
+<msg timestamp="20231009 14:38:10.033" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/3) &gt; {kVal_4D} [DOTDICT] (1/1) &gt; {kVal_4E} [DOTDICT] (1/1) &gt; {kVal_4F} [DOTDICT] (1/1) &gt; {kVal_4G} [DOTDICT] (2/2) &gt; {D} [LIST] (2/1) &gt; [INT]  :  3</msg>
+<msg timestamp="20231009 14:38:10.033" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) &gt; {kVal_4} [DOTDICT] (1/1) &gt; {kVal_4B} [DOTDICT] (1/1) &gt; {kVal_4C} [DOTDICT] (3/3) &gt; {kVal_4D} [DOTDICT] (1/1) &gt; {kVal_4E} [DOTDICT] (1/1) &gt; {kVal_4F} [DOTDICT] (1/1) &gt; {kVal_4G} [DOTDICT] (2/2) &gt; {D} [LIST] (2/2) &gt; [INT]  :  4</msg>
+<status status="PASS" starttime="20231009 14:38:10.031" endtime="20231009 14:38:10.033"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230914 12:57:43.195" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230914 12:57:43.195" endtime="20230914 12:57:43.195"/>
+<msg timestamp="20231009 14:38:10.034" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20231009 14:38:10.033" endtime="20231009 14:38:10.034"/>
 </kw>
-<doc>tsm-testfile-22-implicit_creation</doc>
-<status status="PASS" starttime="20230914 12:57:43.187" endtime="20230914 12:57:43.195"/>
+<doc>tsm-testfile-22-implicit_creation_1</doc>
+<status status="PASS" starttime="20231009 14:38:10.026" endtime="20231009 14:38:10.034"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230914 12:57:43.197" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230914 12:57:43.197" endtime="20230914 12:57:43.197"/>
+<msg timestamp="20231009 14:38:10.035" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20231009 14:38:10.035" endtime="20231009 14:38:10.035"/>
 </kw>
-<meta name="bundle_version">0.8.0.0</meta>
+<meta name="bundle_version">0.8.2.2</meta>
 <meta name="machine">HI7-C-0005Y</meta>
-<meta name="project">tsm-test_config_implicit_creation</meta>
+<meta name="project">tsm-test_config_implicit_creation_1</meta>
 <meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
+<meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230914 12:57:43.017" endtime="20230914 12:57:43.197"/>
+<status status="PASS" starttime="20231009 14:38:09.848" endtime="20231009 14:38:10.035"/>
 </suite>
 <statistics>
 <total>
@@ -103,7 +110,7 @@ it's defined here for future requirements.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" unknown="0" id="s1" name="Tsm-Testfile-22-Implicit Creation">Tsm-Testfile-22-Implicit Creation</stat>
+<stat pass="1" fail="0" skip="0" unknown="0" id="s1" name="Tsm-Testfile-22-Implicit Creation 1">Tsm-Testfile-22-Implicit Creation 1</stat>
 </suite>
 </statistics>
 <errors>

@@ -821,5 +821,29 @@ Test Use Cases
 
 ----
 
-Generated: 14.09.2023 - 13:10:37
+* **Test TSM_1101**
+
+  [IMPLICIT_CREATION / GOODCASE]
+
+   **Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)**
+
+   Expected: Missing subkeys are created (implicit creation of data structures)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1200**
+
+  [COMPOSITE_EXPRESSIONS / GOODCASE]
+
+   **JSON file containing several string concatenations in separate lines**
+
+   Expected: Resulting strings available during test execution
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 06.10.2023 - 10:11:21
 

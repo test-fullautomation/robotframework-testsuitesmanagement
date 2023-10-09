@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 18.09.2023
+# 06.10.2023
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -61,7 +61,9 @@
 # "tsm-testfile-19-parameter_priority.robot"   # (with variant configuration and extended parameter logging for parameters from different sources)
 # "tsm-testfile-20-fatal_error.robot"          # (with variant configuration and several tests; keyword FATAL ERROR)
 # "tsm-testfile-21-data_integrity.robot"       # (with variant configuration and additional log strings to test the data integrity)
-# "tsm-testfile-22-implicit_creation.robot"    # (with variant configuration and additional log strings to test the implicit creation)
+# "tsm-testfile-22-implicit_creation_1.robot"  # (with variant configuration and additional log strings to test the implicit creation)
+# "tsm-testfile-23-implicit_creation_2.robot"  # (with variant configuration and additional log strings to test the implicit creation)
+# "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -1076,9 +1078,38 @@ dictUsecase['EXPECTATION']      = "Missing subkeys are created (implicit creatio
 dictUsecase['SECTION']          = "IMPLICIT_CREATION"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-22-implicit_creation.robot" # (with variant configuration and additional log strings to test the implicit creation)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-22-implicit_creation_1.robot" # (with variant configuration and additional log strings to test the implicit creation)
 dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"implicit_creation\""
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"implicit_creation_1\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1101"
+dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)"
+dictUsecase['EXPECTATION']      = "Missing subkeys are created (implicit creation of data structures)"
+dictUsecase['SECTION']          = "IMPLICIT_CREATION"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-23-implicit_creation_2.robot" # (with variant configuration and additional log strings to test the implicit creation)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"implicit_creation_2\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1200"
+dictUsecase['DESCRIPTION']      = "JSON file containing several string concatenations in separate lines"
+dictUsecase['EXPECTATION']      = "Resulting strings available during test execution"
+dictUsecase['SECTION']          = "COMPOSITE_EXPRESSIONS"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"composite_expressions_1\""
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase

@@ -1,0 +1,42 @@
+//  Copyright 2020-2023 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+
+  "Project"         : "tsm-test_config_implicit_creation_2",
+  "TargetName"      : "Device_01",
+
+  "params" : {
+               "global" : {
+                            "[import]"                                            : "./tsm-test_config_common.jsonp",
+                            "teststring_variant"                                  : "I am the 'implicit_creation_2' configuration of tsm-test",
+                            //
+                            ${params.global.param1}['subkey']['subkey']['subkey'] : "subkey value",
+                            ${params.global.param2.subkey.subkey.subkey}          : "${params.global.param1.subkey.subkey.subkey} extended",
+                            //
+                            // https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/224
+                            "param3"                                              : "param3 value A",
+                            ${params.global.param3}                               : "param3 value B",
+                            "param3"                                              : "param3 value C",
+                            //
+                            "param4"                                              : "param4 value A",
+                            ${params.global.param4}                               : "param4 value B"
+                          }
+             }
+}

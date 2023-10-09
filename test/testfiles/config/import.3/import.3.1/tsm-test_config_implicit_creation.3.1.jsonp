@@ -1,0 +1,25 @@
+//  Copyright 2020-2023 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+   ${params}['global']['dTestDict']['kVal_2']['I_am_not_existing_1']['I_am_not_existing_2'] : ${params}['global']['dTestDict']['kVal_1'],
+   // use what has been created implicitly before
+   ${params.global.dTestDict.kVal_3.I_am_not_existing_3.I_am_not_existing_4}    : ${params}['global']['dTestDict']['kVal_2']['I_am_not_existing_1']['I_am_not_existing_2'],
+   ${params.global.dTestDict.kVal_3b.I_am_not_existing_3b.I_am_not_existing_4b} : ${params.global.dTestDict.kVal_2.I_am_not_existing_1.I_am_not_existing_2},
+   // overwrite what has been created implicitly before:
+   ${params}['global']['dTestDict']['kVal_3']['I_am_not_existing_3']['I_am_not_existing_4'] : "${params}['global']['dTestDict']['kVal_1']_extended",
+   // further assignments
+   "[import]" : "./import.3.1.1/tsm-test_config_implicit_creation.3.1.1.jsonp"
+}

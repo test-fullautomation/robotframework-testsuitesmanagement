@@ -1,0 +1,29 @@
+//  Copyright 2020-2023 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+   // use inside quotes the expression belonging to the data structure that has been created implicitly before:
+   // https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/226
+   // "${params.global.dTestDict.kVal_3.I_am_not_existing_3.I_am_not_existing_4}" : "${params.global.dTestDict}['kVal_2']['I_am_not_existing_1']['I_am_not_existing_2']",
+   // mixture of dotdict and standard notation:
+   ${params.global.dTestDict.kVal_4}['kVal_4B']['kVal_4C'] : {"A" : 1, "B" : [1,2]},
+   ${params.global.dTestDict.kVal_4.kVal_4B.kVal_4C.kVal_4D.kVal_4E}['kVal_4F']['kVal_4G'] : {"C" : 2, "D" : [3,4]}
+   // sub key defined by parameter:
+   // "kVal_5B_name" : "kVal_5B",
+   // reference: https://github.com/test-fullautomation/python-jsonpreprocessor/issues/153
+   // currently not working // ${params.global.dTestDict.kVal_5.${kVal_5B_name}} : {"E" : 3, "F" : [5,6]}
+   // currently not working // ${params.global.dTestDict.kVal_5}['${kVal_5B_name}'] : {"G" : 4, "H" : [7,8]}
+   // currently not working // ${params.global.dTestDict.${kVal_5B_name}.${kVal_5B_name}} : {"M" : 5, "N" : [0,9]}
+}

@@ -102,12 +102,20 @@
                              "name" : "tsm-test_config_invalid_assignment_1.jsonp",
                              "path" : "./config/"
                            },
-  "implicit_creation" : {
-                           "name" : "tsm-test_config_implicit_creation.jsonp",
-                           "path" : "./config/"
-                        },
+  "implicit_creation_1" : {
+                            "name" : "tsm-test_config_implicit_creation_1.jsonp",
+                            "path" : "./config/"
+                          },
+  "implicit_creation_2" : {
+                            "name" : "tsm-test_config_implicit_creation_2.jsonp",
+                            "path" : "./config/"
+                          },
   "parameter_priority" : {
                            "name" : "tsm-test_config_parameter_priority.jsonp",
                            "path" : "./config/"
-                         }
+                         },
+  "composite_expressions_1" : {
+                                "name" : "tsm-test_config_composite_expressions_1.jsonp",
+                                "path" : "./config/"
+                              }
 }

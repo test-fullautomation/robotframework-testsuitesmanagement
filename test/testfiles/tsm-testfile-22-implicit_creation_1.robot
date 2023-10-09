@@ -14,7 +14,7 @@
 #  limitations under the License.
 # **************************************************************************************************************
 #
-# tsm-testfile-22-implicit_creation.robot (with variant configuration and additional log strings to test the implicit creation)
+# tsm-testfile-22-implicit_creation_1.robot (with variant configuration and additional log strings to test the implicit creation)
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -30,11 +30,11 @@ Test Teardown     tm.testcase_teardown
 
 *** Test Cases ***
 
-Test Case tsm-testfile-22-implicit_creation
-   [documentation]    tsm-testfile-22-implicit_creation
-   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation)
-   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation)
-   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation)
-   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation)
+Test Case tsm-testfile-22-implicit_creation_1
+   [documentation]    tsm-testfile-22-implicit_creation_1
+   rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation_1)
+   rf.extensions.pretty_print    ${teststring_common}     PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation_1)
+   rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation_1)
+   rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation_1)
 
-   rf.extensions.pretty_print    ${dTestDict}      PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation)
+   rf.extensions.pretty_print    ${dTestDict}      PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1)

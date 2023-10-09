@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_14_IMPLICIT_CREATION_GOODCASE.py
+# test_15_COMPOSITE_EXPRESSIONS_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 05.10.2023 - 15:39:52
+# 06.10.2023 - 10:11:21
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,15 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_IMPLICIT_CREATION_GOODCASE:
+class Test_COMPOSITE_EXPRESSIONS_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Missing subkeys are created (implicit creation of data structures)
+   # Expected: Resulting strings available during test execution
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file",]
+      "Description", ["JSON file containing several string concatenations in separate lines",]
    )
-   def test_TSM_1100(self, Description):
-      nReturn = CExecute.Execute("TSM_1100")
-      assert nReturn == 0
-# --------------------------------------------------------------------------------------------------------------
-   # Expected: Missing subkeys are created (implicit creation of data structures)
-   # (Single file execution)
-   @pytest.mark.parametrize(
-      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)",]
-   )
-   def test_TSM_1101(self, Description):
-      nReturn = CExecute.Execute("TSM_1101")
+   def test_TSM_1200(self, Description):
+      nReturn = CExecute.Execute("TSM_1200")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
