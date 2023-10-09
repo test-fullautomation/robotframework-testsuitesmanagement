@@ -13,7 +13,7 @@
 20231006 09:43:42.568 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
 20231006 09:43:42.568 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
 20231006 09:43:42.568 - INFO - ${teststring_variant} = I am the variant 'composite_expressions_1' configuration of tsm-test
-20231006 09:43:42.568 - INFO - ${teststring_1} = prefix.teststring_1.value.suffix-1.suffix-2.suffix-3
+20231006 09:43:42.568 - INFO - ${teststring_1} = prefix.teststring_1.value.suffix_1.suffix_2.suffix_3
 20231006 09:43:42.568 - INFO - ${teststring_2} = teststring_2.value.suffix_1
 20231006 09:43:42.568 - INFO - ${teststring_3} = teststring_3.value.5
 20231006 09:43:42.568 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_composite_expressions_1', 'TargetName': 'Device_01', '...
@@ -49,7 +49,7 @@
 20231006 09:43:42.568 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 20231006 09:43:42.568 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_1} | PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) ]
-20231006 09:43:42.568 - INFO - PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'prefix.teststring_1.value.suffix-1.suffix-2.suffix-3'
+20231006 09:43:42.568 - INFO - PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'prefix.teststring_1.value.suffix_1.suffix_2.suffix_3'
 20231006 09:43:42.568 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 20231006 09:43:42.583 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_2} | PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1) ]
