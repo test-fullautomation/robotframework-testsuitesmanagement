@@ -478,20 +478,11 @@ This loadCfg method uses to load configuration's parameters from json files.
         # except:
         #     pass
 
-        bDotdict = False
         dotdictObj = CConfig.CJsonDotDict()
-        try:
-            jsonDotdict = dotdictObj.dotdictConvert(oJsonCfgData)
-            bDotdict = True
-        except:
-            logger.info("Could not convert JSON config to dotdict!!!")
-            pass
+        jsonDotdict = dotdictObj.dotdictConvert(oJsonCfgData)
         del dotdictObj
+        BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
 
-        if bDotdict:
-            BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
-        else:
-            BuiltIn().set_global_variable("${CONFIG}",oJsonCfgData)
         self.bConfigLoaded = True
 
         if len(oJsonPreprocessor.dUpdatedParams) > 0:
@@ -521,35 +512,18 @@ This method set RobotFramework AIO global variable from config object.
         k = key
         v = value
         if isinstance(v, dict):
-            bDotdict = False
             dotdictObj = CConfig.CJsonDotDict()
-            try:
-                jsonDotdict = dotdictObj.dotdictConvert(v)
-                bDotdict = True
-            except:
-                logger.info("Could not convert JSON config to dotdict!!!")
-                pass
+            jsonDotdict = dotdictObj.dotdictConvert(v)
             del dotdictObj
-            if bDotdict:
-                BuiltIn().set_global_variable(f"${{{k.strip()}}}", jsonDotdict)
-            else:
-                BuiltIn().set_global_variable(f"${{{k.strip()}}}", v)
+            BuiltIn().set_global_variable(f"${{{k.strip()}}}", jsonDotdict)
         elif isinstance(v, list):
             tmpList = []
             for item in v:
                 if isinstance(item, dict):
-                    bDotdict = False
                     dotdictObj = CConfig.CJsonDotDict()
-                    try:
-                        jsonDotdict = dotdictObj.dotdictConvert(item)
-                        bDotdict = True
-                    except:
-                        logger.info("Could not convert JSON config to dotdict!!!")
-                        pass
-                    if bDotdict:
-                        tmpList.append(jsonDotdict)
-                    else:
-                        tmpList.append(item)
+                    jsonDotdict = dotdictObj.dotdictConvert(item)
+                    del dotdictObj
+                    tmpList.append(jsonDotdict)
                 else:
                     tmpList.append(item)
             BuiltIn().set_global_variable(f"${{{k.strip()}}}", tmpList)
