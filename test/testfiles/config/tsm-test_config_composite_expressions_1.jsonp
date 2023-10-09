@@ -28,17 +28,13 @@
                            "[import]" : "./tsm-test_config_common.jsonp",
                            "teststring_variant" : "I am the variant 'composite_expressions_1' configuration of tsm-test",
                            //
-                           // reference: https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/223
-                           //
                            "teststring_1"                : "teststring_1.value",
                            ${params.global.teststring_1} : "${params.global.teststring_1}.suffix_1",
-                           ${params.global.teststring_1} : "${params.global.teststring_1}.suffix-2",
-                           ${params.global.teststring_1} : "prefix.${params.global.teststring_1}.suffix-3",
+                           ${params.global.teststring_1} : "${params.global.teststring_1}.suffix_2",
+                           ${params.global.teststring_1} : "prefix.${params.global.teststring_1}.suffix_3",
                            //
                            "teststring_2" : "teststring_2.value",
                            "teststring_2" : "${params.global.teststring_2}.suffix_1",
-                           //
-                           // reference: https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/224
                            //
                            "teststring_3"                : "teststring_3.value.1",
                            ${params.global.teststring_3} : "teststring_3.value.2",

@@ -40,3 +40,4 @@ Test Case tsm-testfile-24-composite_expressions_1
    rf.extensions.pretty_print    ${teststring_1}      PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1)
    rf.extensions.pretty_print    ${teststring_2}      PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1)
    rf.extensions.pretty_print    ${teststring_3}      PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1)
+

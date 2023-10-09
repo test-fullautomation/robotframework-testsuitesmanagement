@@ -14,12 +14,12 @@
 //**************************************************************************
 
 {
-   ${params}['global']['dTestDict']['kVal_2']['I-am-not-existing-1']['I-am-not-existing-2'] : ${params}['global']['dTestDict']['kVal_1'],
+   ${params}['global']['dTestDict']['kVal_2']['I_am_not_existing_1']['I_am_not_existing_2'] : ${params}['global']['dTestDict']['kVal_1'],
    // use what has been created implicitly before
-   ${params.global.dTestDict.kVal_3.I-am-not-existing-3.I-am-not-existing-4}    : ${params}['global']['dTestDict']['kVal_2']['I-am-not-existing-1']['I-am-not-existing-2'],
-   ${params.global.dTestDict.kVal_3b.I-am-not-existing-3b.I-am-not-existing-4b} : ${params.global.dTestDict.kVal_2.I-am-not-existing-1.I-am-not-existing-2},
+   ${params.global.dTestDict.kVal_3.I_am_not_existing_3.I_am_not_existing_4}    : ${params}['global']['dTestDict']['kVal_2']['I_am_not_existing_1']['I_am_not_existing_2'],
+   ${params.global.dTestDict.kVal_3b.I_am_not_existing_3b.I_am_not_existing_4b} : ${params.global.dTestDict.kVal_2.I_am_not_existing_1.I_am_not_existing_2},
    // overwrite what has been created implicitly before:
-   ${params}['global']['dTestDict']['kVal_3']['I-am-not-existing-3']['I-am-not-existing-4'] : "${params}['global']['dTestDict']['kVal_1']_extended",
+   ${params}['global']['dTestDict']['kVal_3']['I_am_not_existing_3']['I_am_not_existing_4'] : "${params}['global']['dTestDict']['kVal_1']_extended",
    // further assignments
    "[import]" : "./import.3.1.1/tsm-test_config_implicit_creation.3.1.1.jsonp"
 }
