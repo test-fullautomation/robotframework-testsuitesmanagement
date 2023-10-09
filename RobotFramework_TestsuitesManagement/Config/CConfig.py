@@ -229,10 +229,9 @@ This dotdictConvert method converts json object to dotdict.
                     sExec = sExec + " = DotDict(" + str(v) + ")"
                     try:
                         exec(sExec, globals())
-                    except:
-                        logger.info(f"Could not convert: {sExec} to dotdict")
-                        pass
-
+                    except Exception as error:
+                        logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
+                        BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
                     self.dotdictConvert(v)
                 elif isinstance(v, list):
                     n = 0
@@ -244,10 +243,9 @@ This dotdictConvert method converts json object to dotdict.
                             sExec = sExec + " = DotDict(" + str(item) + ")"
                             try:
                                 exec(sExec, globals())
-                            except:
-                                logger.info(f"Could not convert: {sExec} to dotdict")
-                                pass
-
+                            except Exception as error:
+                                logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
+                                BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
                             self.dotdictConvert(item)
                         n = n+1
             self.lTmpParam = self.lTmpParam[:-1]
