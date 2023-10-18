@@ -1,106 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20231006 09:43:42.380" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20231018 13:31:08.095" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-24-Composite Expressions 1" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-24-composite_expressions_1.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20231006 09:43:42.537" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_composite_expressions_1'.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'bundle_version' to value '0.8.2.2'.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_variant} = I am the variant 'composite_expressions_1' configuration of tsm-test</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_1} = prefix.teststring_1.value.suffix-3</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_2} = teststring_2.value.suffix_1</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${teststring_3} = teststring_3.value.4</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_composite_expressions_1', 'TargetName': 'Device_01', '...</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">RobotFramework AIO version check passed!</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20231006 09:43:42.521" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.257" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_composite_expressions_1'.</msg>
+<msg timestamp="20231018 13:31:08.273" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'bundle_version' to value '0.9.3.0'.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20231018 13:31:08.276" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20231018 13:31:08.277" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20231018 13:31:08.277" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20231018 13:31:08.278" level="INFO">${teststring_variant} = I am the variant 'composite_expressions_1' configuration of tsm-test</msg>
+<msg timestamp="20231018 13:31:08.278" level="INFO">${teststring_1} = prefix.teststring_1.value.suffix_1.suffix_2.suffix_3</msg>
+<msg timestamp="20231018 13:31:08.279" level="INFO">${teststring_2} = teststring_2.value.suffix_1</msg>
+<msg timestamp="20231018 13:31:08.279" level="INFO">${teststring_3} = teststring_3.value.5</msg>
+<msg timestamp="20231018 13:31:08.279" level="INFO">${testdict} = {'key': {'teststring_4': 'teststring_4.initial_value.suffix_2'}}</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_composite_expressions_1', 'TargetName': 'Device_01', '...</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">Parameters loaded from 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">Suite Path: 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">CfgFile Path: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20231018 13:31:08.280" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20231018 13:31:08.227" endtime="20231018 13:31:08.280"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-24-composite_expressions_1" line="33">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.282" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20231018 13:31:08.282" endtime="20231018 13:31:08.282"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'tsm-test_config_composite_expressions_1'</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.283" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'tsm-test_config_composite_expressions_1'</msg>
+<status status="PASS" starttime="20231018 13:31:08.282" endtime="20231018 13:31:08.283"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.284" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20231018 13:31:08.284" endtime="20231018 13:31:08.285"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the variant 'composite_expressions_1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.285" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the variant 'composite_expressions_1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20231018 13:31:08.285" endtime="20231018 13:31:08.286"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.287" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20231018 13:31:08.286" endtime="20231018 13:31:08.287"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_1}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.568" level="INFO">PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'prefix.teststring_1.value.suffix-3'</msg>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.568"/>
+<msg timestamp="20231018 13:31:08.288" level="INFO">PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'prefix.teststring_1.value.suffix_1.suffix_2.suffix_3'</msg>
+<status status="PASS" starttime="20231018 13:31:08.287" endtime="20231018 13:31:08.288"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_2}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.583" level="INFO">PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_2.value.suffix_1'</msg>
-<status status="PASS" starttime="20231006 09:43:42.583" endtime="20231006 09:43:42.583"/>
+<msg timestamp="20231018 13:31:08.289" level="INFO">PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_2.value.suffix_1'</msg>
+<status status="PASS" starttime="20231018 13:31:08.288" endtime="20231018 13:31:08.289"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_3}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20231006 09:43:42.583" level="INFO">PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_3.value.4'</msg>
-<status status="PASS" starttime="20231006 09:43:42.583" endtime="20231006 09:43:42.583"/>
+<msg timestamp="20231018 13:31:08.290" level="INFO">PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_3.value.5'</msg>
+<status status="PASS" starttime="20231018 13:31:08.289" endtime="20231018 13:31:08.291"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${testdict.key.teststring_4}</arg>
+<arg>PARAMS-VERIFIKATION : ({testdict.key.teststring_4} / tsm-testfile-24-composite_expressions_1)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20231018 13:31:08.293" level="INFO">PARAMS-VERIFIKATION : ({testdict.key.teststring_4} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_4.initial_value.suffix_2'</msg>
+<status status="PASS" starttime="20231018 13:31:08.292" endtime="20231018 13:31:08.293"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20231006 09:43:42.583" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20231006 09:43:42.583" endtime="20231006 09:43:42.583"/>
+<msg timestamp="20231018 13:31:08.301" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20231018 13:31:08.301" endtime="20231018 13:31:08.301"/>
 </kw>
 <doc>tsm-testfile-24-composite_expressions_1</doc>
-<status status="PASS" starttime="20231006 09:43:42.568" endtime="20231006 09:43:42.583"/>
+<status status="PASS" starttime="20231018 13:31:08.281" endtime="20231018 13:31:08.302"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20231006 09:43:42.583" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20231006 09:43:42.583" endtime="20231006 09:43:42.583"/>
+<msg timestamp="20231018 13:31:08.304" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20231018 13:31:08.303" endtime="20231018 13:31:08.304"/>
 </kw>
-<meta name="bundle_version">0.8.2.2</meta>
+<meta name="bundle_version">0.9.3.0</meta>
 <meta name="machine">HI7-C-0005Y</meta>
 <meta name="project">tsm-test_config_composite_expressions_1</meta>
 <meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
@@ -108,7 +116,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20231006 09:43:42.380" endtime="20231006 09:43:42.583"/>
+<status status="PASS" starttime="20231018 13:31:08.099" endtime="20231018 13:31:08.304"/>
 </suite>
 <statistics>
 <total>
