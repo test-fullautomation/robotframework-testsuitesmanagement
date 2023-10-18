@@ -40,7 +40,15 @@
                            ${params.global.teststring_3} : "teststring_3.value.2",
                            "teststring_3"                : "teststring_3.value.3",
                            ${params.global.teststring_3} : "teststring_3.value.4",
-                           "teststring_3"                : "teststring_3.value.5"
+                           "teststring_3"                : "teststring_3.value.5",
+                           //
+                           "testdict" : {
+                                          "key" : {
+                                                    "teststring_4" : "teststring_4.initial_value"
+                                                  }
+                                        },
+                           ${params.global.testdict.key.teststring_4} : "${params.global.testdict.key.teststring_4}.suffix_1",
+                           ${params.global.testdict.key.teststring_4} : "${params.global.testdict.key.teststring_4}.suffix_2"
                          }
              }
 }
