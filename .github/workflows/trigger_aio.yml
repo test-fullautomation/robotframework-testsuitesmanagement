@@ -1,0 +1,73 @@
+name: Trigger RobotFramework AIO
+
+on:
+  pull_request:
+      types:
+          - closed
+          - opened
+          - synchronize
+      branches: 
+          - develop
+env:
+    GH_TOKEN: ${{ github.token }}
+
+jobs:
+  trigger-build-aio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger RobotFramework AIO
+        run: |
+          # Get branch created merge request
+          PULL_REQUEST_BRANCH="${{ github.head_ref }}"
+          curl -X POST https://api.github.com/repos/test-fullautomation/RobotFramework_AIO/dispatches \
+          --header 'authorization: Bearer ${{ secrets.PAT_THONG }}' \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          --data '{"event_type": "TRIGGER_AIO", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "branch": "'"$PULL_REQUEST_BRANCH"'" }}'
+
+  status-build-aio:
+    runs-on: ubuntu-latest
+    needs: trigger-build-aio
+    timeout-minutes: 90  # Timeout after 90 minutes
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Wait for Build AIO Pipeline Completion
+        id: wait-for-pipeline
+        run: |
+          # Get the recently triggered pipeline ID
+          PIPELINE_ID=$(gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs --jq '.workflow_runs | sort_by(.created_at) | last | .id')
+          echo $PIPELINE_ID > pipeline_id.txt
+
+          # Check the status of the PIPELINE_ID in a loop
+          while [[ "$(gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq '.status')" != "completed" ]]; do
+            sleep 60  # If not completed, wait for 60 seconds and check again.
+          done
+
+
+      - name: Get pipeline result
+        id: pipeline
+        run: |
+          # Read the PIPELINE_ID from the saved file
+          PIPELINE_ID=$(cat pipeline_id.txt)
+
+          # Get result of pipeline AIO
+          gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq .conclusion > pipeline_status.txt
+          gh api repos/test-fullautomation/RobotFramework_AIO/actions/runs/$PIPELINE_ID --jq .html_url > pipeline_link.txt
+
+      - name: Report status
+        run: |
+          # Read result from the saved file
+          PIPELINE_STATUS=$(cat pipeline_status.txt)
+          PIPELINE_LINK=$(cat pipeline_link.txt)
+
+          # Check result pipeline and report
+          if [[ "$PIPELINE_STATUS" == "success" ]]; then
+            echo "Pipeline RobotFramework AIO success."
+            echo "Details at link: $PIPELINE_LINK"
+          else
+            echo "Pipeline RobotFramework AIO is not succeed."
+            echo "Details at link: $PIPELINE_LINK"
+            # Notify fail build AIO pipeline
+            exit 1
+          fi
