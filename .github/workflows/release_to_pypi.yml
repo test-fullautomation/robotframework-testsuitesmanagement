@@ -10,6 +10,7 @@ jobs:
   build-n-publish:
       name: Build and publish to PyPI
       runs-on: ubuntu-latest
+      if: github.event_name == 'push'
 
       steps:
         - name: Checkout source
