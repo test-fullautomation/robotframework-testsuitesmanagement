@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:40.215" rpa="false" schemaversion="3">
-<suite id="s1" name="Tsm-Testfile-01" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20231201 15:09:52.047" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-01" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230531 12:48:40.342" level="UNKNOWN">Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+<msg timestamp="20231201 15:09:52.204" level="UNKNOWN">Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
                   </msg>
-<status status="UNKNOWN" starttime="20230531 12:48:40.342" endtime="20230531 12:48:40.343"/>
+<status status="UNKNOWN" starttime="20231201 15:09:52.203" endtime="20231201 15:09:52.204"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20230531 12:48:40.343" endtime="20230531 12:48:40.344">Parent suite setup unknown:
-Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+<status status="UNKNOWN" starttime="20231201 15:09:52.204" endtime="20231201 15:09:52.205">Parent suite setup unknown:
+Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
                   </status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 12:48:40.346" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 12:48:40.346" endtime="20230531 12:48:40.346"/>
+<msg timestamp="20231201 15:09:52.207" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20231201 15:09:52.207" endtime="20231201 15:09:52.208"/>
 </kw>
-<status status="UNKNOWN" starttime="20230531 12:48:40.226" endtime="20230531 12:48:40.346">Suite setup unknown:
-Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+<status status="UNKNOWN" starttime="20231201 15:09:52.051" endtime="20231201 15:09:52.208">Suite setup unknown:
+Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
                   </status>
 </suite>
 <statistics>
@@ -35,8 +35,8 @@ Could not set variable 'params['global']['teststring_bench']' with value 'I am t
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230531 12:48:40.341" level="ERROR">Loading of JSON configuration file failed! 
-          Reason: Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'!
+<msg timestamp="20231201 15:09:52.202" level="ERROR">Loading of JSON configuration file failed! 
+          Reason: Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
                   </msg>
 </errors>
 </robot>
