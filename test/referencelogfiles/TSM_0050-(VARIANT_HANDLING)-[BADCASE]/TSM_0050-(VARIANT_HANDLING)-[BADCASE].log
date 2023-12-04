@@ -1,19 +1,18 @@
 ==============================================================================
-20230531 12:48:31.835 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20231201 15:11:09.310 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230531 12:48:31.843 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230531 12:48:31.853 - ERROR - The parameter 'WelcomeString' is a required property in configuration file C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp.
-20230531 12:48:31.854 - UNKNOWN - JSON schema validation failed!
-20230531 12:48:31.854 - DEBUG - JSON schema validation failed!
-20230531 12:48:31.854 - INFO - +- END SETUP: tm.Testsuite Setup (11)
+20231201 15:11:09.318 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20231201 15:11:09.354 - ERROR - The parameter 'WelcomeString' is a required property in configuration file D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp.
+20231201 15:11:09.355 - UNKNOWN - JSON schema validation failed!
+20231201 15:11:09.355 - INFO - +- END SETUP: tm.Testsuite Setup (37)
 ------------------------------------------------------------------------------
-20230531 12:48:31.854 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20231201 15:11:09.355 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230531 12:48:31.859 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20231201 15:11:09.358 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20230531 12:48:31.859 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230531 12:48:31.859 - INFO - testsuite_teardown: Will be implemented later
-20230531 12:48:31.859 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20231201 15:11:09.359 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20231201 15:11:09.359 - INFO - testsuite_teardown: Will be implemented later
+20231201 15:11:09.359 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230531 12:48:31.862 - INFO - + END SUITE: Tsm-Testfile-02 (134)
+20231201 15:11:09.363 - INFO - + END SUITE: Tsm-Testfile-02 (174)
 ==============================================================================
