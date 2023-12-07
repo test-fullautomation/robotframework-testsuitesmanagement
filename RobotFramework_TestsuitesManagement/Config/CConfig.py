@@ -323,8 +323,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                         self.sTestCfgFile = sDefaultConfig
 
-            if self.sTestCfgFile != '':
-                self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
+            self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
 
         if self.bConfigLoaded:
             if self.rConfigFiles.bLevel1:
@@ -373,9 +372,10 @@ This loadCfg method uses to load configuration's parameters from json files.
             BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
+        self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
         if self.sLocalConfig != '':
             try:
-                oLocalConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sLocalConfig))
+                oLocalConfig = oJsonPreprocessor.jsonLoad(self.sLocalConfig)
             except Exception as error:
                 CConfig.bLoadedCfg = False
                 CConfig.sLoadedCfgError = str(error)
