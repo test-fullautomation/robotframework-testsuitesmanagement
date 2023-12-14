@@ -46,14 +46,12 @@
 
    "RELEASES"  : {
                    "0.9." : [
-                              "RobotFramework_TestsuitesManagement change 0.9 A",
-                              "RobotFramework_TestsuitesManagement change 0.9 B",
-                              "RobotFramework_TestsuitesManagement change 0.9 X"
+                              "RobotFramework_TestsuitesManagement change 0.9 New RobotFramework 6.1 adaptation; Maintenance of log output"
                             ],
                    "0.10." : [
-                               "RobotFramework_TestsuitesManagement change 0.10 A",
-                               "RobotFramework_TestsuitesManagement change 0.10 B",
-                               "RobotFramework_TestsuitesManagement change 0.10 X"
+                               "RobotFramework_TestsuitesManagement change 0.10 Improve dotdict feature",
+                               "RobotFramework_TestsuitesManagement change 0.10 Update logging",
+                               "RobotFramework_TestsuitesManagement change 0.10 Code maintenance"
                              ]
                  }
 }
