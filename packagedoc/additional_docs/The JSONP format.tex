@@ -125,6 +125,28 @@ Comments can be added to JSON files with \pcode{//}:
 
 All lines starting with \pcode{//}, are ignored by the \pkg. The output of this example is the same than in the previous example.
 
+\vspace{2ex}
+
+Also block comments and inline comments are possible, realized by a pair of \pcode{/* */}:
+
+\begin{pythoncode}
+{
+   /*
+   "param1" : 1,
+   "param2" : "A",
+   */
+
+   "testlist" : ["A1", /*"B2", "C3",*/ "D4"]
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+\begin{pythonlog}
+{'testlist': ['A1', 'D4']}
+\end{pythonlog}
 
 % --------------------------------------------------------------------------------------------------------------
 
@@ -300,7 +322,7 @@ With
    "common_param_2" : "common componentB value 2"
 \end{pythoncode}
 
-in \plog{componentB.jsonp} the initial definition
+in \plog{componentB.jsonp}, the initial definition
 
 \begin{pythoncode}
    "common_param_2" : "common value 2"
@@ -521,7 +543,7 @@ colon in quotes. But nevertheless it is possible to use quotes. In case of:
 "int_val_b"            : "${int_val}",
 \end{pythoncode}
 
-the parameter \pcode{int_val_b} would be of type \pcode{string}.
+the parameter \pcode{int_val_b} is of type \pcode{string}.
 
 \vspace{2ex}
 
@@ -624,9 +646,75 @@ The following example extends the dictionary \pcode{common_param_2} by an additi
 
 \vspace{2ex}
 
-\textbf{Use of a common dictionary}
+\textbf{Dictionary keys and indices as parameter}
+
+In all code examples above the indices of lists and the key names of dictionaries have been hard coded strings. It is also possible to use parameters:
+
+\begin{pythoncode}
+{
+   "index1"               : 0,
+   "index2"               : 1,
+   "key1"                 : "keyA",
+   "key2"                 : "keyB",
+   "testlist"             : ["A", "B"],
+   "testdict"             : {"keyA" : "A", "keyB" : "B"},
+   "tmp1"                 : ${testlist}[${index1}],
+   "tmp2"                 : ${testdict}[${key1}],
+   ${testlist}[${index1}] : ${testlist}[${index2}],
+   ${testdict}[${key1}]   : ${testdict}[${key2}],
+   ${testlist}[${index2}] : ${tmp1},
+   ${testdict}[${key2}]   : ${tmp2}
+}
+\end{pythoncode}
+
+\textbf{Outcome:}
 
 \vspace{2ex}
+
+\begin{pythonlog}
+{'index1': 0,
+ 'index2': 1,
+ 'key1': 'keyA',
+ 'key2': 'keyB',
+ 'testdict': {'keyA': 'B', 'keyB': 'A'},
+ 'testlist': ['B', 'A'],
+ 'tmp1': 'A',
+ 'tmp2': 'A'}
+\end{pythonlog}
+
+\newpage
+
+\textbf{Meaning of single quotes in square brackets}
+
+Single quotes are used to convert the content inside to a string.
+
+\begin{itemize}
+   \item In case of the parameter \pcode{param} is of type string, the expressions \pcode{[$\{param\}]} and \pcode{['$\{param\}']} have the same outcome:
+         The content inside the square brackets is a string. The single quotes have no meaning in this case (because the parameter is already of type string).
+   \item In case of the parameter \pcode{param} is of type integer, the quotes in \pcode{['$\{param\}']} convert the integer value to a string.
+         Without the quotes (\pcode{[$\{param\}]}), the content inside the square brackets is an integer.
+\end{itemize}
+
+In the context of \pkg\ JSON files, only strings and integers are expected to be inside square brackets (except the brackets are used to define a list).
+Other data types are not supported here.
+
+Whether a string or an integer is expected, depends on the data type of the parameter, the square bracket expression belongs to. Dictionaries require a string (a key name), lists require an integer (an index).
+Deviations will cause an error.
+
+Summarized the following combinations are valid (on both the left hand side of the colon and the right hand side of the colon):
+
+\begin{pythoncode}
+${listparam}[${intparam}]
+${listparam}[1]
+${dictparam}['${intparam}']
+${dictparam}[${stringparam}]
+${dictparam}['${stringparam}']
+${dictparam}['keyname']
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Use of a common dictionary}
 
 The last example in this section covers the following use case:
 
@@ -638,6 +726,8 @@ The last example in this section covers the following use case:
 \end{itemize}
 
 To realize this, it is necessary to separate the initialization of the dictionary from all positions where keys are added to this dictionary.
+
+\newpage
 
 These are the JSON files:
 
@@ -661,7 +751,7 @@ These are the JSON files:
 }
 \end{pythoncode}
 
-\newpage
+\vspace{2ex}
 
 \textbullet \plog{featureA.jsonp}
 
@@ -700,7 +790,7 @@ These are the JSON files:
 }
 \end{pythoncode}
 
-\vspace{2ex}
+\newpage
 
 \textbf{Explanation:}
 
@@ -884,9 +974,6 @@ To demonstrate this, we change the JSON file to:
 }
 \end{pythoncode}
 
-\textbf{!!! Caution:} substitution bug:
-\href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/92}{issues/92} \textbf{!!!}
-
 \vspace{2ex}
 
 \textbf{Outcome:}
@@ -911,28 +998,34 @@ Now we try to do the same on the left hand side of the colon:
 }
 \end{pythoncode}
 
-\vspace{2ex}
-
-\textbf{Outcome:}
+If this would be allowed, the last line would cause a parameter with this name:
 
 \begin{pythonlog}
-!!! Error message expected; still under development !!!
+"test_parameter_['AB', 12, True, None, {'kA': 'kAval', 'kB': 'kBval'}]"
 \end{pythonlog}
 
-\textbf{!!! Caution:}
-\href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/69#issuecomment-1589581903}{issues/69 issuecomment-1589581903} \textbf{!!!}
+And this is absolutely not a valid name!
 
 \vspace{2ex}
 
-\textbf{Overwriting vs. substitution}
+To prevent the users from generating invalid parameter names, the \pkg\ throws an error:
 
-\vspace{2ex}
+\begin{pythonlog}
+"Error: 'Found expression '...' with at least one parameter of composite data type ...
+Because of this expression is the name of a parameter, only simple data types are allowed to be substituted inside.'!"
+\end{pythonlog}
 
-With the last two examples in this section we take a deeper look at the syntax difference between overwriting and substitution.
+\newpage
+
+\section{Overwriting vs. substitution}
+
+In this section we take a deeper look at the syntax difference between overwriting and substitution explained above.
 
 \vspace{2ex}
 
 \textbf{1. Overwriting:}
+
+\vspace{2ex}
 
 With \pcode{$\{param2\} : $\{param1\}} the initial value \pcode{"XYZ"} of parameter \pcode{param2} is overwritten with the value \pcode{"ABC"}
 of parameter \pcode{param1}.
@@ -958,6 +1051,8 @@ of parameter \pcode{param1}.
 \vspace{2ex}
 
 \textbf{2. Substitution:}
+
+\vspace{2ex}
 
 With \pcode{"$\{param2\}" : $\{param1\}} a new parameter with name \pcode{XYZ} (the value of \pcode{param2}) and value \pcode{"ABC"}
 is created.
@@ -1060,11 +1155,41 @@ Please be aware of: In case of a missing level in between an expression like
 }
 \end{pythoncode}
 
-you will \textit{not} get an error message! The entire data structure will be created implicitely. The impact is that this method
+you will \textit{not} get an error message! The entire data structure will be created implicitly. The impact is that this method
 is very susceptible to typing mistakes.
 
 The implicite creation of data structures does not work with lists! In case you use a list index out of range, you will get
 a corresponding error message.
+
+\newpage
+
+\textbf{Key names}
+
+The implicit creation of data structures is only possible with \textit{hard coded} key names. Parameters are not supported.
+
+\vspace{2ex}
+
+\textbf{Example:}
+
+\begin{pythoncode}
+{
+   "paramA" : "ABC",
+   "subKey" : "ABC",
+   ${testdict.subKey.subKey.paramA} : "DEF"
+}
+\end{pythoncode}
+
+All sub key levels within the expression \pcode{$\{testdict.subKey.subKey.paramA\}} are interpreted as hard coded strings, even in case of parameters with the same name do exist.
+
+For example: The name of the implicitly created key at bottom level is \pcode{"paramA"}, and not the value \pcode{"ABC"} of the parameter with the same name (\pcode{"paramA"}).
+
+\vspace{2ex}
+
+\textbf{Therefore the outcome is:}
+
+\begin{pythonlog}
+{'paramA': 'ABC', 'subKey': 'ABC', 'testdict': {'subKey': {'subKey': {'paramA': 'DEF'}}}}
+\end{pythonlog}
 
 % --------------------------------------------------------------------------------------------------------------
 
