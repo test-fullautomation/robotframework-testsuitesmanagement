@@ -45,13 +45,14 @@
 # ------------------------------------------
 
    "RELEASES"  : {
-                   "0.9." : [
-                              "RobotFramework_TestsuitesManagement change 0.9 New RobotFramework 6.1 adaptation; Maintenance of log output"
-                            ],
                    "0.10." : [
-                               "RobotFramework_TestsuitesManagement change 0.10 Improve dotdict feature",
-                               "RobotFramework_TestsuitesManagement change 0.10 Update logging",
-                               "RobotFramework_TestsuitesManagement change 0.10 Code maintenance"
+"
+* Improve dotdict feature
+* Update logging
+* Code maintenance
+* further stabilization of implementation
+* extension of selftest                 
+"
                              ]
                  }
 }
