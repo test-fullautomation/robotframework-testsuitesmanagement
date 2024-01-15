@@ -45,15 +45,9 @@
 # ------------------------------------------
 
    "RELEASES"  : {
-                   "0.9." : [
-                              "RobotFramework_TestsuitesManagement change 0.9 A",
-                              "RobotFramework_TestsuitesManagement change 0.9 B",
-                              "RobotFramework_TestsuitesManagement change 0.9 X"
-                            ],
-                   "0.10." : [
-                               "RobotFramework_TestsuitesManagement change 0.10 A",
-                               "RobotFramework_TestsuitesManagement change 0.10 B",
-                               "RobotFramework_TestsuitesManagement change 0.10 X"
+                   "0.x.y" : [
+                               "0.x.y",
+                               "0.x.y"
                              ]
                  }
 }
