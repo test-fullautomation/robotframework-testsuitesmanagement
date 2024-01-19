@@ -40,6 +40,8 @@ Dictionary\s'.+?'\shas\sno\skey\s'.+?'
 Invalid\svariable\sname\s'.+?'
 The\svariable\s'.+'\sis\snot\savailable!
 Could\snot\sset\svariable\s.+
+The\sparameter\s'.+'\sis\sa\srequired\sproperty\sin\sconfiguration\sfile
+Exception\soccurred
 (START\sSETUP:)\s.+(Testsuite\sSetup)
 (END\sSETUP:)\s.+(Testsuite\sSetup)
 (START\sSETUP:)\s.+(Testcase\sSetup)

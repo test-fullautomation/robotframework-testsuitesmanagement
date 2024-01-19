@@ -2,7 +2,7 @@
 20231201 15:09:52.173 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
 20231201 15:09:52.203 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20231201 15:09:52.204 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
+20231201 15:09:52.204 - ERROR - The parameter 'Project' is a required property in configuration file
 20231201 15:09:52.204 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
 20231201 15:09:52.204 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
