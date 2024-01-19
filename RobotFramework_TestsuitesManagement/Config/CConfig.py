@@ -430,7 +430,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                     logger.error(f"Verification against JSON schema failed: '{error.message}'\n" + \
                                  "          Please put the additional params into 'params': { 'global': {...} \n")
                 elif error.validator == 'required':
-                    logger.error(f"The parameter {error.message} in configuration file {self.sTestCfgFile}.\n")
+                    logger.error(f"The parameter {error.message} in configuration file '{self.sTestCfgFile}'.\n")
                 else:
                     errParam = error.path.pop()
                     logger.error(f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
