@@ -430,12 +430,19 @@ This loadCfg method uses to load configuration's parameters from json files.
                     self.sLoadedCfgError = f"Verification against JSON schema failed: '{error.message}'\n" + \
                                  "          Please put the additional params into 'params': { 'global': {...} \n"
                 elif error.validator == 'required':
-                    self.sLoadedCfgError = f"The parameter {error.message} in configuration file '{self.sTestCfgFile}'.\n"
+                    param = re.search("('[A-Za-z0-9]+')", error.message)
+                    if param is not None:
+                        self.sLoadedCfgError = f"Required parameter {param[0]} is missing in configuration file '{self.sTestCfgFile}'. \
+JSON schema validation failed!\n"
+                    else:
+                        self.sLoadedCfgError = f"Required parameter {error.message} is missing in configuration file '{self.sTestCfgFile}'. \
+JSON schema validation failed!\n"
                 else:
                     errParam = error.path.pop()
                     self.sLoadedCfgError = f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
                                  f"          {error.message}\n"
                 logger.error(self.sLoadedCfgError)
+                BuiltIn().unknown(self.sLoadedCfgError)
 
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
