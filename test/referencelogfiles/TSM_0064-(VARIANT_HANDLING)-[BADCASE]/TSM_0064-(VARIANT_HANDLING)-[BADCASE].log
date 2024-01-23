@@ -1,17 +1,17 @@
 ==============================================================================
-20240119 18:04:33.802 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20240123 10:17:21.321 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20240119 18:04:33.831 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20240119 18:04:33.831 - UNKNOWN - Exception occurred.
-20240119 18:04:33.831 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20240123 10:17:21.351 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20240123 10:17:21.351 - UNKNOWN - Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
+20240123 10:17:21.351 - INFO - +- END SETUP: tm.Testsuite Setup (0)
 ------------------------------------------------------------------------------
-20240119 18:04:33.831 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20240123 10:17:21.352 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20240119 18:04:33.843 - INFO - +- END TEST: Test Case tsm-testfile-01 (5)
+20240123 10:17:21.354 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
 ------------------------------------------------------------------------------
-20240119 18:04:33.844 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240119 18:04:33.844 - INFO - testsuite_teardown: Will be implemented later
-20240119 18:04:33.844 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240123 10:17:21.355 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240123 10:17:21.355 - INFO - testsuite_teardown: Will be implemented later
+20240123 10:17:21.355 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240119 18:04:33.846 - INFO - + END SUITE: Tsm-Testfile-01 (160)
+20240123 10:17:21.357 - INFO - + END SUITE: Tsm-Testfile-01 (141)
 ==============================================================================
