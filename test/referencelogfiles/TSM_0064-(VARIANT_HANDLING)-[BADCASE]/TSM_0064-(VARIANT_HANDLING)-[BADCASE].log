@@ -1,17 +1,17 @@
 ==============================================================================
-20231201 15:09:52.173 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20240123 10:17:21.321 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20231201 15:09:52.203 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20231201 15:09:52.204 - UNKNOWN - Could not set variable 'params['global']['teststring_bench']' with value 'I am the 'bench1' configuration of tsm-test'! Reason: name 'params' is not defined
-20231201 15:09:52.204 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+20240123 10:17:21.351 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20240123 10:17:21.351 - UNKNOWN - Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
+20240123 10:17:21.351 - INFO - +- END SETUP: tm.Testsuite Setup (0)
 ------------------------------------------------------------------------------
-20231201 15:09:52.204 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20240123 10:17:21.352 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20231201 15:09:52.207 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
+20240123 10:17:21.354 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
 ------------------------------------------------------------------------------
-20231201 15:09:52.207 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20231201 15:09:52.207 - INFO - testsuite_teardown: Will be implemented later
-20231201 15:09:52.208 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20240123 10:17:21.355 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240123 10:17:21.355 - INFO - testsuite_teardown: Will be implemented later
+20240123 10:17:21.355 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20231201 15:09:52.214 - INFO - + END SUITE: Tsm-Testfile-01 (157)
+20240123 10:17:21.357 - INFO - + END SUITE: Tsm-Testfile-01 (141)
 ==============================================================================
