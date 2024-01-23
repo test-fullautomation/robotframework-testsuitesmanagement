@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240122 13:48:39.379" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240123 10:17:21.210" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-01" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20240122 13:48:39.541" level="UNKNOWN">The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+<msg timestamp="20240123 10:17:21.351" level="UNKNOWN">Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
 </msg>
-<status status="UNKNOWN" starttime="20240122 13:48:39.541" endtime="20240122 13:48:39.541"/>
+<status status="UNKNOWN" starttime="20240123 10:17:21.351" endtime="20240123 10:17:21.351"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20240122 13:48:39.541" endtime="20240122 13:48:39.543">Parent suite setup unknown:
-The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+<status status="UNKNOWN" starttime="20240123 10:17:21.352" endtime="20240123 10:17:21.353">Parent suite setup unknown:
+Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
 </status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20240122 13:48:39.546" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20240122 13:48:39.546" endtime="20240122 13:48:39.546"/>
+<msg timestamp="20240123 10:17:21.355" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240123 10:17:21.355" endtime="20240123 10:17:21.355"/>
 </kw>
-<status status="UNKNOWN" starttime="20240122 13:48:39.396" endtime="20240122 13:48:39.546">Suite setup unknown:
-The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+<status status="UNKNOWN" starttime="20240123 10:17:21.214" endtime="20240123 10:17:21.355">Suite setup unknown:
+Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
 </status>
 </suite>
 <statistics>
@@ -35,7 +35,7 @@ The parameter 'Project' is a required property in configuration file 'D:\ROBFW\c
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240122 13:48:39.540" level="ERROR">The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+<msg timestamp="20240123 10:17:21.350" level="ERROR">Required parameter 'Project' is missing in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'. JSON schema validation failed!
 </msg>
 </errors>
 </robot>

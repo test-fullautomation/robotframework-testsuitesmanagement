@@ -1191,5 +1191,75 @@ For example: The name of the implicitly created key at bottom level is \pcode{"p
 {'paramA': 'ABC', 'subKey': 'ABC', 'testdict': {'subKey': {'subKey': {'paramA': 'DEF'}}}}
 \end{pythonlog}
 
+\vspace{2ex}
+
+\textbf{Reference to existing keys}
+
+It is possible to use parameters to refer to \textit{already existing} keys.
+
+\begin{pythoncode}
+{
+   // <data structure created implicitly>
+   ${testdict.subKey_1.subKey_2.subKey_3} : "ABC",
+
+   // <string parameter with name of an existing key>
+   "keyName_3" : "subKey_3",
+
+   // <parameter used to refer to an existing key>
+   ${testdict.subKey_1.subKey_2.${keyName_3}} : "XYZ"
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+\begin{pythonlog}
+{'keyName_3': 'subKey_3',
+ 'testdict': {'subKey_1': {'subKey_2': {'subKey_3': 'XYZ'}}}}
+\end{pythonlog}
+
+\vspace{2ex}
+
+Parameters cannot be used to create new keys.
+
+\begin{pythoncode}
+{
+   // <data structure created implicitly>
+   ${testdict.subKey_1.subKey_2.subKey_3} : "ABC",
+
+   // <string parameter with name of a not existing key>
+   "keyName_4" : "subKey_4",
+
+   // <usage of keyName\_4 is not possible here>
+   ${testdict.subKey_1.subKey_2.subKey_3.${keyName_4}} : "XYZ"
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome is the following error:}
+
+\begin{pythonlog}
+"The implicit creation of data structures based on nested parameter is not supported ..."
+\end{pythonlog}
+
+The same error will happen in case of the standard notation is used:
+
+\begin{pythoncode}
+{
+   // <usage of keyName\_4 is not possible here>
+   ${testdict}['subKey_1']['subKey_2']['subKey_3'][${keyName_4}] : "XYZ"
+}
+\end{pythoncode}
+
+
+
+
+
+
+
+
+
 % --------------------------------------------------------------------------------------------------------------
 

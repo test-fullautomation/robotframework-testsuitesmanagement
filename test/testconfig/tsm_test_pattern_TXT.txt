@@ -22,12 +22,11 @@ Wrong\suse\sof
 Wrong\slocal\sconfig\sfile\swas\schosen
 Please\scorrect\sthe\svalues\sof
 Parameter\s'.+'\swith\sinvalid\svalue\sfound\sin\sJSON\sconfiguration\sfile
-JSON\sschema\svalidation\sfailed
 Running\swithout\sRobotFramework\sAIO\sversion\scheck!
 RobotFramework\sAIO\sversion\scheck\spassed!
 Could\snot\sparse\sconfiguration\sJSON\sschema\sfile
 Loading\sconfiguration\slevel\s\d\sfailed
-(Did\snot\sfind\sconfiguration\sfile:).+(I_AM_NOT_EXISTING_CONFIG_FOLDER).+(tsm-test_.*\.jsonp)
+(Did\snot\sfind\sconfiguration\sfile:).+(I_AM_NOT_EXISTING_CONFIG_FOLDER).+(tsm-test_.+\.jsonp)
 (Did\snot\sfind\sconfiguration\sfile:).+(I_AM_NOT_EXISTING_FILE\.jsonp)
 Not\sable\sto\sget\sa\sconfiguration\sfor\svariant\s.+
 PARAMS-VERIFIKATION\s:\s.+
@@ -40,7 +39,7 @@ Dictionary\s'.+?'\shas\sno\skey\s'.+?'
 Invalid\svariable\sname\s'.+?'
 The\svariable\s'.+'\sis\snot\savailable!
 Could\snot\sset\svariable\s.+
-The\sparameter\s'.+'\sis\sa\srequired\sproperty\sin\sconfiguration\sfile
+(Required\sparameter\s'.+?'\sis\smissing\sin\sconfiguration\sfile\s').+?(tsm-test_config_.+?\.jsonp'\.\sJSON\sschema\svalidation\sfailed!)
 Exception\soccurred
 (START\sSETUP:)\s.+(Testsuite\sSetup)
 (END\sSETUP:)\s.+(Testsuite\sSetup)
