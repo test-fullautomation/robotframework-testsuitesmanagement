@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240119 18:04:33.680" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240122 13:48:39.379" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-01" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20240119 18:04:33.831" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20240119 18:04:33.831" endtime="20240119 18:04:33.831"/>
+<msg timestamp="20240122 13:48:39.541" level="UNKNOWN">The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+</msg>
+<status status="UNKNOWN" starttime="20240122 13:48:39.541" endtime="20240122 13:48:39.541"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20240119 18:04:33.831" endtime="20240119 18:04:33.836">Parent suite setup unknown:
-Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240122 13:48:39.541" endtime="20240122 13:48:39.543">Parent suite setup unknown:
+The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20240119 18:04:33.844" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20240119 18:04:33.844" endtime="20240119 18:04:33.844"/>
+<msg timestamp="20240122 13:48:39.546" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240122 13:48:39.546" endtime="20240122 13:48:39.546"/>
 </kw>
-<status status="UNKNOWN" starttime="20240119 18:04:33.684" endtime="20240119 18:04:33.844">Suite setup unknown:
-Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240122 13:48:39.396" endtime="20240122 13:48:39.546">Suite setup unknown:
+The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+</status>
 </suite>
 <statistics>
 <total>
@@ -32,7 +35,7 @@ Exception occurred.</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240119 18:04:33.829" level="ERROR">The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+<msg timestamp="20240122 13:48:39.540" level="ERROR">The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
 </msg>
 </errors>
 </robot>

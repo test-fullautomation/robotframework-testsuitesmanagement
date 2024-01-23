@@ -1,17 +1,17 @@
 ==============================================================================
-20240119 18:04:33.802 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20240122 13:48:39.510 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20240119 18:04:33.831 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20240119 18:04:33.831 - UNKNOWN - Exception occurred.
-20240119 18:04:33.831 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20240122 13:48:39.541 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20240122 13:48:39.541 - UNKNOWN - The parameter 'Project' is a required property in configuration file 'D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+20240122 13:48:39.541 - INFO - +- END SETUP: tm.Testsuite Setup (0)
 ------------------------------------------------------------------------------
-20240119 18:04:33.831 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20240122 13:48:39.542 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20240119 18:04:33.843 - INFO - +- END TEST: Test Case tsm-testfile-01 (5)
+20240122 13:48:39.545 - INFO - +- END TEST: Test Case tsm-testfile-01 (2)
 ------------------------------------------------------------------------------
-20240119 18:04:33.844 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240119 18:04:33.844 - INFO - testsuite_teardown: Will be implemented later
-20240119 18:04:33.844 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240122 13:48:39.546 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240122 13:48:39.546 - INFO - testsuite_teardown: Will be implemented later
+20240122 13:48:39.546 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240119 18:04:33.846 - INFO - + END SUITE: Tsm-Testfile-01 (160)
+20240122 13:48:39.552 - INFO - + END SUITE: Tsm-Testfile-01 (150)
 ==============================================================================
