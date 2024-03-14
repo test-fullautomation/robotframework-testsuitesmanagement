@@ -228,7 +228,7 @@ This dotdictConvert method converts json object to dotdict.
                         sExec = i if i==self.lTmpParam[0] else sExec + "." + i
                     sExec = sExec + " = DotDict(" + str(v) + ")"
                     try:
-                        exec(sExec, globals())
+                        exec(sExec)
                     except Exception as error:
                         logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
                         BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
@@ -242,7 +242,7 @@ This dotdictConvert method converts json object to dotdict.
                                 sExec = i if i == self.lTmpParam[0] else sExec + "." + i
                             sExec = sExec + " = DotDict(" + str(item) + ")"
                             try:
-                                exec(sExec, globals())
+                                exec(sExec)
                             except Exception as error:
                                 logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
                                 BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
@@ -265,6 +265,34 @@ for None so that subclasses will create their own __single objects.
     def __init__(self):
         pass
 
+    def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
+        """
+Merge dUpdateDict which contains updated data to dMainDict.
+
+**Arguments:**
+
+* ``dMainDict``
+
+  / *Condition*: required / *Type*: dict /
+
+* ``dUpdateDict``
+
+  / *Condition*: required / *Type*: dict /
+
+**Returns:**
+
+* ``dMainDict``
+
+  / *Type*: dict /
+
+  Return dMainDict which contains update data in dUpdateDict.
+        """
+        for key, value in dUpdateDict.items():
+            if isinstance(value, dict) and key in dMainDict:
+                self.__mergeDicts(dMainDict[key], value)
+            else:
+                dMainDict[key] = value
+        return dMainDict
 
     @staticmethod
     def loadCfg(self):
@@ -395,7 +423,7 @@ This loadCfg method uses to load configuration's parameters from json files.
           Wrong local config file was chosen, please check!!!"
                 isLocalConfig = False
             else:
-                oJsonCfgData.update(oLocalConfig)
+                oJsonCfgData = self.__mergeDicts(oJsonCfgData, oLocalConfig)
 
             if not isLocalConfig:
                 logger.error(errorMessage)
