@@ -186,70 +186,6 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     # Common configuration parameters
     sWelcomeString  = None
     sTargetName     = None
-    ddictJson = DotDict()
-
-    class CJsonDotDict():
-        '''
-The CJsonDotDict class converts json configuration object to dotdict
-        '''
-        def __init__(self):
-            self.lTmpParam = ['CConfig.ddictJson']
-
-        def __del__(self):
-            CConfig.ddictJson = DotDict()
-            del self.lTmpParam
-
-        def dotdictConvert(self, oJson):
-            '''
-This dotdictConvert method converts json object to dotdict.
-
-**Arguments:**
-
-* ``oJson``
-
-   / *Condition*: required / *Type*: dict /
-
-   Json object which want to convert to dotdict.
-
-**Returns:**
-
-* ``CConfig.ddictJson``
-
-   / *Type*: dotdict /
-            '''
-            if len(self.lTmpParam) == 1:
-                CConfig.ddictJson.update(oJson)
-
-            for k,v in oJson.items():
-                sExec = ""
-                if isinstance(v, dict):
-                    self.lTmpParam.append(k)
-                    for i in self.lTmpParam:
-                        sExec = i if i==self.lTmpParam[0] else sExec + "." + i
-                    sExec = sExec + " = DotDict(" + str(v) + ")"
-                    try:
-                        exec(sExec)
-                    except Exception as error:
-                        logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
-                        BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
-                    self.dotdictConvert(v)
-                elif isinstance(v, list):
-                    n = 0
-                    for item in v:
-                        if isinstance(item, dict):
-                            self.lTmpParam.append(k+"["+str(n)+"]")
-                            for i in self.lTmpParam:
-                                sExec = i if i == self.lTmpParam[0] else sExec + "." + i
-                            sExec = sExec + " = DotDict(" + str(item) + ")"
-                            try:
-                                exec(sExec)
-                            except Exception as error:
-                                logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
-                                BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
-                            self.dotdictConvert(item)
-                        n = n+1
-            self.lTmpParam = self.lTmpParam[:-1]
-            return CConfig.ddictJson
 
     def __new__(classtype, *args, **kwargs):
         '''
@@ -502,9 +438,7 @@ JSON schema validation failed!\n"
         # except:
         #     pass
 
-        dotdictObj = CConfig.CJsonDotDict()
-        jsonDotdict = dotdictObj.dotdictConvert(oJsonCfgData)
-        del dotdictObj
+        jsonDotdict = DotDict(oJsonCfgData)
         BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
 
         self.bConfigLoaded = True
@@ -536,17 +470,13 @@ This method set RobotFramework AIO global variable from config object.
         k = key
         v = value
         if isinstance(v, dict):
-            dotdictObj = CConfig.CJsonDotDict()
-            jsonDotdict = dotdictObj.dotdictConvert(v)
-            del dotdictObj
+            jsonDotdict = DotDict(v)
             BuiltIn().set_global_variable(f"${{{k.strip()}}}", jsonDotdict)
         elif isinstance(v, list):
             tmpList = []
             for item in v:
                 if isinstance(item, dict):
-                    dotdictObj = CConfig.CJsonDotDict()
-                    jsonDotdict = dotdictObj.dotdictConvert(item)
-                    del dotdictObj
+                    jsonDotdict = DotDict(item)
                     tmpList.append(jsonDotdict)
                 else:
                     tmpList.append(item)
