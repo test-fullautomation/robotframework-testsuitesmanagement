@@ -18,5 +18,5 @@
 #
 # Version and date of package RobotFramework_TestsuitesManagement
 #
-VERSION      = "0.7.5"
-VERSION_DATE = "08.03.2024"
+VERSION      = "0.7.6"
+VERSION_DATE = "01.04.2024"
