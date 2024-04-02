@@ -493,18 +493,19 @@ This method updates preprocessor and global params to global variable of RobotFr
         '''
         varNamePattern = r'^[a-zA-Z_][a-zA-Z0-9_]*$'
         lReservedKeyword = ['Settings', 'Variables', 'Keywords', 'Comments', 'Documentation', 'Metadata']
-        for k,v in self.oConfigParams['params']['global'].items():
-            if not re.match(varNamePattern, k) or k in lReservedKeyword:
-                CConfig.bLoadedCfg = False
-                CConfig.sLoadedCfgError = f"Parameter '{k}' is invalid variable name or conflicts with Robot reserved keywords. \
+        if 'params' in self.oConfigParams and 'global' in self.oConfigParams['params']:
+            for k,v in self.oConfigParams['params']['global'].items():
+                if not re.match(varNamePattern, k) or k in lReservedKeyword:
+                    CConfig.bLoadedCfg = False
+                    CConfig.sLoadedCfgError = f"Parameter '{k}' is invalid variable name or conflicts with Robot reserved keywords. \
 Variable names in Robot Framework must start with a letter or underscore, followed by letters, digits, or underscores."
-                BuiltIn().unknown()
-            if k in self.lBuitInVariables:
-                continue
-            try:
-                self.__setGlobalVariable(k, v)
-            except:
-                continue
+                    BuiltIn().unknown()
+                if k in self.lBuitInVariables:
+                    continue
+                try:
+                    self.__setGlobalVariable(k, v)
+                except:
+                    continue
 
     def __del__(self):
         '''
