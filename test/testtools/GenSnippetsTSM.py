@@ -22,8 +22,8 @@
 #
 # **************************************************************************************************************
 #
-VERSION      = "0.1.0"
-VERSION_DATE = "18.03.2024"
+VERSION      = "0.2.0"
+VERSION_DATE = "19.03.2024"
 #
 # **************************************************************************************************************
 
@@ -324,8 +324,8 @@ class CExecutor():
 
       # error indicators, used while parsing relevant content from Robot Framework debug log file and used to define the text color
       self.__listErrorIndicators = ["ERROR", "Error", "error", "UNKNOWN", "unknown", "FAIL", "failed", "AssertionError",
-                                    "Expecting", "expected", "Unexpected", "unexpected", "Invalid", "invalid", "Reason",
-                                    "not found", "have to be", "does not support"]
+                                    "Expecting", "expecting", "Expected", "expected", "Unexpected", "unexpected", "Invalid", "invalid", "Reason",
+                                    "not found", "have to be", "does not support", "No closing quotation", "Missing", "missing"]
 
       # filter strings, used while parsing relevant content from Robot Framework debug log file
       self.__sInfoIndicators  = ";".join(self.__listInfoIndicators)
@@ -1830,6 +1830,69 @@ ${params.global.param} : ${params.global.param}
 
    # --------------------------------------------------------------------------------------------------------------
 
+   def GetNamingConventions(self):
+      """Several snippets containing naming convention issues
+      """
+
+      sHeadline = "Several snippets containing naming convention issues"
+
+      sParamsGlobalDefinitions = """
+"param*01*1"                 : "value",
+"param2"                  : "val*02*ue",
+"${params.global.param2}" : 1,
+"dictParam"               : {"key*03*A" : 2, "keyB" : {"key*04*C" : 3}}
+"""
+
+      sRobotTestCodePattern = """
+    rf.extensions.pretty_print    ${param*01*1}    [TSM-SNIPPET-TEST] {param*01*1}
+    rf.extensions.pretty_print    ${param2}        [TSM-SNIPPET-TEST] {param2}
+    rf.extensions.pretty_print    ${val*02*ue}     [TSM-SNIPPET-TEST] {val*02*ue}
+    rf.extensions.pretty_print    ${dictParam}     [TSM-SNIPPET-TEST] {dictParam}
+"""
+
+      # We have a list of expressions and we have a list of placeholders like used in sParamsGlobalDefinitions.
+      # The followig code runs in a nested loop: Every expression is placed at every placeholder position. Only one single
+      # expression and placeholder per iteration. All remaining placeholders in current iteration are replaced by elements
+      # from a list of filler expressions (simple letters) that are only used to complete the code snippet, but are not in focus.
+
+      listExpressions = ["-", "+", "*", "|", "/", "$", "%", "#", "\\", "\\\\"]
+
+      listPlaceholders = ["*01*", "*02*", "*03*", "*04*"]
+
+      listPositions = listPlaceholders[:] # to support a nested iteration of the same list; better readibility of code because of different names
+
+      listFiller = ["","","",""] # as much elements as in listPlaceholders
+
+      # put all things together
+
+      listoftuplesCodeSnippets = []
+      for sExpression in listExpressions:
+         for sPosition in listPositions:
+            sDataStructure = sParamsGlobalDefinitions # init a new data structure from pattern sParamsGlobalDefinitions
+            sRobotTestCode = sRobotTestCodePattern    # init a new data structure from pattern sRobotTestCodePattern
+            oFiller = CListElements(listFiller)       # init a new filler object (= content for remaining placeholders)
+
+            for sPlaceholder in listPlaceholders:
+               sFiller = oFiller.GetElement()
+               if sPosition == sPlaceholder:
+                  sDataStructure = sDataStructure.replace(sPlaceholder, sExpression)
+                  sRobotTestCode = sRobotTestCode.replace(sPlaceholder, sExpression)
+               else:
+                  sDataStructure = sDataStructure.replace(sPlaceholder, f"{sFiller}")
+                  sRobotTestCode = sRobotTestCode.replace(sPlaceholder, f"{sFiller}")
+            # eof for sPlaceholder in listPlaceholders:
+            sTestConfigFileCode = self.__GetTestConfigFileCode(sDataStructure)
+            sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+            listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sDataStructure))
+         # eof for sPosition in listPositions:
+      # eof for sExpression in listExpressions:
+
+      return sHeadline, listoftuplesCodeSnippets
+
+   # eof def GetNamingConventions(self):
+
+   # --------------------------------------------------------------------------------------------------------------
+
 # eof class CSnippets():
 
 # --------------------------------------------------------------------------------------------------------------
@@ -1942,6 +2005,9 @@ sHeadline, listoftuplesCodeSnippets = oSnippets.GetSeveralParticularSnippets()
 bSuccess, sResult = oExecutor.Execute(sHeadline, listoftuplesCodeSnippets, "TSM")
 
 sHeadline, listoftuplesCodeSnippets = oSnippets.GetExpressions()
+bSuccess, sResult = oExecutor.Execute(sHeadline, listoftuplesCodeSnippets, "TSM")
+
+sHeadline, listoftuplesCodeSnippets = oSnippets.GetNamingConventions()
 bSuccess, sResult = oExecutor.Execute(sHeadline, listoftuplesCodeSnippets, "TSM")
 
 print()
