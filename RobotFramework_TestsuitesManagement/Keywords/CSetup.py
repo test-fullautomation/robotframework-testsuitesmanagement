@@ -83,18 +83,14 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             logger.info('Running with configuration level 1')
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2:
             logger.info('Running with configuration level 2')
-            if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3:
             logger.info('Running with configuration level 3')
-            if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bConfigLoaded:
-                logger.info(f"Parameters loaded from '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         else:
-            logger.warn(f"Running with configuration level 4! \nSelected configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
+            logger.warn("Running with configuration level 4!")
 
         RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyVersion()
+        logger.info(f"Loaded configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         logger.info(f"Suite Path: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}'")
-        logger.info(f"CfgFile Path: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
             logger.info(f"Local config file: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}'")
         logger.info(f"Number of test suites: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
@@ -190,7 +186,7 @@ Loads a json file and returns a json object.
         else:
             oJsonFristLevel = oJsonPreprocessor.jsonLoad(jsonfile)
             if variant not in oJsonFristLevel:
-                logger.error(f"The variant: {variant} is not correct!\n")
+                logger.error(f"The variant: {variant} is not correct!")
                 return {}
             jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)

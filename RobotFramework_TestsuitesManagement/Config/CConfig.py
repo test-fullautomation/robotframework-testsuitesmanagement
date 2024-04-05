@@ -186,70 +186,6 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     # Common configuration parameters
     sWelcomeString  = None
     sTargetName     = None
-    ddictJson = DotDict()
-
-    class CJsonDotDict():
-        '''
-The CJsonDotDict class converts json configuration object to dotdict
-        '''
-        def __init__(self):
-            self.lTmpParam = ['CConfig.ddictJson']
-
-        def __del__(self):
-            CConfig.ddictJson = DotDict()
-            del self.lTmpParam
-
-        def dotdictConvert(self, oJson):
-            '''
-This dotdictConvert method converts json object to dotdict.
-
-**Arguments:**
-
-* ``oJson``
-
-   / *Condition*: required / *Type*: dict /
-
-   Json object which want to convert to dotdict.
-
-**Returns:**
-
-* ``CConfig.ddictJson``
-
-   / *Type*: dotdict /
-            '''
-            if len(self.lTmpParam) == 1:
-                CConfig.ddictJson.update(oJson)
-
-            for k,v in oJson.items():
-                sExec = ""
-                if isinstance(v, dict):
-                    self.lTmpParam.append(k)
-                    for i in self.lTmpParam:
-                        sExec = i if i==self.lTmpParam[0] else sExec + "." + i
-                    sExec = sExec + " = DotDict(" + str(v) + ")"
-                    try:
-                        exec(sExec)
-                    except Exception as error:
-                        logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
-                        BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
-                    self.dotdictConvert(v)
-                elif isinstance(v, list):
-                    n = 0
-                    for item in v:
-                        if isinstance(item, dict):
-                            self.lTmpParam.append(k+"["+str(n)+"]")
-                            for i in self.lTmpParam:
-                                sExec = i if i == self.lTmpParam[0] else sExec + "." + i
-                            sExec = sExec + " = DotDict(" + str(item) + ")"
-                            try:
-                                exec(sExec)
-                            except Exception as error:
-                                logger.error(f"Could not convert: {sExec} to dotdict.\nException: {error}")
-                                BuiltIn().unknown("Convert configuration object to dotdict format failed!!!")
-                            self.dotdictConvert(item)
-                        n = n+1
-            self.lTmpParam = self.lTmpParam[:-1]
-            return CConfig.ddictJson
 
     def __new__(classtype, *args, **kwargs):
         '''
@@ -314,8 +250,8 @@ This loadCfg method uses to load configuration's parameters from json files.
                 bConfigLevel2 = self.__loadConfigFileLevel2()
             else:
                 if r'${variant}' in BuiltIn().get_variables():
-                    logger.error(f"Not able to get a configuration for variant '{self.sConfigName}' because of a variant configuration file is not available. \n" + \
-                                  "          A variant configuration file must be available when executing robot with configuration level 2. \n")
+                    logger.error(f"Not able to get a configuration for variant '{self.sConfigName}' because of a variant configuration file is not available.")
+                    logger.info("---> A variant configuration file must be available when executing robot with configuration level 2.")
                     BuiltIn().unknown('Loading configuration level 2 failed!')
 
                 if os.path.isdir(self.sTestcasePath + 'config'):
@@ -327,12 +263,11 @@ This loadCfg method uses to load configuration's parameters from json files.
                         sJsonFile1    = f"{sConfigFolder}/robot_config.jsonp"
                         sJsonFile2    = f"{sConfigFolder}/robot_config.json" # still supported alternative extension
 
-                    if os.path.isfile(sJsonFile1) and os.path.isfile(sJsonFile2):
-                        errorMessage = "Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!\n" + \
-                                        f"* file 1: '{sJsonFile1}'\n" + \
-                                        f"* file 2: '{sJsonFile2}'\n" + \
-                                        "Please decide which one to keep and which one to remove. Both together are not allowed."
-                        logger.error(errorMessage)
+                    if os.path.isfile(sJsonFile1) and os.path.isfile(sJsonFile2):           
+                        logger.error("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
+                        logger.info(f"* file 1: '{sJsonFile1}'")
+                        logger.info(f"* file 2: '{sJsonFile2}'")
+                        logger.info("Please decide which one to keep and which one to remove. Both together are not allowed.")
                         BuiltIn().unknown("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
                     elif os.path.isfile(sJsonFile1):
                         self.sTestCfgFile = sJsonFile1
@@ -361,14 +296,13 @@ This loadCfg method uses to load configuration's parameters from json files.
 
         if self.rConfigFiles.bLevel1:
             if self.sConfigName != 'default':
-                errorMessage = "Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.\n" + \
-                               "          It is not possible to use both together, because they belong to the same feature (the variant selection).\n" + \
-                               "          Please remove one of them.\n"
-                logger.error(errorMessage)
+                logger.error("Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.")
+                logger.info("---> It is not possible to use both together, because they belong to the same feature (the variant selection).")
+                logger.info("---> Please remove one of them.")
                 BuiltIn().unknown('Redundant settings detected in command line!')
 
             if self.sTestCfgFile == '':
-                errorMessage = "The config_file input parameter is empty!!!\n"
+                errorMessage = "The config_file input parameter is empty!!!"
                 logger.error(errorMessage)
                 BuiltIn().unknown(errorMessage)
 
@@ -377,7 +311,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             return
 
         if not os.path.isfile(self.sTestCfgFile):
-            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!\n"
+            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!"
             logger.error(errorMessage)
             BuiltIn().unknown('The configuration file is not found!')
 
@@ -396,7 +330,7 @@ This loadCfg method uses to load configuration's parameters from json files.
             CConfig.sLoadedCfgError = ''
             for item in str(error).split(': \''):
                 CConfig.sLoadedCfgError += f"{item}\n                  "
-            logger.error(f"Loading of JSON configuration file failed! \n          Reason: {CConfig.sLoadedCfgError}")
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
             BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
@@ -407,26 +341,24 @@ This loadCfg method uses to load configuration's parameters from json files.
             except Exception as error:
                 CConfig.bLoadedCfg = False
                 CConfig.sLoadedCfgError = str(error)
-                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}\n")
+                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}")
                 BuiltIn().unknown('Loading local config failed!')
                 raise Exception
             isLocalConfig = True
             if "WelcomeString" in oLocalConfig:
-                errorMessage = f"Loading local config failed with file: {self.sLocalConfig} \n\
-          The mandatory \"WelcomeString\" element of configuration file is found in local config file \n\
-          Wrong local config file was chosen, please check!!!"
+                logger.error(f"Loading local config failed with file: {self.sLocalConfig}")
+                logger.info('---> The mandatory "WelcomeString" element of configuration file is found in local config file')
+                logger.info("---> Wrong local config file was chosen, please check!!!")
                 isLocalConfig = False
-
             elif "default" in oLocalConfig:
-                errorMessage = f"Loading local config failed with file: {self.sLocalConfig} \n\
-          The variant \"default\" element of the variant configuration in the configuration level 2 is found in local config file \n\
-          Wrong local config file was chosen, please check!!!"
+                logger.error(f"Loading local config failed with file: {self.sLocalConfig}")
+                logger.info('---> The variant "default" element of the variant configuration in the configuration level 2 is found in local config file')
+                logger.info("---> Wrong local config file was chosen, please check!!!")
                 isLocalConfig = False
             else:
                 oJsonCfgData = self.__mergeDicts(oJsonCfgData, oLocalConfig)
 
             if not isLocalConfig:
-                logger.error(errorMessage)
                 BuiltIn().unknown('Loading local config failed!')
 
         bJsonSchema = True
@@ -436,7 +368,7 @@ This loadCfg method uses to load configuration's parameters from json files.
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
             bJsonSchema = False
-            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'\n")
+            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'")
             BuiltIn().unknown('Parse JSON schema file failed!')
 
         if bJsonSchema:
@@ -444,20 +376,19 @@ This loadCfg method uses to load configuration's parameters from json files.
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
             except Exception as error:
                 if error.validator == 'additionalProperties':
-                    self.sLoadedCfgError = f"Verification against JSON schema failed: '{error.message}'\n" + \
-                                 "          Please put the additional params into 'params': { 'global': {...} \n"
+                    self.sLoadedCfgError = f"Verification against JSON schema failed: '{error.message}'. \
+Please put the additional params into 'params': {{ 'global': {{...}}"
                 elif error.validator == 'required':
                     param = re.search("('[A-Za-z0-9]+')", error.message)
                     if param is not None:
                         self.sLoadedCfgError = f"Required parameter {param[0]} is missing in configuration file '{self.sTestCfgFile}'. \
-JSON schema validation failed!\n"
+JSON schema validation failed!"
                     else:
                         self.sLoadedCfgError = f"Required parameter {error.message} is missing in configuration file '{self.sTestCfgFile}'. \
-JSON schema validation failed!\n"
+JSON schema validation failed!"
                 else:
                     errParam = error.path.pop()
-                    self.sLoadedCfgError = f"Parameter '{errParam}' with invalid value found in JSON configuration file! \n" + \
-                                 f"          {error.message}\n"
+                    self.sLoadedCfgError = f"Parameter '{errParam}' with invalid value found in JSON configuration file! Reason: {error.message}"
                 logger.error(self.sLoadedCfgError)
                 BuiltIn().unknown(self.sLoadedCfgError)
 
@@ -497,14 +428,7 @@ JSON schema validation failed!\n"
         except:
             pass
 
-        # try:
-        #     del oJsonCfgData['preprocessor']['definitions']
-        # except:
-        #     pass
-
-        dotdictObj = CConfig.CJsonDotDict()
-        jsonDotdict = dotdictObj.dotdictConvert(oJsonCfgData)
-        del dotdictObj
+        jsonDotdict = DotDict(oJsonCfgData)
         BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
 
         self.bConfigLoaded = True
@@ -536,17 +460,13 @@ This method set RobotFramework AIO global variable from config object.
         k = key
         v = value
         if isinstance(v, dict):
-            dotdictObj = CConfig.CJsonDotDict()
-            jsonDotdict = dotdictObj.dotdictConvert(v)
-            del dotdictObj
+            jsonDotdict = DotDict(v)
             BuiltIn().set_global_variable(f"${{{k.strip()}}}", jsonDotdict)
         elif isinstance(v, list):
             tmpList = []
             for item in v:
                 if isinstance(item, dict):
-                    dotdictObj = CConfig.CJsonDotDict()
-                    jsonDotdict = dotdictObj.dotdictConvert(item)
-                    del dotdictObj
+                    jsonDotdict = DotDict(item)
                     tmpList.append(jsonDotdict)
                 else:
                     tmpList.append(item)
@@ -566,27 +486,21 @@ This method updates preprocessor and global params to global variable of RobotFr
 
 * No return variable
         '''
-        # try:
-        #     for k,v in self.oConfigParams['preprocessor']['definitions'].items():
-        #         if k in self.lBuitInVariables:
-        #             continue
-        #         try:
-        #             self.__setGlobalVariable(k, v)
-        #         except:
-        #             continue
-        # except:
-        #     pass
-
-        try:
+        varNamePattern = r'^[a-zA-Z_][a-zA-Z0-9_]*$'
+        lReservedKeyword = ['Settings', 'Variables', 'Keywords', 'Comments', 'Documentation', 'Metadata']
+        if 'params' in self.oConfigParams and 'global' in self.oConfigParams['params']:
             for k,v in self.oConfigParams['params']['global'].items():
+                if not re.match(varNamePattern, k) or k in lReservedKeyword:
+                    CConfig.bLoadedCfg = False
+                    CConfig.sLoadedCfgError = f"Parameter '{k}' is invalid variable name or conflicts with Robot reserved keywords. \
+Variable names in Robot Framework must start with a letter or underscore, followed by letters, digits, or underscores."
+                    BuiltIn().unknown()
                 if k in self.lBuitInVariables:
                     continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except:
                     continue
-        except:
-            pass
 
     def __del__(self):
         '''
@@ -614,7 +528,6 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
 
 * No return variable
         '''
-
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
@@ -622,23 +535,21 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = ''
             for item in str(error).split(': \''):
-                CConfig.sLoadedCfgError += f"{item}\n                  "
-            logger.error(f"Loading of JSON configuration file failed! \n          Reason: {CConfig.sLoadedCfgError}\n")
+                CConfig.sLoadedCfgError += f"'{item}', "
+            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
             return False
-        sListOfVariants = '\n'
+        sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
-            sListOfVariants = sListOfVariants + f"            - '{item}' \n"
+            sListOfVariants = sListOfVariants + f"'{item}', "
         if not re.match(r'^[a-zA-Z0-9.\u0080-\U0010FFFF\_\-\:@\$]+$', self.sConfigName):
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                      f"          The variant name '{self.sConfigName}' is invalid. \n" + \
-                                      f"          Please find the suitable variant in this list: {sListOfVariants}\n"
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The variant name '{self.sConfigName}' \
+is invalid. Please find the suitable variant in this list: {sListOfVariants}"
             logger.error(CConfig.sLoadedCfgError)
             return False
 
         if self.sConfigName not in oSuiteConfig:
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                     f"          The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}' \n" + \
-                                     f"          Please find the suitable variant in this list: {sListOfVariants}\n"
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The variant '{self.sConfigName}' \
+is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'. Please find the suitable variant in this list: {sListOfVariants}"
             logger.error(CConfig.sLoadedCfgError)
             return False
 
@@ -646,15 +557,13 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                     "          The 'name' or 'path' property is not defined for the variant" + \
-                                    f"'{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'\n"
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The 'name' or 'path' property \
+is not defined for the variant '{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
             return False
         if self.sTestCfgFile.strip() == '':
-            CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                      f"          The configuration file name of variant '{self.sConfigName}' " + \
-                                      f"must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'\n"
+            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The configuration file name of \
+variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'"
             logger.error(CConfig.sLoadedCfgError)
             return False
 
@@ -676,8 +585,8 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    CConfig.sLoadedCfgError = "Testsuite management - Loading configuration level 2 failed! \n" + \
-                                             f"          Could not find out config directory: '{sTestCfgDirStart}'"
+                    CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \
+Could not find out config directory: '{sTestCfgDirStart}'"
                     logger.error(CConfig.sLoadedCfgError)
                     return False
 
