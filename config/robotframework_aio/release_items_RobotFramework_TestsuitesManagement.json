@@ -54,5 +54,17 @@
 * extension of selftest                 
 "
                              ]
-                 }
+                 },
+                 {
+                  "0.11." : [
+"
+* Remove line breaks within logged messages
+* Optimize the local configuration loading method
+* Add naming convention check for parameter names
+
+  All parameter names under **'params' : { 'global': { ... }}** in the configuration file 
+  are checked against the variable name rules of Robot Framework
+"
+                            ]
+                }
 }
