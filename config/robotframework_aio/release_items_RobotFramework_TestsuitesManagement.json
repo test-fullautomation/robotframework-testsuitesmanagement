@@ -64,6 +64,33 @@
 
   All parameter names under **'params' : { 'global': { ... }}** in the configuration file 
   are checked against the variable name rules of Robot Framework
+
+* Improve the handling duplicated parameters in the configuration file:
+
+  **Example:**
+
+    .. code-block::
+
+       The content of the configuration file:
+       {
+         ...
+         \"params\" : {
+               \"global\" : {
+                  \"var1\"                : 1,
+                  \"var2\"                : 2,
+                  \"var11\"               : ${params.global.var1},
+                  \"var21\"               : ${params.global.var2},
+                  ${params.global.var1} : 10,
+                  ${params.global.var2} : 20
+               }
+         }
+         ...
+       }
+       The values of these variables while executing Robot are:
+         ${var1} = 10
+         ${var2} = 20
+         ${var11} = 1
+         ${var21} = 2
 "
                             ]
                 }
