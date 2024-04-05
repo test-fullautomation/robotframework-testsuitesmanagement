@@ -78,8 +78,8 @@
               \"var2\"  : 2,
               \"var11\" : ${params.global.var1},
               \"var21\" : ${params.global.var2},
-                var1    : 10,
-                var2    : 20
+              \"var1\"    : 10,
+              \"var2\"    : 20
             }
       }
       ...
