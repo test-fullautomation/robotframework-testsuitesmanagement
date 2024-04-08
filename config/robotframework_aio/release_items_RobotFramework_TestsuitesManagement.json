@@ -66,29 +66,22 @@
 
 * Improved handling of duplicated parameters in configuration files:
 
-  In following example different values are assigned to the same parameter several times. It can be seen that the last assignment is the valid one:
+  In following example different values are assigned to the same parameter several times. It can be seen that 
+  the last assignment is the valid one. Previously assigned values will be overwritten. Please make sure to add
+  the full scope in case you refer to a dictionary key inside this dictionary:
 
   | ``\u007b``
-  |    ``...``
   |    ``\"params\" : \u007b``
   |         ``\"global\" : \u007b``
   |              ``\"var1\" : 1,``
   |              ``\"var2\" : 2,``
-  |              ``\"var11\" : $\u007bparams.global.var1\u007d,``
-  |              ``\"var21\" : $\u007bparams.global.var2\u007d,``
-  |              ``\"var1\" : 10,``
-  |              ``\"var2\" : 20``
-  |              ``\u007d``
+  |              ``\"var1\" : $\u007bparams.global.var2\u007d,``
+  |              ``\"var2\" : 3``
+  |         ``\u007d``
   |    ``\u007d``
-  |    ``...``
   | ``\u007d``
 
-  Result:
-
-  | ``$\u007bvar1\u007d = 10``
-  | ``$\u007bvar2\u007d = 20``
-  | ``$\u007bvar11\u007d = 1``
-  | ``$\u007bvar21\u007d = 2``
+  Finally, the value of ``var1`` is 2 and the value of ``var2`` is 3.
 "
                             ]
                 }
