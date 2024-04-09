@@ -54,41 +54,34 @@
 * extension of selftest                 
 "
                              ]
-                 },
-                 {
+                 ,
                   "0.11." : [
 "
-* Remove line breaks within logged messages
-* Optimize the local configuration loading method
-* Add naming convention check for parameter names
+* Removed line breaks within logged messages
+* Optimized the local configuration loading method
+* Added a naming convention check for parameter names
 
-  All parameter names under **'params' : { 'global': { ... }}** in the configuration file 
-  are checked against the variable name rules of Robot Framework
+  All parameter names under ``'params' : \u007b 'global': \u007b ... \u007d\u007d`` in the configuration file 
+  are checked against the variable name rules of Robot Framework.
 
-* Improve the handling duplicated parameters in the configuration file:
+* Improved handling of duplicated parameters in configuration files:
 
-  **Example:**
+  In following example different values are assigned to the same parameter several times. It can be seen that 
+  the last assignment is the valid one. Previously assigned values will be overwritten. Please make sure to add
+  the full scope in case you refer to a dictionary key inside this dictionary:
 
-    The content of the configuration file:
-    {
-      ...
-      \"params\" : {
-            \"global\" : {
-              \"var1\"  : 1,
-              \"var2\"  : 2,
-              \"var11\" : ${params.global.var1},
-              \"var21\" : ${params.global.var2},
-              \"var1\"    : 10,
-              \"var2\"    : 20
-            }
-      }
-      ...
-    }
-    The values of these variables while executing Robot are:
-      ${var1} = 10
-      ${var2} = 20
-      ${var11} = 1
-      ${var21} = 2
+  | ``\u007b``
+  |    ``\"params\" : \u007b``
+  |         ``\"global\" : \u007b``
+  |              ``\"var1\" : 1,``
+  |              ``\"var2\" : 2,``
+  |              ``\"var1\" : $\u007bparams.global.var2\u007d,``
+  |              ``\"var2\" : 3``
+  |         ``\u007d``
+  |    ``\u007d``
+  | ``\u007d``
+
+  Finally, the value of ``var1`` is 2 and the value of ``var2`` is 3.
 "
                             ]
                 }
