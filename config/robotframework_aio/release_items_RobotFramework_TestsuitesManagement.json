@@ -82,6 +82,15 @@
   | ``\u007d``
 
   Finally, the value of ``var1`` is 2 and the value of ``var2`` is 3.
+
+* Extended debugging support:
+
+  In case of JSON syntax errors in configuration files, the **Robot Framework** log files contain an extract of the JSON content nearby the position, where the error occurred.
+  Line breaks in JSON content are replaced by '``\\n``' in log output.
+
+  | ``ERROR - Expecting ',' delimiter: line 10 column 1 (char 246)``
+  | ``ERROR - Nearby: '... arams\" : \u007b\\n              \"global\": \u007b\\n\"param1\" : 1\\n\"param2\" : 2\\n        ...'``
+
 "
                             ]
                 }

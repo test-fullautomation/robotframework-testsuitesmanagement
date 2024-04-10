@@ -328,9 +328,16 @@ This loadCfg method uses to load configuration's parameters from json files.
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = ''
-            for item in str(error).split(': \''):
-                CConfig.sLoadedCfgError += f"{item}\n                  "
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            # -------------------------------------------------------------------------------------------
+            # * original version:
+            # for item in str(error).split(': \''):
+            #     CConfig.sLoadedCfgError += f"{item}\n                  "
+            # logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            #
+            # * alternative version:
+            for line in str(error).splitlines():
+                logger.error(f"{line}") # outcome: every single line starts with timestamp and log level
+                CConfig.sLoadedCfgError += f"{line}\n                  " # to be compatible with original version
             BuiltIn().unknown('Loading of JSON configuration file failed!')
             raise Exception
 
@@ -534,9 +541,18 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         except Exception as error:
             CConfig.bLoadedCfg = False
             CConfig.sLoadedCfgError = ''
-            for item in str(error).split(': \''):
-                CConfig.sLoadedCfgError += f"'{item}', "
-            logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            # -------------------------------------------------------------------------------------------
+            # * original version:
+            # for item in str(error).split(': \''):
+            #     CConfig.sLoadedCfgError += f"'{item}', "
+            # logger.error(f"Loading of JSON configuration file failed! Reason: {CConfig.sLoadedCfgError}")
+            #
+            # * alternative version:
+            for line in str(error).splitlines():
+                logger.error(f"{line}") # outcome: every single line starts with timestamp and log level
+                CConfig.sLoadedCfgError += f"{line}\n                  " # to be compatible with original version / but when the error is already logged, for what do we need to store the error message in sLoadedCfgError?
+            logger.error('Loading of JSON configuration file failed!')
+            # -------------------------------------------------------------------------------------------
             return False
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
