@@ -22,8 +22,8 @@
 #
 # **************************************************************************************************************
 #
-VERSION      = "0.2.0"
-VERSION_DATE = "19.03.2024"
+VERSION      = "0.2.1"
+VERSION_DATE = "10.04.2024"
 #
 # **************************************************************************************************************
 
@@ -325,7 +325,7 @@ class CExecutor():
       # error indicators, used while parsing relevant content from Robot Framework debug log file and used to define the text color
       self.__listErrorIndicators = ["ERROR", "Error", "error", "UNKNOWN", "unknown", "FAIL", "failed", "AssertionError",
                                     "Expecting", "expecting", "Expected", "expected", "Unexpected", "unexpected", "Invalid", "invalid", "Reason",
-                                    "not found", "have to be", "does not support", "No closing quotation", "Missing", "missing"]
+                                    "not found", "have to be", "does not support", "No closing quotation", "Missing", "missing", "Nearby"]
 
       # filter strings, used while parsing relevant content from Robot Framework debug log file
       self.__sInfoIndicators  = ";".join(self.__listInfoIndicators)
