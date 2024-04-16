@@ -25,7 +25,8 @@ Parameter\s'.+'\swith\sinvalid\svalue\sfound\sin\sJSON\sconfiguration\sfile
 Running\swithout\sRobotFramework\sAIO\sversion\scheck!
 RobotFramework\sAIO\sversion\scheck\spassed!
 Could\snot\sparse\sconfiguration\sJSON\sschema\sfile
-Loading\sconfiguration\slevel\s\d\sfailed
+(Loading\sconfiguration\slevel\s)(\d+)(\sfailed)
+Loading\sof\sJSON\sconfiguration\sfile\sfailed
 (Did\snot\sfind\sconfiguration\sfile:).+(I_AM_NOT_EXISTING_CONFIG_FOLDER).+(tsm-test_.+\.jsonp)
 (Did\snot\sfind\sconfiguration\sfile:).+(I_AM_NOT_EXISTING_FILE\.jsonp)
 Not\sable\sto\sget\sa\sconfiguration\sfor\svariant\s.+
@@ -51,3 +52,6 @@ Exception\soccurred
 (END\sTEARDOWN:)\s.+(Testcase\sTeardown)
 (START\sTEARDOWN:)\s.+(Testsuite\sTeardown)
 (END\sTEARDOWN:)\s.+(Testsuite\sTeardown)
+Nearby:\s'.+'
+In\sfile:
+Expecting\sproperty\sname\senclosed\sin\sdouble\squotes

@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20231201 15:09:49.183" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240416 10:44:11.510" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-07-Err-1" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-07-err-1.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants_err_1.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20231201 15:09:49.336" level="ERROR">Loading of JSON configuration file failed! 
-          Reason: JSON file: D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp
-Expecting property name enclosed in double quotes: line 6 column 3 (char 126)
-                  
-</msg>
-<msg timestamp="20231201 15:09:49.337" level="UNKNOWN">Loading configuration level 2 failed!</msg>
-<status status="UNKNOWN" starttime="20231201 15:09:49.317" endtime="20231201 15:09:49.338"/>
+<msg timestamp="20240416 10:44:11.668" level="ERROR">Expecting property name enclosed in double quotes: line 6 column 3 (char 126)</msg>
+<msg timestamp="20240416 10:44:11.669" level="ERROR">Nearby: '...             "path": "./config/"\n             },\n  I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg timestamp="20240416 10:44:11.670" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp'</msg>
+<msg timestamp="20240416 10:44:11.670" level="ERROR">Loading of JSON configuration file failed!</msg>
+<msg timestamp="20240416 10:44:11.671" level="UNKNOWN">Loading configuration level 2 failed!</msg>
+<status status="UNKNOWN" starttime="20240416 10:44:11.648" endtime="20240416 10:44:11.671"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-07-err-1" line="32">
 <doc>tsm-testfile-07-err-1</doc>
-<status status="UNKNOWN" starttime="20231201 15:09:49.338" endtime="20231201 15:09:49.338">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20240416 10:44:11.671" endtime="20240416 10:44:11.672">Parent suite setup unknown:
 Loading configuration level 2 failed!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20231201 15:09:49.343" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20231201 15:09:49.343" endtime="20231201 15:09:49.343"/>
+<msg timestamp="20240416 10:44:11.674" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240416 10:44:11.674" endtime="20240416 10:44:11.674"/>
 </kw>
-<status status="UNKNOWN" starttime="20231201 15:09:49.187" endtime="20231201 15:09:49.343">Suite setup unknown:
+<status status="UNKNOWN" starttime="20240416 10:44:11.514" endtime="20240416 10:44:11.674">Suite setup unknown:
 Loading configuration level 2 failed!</status>
 </suite>
 <statistics>
@@ -38,10 +37,9 @@ Loading configuration level 2 failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231201 15:09:49.336" level="ERROR">Loading of JSON configuration file failed! 
-          Reason: JSON file: D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp
-Expecting property name enclosed in double quotes: line 6 column 3 (char 126)
-                  
-</msg>
+<msg timestamp="20240416 10:44:11.668" level="ERROR">Expecting property name enclosed in double quotes: line 6 column 3 (char 126)</msg>
+<msg timestamp="20240416 10:44:11.669" level="ERROR">Nearby: '...             "path": "./config/"\n             },\n  I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg timestamp="20240416 10:44:11.670" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp'</msg>
+<msg timestamp="20240416 10:44:11.670" level="ERROR">Loading of JSON configuration file failed!</msg>
 </errors>
 </robot>
