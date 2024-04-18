@@ -22,8 +22,8 @@
 #
 # **************************************************************************************************************
 #
-VERSION      = "0.2.1"
-VERSION_DATE = "10.04.2024"
+VERSION      = "0.3.0"
+VERSION_DATE = "11.04.2024"
 #
 # **************************************************************************************************************
 
@@ -1743,6 +1743,786 @@ ${params.global.param} : ${params.global.param}
       sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
       sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
       listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${+}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${-}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${*}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${/}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${\\}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${&}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${$}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${%}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${#}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${~}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${?}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${ß}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${'}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${´}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${`}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${!}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${€}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${𠼭}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${{}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${}}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${[}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${]}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${(}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"key" : "${)}"}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"+"     : 1,
+"param" : ${+}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"-"     : 2,
+"param" : ${-}
+"""
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"*"     : 3,
+"param" : ${*}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"/"     : 4,
+"param" : ${/}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"\\"    : 5,
+"param" : ${\\}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"&"     : 6,
+"param" : ${&}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"$"     : 7,
+"param" : ${$}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"%"     : 8,
+"param" : ${%}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"#"     : 9,
+"param" : ${#}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"~"     : 10,
+"param" : ${~}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"?"     : 11,
+"param" : ${?}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"ß"     : 12,
+"param" : ${ß}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"'"     : 13,
+"param" : ${'}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"´"     : 14,
+"param" : ${´}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"`"     : 15,
+"param" : ${`}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"!"     : 16,
+"param" : ${!}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"€"     : 17,
+"param" : ${€}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"?"     : 18,
+"param" : ${?}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"{"     : 19,
+"param" : ${{}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"}"     : 20,
+"param" : ${}}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"["     : 21,
+"param" : ${[}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"]"     : 22,
+"param" : ${]}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"("     : 23,
+"param" : ${(}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+")"     : 24,
+"param" : ${)}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\\1" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\\C" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\n" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\\n" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\t" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
+      # --------------------------------------------------------------------------------------------------------------
+
+      sParamsGlobalDefinitions = """
+"param" : {"param\\t" : 1}
+"""
+
+      sRobotTestCode = """
+    rf.extensions.pretty_print    ${param}    [TSM-SNIPPET-TEST] {param}
+"""
+
+      sTestConfigFileCode = self.__GetTestConfigFileCode(sParamsGlobalDefinitions)
+      sRobotTestFileCode  = self.__GetRobotTestFileCode(sRobotTestCode)
+      listoftuplesCodeSnippets.append((sTestConfigFileCode, sRobotTestFileCode, sParamsGlobalDefinitions))
+
 
       # --------------------------------------------------------------------------------------------------------------
 
