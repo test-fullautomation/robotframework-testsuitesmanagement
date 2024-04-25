@@ -2,7 +2,7 @@
 20240416 11:10:22.708 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
 20240416 11:10:22.712 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240416 11:10:22.758 - ERROR - The variable '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
+20240416 11:10:22.758 - ERROR - The parameter '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
 20240416 11:10:22.759 - UNKNOWN - Loading of JSON configuration file failed!
 20240416 11:10:22.759 - INFO - +- END SETUP: tm.Testsuite Setup (47)
 ------------------------------------------------------------------------------
