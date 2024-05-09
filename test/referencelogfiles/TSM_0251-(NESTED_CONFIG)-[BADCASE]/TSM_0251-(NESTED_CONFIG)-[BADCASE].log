@@ -1,18 +1,18 @@
 ==============================================================================
-20240508 12:55:37.465 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20240509 04:16:22.171 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20240508 12:55:37.472 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240508 12:55:37.520 - ERROR - The parameter '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
-20240508 12:55:37.521 - UNKNOWN - Loading of JSON configuration file failed!
-20240508 12:55:37.521 - INFO - +- END SETUP: tm.Testsuite Setup (49)
+20240509 04:16:22.171 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 04:16:22.218 - ERROR - The parameter '${params}['global']['dTestDict']['I-am-not-existing']' is not available!
+20240509 04:16:22.218 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 04:16:22.218 - INFO - +- END SETUP: tm.Testsuite Setup (47)
 ------------------------------------------------------------------------------
-20240508 12:55:37.521 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20240509 04:16:22.218 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20240508 12:55:37.524 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20240509 04:16:22.218 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20240508 12:55:37.525 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240508 12:55:37.525 - INFO - testsuite_teardown: Will be implemented later
-20240508 12:55:37.525 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240509 04:16:22.218 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 04:16:22.218 - INFO - testsuite_teardown: Will be implemented later
+20240509 04:16:22.218 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240508 12:55:37.527 - INFO - + END SUITE: Tsm-Testfile-02 (188)
+20240509 04:16:22.218 - INFO - + END SUITE: Tsm-Testfile-02 (141)
 ==============================================================================

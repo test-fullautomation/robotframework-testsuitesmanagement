@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 12:48:42.501" rpa="false" schemaversion="3">
-<suite id="s1" name="Tsm-Testfile-02" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:16.137" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-02" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230531 12:48:42.650" level="INFO">Running with configuration level 1</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">RobotFramework AIO version check passed!</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">CfgFile Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.jsonp'</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">Local config file: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230531 12:48:42.650" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20230531 12:48:42.650" endtime="20230531 12:48:42.651"/>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Running with configuration level 1</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Loaded configuration file 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant2.jsonp'</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Suite Path: 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Local config file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench1.jsonp'</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.262"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 12:48:42.652" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230531 12:48:42.652" endtime="20230531 12:48:42.652"/>
+<msg timestamp="20240509 04:16:16.262" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.262"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 12:48:42.653" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_variant2'</msg>
-<status status="PASS" starttime="20230531 12:48:42.652" endtime="20230531 12:48:42.653"/>
+<msg timestamp="20240509 04:16:16.262" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_variant2'</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.262"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 12:48:42.654" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 12:48:42.654" endtime="20230531 12:48:42.654"/>
+<msg timestamp="20240509 04:16:16.262" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.262"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 12:48:42.659" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 12:48:42.659" endtime="20230531 12:48:42.659"/>
+<msg timestamp="20240509 04:16:16.262" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'variant2' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.262"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 12:48:42.661" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the 'bench1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 12:48:42.661" endtime="20230531 12:48:42.661"/>
+<msg timestamp="20240509 04:16:16.278" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the 'bench1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.278"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 12:48:42.664" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 12:48:42.663" endtime="20230531 12:48:42.664"/>
+<msg timestamp="20240509 04:16:16.278" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:16.278" endtime="20240509 04:16:16.278"/>
 </kw>
 <doc>tsm-testfile-02</doc>
-<status status="PASS" starttime="20230531 12:48:42.651" endtime="20230531 12:48:42.664"/>
+<status status="PASS" starttime="20240509 04:16:16.262" endtime="20240509 04:16:16.278"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 12:48:42.666" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 12:48:42.665" endtime="20230531 12:48:42.666"/>
+<msg timestamp="20240509 04:16:16.278" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:16.278" endtime="20240509 04:16:16.278"/>
 </kw>
-<meta name="bundle_version">0.8.0.0</meta>
-<meta name="machine">HI7-C-0005Y</meta>
+<meta name="bundle_version">0.11.0.5</meta>
+<meta name="machine">fv-az1455-788</meta>
 <meta name="project">tsm-test_config_variant2</meta>
-<meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
+<meta name="tester"/>
+<meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="PASS" starttime="20230531 12:48:42.506" endtime="20230531 12:48:42.666"/>
+<status status="PASS" starttime="20240509 04:16:16.137" endtime="20240509 04:16:16.278"/>
 </suite>
 <statistics>
 <total>
