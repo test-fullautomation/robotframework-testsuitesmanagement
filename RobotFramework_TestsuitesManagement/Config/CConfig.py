@@ -253,7 +253,10 @@ This loadCfg method uses to load configuration's parameters from json files.
                     self.bLoadedCfg = False
                     self.sLoadedCfgLog['error'].append(f"Not able to get a configuration for variant '{self.sConfigName}' \
 because of a variant configuration file is not available.")
-                    self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
+                    if self.sTestSuiteCfg != '':
+                        self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestSuiteCfg}'")
+                    elif self.sTestCfgFile != '':
+                        self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                     self.sLoadedCfgLog['info'].append("---> A variant configuration file must be available when executing \
 robot with configuration level 2.")
                     self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
@@ -343,7 +346,7 @@ to the same feature (the variant selection).")
         except Exception as error:
             self.bLoadedCfg = False
             for line in str(error).splitlines():
-                self.sLoadedCfgLog['error'].append(f"{line}")
+                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestCfgFile path info already present in error
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
 
@@ -557,8 +560,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         except Exception as error:
             self.bLoadedCfg = False
             for line in str(error).splitlines():
-                self.sLoadedCfgLog['error'].append(f"{line}")
-            self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestSuiteCfg}'")
+                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestSuiteCfg path info already present in error
             return False
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):

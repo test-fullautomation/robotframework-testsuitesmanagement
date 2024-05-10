@@ -1,18 +1,20 @@
 ==============================================================================
-20240509 04:16:26.627 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20240509 15:56:55.502 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20240509 04:16:26.627 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240509 04:16:26.658 - ERROR - Parameter 'Minimum_version' with invalid value found in JSON configuration file! Reason: '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
-20240509 04:16:26.658 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:26.658 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20240509 15:56:55.502 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 15:56:55.533 - ERROR - Parameter 'Minimum_version' with invalid value found in JSON configuration file!
+20240509 15:56:55.533 - ERROR - Reason: '   ' does not match '^\\d+\\.\\d+\\.\\d+$'
+20240509 15:56:55.533 - ERROR - In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'
+20240509 15:56:55.533 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 15:56:55.533 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20240509 04:16:26.658 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20240509 15:56:55.533 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:26.658 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20240509 15:56:55.533 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20240509 04:16:26.658 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:26.658 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:26.658 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240509 15:56:55.533 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 15:56:55.533 - INFO - testsuite_teardown: Will be implemented later
+20240509 15:56:55.533 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:26.658 - INFO - + END SUITE: Tsm-Testfile-02 (125)
+20240509 15:56:55.533 - INFO - + END SUITE: Tsm-Testfile-02 (141)
 ==============================================================================

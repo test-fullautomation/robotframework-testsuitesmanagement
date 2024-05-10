@@ -1,18 +1,20 @@
 ==============================================================================
-20240509 04:16:25.892 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20240509 15:56:54.736 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20240509 04:16:25.892 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240509 04:16:25.923 - ERROR - Parameter 'Maximum_version' with invalid value found in JSON configuration file! Reason: 'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-20240509 04:16:25.923 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:25.923 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20240509 15:56:54.752 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 15:56:54.784 - ERROR - Parameter 'Maximum_version' with invalid value found in JSON configuration file!
+20240509 15:56:54.784 - ERROR - Reason: 'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
+20240509 15:56:54.784 - ERROR - In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
+20240509 15:56:54.784 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 15:56:54.784 - INFO - +- END SETUP: tm.Testsuite Setup (32)
 ------------------------------------------------------------------------------
-20240509 04:16:25.923 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20240509 15:56:54.784 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:25.923 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20240509 15:56:54.784 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20240509 04:16:25.923 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:25.923 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:25.923 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240509 15:56:54.784 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 15:56:54.784 - INFO - testsuite_teardown: Will be implemented later
+20240509 15:56:54.784 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:25.923 - INFO - + END SUITE: Tsm-Testfile-02 (125)
+20240509 15:56:54.784 - INFO - + END SUITE: Tsm-Testfile-02 (142)
 ==============================================================================
