@@ -93,5 +93,11 @@
 
 "
                             ]
+                 ,
+                 "0.12." : [
+"
+* Improved the error logging method when loading configuration fails.
+"
+                           ]
                 }
 }

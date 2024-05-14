@@ -64,10 +64,12 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                 for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                    logger.error(errorMsg)
+                    if errorMsg.strip() != '':
+                        logger.error(errorMsg)
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                    logger.error(errorMsg)
+                for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                    if infoMsg.strip() != '':
+                        logger.error(infoMsg)
             BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
             return
         if not TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
@@ -83,10 +85,12 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             except:
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                     for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                        logger.error(errorMsg)
+                        if errorMsg.strip() != '':
+                            logger.error(errorMsg)
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                    for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                        logger.error(errorMsg)
+                    for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                        if infoMsg.strip() != '':
+                            logger.error(infoMsg)
                 BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
         if TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
