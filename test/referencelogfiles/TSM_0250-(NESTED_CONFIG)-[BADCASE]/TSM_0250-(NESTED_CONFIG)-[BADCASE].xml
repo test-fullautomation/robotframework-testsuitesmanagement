@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240416 11:08:44.179" rpa="false" schemaversion="4">
-<suite id="s1" name="Tsm-Testfile-03" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-03.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:21.358" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-03" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-03.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20240416 11:08:44.358" level="ERROR">Cyclic imported json file 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'!</msg>
-<msg timestamp="20240416 11:08:44.359" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/import.cyclic/tsm-test_config_cyclic.3.jsonp'</msg>
-<msg timestamp="20240416 11:08:44.360" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/tsm-test_config_cyclic.2.jsonp'</msg>
-<msg timestamp="20240416 11:08:44.360" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'</msg>
-<msg timestamp="20240416 11:08:44.361" level="UNKNOWN">Loading of JSON configuration file failed!</msg>
-<status status="UNKNOWN" starttime="20240416 11:08:44.314" endtime="20240416 11:08:44.361"/>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">Cyclic imported json file 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'!</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/import.cyclic/tsm-test_config_cyclic.3.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/tsm-test_config_cyclic.2.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:21.452" endtime="20240509 04:16:21.483"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-03" line="33">
 <doc>tsm-testfile-03</doc>
-<status status="UNKNOWN" starttime="20240416 11:08:44.361" endtime="20240416 11:08:44.362">Parent suite setup unknown:
-Loading of JSON configuration file failed!</status>
+<status status="UNKNOWN" starttime="20240509 04:16:21.483" endtime="20240509 04:16:21.483">Parent suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20240416 11:08:44.364" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20240416 11:08:44.364" endtime="20240416 11:08:44.364"/>
+<msg timestamp="20240509 04:16:21.483" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:21.483" endtime="20240509 04:16:21.483"/>
 </kw>
-<status status="UNKNOWN" starttime="20240416 11:08:44.183" endtime="20240416 11:08:44.364">Suite setup unknown:
-Loading of JSON configuration file failed!</status>
+<status status="UNKNOWN" starttime="20240509 04:16:21.358" endtime="20240509 04:16:21.483">Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -37,9 +37,9 @@ Loading of JSON configuration file failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240416 11:08:44.358" level="ERROR">Cyclic imported json file 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'!</msg>
-<msg timestamp="20240416 11:08:44.359" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/import.cyclic/tsm-test_config_cyclic.3.jsonp'</msg>
-<msg timestamp="20240416 11:08:44.360" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/tsm-test_config_cyclic.2.jsonp'</msg>
-<msg timestamp="20240416 11:08:44.360" level="ERROR">In file: 'D:/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">Cyclic imported json file 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'!</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/import.cyclic/tsm-test_config_cyclic.3.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/tsm-test_config_cyclic.2.jsonp'</msg>
+<msg timestamp="20240509 04:16:21.483" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'</msg>
 </errors>
 </robot>

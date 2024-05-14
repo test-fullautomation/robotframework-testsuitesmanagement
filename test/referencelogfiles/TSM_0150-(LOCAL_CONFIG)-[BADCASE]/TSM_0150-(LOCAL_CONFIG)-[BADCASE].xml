@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230616 16:33:18.379" rpa="false" schemaversion="3">
-<suite id="s1" name="Tsm-Testfile-01" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:18.326" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-01" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230616 16:33:18.485" level="ERROR">Loading local config failed with file: D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.jsonp 
-          The mandatory "WelcomeString" element of configuration file is found in local config file 
-          Wrong local config file was chosen, please check!!!</msg>
-<msg timestamp="20230616 16:33:18.485" level="UNKNOWN">Loading local config failed!</msg>
-<status status="UNKNOWN" starttime="20230616 16:33:18.482" endtime="20230616 16:33:18.486"/>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">Loading local config failed with file: D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
+<msg timestamp="20240509 04:16:18.443" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:18.420" endtime="20240509 04:16:18.443"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20230616 16:33:18.486" endtime="20230616 16:33:18.487">Parent suite setup unknown:
-Loading local config failed!</status>
+<status status="UNKNOWN" starttime="20240509 04:16:18.443" endtime="20240509 04:16:18.443">Parent suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230616 16:33:18.489" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230616 16:33:18.489" endtime="20230616 16:33:18.489"/>
+<msg timestamp="20240509 04:16:18.443" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:18.443" endtime="20240509 04:16:18.443"/>
 </kw>
-<status status="UNKNOWN" starttime="20230616 16:33:18.382" endtime="20230616 16:33:18.489">Suite setup unknown:
-Loading local config failed!</status>
+<status status="UNKNOWN" starttime="20240509 04:16:18.326" endtime="20240509 04:16:18.443">Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -35,8 +35,8 @@ Loading local config failed!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230616 16:33:18.485" level="ERROR">Loading local config failed with file: D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_variant1.jsonp 
-          The mandatory "WelcomeString" element of configuration file is found in local config file 
-          Wrong local config file was chosen, please check!!!</msg>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">Loading local config failed with file: D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg timestamp="20240509 04:16:18.443" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
 </errors>
 </robot>

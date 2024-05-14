@@ -1,4 +1,4 @@
-% Copyright 2020-2023 Robert Bosch GmbH
+% Copyright 2020-2024 Robert Bosch GmbH
 
 % Licensed under the Apache License, Version 2.0 (the "License");
 % you may not use this file except in compliance with the License.
@@ -63,6 +63,9 @@ This content produces the following output:
  'param_04': ['A', 'B', 'C'],
  'param_05': {'A': 1, 'B': 2, 'C': 3}}
 \end{pythonlog}
+
+This output is of a certain dictionary type (named \textit{dotdict}) that allows to access elements also with an object oriented dot notation
+(details about this format can be found in section \hyperref[dotdict-notation]{dotdict notation}).
 
 % --------------------------------------------------------------------------------------------------------------
 
@@ -231,6 +234,8 @@ JSON files are imported with the key \pcode{"[import]"}. The value of this key i
 
 A JSON file can contain more than one import. Imports can be nested: An imported JSON file can import further JSON files also.
 
+% --------------------------------------------------------------------------------------------------------------
+
 \newpage
 
 \textbf{Outcome:}
@@ -309,6 +314,8 @@ This is now the content of the JSON files:
    "common_param_2" : "common componentB value 2"
 }
 \end{pythoncode}
+
+% --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
@@ -460,9 +467,11 @@ Now the following questions need to be answered:
 We introduce another JSON file \plog{componentB.2.jsonp} in which we import the JSON file \plog{componentB.jsonp}.
 In this file we also add content to work with simple and composite data types to answer the questions above.
 
+% --------------------------------------------------------------------------------------------------------------
+
 \newpage
 
-This is the initial content of \plog{componentB.2.jsonp}:
+We introduce a new file \plog{componentB.2.jsonp} that imports \plog{componentB.jsonp} and creates new parameters based on already existing parameters:
 
 \begin{pythoncode}
 {
@@ -488,16 +497,6 @@ This is the initial content of \plog{componentB.2.jsonp}:
 \end{pythoncode}
 
 \vspace{2ex}
-
-\textbf{The rules for accessing parameters are:}
-
-\begin{itemize}
-   \item Existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
-   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required any more
-         to encapsulate this expression in quotes.
-   \item Without quotes, the dollar operator keeps the data type of the referenced parameter. If you use quotes, the value of the used parameter
-         will be of type \pcode{str}.
-\end{itemize}
 
 \textbf{Outcome:}
 
@@ -525,25 +524,98 @@ This is the initial content of \plog{componentB.2.jsonp}:
  'string_val_b': 'ABC'}
 \end{pythonlog}
 
-Let's take a deeper look at the following line:
+\vspace{2ex}
+
+\textbf{The rules for accessing parameters are:}
+
+\begin{itemize}
+   \item Existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
+   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required any more
+         to encapsulate this expression in quotes.
+   \item Without quotes, the dollar operator keeps the data type of the referenced parameter. If you use quotes, the value of the used parameter
+         will be converted to type \pcode{str}. This implicit string conversion is limited to parameters of simple data types like integers and floats.
+         Composite data types like lists and dictionaries cannot be used for that.
+\end{itemize}
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newpage
+
+\textbf{In more detail:}
+
+\vspace{2ex}
+
+The dollar operator keeps the data type of the referenced parameter. In case of \pcode{int_val} is of type \pcode{int},
+also \pcode{int_val_b} is of type \pcode{int}:
 
 \begin{pythoncode}
 "int_val_b"            : ${int_val},
 \end{pythoncode}
 
-Like mentioned in the rules above, the dollar operator keeps the data type of the referenced parameter:
-In case of \pcode{int_val} is of type \pcode{int}, also \pcode{int_val_b} will be of type \pcode{int}.
-
-\newpage
-
-Like mentioned in the rules above, it is not required any more to encapsulate dollar operator expressions at the right hand side of the
-colon in quotes. But nevertheless it is possible to use quotes. In case of:
+It is not required any more to encapsulate dollar operator expressions at the right hand side of the colon in quotes.
+But nevertheless, it is possible to use quotes. In case of:
 
 \begin{pythoncode}
 "int_val_b"            : "${int_val}",
 \end{pythoncode}
 
-the parameter \pcode{int_val_b} is of type \pcode{string}.
+the parameter \pcode{int_val_b} is of type \pcode{str}.
+
+\vspace{2ex}
+
+Further content can be added between the double quotes. This can be used to create composite strings:
+
+\begin{pythoncode}
+"str_val"    : "ABC",
+"int_val"    : 1,
+"float_val"  : 2.3,
+"bool_val"   : True,
+"none_val"   : None,
+"list_val"   : [1,2,3],
+"dict_val"   : {"A" : "B"},
+"newparam1" : "prefix_${str_val}_suffix",
+"newparam2" : "prefix_${int_val}_suffix",
+"newparam3" : "prefix_${float_val}_suffix",
+"newparam4" : "prefix_${bool_val}_suffix",
+"newparam5" : "prefix_${none_val}_suffix"
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+\vspace{2ex}
+
+\begin{pythonlog}
+{'bool_val': True,
+ 'dict_val': {'A': 'B'},
+ 'float_val': 2.3,
+ 'int_val': 1,
+ 'list_val': [1, 2, 3],
+ 'newparam1': 'prefix_ABC_suffix',
+ 'newparam2': 'prefix_1_suffix',
+ 'newparam3': 'prefix_2.3_suffix',
+ 'newparam4': 'prefix_True_suffix',
+ 'newparam5': 'prefix_None_suffix',
+ 'none_val': None,
+ 'str_val': 'ABC'}
+\end{pythonlog}
+
+\vspace{2ex}
+
+Using composite data types inside strings causes errors:
+
+\begin{pythoncode}
+"newparam6" : "prefix_${listval}_suffix"
+\end{pythoncode}
+
+or:
+
+\begin{pythoncode}
+"newparam7" : "prefix_${dictval}_suffix"
+\end{pythoncode}
+
+\textbf{TODO:} \href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/249}{Parameter substitution needs to be limited}
 
 \vspace{2ex}
 
@@ -611,6 +683,8 @@ The single elements of the list and the dictionary are updated, all other elemen
  'componentB_param_2': {'componentB_key_2_1': 'componentB value 2.1',
                         'componentB_key_2_2': 'componentB value 2.2'}}
 \end{pythonlog}
+
+% --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
@@ -682,6 +756,8 @@ In all code examples above the indices of lists and the key names of dictionarie
  'tmp2': 'A'}
 \end{pythonlog}
 
+% --------------------------------------------------------------------------------------------------------------
+
 \newpage
 
 \textbf{Meaning of single quotes in square brackets}
@@ -689,8 +765,8 @@ In all code examples above the indices of lists and the key names of dictionarie
 Single quotes are used to convert the content inside to a string.
 
 \begin{itemize}
-   \item In case of the parameter \pcode{param} is of type string, the expressions \pcode{[$\{param\}]} and \pcode{['$\{param\}']} have the same outcome:
-         The content inside the square brackets is a string. The single quotes have no meaning in this case (because the parameter is already of type string).
+   \item In case of the parameter \pcode{param} is of type \pcode{str}, the expressions \pcode{[$\{param\}]} and \pcode{['$\{param\}']} have the same outcome:
+         The content inside the square brackets is a string. The single quotes have no meaning in this case (because the parameter is already of type \pcode{str}).
    \item In case of the parameter \pcode{param} is of type integer, the quotes in \pcode{['$\{param\}']} convert the integer value to a string.
          Without the quotes (\pcode{[$\{param\}]}), the content inside the square brackets is an integer.
 \end{itemize}
@@ -725,7 +801,7 @@ The last example in this section covers the following use case:
    \item Outcome is that finally only one single dictionary is used to access the parameters from all JSON files imported in the main JSON file.
 \end{itemize}
 
-To realize this, it is necessary to separate the initialization of the dictionary from all positions where keys are added to this dictionary.
+% --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
@@ -737,10 +813,7 @@ These are the JSON files:
 
 \begin{pythoncode}
 {
-   // initialization
-   "project_values" : {},
-   //
-   // add some common values
+   // define some common values
    ${project_values}['common_project_param_1'] : "common project value 1",
    ${project_values}['common_project_param_2'] : "common project value 2",
    //
@@ -758,7 +831,6 @@ These are the JSON files:
 \begin{pythoncode}
 {
    // parameters required for feature A
-   ${project_values}['featureA_params'] : {},
    ${project_values}['featureA_params']['featureA_param_1'] : "featureA param 1 value",
    ${project_values}['featureA_params']['featureA_param_2'] : "featureA param 2 value"
 }
@@ -771,7 +843,6 @@ These are the JSON files:
 \begin{pythoncode}
 {
    // parameters required for feature B
-   ${project_values}['featureB_params'] : {},
    ${project_values}['featureB_params']['featureB_param_1'] : "featureB param 1 value",
    ${project_values}['featureB_params']['featureB_param_2'] : "featureB param 2 value"
 }
@@ -784,29 +855,30 @@ These are the JSON files:
 \begin{pythoncode}
 {
    // parameters required for feature C
-   ${project_values}['featureC_params'] : {},
    ${project_values}['featureC_params']['featureC_param_1'] : "featureC param 1 value",
    ${project_values}['featureC_params']['featureC_param_2'] : "featureC param 2 value"
 }
 \end{pythoncode}
 
-\newpage
-
-\textbf{Explanation:}
-
 \vspace{2ex}
 
-Every \plog{feature*.jsonp} file refer to the dictionary inizialized within \plog{project.jsonp}.
+It is not required to start the code listed above, with dictionary initializations like
 
-Important is that the initialization \pcode{"project_values" : \{\},} happens at top level (\plog{project.jsonp}),
-and not within the imported files (\plog{feature*.jsonp}), otherwise follow up initializations would delete
-previously added keys of this dictionary!
+\begin{pythoncode}
+   "project_values" : {},
+   ${project_values}['featureA_params'] : {},
+   ${project_values}['featureB_params'] : {},
+   ${project_values}['featureC_params'] : {},
+\end{pythoncode}
+
+These initializations are done implicitly by the \pkg. Further details about the implicit creation of dictionaries can be found in section
+\hyperref[implicit-creation]{Implicit creation of dictionaries}.
+
+It is for sure still possible to do the initialization of a dictionary explicitly with \pcode{\{\}}. But keep in mind: This deletes all already existing keys in this dictionary!
 
 \vspace{2ex}
 
 \textbf{Outcome:}
-
-\vspace{2ex}
 
 \begin{pythonlog}
 {'project_values': {'common_project_param_1': 'common project value 1',
@@ -819,12 +891,11 @@ previously added keys of this dictionary!
                                         'featureC_param_2': 'featureC param 2 value'}}}
 \end{pythonlog}
 
-
 % --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
-\section{\texttt{dotdict} notation}
+\section{\texttt{dotdict} notation}\label{dotdict-notation}
 
 Up to now we have accessed dictionary keys in this way (standard notation):
 
@@ -915,172 +986,16 @@ the expressions (like \pcode{$\{params.1.dict_2_key_2.dict_2_A_key_2.1\}}) becom
 
 % --------------------------------------------------------------------------------------------------------------
 
-\newpage
-
-\section{Substitution of dollar operator expressions}
-
-Like shown in previous examples, existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
-
-We discussed use cases, where the entire expression of the left hand side of the colon and also the entire expression of the right hand side of the colon
-have been either hard coded strings, encapsulated in quotes, or dollar operator expressions, not encapsulated in quotes.
-
-Also a mix of both is possible!
-
-Outcome is a hard coded string, encapsulated in quotes, with parts represented by one or more than one dollar operator expression. This can be used to create
-new content very dynamically: On the right hand side of the colon new string values can be created; on the left hand side of the colon this mechanism
-generates dynamic parameter names.
-
-\vspace{2ex}
-
-\textbullet\ JSON file:
-
-\begin{pythoncode}
-{
-   "project"     : "Test",
-   "version"     : 1.23,
-   "item_number" : 1,
-   "component"   : "componentA",
-   //
-   "${project}_message_${item_number}" : "Component '${component}' has version ${version}"
-}
-\end{pythoncode}
-
-\vspace{2ex}
-
-\textbf{Outcome:}
-
-\begin{pythonlog}
-{'component': 'componentA',
- 'item_number': 1,
- 'project': 'Test',
- 'Test_message_1': "Component 'componentA' has version 1.23",
- 'version': 1.23}
-\end{pythonlog}
-
-\textit{We recommend to use simple data types for this kind of substitution only!}
-
-But nevertheless, on the right hand side of the colon also composite data types are possible. Here it might makes sense to use them.
-But on the left hand side of the colon only simple data types are allowed for substitution. Because it makes no sense to create
-parameter names based on composite data types. Most probably this would cause invalid key names.
-
-To demonstrate this, we change the JSON file to:
-
-\begin{pythoncode}
-{
-   "component"      : "componentA",
-   "composite_data" : ["AB", 12, True, null, {"kA" : "kAval", "kB" : "kBval"}],
-   //
-   "test_parameter" : "Key values of component '${component}' are: ${composite_data}"
-}
-\end{pythoncode}
-
-\vspace{2ex}
-
-\textbf{Outcome:}
-
-\begin{pythonlog}
-{'component': 'componentA',
- 'composite_data': ['AB', 12, True, None, {'kA': 'kAval', 'kB': 'kBval'}],
- 'test_parameter': "Key values of component 'componentA' are: ['AB', 12, True, "
-                   "None, {'kA': 'kAval', 'kB': 'kBval'}]"}
-\end{pythonlog}
-
-\newpage
-
-Now we try to do the same on the left hand side of the colon:
-
-\begin{pythoncode}
-{
-   "param"          : "string value",
-   "composite_data" : ["AB", 12, True, null, {"kA" : "kAval", "kB" : "kBval"}],
-   //
-   "test_parameter_${composite_data}" : ${param}
-}
-\end{pythoncode}
-
-If this would be allowed, the last line would cause a parameter with this name:
-
-\begin{pythonlog}
-"test_parameter_['AB', 12, True, None, {'kA': 'kAval', 'kB': 'kBval'}]"
-\end{pythonlog}
-
-And this is absolutely not a valid name!
-
-\vspace{2ex}
-
-To prevent the users from generating invalid parameter names, the \pkg\ throws an error:
-
-\begin{pythonlog}
-"Error: 'Found expression '...' with at least one parameter of composite data type ...
-Because of this expression is the name of a parameter, only simple data types are allowed to be substituted inside.'!"
-\end{pythonlog}
-
-\newpage
-
-\section{Overwriting vs. substitution}
-
-In this section we take a deeper look at the syntax difference between overwriting and substitution explained above.
-
-\vspace{2ex}
-
-\textbf{1. Overwriting:}
-
-\vspace{2ex}
-
-With \pcode{$\{param2\} : $\{param1\}} the initial value \pcode{"XYZ"} of parameter \pcode{param2} is overwritten with the value \pcode{"ABC"}
-of parameter \pcode{param1}.
-
-\begin{pythoncode}
-{
-   "param1"  : "ABC",
-   "param2"  : "XYZ",
-   //
-   ${param2} : ${param1},
-}
-\end{pythoncode}
-
-\vspace{2ex}
-
-\textbf{Result:}
-
-\begin{pythonlog}
-{"param1" : "ABC",
- "param2" : "ABC"}
-\end{pythonlog}
-
-\vspace{2ex}
-
-\textbf{2. Substitution:}
-
-\vspace{2ex}
-
-With \pcode{"$\{param2\}" : $\{param1\}} a new parameter with name \pcode{XYZ} (the value of \pcode{param2}) and value \pcode{"ABC"}
-is created.
-
-\begin{pythoncode}
-{
-   "param1"    : "ABC",
-   "param2"    : "XYZ",
-   //
-   "${param2}" : ${param1},
-}
-\end{pythoncode}
-
-\vspace{2ex}
-
-\textbf{Result:}
-
-\begin{pythonlog}
-{"param1" : "ABC",
- "param2" : "XYZ",
- "XYZ" : "ABC"}
-\end{pythonlog}
+% \newpage
+% \section{Substitution of dollar operator expressions}
+% TODO: Currently nothing imortant to be explained here any more because of features of the JsonPreprocessor have been reduced.
+% "Dynamic key names" still under discussion: https://github.com/test-fullautomation/python-jsonpreprocessor/issues/270
 
 % --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
-\section{Implicite creation of dictionaries}
+\section{Implicit creation of dictionaries}\label{implicit-creation}
 
 Up to now we have discussed two different ways of creating nested dictionaries.
 
@@ -1160,6 +1075,8 @@ is very susceptible to typing mistakes.
 
 The implicite creation of data structures does not work with lists! In case you use a list index out of range, you will get
 a corresponding error message.
+
+% --------------------------------------------------------------------------------------------------------------
 
 \newpage
 

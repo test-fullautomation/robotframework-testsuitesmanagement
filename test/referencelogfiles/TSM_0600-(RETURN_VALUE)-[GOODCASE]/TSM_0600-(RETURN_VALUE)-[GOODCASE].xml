@@ -1,519 +1,518 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20230531 13:03:54.433" rpa="false" schemaversion="3">
-<suite id="s1" name="Tsm-Testfile-18-Several Tests" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-18-several_tests.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:36.100" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-18-Several Tests" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-18-several_tests.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20230531 13:03:54.568" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
-<msg timestamp="20230531 13:03:54.584" level="INFO">Set suite metadata 'machine' to value 'HI7-C-0005Y'.</msg>
-<msg timestamp="20230531 13:03:54.586" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-CT/ECA3)'.</msg>
-<msg timestamp="20230531 13:03:54.586" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20230531 13:03:54.586" level="INFO">Set suite metadata 'bundle_version' to value '0.8.0.0'.</msg>
-<msg timestamp="20230531 13:03:54.586" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20230531 13:03:54.586" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20230531 13:03:54.587" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20230531 13:03:54.587" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20230531 13:03:54.587" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20230531 13:03:54.588" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">Parameters loaded from 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">RobotFramework AIO version check passed!</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">Suite Path: 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">CfgFile Path: 'C:/RobotTest/projects/ROBFW_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20230531 13:03:54.589" level="INFO">Total number of testcases: 9</msg>
-<status status="PASS" starttime="20230531 13:03:54.558" endtime="20230531 13:03:54.589"/>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'machine' to value 'fv-az1455-788'.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'tester' to value ''.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'bundle_version' to value '0.11.0.5'.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">RobotFramework AIO version check passed!</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Loaded configuration file 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Suite Path: 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Total number of testcases: 9</msg>
+<status status="PASS" starttime="20240509 04:16:36.209" endtime="20240509 04:16:36.241"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-18-several_tests-1-passed" line="33">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.590" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20230531 13:03:54.590" endtime="20230531 13:03:54.591"/>
+<msg timestamp="20240509 04:16:36.241" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20240509 04:16:36.241" endtime="20240509 04:16:36.241"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-1-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.591" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.591" endtime="20230531 13:03:54.592"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.241" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-1-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.593" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.592" endtime="20230531 13:03:54.593"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-1-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.597" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.597" endtime="20230531 13:03:54.597"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-1-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.598" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.598" endtime="20230531 13:03:54.599"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-1-passed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.600" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.600" endtime="20230531 13:03:54.600"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-1-passed</doc>
-<status status="PASS" starttime="20230531 13:03:54.589" endtime="20230531 13:03:54.600"/>
+<status status="PASS" starttime="20240509 04:16:36.241" endtime="20240509 04:16:36.256"/>
 </test>
 <test id="s1-t2" name="Test Case tsm-testfile-18-several_tests-2-passed" line="40">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.604" level="INFO">Test Count: 2</msg>
-<status status="PASS" starttime="20230531 13:03:54.604" endtime="20230531 13:03:54.604"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">Test Count: 2</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-2-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.605" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.605" endtime="20230531 13:03:54.606"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-2-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.606" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.606" endtime="20230531 13:03:54.607"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-2-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.611" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.611" endtime="20230531 13:03:54.611"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-2-passed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.612" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.612" endtime="20230531 13:03:54.612"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-2-passed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.613" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.613" endtime="20230531 13:03:54.613"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-2-passed</doc>
-<status status="PASS" starttime="20230531 13:03:54.602" endtime="20230531 13:03:54.614"/>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </test>
 <test id="s1-t3" name="Test Case tsm-testfile-18-several_tests-3-failed" line="47">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.615" level="INFO">Test Count: 3</msg>
-<status status="PASS" starttime="20230531 13:03:54.615" endtime="20230531 13:03:54.615"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">Test Count: 3</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-3-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.616" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.616" endtime="20230531 13:03:54.616"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-3-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.622" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.621" endtime="20230531 13:03:54.622"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-3-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.623" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.623" endtime="20230531 13:03:54.623"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-3-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.627" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.627" endtime="20230531 13:03:54.628"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-3-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.628" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230531 13:03:54.628" endtime="20230531 13:03:54.629"/>
+<msg timestamp="20240509 04:16:36.256" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.629" endtime="20230531 13:03:54.629"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.630" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.630" endtime="20230531 13:03:54.630"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-3-failed</doc>
-<status status="FAIL" starttime="20230531 13:03:54.614" endtime="20230531 13:03:54.630">AssertionError</status>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256">AssertionError</status>
 </test>
 <test id="s1-t4" name="Test Case tsm-testfile-18-several_tests-4-failed" line="58">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.633" level="INFO">Test Count: 4</msg>
-<status status="PASS" starttime="20230531 13:03:54.633" endtime="20230531 13:03:54.633"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">Test Count: 4</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-4-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.635" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.635" endtime="20230531 13:03:54.635"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-4-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.636" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.636" endtime="20230531 13:03:54.636"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-4-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.640" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.640" endtime="20230531 13:03:54.640"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-4-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.641" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.641" endtime="20230531 13:03:54.641"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-4-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.642" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230531 13:03:54.642" endtime="20230531 13:03:54.642"/>
+<msg timestamp="20240509 04:16:36.256" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.643" endtime="20230531 13:03:54.643"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.643" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.643" endtime="20230531 13:03:54.643"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-4-failed</doc>
-<status status="FAIL" starttime="20230531 13:03:54.632" endtime="20230531 13:03:54.644">AssertionError</status>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256">AssertionError</status>
 </test>
 <test id="s1-t5" name="Test Case tsm-testfile-18-several_tests-5-failed" line="69">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.647" level="INFO">Test Count: 5</msg>
-<status status="PASS" starttime="20230531 13:03:54.645" endtime="20230531 13:03:54.647"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">Test Count: 5</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-5-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.647" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.647" endtime="20230531 13:03:54.648"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-5-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.648" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.648" endtime="20230531 13:03:54.648"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-5-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.654" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.654" endtime="20230531 13:03:54.654"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-5-failed)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.655" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.655" endtime="20230531 13:03:54.655"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-5-failed) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Fail" library="BuiltIn">
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.660" level="FAIL">AssertionError</msg>
-<status status="FAIL" starttime="20230531 13:03:54.659" endtime="20230531 13:03:54.660"/>
+<msg timestamp="20240509 04:16:36.256" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.660" endtime="20230531 13:03:54.660"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.661" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.661" endtime="20230531 13:03:54.661"/>
+<msg timestamp="20240509 04:16:36.256" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-5-failed</doc>
-<status status="FAIL" starttime="20230531 13:03:54.645" endtime="20230531 13:03:54.661">AssertionError</status>
+<status status="FAIL" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.256">AssertionError</status>
 </test>
 <test id="s1-t6" name="Test Case tsm-testfile-18-several_tests-6-unknown" line="80">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.664" level="INFO">Test Count: 6</msg>
-<status status="PASS" starttime="20230531 13:03:54.664" endtime="20230531 13:03:54.664"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">Test Count: 6</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-6-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.667" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.665" endtime="20230531 13:03:54.667"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-6-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.667" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.667" endtime="20230531 13:03:54.667"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-6-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.671" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.671" endtime="20230531 13:03:54.671"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-6-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.672" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.672" endtime="20230531 13:03:54.673"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-6-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.674" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230531 13:03:54.674" endtime="20230531 13:03:54.674"/>
+<msg timestamp="20240509 04:16:36.272" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.674" endtime="20230531 13:03:54.674"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.675" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.675" endtime="20230531 13:03:54.675"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-6-unknown</doc>
-<status status="UNKNOWN" starttime="20230531 13:03:54.664" endtime="20230531 13:03:54.675">Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240509 04:16:36.256" endtime="20240509 04:16:36.272">Exception occurred.</status>
 </test>
 <test id="s1-t7" name="Test Case tsm-testfile-18-several_tests-7-unknown" line="91">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.678" level="INFO">Test Count: 7</msg>
-<status status="PASS" starttime="20230531 13:03:54.677" endtime="20230531 13:03:54.678"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">Test Count: 7</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-7-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.678" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.678" endtime="20230531 13:03:54.679"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-7-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.679" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.679" endtime="20230531 13:03:54.679"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-7-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.684" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.684" endtime="20230531 13:03:54.684"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-7-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.690" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.690" endtime="20230531 13:03:54.691"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-7-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.692" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230531 13:03:54.692" endtime="20230531 13:03:54.692"/>
+<msg timestamp="20240509 04:16:36.272" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.692" endtime="20230531 13:03:54.692"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.693" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.693" endtime="20230531 13:03:54.693"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-7-unknown</doc>
-<status status="UNKNOWN" starttime="20230531 13:03:54.677" endtime="20230531 13:03:54.693">Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272">Exception occurred.</status>
 </test>
 <test id="s1-t8" name="Test Case tsm-testfile-18-several_tests-8-unknown" line="102">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.696" level="INFO">Test Count: 8</msg>
-<status status="PASS" starttime="20230531 13:03:54.696" endtime="20230531 13:03:54.696"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">Test Count: 8</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-8-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.698" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.697" endtime="20230531 13:03:54.698"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-8-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.699" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.699" endtime="20230531 13:03:54.699"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-8-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.703" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.703" endtime="20230531 13:03:54.703"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-8-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.704" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.704" endtime="20230531 13:03:54.705"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-8-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.705" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230531 13:03:54.705" endtime="20230531 13:03:54.705"/>
+<msg timestamp="20240509 04:16:36.272" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.706" endtime="20230531 13:03:54.706"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.706" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.706" endtime="20230531 13:03:54.706"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-8-unknown</doc>
-<status status="UNKNOWN" starttime="20230531 13:03:54.695" endtime="20230531 13:03:54.707">Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272">Exception occurred.</status>
 </test>
 <test id="s1-t9" name="Test Case tsm-testfile-18-several_tests-9-unknown" line="113">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.709" level="INFO">Test Count: 9</msg>
-<status status="PASS" starttime="20230531 13:03:54.709" endtime="20230531 13:03:54.709"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">Test Count: 9</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-9-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.710" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
-<status status="PASS" starttime="20230531 13:03:54.709" endtime="20230531 13:03:54.710"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'tsm-test_config_variant1'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-9-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.710" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.710" endtime="20230531 13:03:54.712"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-9-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.718" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20230531 13:03:54.718" endtime="20230531 13:03:54.718"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-9-unknown)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20230531 13:03:54.719" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20230531 13:03:54.719" endtime="20230531 13:03:54.719"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-18-several_tests-9-unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Unknown" library="BuiltIn">
 <doc>Unknown the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230531 13:03:54.720" level="UNKNOWN">Exception occurred.</msg>
-<status status="UNKNOWN" starttime="20230531 13:03:54.720" endtime="20230531 13:03:54.720"/>
+<msg timestamp="20240509 04:16:36.272" level="UNKNOWN">Exception occurred.</msg>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>I must not be executed</arg>
 <arg>console=yes</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230531 13:03:54.720" endtime="20230531 13:03:54.720"/>
+<status status="NOT RUN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.721" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.721" endtime="20230531 13:03:54.721"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
 <doc>tsm-testfile-18-several_tests-9-unknown</doc>
-<status status="UNKNOWN" starttime="20230531 13:03:54.708" endtime="20230531 13:03:54.722">Exception occurred.</status>
+<status status="UNKNOWN" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272">Exception occurred.</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20230531 13:03:54.723" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20230531 13:03:54.723" endtime="20230531 13:03:54.723"/>
+<msg timestamp="20240509 04:16:36.272" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 04:16:36.272" endtime="20240509 04:16:36.272"/>
 </kw>
-<meta name="bundle_version">0.8.0.0</meta>
-<meta name="machine">HI7-C-0005Y</meta>
+<meta name="bundle_version">0.11.0.5</meta>
+<meta name="machine">fv-az1455-788</meta>
 <meta name="project">tsm-test_config_variant1</meta>
-<meta name="tester">Queckenstedt Holger (XC-CT/ECA3)</meta>
-<meta name="testtool">Robot Framework 6.0.2 (Python 3.9.16 on win32)</meta>
+<meta name="tester"/>
+<meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
 <meta name="version_hw"/>
 <meta name="version_sw"/>
 <meta name="version_test"/>
-<status status="UNKNOWN" starttime="20230531 13:03:54.444" endtime="20230531 13:03:54.723"/>
+<status status="UNKNOWN" starttime="20240509 04:16:36.116" endtime="20240509 04:16:36.272"/>
 </suite>
 <statistics>
 <total>

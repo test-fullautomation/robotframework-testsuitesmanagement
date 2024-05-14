@@ -1,17 +1,20 @@
 ==============================================================================
-20230531 12:48:34.869 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20240509 04:16:07.039 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20230531 12:48:34.877 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20230531 12:48:34.878 - UNKNOWN - Exception occurred.
-20230531 12:48:34.878 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+20240509 04:16:07.039 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 04:16:07.039 - ERROR - Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.
+20240509 04:16:07.039 - ERROR - ---> It is not possible to use both together, because they belong to the same feature (the variant selection).
+20240509 04:16:07.039 - ERROR - ---> Please remove one of them.
+20240509 04:16:07.039 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 04:16:07.039 - INFO - +- END SETUP: tm.Testsuite Setup (0)
 ------------------------------------------------------------------------------
-20230531 12:48:34.878 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20240509 04:16:07.039 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20230531 12:48:34.881 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20240509 04:16:07.055 - INFO - +- END TEST: Test Case tsm-testfile-02 (16)
 ------------------------------------------------------------------------------
-20230531 12:48:34.882 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20230531 12:48:34.882 - INFO - testsuite_teardown: Will be implemented later
-20230531 12:48:34.882 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240509 04:16:07.055 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 04:16:07.055 - INFO - testsuite_teardown: Will be implemented later
+20240509 04:16:07.055 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20230531 12:48:34.888 - INFO - + END SUITE: Tsm-Testfile-02 (123)
+20240509 04:16:07.055 - INFO - + END SUITE: Tsm-Testfile-02 (110)
 ==============================================================================

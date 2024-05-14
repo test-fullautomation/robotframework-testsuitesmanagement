@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240123 10:19:46.123" rpa="false" schemaversion="4">
-<suite id="s1" name="Tsm-Testfile-02" source="D:\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 15:56:54.642" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-02" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20240123 10:19:46.289" level="ERROR">Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
-          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-</msg>
-<msg timestamp="20240123 10:19:46.290" level="UNKNOWN">Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
-          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-</msg>
-<status status="UNKNOWN" starttime="20240123 10:19:46.251" endtime="20240123 10:19:46.290"/>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">Parameter 'Maximum_version' with invalid value found in JSON configuration file!</msg>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">Reason: 'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'</msg>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'</msg>
+<msg timestamp="20240509 15:56:54.784" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20240509 15:56:54.752" endtime="20240509 15:56:54.784"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20240123 10:19:46.290" endtime="20240123 10:19:46.291">Parent suite setup unknown:
-Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
-          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-</status>
+<status status="UNKNOWN" starttime="20240509 15:56:54.784" endtime="20240509 15:56:54.784">Parent suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20240123 10:19:46.293" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20240123 10:19:46.293" endtime="20240123 10:19:46.293"/>
+<msg timestamp="20240509 15:56:54.784" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20240509 15:56:54.784" endtime="20240509 15:56:54.784"/>
 </kw>
-<status status="UNKNOWN" starttime="20240123 10:19:46.130" endtime="20240123 10:19:46.293">Suite setup unknown:
-Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
-          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-</status>
+<status status="UNKNOWN" starttime="20240509 15:56:54.642" endtime="20240509 15:56:54.784">Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -42,8 +36,8 @@ Parameter 'Maximum_version' with invalid value found in JSON configuration file!
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240123 10:19:46.289" level="ERROR">Parameter 'Maximum_version' with invalid value found in JSON configuration file! 
-          'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'
-</msg>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">Parameter 'Maximum_version' with invalid value found in JSON configuration file!</msg>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">Reason: 'I am not a valid version' does not match '^\\d+\\.\\d+\\.\\d+$'</msg>
+<msg timestamp="20240509 15:56:54.784" level="ERROR">In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'</msg>
 </errors>
 </robot>

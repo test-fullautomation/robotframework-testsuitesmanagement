@@ -15,13 +15,9 @@
 import copy
 import os
 
-import RobotFramework_TestsuitesManagement
+import RobotFramework_TestsuitesManagement as TM
 from robot.api.deco import keyword
 from robot.api import logger
-
-from RobotFramework_TestsuitesManagement.Config import CConfig
-
-from lxml import etree
 
 from robot.libraries.BuiltIn import BuiltIn
 
@@ -65,36 +61,54 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
 
 * No return variable
         '''
-        if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.bLoadedCfg:
-            BuiltIn().unknown(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLoadedCfgError)
+        if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
+            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
+                for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                    if errorMsg.strip() != '':
+                        logger.error(errorMsg)
+            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
+                for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                    if infoMsg.strip() != '':
+                        logger.error(infoMsg)
+            BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
             return
-        if not RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
+        if not TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
             if sTestsuiteCfgFile != '':
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2 = True
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestSuiteCfg = os.path.abspath(sTestsuiteCfgFile)
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
+                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2 = True
+                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
+                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = os.path.abspath(sTestsuiteCfgFile)
             else:
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3 = True
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
-                RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.loadCfg(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig)
+                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3 = True
+                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
+            try:
+                TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
+            except:
+                if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
+                    for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                        if errorMsg.strip() != '':
+                            logger.error(errorMsg)
+                if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
+                    for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                        if infoMsg.strip() != '':
+                            logger.error(infoMsg)
+                BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
-        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
+        if TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
             logger.info('Running with configuration level 1')
-        elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2:
+        elif TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2:
             logger.info('Running with configuration level 2')
-        elif RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3:
+        elif TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3:
             logger.info('Running with configuration level 3')
         else:
             logger.warn("Running with configuration level 4!")
 
-        RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.verifyVersion()
-        logger.info(f"Loaded configuration file '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestCfgFile}'")
-        logger.info(f"Suite Path: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sTestcasePath}'")
-        if RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig != '':
-            logger.info(f"Local config file: '{RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.sLocalConfig}'")
-        logger.info(f"Number of test suites: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iSuiteCount}")
-        logger.info(f"Total number of testcases: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTotalTestcases}")
+        TM.CTestsuitesCfg.oConfig.verifyVersion()
+        logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
+        logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
+        if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
+            logger.info(f"Local config file: '{TM.CTestsuitesCfg.oConfig.sLocalConfig}'")
+        logger.info(f"Number of test suites: {TM.CTestsuitesCfg.oConfig.iSuiteCount}")
+        logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
 
     @keyword
     def testsuite_teardown(self):
@@ -110,7 +124,7 @@ it's defined here for future requirements.
 This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.
         '''
-        logger.info(f"Test Count: {RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.iTestCount}")
+        logger.info(f"Test Count: {TM.CTestsuitesCfg.oConfig.iTestCount}")
 
     @keyword
     def testcase_teardown(self):
@@ -146,7 +160,7 @@ This get_config defines the ``Get Config`` keyword gets the current config objec
 
   / *Type*: json /
         '''
-        return copy.deepcopy(RobotFramework_TestsuitesManagement.CTestsuitesCfg.oConfig.oConfigParams)
+        return copy.deepcopy(TM.CTestsuitesCfg.oConfig.oConfigParams)
 
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):

@@ -161,7 +161,7 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     iTestCount        = 0
     sConfigFileName   = None
     bLoadedCfg        = True
-    sLoadedCfgError   = ''
+    sLoadedCfgLog     = {"info" : [], "error" : [], "unknown": ''}
     sTestSuiteCfg     = ''
     sTestCfgFile      = ''
     sTestcasePath     = ''
@@ -250,9 +250,17 @@ This loadCfg method uses to load configuration's parameters from json files.
                 bConfigLevel2 = self.__loadConfigFileLevel2()
             else:
                 if r'${variant}' in BuiltIn().get_variables():
-                    logger.error(f"Not able to get a configuration for variant '{self.sConfigName}' because of a variant configuration file is not available.")
-                    logger.info("---> A variant configuration file must be available when executing robot with configuration level 2.")
-                    BuiltIn().unknown('Loading configuration level 2 failed!')
+                    self.bLoadedCfg = False
+                    self.sLoadedCfgLog['error'].append(f"Not able to get a configuration for variant '{self.sConfigName}' \
+because of a variant configuration file is not available.")
+                    if self.sTestSuiteCfg != '':
+                        self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestSuiteCfg}'")
+                    elif self.sTestCfgFile != '':
+                        self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
+                    self.sLoadedCfgLog['info'].append("---> A variant configuration file must be available when executing \
+robot with configuration level 2.")
+                    self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                    raise Exception
 
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
@@ -263,12 +271,14 @@ This loadCfg method uses to load configuration's parameters from json files.
                         sJsonFile1    = f"{sConfigFolder}/robot_config.jsonp"
                         sJsonFile2    = f"{sConfigFolder}/robot_config.json" # still supported alternative extension
 
-                    if os.path.isfile(sJsonFile1) and os.path.isfile(sJsonFile2):           
-                        logger.error("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
-                        logger.info(f"* file 1: '{sJsonFile1}'")
-                        logger.info(f"* file 2: '{sJsonFile2}'")
-                        logger.info("Please decide which one to keep and which one to remove. Both together are not allowed.")
-                        BuiltIn().unknown("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
+                    if os.path.isfile(sJsonFile1) and os.path.isfile(sJsonFile2):
+                        self.bLoadedCfg = False
+                        self.sLoadedCfgLog['error'].append("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
+                        self.sLoadedCfgLog['info'].append(f"* file 1: '{sJsonFile1}'")
+                        self.sLoadedCfgLog['info'].append(f"* file 2: '{sJsonFile2}'")
+                        self.sLoadedCfgLog['info'].append(f"Please decide which one to keep and which one to remove. Both together are not allowed.") 
+                        self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                        raise Exception
                     elif os.path.isfile(sJsonFile1):
                         self.sTestCfgFile = sJsonFile1
                         self.rConfigFiles.bLevel4 = False
@@ -296,24 +306,32 @@ This loadCfg method uses to load configuration's parameters from json files.
 
         if self.rConfigFiles.bLevel1:
             if self.sConfigName != 'default':
-                logger.error("Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.")
-                logger.info("---> It is not possible to use both together, because they belong to the same feature (the variant selection).")
-                logger.info("---> Please remove one of them.")
-                BuiltIn().unknown('Redundant settings detected in command line!')
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
+is used together with parameter 'config_file'.")
+                self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
+to the same feature (the variant selection).")
+                self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
 
             if self.sTestCfgFile == '':
-                errorMessage = "The config_file input parameter is empty!!!"
-                logger.error(errorMessage)
-                BuiltIn().unknown(errorMessage)
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
 
-        if not bConfigLevel2:
-            BuiltIn().unknown('Loading configuration level 2 failed!')
-            return
+        if not bConfigLevel2: # Loading configuration level 2 failed, method self.__loadConfigFileLevel2() return False
+            self.bLoadedCfg = False
+            # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
+            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+            raise Exception
 
         if not os.path.isfile(self.sTestCfgFile):
-            errorMessage = f"Did not find configuration file: '{self.sTestCfgFile}'!"
-            logger.error(errorMessage)
-            BuiltIn().unknown('The configuration file is not found!')
+            self.bLoadedCfg = False
+            self.sLoadedCfgLog['error'].append(f"Did not find configuration file: '{self.sTestCfgFile}'!")
+            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+            raise Exception
 
         robotCoreData = BuiltIn().get_variables()
         ROBFW_AIO_Data = {}
@@ -326,12 +344,10 @@ This loadCfg method uses to load configuration's parameters from json files.
         try:
             oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
-            CConfig.bLoadedCfg = False
-            CConfig.sLoadedCfgError = ''
+            self.bLoadedCfg = False
             for line in str(error).splitlines():
-                logger.error(f"{line}") # outcome: every single line starts with timestamp and log level
-                CConfig.sLoadedCfgError += f"{line}\n                  " # to be compatible with original version
-            BuiltIn().unknown('Loading of JSON configuration file failed!')
+                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestCfgFile path info already present in error
+            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
 
         self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
@@ -339,27 +355,30 @@ This loadCfg method uses to load configuration's parameters from json files.
             try:
                 oLocalConfig = oJsonPreprocessor.jsonLoad(self.sLocalConfig)
             except Exception as error:
-                CConfig.bLoadedCfg = False
-                CConfig.sLoadedCfgError = str(error)
-                logger.error(f"Loading local config failed! Reason: {CConfig.sLoadedCfgError}")
-                BuiltIn().unknown('Loading local config failed!')
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append(str(error))
+                self.sLoadedCfgLog['error'].append(f"Loading local config failed with file: {self.sLocalConfig}")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                 raise Exception
             isLocalConfig = True
             if "WelcomeString" in oLocalConfig:
-                logger.error(f"Loading local config failed with file: {self.sLocalConfig}")
-                logger.info('---> The mandatory "WelcomeString" element of configuration file is found in local config file')
-                logger.info("---> Wrong local config file was chosen, please check!!!")
+                self.sLoadedCfgLog['error'].append(f"Loading local config failed with file: {self.sLocalConfig}")
+                self.sLoadedCfgLog['info'].append("---> The mandatory 'WelcomeString' element of configuration file is found in local config file")
+                self.sLoadedCfgLog['info'].append("---> Wrong local config file was chosen, please check!!!")
                 isLocalConfig = False
             elif "default" in oLocalConfig:
-                logger.error(f"Loading local config failed with file: {self.sLocalConfig}")
-                logger.info('---> The variant "default" element of the variant configuration in the configuration level 2 is found in local config file')
-                logger.info("---> Wrong local config file was chosen, please check!!!")
+                self.sLoadedCfgLog['error'].append(f"Loading local config failed with file: {self.sLocalConfig}")
+                self.sLoadedCfgLog['info'].append("---> The variant 'default' element of the variant configuration in the configuration level 2 is found in local config file")
+                self.sLoadedCfgLog['info'].append("---> Wrong local config file was chosen, please check!!!")
                 isLocalConfig = False
             else:
                 oJsonCfgData = self.__mergeDicts(oJsonCfgData, oLocalConfig)
 
             if not isLocalConfig:
-                BuiltIn().unknown('Loading local config failed!')
+                self.bLoadedCfg = False
+                # Loading local configuration failed, the 'error' and 'info' are added above
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
 
         bJsonSchema = True
         try:
@@ -368,29 +387,35 @@ This loadCfg method uses to load configuration's parameters from json files.
                 oJsonSchemaCfg = json.load(f)
         except Exception as err:
             bJsonSchema = False
-            logger.error(f"Could not parse configuration JSON schema file: '{str(err)}'")
-            BuiltIn().unknown('Parse JSON schema file failed!')
+            self.bLoadedCfg = False
+            self.sLoadedCfgLog['error'].append(f"Could not parse configuration JSON schema file: '{str(err)}'")
+            self.sLoadedCfgLog['unknown'] = "Parse JSON schema file failed!"
+            raise Exception
 
         if bJsonSchema:
             try:
                 validate(instance=oJsonCfgData, schema=oJsonSchemaCfg)
             except Exception as error:
+                self.bLoadedCfg = False
                 if error.validator == 'additionalProperties':
-                    self.sLoadedCfgError = f"Verification against JSON schema failed: '{error.message}'. \
-Please put the additional params into 'params': {{ 'global': {{...}}"
+                    self.sLoadedCfgLog['error'].append(f"Verification against JSON schema failed: '{error.message}'.")
+                    self.sLoadedCfgLog['error'].append("Please put the additional params into 'params': { 'global': {...}")
+                    self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                 elif error.validator == 'required':
                     param = re.search("('[A-Za-z0-9]+')", error.message)
                     if param is not None:
-                        self.sLoadedCfgError = f"Required parameter {param[0]} is missing in configuration file '{self.sTestCfgFile}'. \
-JSON schema validation failed!"
+                        self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in file '{self.sTestCfgFile}'.")
+                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                     else:
-                        self.sLoadedCfgError = f"Required parameter {error.message} is missing in configuration file '{self.sTestCfgFile}'. \
-JSON schema validation failed!"
+                        self.sLoadedCfgLog['error'].append(f"Required parameter {error.message} is missing in file '{self.sTestCfgFile}'.")
+                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                 else:
                     errParam = error.path.pop()
-                    self.sLoadedCfgError = f"Parameter '{errParam}' with invalid value found in JSON configuration file! Reason: {error.message}"
-                logger.error(self.sLoadedCfgError)
-                BuiltIn().unknown(self.sLoadedCfgError)
+                    self.sLoadedCfgLog['error'].append(f"Parameter '{errParam}' with invalid value found in JSON configuration file!")
+                    self.sLoadedCfgLog['error'].append(f"Reason: {error.message}")
+                    self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
 
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
@@ -490,11 +515,15 @@ This method updates preprocessor and global params to global variable of RobotFr
         lReservedKeyword = ['Settings', 'Variables', 'Keywords', 'Comments', 'Documentation', 'Metadata']
         if 'params' in self.oConfigParams and 'global' in self.oConfigParams['params']:
             for k,v in self.oConfigParams['params']['global'].items():
-                if not re.match(varNamePattern, k) or k in lReservedKeyword:
-                    CConfig.bLoadedCfg = False
-                    CConfig.sLoadedCfgError = f"Parameter '{k}' is invalid variable name or conflicts with Robot reserved keywords. \
-Variable names in Robot Framework must start with a letter or underscore, followed by letters, digits, or underscores."
-                    BuiltIn().unknown()
+                if not re.match(varNamePattern, k):
+                    self.bLoadedCfg = False
+                    self.sLoadedCfgLog['error'].append(f"Found invalid parameter name '{k}'.")
+                    self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
+                    raise Exception
+                if k in lReservedKeyword:
+                    self.sLoadedCfgLog['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
+                    self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
+                    raise Exception
                 if k in self.lBuitInVariables:
                     continue
                 try:
@@ -532,40 +561,38 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         try:
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
         except Exception as error:
-            CConfig.bLoadedCfg = False
-            CConfig.sLoadedCfgError = ''
+            self.bLoadedCfg = False
             for line in str(error).splitlines():
-                logger.error(f"{line}") # outcome: every single line starts with timestamp and log level
-                CConfig.sLoadedCfgError += f"{line}\n                  " # to be compatible with original version / but when the error is already logged, for what do we need to store the error message in sLoadedCfgError?
-            logger.error('Loading of JSON configuration file failed!')
+                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestSuiteCfg path info already present in error
             return False
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
             sListOfVariants = sListOfVariants + f"'{item}', "
         if not re.match(r'^[a-zA-Z0-9.\u0080-\U0010FFFF\_\-\:@\$]+$', self.sConfigName):
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The variant name '{self.sConfigName}' \
-is invalid. Please find the suitable variant in this list: {sListOfVariants}"
-            logger.error(CConfig.sLoadedCfgError)
+            self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+            self.sLoadedCfgLog['error'].append(f"The variant name '{self.sConfigName}' is invalid.")
+            self.sLoadedCfgLog['error'].append(f"Please find the suitable variant in this list: {sListOfVariants}")
+            self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestSuiteCfg}'")
             return False
 
         if self.sConfigName not in oSuiteConfig:
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The variant '{self.sConfigName}' \
-is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'. Please find the suitable variant in this list: {sListOfVariants}"
-            logger.error(CConfig.sLoadedCfgError)
+            self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+            self.sLoadedCfgLog['error'].append(f"The variant '{self.sConfigName}' is not defined in '{os.path.abspath(self.sTestSuiteCfg)}'.")
+            self.sLoadedCfgLog['error'].append(f"Please find the suitable variant in this list: {sListOfVariants}")
             return False
 
         try:
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
         except:
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The 'name' or 'path' property \
-is not defined for the variant '{self.sConfigName}' in '{os.path.abspath(self.sTestSuiteCfg)}'"
-            logger.error(CConfig.sLoadedCfgError)
+            self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+            self.sLoadedCfgLog['error'].append(f"The 'name' or 'path' property is not defined for the variant '{self.sConfigName}'.")
+            self.sLoadedCfgLog['error'].append(f"In file: '{os.path.abspath(self.sTestSuiteCfg)}'")
             return False
         if self.sTestCfgFile.strip() == '':
-            CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! The configuration file name of \
-variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSuiteCfg)}'"
-            logger.error(CConfig.sLoadedCfgError)
+            self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+            self.sLoadedCfgLog['error'].append(f"The configuration file name of variant '{self.sConfigName}' must not be empty.")
+            self.sLoadedCfgLog['error'].append(f"In file: '{os.path.abspath(self.sTestSuiteCfg)}'")
             return False
 
         if sTestCfgDir.startswith('.../'):
@@ -586,9 +613,8 @@ variant '{self.sConfigName}' must not be empty in '{os.path.abspath(self.sTestSu
                         bFoundTestCfgDir = True
                         break
                 if bFoundTestCfgDir == False:
-                    CConfig.sLoadedCfgError = f"Testsuite management - Loading configuration level 2 failed! \
-Could not find out config directory: '{sTestCfgDirStart}'"
-                    logger.error(CConfig.sLoadedCfgError)
+                    self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+                    self.sLoadedCfgLog['error'].append(f"Could not find out config directory: '{sTestCfgDirStart}'")
                     return False
 
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile

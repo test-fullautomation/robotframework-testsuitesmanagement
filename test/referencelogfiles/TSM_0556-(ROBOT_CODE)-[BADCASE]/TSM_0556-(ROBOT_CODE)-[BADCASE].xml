@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.16 on win32)" generated="20230503 13:54:40.567" rpa="false" schemaversion="2">
-<suite id="s1" name="Tsm-Testfile-15-Unknown Library" source="C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot">
-<test id="s1-t1" name="Test Case tsm-testfile-15-unknown_library">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:33.176" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-15-Unknown Library" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot">
+<test id="s1-t1" name="Test Case tsm-testfile-15-unknown_library" line="34">
 <doc>tsm-testfile-15-unknown_library</doc>
-<status status="UNKNOWN" starttime="20230503 13:54:40.682" endtime="20230503 13:54:40.683"/>
+<status status="UNKNOWN" starttime="20240509 04:16:33.286" endtime="20240509 04:16:33.286"/>
 </test>
-<status status="UNKNOWN" starttime="20230503 13:54:40.571" endtime="20230503 13:54:40.684"/>
+<status status="UNKNOWN" starttime="20240509 04:16:33.176" endtime="20240509 04:16:33.286"/>
 </suite>
 <statistics>
 <total>
@@ -18,23 +18,19 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230503 13:54:40.677" level="UNKNOWN">Error in file 'C:\RobotTest\projects\ROBFW_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot' on line 26: Importing library 'I.Am.The.Unknown.Library.And.Therefore.An.Error' failed: ModuleNotFoundError: No module named 'I'
-Details: Traceback (most recent call last):
+<msg timestamp="20240509 04:16:33.270" level="UNKNOWN">Error in file 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot' on line 26: Importing library 'I.Am.The.Unknown.Library.And.Therefore.An.Error' failed: ModuleNotFoundError: No module named 'I'
+Traceback (most recent call last):
   None
-ModuleNotFoundError: No module named 'I'
 PYTHONPATH:
-  D:\BITSDev\Robot-Framework\_____CTRL\__testsuitesmanagement
-  D:\RobotFramework\python39\python39.zip
-  D:\RobotFramework\python39\DLLs
-  D:\RobotFramework\python39\lib
-  D:\RobotFramework\python39
-  C:\Users\qth2hi\AppData\Roaming\Python\Python39\site-packages
-  D:\RobotFramework\python39\lib\site-packages
-  D:\RobotFramework\python39\lib\site-packages\rfw-2.0-py3.9.egg
-  D:\RobotFramework\python39\lib\site-packages\rfwresourcelib-2.0-py3.9.egg
-  D:\RobotFramework\python39\lib\site-packages\robotframework-4.1.3-py3.9.egg
-  D:\RobotFramework\python39\lib\site-packages\win32
-  D:\RobotFramework\python39\lib\site-packages\win32\lib
-  D:\RobotFramework\python39\lib\site-packages\Pythonwin</msg>
+  D:\a\RobotFramework_AIO\RobotFramework_AIO
+  C:\Program Files\RobotFramework\python39\python39.zip
+  C:\Program Files\RobotFramework\python39\DLLs
+  C:\Program Files\RobotFramework\python39\lib
+  C:\Program Files\RobotFramework\python39
+  C:\Program Files\RobotFramework\python39\lib\site-packages
+  C:\Program Files\RobotFramework\python39\lib\site-packages\robotframework-6.1-py3.9.egg
+  C:\Program Files\RobotFramework\python39\lib\site-packages\win32
+  C:\Program Files\RobotFramework\python39\lib\site-packages\win32\lib
+  C:\Program Files\RobotFramework\python39\lib\site-packages\Pythonwin</msg>
 </errors>
 </robot>

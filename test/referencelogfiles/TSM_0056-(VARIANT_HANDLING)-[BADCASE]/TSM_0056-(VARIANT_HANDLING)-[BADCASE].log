@@ -1,19 +1,19 @@
 ==============================================================================
-20231201 15:09:46.596 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20240510 04:28:27.488 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20231201 15:09:46.611 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20231201 15:09:46.611 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available. 
-          A variant configuration file must be available when executing robot with configuration level 2.
-20231201 15:09:46.611 - UNKNOWN - Loading configuration level 2 failed!
-20231201 15:09:46.611 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20240510 04:28:27.488 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20240510 04:28:27.504 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
+20240510 04:28:27.504 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
+20240510 04:28:27.504 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240510 04:28:27.504 - INFO - +- END SETUP: tm.Testsuite Setup (16)
 ------------------------------------------------------------------------------
-20231201 15:09:46.611 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20240510 04:28:27.504 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20231201 15:09:46.611 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
+20240510 04:28:27.504 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
 ------------------------------------------------------------------------------
-20231201 15:09:46.611 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20231201 15:09:46.611 - INFO - testsuite_teardown: Will be implemented later
-20231201 15:09:46.611 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240510 04:28:27.504 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240510 04:28:27.504 - INFO - testsuite_teardown: Will be implemented later
+20240510 04:28:27.504 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20231201 15:09:46.611 - INFO - + END SUITE: Tsm-Testfile-01 (132)
+20240510 04:28:27.504 - INFO - + END SUITE: Tsm-Testfile-01 (94)
 ==============================================================================
