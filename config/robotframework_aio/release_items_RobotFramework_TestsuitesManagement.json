@@ -96,7 +96,7 @@
                  ,
                  "0.12." : [
 "
-* Improved the error logging method when loading configuration fails.
+* Improved error messages in case of issues while loading the test configuration.
 "
                            ]
                 }
