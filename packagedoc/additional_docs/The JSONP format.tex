@@ -263,7 +263,7 @@ It can be seen that the returned dictionary contains both the parameters from th
 
 % --------------------------------------------------------------------------------------------------------------
 
-\section{Overwrite parameters}
+\section{Overwrite parameters}\label{overwrite-parameters}
 
 We take over the scenario from the previous section: We still have a JSON file \plog{componentA.jsonp} containig the parameters for
 component \textit{A}, a JSON file \plog{componentB.jsonp} for component \textit{B} and a JSON file \plog{common.jsonp} for both components.
@@ -986,10 +986,78 @@ the expressions (like \pcode{$\{params.1.dict_2_key_2.dict_2_A_key_2.1\}}) becom
 
 % --------------------------------------------------------------------------------------------------------------
 
-% \newpage
-% \section{Substitution of dollar operator expressions}
-% TODO: Currently nothing imortant to be explained here any more because of features of the JsonPreprocessor have been reduced.
-% "Dynamic key names" still under discussion: https://github.com/test-fullautomation/python-jsonpreprocessor/issues/270
+\newpage
+
+\section{Dynamic key names}
+
+In section \hyperref[overwrite-parameters]{Overwrite parameters} we mentioned the possibility to define the value of string parameters dynamically, e.g. in this way:
+
+\begin{pythoncode}
+"str_val"   : "ABC",
+"newparam1" : "prefix_${str_val}_suffix",
+\end{pythoncode}
+
+The value of \pcode{newparam1} is defined by an expression that is encapsulated in quotes and contains - beneath hard coded parts - a dollar operator expression
+that is the dynamic part.
+
+The same is also possible on the left hand side of the colon. In this case the name of a parameter is created dynamically.
+
+\vspace{2ex}
+
+\textbf{Example:}
+
+\begin{pythoncode}
+"strval"  : "A",
+"dictval" : {"A_2" : 1},
+${dictval}['${strval}_2'] : 2
+\end{pythoncode}
+
+In second line a new dictionary with key \pcode{A_2} is defined. In third line we overwrite the initial value of this key with another value.
+The name of this key is defined with the help of parameter \pcode{strval}.
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+\begin{pythonlog}
+{'dictval': {'A_2': 2}, 'strval': 'A'}
+\end{pythonlog}
+
+\vspace{2ex}
+
+The same in dotdict notation:
+
+\vspace{2ex}
+
+\begin{pythoncode}
+"strval"  : "A",
+"dictval" : {"A_2" : 1},
+${dictval.${strval}_2} : 3
+\end{pythoncode}
+
+\textbf{The precondition for using dynamic key names is that a key with the resulting name (here \pcode{A_2}) does exist already.
+Therefore this mechanism can be used to overwrite the value of existing keys, but cannot be used to create new keys!}
+
+\vspace{2ex}
+
+This will not work:
+
+\vspace{2ex}
+
+\begin{pythoncode}
+"strval"  : "A",
+"dictval" : {"${strval}_2" : 1}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+\begin{pythonlog}
+<TODO: error message>
+\end{pythonlog}
+
+
 
 % --------------------------------------------------------------------------------------------------------------
 
