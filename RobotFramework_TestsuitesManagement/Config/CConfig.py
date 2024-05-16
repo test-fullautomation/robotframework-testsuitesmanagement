@@ -345,8 +345,13 @@ to the same feature (the variant selection).")
             oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
             self.bLoadedCfg = False
+            bCheck = False
             for line in str(error).splitlines():
-                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestCfgFile path info already present in error
+                if "In file:" in line: # Check is self.sTestCfgFile path info already present in error?
+                    bCheck = True
+                self.sLoadedCfgLog['error'].append(f"{line}")
+            if not bCheck:
+                self.sLoadedCfgLog['error'].append(f"In file: {self.sTestCfgFile}")
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
 
@@ -562,8 +567,13 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
         except Exception as error:
             self.bLoadedCfg = False
+            bCheck = False
             for line in str(error).splitlines():
-                self.sLoadedCfgLog['error'].append(f"{line}") # self.sTestSuiteCfg path info already present in error
+                if "In file:" in line: # Checking is self.sTestSuiteCfg path info already present in error?
+                    bCheck = True
+                self.sLoadedCfgLog['error'].append(f"{line}")
+            if not bCheck:
+                self.sLoadedCfgLog['error'].append(f"In file: {self.sTestSuiteCfg}")
             return False
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
