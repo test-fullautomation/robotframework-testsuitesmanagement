@@ -603,7 +603,7 @@ Further content can be added between the double quotes. This can be used to crea
 
 \vspace{2ex}
 
-Using composite data types inside strings causes errors:
+Using composite data types inside strings is not supported:
 
 \begin{pythoncode}
 "newparam6" : "prefix_${listval}_suffix"
@@ -615,9 +615,17 @@ or:
 "newparam7" : "prefix_${dictval}_suffix"
 \end{pythoncode}
 
-\textbf{TODO:} \href{https://github.com/test-fullautomation/python-jsonpreprocessor/issues/249}{Parameter substitution needs to be limited}
+\vspace{2ex}
+
+Result for \pcode{"newparam6"}:
 
 \vspace{2ex}
+
+\begin{pythonlog}
+The substitution of parameter '${listval}' inside the string value 'prefix_${listval}_suffix' is not supported! Composite data types like lists and dictionaries cannot be substituted inside strings.
+\end{pythonlog}
+
+\newpage
 
 \textbf{Value of a single element of a parameter of nested data type}
 
@@ -998,7 +1006,7 @@ In section \hyperref[overwrite-parameters]{Overwrite parameters} we mentioned th
 \end{pythoncode}
 
 The value of \pcode{newparam1} is defined by an expression that is encapsulated in quotes and contains - beneath hard coded parts - a dollar operator expression
-that is the dynamic part.
+(that is the dynamic part).
 
 The same is also possible on the left hand side of the colon. In this case the name of a parameter is created dynamically.
 
@@ -1040,7 +1048,7 @@ Therefore this mechanism can be used to overwrite the value of existing keys, bu
 
 \vspace{2ex}
 
-This will not work:
+This will not work (because of a key with name \pcode{A_2} does not yet exist):
 
 \vspace{2ex}
 
@@ -1054,7 +1062,7 @@ This will not work:
 \textbf{Outcome:}
 
 \begin{pythonlog}
-<TODO: error message>
+A substitution in key names is not allowed! Please update the key name "${strval}_2"
 \end{pythonlog}
 
 
