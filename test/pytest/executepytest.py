@@ -119,6 +119,9 @@ print()
 listCmdLineParts = []
 listCmdLineParts.append(f"\"{sPython}\"")
 listCmdLineParts.append("-m pytest")
+listCmdLineParts.append("--cov")
+listCmdLineParts.append(f"--cov-report html:{sThisScriptPath}/coverage_html_report")
+listCmdLineParts.append(f"--cov-report xml:{sThisScriptPath}/aiotestlogfiles/coverage_report.xml")
 # pytest command line overrules local operating system dependend filter setting
 if sPytestCommandLine is None:
    if sFilter is not None:
