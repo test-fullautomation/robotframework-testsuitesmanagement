@@ -287,10 +287,7 @@ robot with configuration level 2.")
                         self.rConfigFiles.bLevel4 = False
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                         self.rConfigFiles.bLevel3 = False
-                        if not self.bConfigLoaded:
-                            sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
-                            self.sTestCfgFile = sDefaultConfig
-                else:
+                if self.rConfigFiles.bLevel4:
                     self.rConfigFiles.bLevel3 = False
                     if not self.bConfigLoaded:
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
