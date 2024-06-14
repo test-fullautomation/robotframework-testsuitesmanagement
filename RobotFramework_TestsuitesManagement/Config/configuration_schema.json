@@ -37,10 +37,13 @@
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
 	"params": {
+    "type": "object",
 	  "properties": {
 	    "global": {
 		}
-	  }
+	  },
+    "required": ["global"],
+    "additionalProperties": false
 	}
   },
   "required": ["Project", "WelcomeString", "TargetName"],

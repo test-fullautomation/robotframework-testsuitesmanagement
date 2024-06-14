@@ -408,12 +408,13 @@ to the same feature (the variant selection).")
                     self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                 elif error.validator == 'required':
                     param = re.search("('[A-Za-z0-9]+')", error.message)
-                    if param is not None:
+                    if param[0] == "'global'":
+                        self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in 'params' property in file '{self.sTestCfgFile}'.")
+                    elif param is not None:
                         self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in file '{self.sTestCfgFile}'.")
-                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                     else:
                         self.sLoadedCfgLog['error'].append(f"Required parameter {error.message} is missing in file '{self.sTestCfgFile}'.")
-                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
+                    self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                 else:
                     errParam = error.path.pop()
                     self.sLoadedCfgLog['error'].append(f"Parameter '{errParam}' with invalid value found in JSON configuration file!")
