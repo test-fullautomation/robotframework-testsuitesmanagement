@@ -37,14 +37,14 @@
 {
   "default": {
     "name": "robot_config_variant_1.json",
-    "path": ".../general_config/"
+    "path": "./"
   },
   "variant_1": {
     "name": "robot_config_variant_1.json",
-    "path": ".../general_config/"
+    "path": "./"
   },
   "variant_2": {
     "name": "robot_config_variant_2.json",
-    "path": ".../general_config/"
+    "path": "./"
   }
 }

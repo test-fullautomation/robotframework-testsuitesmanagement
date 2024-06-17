@@ -560,6 +560,22 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
 
 * No return variable
         '''
+        if self.sTestSuiteCfg.startswith('.../'):
+            sTestSuiteCfgStart = self.sTestSuiteCfg
+            self.sTestSuiteCfg = self.sTestSuiteCfg[4:]
+            if os.path.exists(CString.NormalizePath('./' + self.sTestSuiteCfg)):
+                self.sTestSuiteCfg = './' + self.sTestSuiteCfg
+            else:
+                bFoundTestSuiteCfg = False
+                for i in range(0, 30):
+                    self.sTestSuiteCfg = '../' + self.sTestSuiteCfg
+                    if os.path.exists(CString.NormalizePath(self.sTestSuiteCfg)):
+                        bFoundTestSuiteCfg = True
+                        break
+                if not bFoundTestSuiteCfg:
+                    self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+                    self.sLoadedCfgLog['error'].append(f"Could not find the variant configuration file: '{sTestSuiteCfgStart}'")
+                    return False
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
@@ -592,6 +608,8 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         try:
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
+            if re.match(r'^\.+/.*', sTestCfgDir):
+                sTestCfgDir = os.path.dirname(self.sTestSuiteCfg) + '/' + sTestCfgDir
         except:
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.sLoadedCfgLog['error'].append(f"The 'name' or 'path' property is not defined for the variant '{self.sConfigName}'.")
@@ -602,29 +620,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             self.sLoadedCfgLog['error'].append(f"The configuration file name of variant '{self.sConfigName}' must not be empty.")
             self.sLoadedCfgLog['error'].append(f"In file: '{os.path.abspath(self.sTestSuiteCfg)}'")
             return False
-
-        if sTestCfgDir.startswith('.../'):
-            sTestCfgDirStart = sTestCfgDir
-            sTestCfgDir = sTestCfgDir[4:]
-            if os.path.exists(CString.NormalizePath('./' + sTestCfgDir)):
-                sTestCfgDir = './' + sTestCfgDir
-            else:
-                bFoundTestCfgDir = False
-                sCheckCfgDir = ''
-                for i in range(0, 30):
-                    sTestCfgDir = '../' + sTestCfgDir
-                    if sCheckCfgDir == CString.NormalizePath(sTestCfgDir):
-                        break
-                    else:
-                        sCheckCfgDir = CString.NormalizePath(sTestCfgDir)
-                    if os.path.exists(sCheckCfgDir):
-                        bFoundTestCfgDir = True
-                        break
-                if bFoundTestCfgDir == False:
-                    self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
-                    self.sLoadedCfgLog['error'].append(f"Could not find out config directory: '{sTestCfgDirStart}'")
-                    return False
-
+        
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
         return True
 

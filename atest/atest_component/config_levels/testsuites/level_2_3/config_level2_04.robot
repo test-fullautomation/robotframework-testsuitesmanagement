@@ -26,7 +26,7 @@ ${variant}    variant_2
 *** Settings ***
 #Force Tags        atestExcluded
 Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites
-Suite Setup      testsuites.testsuite_setup    ../../../../general_config/testsuites_config.json
+Suite Setup      testsuites.testsuite_setup    .../general_config/testsuites_config.json
 Suite Teardown   testsuites.testsuite_teardown
 Test Setup       testsuites.testcase_setup
 Test Teardown    testsuites.testcase_teardown
