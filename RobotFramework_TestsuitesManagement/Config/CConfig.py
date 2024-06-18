@@ -406,7 +406,7 @@ to the same feature (the variant selection).")
                 elif error.validator == 'required':
                     param = re.search("('[A-Za-z0-9]+')", error.message)
                     if param[0] == "'global'":
-                        self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in 'params' property in file '{self.sTestCfgFile}'.")
+                        self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing under 'params' in file '{self.sTestCfgFile}'.")
                     elif param is not None:
                         self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in file '{self.sTestCfgFile}'.")
                     else:
