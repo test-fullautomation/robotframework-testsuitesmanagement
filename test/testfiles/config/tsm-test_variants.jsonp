@@ -16,106 +16,106 @@
 {
   "default" : {
                 "name" : "tsm-test_config_default.jsonp",
-                "path" : "./config/"
+                "path" : "./"
               },
   "variant1" : {
                  "name" : "tsm-test_config_variant1.jsonp",
-                 "path" : "./config/"
+                 "path" : "./"
                },
   "variant2" : {
                  "name" : "tsm-test_config_variant2.jsonp",
-                 "path" : "./config/"
+                 "path" : "./"
                },
   "json_dotdict" : {
                      "name" : "tsm-test_config_json_dotdict.jsonp",
-                     "path" : "./config/"
+                     "path" : "./"
                    },
   "SälfTest.ß.€.考.𠼭.𠼭" : {
                              "name" : "tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.jsonp",
-                             "path" : "./config/"
+                             "path" : "./"
                            },
   "nested_import_1" : {
                         "name" : "tsm-test_config_nested.1.jsonp",
-                        "path" : "./config/"
+                        "path" : "./"
                       },
   "nested_import_2" : {
                         "name" : "tsm-test_config_nested.2.jsonp",
-                        "path" : "./config/"
+                        "path" : "./"
                       },
   "cyclic_import" : {
                       "name" : "tsm-test_config_cyclic.1.jsonp",
-                      "path" : "./config/"
+                      "path" : "./"
                     },
   "version_control_01" : {
                            "name" : "tsm-test_config_version_control.01.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_02" : {
                            "name" : "tsm-test_config_version_control.02.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_03" : {
                            "name" : "tsm-test_config_version_control.03.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_04" : {
                            "name" : "tsm-test_config_version_control.04.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_05" : {
                            "name" : "tsm-test_config_version_control.05.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_06" : {
                            "name" : "tsm-test_config_version_control.06.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_07" : {
                            "name" : "tsm-test_config_version_control.07.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_08" : {
                            "name" : "tsm-test_config_version_control.08.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "version_control_09" : {
                            "name" : "tsm-test_config_version_control.09.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "missing_param" : {
                       "name" : "tsm-test_config_missing_param.jsonp",
-                      "path" : "./config/"
+                      "path" : "./"
                     },
   "syntax_error" : {
                      "name" : "tsm-test_config_syntax_error.jsonp",
-                     "path" : "./config/"
+                     "path" : "./"
                    },
   "syntax_error_within_import" : {
                                    "name" : "tsm-test_config_syntax_error_within_import.jsonp",
-                                   "path" : "./config/"
+                                   "path" : "./"
                                  },
   "missing_imported_file" : {
                               "name" : "tsm-test_config_missing_imported_file.jsonp",
-                              "path" : "./config/"
+                              "path" : "./"
                             },
   "invalid_assignment_1" : {
                              "name" : "tsm-test_config_invalid_assignment_1.jsonp",
-                             "path" : "./config/"
+                             "path" : "./"
                            },
   "implicit_creation_1" : {
                             "name" : "tsm-test_config_implicit_creation_1.jsonp",
-                            "path" : "./config/"
+                            "path" : "./"
                           },
   "implicit_creation_2" : {
                             "name" : "tsm-test_config_implicit_creation_2.jsonp",
-                            "path" : "./config/"
+                            "path" : "./"
                           },
   "parameter_priority" : {
                            "name" : "tsm-test_config_parameter_priority.jsonp",
-                           "path" : "./config/"
+                           "path" : "./"
                          },
   "composite_expressions_1" : {
                                 "name" : "tsm-test_config_composite_expressions_1.jsonp",
-                                "path" : "./config/"
+                                "path" : "./"
                               }
 }

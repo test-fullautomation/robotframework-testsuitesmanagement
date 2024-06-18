@@ -608,8 +608,8 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         try:
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
-            if re.match(r'^\.+/.*', sTestCfgDir):
-                sTestCfgDir = os.path.dirname(self.sTestSuiteCfg) + '/' + sTestCfgDir
+            if re.match(r'^\.+/*.*', sTestCfgDir):
+                sTestCfgDir = os.path.dirname(self.sTestSuiteCfg) + '/' + sTestCfgDir + '/'
         except:
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.sLoadedCfgLog['error'].append(f"The 'name' or 'path' property is not defined for the variant '{self.sConfigName}'.")
