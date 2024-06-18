@@ -97,6 +97,10 @@
                  "0.12." : [
 "
 * Improved error messages in case of issues while loading the test configuration.
+
+* Updated JSON schema validation.
+
+* Resolved redundant code.
 "
                            ]
                 }
