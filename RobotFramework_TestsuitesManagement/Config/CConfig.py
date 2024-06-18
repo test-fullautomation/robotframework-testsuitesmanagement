@@ -287,10 +287,7 @@ robot with configuration level 2.")
                         self.rConfigFiles.bLevel4 = False
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                         self.rConfigFiles.bLevel3 = False
-                        if not self.bConfigLoaded:
-                            sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
-                            self.sTestCfgFile = sDefaultConfig
-                else:
+                if self.rConfigFiles.bLevel4:
                     self.rConfigFiles.bLevel3 = False
                     if not self.bConfigLoaded:
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
@@ -408,12 +405,13 @@ to the same feature (the variant selection).")
                     self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                 elif error.validator == 'required':
                     param = re.search("('[A-Za-z0-9]+')", error.message)
-                    if param is not None:
+                    if param[0] == "'global'":
+                        self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing under 'params' in file '{self.sTestCfgFile}'.")
+                    elif param is not None:
                         self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing in file '{self.sTestCfgFile}'.")
-                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                     else:
                         self.sLoadedCfgLog['error'].append(f"Required parameter {error.message} is missing in file '{self.sTestCfgFile}'.")
-                        self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
+                    self.sLoadedCfgLog['error'].append("JSON schema validation failed!")
                 else:
                     errParam = error.path.pop()
                     self.sLoadedCfgLog['error'].append(f"Parameter '{errParam}' with invalid value found in JSON configuration file!")
