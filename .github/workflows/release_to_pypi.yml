@@ -10,7 +10,8 @@ jobs:
   build-n-publish:
       name: Build and publish to PyPI
       runs-on: ubuntu-latest
-      if: github.event_name == 'push'
+      permissions:
+        contents: write
 
       steps:
         - name: Checkout source
@@ -23,6 +24,7 @@ jobs:
 
         - name: Install dependencies
           run: |
+            sudo apt-get update
             sudo apt-get install -y pandoc
             sudo apt-get install -y texlive-latex-*
             echo "GENDOC_LATEXPATH=$(dirname $(which pdflatex))" >> $GITHUB_ENV
@@ -36,6 +38,7 @@ jobs:
         - name: Publish distribution to PyPI
           uses: pypa/gh-action-pypi-publish@release/v1
           with:
+            skip-existing: true
             password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
             # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
 
