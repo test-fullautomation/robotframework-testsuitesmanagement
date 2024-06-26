@@ -94,7 +94,7 @@
 "
                             ]
                  ,
-                 "0.12." : [
+                 "0.12.0.;0.13.0." : [
 "
 * Improved error messages in case of issues while loading the test configuration.
 
