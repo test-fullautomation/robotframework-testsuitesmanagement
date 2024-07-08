@@ -177,9 +177,9 @@ The loading configuration method is divided into 4 levels, level1 has the highes
                             )
 
     rMetaData      = CStruct(
-                                sVersionSW = '',
-                                sVersionHW     = '',
-                                sVersionTest   = '',
+                                sVersionSW = None,
+                                sVersionHW     = None,
+                                sVersionTest   = None,
                                 sROBFWVersion  = get_full_version('Robot Framework')
                             )
 
@@ -435,17 +435,11 @@ to the same feature (the variant selection).")
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
         BuiltIn().set_suite_metadata("bundle_version", BUNDLE_VERSION, top=True)
-        if "version_sw" in suiteMetadata and self.rMetaData.sVersionSW == '':
-            pass
-        else:
+        if not ("version_sw" in suiteMetadata and self.rMetaData.sVersionSW == None):
             BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
-        if "version_hw" in suiteMetadata and self.rMetaData.sVersionHW == '':
-            pass
-        else:
+        if not ("version_hw" in suiteMetadata and self.rMetaData.sVersionHW == None):
             BuiltIn().set_suite_metadata("version_hw", self.rMetaData.sVersionHW, top=True)
-        if "version_test" in suiteMetadata and self.rMetaData.sVersionTest == '':
-            pass
-        else:
+        if not ("version_test" in suiteMetadata and self.rMetaData.sVersionTest == None):
             BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
 
         CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
