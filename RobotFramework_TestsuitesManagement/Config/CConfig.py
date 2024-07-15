@@ -151,41 +151,6 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
-    sRootSuiteName    = ''
-    bConfigLoaded     = False
-    oConfigParams     = {}
-    sConfigName       = 'default'
-    sProjectName      = None
-    iTotalTestcases   = 0
-    iSuiteCount       = 0
-    iTestCount        = 0
-    sConfigFileName   = None
-    bLoadedCfg        = True
-    sLoadedCfgLog     = {"info" : [], "error" : [], "unknown": ''}
-    sTestSuiteCfg     = ''
-    sTestCfgFile      = ''
-    sTestcasePath     = ''
-    sMaxVersion       = ''
-    sMinVersion       = ''
-    sLocalConfig      = ''
-    lBuitInVariables  = []
-    rConfigFiles   = CStruct(
-                                bLevel1 = False,
-                                bLevel2 = False,
-                                bLevel3 = False,
-                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
-                            )
-
-    rMetaData      = CStruct(
-                                sVersionSW = None,
-                                sVersionHW     = None,
-                                sVersionTest   = None,
-                                sROBFWVersion  = get_full_version('Robot Framework')
-                            )
-
-    # Common configuration parameters
-    sWelcomeString  = None
-    sTargetName     = None
 
     def __new__(classtype, *args, **kwargs):
         '''
@@ -199,7 +164,41 @@ for None so that subclasses will create their own __single objects.
         return classtype.__single
 
     def __init__(self):
-        pass
+        self.sRootSuiteName    = ''
+        self.bConfigLoaded     = False
+        self.oConfigParams     = {}
+        self.sConfigName       = 'default'
+        self.sProjectName      = None
+        self.iTotalTestcases   = 0
+        self.iSuiteCount       = 0
+        self.iTestCount        = 0
+        self.sConfigFileName   = None
+        self.bLoadedCfg        = True
+        self.sLoadedCfgLog     = {"info" : [], "error" : [], "unknown": ''}
+        self.sTestSuiteCfg     = ''
+        self.sTestCfgFile      = ''
+        self.sTestcasePath     = ''
+        self.sMaxVersion       = ''
+        self.sMinVersion       = ''
+        self.sLocalConfig      = ''
+        self.lBuitInVariables  = []
+        self.rConfigFiles   = CStruct(
+                                    bLevel1 = False,
+                                    bLevel2 = False,
+                                    bLevel3 = False,
+                                    bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
+                                )
+
+        self.rMetaData      = CStruct(
+                                    sVersionSW = None,
+                                    sVersionHW     = None,
+                                    sVersionTest   = None,
+                                    sROBFWVersion  = get_full_version('Robot Framework')
+                                )
+
+        # Common configuration parameters
+        self.sWelcomeString  = None
+        self.sTargetName     = None
 
     def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
         """
@@ -442,7 +441,7 @@ to the same feature (the variant selection).")
         if not ("version_test" in suiteMetadata and self.rMetaData.sVersionTest == None):
             BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
 
-        CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
+        self.oConfigParams = copy.deepcopy(oJsonCfgData)
 
         self.__updateGlobalVariable()
         try:
@@ -711,7 +710,7 @@ execution of testsuite is terminated with "unknown" state
 * No return variable
         '''
         sCurrentVersion = BUNDLE_VERSION
-        tCurrentVersion = CConfig.tupleVersion(sCurrentVersion)
+        tCurrentVersion = self.tupleVersion(sCurrentVersion)
 
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
@@ -720,17 +719,17 @@ execution of testsuite is terminated with "unknown" state
             logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
         if self.sMinVersion != '':
-            tMinVersion = CConfig.tupleVersion(self.sMinVersion)
+            tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
-            tMaxVersion = CConfig.tupleVersion(self.sMaxVersion)
+            tMaxVersion = self.tupleVersion(self.sMaxVersion)
         bVersionCheck = True
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.versioncontrol_error('wrong_minmax', self.sMinVersion, self.sMaxVersion)
             bVersionCheck = False
-        if tMinVersion and not CConfig.bValidateMinVersion(tCurrentVersion, tMinVersion):
+        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
             self.versioncontrol_error('conflict_min', self.sMinVersion, sCurrentVersion)
             bVersionCheck = False
-        if tMaxVersion and not CConfig.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
+        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
             self.versioncontrol_error('conflict_max', self.sMaxVersion, sCurrentVersion)
             bVersionCheck = False
 
