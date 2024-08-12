@@ -101,6 +101,8 @@
 * Updated JSON schema validation.
 
 * Resolved redundant code.
+
+* Modified the naming convention check behavior in TestsuitesManagement to align with Robot Framework core standards.
 "
                            ]
                 }
