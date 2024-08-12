@@ -507,15 +507,9 @@ This method updates preprocessor and global params to global variable of RobotFr
 
 * No return variable
         '''
-        varNamePattern = r'^[a-zA-Z_][a-zA-Z0-9_]*$'
         lReservedKeyword = ['Settings', 'Variables', 'Keywords', 'Comments', 'Documentation', 'Metadata']
         if 'params' in self.oConfigParams and 'global' in self.oConfigParams['params']:
             for k,v in self.oConfigParams['params']['global'].items():
-                if not re.match(varNamePattern, k):
-                    self.bLoadedCfg = False
-                    self.sLoadedCfgLog['error'].append(f"Found invalid parameter name '{k}'.")
-                    self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
-                    raise Exception
                 if k in lReservedKeyword:
                     self.sLoadedCfgLog['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
                     self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
@@ -524,8 +518,9 @@ This method updates preprocessor and global params to global variable of RobotFr
                     continue
                 try:
                     self.__setGlobalVariable(k, v)
-                except:
-                    continue
+                except Exception as error:
+                    self.sLoadedCfgLog['error'].append(error)
+                    raise Exception
 
     def __del__(self):
         '''
