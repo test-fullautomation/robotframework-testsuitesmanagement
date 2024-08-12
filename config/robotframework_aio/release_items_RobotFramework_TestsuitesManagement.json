@@ -103,6 +103,12 @@
 * Resolved redundant code.
 
 * Modified the naming convention check behavior in TestsuitesManagement to align with Robot Framework core standards.
+
+* Updated the three dots feature:
+
+  After imported TestsuitesManagement library ``Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites``,
+  a configuration file could be loaded by ``Suite Setup    testsuites.testsuite_setup    .../config/variants_config.jsonp``. Beside 
+  absolute path and relative path, ``.../`` will help to navigate to ``/config/ directory in a test project.
 "
                            ]
                 }
