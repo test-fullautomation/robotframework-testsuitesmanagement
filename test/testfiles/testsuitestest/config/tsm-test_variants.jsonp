@@ -16,14 +16,14 @@
 {
   "default" : {
                 "name" : "tsm-test_config_default.jsonp",
-                "path" : "./config/"
+                "path" : "./"
               },
   "variant1" : {
                  "name" : "tsm-test_config_variant1.jsonp",
-                 "path" : "./config/"
+                 "path" : "./"
                },
   "variant2" : {
                  "name" : "tsm-test_config_variant2.jsonp",
-                 "path" : "./config/"
+                 "path" : "./"
                }
 }

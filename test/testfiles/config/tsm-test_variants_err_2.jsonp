@@ -16,7 +16,7 @@
 {
   "default" : {
                 "name" : "I_AM_NOT_EXISTING_FILE.jsonp",
-                "path" : "./config/"
+                "path" : "./"
               },
   "variant1" : {
                 "name" : "tsm-test_config_variant1.jsonp",

@@ -1,3 +1,4 @@
+# **************************************************************************************************************
 #  Copyright 2020-2023 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,12 +12,12 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-#######################################################################
-
+# **************************************************************************************************************
+#
 *** Settings ***
 #Force Tags        atestExcluded
 Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites
-Suite Setup      testsuites.testsuite_setup    ../../../general_config/testsuites_config.json
+Suite Setup      testsuites.testsuite_setup    .../general_config/testsuites_config.json
 Suite Teardown   testsuites.testsuite_teardown
 Test Setup       testsuites.testcase_setup
 Test Teardown    testsuites.testcase_teardown

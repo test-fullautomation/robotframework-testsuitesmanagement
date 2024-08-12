@@ -76,7 +76,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             if sTestsuiteCfgFile != '':
                 TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2 = True
                 TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
-                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = os.path.abspath(sTestsuiteCfgFile)
+                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
             else:
                 TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3 = True
             try:

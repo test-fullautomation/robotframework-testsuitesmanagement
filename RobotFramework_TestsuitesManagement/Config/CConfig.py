@@ -151,41 +151,6 @@ The loading configuration method is divided into 4 levels, level1 has the highes
     '''
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     __single          = None
-    sRootSuiteName    = ''
-    bConfigLoaded     = False
-    oConfigParams     = {}
-    sConfigName       = 'default'
-    sProjectName      = None
-    iTotalTestcases   = 0
-    iSuiteCount       = 0
-    iTestCount        = 0
-    sConfigFileName   = None
-    bLoadedCfg        = True
-    sLoadedCfgLog     = {"info" : [], "error" : [], "unknown": ''}
-    sTestSuiteCfg     = ''
-    sTestCfgFile      = ''
-    sTestcasePath     = ''
-    sMaxVersion       = ''
-    sMinVersion       = ''
-    sLocalConfig      = ''
-    lBuitInVariables  = []
-    rConfigFiles   = CStruct(
-                                bLevel1 = False,
-                                bLevel2 = False,
-                                bLevel3 = False,
-                                bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
-                            )
-
-    rMetaData      = CStruct(
-                                sVersionSW = '',
-                                sVersionHW     = '',
-                                sVersionTest   = '',
-                                sROBFWVersion  = get_full_version('Robot Framework')
-                            )
-
-    # Common configuration parameters
-    sWelcomeString  = None
-    sTargetName     = None
 
     def __new__(classtype, *args, **kwargs):
         '''
@@ -199,7 +164,41 @@ for None so that subclasses will create their own __single objects.
         return classtype.__single
 
     def __init__(self):
-        pass
+        self.sRootSuiteName    = ''
+        self.bConfigLoaded     = False
+        self.oConfigParams     = {}
+        self.sConfigName       = 'default'
+        self.sProjectName      = None
+        self.iTotalTestcases   = 0
+        self.iSuiteCount       = 0
+        self.iTestCount        = 0
+        self.sConfigFileName   = None
+        self.bLoadedCfg        = True
+        self.sLoadedCfgLog     = {"info" : [], "error" : [], "unknown": ''}
+        self.sTestSuiteCfg     = ''
+        self.sTestCfgFile      = ''
+        self.sTestcasePath     = ''
+        self.sMaxVersion       = ''
+        self.sMinVersion       = ''
+        self.sLocalConfig      = ''
+        self.lBuitInVariables  = []
+        self.rConfigFiles   = CStruct(
+                                    bLevel1 = False,
+                                    bLevel2 = False,
+                                    bLevel3 = False,
+                                    bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
+                                )
+
+        self.rMetaData      = CStruct(
+                                    sVersionSW = None,
+                                    sVersionHW     = None,
+                                    sVersionTest   = None,
+                                    sROBFWVersion  = get_full_version('Robot Framework')
+                                )
+
+        # Common configuration parameters
+        self.sWelcomeString  = None
+        self.sTargetName     = None
 
     def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
         """
@@ -435,20 +434,14 @@ to the same feature (the variant selection).")
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
         BuiltIn().set_suite_metadata("bundle_version", BUNDLE_VERSION, top=True)
-        if "version_sw" in suiteMetadata and self.rMetaData.sVersionSW == '':
-            pass
-        else:
+        if not ("version_sw" in suiteMetadata and self.rMetaData.sVersionSW == None):
             BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
-        if "version_hw" in suiteMetadata and self.rMetaData.sVersionHW == '':
-            pass
-        else:
+        if not ("version_hw" in suiteMetadata and self.rMetaData.sVersionHW == None):
             BuiltIn().set_suite_metadata("version_hw", self.rMetaData.sVersionHW, top=True)
-        if "version_test" in suiteMetadata and self.rMetaData.sVersionTest == '':
-            pass
-        else:
+        if not ("version_test" in suiteMetadata and self.rMetaData.sVersionTest == None):
             BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
 
-        CConfig.oConfigParams = copy.deepcopy(oJsonCfgData)
+        self.oConfigParams = copy.deepcopy(oJsonCfgData)
 
         self.__updateGlobalVariable()
         try:
@@ -514,15 +507,9 @@ This method updates preprocessor and global params to global variable of RobotFr
 
 * No return variable
         '''
-        varNamePattern = r'^[a-zA-Z_][a-zA-Z0-9_]*$'
         lReservedKeyword = ['Settings', 'Variables', 'Keywords', 'Comments', 'Documentation', 'Metadata']
         if 'params' in self.oConfigParams and 'global' in self.oConfigParams['params']:
             for k,v in self.oConfigParams['params']['global'].items():
-                if not re.match(varNamePattern, k):
-                    self.bLoadedCfg = False
-                    self.sLoadedCfgLog['error'].append(f"Found invalid parameter name '{k}'.")
-                    self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
-                    raise Exception
                 if k in lReservedKeyword:
                     self.sLoadedCfgLog['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
                     self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
@@ -531,8 +518,9 @@ This method updates preprocessor and global params to global variable of RobotFr
                     continue
                 try:
                     self.__setGlobalVariable(k, v)
-                except:
-                    continue
+                except Exception as error:
+                    self.sLoadedCfgLog['error'].append(error)
+                    raise Exception
 
     def __del__(self):
         '''
@@ -560,6 +548,22 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
 
 * No return variable
         '''
+        if self.sTestSuiteCfg.startswith('.../'):
+            sTestSuiteCfgStart = self.sTestSuiteCfg
+            self.sTestSuiteCfg = self.sTestSuiteCfg[4:]
+            if os.path.exists(CString.NormalizePath('./' + self.sTestSuiteCfg)):
+                self.sTestSuiteCfg = './' + self.sTestSuiteCfg
+            else:
+                bFoundTestSuiteCfg = False
+                for i in range(0, 30):
+                    self.sTestSuiteCfg = '../' + self.sTestSuiteCfg
+                    if os.path.exists(CString.NormalizePath(self.sTestSuiteCfg)):
+                        bFoundTestSuiteCfg = True
+                        break
+                if not bFoundTestSuiteCfg:
+                    self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
+                    self.sLoadedCfgLog['error'].append(f"Could not find the variant configuration file: '{sTestSuiteCfgStart}'")
+                    return False
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
@@ -592,6 +596,8 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
         try:
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
+            if re.match(r'^\.+/*.*', sTestCfgDir):
+                sTestCfgDir = os.path.dirname(self.sTestSuiteCfg) + '/' + sTestCfgDir + '/'
         except:
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.sLoadedCfgLog['error'].append(f"The 'name' or 'path' property is not defined for the variant '{self.sConfigName}'.")
@@ -602,29 +608,7 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
             self.sLoadedCfgLog['error'].append(f"The configuration file name of variant '{self.sConfigName}' must not be empty.")
             self.sLoadedCfgLog['error'].append(f"In file: '{os.path.abspath(self.sTestSuiteCfg)}'")
             return False
-
-        if sTestCfgDir.startswith('.../'):
-            sTestCfgDirStart = sTestCfgDir
-            sTestCfgDir = sTestCfgDir[4:]
-            if os.path.exists(CString.NormalizePath('./' + sTestCfgDir)):
-                sTestCfgDir = './' + sTestCfgDir
-            else:
-                bFoundTestCfgDir = False
-                sCheckCfgDir = ''
-                for i in range(0, 30):
-                    sTestCfgDir = '../' + sTestCfgDir
-                    if sCheckCfgDir == CString.NormalizePath(sTestCfgDir):
-                        break
-                    else:
-                        sCheckCfgDir = CString.NormalizePath(sTestCfgDir)
-                    if os.path.exists(sCheckCfgDir):
-                        bFoundTestCfgDir = True
-                        break
-                if bFoundTestCfgDir == False:
-                    self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
-                    self.sLoadedCfgLog['error'].append(f"Could not find out config directory: '{sTestCfgDirStart}'")
-                    return False
-
+        
         self.sTestCfgFile = sTestCfgDir + self.sTestCfgFile
         return True
 
@@ -721,7 +705,7 @@ execution of testsuite is terminated with "unknown" state
 * No return variable
         '''
         sCurrentVersion = BUNDLE_VERSION
-        tCurrentVersion = CConfig.tupleVersion(sCurrentVersion)
+        tCurrentVersion = self.tupleVersion(sCurrentVersion)
 
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
@@ -730,17 +714,17 @@ execution of testsuite is terminated with "unknown" state
             logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
         if self.sMinVersion != '':
-            tMinVersion = CConfig.tupleVersion(self.sMinVersion)
+            tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
-            tMaxVersion = CConfig.tupleVersion(self.sMaxVersion)
+            tMaxVersion = self.tupleVersion(self.sMaxVersion)
         bVersionCheck = True
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.versioncontrol_error('wrong_minmax', self.sMinVersion, self.sMaxVersion)
             bVersionCheck = False
-        if tMinVersion and not CConfig.bValidateMinVersion(tCurrentVersion, tMinVersion):
+        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
             self.versioncontrol_error('conflict_min', self.sMinVersion, sCurrentVersion)
             bVersionCheck = False
-        if tMaxVersion and not CConfig.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
+        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
             self.versioncontrol_error('conflict_max', self.sMaxVersion, sCurrentVersion)
             bVersionCheck = False
 
