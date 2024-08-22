@@ -119,6 +119,22 @@
   | ``Suite Setup    testsuites.testsuite_setup    .../config/variants_config.jsonp``
 
   The Robot Framework now also recursively considers parent directories while searching for variant configuration files starting with the actual relative path.
+
+  **Important**: This feature previously was located **inside** the variant configuration files, e.g.:
+
+  | ``\"default\": \u007b``
+  | ``  \"name\": \"testconfig.json\",``
+  | ``  \"path\": \".../\"``
+  | ``\u007d``
+
+  **This is not supported any more!** Only relative paths to the actual directory (``\"path\": \"./\"``) and to the parent directory (``\"path\": \"../\"``) are possible.
+
+  **Why this change?**
+
+  **Reason 1**: It would be confusing to have the *three-dots* syntax available at two different positions in parallel in the code.
+
+  **Reason 2**: It is possible now to move the folder containing the variant configuration files and the parameter configuration files up and down in the hierarchy of directories in the file sytem
+  **without the need to adapt any import path afterwards**!
 "
                            ]
                 }
