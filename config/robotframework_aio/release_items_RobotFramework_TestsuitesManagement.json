@@ -94,7 +94,7 @@
 "
                             ]
                  ,
-                 "0.12.0.;0.13.0." : [
+                 "0.12.1.;0.13.0." : [
 "
 * Improved error messages in case of issues while loading the test configuration.
 
@@ -102,13 +102,39 @@
 
 * Resolved redundant code.
 
-* Modified the naming convention check behavior in TestsuitesManagement to align with Robot Framework core standards.
+* Modified the naming convention check to be aligned with Robot Framework core standards.
 
-* Updated the three dots feature:
+* Extended import of variant configuration files
 
-  After imported TestsuitesManagement library ``Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites``,
-  a configuration file could be loaded by ``Suite Setup    testsuites.testsuite_setup    .../config/variants_config.jsonp``. Beside 
-  absolute path and relative path, ``.../`` will help to navigate to ``/config/ directory in a test project.
+  After the **RobotFramework_TestsuitesManagement** library is imported
+
+  | ``Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites``
+
+  a variant configuration file is usually loaded in a way like this:
+
+  | ``Suite Setup    testsuites.testsuite_setup    ./config/variants_config.jsonp``
+
+  With the *three-dots* syntax extension for relative paths, the positional dependency between the file containing the suite setup and the file with the variant configuration, is made dynamic.
+
+  | ``Suite Setup    testsuites.testsuite_setup    .../config/variants_config.jsonp``
+
+  The Robot Framework now also recursively considers parent directories while searching for variant configuration files starting with the actual relative path.
+
+  **Important**: This feature previously was located **inside** the variant configuration files, e.g.:
+
+  | ``\"default\": \u007b``
+  | ``  \"name\": \"testconfig.json\",``
+  | ``  \"path\": \".../\"``
+  | ``\u007d``
+
+  **This is not supported any more!** Only relative paths to the actual directory (``\"path\": \"./\"``) and to the parent directory (``\"path\": \"../\"``) are possible.
+
+  **Why this change?**
+
+  **Reason 1**: It would be confusing to have the *three-dots* syntax available at two different positions in parallel in the code.
+
+  **Reason 2**: It is possible now to move the folder containing the variant configuration files and the parameter configuration files up and down in the hierarchy of directories in the file sytem
+  **without the need to adapt any import path afterwards**!
 "
                            ]
                 }

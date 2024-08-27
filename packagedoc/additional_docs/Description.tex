@@ -93,19 +93,19 @@ This file configures the access to all variant dependent \plog{robot_config*.jso
 {
   "default": {
                "name": "robot_execution_config.jsonp",
-               "path": ".../config/"
+               "path": "./config/"
              },
   "variant_1": {
                  "name": "robot_config_variant_1.jsonp",
-                 "path": ".../config/"
+                 "path": "./config/"
                },
   "variant_2": {
                  "name": "robot_config_variant_2.jsonp",
-                 "path": ".../config/"
+                 "path": "./config/"
                },
   "variant_3": {
                  "name": "robot_config_variant_3.jsonp",
-                 "path": ".../config/"
+                 "path": "./config/"
                }
 }
 \end{pythoncode}
@@ -114,26 +114,7 @@ The example above contains definitions for three variants with names:\\
 \pcode{variant_1}, \pcode{variant_2} and \pcode{variant_3}. Additionally a variant named \pcode{default} is defined.
 This default configuration becomes active in case of no certain variant name is provided when the test suite is being executed.
 
-Another aspect is important: the \textbf{three dots}.
-The path to the \plog{robot_config*.jsonp} files depends on the test file location. A
-different number of \plog{../} is required dependent on the directory depth of the test
-case location.
-
-Therefore we use here three dots to tell the \pkg\ to search from the test
-file location up till the \plog{robot_config*.jsonp} files are found:
-
-\begin{pythonlog}
-./config/robot_config.jsonp
-../config/robot_config.jsonp
-../../config/robot_config.jsonp
-../../../config/robot_config.jsonp
-\end{pythonlog}
-
-and so on.
-
-Hint: The paths to the \plog{robot_config*.jsonp} files are relative to the position of the test suite - \textbf{and not relative to the position of the
-mapping file in which they are defined!} You are free to move your test suites one or more level up or down in the file system, but using the
-three dots notation enables you to let the position of the \plog{config} folder unchanged.
+The paths to the \plog{robot_config*.jsonp} files could be absolute paths or relative to the position of the mapping file.
 
 It is of course still possible to use the standard notation for relative paths:
 
@@ -340,8 +321,29 @@ the \pkg\ falls back to the default configuration (level 4).
 In case you want to realize a variant handling you have to provide the path and the name of a variants configuration file to the \rcode{testsuite_setup}:
 
 \begin{robotcode}
-Suite Setup    tm.testsuite_setup    ./config/exercise_variants.jsonp
+Suite Setup    tm.testsuite_setup    .../config/exercise_variants.jsonp
 \end{robotcode}
+
+The path to the variants configuration file can be absolute path or relative to the position of the robot file.
+
+Another aspect is important: the \textbf{three dots}.
+The path to the \plog{/config/exercise_variants.jsonp} file depends on the robot file location. A
+different number of \plog{../} is required dependent on the directory depth of the robot file location.
+
+Therefore we use here three dots to tell the \pkg\ to search from the robot
+file location up till the \plog{/config/exercise_variants.jsonp} file is found:
+
+\begin{pythonlog}
+./config/exercise_variants.jsonp
+../config/exercise_variants.jsonp
+../../config/exercise_variants.jsonp
+../../../config/exercise_variants.jsonp
+\end{pythonlog}
+
+and so on.
+
+Hint: You are free to move your test suites one or more level up or down in the file system, but using the
+three dots notation enables you to let the position of the \plog{config} folder unchanged.
 
 To ease the analysis of a test execution, the log file contains informations about the selected level and the path and the name of the used
 configuration file, for example:
