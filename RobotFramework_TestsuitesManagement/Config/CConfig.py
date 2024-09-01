@@ -263,7 +263,7 @@ robot with configuration level 2.")
 
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
-                    sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1:][0]
+                    sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1]
                     sJsonFile1 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.jsonp"
                     sJsonFile2 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.json"
                     if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2):
