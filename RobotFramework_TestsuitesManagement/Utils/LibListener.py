@@ -109,11 +109,6 @@ This _start_suite method hooks to every starting testsuite of robot run.
                 TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1 = True
                 TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
                 TM.CTestsuitesCfg.oConfig.sTestCfgFile = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
-                try:
-                    TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
-                except:
-                    TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    pass
 
         TM.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", TM.CTestsuitesCfg.oConfig.iSuiteCount)
