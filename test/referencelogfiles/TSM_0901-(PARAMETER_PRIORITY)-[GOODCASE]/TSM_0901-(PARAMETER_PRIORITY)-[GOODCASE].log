@@ -2,6 +2,15 @@
 20240509 04:16:39.383 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
 ==============================================================================
 20240509 04:16:39.414 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 04:16:39.414 - INFO - Set suite metadata 'project' to value 'tsm-test_config_parameter_priority'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'machine' to value 'fv-az972-879'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'tester' to value ''.
+20240509 04:16:39.414 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'bundle_version' to value '0.13.0.16'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20240509 04:16:39.414 - INFO - Set suite metadata 'version_test' to value 'None'.
+20240509 04:16:39.414 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...
 20240509 04:16:39.414 - INFO - Running with configuration level 1
 20240509 04:16:39.414 - INFO - RobotFramework AIO version check passed!
 20240509 04:16:39.414 - INFO - Loaded configuration file 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.jsonp'
@@ -9,7 +18,7 @@
 20240509 04:16:39.414 - INFO - Local config file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'
 20240509 04:16:39.414 - INFO - Number of test suites: 1
 20240509 04:16:39.414 - INFO - Total number of testcases: 1
-20240509 04:16:39.414 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20240509 04:16:39.414 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
 20240509 04:16:39.414 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
 ------------------------------------------------------------------------------
