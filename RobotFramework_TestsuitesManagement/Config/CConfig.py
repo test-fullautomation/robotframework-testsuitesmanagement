@@ -33,6 +33,7 @@ import copy
 from jsonschema import validate
 from builtins import staticmethod
 
+import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
 from PythonExtensionsCollection.String.CString import CString
 
@@ -182,13 +183,7 @@ for None so that subclasses will create their own __single objects.
         self.sMinVersion       = ''
         self.sLocalConfig      = ''
         self.lBuitInVariables  = []
-        self.rConfigFiles   = CStruct(
-                                    bLevel1 = False,
-                                    bLevel2 = False,
-                                    bLevel3 = False,
-                                    bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
-                                )
-
+        self.configLevel      = None
         self.rMetaData      = CStruct(
                                     sVersionSW = None,
                                     sVersionHW     = None,
@@ -243,9 +238,8 @@ This loadCfg method uses to load configuration's parameters from json files.
 * No return variable
         '''
         bConfigLevel2 = True
-        if not self.rConfigFiles.bLevel1:
-            if self.rConfigFiles.bLevel2:
-                self.rConfigFiles.bLevel4 = False
+        if self.configLevel != TM.CConfigLevel.LEVEL_1:
+            if self.configLevel==TM.CConfigLevel.LEVEL_2:
                 bConfigLevel2 = self.__loadConfigFileLevel2()
             else:
                 if r'${variant}' in BuiltIn().get_variables():
@@ -262,6 +256,7 @@ robot with configuration level 2.")
                     raise Exception
 
                 if os.path.isdir(self.sTestcasePath + 'config'):
+                    self.configLevel = TM.CConfigLevel.LEVEL_3
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
                     sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1]
                     sJsonFile1 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.jsonp"
@@ -280,14 +275,11 @@ robot with configuration level 2.")
                         raise Exception
                     elif os.path.isfile(sJsonFile1):
                         self.sTestCfgFile = sJsonFile1
-                        self.rConfigFiles.bLevel4 = False
                     elif os.path.isfile(sJsonFile2):
                         self.sTestCfgFile = sJsonFile2
-                        self.rConfigFiles.bLevel4 = False
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
-                        self.rConfigFiles.bLevel3 = False
-                if self.rConfigFiles.bLevel4:
-                    self.rConfigFiles.bLevel3 = False
+                        self.configLevel = TM.CConfigLevel.LEVEL_4
+                if self.configLevel==TM.CConfigLevel.LEVEL_4:
                     if not self.bConfigLoaded:
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
                         self.sTestCfgFile = sDefaultConfig
@@ -295,12 +287,9 @@ robot with configuration level 2.")
             self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
 
         if self.bConfigLoaded:
-            if self.rConfigFiles.bLevel1:
+            if self.configLevel==TM.CConfigLevel.LEVEL_1 or self.configLevel==TM.CConfigLevel.LEVEL_4:
                 return
-            elif not self.rConfigFiles.bLevel2 and not self.rConfigFiles.bLevel3:
-                return
-
-        if self.rConfigFiles.bLevel1:
+        if self.configLevel==TM.CConfigLevel.LEVEL_1:
             if self.sConfigName != 'default':
                 self.bLoadedCfg = False
                 self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
@@ -538,7 +527,7 @@ This destructor method.
 
     def __loadConfigFileLevel2(self) -> bool:
         '''
-This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLevel2 == True.
+This __loadConfigFileLevel2 method loads configuration in case configLevel is TM.CConfigLevel.LEVEL_2.
 
 **Arguments:**
 
