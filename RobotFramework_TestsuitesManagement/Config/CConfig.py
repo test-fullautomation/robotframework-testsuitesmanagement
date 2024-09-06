@@ -279,6 +279,8 @@ robot with configuration level 2.")
                         self.sTestCfgFile = sJsonFile2
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
                         self.configLevel = TM.CConfigLevel.LEVEL_4
+                else:
+                    self.configLevel = TM.CConfigLevel.LEVEL_4
                 if self.configLevel==TM.CConfigLevel.LEVEL_4:
                     if not self.bConfigLoaded:
                         sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
