@@ -1,19 +1,19 @@
 ==============================================================================
-20240509 04:16:13.386 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20240905 06:11:19.979 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20240509 04:16:13.401 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20240509 04:16:13.401 - ERROR - Required parameter 'Project' is missing in file 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
-20240509 04:16:13.401 - ERROR - JSON schema validation failed!
-20240509 04:16:13.401 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:13.401 - INFO - +- END SETUP: tm.Testsuite Setup (16)
+20240905 06:11:19.979 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20240905 06:11:19.994 - ERROR - Required parameter 'Project' is missing in file 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+20240905 06:11:19.994 - ERROR - JSON schema validation failed!
+20240905 06:11:19.994 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240905 06:11:20.010 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20240509 04:16:13.401 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20240905 06:11:20.010 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:13.401 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
+20240905 06:11:20.010 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
 ------------------------------------------------------------------------------
-20240509 04:16:13.401 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:13.401 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:13.401 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240905 06:11:20.010 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240905 06:11:20.010 - INFO - testsuite_teardown: Will be implemented later
+20240905 06:11:20.010 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:13.401 - INFO - + END SUITE: Tsm-Testfile-01 (109)
+20240905 06:11:20.010 - INFO - + END SUITE: Tsm-Testfile-01 (125)
 ==============================================================================

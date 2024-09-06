@@ -1,20 +1,20 @@
 ==============================================================================
-20240509 04:16:09.149 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20240905 06:11:15.694 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20240509 04:16:09.149 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240509 04:16:09.180 - ERROR - Testsuite management - Loading configuration level 2 failed!
-20240509 04:16:09.180 - ERROR - The variant 'I_AM_NOT_DEFINED' is not defined in 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.
-20240509 04:16:09.180 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1',
-20240509 04:16:09.180 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:09.180 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20240905 06:11:15.694 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240905 06:11:15.725 - ERROR - Testsuite management - Loading configuration level 2 failed!
+20240905 06:11:15.725 - ERROR - The variant 'I_AM_NOT_DEFINED' is not defined in 'D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.
+20240905 06:11:15.725 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1',
+20240905 06:11:15.725 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240905 06:11:15.725 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20240509 04:16:09.180 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20240905 06:11:15.725 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:09.180 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20240905 06:11:15.725 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20240509 04:16:09.180 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:09.180 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:09.180 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20240905 06:11:15.725 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240905 06:11:15.725 - INFO - testsuite_teardown: Will be implemented later
+20240905 06:11:15.725 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:09.180 - INFO - + END SUITE: Tsm-Testfile-02 (125)
+20240905 06:11:15.725 - INFO - + END SUITE: Tsm-Testfile-02 (125)
 ==============================================================================
