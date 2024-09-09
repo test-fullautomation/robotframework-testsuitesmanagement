@@ -321,13 +321,7 @@ to the same feature (the variant selection).")
             raise Exception
 
         robotCoreData = BuiltIn().get_variables()
-        ROBFW_AIO_Data = {}
-        for k, v in robotCoreData.items():
-            key = re.findall("\s*{\s*(.+)\s*}\s*", k)[0]
-            if 'CONFIG' == key:
-                continue
-            ROBFW_AIO_Data.update({key:v})
-        oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
+        oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
