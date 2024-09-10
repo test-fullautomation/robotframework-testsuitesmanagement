@@ -415,6 +415,7 @@ to the same feature (the variant selection).")
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                self.sLoadedCfgLog['unknown'].append("Unable to load the test configuration. The test execution will be aborted!")
                 raise Exception
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
@@ -424,6 +425,7 @@ to the same feature (the variant selection).")
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                self.sLoadedCfgLog['unknown'].append("Unable to load the test configuration. The test execution will be aborted!")
                 raise Exception
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
