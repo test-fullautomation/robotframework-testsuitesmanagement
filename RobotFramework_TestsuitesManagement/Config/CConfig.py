@@ -409,9 +409,22 @@ to the same feature (the variant selection).")
         self.sWelcomeString = oJsonCfgData['WelcomeString']
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
+            # Check the format of Maximum_version value
+            try:
+                self.tupleVersion(self.sMaxVersion)
+            except Exception as error:
+                self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
+                self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                raise Exception
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
-
+            # Check the format of Minimum_version value
+            try:
+                self.tupleVersion(self.sMinVersion)
+            except Exception as error:
+                self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
+                self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                raise Exception
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)
@@ -804,7 +817,7 @@ it into sub tuple for version comparision.
 
             return tuple(lSubVersion)
         else:
-            raise Exception("Wrong format in version info")
+            raise Exception("Wrong format in version information")
 
     @staticmethod
     def tupleVersion(sVersion):
@@ -846,8 +859,8 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
         try:
             # verify the version info is a number
             return tuple(map(lambda x: CConfig.bValidateSubVersion(x), lVersion))
-        except Exception:
-            BuiltIn().fatal_error(f"Provided version '{sVersion}' is not a correct version format.")
+        except Exception as error:
+            raise Exception(f"{error} '{sVersion}'")
 
     def versioncontrol_error(self, reason, version1, version2):
         '''

@@ -29,12 +29,10 @@
       "type": "string"
     },
     "Maximum_version": {
-      "type": ["string", "null"],
-      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      "type": ["string", "null"]
     },
     "Minimum_version": {
-      "type": ["string", "null"],
-      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      "type": ["string", "null"]
     },
 	"params": {
     "type": "object",
