@@ -429,10 +429,6 @@ to the same feature (the variant selection).")
         self.oConfigParams = copy.deepcopy(oJsonCfgData)
 
         self.__updateGlobalVariable()
-        try:
-            del oJsonCfgData['params']['global']
-        except:
-            pass
 
         jsonDotdict = DotDict(oJsonCfgData)
         BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
