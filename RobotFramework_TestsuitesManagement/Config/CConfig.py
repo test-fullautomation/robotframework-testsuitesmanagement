@@ -308,7 +308,7 @@ to the same feature (the variant selection).")
                 self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                 raise Exception
 
-        if not bConfigLevel2: # Loading configuration level 2 failed, method self.__loadConfigFileLevel2() return False
+        if self.configLevel==TM.CConfigLevel.LEVEL_2 and not bConfigLevel2: # Loading configuration level 2 failed, method self.__loadConfigFileLevel2() return False
             self.bLoadedCfg = False
             # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
