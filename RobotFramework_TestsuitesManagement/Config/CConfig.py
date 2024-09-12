@@ -166,7 +166,6 @@ for None so that subclasses will create their own __single objects.
 
     def __init__(self):
         self.sRootSuiteName    = ''
-        self.bConfigLoaded     = False
         self.oConfigParams     = {}
         self.sConfigName       = 'default'
         self.sProjectName      = None
@@ -183,7 +182,7 @@ for None so that subclasses will create their own __single objects.
         self.sMinVersion       = ''
         self.sLocalConfig      = ''
         self.lBuitInVariables  = []
-        self.configLevel      = None
+        self.configLevel       = TM.CConfigLevel.LEVEL_4
         self.rMetaData      = CStruct(
                                     sVersionSW = None,
                                     sVersionHW     = None,
@@ -237,11 +236,34 @@ This loadCfg method uses to load configuration's parameters from json files.
 
 * No return variable
         '''
-        bConfigLevel2 = True
-        if self.configLevel != TM.CConfigLevel.LEVEL_1:
+        # Detect a configuration level and get the oConfig.sTestCfgFile to handle
+        if self.configLevel == TM.CConfigLevel.LEVEL_1:
+            # Configuration level 1, the oConfig.sTestCfgFile was already set in the LibListener.py module
+            if self.sConfigName != 'default':
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
+is used together with parameter 'config_file'.")
+                self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
+to the same feature (the variant selection).")
+                self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
+
+            if self.sTestCfgFile == '':
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
+        else:
             if self.configLevel==TM.CConfigLevel.LEVEL_2:
-                bConfigLevel2 = self.__loadConfigFileLevel2()
+                # Configuration level 2, the oConfig.sTestCfgFile will be detected in method __loadConfigFileLevel2()
+                self.bLoadedCfg = self.__loadConfigFileLevel2()
+                if not self.bLoadedCfg:
+                    # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
+                    self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                    raise Exception
             else:
+                # Configuration level 3
                 if r'${variant}' in BuiltIn().get_variables():
                     self.bLoadedCfg = False
                     self.sLoadedCfgLog['error'].append(f"Not able to get a configuration for variant '{self.sConfigName}' \
@@ -254,7 +276,7 @@ because of a variant configuration file is not available.")
 robot with configuration level 2.")
                     self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                     raise Exception
-
+                # Detect the oConfig.sTestCfgFile the configuration level 3
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     self.configLevel = TM.CConfigLevel.LEVEL_3
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
@@ -278,48 +300,19 @@ robot with configuration level 2.")
                     elif os.path.isfile(sJsonFile2):
                         self.sTestCfgFile = sJsonFile2
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
+                        # Pre-condition of the configuration level 3 didn't match, set default configuration level 4.
                         self.configLevel = TM.CConfigLevel.LEVEL_4
-                else:
-                    self.configLevel = TM.CConfigLevel.LEVEL_4
                 if self.configLevel==TM.CConfigLevel.LEVEL_4:
-                    if not self.bConfigLoaded:
-                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
-                        self.sTestCfgFile = sDefaultConfig
-
+                    # Handling the configuration level 4
+                    sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
+                    self.sTestCfgFile = sDefaultConfig
             self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
-
-        if self.bConfigLoaded:
-            if self.configLevel==TM.CConfigLevel.LEVEL_1 or self.configLevel==TM.CConfigLevel.LEVEL_4:
-                return
-        if self.configLevel==TM.CConfigLevel.LEVEL_1:
-            if self.sConfigName != 'default':
-                self.bLoadedCfg = False
-                self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
-is used together with parameter 'config_file'.")
-                self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
-to the same feature (the variant selection).")
-                self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
-
-            if self.sTestCfgFile == '':
-                self.bLoadedCfg = False
-                self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
-
-        if self.configLevel==TM.CConfigLevel.LEVEL_2 and not bConfigLevel2: # Loading configuration level 2 failed, method self.__loadConfigFileLevel2() return False
-            self.bLoadedCfg = False
-            # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
-            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-            raise Exception
-
+        # Handling the oConfig.sTestCfgFile file to load the configuration object
         if not os.path.isfile(self.sTestCfgFile):
             self.bLoadedCfg = False
             self.sLoadedCfgLog['error'].append(f"Did not find configuration file: '{self.sTestCfgFile}'!")
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
-
         robotCoreData = BuiltIn().get_variables()
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
@@ -335,9 +328,9 @@ to the same feature (the variant selection).")
                 self.sLoadedCfgLog['error'].append(f"In file: {self.sTestCfgFile}")
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
-
-        self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
+        # Handling local configuration
         if self.sLocalConfig != '':
+            self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
             try:
                 oLocalConfig = oJsonPreprocessor.jsonLoad(self.sLocalConfig)
             except Exception as error:
@@ -447,9 +440,6 @@ to the same feature (the variant selection).")
 
         jsonDotdict = DotDict(oJsonCfgData)
         BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
-
-        self.bConfigLoaded = True
-
         if len(oJsonPreprocessor.dUpdatedParams) > 0:
             for param in oJsonPreprocessor.dUpdatedParams:
                 logger.info(f"The parameter '{param}' is updated")

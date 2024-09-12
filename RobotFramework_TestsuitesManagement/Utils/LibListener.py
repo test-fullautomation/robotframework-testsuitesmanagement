@@ -135,7 +135,7 @@ This _end_suite method hooks to every ending testsuite of robot run.
         '''
         if TM.CTestsuitesCfg.oConfig.configLevel != TM.CConfigLevel.LEVEL_1:
             TM.CTestsuitesCfg.oConfig.sTestCfgFile = ''
-        TM.CTestsuitesCfg.oConfig.configLevel = None
+        TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_4
         dispatch('scope_end', data.longname)
 
     def _start_test(self, data, result):

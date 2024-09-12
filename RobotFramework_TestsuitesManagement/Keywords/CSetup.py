@@ -71,8 +71,6 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             if sTestsuiteCfgFile != '':
                 TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_2
                 TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
-            else:
-                TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_3
             try:
                 TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
             except:
