@@ -95,14 +95,11 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                         logger.error(infoMsg)
             BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
             return
-        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_1:
-            logger.info('Running with configuration level 1')
-        elif TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_2:
-            logger.info('Running with configuration level 2')
-        elif TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_3:
-            logger.info('Running with configuration level 3')
+        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
+        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
+            logger.warn(msg)
         else:
-            logger.warn("Running with configuration level 4!")
+            logger.info(msg)
 
         TM.CTestsuitesCfg.oConfig.verifyVersion()
         logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
