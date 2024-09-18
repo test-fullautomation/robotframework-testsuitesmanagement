@@ -16,6 +16,9 @@ import copy
 import os
 
 import RobotFramework_TestsuitesManagement as TM
+
+from RobotframeworkExtensions.Collection import Collection as RFExt
+
 from robot.api.deco import keyword
 from robot.api import logger
 
@@ -108,6 +111,9 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             logger.info(f"Local config file: '{TM.CTestsuitesCfg.oConfig.sLocalConfig}'")
         logger.info(f"Number of test suites: {TM.CTestsuitesCfg.oConfig.iSuiteCount}")
         logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
+
+        # dump of all Robot Framework parameters in current scope, based on 'ConfigDump' filter criteria defined in test configuration file
+        RFExt.get_rf_parameters(**TM.CTestsuitesCfg.oConfig.dConfigDump)
 
     @keyword
     def testsuite_teardown(self):

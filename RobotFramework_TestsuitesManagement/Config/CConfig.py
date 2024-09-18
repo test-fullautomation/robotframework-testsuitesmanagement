@@ -193,6 +193,7 @@ for None so that subclasses will create their own __single objects.
         # Common configuration parameters
         self.sWelcomeString  = None
         self.sTargetName     = None
+        self.dConfigDump     = None
 
     def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
         """
@@ -399,6 +400,7 @@ robot with configuration level 2.")
 
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
+        self.dConfigDump = oJsonCfgData['ConfigDump']
         self.sWelcomeString = oJsonCfgData['WelcomeString']
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]

@@ -25,6 +25,9 @@
         }
       }
     },
+    "ConfigDump": {
+      "type": "object"
+    },
     "TargetName": {
       "type": "string"
     },
