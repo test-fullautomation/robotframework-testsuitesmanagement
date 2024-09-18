@@ -20,8 +20,8 @@ from robot.api.deco import keyword
 from robot.api import logger
 
 from robot.libraries.BuiltIn import BuiltIn
-
-
+from robot.conf import RobotSettings
+from tabulate import tabulate
 
 
 class CSetupKeywords(object):
@@ -95,19 +95,68 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                         logger.error(infoMsg)
             BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
             return
-        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
-        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
-            logger.warn(msg)
-        else:
-            logger.info(msg)
-
         TM.CTestsuitesCfg.oConfig.verifyVersion()
-        logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
-        logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
-        if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
-            logger.info(f"Local config file: '{TM.CTestsuitesCfg.oConfig.sLocalConfig}'")
-        logger.info(f"Number of test suites: {TM.CTestsuitesCfg.oConfig.iSuiteCount}")
-        logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
+        # -- levels description
+        levelsInfo = {1 : "configuration file in command line",
+                    2 : "variant name in command line",
+                    3 : "configuration file in local config folder",
+                    4 : "default configuration (fallback solution)"}
+        tableRows = []
+        # -- 1. Common information (small extract from what is available in RobotSettings())
+        robotSettings = RobotSettings()
+        logLevel = robotSettings.log_level
+        tableRows.append(["[COMMON]", "Log level", f"{logLevel}"])
+        output = robotSettings.output
+        tableRows.append(["[COMMON]", "Output", f"{output}"])
+        log = robotSettings.log
+        tableRows.append(["[COMMON]", "Log", f"{log}"])
+        report = robotSettings.report
+        tableRows.append(["[COMMON]", "Report", f"{report}"])
+        splitLog = robotSettings.split_log
+        tableRows.append(["[COMMON]", "Split log", f"{splitLog}"])
+        include = robotSettings.include
+        if include is not None:
+            tableRows.append(["[COMMON]", "Include", f"{include}"])
+        exclude = robotSettings.exclude
+        if exclude is not None:
+            tableRows.append(["[COMMON]", "Exclude", f"{exclude}"])
+        pythonPath = robotSettings.pythonpath
+        if len(pythonPath)>0:
+            tableRows.append(["[COMMON]", "Python path", f"{pythonPath}"])
+        elif os.getenv('RobotPythonPath'):
+            tableRows.append(["[COMMON]", "Python path", f"{os.getenv('RobotPythonPath')}"])
+        statusRc = robotSettings.status_rc
+        tableRows.append(["[COMMON]", "Status rc", f"{statusRc}"])
+        removeKeywords = robotSettings.remove_keywords
+        if len(removeKeywords)>0:
+            tableRows.append(["[COMMON]", "Remove keywords", f"{removeKeywords}"])
+        # -- 2. Testsuite setup information
+        iConfigLevel = TM.CTestsuitesCfg.oConfig.configLevel.value
+        sConfigLevelInfo = levelsInfo[iConfigLevel]
+        tableRows.append(["[TESTSUITE SETUP]", "Configuration level", f"{iConfigLevel} ({sConfigLevelInfo})"])
+        tableRows.append(["[TESTSUITE SETUP]", "Variant configuration file", f"{TM.CTestsuitesCfg.oConfig.sTestSuiteCfg}"])
+        tableRows.append(["[TESTSUITE SETUP]", "Loaded configuration file", f"{TM.CTestsuitesCfg.oConfig.sTestCfgFile}"])
+        if TM.CTestsuitesCfg.oConfig.sLocalConfig.strip()!='':
+            tableRows.append(["[TESTSUITE SETUP]", "Local configuration file", f"{TM.CTestsuitesCfg.oConfig.sLocalConfig}"])
+        tableRows.append(["[TESTSUITE SETUP]", "Suite Path", f"{TM.CTestsuitesCfg.oConfig.sTestcasePath}"])
+        tableRows.append(["[TESTSUITE SETUP]", "Test suite number", f"{TM.CTestsuitesCfg.oConfig.iSuiteCount}"])
+        tableRows.append(["[TESTSUITE SETUP]", "Number of testcases", f"{TM.CTestsuitesCfg.oConfig.iTotalTestcases}"])
+        # -- 3. Metadata information
+        suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
+        for key, value in suiteMetadata.items():
+            tableRows.append(["[METADATA]", f"{key}", f"{value}"])
+        # -- 4. Configuration parameters information
+        userConfig = TM.CTestsuitesCfg.oConfig.oConfigParams['params']['global']
+        maxChar = 150
+        for key, value in userConfig.items():
+            strValue = f"{value}"
+            if len(strValue) > maxChar:
+                value = strValue[:maxChar] + " ..."
+            tableRows.append(["[TESTSUITE CONFIG]", f"{key}", f"{value}"])
+        # Convert to table and log
+        headers = ["Information Type", "Parameter Name", "Value"]
+        parameterTable = tabulate(tableRows, headers, tablefmt="fancy_grid")
+        BuiltIn().log("\n" + parameterTable, level="INFO", html=False, console=True)
 
     @keyword
     def testsuite_teardown(self):
@@ -160,6 +209,28 @@ This get_config defines the ``Get Config`` keyword gets the current config objec
   / *Type*: json /
         '''
         return copy.deepcopy(TM.CTestsuitesCfg.oConfig.oConfigParams)
+    
+    @keyword
+    def dump_config_info(self):
+        # -- 1. Testsuites configuration - General information
+        generalConfig = BuiltIn().get_variable_value('${CONFIG}')
+        userConfig = TM.CTestsuitesCfg.oConfig.oConfigParams['params']['global']
+        header1 = ['<font face="Arial" color="#FF0000" size="3"><b>General configuration information:</b></font>', '']
+        header2 = ['<font face="Arial" color="#FF0000" size="3"><b>Configuration Parameters information:</b></font>', '']
+        generalData = []
+        testsuiteData = []
+        for key, value in generalConfig.items():
+            if len(value)>0:
+                generalData.append([f'<font face="Arial" color="#00008B" size="3"><b>{key}</b></font>', f'<i><font color="#006400" size="3"><b>{value}</i></b></font>'])
+        for key, value in userConfig.items():
+            testsuiteData.append([f'<font face="Arial" color="#00008B" size="3"><b>{key}</b></font>', f'<i><font color="#006400" size="3"><b>{value}</i></b></font>'])
+        generalDataTable = tabulate(generalData, header1, tablefmt="plain")
+        BuiltIn().log("\n" + generalDataTable, level="INFO", html=True, console=False)
+
+        # -- 2. Testsuite configuration - Parameter information
+        testsuiteDataTable = tabulate(testsuiteData, header2, tablefmt="plain")
+        BuiltIn().log("\n" + testsuiteDataTable, level="INFO", html=True, console=False)
+        return TM.CTestsuitesCfg.oConfig.oConfigParams
 
     @keyword
     def load_json(self, jsonfile, level=1, variant='default'):

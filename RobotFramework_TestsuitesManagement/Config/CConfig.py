@@ -126,23 +126,22 @@ The loading configuration method is divided into 4 levels, level1 has the highes
       {
          "default": {
             "name": "robot_config.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
          "variant_0": {
             "name": "robot_config.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
          "variant_1": {
             "name": "robot_config_variant_1.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
             ...
             ...
       }
 
    According to the ``ConfigName``, RobotFramework_TestsuitesManagement will choose the corresponding config file.
-   ``".../config/"`` indicats the relative path to json config file, RobotFramework_TestsuitesManagement will recursively
-   find the ``config`` folder.
+   ``"./config/"`` indicates the relative path to json config file.
 
 **Level3:** Read in testsuite folder: ``/config/robot_config.jsonp``
 
@@ -555,8 +554,9 @@ This __loadConfigFileLevel2 method loads configuration in case configLevel is TM
                     self.sLoadedCfgLog['error'].append(f"Could not find the variant configuration file: '{sTestSuiteCfgStart}'")
                     return False
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
+        self.sTestSuiteCfg = CString.NormalizePath(self.sTestSuiteCfg)
         try:
-            oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
+            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.sTestSuiteCfg)
         except Exception as error:
             self.bLoadedCfg = False
             bCheck = False
