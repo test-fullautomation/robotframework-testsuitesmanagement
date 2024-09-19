@@ -113,6 +113,8 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
         logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
 
         # dump of all Robot Framework parameters in current scope, based on 'ConfigDump' filter criteria defined in test configuration file
+        TM.CTestsuitesCfg.oConfig.dConfigDump['console']  = False
+        TM.CTestsuitesCfg.oConfig.dConfigDump['headline'] = "Robot Framework parameter overview (scope: Test Suite):"
         RFExt.get_rf_parameters(**TM.CTestsuitesCfg.oConfig.dConfigDump)
 
     @keyword
