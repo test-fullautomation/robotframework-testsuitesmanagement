@@ -112,6 +112,18 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
         logger.info(f"Number of test suites: {TM.CTestsuitesCfg.oConfig.iSuiteCount}")
         logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
 
+
+        # make some additional useful information global to have them available in the parameter dump
+        BuiltIn().set_global_variable('${LOADED_TSM_CONFIGURATION_FILE}', TM.CTestsuitesCfg.oConfig.sTestCfgFile)
+        BuiltIn().set_global_variable('${PROJECT_NAME}', TM.CTestsuitesCfg.oConfig.sProjectName)
+        BuiltIn().set_global_variable('${VERSION_SW}', TM.CTestsuitesCfg.oConfig.rMetaData.sVersionSW)
+        BuiltIn().set_global_variable('${VERSION_HW}', TM.CTestsuitesCfg.oConfig.rMetaData.sVersionHW)
+        BuiltIn().set_global_variable('${VERSION_TEST}', TM.CTestsuitesCfg.oConfig.rMetaData.sVersionTest)
+        BuiltIn().set_global_variable('${VERSION_ROBFW}', TM.CTestsuitesCfg.oConfig.rMetaData.sROBFWVersion)
+        BuiltIn().set_global_variable('${VERSION_BUNDLE}', TM.CTestsuitesCfg.oConfig.sBundleVersion)
+        BuiltIn().set_global_variable('${MACHINE_NAME}', TM.CTestsuitesCfg.oConfig.sMachineName)
+        BuiltIn().set_global_variable('${USER_NAME}', TM.CTestsuitesCfg.oConfig.sUserName)
+
         # dump of all Robot Framework parameters in current scope, based on 'ConfigDump' filter criteria defined in test configuration file
         TM.CTestsuitesCfg.oConfig.dConfigDump['console']  = False
         TM.CTestsuitesCfg.oConfig.dConfigDump['headline'] = "Robot Framework parameter overview (scope: Test Suite):"

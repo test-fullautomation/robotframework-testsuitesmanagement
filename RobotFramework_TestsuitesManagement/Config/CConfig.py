@@ -191,9 +191,12 @@ for None so that subclasses will create their own __single objects.
                                 )
 
         # Common configuration parameters
-        self.sWelcomeString  = None
-        self.sTargetName     = None
-        self.dConfigDump     = None
+        self.sWelcomeString = None
+        self.sTargetName    = None
+        self.dConfigDump    = None
+        self.sMachineName   = None
+        self.sUserName      = None
+        self.sBundleVersion = None
 
     def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
         """
@@ -435,6 +438,10 @@ robot with configuration level 2.")
             BuiltIn().set_suite_metadata("version_hw", self.rMetaData.sVersionHW, top=True)
         if not ("version_test" in suiteMetadata and self.rMetaData.sVersionTest == None):
             BuiltIn().set_suite_metadata("version_test", self.rMetaData.sVersionTest, top=True)
+
+        self.sMachineName   = self.__getMachineName()
+        self.sUserName      = self.__getUserName()
+        self.sBundleVersion = BUNDLE_VERSION
 
         self.oConfigParams = copy.deepcopy(oJsonCfgData)
 
