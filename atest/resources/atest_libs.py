@@ -15,7 +15,6 @@
 # **************************************************************************************************************
 #
 import os
-import subprocess
 from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api import logger
@@ -32,27 +31,26 @@ def subprocess_execution(testscript, args = ''):
             if args != '':
                 command = '"' + os.environ['RobotPythonPath'] + '/python.exe" -m robot.run ' + args + " " \
                     + os.path.abspath(testscript)
-                result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf-8', errors='ignore')
+                result = os.popen(command).read()
             else:
                 command = '"' + os.environ['RobotPythonPath'] + '/python.exe" -m robot.run ' + os.path.abspath(testscript)
-                result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf-8', errors='ignore')
+                result = os.popen(command).read()
         else:
             if args != '':
                 command = os.environ['RobotPythonPath'] + '/python3 -m robot.run ' + args + " " \
                     + os.path.abspath(testscript)
-                result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf-8', errors='ignore')
+                result = os.popen(command).read()
             else:
                 command = os.environ['RobotPythonPath'] + '/python3 -m robot.run ' + os.path.abspath(testscript)
-                result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf-8', errors='ignore')
-    except Exception as error:
-        print(error)
+                result = os.popen(command).read()
+    except:
         pass
 
-    if '| PASS |' in result.stdout:
-        logger.info(result.stdout)
+    if '| PASS |' in result:
+        logger.info(result)
         os.chdir(curDir)
         return "Passed"
     else:
-        logger.info(result.stdout)
+        logger.info(result)
         os.chdir(curDir)
         return "Failed"
