@@ -101,6 +101,7 @@ for coverage in listCoverage:
    listCmdLineParts.append(f"-m coverage {sState}")
    listCmdLineParts.append(f"--rcfile=\"{sConfig}\"")
    listCmdLineParts.append(f"{sCommandline}")
+   listCmdLineParts.append(' --robotcommandline="--exclude atestExcluded"')
 
    sCmdLine = " ".join(listCmdLineParts)
    del listCmdLineParts
