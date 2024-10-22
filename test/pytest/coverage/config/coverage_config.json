@@ -2,9 +2,9 @@
     "COVERAGE": [
         {
             "STATE": "run",
-            "COMMANDLINE": "./component_test.py",
-            "CURRENT_WORKING_DIR": "test",
-            "CONFIG": "./pytest/coverage/config/.coveragerc"
+            "COMMANDLINE": "D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/component_test.py",
+            "CURRENT_WORKING_DIR": "",
+            "CONFIG": "D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/pytest/coverage/config/.coveragerc"
         },
         {
             "STATE": "report",

@@ -113,8 +113,7 @@ for coverage in listCoverage:
 
    nReturn = ERROR
    try:
-      # nReturn = subprocess.call(listCmdLineParts, cwd=CString.NormalizePath(f"\"{sComponentPath}/{sCWD}\""))
-      nReturn = 0
+      nReturn = subprocess.call(listCmdLineParts, cwd=CString.NormalizePath(f"\"{sComponentPath}/{sCWD}\""))
       print()
       print(f"[{sThisScriptName}] : Subprocess PYTEST returned {nReturn}")
    except Exception as ex:
