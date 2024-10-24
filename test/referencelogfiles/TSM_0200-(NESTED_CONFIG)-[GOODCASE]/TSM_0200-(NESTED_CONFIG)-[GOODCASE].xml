@@ -16,7 +16,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
 <msg timestamp="20240509 04:16:19.905" level="INFO">${testdictionary_variant} = {'tdv_key_1': {'tdv_key_1_1': 'value_tdv_key_1_1_nested.1.1', 'tdv_key_1_2': 'value_tdv_key_1_2_after_import'}, 'tdv_key_2': {'tdv_key_2_1': 'value_tdv_key_2_1_after_import_new'}, 'tdv_key_3': {'tdv_k...</msg>
 <msg timestamp="20240509 04:16:19.905" level="INFO">${testlist_variant} = ['A', 'X', 'C']</msg>
 <msg timestamp="20240509 04:16:19.905" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20240509 04:16:19.905" level="INFO">${teststring_common} = (1) I am the common teststring of imported.1 valid for all variants and all test benches</msg>
+<msg timestamp="20240509 04:16:19.905" level="INFO">${teststring_common} = (2) I am the common teststring of imported.1 valid for all variants and all test benches</msg>
 <msg timestamp="20240509 04:16:19.905" level="INFO">${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test</msg>
 <msg timestamp="20240509 04:16:19.905" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_nested.1', 'TargetName': 'Device_01', 'params': {}}</msg>
 <msg timestamp="20240509 04:16:19.905" level="INFO">Running with configuration level 2</msg>
@@ -45,7 +45,7 @@ it's defined here for future requirements.</doc>
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20240509 04:16:19.921" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) : [STR]  :  '(1) I am the common teststring of imported.1 valid for all variants and all test benches'</msg>
+<msg timestamp="20240509 04:16:19.921" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) : [STR]  :  '(2) I am the common teststring of imported.1 valid for all variants and all test benches'</msg>
 <status status="PASS" starttime="20240509 04:16:19.921" endtime="20240509 04:16:19.921"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
