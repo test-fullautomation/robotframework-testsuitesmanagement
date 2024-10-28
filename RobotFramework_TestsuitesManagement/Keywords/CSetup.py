@@ -61,24 +61,16 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
 
 * No return variable
         '''
-        if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
-            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
-                for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                    if errorMsg.strip() != '':
-                        logger.error(errorMsg)
-            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                    if infoMsg.strip() != '':
-                        logger.error(infoMsg)
-            BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
-            return
-        if not TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
+        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_1:
+            try:
+                TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
+            except:
+                TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                pass
+        else:
             if sTestsuiteCfgFile != '':
-                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2 = True
-                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
+                TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_2
                 TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
-            else:
-                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3 = True
             try:
                 TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
             except:
@@ -92,14 +84,22 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                             logger.error(infoMsg)
                 BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
-        if TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
-            logger.info('Running with configuration level 1')
-        elif TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2:
-            logger.info('Running with configuration level 2')
-        elif TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3:
-            logger.info('Running with configuration level 3')
+        if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
+            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
+                for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                    if errorMsg.strip() != '':
+                        logger.error(errorMsg)
+            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
+                for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                    if infoMsg.strip() != '':
+                        logger.error(infoMsg)
+            BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
+            return
+        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
+        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
+            logger.warn(msg)
         else:
-            logger.warn("Running with configuration level 4!")
+            logger.info(msg)
 
         TM.CTestsuitesCfg.oConfig.verifyVersion()
         logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")

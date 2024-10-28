@@ -106,14 +106,8 @@ This _start_suite method hooks to every starting testsuite of robot run.
             if '${versiontest}' in BuiltIn().get_variables()._keys:
                 TM.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${VERSION_TEST}')
             if '${configfile}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1 = True
-                TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel4 = False
+                TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_1
                 TM.CTestsuitesCfg.oConfig.sTestCfgFile = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
-                try:
-                    TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
-                except:
-                    TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    pass
 
         TM.CTestsuitesCfg.oConfig.iSuiteCount += 1
         BuiltIn().set_global_variable("${SUITECOUNT}", TM.CTestsuitesCfg.oConfig.iSuiteCount)
@@ -139,10 +133,9 @@ This _end_suite method hooks to every ending testsuite of robot run.
 
 * No return variable
         '''
-        TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel2 = False
-        TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel3 = False
-        if not TM.CTestsuitesCfg.oConfig.rConfigFiles.bLevel1:
+        if TM.CTestsuitesCfg.oConfig.configLevel != TM.CConfigLevel.LEVEL_1:
             TM.CTestsuitesCfg.oConfig.sTestCfgFile = ''
+        TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_4
         dispatch('scope_end', data.longname)
 
     def _start_test(self, data, result):

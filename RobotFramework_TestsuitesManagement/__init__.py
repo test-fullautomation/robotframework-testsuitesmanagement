@@ -20,7 +20,7 @@ from robot.utils import is_string
 from robot.utils.importer import Importer
 
 from robotlibcore import DynamicCore
-
+from enum import Enum
 from RobotFramework_TestsuitesManagement.Utils import LibListener
 from RobotFramework_TestsuitesManagement.Keywords import (CSetupKeywords, CGeneralKeywords)
 from RobotFramework_TestsuitesManagement.Config import BUNDLE_VERSION as VERSION
@@ -107,6 +107,12 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
             logger.warn(f"Keyword '{self.run_on_failure_keyword}' could not be run on failure: '{error}'")
         finally:
             self._running_on_failure_keyword = False
+
+class CConfigLevel(Enum):
+    LEVEL_1 = 1
+    LEVEL_2 = 2
+    LEVEL_3 = 3
+    LEVEL_4 = 4
 
 class CTestsuitesCfg():
     oConfig = None

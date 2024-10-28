@@ -33,6 +33,7 @@ import copy
 from jsonschema import validate
 from builtins import staticmethod
 
+import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
 from PythonExtensionsCollection.String.CString import CString
 
@@ -125,23 +126,22 @@ The loading configuration method is divided into 4 levels, level1 has the highes
       {
          "default": {
             "name": "robot_config.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
          "variant_0": {
             "name": "robot_config.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
          "variant_1": {
             "name": "robot_config_variant_1.jsonp",
-            "path": ".../config/"
+            "path": "./config/"
          },
             ...
             ...
       }
 
    According to the ``ConfigName``, RobotFramework_TestsuitesManagement will choose the corresponding config file.
-   ``".../config/"`` indicats the relative path to json config file, RobotFramework_TestsuitesManagement will recursively
-   find the ``config`` folder.
+   ``"./config/"`` indicates the relative path to json config file.
 
 **Level3:** Read in testsuite folder: ``/config/robot_config.jsonp``
 
@@ -165,7 +165,6 @@ for None so that subclasses will create their own __single objects.
 
     def __init__(self):
         self.sRootSuiteName    = ''
-        self.bConfigLoaded     = False
         self.oConfigParams     = {}
         self.sConfigName       = 'default'
         self.sProjectName      = None
@@ -182,13 +181,7 @@ for None so that subclasses will create their own __single objects.
         self.sMinVersion       = ''
         self.sLocalConfig      = ''
         self.lBuitInVariables  = []
-        self.rConfigFiles   = CStruct(
-                                    bLevel1 = False,
-                                    bLevel2 = False,
-                                    bLevel3 = False,
-                                    bLevel4 = True   #'.../RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
-                                )
-
+        self.configLevel       = TM.CConfigLevel.LEVEL_4
         self.rMetaData      = CStruct(
                                     sVersionSW = None,
                                     sVersionHW     = None,
@@ -242,12 +235,34 @@ This loadCfg method uses to load configuration's parameters from json files.
 
 * No return variable
         '''
-        bConfigLevel2 = True
-        if not self.rConfigFiles.bLevel1:
-            if self.rConfigFiles.bLevel2:
-                self.rConfigFiles.bLevel4 = False
-                bConfigLevel2 = self.__loadConfigFileLevel2()
+        # Detect a configuration level and get the oConfig.sTestCfgFile to handle
+        if self.configLevel == TM.CConfigLevel.LEVEL_1:
+            # Configuration level 1, the oConfig.sTestCfgFile was already set in the LibListener.py module
+            if self.sConfigName != 'default':
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
+is used together with parameter 'config_file'.")
+                self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
+to the same feature (the variant selection).")
+                self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
+
+            if self.sTestCfgFile == '':
+                self.bLoadedCfg = False
+                self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
+        else:
+            if self.configLevel==TM.CConfigLevel.LEVEL_2:
+                # Configuration level 2, the oConfig.sTestCfgFile will be detected in method __loadConfigFileLevel2()
+                self.bLoadedCfg = self.__loadConfigFileLevel2()
+                if not self.bLoadedCfg:
+                    # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
+                    self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                    raise Exception
             else:
+                # Configuration level 3
                 if r'${variant}' in BuiltIn().get_variables():
                     self.bLoadedCfg = False
                     self.sLoadedCfgLog['error'].append(f"Not able to get a configuration for variant '{self.sConfigName}' \
@@ -260,10 +275,11 @@ because of a variant configuration file is not available.")
 robot with configuration level 2.")
                     self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                     raise Exception
-
+                # Detect the oConfig.sTestCfgFile the configuration level 3
                 if os.path.isdir(self.sTestcasePath + 'config'):
+                    self.configLevel = TM.CConfigLevel.LEVEL_3
                     sConfigFolder = CString.NormalizePath(f"{self.sTestcasePath}/config")
-                    sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1:][0]
+                    sSuiteFileName = BuiltIn().get_variable_value('${SUITE_SOURCE}').split(os.path.sep)[-1]
                     sJsonFile1 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.jsonp"
                     sJsonFile2 = f"{sConfigFolder}/{os.path.splitext(sSuiteFileName)[0]}.json"
                     if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2):
@@ -280,63 +296,24 @@ robot with configuration level 2.")
                         raise Exception
                     elif os.path.isfile(sJsonFile1):
                         self.sTestCfgFile = sJsonFile1
-                        self.rConfigFiles.bLevel4 = False
                     elif os.path.isfile(sJsonFile2):
                         self.sTestCfgFile = sJsonFile2
-                        self.rConfigFiles.bLevel4 = False
                     else: # meaning: if not os.path.isfile(sJsonFile1) and not os.path.isfile(sJsonFile2)
-                        self.rConfigFiles.bLevel3 = False
-                if self.rConfigFiles.bLevel4:
-                    self.rConfigFiles.bLevel3 = False
-                    if not self.bConfigLoaded:
-                        sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
-                        self.sTestCfgFile = sDefaultConfig
-
+                        # Pre-condition of the configuration level 3 didn't match, set default configuration level 4.
+                        self.configLevel = TM.CConfigLevel.LEVEL_4
+                if self.configLevel==TM.CConfigLevel.LEVEL_4:
+                    # Handling the configuration level 4
+                    sDefaultConfig=str(pathlib.Path(__file__).parent.absolute() / "robot_config.jsonp")
+                    self.sTestCfgFile = sDefaultConfig
             self.sTestCfgFile = CString.NormalizePath(self.sTestCfgFile)
-
-        if self.bConfigLoaded:
-            if self.rConfigFiles.bLevel1:
-                return
-            elif not self.rConfigFiles.bLevel2 and not self.rConfigFiles.bLevel3:
-                return
-
-        if self.rConfigFiles.bLevel1:
-            if self.sConfigName != 'default':
-                self.bLoadedCfg = False
-                self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
-is used together with parameter 'config_file'.")
-                self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
-to the same feature (the variant selection).")
-                self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
-
-            if self.sTestCfgFile == '':
-                self.bLoadedCfg = False
-                self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
-
-        if not bConfigLevel2: # Loading configuration level 2 failed, method self.__loadConfigFileLevel2() return False
-            self.bLoadedCfg = False
-            # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
-            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-            raise Exception
-
+        # Handling the oConfig.sTestCfgFile file to load the configuration object
         if not os.path.isfile(self.sTestCfgFile):
             self.bLoadedCfg = False
             self.sLoadedCfgLog['error'].append(f"Did not find configuration file: '{self.sTestCfgFile}'!")
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
-
         robotCoreData = BuiltIn().get_variables()
-        ROBFW_AIO_Data = {}
-        for k, v in robotCoreData.items():
-            key = re.findall("\s*{\s*(.+)\s*}\s*", k)[0]
-            if 'CONFIG' == key:
-                continue
-            ROBFW_AIO_Data.update({key:v})
-        oJsonPreprocessor = CJsonPreprocessor(syntax="python", currentCfg=ROBFW_AIO_Data)
+        oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
             oJsonCfgData = oJsonPreprocessor.jsonLoad(self.sTestCfgFile)
         except Exception as error:
@@ -350,9 +327,9 @@ to the same feature (the variant selection).")
                 self.sLoadedCfgLog['error'].append(f"In file: {self.sTestCfgFile}")
             self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
             raise Exception
-
-        self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
+        # Handling local configuration
         if self.sLocalConfig != '':
+            self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
             try:
                 oLocalConfig = oJsonPreprocessor.jsonLoad(self.sLocalConfig)
             except Exception as error:
@@ -424,9 +401,24 @@ to the same feature (the variant selection).")
         self.sWelcomeString = oJsonCfgData['WelcomeString']
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
+            # Check the format of Maximum_version value
+            try:
+                self.tupleVersion(self.sMaxVersion)
+            except Exception as error:
+                self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
+                self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
-
+            # Check the format of Minimum_version value
+            try:
+                self.tupleVersion(self.sMinVersion)
+            except Exception as error:
+                self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
+                self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
+                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
+                raise Exception
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)
@@ -451,9 +443,6 @@ to the same feature (the variant selection).")
 
         jsonDotdict = DotDict(oJsonCfgData)
         BuiltIn().set_global_variable("${CONFIG}", jsonDotdict)
-
-        self.bConfigLoaded = True
-
         if len(oJsonPreprocessor.dUpdatedParams) > 0:
             for param in oJsonPreprocessor.dUpdatedParams:
                 logger.info(f"The parameter '{param}' is updated")
@@ -512,7 +501,7 @@ This method updates preprocessor and global params to global variable of RobotFr
             for k,v in self.oConfigParams['params']['global'].items():
                 if k in lReservedKeyword:
                     self.sLoadedCfgLog['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
-                    self.sLoadedCfgLog['unknown'] = "Violation of naming conventions detected. The test execution will be aborted!"
+                    self.sLoadedCfgLog['unknown'] = "A parameter name conflicted with Robot Framework's reserved keywords. The test execution will be aborted!"
                     raise Exception
                 if k in self.lBuitInVariables:
                     continue
@@ -538,7 +527,7 @@ This destructor method.
 
     def __loadConfigFileLevel2(self) -> bool:
         '''
-This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLevel2 == True.
+This __loadConfigFileLevel2 method loads configuration in case configLevel is TM.CConfigLevel.LEVEL_2.
 
 **Arguments:**
 
@@ -565,8 +554,9 @@ This __loadConfigFileLevel2 method loads configuration in case rConfigFiles.bLev
                     self.sLoadedCfgLog['error'].append(f"Could not find the variant configuration file: '{sTestSuiteCfgStart}'")
                     return False
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
+        self.sTestSuiteCfg = CString.NormalizePath(self.sTestSuiteCfg)
         try:
-            oSuiteConfig = oJsonPreprocessor.jsonLoad(CString.NormalizePath(self.sTestSuiteCfg))
+            oSuiteConfig = oJsonPreprocessor.jsonLoad(self.sTestSuiteCfg)
         except Exception as error:
             self.bLoadedCfg = False
             bCheck = False
@@ -823,7 +813,7 @@ it into sub tuple for version comparision.
 
             return tuple(lSubVersion)
         else:
-            raise Exception("Wrong format in version info")
+            raise Exception("Wrong format in version information")
 
     @staticmethod
     def tupleVersion(sVersion):
@@ -865,8 +855,8 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
         try:
             # verify the version info is a number
             return tuple(map(lambda x: CConfig.bValidateSubVersion(x), lVersion))
-        except Exception:
-            BuiltIn().fatal_error(f"Provided version '{sVersion}' is not a correct version format.")
+        except Exception as error:
+            raise Exception(f"{error} '{sVersion}'")
 
     def versioncontrol_error(self, reason, version1, version2):
         '''
