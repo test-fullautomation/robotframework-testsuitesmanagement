@@ -909,7 +909,7 @@ Log error message of version control due to reason and set to unknown state.
         f"\n{detail}\n"
         f"\nPlease install the required {BUNDLE_NAME} version." +
         f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
-        BuiltIn().unknown('Version control error!!!')
+        raise Exception('Version control error!!!')
 
 if __name__ == "__main__":
     bundle_version()

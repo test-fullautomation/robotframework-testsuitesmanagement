@@ -82,7 +82,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                     for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
                         if infoMsg.strip() != '':
                             logger.error(infoMsg)
-                BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
+                raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
@@ -93,7 +93,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                 for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
                     if infoMsg.strip() != '':
                         logger.error(infoMsg)
-            BuiltIn().unknown(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
+            raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
             return
         msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
