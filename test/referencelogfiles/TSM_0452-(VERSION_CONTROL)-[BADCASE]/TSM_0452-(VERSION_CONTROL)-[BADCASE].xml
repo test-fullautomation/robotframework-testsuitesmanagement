@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20240509 04:16:27.252" rpa="false" schemaversion="4">
-<suite id="s1" name="Tsm-Testfile-02" source="D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241111 18:48:21.793" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_version_control.07'.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'machine' to value 'fv-az1455-788'.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'tester' to value ''.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'bundle_version' to value '0.11.0.5'.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'version_sw' to value ''.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'version_hw' to value ''.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Set suite metadata 'version_test' to value ''.</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">${teststring_variant} = I am the 'version_control_07' configuration of tsm-test</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.0.1', 'Minimum_version': '10.0.0', 'Project': 'tsm-test_config_version_control.07', 'TargetName': 'Device_01', 'para...</msg>
-<msg timestamp="20240509 04:16:27.392" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20240509 04:16:27.392" level="ERROR">Wrong use of max/min version control in configuration.
-Testsuite : D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
-config    : D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.07.jsonp
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_version_control.07'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'bundle_version' to value '0.13.1.6'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:21.887" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20241111 18:48:21.893" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20241111 18:48:21.893" level="INFO">${teststring_variant} = I am the 'version_control_07' configuration of tsm-test</msg>
+<msg timestamp="20241111 18:48:21.893" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.0.1', 'Minimum_version': '10.0.0', 'Project': 'tsm-test_config_version_control.07', 'TargetName': 'Device_01', 'para...</msg>
+<msg timestamp="20241111 18:48:21.893" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20241111 18:48:21.893" level="ERROR">Wrong use of max/min version control in configuration.
+Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
+config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.07.jsonp
 
-The configured minimum RobotFramework AIO version                 '10.0.0'
-is younger than the configured maximum RobotFramework AIO version '0.0.1'
+The configured minimum RobotFramework AIO extended version                 '10.0.0'
+is younger than the configured maximum RobotFramework AIO extended version '0.0.1'
 Please correct the values of 'Maximum_version', 'Minimum_version' in config file
 
-Please install the required RobotFramework AIO version.
+Please install the required RobotFramework AIO extended version.
 You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
 </msg>
-<msg timestamp="20240509 04:16:27.392" level="UNKNOWN">Version control error!!!</msg>
-<status status="UNKNOWN" starttime="20240509 04:16:27.361" endtime="20240509 04:16:27.392"/>
+<msg timestamp="20241111 18:48:21.893" level="UNKNOWN">Version control error!!!</msg>
+<status status="UNKNOWN" starttime="20241111 18:48:21.855" endtime="20241111 18:48:21.893"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20240509 04:16:27.392" endtime="20240509 04:16:27.392">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20241111 18:48:21.893" endtime="20241111 18:48:21.895">Parent suite setup unknown:
 Version control error!!!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20240509 04:16:27.392" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20240509 04:16:27.392" endtime="20240509 04:16:27.392"/>
+<msg timestamp="20241111 18:48:21.895" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20241111 18:48:21.895" endtime="20241111 18:48:21.895"/>
 </kw>
-<meta name="bundle_version">0.11.0.5</meta>
-<meta name="machine">fv-az1455-788</meta>
+<meta name="bundle_version">0.13.1.6</meta>
+<meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_version_control.07</meta>
-<meta name="tester"/>
+<meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
-<meta name="version_hw"/>
-<meta name="version_sw"/>
-<meta name="version_test"/>
-<status status="UNKNOWN" starttime="20240509 04:16:27.252" endtime="20240509 04:16:27.392">Suite setup unknown:
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="UNKNOWN" starttime="20241111 18:48:21.793" endtime="20241111 18:48:21.895">Suite setup unknown:
 Version control error!!!</status>
 </suite>
 <statistics>
@@ -65,15 +65,15 @@ Version control error!!!</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240509 04:16:27.392" level="ERROR">Wrong use of max/min version control in configuration.
-Testsuite : D:\a\RobotFramework_AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
-config    : D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.07.jsonp
+<msg timestamp="20241111 18:48:21.893" level="ERROR">Wrong use of max/min version control in configuration.
+Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
+config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.07.jsonp
 
-The configured minimum RobotFramework AIO version                 '10.0.0'
-is younger than the configured maximum RobotFramework AIO version '0.0.1'
+The configured minimum RobotFramework AIO extended version                 '10.0.0'
+is younger than the configured maximum RobotFramework AIO extended version '0.0.1'
 Please correct the values of 'Maximum_version', 'Minimum_version' in config file
 
-Please install the required RobotFramework AIO version.
+Please install the required RobotFramework AIO extended version.
 You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
 </msg>
 </errors>
