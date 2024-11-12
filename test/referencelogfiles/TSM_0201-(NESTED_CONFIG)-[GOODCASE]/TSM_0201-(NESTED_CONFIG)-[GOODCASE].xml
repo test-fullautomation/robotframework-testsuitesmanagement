@@ -1,428 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241025 18:59:45.081" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241111 18:48:18.442" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-04" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-04.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
 checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20241025 18:59:45.192" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_toplevel'.</msg>
-<msg timestamp="20241025 18:59:45.192" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg timestamp="20241025 18:59:45.192" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">Set suite metadata 'bundle_version' to value '0.13.0.23'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test</msg>
-<msg timestamp="20241025 18:59:45.207" level="INFO">${int_val} = 123</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${float_val} = 4.56</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${bool_val_1} = True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${bool_val_2} = True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${bool_val_3} = False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${bool_val_4} = False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${none_val} = None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${null_val} = None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${mini_dict_val} = {'keyA': 'keyA_val', 'keyB': 'keyB_val'}</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${mini_list_val} = ['A', 1, True]</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${certain_teststring} = updated value of certain teststring (2.1.1)</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${list_val} = ['updated list', 123, 4.56, True, True, False, False, None, None, {'keyA': 'keyA_val', 'keyB': 'keyB_val'}, ['A', 1, True]]</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${I_am_a_new_int} = 123</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${I_am_a_new_str} = I am a new str value (2.1.1)</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${I_am_a_new_None} = None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_toplevel', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">RobotFramework AIO version check passed!</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.2.jsonp'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20241025 18:59:45.148" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_toplevel'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'bundle_version' to value '0.13.1.6'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${int_val} = 123</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${float_val} = 4.56</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${bool_val_1} = True</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${bool_val_2} = True</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${bool_val_3} = False</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${bool_val_4} = False</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${none_val} = None</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${null_val} = None</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${mini_dict_val} = {'keyA': 'keyA_val', 'keyB': 'keyB_val'}</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${mini_list_val} = ['A', 1, True]</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${certain_teststring} = updated value of certain teststring (2.1.1)</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${list_val} = ['updated list', 123, 4.56, True, True, False, False, None, None, {'keyA': 'keyA_val', 'keyB': 'keyB_val'}, ['A', 1, True]]</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${I_am_a_new_int} = 123</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${I_am_a_new_str} = I am a new str value (2.1.1)</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${I_am_a_new_None} = None</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_toplevel', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Running with configuration level 2</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">RobotFramework AIO extended version check passed!</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.2.jsonp'</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20241111 18:48:18.513" endtime="20241111 18:48:18.567"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-04" line="35">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.567"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.WelcomeString}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.567"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.567"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.TargetName}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) : [STR]  :  'Device_01'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) : [STR]  :  'Device_01'</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.567"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG}[WelcomeString]</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.567"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG}[Project]</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.567" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'</msg>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.583"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG}[TargetName]</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) : [STR]  :  'Device_01'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) : [STR]  :  'Device_01'</msg>
+<status status="PASS" starttime="20241111 18:48:18.583" endtime="20241111 18:48:18.583"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/1) &gt; {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) &gt; {Maximum_version} [STR]  :  '1.0.0'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/3) &gt; {Minimum_version} [STR]  :  '0.6.0'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/4) &gt; {Project} [STR]  :  'tsm-test_config_toplevel'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/5) &gt; {TargetName} [STR]  :  'Device_01'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/6) &gt; {params} [DOTDICT]  :  {}</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/1) &gt; {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'</msg>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) &gt; {Maximum_version} [STR]  :  '1.0.0'</msg>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/3) &gt; {Minimum_version} [STR]  :  '0.6.0'</msg>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/4) &gt; {Project} [STR]  :  'tsm-test_config_toplevel'</msg>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/5) &gt; {TargetName} [STR]  :  'Device_01'</msg>
+<msg timestamp="20241111 18:48:18.583" level="INFO">PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/6) &gt; {params} [DOTDICT]  :  {}</msg>
+<status status="PASS" starttime="20241111 18:48:18.583" endtime="20241111 18:48:18.583"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val}</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/1) &gt; {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/2) &gt; {subsubkey_112} [INT]  :  123</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/3) &gt; {subsubkey_113} [FLOAT]  :  4.56</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/1) &gt; {subsubkey_211} [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/2) &gt; {subsubkey_212} [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/3) &gt; {subsubkey_213} [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/4) &gt; {subsubkey_214} [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/2) &gt; {subkey_22} [DOTDICT] (2/1) &gt; {subsubkey_221} [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/2) &gt; {subkey_22} [DOTDICT] (2/2) &gt; {subsubkey_222} [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/1) &gt; {certain_teststring_initial} [STR]  :  'initial value of certain teststring'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/2) &gt; {subsubkey_231} [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/1) &gt; [STR]  :  'updated list'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/2) &gt; [INT]  :  123</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/3) &gt; [FLOAT]  :  4.56</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/4) &gt; [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/5) &gt; [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/6) &gt; [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/7) &gt; [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/8) &gt; [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/9) &gt; [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/10) &gt; [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/10) &gt; [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/1) &gt; [STR]  :  'A'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/2) &gt; [INT]  :  1</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/3) &gt; [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/4) &gt; {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/5) &gt; {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/1) &gt; {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/2) &gt; {subsubkey_112} [INT]  :  123</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {key_1} [DOTDICT] (1/1) &gt; {subkey_11} [DOTDICT] (3/3) &gt; {subsubkey_113} [FLOAT]  :  4.56</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/1) &gt; {subsubkey_211} [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/2) &gt; {subsubkey_212} [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/3) &gt; {subsubkey_213} [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/1) &gt; {subkey_21} [DOTDICT] (4/4) &gt; {subsubkey_214} [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/2) &gt; {subkey_22} [DOTDICT] (2/1) &gt; {subsubkey_221} [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/2) &gt; {subkey_22} [DOTDICT] (2/2) &gt; {subsubkey_222} [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/1) &gt; {certain_teststring_initial} [STR]  :  'initial value of certain teststring'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/2) &gt; {subsubkey_231} [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/1) &gt; [STR]  :  'updated list'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/2) &gt; [INT]  :  123</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/3) &gt; [FLOAT]  :  4.56</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/4) &gt; [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/5) &gt; [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/6) &gt; [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/7) &gt; [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/8) &gt; [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/9) &gt; [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/10) &gt; [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/10) &gt; [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/1) &gt; [STR]  :  'A'</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/2) &gt; [INT]  :  1</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/3) &gt; {subsubkey_232} [LIST] (11/11) &gt; [LIST] (3/3) &gt; [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.587" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/4) &gt; {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {key_2} [DOTDICT] (3/3) &gt; {subkey_23} [DOTDICT] (5/5) &gt; {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.587" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${list_val}</arg>
 <arg>PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/1) &gt; [STR]  :  'updated list'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/2) &gt; [INT]  :  123</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/3) &gt; [FLOAT]  :  4.56</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/4) &gt; [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/5) &gt; [BOOL]  :  True</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/6) &gt; [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/7) &gt; [BOOL]  :  False</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/8) &gt; [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/9) &gt; [NONE]  :  None</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) &gt; [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) &gt; [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/1) &gt; [STR]  :  'A'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/2) &gt; [INT]  :  1</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/3) &gt; [BOOL]  :  True</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/1) &gt; [STR]  :  'updated list'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/2) &gt; [INT]  :  123</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/3) &gt; [FLOAT]  :  4.56</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/4) &gt; [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/5) &gt; [BOOL]  :  True</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/6) &gt; [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/7) &gt; [BOOL]  :  False</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/8) &gt; [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/9) &gt; [NONE]  :  None</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) &gt; [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) &gt; [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/1) &gt; [STR]  :  'A'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/2) &gt; [INT]  :  1</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) &gt; [LIST] (3/3) &gt; [BOOL]  :  True</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${certain_teststring}</arg>
 <arg>PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${list_val}[0]</arg>
 <arg>PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${list_val}[9]</arg>
 <arg>PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
-<msg timestamp="20241025 18:59:45.208" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.208"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {keyA} [STR]  :  'keyA_val'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {keyB} [STR]  :  'keyB_val'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${list_val}[9][keyA]</arg>
 <arg>PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) : [STR]  :  'keyA_val'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) : [STR]  :  'keyA_val'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${list_val}[10][2]</arg>
 <arg>PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) : [BOOL]  :  True</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) : [BOOL]  :  True</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val}[key_2][subkey_23][subsubkey_231]</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val.key_2.subkey_23.subsubkey_231}</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val}[key_2][subkey_23][subsubkey_232][0]</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val.key_2.subkey_23.subsubkey_232}[0]</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) : [STR]  :  'updated list'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val}[key_2][subkey_23][dotted.key.name]</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dict_val.key_2.subkey_23}[dotted.key.name]</arg>
 <arg>PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${I_am_a_new_int}</arg>
 <arg>PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) : [INT]  :  123</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) : [INT]  :  123</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${I_am_a_new_str}</arg>
 <arg>PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) : [STR]  :  'I am a new str value (2.1.1)'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) : [STR]  :  'I am a new str value (2.1.1)'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${I_am_a_new_None}</arg>
 <arg>PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) : [NONE]  :  None</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) : [NONE]  :  None</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${I_am_a_new_dict}</arg>
 <arg>PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {new_dict_key_1} [STR]  :  'new_dict_key_1_value'</msg>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {new_dict_key_2} [STR]  :  'new_dict_key_2_value'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/1) &gt; {new_dict_key_1} [STR]  :  'new_dict_key_1_value'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/2) &gt; {new_dict_key_2} [STR]  :  'new_dict_key_2_value'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${I_am_a_new_list}</arg>
 <arg>PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/1) &gt; [STR]  :  'I'</msg>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/2) &gt; [STR]  :  'am'</msg>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/3) &gt; [STR]  :  'a'</msg>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/4) &gt; [STR]  :  'new'</msg>
-<msg timestamp="20241025 18:59:45.224" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/5) &gt; [STR]  :  'list'</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/1) &gt; [STR]  :  'I'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/2) &gt; [STR]  :  'am'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/3) &gt; [STR]  :  'a'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/4) &gt; [STR]  :  'new'</msg>
+<msg timestamp="20241111 18:48:18.590" level="INFO">PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/5) &gt; [STR]  :  'list'</msg>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val}[key_2][subkey_23][certain_teststring_initial]</arg>
 <arg>initial value of certain teststring</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val.key_2.subkey_23.certain_teststring_initial}</arg>
 <arg>initial value of certain teststring</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.590" endtime="20241111 18:48:18.590"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${certain_teststring}</arg>
 <arg>updated value of certain teststring (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_val}[0]</arg>
 <arg>updated list</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_val}[9][keyA]</arg>
 <arg>keyA_val</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_val}[10][2]</arg>
 <arg>${True}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val}[key_2][subkey_23][subsubkey_231]</arg>
 <arg>updated value of certain teststring (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val.key_2.subkey_23.subsubkey_231}</arg>
 <arg>updated value of certain teststring (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val}[key_2][subkey_23][subsubkey_232][0]</arg>
 <arg>updated list</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val.key_2.subkey_23.subsubkey_232}[0]</arg>
 <arg>updated list</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val}[key_2][subkey_23][dotted.key.name]</arg>
 <arg>updated dotted key name value (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dict_val.key_2.subkey_23}[dotted.key.name]</arg>
 <arg>updated dotted key name value (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_int}</arg>
 <arg>${123}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_str}</arg>
 <arg>I am a new str value (2.1.1)</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_None}</arg>
 <arg>${None}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_dict}[new_dict_key_1]</arg>
 <arg>new_dict_key_1_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_dict}[new_dict_key_2]</arg>
 <arg>new_dict_key_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_list}[0]</arg>
 <arg>I</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_list}[1]</arg>
 <arg>am</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_list}[2]</arg>
 <arg>a</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_list}[3]</arg>
 <arg>new</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${I_am_a_new_list}[4]</arg>
 <arg>list</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.599" level="INFO">testcase_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
 <doc>tsm-testfile-04</doc>
-<status status="PASS" starttime="20241025 18:59:45.208" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.567" endtime="20241111 18:48:18.599"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.</doc>
-<msg timestamp="20241025 18:59:45.224" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241025 18:59:45.224" endtime="20241025 18:59:45.224"/>
+<msg timestamp="20241111 18:48:18.599" level="INFO">testsuite_teardown: Will be implemented later</msg>
+<status status="PASS" starttime="20241111 18:48:18.599" endtime="20241111 18:48:18.599"/>
 </kw>
-<meta name="bundle_version">0.13.0.23</meta>
+<meta name="bundle_version">0.13.1.6</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_toplevel</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
@@ -430,7 +430,7 @@ it's defined here for future requirements.</doc>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" starttime="20241025 18:59:45.081" endtime="20241025 18:59:45.224"/>
+<status status="PASS" starttime="20241111 18:48:18.442" endtime="20241111 18:48:18.599"/>
 </suite>
 <statistics>
 <total>
