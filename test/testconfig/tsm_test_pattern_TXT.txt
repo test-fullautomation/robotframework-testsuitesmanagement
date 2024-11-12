@@ -46,8 +46,8 @@ Exception\soccurred
 (END\sSETUP:)\s.+(Testsuite\sSetup)
 (START\sSETUP:)\s.+(Testcase\sSetup)
 (END\sSETUP:)\s.+(Testcase\sSetup)
-(START\sTEST:\sTest\sCase\s.+?)\s
-(END\sTEST:\sTest\sCase\s.+?)\s
+(START\sTEST:\sTest\sCase\s.+?)\s*
+(END\sTEST:\sTest\sCase\s.+?)\s*
 (START\sTEARDOWN:)\s.+(Testcase\sTeardown)
 (END\sTEARDOWN:)\s.+(Testcase\sTeardown)
 (START\sTEARDOWN:)\s.+(Testsuite\sTeardown)
