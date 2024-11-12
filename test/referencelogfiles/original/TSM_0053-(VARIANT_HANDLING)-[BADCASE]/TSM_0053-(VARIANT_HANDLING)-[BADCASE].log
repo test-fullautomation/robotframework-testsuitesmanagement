@@ -1,0 +1,19 @@
+==============================================================================
+20240509 04:16:05.585 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20240509 04:16:05.585 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20240509 04:16:05.617 - ERROR - File 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
+20240509 04:16:05.617 - ERROR - In file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.jsonp'
+20240509 04:16:05.617 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 04:16:05.617 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+------------------------------------------------------------------------------
+20240509 04:16:05.617 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20240509 04:16:05.617 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+------------------------------------------------------------------------------
+20240509 04:16:05.617 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 04:16:05.617 - INFO - testsuite_teardown: Will be implemented later
+20240509 04:16:05.617 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20240509 04:16:05.617 - INFO - + END SUITE: Tsm-Testfile-02 (126)
+==============================================================================
