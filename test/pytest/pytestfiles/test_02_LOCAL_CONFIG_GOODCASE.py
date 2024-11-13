@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_12_PARAMETER_PRIORITY_GOODCASE.py
+# test_02_LOCAL_CONFIG_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 16.06.2023 - 17:06:28
+# 13.11.2024 - 14:19:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,42 +27,42 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_PARAMETER_PRIORITY_GOODCASE:
+class Test_LOCAL_CONFIG_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Local config value overwrites initial value for parameter 'teststring_bench'
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file (selected by variant name), local config and variable file",]
+      "Description", ["With variant1 name and local config file for bench2 given in command line",]
    )
-   def test_TSM_0900(self, Description):
-      nReturn = CExecute.Execute("TSM_0900")
+   def test_TSM_0100(self, Description):
+      nReturn = CExecute.Execute("TSM_0100")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Local config value overwrites initial value for parameter 'teststring_bench'
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file, local config, variable file",]
+      "Description", ["With variant2 configuration file and local config file for bench1 given in command line",]
    )
-   def test_TSM_0901(self, Description):
-      nReturn = CExecute.Execute("TSM_0901")
+   def test_TSM_0101(self, Description):
+      nReturn = CExecute.Execute("TSM_0101")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Command line value of 'teststring_bench' overwrites all other definitions (the initial one and the local config one)
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file (selected by variant name), local config, variable file and single variable in command line",]
+      "Description", ["With variant2 configuration file, local config file for bench1 and single parameter given in command line",]
    )
-   def test_TSM_0902(self, Description):
-      nReturn = CExecute.Execute("TSM_0902")
+   def test_TSM_0102(self, Description):
+      nReturn = CExecute.Execute("TSM_0102")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Accordingly to the priority of the enlisted sources all parameters have proper values finally
+   # Expected: Local config value overwrites initial value for parameter 'teststring_bench'
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with several sources of parameters: config file, local config, variable file and single variable in command line",]
+      "Description", ["With variant1 name given in command line and and local config file for bench2 given by environment variable",]
    )
-   def test_TSM_0903(self, Description):
-      nReturn = CExecute.Execute("TSM_0903")
+   def test_TSM_0103(self, Description):
+      nReturn = CExecute.Execute("TSM_0103")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

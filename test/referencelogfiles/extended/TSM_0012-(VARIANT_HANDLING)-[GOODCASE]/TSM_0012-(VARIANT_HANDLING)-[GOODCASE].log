@@ -14,7 +14,7 @@
 20241111 18:48:09.618 - INFO - ${teststring_bench} = I am the (cft) teststring containing the default value for all test benches
 20241111 18:48:09.634 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}
 20241111 18:48:09.634 - INFO - Running with configuration level 3
-20241111 18:48:09.634 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:09.634 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:09.634 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests1/config/robot_config.jsonp'
 20241111 18:48:09.634 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests1\'
 20241111 18:48:09.634 - INFO - Number of test suites: 1

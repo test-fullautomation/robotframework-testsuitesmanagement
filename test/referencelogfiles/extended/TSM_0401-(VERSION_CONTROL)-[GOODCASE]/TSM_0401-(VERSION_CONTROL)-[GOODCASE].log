@@ -15,7 +15,7 @@
 20241111 18:48:20.083 - INFO - ${teststring_variant} = I am the 'version_control_02' configuration of tsm-test
 20241111 18:48:20.083 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': None, 'Minimum_version': None, 'Project': 'tsm-test_config_version_control.02', 'TargetName': 'Device_01', 'params': {}...
 20241111 18:48:20.083 - INFO - Running with configuration level 2
-20241111 18:48:20.083 - INFO - Running without RobotFramework AIO extended version check!
+20241111 18:48:20.083 - INFO - Running without RobotFramework AIO (extended) version check!
 20241111 18:48:20.083 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.02.jsonp'
 20241111 18:48:20.083 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:20.083 - INFO - Number of test suites: 1

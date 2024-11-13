@@ -19,7 +19,7 @@
 20241111 18:48:30.317 - INFO - ${testdict} = {'key': {'teststring_4': 'teststring_4.initial_value.suffix_1.suffix_2'}}
 20241111 18:48:30.317 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_composite_expressions_1', 'TargetName': 'Device_01', '...
 20241111 18:48:30.317 - INFO - Running with configuration level 2
-20241111 18:48:30.317 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:30.317 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:30.317 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'
 20241111 18:48:30.317 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:30.317 - INFO - Number of test suites: 1

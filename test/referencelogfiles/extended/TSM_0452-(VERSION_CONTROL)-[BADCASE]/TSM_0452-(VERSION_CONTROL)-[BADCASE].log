@@ -19,11 +19,11 @@
 Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
 config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.07.jsonp
 
-The configured minimum RobotFramework AIO extended version                 '10.0.0'
-is younger than the configured maximum RobotFramework AIO extended version '0.0.1'
+The configured minimum RobotFramework AIO (extended) version                 '10.0.0'
+is younger than the configured maximum RobotFramework AIO (extended) version '0.0.1'
 Please correct the values of 'Maximum_version', 'Minimum_version' in config file
 
-Please install the required RobotFramework AIO extended version.
+Please install the required RobotFramework AIO (extended) version.
 You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
 20241111 18:48:21.893 - UNKNOWN - Version control error!!!
 20241111 18:48:21.893 - INFO - +- END SETUP: tm.Testsuite Setup (38)

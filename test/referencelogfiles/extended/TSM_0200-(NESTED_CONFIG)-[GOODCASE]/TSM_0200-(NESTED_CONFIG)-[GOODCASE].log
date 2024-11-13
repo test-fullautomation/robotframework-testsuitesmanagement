@@ -17,7 +17,7 @@
 20241111 18:48:18.177 - INFO - ${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test
 20241111 18:48:18.177 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_nested.1', 'TargetName': 'Device_01', 'params': {}}
 20241111 18:48:18.177 - INFO - Running with configuration level 2
-20241111 18:48:18.177 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:18.177 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:18.177 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.1.jsonp'
 20241111 18:48:18.177 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:18.177 - INFO - Number of test suites: 1

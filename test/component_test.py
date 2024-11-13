@@ -23,7 +23,7 @@
 # --------------------------------------------------------------------------------------------------------------
 #
 VERSION      = "0.5.0"
-VERSION_DATE = "12.11.2024"
+VERSION_DATE = "13.11.2024"
 #
 # --------------------------------------------------------------------------------------------------------------
 #TM***
@@ -662,7 +662,7 @@ nReturn = ERROR
 if nCntUsecases == 0:
    sOut = "Nothing executed - but why?" # should not happen
    oSelfTestLogFile.Write(sOut, 1)
-   printerror(fsOut)
+   printerror(sOut)
    nReturn = ERROR
 elif ( (nCntFailedUsecases == 0) and (nCntUnknownUsecases == 0) ):
    sOut = f"Component test PASSED"

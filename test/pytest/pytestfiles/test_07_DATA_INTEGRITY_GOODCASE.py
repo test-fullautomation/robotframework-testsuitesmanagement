@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_11_JSON_DOTDICT_GOODCASE.py
+# test_07_DATA_INTEGRITY_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 16.06.2023 - 17:06:28
+# 13.11.2024 - 14:19:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,15 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_JSON_DOTDICT_GOODCASE:
+class Test_DATA_INTEGRITY_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: dotdict syntax in JSON files is possible
+   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Nested imports of JSON files with dotdict syntax",]
+      "Description", ["Test with test string containing several separator characters and blanks",]
    )
-   def test_TSM_0800(self, Description):
-      nReturn = CExecute.Execute("TSM_0800")
+   def test_TSM_1000(self, Description):
+      nReturn = CExecute.Execute("TSM_1000")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Test with test string containing more special characters, masked special characters and escape sequences",]
+   )
+   def test_TSM_1001(self, Description):
+      nReturn = CExecute.Execute("TSM_1001")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

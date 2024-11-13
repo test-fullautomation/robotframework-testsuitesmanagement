@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_14_IMPLICIT_CREATION_GOODCASE.py
+# test_04_VERSION_CONTROL_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 05.10.2023 - 15:39:52
+# 13.11.2024 - 14:19:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,42 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_IMPLICIT_CREATION_GOODCASE:
+class Test_VERSION_CONTROL_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Missing subkeys are created (implicit creation of data structures)
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file",]
+      "Description", ["'Maximum_version' and 'Minimum_version' not defined",]
    )
-   def test_TSM_1100(self, Description):
-      nReturn = CExecute.Execute("TSM_1100")
+   def test_TSM_0400(self, Description):
+      nReturn = CExecute.Execute("TSM_0400")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Missing subkeys are created (implicit creation of data structures)
+   # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)",]
+      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
    )
-   def test_TSM_1101(self, Description):
-      nReturn = CExecute.Execute("TSM_1101")
+   def test_TSM_0401(self, Description):
+      nReturn = CExecute.Execute("TSM_0401")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Maximum_version' is defined",]
+   )
+   def test_TSM_0402(self, Description):
+      nReturn = CExecute.Execute("TSM_0402")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is executed, because of the version control is optional
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Only 'Minimum_version' is defined",]
+   )
+   def test_TSM_0403(self, Description):
+      nReturn = CExecute.Execute("TSM_0403")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

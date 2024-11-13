@@ -12,7 +12,7 @@
 20241111 18:48:28.127 - INFO - Set suite metadata 'version_test' to value 'None'.
 20241111 18:48:28.127 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...
 20241111 18:48:28.127 - INFO - Running with configuration level 2
-20241111 18:48:28.127 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:28.127 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:28.127 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_parameter_priority.jsonp'
 20241111 18:48:28.127 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:28.127 - INFO - Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'

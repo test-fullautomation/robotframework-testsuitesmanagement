@@ -19,7 +19,7 @@
 20241111 18:48:29.936 - INFO - ${param2} = {'subkey': {'subkey': {'subkey': 'subkey value extended'}}}
 20241111 18:48:29.936 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_2', 'TargetName': 'Device_01', 'para...
 20241111 18:48:29.936 - INFO - Running with configuration level 2
-20241111 18:48:29.936 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:29.936 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:29.936 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_2.jsonp'
 20241111 18:48:29.936 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:29.936 - INFO - Number of test suites: 1

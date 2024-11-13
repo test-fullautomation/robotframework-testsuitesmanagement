@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_06_NESTED_CONFIG_BADCASE.py
+# test_08_IMPLICIT_CREATION_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 14.09.2023 - 13:10:37
+# 13.11.2024 - 14:19:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_NESTED_CONFIG_BADCASE:
+class Test_IMPLICIT_CREATION_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN; reason: cyclic import
+   # Expected: Missing subkeys are created (implicit creation of data structures)
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Variant with multiple nested configuration files; cyclic import of JSON file",]
+      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file",]
    )
-   def test_TSM_0250(self, Description):
-      nReturn = CExecute.Execute("TSM_0250")
+   def test_TSM_1100(self, Description):
+      nReturn = CExecute.Execute("TSM_1100")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test is not executed; error message; test result is UNKNOWN
+   # Expected: Missing subkeys are created (implicit creation of data structures)
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Assignment of unknown dictionary key in imported JSON configuration file",]
+      "Description", ["Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)",]
    )
-   def test_TSM_0251(self, Description):
-      nReturn = CExecute.Execute("TSM_0251")
+   def test_TSM_1101(self, Description):
+      nReturn = CExecute.Execute("TSM_1101")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

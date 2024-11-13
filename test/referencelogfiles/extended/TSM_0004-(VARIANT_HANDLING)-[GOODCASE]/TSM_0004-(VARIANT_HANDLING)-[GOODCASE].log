@@ -15,7 +15,7 @@
 20241111 18:48:06.895 - INFO - ${teststring_variant} = I am the 'SälfTest.ß.€.考.𠼭.𠼭' configuration of tsm-test
 20241111 18:48:06.895 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭', 'TargetName': 'Device_01', 'param...
 20241111 18:48:06.895 - INFO - Running with configuration level 2
-20241111 18:48:06.895 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:06.895 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:06.895 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.jsonp'
 20241111 18:48:06.895 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:06.895 - INFO - Number of test suites: 1

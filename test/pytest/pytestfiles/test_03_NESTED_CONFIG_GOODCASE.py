@@ -14,11 +14,11 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_13_DATA_INTEGRITY_GOODCASE.py
+# test_03_NESTED_CONFIG_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 16.06.2023 - 17:06:28
+# 13.11.2024 - 14:19:30
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -27,24 +27,24 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_DATA_INTEGRITY_GOODCASE:
+class Test_NESTED_CONFIG_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged
+   # Expected: Nested configuration files create new parameters and also overwrite already existing ones. Accordingly to the order of definitions the last definition sets the parameter value.
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with test string containing several separator characters and blanks",]
+      "Description", ["Variant with multiple nested configuration files",]
    )
-   def test_TSM_1000(self, Description):
-      nReturn = CExecute.Execute("TSM_1000")
+   def test_TSM_0200(self, Description):
+      nReturn = CExecute.Execute("TSM_0200")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
-   # Expected: Test string is handed over to Robot Framework and printed to log file unchanged (but with masked special characters and escape sequences resolved)
+   # Expected: Inside robot files all configuration parameters have proper value and are of proper data type
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["Test with test string containing more special characters, masked special characters and escape sequences",]
+      "Description", ["Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)",]
    )
-   def test_TSM_1001(self, Description):
-      nReturn = CExecute.Execute("TSM_1001")
+   def test_TSM_0201(self, Description):
+      nReturn = CExecute.Execute("TSM_0201")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

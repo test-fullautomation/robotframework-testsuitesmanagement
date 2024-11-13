@@ -26,7 +26,7 @@
 20241111 18:48:27.046 - INFO - ${ddKeyB_2_param_4} = ddKeyB_2_value
 20241111 18:48:27.046 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...
 20241111 18:48:27.046 - INFO - Running with configuration level 2
-20241111 18:48:27.046 - INFO - RobotFramework AIO extended version check passed!
+20241111 18:48:27.046 - INFO - RobotFramework AIO (extended) version check passed!
 20241111 18:48:27.046 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_json_dotdict.jsonp'
 20241111 18:48:27.046 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 20241111 18:48:27.046 - INFO - Number of test suites: 1

@@ -20,7 +20,7 @@
 #
 # XC-HWP/ESW3-Queckenstedt
 #
-# 12.11.2024
+# 13.11.2024
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -118,7 +118,7 @@ class CConfig():
 
       REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles/original"
       ROBOTFRAMEWORKCORE      = "ORIGINAL"
-      if self.__IsExtendedRFCore is True:
+      if self.__IsExtendedRFCore() is True:
          REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles/extended"
          ROBOTFRAMEWORKCORE      = "EXTENDED"
       if os.path.isdir(REFERENCELOGFILESFOLDER) is False:
@@ -219,11 +219,13 @@ class CConfig():
 
    def __IsExtendedRFCore(self):
       bExtendedRFCore = False
+      sException      = "EXTENDED-CORE-DETECTION"
       try:
-         BuiltIn().unknown("extended core detection")
-         bExtendedRFCore = True
+         BuiltIn().unknown(sException)
       except Exception as ex:
-         pass
+         if str(ex) == sException:
+            bExtendedRFCore = True
+         # otherwise exception would be: ''BuiltIn' object has no attribute 'unknown''!
       return bExtendedRFCore
 
    # --------------------------------------------------------------------------------------------------------------
