@@ -1,0 +1,18 @@
+==============================================================================
+20240509 04:16:11.260 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
+==============================================================================
+20240509 04:16:11.260 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+20240509 04:16:11.275 - ERROR - Did not find configuration file: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
+20240509 04:16:11.275 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20240509 04:16:11.275 - INFO - +- END SETUP: tm.Testsuite Setup (15)
+------------------------------------------------------------------------------
+20240509 04:16:11.275 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2 [ ]
+------------------------------------------------------------------------------
+20240509 04:16:11.275 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (0)
+------------------------------------------------------------------------------
+20240509 04:16:11.275 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20240509 04:16:11.275 - INFO - testsuite_teardown: Will be implemented later
+20240509 04:16:11.275 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20240509 04:16:11.275 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (109)
+==============================================================================

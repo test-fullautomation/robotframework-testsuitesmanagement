@@ -1,6 +1,6 @@
 ﻿# **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2024 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,12 +18,12 @@
 #
 # component_test.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-VERSION      = "0.4.1"
-VERSION_DATE = "08.05.2024"
+VERSION      = "0.6.0"
+VERSION_DATE = "14.11.2024"
 #
 # --------------------------------------------------------------------------------------------------------------
 #TM***
@@ -662,7 +662,7 @@ nReturn = ERROR
 if nCntUsecases == 0:
    sOut = "Nothing executed - but why?" # should not happen
    oSelfTestLogFile.Write(sOut, 1)
-   printerror(fsOut)
+   printerror(sOut)
    nReturn = ERROR
 elif ( (nCntFailedUsecases == 0) and (nCntUnknownUsecases == 0) ):
    sOut = f"Component test PASSED"

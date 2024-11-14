@@ -1,0 +1,72 @@
+==============================================================================
+2024-11-13 14:14:11.576797 - INFO - + START SUITE: Tsm-Testfile-22-Implicit Creation 1
+==============================================================================
+2024-11-13 14:14:11.640213 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_1'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.1.1 (Python 3.9.16 on win32)'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'bundle_version' to value '0.13.0.23'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2024-11-13 14:14:11.672458 - INFO - Set suite metadata 'version_test' to value 'None'.
+2024-11-13 14:14:11.672458 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2024-11-13 14:14:11.672458 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2024-11-13 14:14:11.672458 - INFO - ${teststring_variant} = I am the 'implicit_creation_1' configuration of tsm-test
+2024-11-13 14:14:11.672458 - INFO - ${dTestDict} = {'kVal_1': 'Val_1', 'kVal_2': {'I_am_not_existing_1': {'I_am_not_existing_2': 'Val_1'}}, 'kVal_3': {'I_am_not_existing_3': {'I_am_not_existing_4': 'Val_1_extended'}}, 'kVal_3b': {'I_am_not_existing_3b...
+2024-11-13 14:14:11.672458 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_1', 'TargetName': 'Device_01', 'para...
+2024-11-13 14:14:11.672458 - INFO - Running with configuration level 2
+2024-11-13 14:14:11.672458 - INFO - RobotFramework AIO (original) version check passed!
+2024-11-13 14:14:11.672458 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_1.jsonp'
+2024-11-13 14:14:11.672458 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2024-11-13 14:14:11.672458 - INFO - Number of test suites: 1
+2024-11-13 14:14:11.672458 - INFO - Total number of testcases: 1
+2024-11-13 14:14:11.672458 - INFO - +- END SETUP: tm.Testsuite Setup (0.032245 s)
+------------------------------------------------------------------------------
+2024-11-13 14:14:11.672458 - INFO - +- START TEST: Test Case tsm-testfile-22-implicit_creation_1
+------------------------------------------------------------------------------
+2024-11-13 14:14:11.688143 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2024-11-13 14:14:11.688143 - INFO - Test Count: 1
+2024-11-13 14:14:11.688143 - INFO - +-- END SETUP: tm.Testcase Setup (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.688143 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation_1) ]
+2024-11-13 14:14:11.688143 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'tsm-test_config_implicit_creation_1'
+2024-11-13 14:14:11.688143 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.690118 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation_1) ]
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2024-11-13 14:14:11.690118 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.690118 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation_1) ]
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the 'implicit_creation_1' configuration of tsm-test'
+2024-11-13 14:14:11.690118 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.690118 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation_1) ]
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-22-implicit_creation_1) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2024-11-13 14:14:11.690118 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.690118 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict} | PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) ]
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/1) > {kVal_1} [STR]  :  'Val_1'
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/2) > {kVal_2} [DOTDICT] (1/1) > {I_am_not_existing_1} [DOTDICT] (1/1) > {I_am_not_existing_2} [STR]  :  'Val_1'
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/3) > {kVal_3} [DOTDICT] (1/1) > {I_am_not_existing_3} [DOTDICT] (1/1) > {I_am_not_existing_4} [STR]  :  'Val_1_extended'
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/4) > {kVal_3b} [DOTDICT] (1/1) > {I_am_not_existing_3b} [DOTDICT] (1/1) > {I_am_not_existing_4b} [STR]  :  'Val_1'
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/1) > {A} [INT]  :  1
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/2) > {B} [LIST] (2/1) > [INT]  :  1
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/2) > {B} [LIST] (2/2) > [INT]  :  2
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/3) > {kVal_4D} [DOTDICT] (1/1) > {kVal_4E} [DOTDICT] (1/1) > {kVal_4F} [DOTDICT] (1/1) > {kVal_4G} [DOTDICT] (2/1) > {C} [INT]  :  2
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/3) > {kVal_4D} [DOTDICT] (1/1) > {kVal_4E} [DOTDICT] (1/1) > {kVal_4F} [DOTDICT] (1/1) > {kVal_4G} [DOTDICT] (2/2) > {D} [LIST] (2/1) > [INT]  :  3
+2024-11-13 14:14:11.690118 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-22-implicit_creation_1) : [DOTDICT] (5/5) > {kVal_4} [DOTDICT] (1/1) > {kVal_4B} [DOTDICT] (1/1) > {kVal_4C} [DOTDICT] (3/3) > {kVal_4D} [DOTDICT] (1/1) > {kVal_4E} [DOTDICT] (1/1) > {kVal_4F} [DOTDICT] (1/1) > {kVal_4G} [DOTDICT] (2/2) > {D} [LIST] (2/2) > [INT]  :  4
+2024-11-13 14:14:11.690118 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-11-13 14:14:11.690118 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2024-11-13 14:14:11.690118 - INFO - testcase_teardown: Will be implemented later
+2024-11-13 14:14:11.690118 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.0 s)
+------------------------------------------------------------------------------
+2024-11-13 14:14:11.690118 - INFO - +- END TEST: Test Case tsm-testfile-22-implicit_creation_1 (0.01766 s)
+------------------------------------------------------------------------------
+2024-11-13 14:14:11.690118 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2024-11-13 14:14:11.690118 - INFO - testsuite_teardown: Will be implemented later
+2024-11-13 14:14:11.690118 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.0 s)
+==============================================================================
+2024-11-13 14:14:11.690118 - INFO - + END SUITE: Tsm-Testfile-22-Implicit Creation 1 (0.113321 s)
+==============================================================================
