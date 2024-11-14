@@ -15,7 +15,7 @@
 2024-11-13 10:43:56.205996 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
 2024-11-13 10:43:56.205996 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
 2024-11-13 10:43:56.205996 - INFO - Running with configuration level 2
-2024-11-13 10:43:56.205996 - INFO - RobotFramework AIO version check passed!
+2024-11-13 10:43:56.205996 - INFO - RobotFramework AIO (original) version check passed!
 2024-11-13 10:43:56.205996 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
 2024-11-13 10:43:56.205996 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 2024-11-13 10:43:56.205996 - INFO - Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'

@@ -16,7 +16,7 @@
 2024-11-13 14:14:11.672458 - INFO - ${dTestDict} = {'kVal_1': 'Val_1', 'kVal_2': {'I_am_not_existing_1': {'I_am_not_existing_2': 'Val_1'}}, 'kVal_3': {'I_am_not_existing_3': {'I_am_not_existing_4': 'Val_1_extended'}}, 'kVal_3b': {'I_am_not_existing_3b...
 2024-11-13 14:14:11.672458 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_1', 'TargetName': 'Device_01', 'para...
 2024-11-13 14:14:11.672458 - INFO - Running with configuration level 2
-2024-11-13 14:14:11.672458 - INFO - RobotFramework AIO version check passed!
+2024-11-13 14:14:11.672458 - INFO - RobotFramework AIO (original) version check passed!
 2024-11-13 14:14:11.672458 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_1.jsonp'
 2024-11-13 14:14:11.672458 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 2024-11-13 14:14:11.672458 - INFO - Number of test suites: 1

@@ -12,7 +12,7 @@
 2024-11-12 18:05:31.830489 - INFO - Set suite metadata 'version_test' to value 'None'.
 2024-11-12 18:05:31.830489 - INFO - ${CONFIG} = {'Project': 'RobotFramework Testsuites', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'version': {'majorversion': '0', 'minor...
 2024-11-12 18:05:31.830489 - WARN - Running with configuration level 4
-2024-11-12 18:05:31.830489 - INFO - RobotFramework AIO version check passed!
+2024-11-12 18:05:31.830489 - INFO - RobotFramework AIO (original) version check passed!
 2024-11-12 18:05:31.830489 - INFO - Loaded configuration file 'C:/workplace/RobotFramework/python39/lib/site-packages/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
 2024-11-12 18:05:31.830489 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
 2024-11-12 18:05:31.830489 - INFO - Number of test suites: 1
