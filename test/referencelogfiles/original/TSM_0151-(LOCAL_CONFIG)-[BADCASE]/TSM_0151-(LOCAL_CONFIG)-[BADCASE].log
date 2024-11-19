@@ -1,20 +1,20 @@
 ==============================================================================
-20240509 04:16:19.123 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20241111 18:48:17.770 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20240509 04:16:19.123 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20240509 04:16:19.155 - ERROR - Loading local config failed with file: D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp
-20240509 04:16:19.155 - ERROR - ---> The mandatory 'WelcomeString' element of configuration file is found in local config file
-20240509 04:16:19.155 - ERROR - ---> Wrong local config file was chosen, please check!!!
-20240509 04:16:19.155 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:19.155 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+20241111 18:48:17.770 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20241111 18:48:17.802 - ERROR - Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp
+20241111 18:48:17.802 - ERROR - ---> The mandatory 'WelcomeString' element of configuration file is found in local config file
+20241111 18:48:17.802 - ERROR - ---> Wrong local config file was chosen, please check!!!
+20241111 18:48:17.802 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:17.802 - INFO - +- END SETUP: tm.Testsuite Setup (32)
 ------------------------------------------------------------------------------
-20240509 04:16:19.155 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20241111 18:48:17.802 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:19.155 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20241111 18:48:17.802 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20240509 04:16:19.155 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:19.155 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:19.155 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20241111 18:48:17.802 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:17.802 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:17.802 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:19.155 - INFO - + END SUITE: Tsm-Testfile-02 (125)
+20241111 18:48:17.802 - INFO - + END SUITE: Tsm-Testfile-02 (94)
 ==============================================================================
