@@ -1,21 +1,21 @@
 ==============================================================================
-20240509 04:16:14.089 - INFO - + START SUITE: Tsm-Cft-Test.File-1 [ ]
+20241111 18:48:15.287 - INFO - + START SUITE: Tsm-Cft-Test.File-1 [ ]
 ==============================================================================
-20240509 04:16:14.089 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20240509 04:16:14.105 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
-20240509 04:16:14.105 - ERROR - * file 1: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
-20240509 04:16:14.105 - ERROR - * file 2: 'D:/a/RobotFramework_AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
-20240509 04:16:14.105 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
-20240509 04:16:14.105 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20240509 04:16:14.105 - INFO - +- END SETUP: tm.Testsuite Setup (16)
+20241111 18:48:15.287 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20241111 18:48:15.301 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+20241111 18:48:15.301 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
+20241111 18:48:15.301 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
+20241111 18:48:15.301 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
+20241111 18:48:15.301 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:15.301 - INFO - +- END SETUP: tm.Testsuite Setup (14)
 ------------------------------------------------------------------------------
-20240509 04:16:14.105 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE) [ ]
+20241111 18:48:15.301 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE) [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:14.105 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (0)
+20241111 18:48:15.301 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (0)
 ------------------------------------------------------------------------------
-20240509 04:16:14.105 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:14.105 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:14.105 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20241111 18:48:15.301 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:15.301 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:15.301 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:14.105 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (110)
+20241111 18:48:15.301 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (83)
 ==============================================================================

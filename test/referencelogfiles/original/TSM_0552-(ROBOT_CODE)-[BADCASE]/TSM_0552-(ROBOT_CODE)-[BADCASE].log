@@ -1,5 +1,5 @@
 ==============================================================================
-20240509 04:16:30.284 - INFO - + START SUITE: Tsm-Testfile-11-State Unknown [ ]
+20241111 18:48:23.316 - INFO - + START SUITE: Tsm-Testfile-11-State Unknown [ ]
 ==============================================================================
 20240509 04:16:30.284 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
 20240509 04:16:30.315 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
@@ -22,44 +22,44 @@
 20240509 04:16:30.315 - INFO - Total number of testcases: 1
 20240509 04:16:30.315 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20240509 04:16:30.315 - INFO - +- START TEST: Test Case tsm-testfile-11-state_unknown [ ]
+20241111 18:48:23.348 - INFO - +- START TEST: Test Case tsm-testfile-11-state_unknown [ ]
 ------------------------------------------------------------------------------
-20240509 04:16:30.331 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20240509 04:16:30.331 - INFO - Test Count: 1
-20240509 04:16:30.331 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20241111 18:48:23.348 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20241111 18:48:23.348 - INFO - Test Count: 1
+20241111 18:48:23.348 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-11-state_unknown) ]
-20240509 04:16:30.331 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-11-state_unknown) : [STR]  :  'tsm-test_config_variant1'
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20241111 18:48:23.348 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-11-state_unknown) ]
+20241111 18:48:23.348 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-11-state_unknown) : [STR]  :  'tsm-test_config_variant1'
+20241111 18:48:23.348 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-11-state_unknown) ]
-20240509 04:16:30.331 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20241111 18:48:23.348 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-11-state_unknown) ]
+20241111 18:48:23.348 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20241111 18:48:23.348 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-11-state_unknown) ]
-20240509 04:16:30.331 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20241111 18:48:23.348 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-11-state_unknown) ]
+20241111 18:48:23.348 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20241111 18:48:23.348 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-11-state_unknown) ]
-20240509 04:16:30.331 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20241111 18:48:23.348 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-11-state_unknown) ]
+20241111 18:48:23.348 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-11-state_unknown) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20241111 18:48:23.348 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
-20240509 04:16:30.331 - UNKNOWN - Exception occurred.
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: BuiltIn.Unknown (0)
+20241111 18:48:23.348 - INFO - +-- START KEYWORD: BuiltIn.Unknown [ ]
+20241111 18:48:23.364 - UNKNOWN - Exception occurred.
+20241111 18:48:23.364 - INFO - +-- END KEYWORD: BuiltIn.Unknown (16)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
-20240509 04:16:30.331 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+20241111 18:48:23.364 - INFO - +-- START KEYWORD: BuiltIn.Log [ I must not be executed | console=yes ]
+20241111 18:48:23.364 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20240509 04:16:30.331 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20240509 04:16:30.331 - INFO - testcase_teardown: Will be implemented later
-20240509 04:16:30.331 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20241111 18:48:23.364 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20241111 18:48:23.364 - INFO - testcase_teardown: Will be implemented later
+20241111 18:48:23.366 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20240509 04:16:30.331 - INFO - +- END TEST: Test Case tsm-testfile-11-state_unknown (16)
+20241111 18:48:23.366 - INFO - +- END TEST: Test Case tsm-testfile-11-state_unknown (18)
 ------------------------------------------------------------------------------
-20240509 04:16:30.331 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20240509 04:16:30.331 - INFO - testsuite_teardown: Will be implemented later
-20240509 04:16:30.331 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20241111 18:48:23.366 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:23.366 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:23.366 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20240509 04:16:30.331 - INFO - + END SUITE: Tsm-Testfile-11-State Unknown (141)
+20241111 18:48:23.366 - INFO - + END SUITE: Tsm-Testfile-11-State Unknown (114)
 ==============================================================================
