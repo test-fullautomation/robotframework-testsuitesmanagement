@@ -1,6 +1,6 @@
 ﻿# **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2024 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
 #
 # TestConfig.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 06.10.2023
+# 13.11.2024
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -258,7 +258,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0050"
 dictUsecase['DESCRIPTION']      = "With missing parameter in parameter configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -266,13 +266,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_param\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0051"
 dictUsecase['DESCRIPTION']      = "With syntax error in parameter configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -280,13 +282,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0052"
 dictUsecase['DESCRIPTION']      = "With syntax error within imported parameter configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -294,13 +298,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error_within_import\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0053"
 dictUsecase['DESCRIPTION']      = "With not existing imported parameter configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -308,13 +314,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0054"
 dictUsecase['DESCRIPTION']      = "With not existing imported parameter configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -322,13 +330,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0055"
 dictUsecase['DESCRIPTION']      = "Command line contains both: variant name and config file"
-dictUsecase['EXPECTATION']      = "Both together is not accepted; test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Both together is not accepted; test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -336,13 +346,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\" --variable config_file:\"./config/tsm-test_config_variant2.jsonp\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0056"
 dictUsecase['DESCRIPTION']      = "Command line contains variant name, but no variant configuration file is given to suite setup"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -350,13 +362,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0057"
 dictUsecase['DESCRIPTION']      = "Command line contains invalid variant name (not allowed characters in variant name)"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -364,13 +378,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"in/va/lid\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0058"
 dictUsecase['DESCRIPTION']      = "Command line contains unknown variant name (a variant with this name is not defined in variant configuration file)"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -378,13 +394,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"I_AM_NOT_DEFINED\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0059"
 dictUsecase['DESCRIPTION']      = "Command line contains unknown variant configuration file (a file with this name does not exist)"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -392,13 +410,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/I_AM_NOT_EXISTING.jsonp\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0060"
 dictUsecase['DESCRIPTION']      = "Robot file refers to a variant configuration file with syntax errors"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -406,13 +426,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-07-err-1.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0061"
 dictUsecase['DESCRIPTION']      = "Robot file refers to a variant configuration file with not existing parameter file for default variant"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -420,13 +442,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0062"
 dictUsecase['DESCRIPTION']      = "Robot file refers to a variant configuration file with not existing path for variant1"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -434,13 +458,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0063"
 dictUsecase['DESCRIPTION']      = "Robot file refers to a variant configuration file with with missing 'default' variant; a variant name is not given in command line"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -448,13 +474,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-09-err-3.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0064"
 dictUsecase['DESCRIPTION']      = "A local config file is passed to command line parameter config_file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: a local config file is not a full configuration file"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core); reason: a local config file is not a full configuration file"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -462,13 +490,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./localconfig/tsm-test_localconfig_bench1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0065"
 dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -476,13 +506,15 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0066"
 dictUsecase['DESCRIPTION']      = "With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VARIANT_HANDLING"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -490,7 +522,9 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -557,7 +591,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0150"
 dictUsecase['DESCRIPTION']      = "A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -565,13 +599,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0151"
 dictUsecase['DESCRIPTION']      = "A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "LOCAL_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -579,7 +615,9 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant2\" --variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -615,7 +653,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0250"
 dictUsecase['DESCRIPTION']      = "Variant with multiple nested configuration files; cyclic import of JSON file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN; reason: cyclic import"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core); reason: cyclic import"
 dictUsecase['SECTION']          = "NESTED_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -623,13 +661,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-03.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"cyclic_import\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0251"
 dictUsecase['DESCRIPTION']      = "Assignment of unknown dictionary key in imported JSON configuration file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "NESTED_CONFIG"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -637,7 +677,9 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"invalid_assignment_1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -651,7 +693,7 @@ del dictUsecase
 # # dictUsecase = {}
 # # dictUsecase['TESTID']           = "TSM_0350"
 # # dictUsecase['DESCRIPTION']      = "Schema file for JSON configuration files is not available"
-# # dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+# # dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 # # dictUsecase['SECTION']          = "SCHEMA_VALIDATION"
 # # dictUsecase['SUBSECTION']       = "BADCASE"
 # # dictUsecase['COMMENT']          = "Single file execution"
@@ -662,13 +704,13 @@ del dictUsecase
 # # dictUsecase['PRESTEP']          = "ConfigSchemaFile_Remove"
 # # dictUsecase['POSTSTEP']         = "ConfigSchemaFile_Restore"
 # # dictUsecase['EXPECTEDRETURN']   = None # 256
-# # listofdictUsecases.append(dictUsecase)
+# # # # # listofdictUsecases.append(dictUsecase)
 # # del dictUsecase
 # # # --------------------------------------------------------------------------------------------------------------
 # # dictUsecase = {}
 # # dictUsecase['TESTID']           = "TSM_0351"
 # # dictUsecase['DESCRIPTION']      = "Schema file for JSON configuration files is invalid because of a syntax error"
-# # dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+# # dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 # # dictUsecase['SECTION']          = "SCHEMA_VALIDATION"
 # # dictUsecase['SUBSECTION']       = "BADCASE"
 # # dictUsecase['COMMENT']          = "Single file execution"
@@ -678,7 +720,7 @@ del dictUsecase
 # # dictUsecase['PRESTEP']          = "ConfigSchemaFile_MakeInvalid"
 # # dictUsecase['POSTSTEP']         = "ConfigSchemaFile_Restore"
 # # dictUsecase['EXPECTEDRETURN']   = None # 256
-# # listofdictUsecases.append(dictUsecase)
+# # # # # listofdictUsecases.append(dictUsecase)
 # # del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -741,7 +783,7 @@ del dictUsecase
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0450"
 dictUsecase['DESCRIPTION']      = "'Maximum_version' is invalid (value is not a version number)"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -749,13 +791,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_05\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0451"
 dictUsecase['DESCRIPTION']      = "'Minimum_version' is invalid (value contains blanks only)"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -763,13 +807,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_06\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0452"
 dictUsecase['DESCRIPTION']      = "'Minimum_version' is bigger than 'Maximum_version'"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -777,13 +823,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_07\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0453"
 dictUsecase['DESCRIPTION']      = "'Maximum_version' is smaller than current version"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -791,13 +839,15 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_08\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0454"
 dictUsecase['DESCRIPTION']      = "'Minimum_version' is bigger than current version"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "BADCASE"
 dictUsecase['COMMENT']          = "Single file execution"
@@ -805,165 +855,178 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_09\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
+# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
+# # # reference log files need to be adapted after bug fix
+# # # listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0551"
-dictUsecase['DESCRIPTION']      = "Robot file contains keyword FAIL"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword FAIL; error message; test result is FAIL"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-10-fail.robot" # (with variant configuration; keyword FAIL)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 1
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0552"
-dictUsecase['DESCRIPTION']      = "Robot file contains keyword UNKNOWN"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword UNKNOWN; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-11-state_unknown.robot" # (with variant configuration and call of keyword UNKNOWN)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0553"
-dictUsecase['DESCRIPTION']      = "Call of not existing keyword in test code of robot file"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword call; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-12-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0554"
-dictUsecase['DESCRIPTION']      = "Incomplete keyword 'FOR' in test code of robot file"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-13-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0555"
-dictUsecase['DESCRIPTION']      = "Incomplete keyword 'IF/ELSE' in test code of robot file"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-14-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0556"
-dictUsecase['DESCRIPTION']      = "Import of not existing library in robot file"
-dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-15-unknown_library.robot" # (with variant configuration and import of unknown library)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0557"
-dictUsecase['DESCRIPTION']      = "Assignment of unknown dictionary key in test code of robot file"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-16-unknown_parameter_1.robot" # (with variant configuration and assignment of unknown dictionary key)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0558"
-dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkey in test code of robot file"
-dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is UNKNOWN"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-17-unknown_parameter_2.robot" # (with variant configuration and parameter assignment to unknown dictionary subkey)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 256
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0559"
-dictUsecase['DESCRIPTION']      = "Robot file with several tests; one test contains keyword FATAL ERROR"
-dictUsecase['EXPECTATION']      = "Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED"
-dictUsecase['SECTION']          = "ROBOT_CODE"
-dictUsecase['SUBSECTION']       = "BADCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-20-fatal_error.robot" # (with variant configuration and several tests; keyword FATAL ERROR)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 513 # 1 x failed; 2 x unknown / !! not yet adapted to: https://github.com/test-fullautomation/robotframework/issues/25 !!!
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
-# --------------------------------------------------------------------------------------------------------------
-# --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0600"
-dictUsecase['DESCRIPTION']      = "Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)"
-dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
-dictUsecase['SECTION']          = "RETURN_VALUE"
-dictUsecase['SUBSECTION']       = "GOODCASE"
-dictUsecase['COMMENT']          = "Single file execution"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-18-several_tests.robot" # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
-dictUsecase['TESTFOLDERNAME']   = None
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 1027
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0551"
+# # # dictUsecase['DESCRIPTION']      = "Robot file contains keyword FAIL"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword FAIL; error message; test result is FAIL"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-10-fail.robot" # (with variant configuration; keyword FAIL)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 1
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0552"
+# # # dictUsecase['DESCRIPTION']      = "Robot file contains keyword UNKNOWN"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword UNKNOWN; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-11-state_unknown.robot" # (with variant configuration and call of keyword UNKNOWN)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0553"
+# # # dictUsecase['DESCRIPTION']      = "Call of not existing keyword in test code of robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of keyword call; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-12-unknown_keyword.robot" # (with variant configuration and call of not existing keyword)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0554"
+# # # dictUsecase['DESCRIPTION']      = "Incomplete keyword 'FOR' in test code of robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-13-keyword_incomplete_1.robot" # (with variant configuration and call of incomplete keyword FOR)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0555"
+# # # dictUsecase['DESCRIPTION']      = "Incomplete keyword 'IF/ELSE' in test code of robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of incomplete keyword call; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-14-keyword_incomplete_2.robot" # (with variant configuration and call of incomplete keyword IF/ELSE)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0556"
+# # # dictUsecase['DESCRIPTION']      = "Import of not existing library in robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-15-unknown_library.robot" # (with variant configuration and import of unknown library)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0557"
+# # # dictUsecase['DESCRIPTION']      = "Assignment of unknown dictionary key in test code of robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-16-unknown_parameter_1.robot" # (with variant configuration and assignment of unknown dictionary key)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0558"
+# # # dictUsecase['DESCRIPTION']      = "Assignment of known parameter to unknown dictionary subkey in test code of robot file"
+# # # dictUsecase['EXPECTATION']      = "Test is executed up to position of invalid assignment; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-17-unknown_parameter_2.robot" # (with variant configuration and parameter assignment to unknown dictionary subkey)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 256
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# # # # --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0559"
+# # # dictUsecase['DESCRIPTION']      = "Robot file with several tests; one test contains keyword FATAL ERROR"
+# # # dictUsecase['EXPECTATION']      = "Test suite is executed up to position of keyword FATAL ERROR; error message; test suite result is UNKNOWN; not executed test cases are counted as SKIPPED"
+# # # dictUsecase['SECTION']          = "ROBOT_CODE"
+# # # dictUsecase['SUBSECTION']       = "BADCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-20-fatal_error.robot" # (with variant configuration and several tests; keyword FATAL ERROR)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 513 # 1 x failed; 2 x unknown / !! not yet adapted to: https://github.com/test-fullautomation/robotframework/issues/25 !!!
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
-dictUsecase = {}
-dictUsecase['TESTID']           = "TSM_0700"
-dictUsecase['DESCRIPTION']      = "Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)"
-dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
-dictUsecase['SECTION']          = "RETURN_VALUE"
-dictUsecase['SUBSECTION']       = "GOODCASE"
-dictUsecase['COMMENT']          = "Folder execution"
-dictUsecase['TESTFILENAME']     = None
-dictUsecase['TESTFOLDERNAME']   = "testsuitestest" # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
-dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
-dictUsecase['EXPECTEDRETURN']   = None # 1542
-listofdictUsecases.append(dictUsecase)
-del dictUsecase
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0600"
+# # # dictUsecase['DESCRIPTION']      = "Robot file containing several tests, some PASSED (2), some FAILED (3), some UNKNOWN (4)"
+# # # dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
+# # # dictUsecase['SECTION']          = "RETURN_VALUE"
+# # # dictUsecase['SUBSECTION']       = "GOODCASE"
+# # # dictUsecase['COMMENT']          = "Single file execution"
+# # # dictUsecase['TESTFILENAME']     = "tsm-testfile-18-several_tests.robot" # (containing several tests, some PASSED, some FAILED, some UNKNOWN)
+# # # dictUsecase['TESTFOLDERNAME']   = None
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 1027
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+# # # # functionality not located in TSM but in Robot Framework itself; therefore should be tested there
+# # # dictUsecase = {}
+# # # dictUsecase['TESTID']           = "TSM_0700"
+# # # dictUsecase['DESCRIPTION']      = "Folder with several robot files (6) containing several tests, some PASSED (6), some FAILED (6), some UNKNOWN (6)"
+# # # dictUsecase['EXPECTATION']      = "Return value of Robot Framework indicates number of FAILED together with number of UNKNOWN tests"
+# # # dictUsecase['SECTION']          = "RETURN_VALUE"
+# # # dictUsecase['SUBSECTION']       = "GOODCASE"
+# # # dictUsecase['COMMENT']          = "Folder execution"
+# # # dictUsecase['TESTFILENAME']     = None
+# # # dictUsecase['TESTFOLDERNAME']   = "testsuitestest" # (folder containing several robot files in several subfolders with tests are PASSED, FAILED and UNKNOWN)
+# # # dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+# # # dictUsecase['EXPECTEDRETURN']   = None # 1542
+# # # listofdictUsecases.append(dictUsecase)
+# # # del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}

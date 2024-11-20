@@ -1,0 +1,19 @@
+==============================================================================
+20241111 18:48:21.489 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20241111 18:48:21.489 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20241111 18:48:21.505 - ERROR - Invalid Minimum version:Wrong format in version information '   '
+20241111 18:48:21.505 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'
+20241111 18:48:21.520 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:21.520 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+------------------------------------------------------------------------------
+20241111 18:48:21.520 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20241111 18:48:21.521 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+------------------------------------------------------------------------------
+20241111 18:48:21.521 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:21.521 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:21.521 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20241111 18:48:21.521 - INFO - + END SUITE: Tsm-Testfile-02 (110)
+==============================================================================

@@ -1,0 +1,19 @@
+==============================================================================
+20241111 18:48:19.301 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20241111 18:48:19.301 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20241111 18:48:19.333 - ERROR - Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'
+20241111 18:48:19.333 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp
+20241111 18:48:19.333 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:19.333 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+------------------------------------------------------------------------------
+20241111 18:48:19.333 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20241111 18:48:19.333 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+------------------------------------------------------------------------------
+20241111 18:48:19.333 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:19.333 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:19.333 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20241111 18:48:19.345 - INFO - + END SUITE: Tsm-Testfile-02 (94)
+==============================================================================

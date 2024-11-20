@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241111 18:48:24.676" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-15-Unknown Library" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot">
+<test id="s1-t1" name="Test Case tsm-testfile-15-unknown_library" line="34">
+<doc>tsm-testfile-15-unknown_library</doc>
+<status status="UNKNOWN" starttime="20241111 18:48:24.745" endtime="20241111 18:48:24.745"/>
+</test>
+<status status="UNKNOWN" starttime="20241111 18:48:24.682" endtime="20241111 18:48:24.745"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="0" skip="0" unknown="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="0" skip="0" unknown="1" id="s1" name="Tsm-Testfile-15-Unknown Library">Tsm-Testfile-15-Unknown Library</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20241111 18:48:24.745" level="UNKNOWN">Error in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-15-unknown_library.robot' on line 26: Importing library 'I.Am.The.Unknown.Library.And.Therefore.An.Error' failed: ModuleNotFoundError: No module named 'I'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test
+  C:\workplace\RobotFramework\python39\python39.zip
+  C:\workplace\RobotFramework\python39\DLLs
+  C:\workplace\RobotFramework\python39\lib
+  C:\workplace\RobotFramework\python39
+  C:\workplace\RobotFramework\python39\lib\site-packages
+  C:\workplace\RobotFramework\python39\lib\site-packages\robotframework-6.1-py3.9.egg
+  C:\workplace\RobotFramework\python39\lib\site-packages\win32
+  C:\workplace\RobotFramework\python39\lib\site-packages\win32\lib
+  C:\workplace\RobotFramework\python39\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

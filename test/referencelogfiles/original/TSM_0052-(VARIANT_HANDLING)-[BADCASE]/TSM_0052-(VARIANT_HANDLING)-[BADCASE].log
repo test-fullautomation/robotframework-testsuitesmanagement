@@ -1,0 +1,21 @@
+==============================================================================
+20241111 18:48:10.677 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+==============================================================================
+20241111 18:48:10.680 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20241111 18:48:10.698 - ERROR - Expecting property name enclosed in double quotes: line 3 column 4 (char 104)
+20241111 18:48:10.698 - ERROR - Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'
+20241111 18:48:10.698 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'
+20241111 18:48:10.698 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error_within_import.jsonp'
+20241111 18:48:10.698 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:10.698 - INFO - +- END SETUP: tm.Testsuite Setup (18)
+------------------------------------------------------------------------------
+20241111 18:48:10.698 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+------------------------------------------------------------------------------
+20241111 18:48:10.708 - INFO - +- END TEST: Test Case tsm-testfile-02 (10)
+------------------------------------------------------------------------------
+20241111 18:48:10.708 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:10.708 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:10.708 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20241111 18:48:10.708 - INFO - + END SUITE: Tsm-Testfile-02 (94)
+==============================================================================

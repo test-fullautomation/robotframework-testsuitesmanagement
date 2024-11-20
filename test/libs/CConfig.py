@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2024 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 #
 # CConfig.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
-# 06.10.2023
+# 13.11.2024
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -32,6 +32,8 @@ Python module containing the configuration for **component_test.py**.
 
 import os, sys, time, platform, json, argparse
 import colorama as col
+
+from robot.libraries.BuiltIn import BuiltIn # used for Robot Framework core detection
 
 from PythonExtensionsCollection.String.CString import CString
 from PythonExtensionsCollection.File.CFile import CFile
@@ -114,10 +116,15 @@ class CConfig():
          raise Exception(CString.FormatResult(sMethod, False, f"Testfiles folder not found: '{TESTFILESFOLDER}'"))
       self.__dictConfig['TESTFILESFOLDER'] = TESTFILESFOLDER
 
-      REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles"
+      REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles/original"
+      ROBOTFRAMEWORKCORE      = "ORIGINAL"
+      if self.__IsExtendedRFCore() is True:
+         REFERENCELOGFILESFOLDER = f"{REFERENCEPATH}/referencelogfiles/extended"
+         ROBOTFRAMEWORKCORE      = "EXTENDED"
       if os.path.isdir(REFERENCELOGFILESFOLDER) is False:
          raise Exception(CString.FormatResult(sMethod, False, f"Reference log files folder not found: '{REFERENCELOGFILESFOLDER}'"))
       self.__dictConfig['REFERENCELOGFILESFOLDER'] = REFERENCELOGFILESFOLDER
+      self.__dictConfig['ROBOTFRAMEWORKCORE']      = ROBOTFRAMEWORKCORE
 
       # -- installed sources
 
@@ -206,6 +213,20 @@ class CConfig():
          raise Exception(CString.FormatResult(sMethod, bSuccess, sResult))
 
    # eof def __init__(self, sCalledBy=None):
+
+   # --------------------------------------------------------------------------------------------------------------
+   #TM***
+
+   def __IsExtendedRFCore(self):
+      bExtendedRFCore = False
+      sException      = "EXTENDED-CORE-DETECTION"
+      try:
+         BuiltIn().unknown(sException)
+      except Exception as ex:
+         if str(ex) == sException:
+            bExtendedRFCore = True
+         # otherwise exception would be: ''BuiltIn' object has no attribute 'unknown''!
+      return bExtendedRFCore
 
    # --------------------------------------------------------------------------------------------------------------
    #TM***

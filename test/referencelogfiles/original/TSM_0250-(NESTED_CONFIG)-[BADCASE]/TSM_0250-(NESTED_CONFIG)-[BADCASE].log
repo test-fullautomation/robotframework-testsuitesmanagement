@@ -1,0 +1,21 @@
+==============================================================================
+20241111 18:48:18.932 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
+==============================================================================
+20241111 18:48:18.932 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20241111 18:48:18.964 - ERROR - Cyclic imported json file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'!
+20241111 18:48:18.964 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/import.cyclic/tsm-test_config_cyclic.3.jsonp'
+20241111 18:48:18.964 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/import.cyclic/tsm-test_config_cyclic.2.jsonp'
+20241111 18:48:18.964 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp'
+20241111 18:48:18.964 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20241111 18:48:18.964 - INFO - +- END SETUP: tm.Testsuite Setup (32)
+------------------------------------------------------------------------------
+20241111 18:48:18.964 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
+------------------------------------------------------------------------------
+20241111 18:48:18.964 - INFO - +- END TEST: Test Case tsm-testfile-03 (0)
+------------------------------------------------------------------------------
+20241111 18:48:18.964 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20241111 18:48:18.964 - INFO - testsuite_teardown: Will be implemented later
+20241111 18:48:18.964 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20241111 18:48:18.964 - INFO - + END SUITE: Tsm-Testfile-03 (95)
+==============================================================================
