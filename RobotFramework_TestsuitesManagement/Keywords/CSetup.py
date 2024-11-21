@@ -13,7 +13,7 @@
 #  limitations under the License.
 
 import copy
-import os
+import sys
 
 import RobotFramework_TestsuitesManagement as TM
 from robot.api.deco import keyword
@@ -82,6 +82,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                     for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
                         if infoMsg.strip() != '':
                             logger.error(infoMsg)
+                sys.tracebacklimit = 0
                 raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
@@ -93,8 +94,9 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
                 for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
                     if infoMsg.strip() != '':
                         logger.error(infoMsg)
+            sys.tracebacklimit = 0
             raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
-            return
+
         msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
             logger.warn(msg)
@@ -188,7 +190,6 @@ Loads a json file and returns a json object.
 
   / *Type*: json /
         '''
-        import os
         from os.path import abspath, dirname
         from JsonPreprocessor import CJsonPreprocessor
         jsonFileDir = dirname(abspath(jsonfile))
