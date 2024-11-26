@@ -108,15 +108,15 @@
 
   After the **RobotFramework_TestsuitesManagement** library is imported
 
-  | ``Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites``
+  | ``Library\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0RobotFramework_TestsuitesManagement\u00a0\u00a0\u00a0\u00a0WITH\u00a0NAME\u00a0\u00a0\u00a0\u00a0testsuites``
 
   a variant configuration file is usually loaded in a way like this:
 
-  | ``Suite Setup    testsuites.testsuite_setup    ./config/variants_config.jsonp``
+  | ``Suite\u00a0Setup\u00a0\u00a0\u00a0\u00a0testsuites.testsuite_setup\u00a0\u00a0\u00a0\u00a0./config/variants_config.jsonp``
 
   With the *three-dots* syntax extension for relative paths, the positional dependency between the file containing the suite setup and the file with the variant configuration, is made dynamic.
 
-  | ``Suite Setup    testsuites.testsuite_setup    .../config/variants_config.jsonp``
+  | ``Suite\u00a0Setup\u00a0\u00a0\u00a0\u00a0testsuites.testsuite_setup\u00a0\u00a0\u00a0\u00a0.../config/variants_config.jsonp``
 
   The Robot Framework now also recursively considers parent directories while searching for variant configuration files starting with the actual relative path.
 
