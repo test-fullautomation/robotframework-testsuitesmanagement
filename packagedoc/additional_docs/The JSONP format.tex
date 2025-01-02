@@ -75,7 +75,7 @@ This output is of a certain dictionary type (named \textit{dotdict}) that allows
 
 JSON supports the boolean values \pcode{true} and \pcode{false}, and also the null value \pcode{null}.
 
-In Python the corresponding values are different: \pcode{True}, \pcode{False} and \pcode{None}.
+In Python, the corresponding values differ: \pcode{True}, \pcode{False} and \pcode{None}.
 
 Because the \pkg\ is a Python application and therefore the returned content is required to be formatted Python compatible,
 the \pkg\ does a conversion automatically.
@@ -150,6 +150,19 @@ Also block comments and inline comments are possible, realized by a pair of \pco
 \begin{pythonlog}
 {'testlist': ['A1', 'D4']}
 \end{pythonlog}
+
+\vspace{2ex}
+
+\section{Naming convention}
+
+All key names in JSONP files must adhere to the following rules:
+
+\begin{itemize}
+   \item Key names can only consist of letters, digits and the following special characters: \pcode{_ + - * / \\}
+         (\textit{backslashes are allowed but have to be masked}).
+   \item Key names have to start with a letter, a digit or an underscore.
+   \item Key names must not be empty strings. But leading and trailing blanks will be removed (and therefore do not cause errors).
+\end{itemize}
 
 % --------------------------------------------------------------------------------------------------------------
 
@@ -260,10 +273,102 @@ The file \plog{componentB.jsonp} produces the following output:
 
 It can be seen that the returned dictionary contains both the parameters from the loaded JSON file and the parameters imported by the loaded JSON file.
 
+\vspace{2ex}
+
+\textbf{Multiple imports of the same file}
+
+A JSONP file can be imported more than once anywhere in the set of JSONP configuration files. This mechanism can be used to define a common part for different subkeys.
+
+\vspace{2ex}
+
+\textbf{Example:}
+
+\vspace{2ex}
+
+\textbullet \plog{common.jsonp}
+
+\begin{pythoncode}
+{
+   // common parameters
+   "common_param_1" : "common value 1",
+   "common_param_2" : "common value 2"
+}
+\end{pythoncode}
+
+\textbullet \plog{componentA.jsonp}
+
+\begin{pythoncode}[linebackgroundcolor=\hlcode{6,12}]
+{
+   // component A parameters
+   "componentA_param_1" : {
+                             "componentA_param_1_a" : "componentA_param_1_a value",
+                             // common parameters within componentA_param_1
+                             "[import]"             : "./common_config/common.jsonp",
+                             "componentA_param_1_b" : "componentA_param_1_b value"
+                          },
+   "componentA_param_2" : {
+                             "componentA_param_2_a" : "componentA_param_2_a value",
+                             // common parameters within componentA_param_2
+                             "[import]"             : "./common_config/common.jsonp",
+                             "componentA_param_2_b" : "componentA_param_2_b value"
+                          }
+}
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Outcome:}
+
+% \vspace{2ex}
+
+The content of \plog{common.jsonp} is part of \pcode{componentA_param_1} and also part of \pcode{componentA_param_2}.
+
+\begin{pythonlog}
+{'componentA_param_1': {'common_param_1': 'common value 1',
+                        'common_param_2': 'common value 2',
+                        'componentA_param_1_a': 'componentA_param_1_a value',
+                        'componentA_param_1_b': 'componentA_param_1_b value'},
+ 'componentA_param_2': {'common_param_1': 'common value 1',
+                        'common_param_2': 'common value 2',
+                        'componentA_param_2_a': 'componentA_param_2_a value',
+                        'componentA_param_2_b': 'componentA_param_2_b value'}}
+\end{pythonlog}
+
+\newpage
+
+\textbf{Dynamic import paths}
+
+The values of \pcode{"[import]"} keys must be of type \pcode{str}. Therefore it's possible to use
+dollar operator expressions inside import paths.
+
+An alternative version of the file \plog{componentA.jsonp} from the example above, can look like this:
+
+\begin{pythoncode}[linebackgroundcolor=\hlcode{2,7,13}]
+{
+   "common_config_dir"  : "./common_config",
+   // component A parameters
+   "componentA_param_1" : {
+                             "componentA_param_1_a" : "componentA_param_1_a value",
+                             // common parameters within componentA_param_1
+                             "[import]"             : "${common_config_dir}/common.jsonp",
+                             "componentA_param_1_b" : "componentA_param_1_b value"
+                          },
+   "componentA_param_2" : {
+                             "componentA_param_2_a" : "componentA_param_2_a value",
+                             // common parameters within componentA_param_2
+                             "[import]"             : "${common_config_dir}/common.jsonp",
+                             "componentA_param_2_b" : "componentA_param_2_b value"
+                          }
+}
+\end{pythoncode}
+
+The outcome is the same like in the previous example.
 
 % --------------------------------------------------------------------------------------------------------------
 
-\section{Overwrite parameters}\label{overwrite-parameters}
+\newpage
+
+\section{Overwriting parameters}\label{overwriting-parameters}
 
 We take over the scenario from the previous section: We still have a JSON file \plog{componentA.jsonp} containig the parameters for
 component \textit{A}, a JSON file \plog{componentB.jsonp} for component \textit{B} and a JSON file \plog{common.jsonp} for both components.
@@ -530,8 +635,8 @@ We introduce a new file \plog{componentB.2.jsonp} that imports \plog{componentB.
 
 \begin{itemize}
    \item Existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
-   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required any more
-         to encapsulate this expression in quotes.
+   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required
+         to encapsulate this expression in quotes (in opposite to what pure JSON would require).
    \item Without quotes, the dollar operator keeps the data type of the referenced parameter. If you use quotes, the value of the used parameter
          will be converted to type \pcode{str}. This implicit string conversion is limited to parameters of simple data types like integers and floats.
          Composite data types like lists and dictionaries cannot be used for that.
@@ -552,7 +657,7 @@ also \pcode{int_val_b} is of type \pcode{int}:
 "int_val_b"            : ${int_val},
 \end{pythoncode}
 
-It is not required any more to encapsulate dollar operator expressions at the right hand side of the colon in quotes.
+It is not required to encapsulate dollar operator expressions at the right hand side of the colon in quotes.
 But nevertheless, it is possible to use quotes. In case of:
 
 \begin{pythoncode}
@@ -992,13 +1097,44 @@ the expressions (like \pcode{$\{params.1.dict_2_key_2.dict_2_A_key_2.1\}}) becom
                                                  'dict_2_A_key_2 value 2']}}]}
 \end{pythonlog}
 
+
+% commented out because of
+% https://github.com/test-fullautomation/python-jsonpreprocessor/issues/349
+
+% \vspace{2ex}
+
+% \textbf{Parameter scope}
+
+% The following JSONP example defines a parameter with name \pcode{"param"} two times.
+% In case of the innermost \pcode{"param"} shall be overwritten, the full scope of this
+% parameter must be used.
+
+% \begin{pythoncode}
+% {
+    % "param"  : 1,
+    % "params" : {"001" : {
+                          % "param" : 2
+                        % }
+               % },
+    % ${params.001.param} : 3
+% }
+% \end{pythoncode}
+
+% \vspace{2ex}
+
+% \textbf{Outcome:}
+
+% \begin{pythonlog}
+% DotDict({'params': DotDict({'001': DotDict({'param': 3})}), 'param': 1})
+% \end{pythonlog}
+
 % --------------------------------------------------------------------------------------------------------------
 
 \newpage
 
 \section{Dynamic key names}
 
-In section \hyperref[overwrite-parameters]{Overwrite parameters} we mentioned the possibility to define the value of string parameters dynamically, e.g. in this way:
+In section \hyperref[overwriting-parameters]{Overwriting parameters} we mentioned the possibility to define the value of string parameters dynamically, e.g. in this way:
 
 \begin{pythoncode}
 "str_val"   : "ABC",
