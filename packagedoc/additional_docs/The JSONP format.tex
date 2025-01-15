@@ -158,10 +158,11 @@ Also block comments and inline comments are possible, realized by a pair of \pco
 All key names in JSONP files must adhere to the following rules:
 
 \begin{itemize}
-   \item Key names can only consist of letters, digits and the following special characters: \pcode{_ + - * / \\}
+   \item Key names can only consist of letters, digits and the following special characters: \pcode{_ + - * / \\\\ @}
          (\textit{backslashes are allowed but have to be masked}).
    \item Key names have to start with a letter, a digit or an underscore.
    \item Key names must not be empty strings. But leading and trailing blanks will be removed (and therefore do not cause errors).
+         Also blanks in between allowed characters are not allowed.
 \end{itemize}
 
 % --------------------------------------------------------------------------------------------------------------
