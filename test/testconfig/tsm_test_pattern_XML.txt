@@ -1,2 +1,2 @@
 status\sstatus=".+?"
-(stat\spass="\d+?"\sfail="\d+?"\sskip="\d+?")\s*(.*?)\>
+stat\s.*(pass="\d+?"\sfail="\d+?"\sskip="\d+?").*?>(.+?)</stat>
