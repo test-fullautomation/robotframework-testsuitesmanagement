@@ -1177,6 +1177,21 @@ dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1300"
+dictUsecase['DESCRIPTION']      = "JSON file containing several valid parameter names"
+dictUsecase['EXPECTATION']      = "Parameters are accepted and their values are logged correctly"
+dictUsecase['SECTION']          = "NAMING_CONVENTIONS"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-25-naming_conventions_1.robot" # (with variant configuration and output of several (valid) parameter names (GC))
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_1\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
 
 
 # --------------------------------------------------------------------------------------------------------------
