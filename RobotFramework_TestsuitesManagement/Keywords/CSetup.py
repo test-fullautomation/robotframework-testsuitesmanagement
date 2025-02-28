@@ -117,7 +117,14 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
 This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.
         '''
-        logger.info('testsuite_teardown: Will be implemented later')
+        suiteName = BuiltIn().get_variable_value('${SUITENAME}')
+        suiteStatus = BuiltIn().get_variable_value('${SUITESTATUS}')
+        suiteMsg = BuiltIn().get_variable_value('${SUITEMESSAGE}')
+        teardownMsg = f"SUITE '{suiteName}' finished with result '{suiteStatus}'"
+        if suiteStatus == 'PASS':
+            logger.info(teardownMsg)
+        else:
+            logger.info(f"{teardownMsg}, reason: {suiteMsg}")
 
     @keyword
     def testcase_setup(self):
@@ -133,7 +140,14 @@ it's defined here for future requirements.
 This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
 it's defined here for future requirements.
         '''
-        logger.info('testcase_teardown: Will be implemented later')
+        testName = BuiltIn().get_variable_value('${TESTNAME}')
+        testStatus = BuiltIn().get_variable_value('${TESTSTATUS}')
+        testMsg = BuiltIn().get_variable_value('${TESTMESSAGE}')
+        teardownMsg = f"TEST '{testName}' finished with result '{testStatus}'"
+        if testStatus == 'PASS':
+            logger.info(teardownMsg)
+        else:
+            logger.info(f"{teardownMsg}, reason: {testMsg}")
 
 class CGeneralKeywords(object):
     '''
