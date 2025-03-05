@@ -114,8 +114,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
     @keyword
     def testsuite_teardown(self):
         '''
-This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This testsuite_teardown defines the ``Testsuite Teardown`` behaviors.
         '''
         suiteName = BuiltIn().get_variable_value('${SUITENAME}')
         suiteStatus = BuiltIn().get_variable_value('${SUITESTATUS}')
@@ -129,16 +128,14 @@ it's defined here for future requirements.
     @keyword
     def testcase_setup(self):
         '''
-This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This testcase_setup defines the ``Testcase Setup`` behaviors.
         '''
         logger.info(f"Test Count: {TM.CTestsuitesCfg.oConfig.iTestCount}")
 
     @keyword
     def testcase_teardown(self):
         '''
-This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This testcase_teardown defines the ``Testcase Teardown`` behaviors.
         '''
         testName = BuiltIn().get_variable_value('${TESTNAME}')
         testStatus = BuiltIn().get_variable_value('${TESTSTATUS}')
