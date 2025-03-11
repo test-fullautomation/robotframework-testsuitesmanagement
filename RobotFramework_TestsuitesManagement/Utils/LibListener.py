@@ -14,7 +14,7 @@
 
 from inspect import stack
 import os
-import re
+import regex
 import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Config import CConfig
 
@@ -76,13 +76,13 @@ This _start_suite method hooks to every starting testsuite of robot run.
                 test_suite = test_suite.parent
 
             for k, v in BuiltIn().get_variables()._keys.items():
-                TM.CTestsuitesCfg.oConfig.lBuitInVariables.append(re.match('.+{(.+)}', v)[1])
+                TM.CTestsuitesCfg.oConfig.lBuitInVariables.append(regex.match('.+{(.+)}', v)[1])
 
             TM.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
             TM.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
 
             if '${localconfig}' in BuiltIn().get_variables()._keys:
-                if re.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
+                if regex.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
                     CConfig.sLoadedCfgLog['error'] = "Local_config input must not be empty!!!"
                     logger.error(CConfig.sLoadedCfgLog['error'])
                 else:
