@@ -1,0 +1,40 @@
+//  Copyright 2020-2025 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+
+  "Project"         : "tsm-test_config_naming_conventions_1",
+  "TargetName"      : "Device_01",
+
+  "params" : {
+              "global" : {
+                           "ABC"       : "value of valid parameter name 1",
+                           "01ABC"     : "value of valid parameter name 2",
+                           "01_Ä_ABC"  : "value of valid parameter name 3",
+                           "01_ß_ABC"  : "value of valid parameter name 4",
+                           "01_𠼭_ABC" : "value of valid parameter name 5",
+                           "Ä_01_ABC"  : "value of valid parameter name 6",
+                           "ß_01_ABC"  : "value of valid parameter name 7",
+                           "𠼭_01_ABC" : "value of valid parameter name 8",
+                           "__DEF"     : "value of valid parameter name 9",
+                           "G__H__I"   : "value of valid parameter name 10"
+                         }
+             }
+}

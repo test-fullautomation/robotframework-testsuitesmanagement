@@ -176,5 +176,10 @@ Description: JSON file containing several string concatenations in separate line
 Expectation: Resulting strings available during test execution
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 13.11.2024 - 14:19:30
+Test TSM_1300 / NAMING_CONVENTIONS / GOODCASE
+Description: JSON file containing several valid parameter names
+Expectation: Parameters are accepted and their values are logged correctly
+Comment....: Single file execution
+------------------------------------------------------------------------------------------------------------------------
+Generated: 28.02.2025 - 17:13:36
 
