@@ -65,9 +65,10 @@ This _start_suite method hooks to every starting testsuite of robot run.
             TM.CTestsuitesCfg.oConfig.sTestcasePath = ''
             for item in data.source.__str__().split(os.path.sep)[:-1]:
                 TM.CTestsuitesCfg.oConfig.sTestcasePath += item + os.path.sep
-        else:
+        elif os.path.isdir(data.source.__str__()):
             TM.CTestsuitesCfg.oConfig.sTestcasePath = data.source.__str__()
-        os.chdir(TM.CTestsuitesCfg.oConfig.sTestcasePath)
+        if TM.CTestsuitesCfg.oConfig.sTestcasePath != '':
+            os.chdir(TM.CTestsuitesCfg.oConfig.sTestcasePath)
 
         if TM.CTestsuitesCfg.oConfig.iSuiteCount == 0:
             test_suite = None
