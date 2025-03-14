@@ -66,11 +66,11 @@ and logs out the basic information about the test execution.
             except:
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                     for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                        if errorMsg.strip() != '':
+                        if str(errorMsg) != '':
                             logger.error(errorMsg)
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
                     for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                        if infoMsg.strip() != '':
+                        if str(infoMsg) != '':
                             logger.error(infoMsg)
                 sys.tracebacklimit = 0
                 raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
@@ -78,11 +78,11 @@ and logs out the basic information about the test execution.
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                 for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                    if errorMsg.strip() != '':
+                    if str(errorMsg) != '':
                         logger.error(errorMsg)
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
                 for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                    if infoMsg.strip() != '':
+                    if str(infoMsg) != '':
                         logger.error(infoMsg)
             sys.tracebacklimit = 0
             raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])

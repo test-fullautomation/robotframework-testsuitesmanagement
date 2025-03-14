@@ -167,6 +167,7 @@ for None so that subclasses will create their own __single objects.
         self.sRootSuiteName    = ''
         self.oConfigParams     = {}
         self.sConfigName       = 'default'
+        self.sVariablePattern  = r'^[\p{L}][\p{L}0-9_]*$'
         self.sProjectName      = None
         self.iTotalTestcases   = 0
         self.iSuiteCount       = 0
@@ -467,6 +468,10 @@ This method set RobotFramework AIO global variable from config object.
 
 * No return variable
         '''
+        if not regex.match(self.sVariablePattern, key):
+            self.sLoadedCfgLog['error'].append(f"Variable name '{key}' is invalid. Expected format: '{self.sVariablePattern}'")
+            self.sLoadedCfgLog['error'].append(f"Please check variable '{key}' in params['global'] in the configuration file '{self.sTestCfgFile}'")
+            raise Exception
         k = key
         v = value
         if isinstance(v, dict):
@@ -570,7 +575,7 @@ This __loadConfigFileLevel2 method loads configuration in case configLevel is TM
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
             sListOfVariants = sListOfVariants + f"'{item}', "
-        if not regex.match(r'^[a-zA-Z0-9.\u0080-\U0010FFFF\_\-\:@\$]+$', self.sConfigName):
+        if not regex.match(r'^[\p{L}0-9_\-\.\:@\$]+$', self.sConfigName):
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.sLoadedCfgLog['error'].append(f"The variant name '{self.sConfigName}' is invalid.")
             self.sLoadedCfgLog['error'].append(f"Please find the suitable variant in this list: {sListOfVariants}")
