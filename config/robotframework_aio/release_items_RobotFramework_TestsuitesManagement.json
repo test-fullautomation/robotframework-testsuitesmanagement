@@ -137,5 +137,23 @@
   **without the need to adapt any import path afterwards**!
 "
                            ]
+                  ,
+                  "0.14.1.;0.15.0." : [
+"
+* Implemented a naming convention check for Robot variables which are set in the JSONP configuration files.
+
+  The variables which are defined in ``params['global']`` have to match with regex pattern ``'^[\p{L}][\p{L}0-9_]*$'``
+
+  **Example:**
+
+  Valid variable names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
+
+  Invalid variable names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
+
+* Extended logging of test results
+
+* Replaced ``re`` package by ``regex`` package
+"
+                  ]
                 }
 }

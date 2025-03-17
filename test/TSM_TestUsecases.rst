@@ -401,5 +401,17 @@ Test Use Cases
 
 ----
 
-Generated: 13.11.2024 - 14:19:30
+* **Test TSM_1300**
+
+  [NAMING_CONVENTIONS / GOODCASE]
+
+   **JSON file containing several valid parameter names**
+
+   Expected: Parameters are accepted and their values are logged correctly
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 28.02.2025 - 17:13:36
 

@@ -117,5 +117,9 @@
   "composite_expressions_1" : {
                                 "name" : "tsm-test_config_composite_expressions_1.jsonp",
                                 "path" : "./"
-                              }
+                              },
+  "naming_conventions_1" : {
+                              "name" : "tsm-test_config_naming_conventions_1.jsonp",
+                              "path" : "./"
+                           }
 }
