@@ -469,7 +469,7 @@ This method set RobotFramework AIO global variable from config object.
 * No return variable
         '''
         if not regex.match(self.sVariablePattern, key):
-            self.sLoadedCfgLog['error'].append(f"Variable name '{key}' is invalid. Expected format: '{self.sVariablePattern}'")
+            self.sLoadedCfgLog['error'].append(f"Variable name '{key}' is invalid. Expected format: '{self.sVariablePattern}' (letters, digits, underscores)")
             self.sLoadedCfgLog['error'].append(f"Please check variable '{key}' in params['global'] in the configuration file '{self.sTestCfgFile}'")
             raise Exception
         k = key
