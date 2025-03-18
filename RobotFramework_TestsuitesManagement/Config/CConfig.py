@@ -23,7 +23,7 @@
 #################################################################################
 
 
-import re
+import regex
 import os
 import platform
 import ctypes
@@ -167,6 +167,7 @@ for None so that subclasses will create their own __single objects.
         self.sRootSuiteName    = ''
         self.oConfigParams     = {}
         self.sConfigName       = 'default'
+        self.sVariablePattern  = r'^[\p{L}][\p{L}0-9_]*$'
         self.sProjectName      = None
         self.iTotalTestcases   = 0
         self.iSuiteCount       = 0
@@ -380,7 +381,7 @@ robot with configuration level 2.")
                     self.sLoadedCfgLog['error'].append("Please put the additional params into 'params': { 'global': {...}")
                     self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                 elif error.validator == 'required':
-                    param = re.search("('[A-Za-z0-9]+')", error.message)
+                    param = regex.search("('[A-Za-z0-9]+')", error.message)
                     if param[0] == "'global'":
                         self.sLoadedCfgLog['error'].append(f"Required parameter {param[0]} is missing under 'params' in file '{self.sTestCfgFile}'.")
                     elif param is not None:
@@ -467,6 +468,10 @@ This method set RobotFramework AIO global variable from config object.
 
 * No return variable
         '''
+        if not regex.match(self.sVariablePattern, key):
+            self.sLoadedCfgLog['error'].append(f"Variable name '{key}' is invalid. Expected format: '{self.sVariablePattern}'")
+            self.sLoadedCfgLog['error'].append(f"Please check variable '{key}' in params['global'] in the configuration file '{self.sTestCfgFile}'")
+            raise Exception
         k = key
         v = value
         if isinstance(v, dict):
@@ -570,7 +575,7 @@ This __loadConfigFileLevel2 method loads configuration in case configLevel is TM
         sListOfVariants = ''
         for item in list(oSuiteConfig.keys()):
             sListOfVariants = sListOfVariants + f"'{item}', "
-        if not re.match(r'^[a-zA-Z0-9.\u0080-\U0010FFFF\_\-\:@\$]+$', self.sConfigName):
+        if not regex.match(r'^[\p{L}0-9_\-\.\:@\$]+$', self.sConfigName):
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.sLoadedCfgLog['error'].append(f"The variant name '{self.sConfigName}' is invalid.")
             self.sLoadedCfgLog['error'].append(f"Please find the suitable variant in this list: {sListOfVariants}")
@@ -586,7 +591,7 @@ This __loadConfigFileLevel2 method loads configuration in case configLevel is TM
         try:
             self.sTestCfgFile = oSuiteConfig[self.sConfigName]['name']
             sTestCfgDir = oSuiteConfig[self.sConfigName]['path']
-            if re.match(r'^\.+/*.*', sTestCfgDir):
+            if regex.match(r'^\.+/*.*', sTestCfgDir):
                 sTestCfgDir = os.path.dirname(self.sTestSuiteCfg) + '/' + sTestCfgDir + '/'
         except:
             self.sLoadedCfgLog['error'].append("Testsuite management - Loading configuration level 2 failed!")
@@ -792,7 +797,7 @@ it into sub tuple for version comparision.
   / *Type*: tuple /
         '''
         lSubVersion = [0,0,0]
-        oMatch = re.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
+        oMatch = regex.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
         if oMatch:
             lSubVersion[0] = int(oMatch.group(1))
             # a < b < rc < released (without any character)

@@ -26,24 +26,14 @@ from robot.libraries.BuiltIn import BuiltIn
 
 class CSetupKeywords(object):
     '''
-This CSetupKeywords class uses to define the setup keywords which are using in suite setup and teardown of
-robot test script.
-
-``Testsuite Setup`` keyword loads the RobotFramework AIO configuration, checks the version of RobotFramework AIO,
-and logs out the basic information of the robot run.
-
-``Testsuite Teardown`` keyword currently do nothing, it's defined here for future requirements.
-
-``Testcase Setup`` keyword currently do nothing, it's defined here for future requirements.
-
-``Testcase Teardown`` keyword currently do nothing, it's defined here for future requirements.
+This class defines the keywords for the setup and the teardown of testcases and testsuites.
     '''
 
     @keyword
     def testsuite_setup(self, sTestsuiteCfgFile=''):
         '''
-This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
-checks the version of RobotFramework AIO, and logs out the basic information of the robot run.
+This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.
 
 **Arguments:**
 
@@ -76,11 +66,11 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
             except:
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                     for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                        if errorMsg.strip() != '':
+                        if str(errorMsg) != '':
                             logger.error(errorMsg)
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
                     for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                        if infoMsg.strip() != '':
+                        if str(infoMsg) != '':
                             logger.error(infoMsg)
                 sys.tracebacklimit = 0
                 raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
@@ -88,11 +78,11 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
                 for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                    if errorMsg.strip() != '':
+                    if str(errorMsg) != '':
                         logger.error(errorMsg)
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
                 for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                    if infoMsg.strip() != '':
+                    if str(infoMsg) != '':
                         logger.error(infoMsg)
             sys.tracebacklimit = 0
             raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
@@ -114,8 +104,7 @@ checks the version of RobotFramework AIO, and logs out the basic information of 
     @keyword
     def testsuite_teardown(self):
         '''
-This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This keyword writes information about the testsuite result to the log files.
         '''
         suiteName = BuiltIn().get_variable_value('${SUITENAME}')
         suiteStatus = BuiltIn().get_variable_value('${SUITESTATUS}')
@@ -129,16 +118,14 @@ it's defined here for future requirements.
     @keyword
     def testcase_setup(self):
         '''
-This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This keyword writes the number of counted tests to the log files.
         '''
         logger.info(f"Test Count: {TM.CTestsuitesCfg.oConfig.iTestCount}")
 
     @keyword
     def testcase_teardown(self):
         '''
-This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.
+This keyword writes information about the testcase result to the log files.
         '''
         testName = BuiltIn().get_variable_value('${TESTNAME}')
         testStatus = BuiltIn().get_variable_value('${TESTSTATUS}')
