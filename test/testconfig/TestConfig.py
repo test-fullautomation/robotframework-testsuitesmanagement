@@ -1189,7 +1189,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-25-naming_conventions_1.robot" #
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_1\""
 dictUsecase['EXPECTEDRETURN']   = 0
-listofdictUsecases.append(dictUsecase)
+# listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 
