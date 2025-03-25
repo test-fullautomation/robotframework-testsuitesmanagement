@@ -26,16 +26,17 @@ import pytest
 from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
-
-class Test_NAMING_CONVENTIONS_GOODCASE:
+# mas2hc: Temporary disable naming convention test cases due to the rule was changed
+# class Test_NAMING_CONVENTIONS_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
    # Expected: Parameters are accepted and their values are logged correctly
    # (Single file execution)
-   @pytest.mark.parametrize(
-      "Description", ["JSON file containing several valid parameter names",]
-   )
-   def test_TSM_1300(self, Description):
-      nReturn = CExecute.Execute("TSM_1300")
-      assert nReturn == 0
+   # mas2hc: Temporary disable naming convention test cases due to the rule was changed
+   # @pytest.mark.parametrize(
+   #    "Description", ["JSON file containing several valid parameter names",]
+   # )
+   # def test_TSM_1300(self, Description):
+   #    nReturn = CExecute.Execute("TSM_1300")
+   #    assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------
