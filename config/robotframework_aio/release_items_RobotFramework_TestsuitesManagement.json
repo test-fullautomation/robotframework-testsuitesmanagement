@@ -142,7 +142,7 @@
 "
 * Implemented a naming convention check for Robot variables which are set in the JSONP configuration files.
 
-  The variables which are defined in ``params['global']`` have to match with regex pattern ``'^[\p{L}][\p{L}0-9_]*$'``
+  The variables which are defined in ``params['global']`` have to match with regex pattern ``'^[\\p{L}][\\p{L}0-9_]*$'``
 
   **Example:**
 
