@@ -144,7 +144,7 @@
 
   Keys that are defined within ``params['global']`` in JSONP configuration files become **Robot Framework** variables. Therefore, the key names must conform to **Robot Framework**'s naming conventions.
 
-  The naming convention is: Key names may only contain letters and digits and must start with a letter.
+  The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
   Internally this is realized by the following regex pattern:
 
   ``^[\\p{L}][\\p{L}0-9_]*$``
