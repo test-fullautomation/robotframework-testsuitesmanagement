@@ -147,12 +147,12 @@
   The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
   Internally this is realized by the following regex pattern:
 
-  ``^[\\p{L}][\\p{L}0-9_]*$``
+  ``^\\p{L}[\\p{L}\\p{Nd}_]*$``
 
   *Examples*
 
-  * Valid variable names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
-  * Invalid variable names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
+  * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
+  * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
 
 **Maintenance**
 
