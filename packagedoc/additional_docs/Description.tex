@@ -510,7 +510,6 @@ The rules behind all are: \rlog{--variable} overrules \rlog{--variablefile}. Rob
 To avoid the things becoming too much complicated, we urgently recommend not to mixup both mechanisms to define \textit{different values for the same parameters}
 (but to overwrite only a single variable with \rlog{--variable} might be OK).
 
-
 % --------------------------------------------------------------------------------------------------------------
 \newpage
 
@@ -629,6 +628,64 @@ ${params}['global']['teststring'] : "new value"
 \end{pythoncode}
 
 The resulting value of a parameter at the end depends on the priority (computation order) described in previous sections of this description.
+
+% --------------------------------------------------------------------------------------------------------------
+\newpage
+
+\section{Naming convention}
+
+Keys that are defined within \pcode{params['global']} in JSONP configuration files become \textbf{Robot Framework} variables. Therefore, the key names
+must conform to \textbf{Robot Framework}'s naming conventions.
+
+The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
+Internally this is realized by the following regex pattern: \pcode{^\\p\{L\}[\\p\{L\}\\p\{Nd\}_]*$}.
+
+\textbf{Example}
+
+\begin{itemize}
+   \item Valid key names are: \pcode{"abcParam"}, \pcode{"abcParam01"}, \pcode{"abc\_Param\_01"}, ...
+   \item Invalid key names are: \pcode{"+param01"}, \pcode{"param\$01"}, \pcode{"abc\#Param"}, \pcode{"01abc\_Param"}, ...
+\end{itemize}
+
+\begin{boxwarning}{Caution}
+The \textbf{Robot Framework} ignores underscores. Nevertheless, underscores are allowed inside variable names, but you must be aware of the consequences
+when using them! The following code example demonstrates the effects.
+\end{boxwarning}
+
+\vspace{2ex}
+
+\textbf{Example}
+
+\begin{pythoncode}
+"params" : {
+             "global": {
+                         "ABC"     : "A",
+                         "ABC__"   : "B",
+                         "A__B__C" : "C"
+                       }
+           }
+\end{pythoncode}
+
+With
+
+\begin{robotcode}
+Log    ABC: ${ABC}
+Log    ABC__: ${ABC__}
+Log    A__B__C: ${A__B__C}
+\end{robotcode}
+
+the result is
+
+\begin{robotlog}
+INFO - ABC: C
+INFO - ABC__: C
+INFO - A__B__C: C
+\end{robotlog}
+
+\begin{boxwarning}{Impact}
+Three \textbf{Robot Framework} variables with different names are created, but all variables have the same value. Therefore, underscores must not be used
+to distinguish between variables!
+\end{boxwarning}
 
 % --------------------------------------------------------------------------------------------------------------
 
