@@ -167,7 +167,7 @@ for None so that subclasses will create their own __single objects.
         self.sRootSuiteName    = ''
         self.oConfigParams     = {}
         self.sConfigName       = 'default'
-        self.sVariablePattern  = r'^[\p{L}][\p{L}0-9_]*$'
+        self.sVariablePattern  = r'^\p{L}[\p{L}\p{Nd}_]*$'
         self.sProjectName      = None
         self.iTotalTestcases   = 0
         self.iSuiteCount       = 0
