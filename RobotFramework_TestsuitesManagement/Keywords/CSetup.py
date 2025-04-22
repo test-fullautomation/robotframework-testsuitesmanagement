@@ -51,6 +51,11 @@ and logs out the basic information about the test execution.
 
 * No return variable
         '''
+        # levels description
+        levelsInfo = {1 : "configuration file in command line",
+                      2 : "variant name in command line",
+                      3 : "configuration file in local config folder",
+                      4 : "default configuration (fallback solution)"}
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_1:
             try:
                 TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
@@ -87,7 +92,8 @@ and logs out the basic information about the test execution.
             sys.tracebacklimit = 0
             raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
-        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value}"
+        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value} \
+({levelsInfo[TM.CTestsuitesCfg.oConfig.configLevel.value]})"
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
             logger.warn(msg)
         else:

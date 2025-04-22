@@ -140,18 +140,23 @@
                   ,
                   "0.14.1.;0.15.0." : [
 "
-* Implemented a naming convention check for Robot variables which are set in the JSONP configuration files.
+**Updated naming convention check**
 
-  The variables which are defined in ``params['global']`` have to match with regex pattern ``'^[\\p{L}][\\p{L}0-9_]*$'``
+  Keys that are defined within ``params['global']`` in JSONP configuration files become **Robot Framework** variables. Therefore, the key names must conform to **Robot Framework**'s naming conventions.
 
-  **Example:**
+  The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
+  Internally this is realized by the following regex pattern:
 
-  Valid variable names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
+  ``^\\p{L}[\\p{L}\\p{Nd}_]*$``
 
-  Invalid variable names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
+  *Examples*
+
+  * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
+  * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
+
+**Maintenance**
 
 * Extended logging of test results
-
 * Replaced ``re`` package by ``regex`` package
 "
                   ]
