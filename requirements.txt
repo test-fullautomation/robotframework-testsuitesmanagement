@@ -4,3 +4,4 @@ pypandoc
 GenPackageDoc
 PythonExtensionsCollection
 JsonPreprocessor
+regex
