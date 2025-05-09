@@ -11,20 +11,6 @@
     "WelcomeString": {
       "type": "string"
     },
-    "version": {
-      "type": "object",
-      "properties": {
-        "majorversion" : {
-          "type": "string"
-        },
-        "minorversion" : {
-          "type": "string"
-        },
-        "patchversion" : {
-          "type": "string"
-        }
-      }
-    },
     "TargetName": {
       "type": "string"
     },
