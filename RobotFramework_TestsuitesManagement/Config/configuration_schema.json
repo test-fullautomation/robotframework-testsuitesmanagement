@@ -11,6 +11,9 @@
     "WelcomeString": {
       "type": "string"
     },
+    "version": {
+      "type": "object"
+    },
     "TargetName": {
       "type": "string"
     },
