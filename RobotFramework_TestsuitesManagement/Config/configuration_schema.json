@@ -12,18 +12,7 @@
       "type": "string"
     },
     "version": {
-      "type": "object",
-      "properties": {
-        "majorversion" : {
-          "type": "string"
-        },
-        "minorversion" : {
-          "type": "string"
-        },
-        "patchversion" : {
-          "type": "string"
-        }
-      }
+      "type": "object"
     },
     "TargetName": {
       "type": "string"
