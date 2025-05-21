@@ -5,6 +5,12 @@ on:
     tags:
       - "rel/*.*.*"
       - "rel/*.*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release Tag name for creating Github Release'
+        required: false
+        type: string
 
 jobs:
   build-n-publish:
@@ -28,7 +34,8 @@ jobs:
             sudo apt-get install -y pandoc
             sudo apt-get install -y texlive-latex-*
             echo "GENDOC_LATEXPATH=$(dirname $(which pdflatex))" >> $GITHUB_ENV
-            python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection JsonPreprocessor robotframework robotframework-pythonlibcore jsonschema lxml
+            python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection
+            python -m pip install -r ./requirements.txt
 
         - name: Build source and wheel distributions
           run: |
@@ -42,10 +49,29 @@ jobs:
             password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
             # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
 
+        - name: Determine tag
+          id: tag
+          run: |
+            TAG_NAME=""
+            if [[ "${{ github.event.inputs.tag_name }}" != "" ]]; then
+              TAG_NAME="${{ github.event.inputs.tag_name }}"
+            elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
+              TAG_NAME="${GITHUB_REF#refs/tags/}"
+            fi
+
+            if [[ -z "$TAG_NAME" ]]; then
+              echo "No valid tag provided. Skipping release."
+              exit 0
+            else
+              echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+            fi
+
         - name: Create/Update GitHub Release
           id: create_update_release
+          if: env.TAG_NAME != ''
           uses: ncipollo/release-action@v1
           with:
+            tag: ${{ env.TAG_NAME }}
             allowUpdates: true
             omitNameDuringUpdate: true
             makeLatest: true

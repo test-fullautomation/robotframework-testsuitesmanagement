@@ -1,4 +1,6 @@
 robotframework
+robotframework-pythonlibcore
+jsonschema
 colorama
 pypandoc
 GenPackageDoc
