@@ -1,6 +1,9 @@
 robotframework
+robotframework-pythonlibcore
+jsonschema
 colorama
 pypandoc
 GenPackageDoc
 PythonExtensionsCollection
 JsonPreprocessor
+regex

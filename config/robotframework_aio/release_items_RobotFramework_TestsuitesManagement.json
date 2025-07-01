@@ -142,17 +142,17 @@
 "
 **Updated naming convention check**
 
-  Keys that are defined within ``params['global']`` in JSONP configuration files become **Robot Framework** variables. Therefore, the key names must conform to **Robot Framework**'s naming conventions.
+Keys that are defined within ``params['global']`` in JSONP configuration files become **Robot Framework** variables. Therefore, the key names must conform to **Robot Framework**'s naming conventions.
 
-  The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
-  Internally this is realized by the following regex pattern:
+The naming convention is: Key names may only contain letters, digits and underscores, and must start with a letter.
+Internally this is realized by the following regex pattern:
 
-  ``^\\p{L}[\\p{L}\\p{Nd}_]*$``
+``^\\p{L}[\\p{L}\\p{Nd}_]*$``
 
-  *Examples*
+*Examples*
 
-  * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
-  * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
+* Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
+* Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
 
 **Maintenance**
 
