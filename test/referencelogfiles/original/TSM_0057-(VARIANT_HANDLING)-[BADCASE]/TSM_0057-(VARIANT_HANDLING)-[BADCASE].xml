@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:39:56.474595" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2025-07-04T16:39:56.645295" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg time="2025-07-04T16:39:56.645590" level="ERROR">The variant name 'in/va/lid' is invalid.</msg>
+<msg time="2025-07-04T16:39:56.645721" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', </msg>
+<msg time="2025-07-04T16:39:56.646306" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'</msg>
+<msg time="2025-07-04T16:39:56.646447" level="FAIL">Unable to load the test configuration. The test execution will be aborted!</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2025-07-04T16:39:56.588687" elapsed="0.057861">Unable to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
+<doc>tsm-testfile-02</doc>
+<status status="FAIL" start="2025-07-04T16:39:56.646660" elapsed="0.000620">Parent suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2025-07-04T16:39:56.647981" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2025-07-04T16:39:56.647753" elapsed="0.000314"/>
+</kw>
+<status status="FAIL" start="2025-07-04T16:39:56.485873" elapsed="0.162249">Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-02" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-02</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-04T16:39:56.645295" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg time="2025-07-04T16:39:56.645590" level="ERROR">The variant name 'in/va/lid' is invalid.</msg>
+<msg time="2025-07-04T16:39:56.645721" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', </msg>
+<msg time="2025-07-04T16:39:56.646306" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'</msg>
+</errors>
+</robot>

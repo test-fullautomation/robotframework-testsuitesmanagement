@@ -1,88 +1,88 @@
 ==============================================================================
-2025-07-04 12:40:59.815488 - INFO - + START SUITE: Tsm-Testfile-25-Naming Conventions 1
+2025-07-04 16:40:13.733494 - INFO - + START SUITE: Tsm-Testfile-25-Naming Conventions 1
 ==============================================================================
-2025-07-04 12:40:59.916216 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 12:40:59.980925 - INFO - Set suite metadata 'project' to value 'tsm-test_config_naming_conventions_1'.
-2025-07-04 12:40:59.981043 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 12:40:59.983240 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 12:40:59.983303 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 12:40:59.983339 - INFO - Set suite metadata 'bundle_version' to value '0.8.1'.
-2025-07-04 12:40:59.983372 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 12:40:59.983402 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 12:40:59.983431 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 12:40:59.983809 - INFO - ${ABC} = value of valid parameter name 1
-2025-07-04 12:40:59.984082 - INFO - ${Ä_ABC} = value of valid parameter name 2
-2025-07-04 12:40:59.984332 - INFO - ${ABC_ß} = value of valid parameter name 3
-2025-07-04 12:40:59.984593 - INFO - ${𠼭_ABC} = value of valid parameter name 4
-2025-07-04 12:40:59.984866 - INFO - ${ABC_𠼭} = value of valid parameter name 5
-2025-07-04 12:40:59.985127 - INFO - ${ß_01_ABC} = value of valid parameter name 6
-2025-07-04 12:40:59.985409 - INFO - ${𠼭_01_ABC} = value of valid parameter name 7
-2025-07-04 12:40:59.985646 - INFO - ${D__E__F} = value of valid parameter name 8
-2025-07-04 12:40:59.985928 - INFO - ${AB_𠼭_൯} = value of valid parameter name 9
-2025-07-04 12:40:59.986223 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_naming_conventions_1', 'TargetName': 'Device_01', 'par...
-2025-07-04 12:40:59.986259 - INFO - Running with configuration level 2 (variant name in command line)
-2025-07-04 12:40:59.986325 - INFO - RobotFramework_TestsuitesManagement version check passed!
-2025-07-04 12:40:59.986345 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_naming_conventions_1.jsonp'
-2025-07-04 12:40:59.986362 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 12:40:59.986377 - INFO - Number of test suites: 1
-2025-07-04 12:40:59.986392 - INFO - Total number of testcases: 1
-2025-07-04 12:40:59.986436 - INFO - +- END SETUP: tm.Testsuite Setup (0.07022 s)
+2025-07-04 16:40:13.837516 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:40:13.903075 - INFO - Set suite metadata 'project' to value 'tsm-test_config_naming_conventions_1'.
+2025-07-04 16:40:13.903202 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-07-04 16:40:13.905564 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-07-04 16:40:13.905629 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-07-04 16:40:13.905665 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
+2025-07-04 16:40:13.905701 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-07-04 16:40:13.905732 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-07-04 16:40:13.905761 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-07-04 16:40:13.906138 - INFO - ${ABC} = value of valid parameter name 1
+2025-07-04 16:40:13.906398 - INFO - ${Ä_ABC} = value of valid parameter name 2
+2025-07-04 16:40:13.906652 - INFO - ${ABC_ß} = value of valid parameter name 3
+2025-07-04 16:40:13.906906 - INFO - ${𠼭_ABC} = value of valid parameter name 4
+2025-07-04 16:40:13.907173 - INFO - ${ABC_𠼭} = value of valid parameter name 5
+2025-07-04 16:40:13.907431 - INFO - ${ß_01_ABC} = value of valid parameter name 6
+2025-07-04 16:40:13.907713 - INFO - ${𠼭_01_ABC} = value of valid parameter name 7
+2025-07-04 16:40:13.908059 - INFO - ${D__E__F} = value of valid parameter name 8
+2025-07-04 16:40:13.908372 - INFO - ${AB_𠼭_൯} = value of valid parameter name 9
+2025-07-04 16:40:13.908665 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_naming_conventions_1', 'TargetName': 'Device_01', 'par...
+2025-07-04 16:40:13.908703 - INFO - Running with configuration level 2 (variant name in command line)
+2025-07-04 16:40:13.908773 - INFO - RobotFramework AIO (original) version check passed!
+2025-07-04 16:40:13.908795 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_naming_conventions_1.jsonp'
+2025-07-04 16:40:13.908813 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-07-04 16:40:13.908830 - INFO - Number of test suites: 1
+2025-07-04 16:40:13.908845 - INFO - Total number of testcases: 1
+2025-07-04 16:40:13.908886 - INFO - +- END SETUP: tm.Testsuite Setup (0.07137 s)
 ------------------------------------------------------------------------------
-2025-07-04 12:40:59.986525 - INFO - +- START TEST: Test Case tsm-testfile-25-naming_conventions_1
+2025-07-04 16:40:13.908988 - INFO - +- START TEST: Test Case tsm-testfile-25-naming_conventions_1
 ------------------------------------------------------------------------------
-2025-07-04 12:40:59.987319 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 12:40:59.987433 - INFO - Test Count: 1
-2025-07-04 12:40:59.987469 - INFO - +-- END SETUP: tm.Testcase Setup (0.00015 s)
+2025-07-04 16:40:13.909818 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-07-04 16:40:13.909945 - INFO - Test Count: 1
+2025-07-04 16:40:13.909983 - INFO - +-- END SETUP: tm.Testcase Setup (0.000165 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.987707 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.988025 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'tsm-test_config_naming_conventions_1'
-2025-07-04 12:40:59.988233 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000526 s)
+2025-07-04 16:40:13.910242 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.910537 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'tsm-test_config_naming_conventions_1'
+2025-07-04 16:40:13.910846 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000604 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.988495 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC} | PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.988630 - INFO - PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 1'
-2025-07-04 12:40:59.988892 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000397 s)
+2025-07-04 16:40:13.911104 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC} | PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.911239 - INFO - PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 1'
+2025-07-04 16:40:13.911418 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000314 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.989152 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${Ä_ABC} | PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.989267 - INFO - PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 2'
-2025-07-04 12:40:59.989398 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000246 s)
+2025-07-04 16:40:13.911755 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${Ä_ABC} | PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.911869 - INFO - PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 2'
+2025-07-04 16:40:13.912201 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000446 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.989644 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC_ß} | PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.989760 - INFO - PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 3'
-2025-07-04 12:40:59.989892 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000248 s)
+2025-07-04 16:40:13.912493 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC_ß} | PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.912607 - INFO - PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 3'
+2025-07-04 16:40:13.912924 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000431 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.990157 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${𠼭_ABC} | PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.990283 - INFO - PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 4'
-2025-07-04 12:40:59.990500 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000343 s)
+2025-07-04 16:40:13.913146 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${𠼭_ABC} | PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.913266 - INFO - PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 4'
+2025-07-04 16:40:13.913415 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000269 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.990705 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC_𠼭} | PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.990824 - INFO - PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 5'
-2025-07-04 12:40:59.990943 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000238 s)
+2025-07-04 16:40:13.913597 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ABC_𠼭} | PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.913712 - INFO - PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 5'
+2025-07-04 16:40:13.913893 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000296 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.991085 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ß_01_ABC} | PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.991176 - INFO - PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 6'
-2025-07-04 12:40:59.991293 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000208 s)
+2025-07-04 16:40:13.914081 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ß_01_ABC} | PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.914194 - INFO - PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 6'
+2025-07-04 16:40:13.914280 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000199 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.991420 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${𠼭_01_ABC} | PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.991514 - INFO - PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 7'
-2025-07-04 12:40:59.991617 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000197 s)
+2025-07-04 16:40:13.914403 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${𠼭_01_ABC} | PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.914513 - INFO - PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 7'
+2025-07-04 16:40:13.914598 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000195 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.991860 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${D__E__F} | PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.991947 - INFO - PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 8'
-2025-07-04 12:40:59.992010 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00015 s)
+2025-07-04 16:40:13.915072 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${D__E__F} | PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.915193 - INFO - PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 8'
+2025-07-04 16:40:13.915290 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000218 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.992089 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${AB_𠼭_൯} | PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) ]
-2025-07-04 12:40:59.992185 - INFO - PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 9'
-2025-07-04 12:40:59.992261 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000172 s)
+2025-07-04 16:40:13.915386 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${AB_𠼭_൯} | PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) ]
+2025-07-04 16:40:13.915486 - INFO - PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 9'
+2025-07-04 16:40:13.915588 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000202 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 12:40:59.992387 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 12:40:59.992506 - INFO - TEST 'Test Case tsm-testfile-25-naming_conventions_1' finished with result 'PASS'
-2025-07-04 12:40:59.992536 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000149 s)
+2025-07-04 16:40:13.915717 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-07-04 16:40:13.915840 - INFO - TEST 'Test Case tsm-testfile-25-naming_conventions_1' finished with result 'PASS'
+2025-07-04 16:40:13.915870 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000153 s)
 ------------------------------------------------------------------------------
-2025-07-04 12:40:59.992595 - INFO - +- END TEST: Test Case tsm-testfile-25-naming_conventions_1 (0.00607 s)
+2025-07-04 16:40:13.915933 - INFO - +- END TEST: Test Case tsm-testfile-25-naming_conventions_1 (0.006945 s)
 ------------------------------------------------------------------------------
-2025-07-04 12:40:59.992977 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 12:40:59.993098 - INFO - SUITE 'Tsm-Testfile-25-Naming Conventions 1' finished with result 'PASS'
-2025-07-04 12:40:59.993131 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000154 s)
+2025-07-04 16:40:13.916306 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:40:13.916421 - INFO - SUITE 'Tsm-Testfile-25-Naming Conventions 1' finished with result 'PASS'
+2025-07-04 16:40:13.916451 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000145 s)
 ==============================================================================
-2025-07-04 12:40:59.993157 - INFO - + END SUITE: Tsm-Testfile-25-Naming Conventions 1 (0.177669 s)
+2025-07-04 16:40:13.916475 - INFO - + END SUITE: Tsm-Testfile-25-Naming Conventions 1 (0.182981 s)
 ==============================================================================

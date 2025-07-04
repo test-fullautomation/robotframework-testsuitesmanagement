@@ -1,87 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241111 18:48:09.539" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:08.263" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Cft-Test.File-2" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests1\tsm-cft-test.file-2.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
-<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
-checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'project' to value 'robot_config'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'bundle_version' to value '0.13.1.6'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">${teststring_common} = I am the common (cft) teststring valid for all variants and all test benches</msg>
-<msg timestamp="20241111 18:48:09.618" level="INFO">${teststring_bench} = I am the (cft) teststring containing the default value for all test benches</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Running with configuration level 3</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">RobotFramework AIO extended version check passed!</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests1/config/robot_config.jsonp'</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests1\'</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20241111 18:48:09.602" endtime="20241111 18:48:09.634"/>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<msg timestamp="20250704 16:25:08.418" level="INFO">Set suite metadata 'project' to value 'robot_config'.</msg>
+<msg timestamp="20250704 16:25:08.418" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:08.420" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:08.421" level="INFO">${teststring_common} = I am the common (cft) teststring valid for all variants and all test benches</msg>
+<msg timestamp="20250704 16:25:08.421" level="INFO">${teststring_bench} = I am the (cft) teststring containing the default value for all test benches</msg>
+<msg timestamp="20250704 16:25:08.421" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'robot_config', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg timestamp="20250704 16:25:08.421" level="INFO">Running with configuration level 3 (configuration file in local config folder)</msg>
+<msg timestamp="20250704 16:25:08.422" level="INFO">RobotFramework AIO (extended) version check passed!</msg>
+<msg timestamp="20250704 16:25:08.422" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests1/config/robot_config.jsonp'</msg>
+<msg timestamp="20250704 16:25:08.422" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests1\'</msg>
+<msg timestamp="20250704 16:25:08.422" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20250704 16:25:08.422" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20250704 16:25:08.376" endtime="20250704 16:25:08.422"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-cft-test.file-2" line="32">
 <kw name="Testcase Setup" library="tm" type="SETUP">
-<doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<msg timestamp="20250704 16:25:08.423" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20250704 16:25:08.422" endtime="20250704 16:25:08.423"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-test.file-2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-test.file-2) : [STR]  :  'robot_config'</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<msg timestamp="20250704 16:25:08.423" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-cft-test.file-2) : [STR]  :  'robot_config'</msg>
+<status status="PASS" starttime="20250704 16:25:08.423" endtime="20250704 16:25:08.423"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-test.file-2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-test.file-2) : [STR]  :  'I am the common (cft) teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<msg timestamp="20250704 16:25:08.423" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-cft-test.file-2) : [STR]  :  'I am the common (cft) teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20250704 16:25:08.423" endtime="20250704 16:25:08.423"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-test.file-2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-test.file-2) : [STR]  :  'command line value of teststring_variant'</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<msg timestamp="20250704 16:25:08.424" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-cft-test.file-2) : [STR]  :  'command line value of teststring_variant'</msg>
+<status status="PASS" starttime="20250704 16:25:08.424" endtime="20250704 16:25:08.424"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-test.file-2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-test.file-2) : [STR]  :  'I am the (cft) teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<msg timestamp="20250704 16:25:08.424" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-cft-test.file-2) : [STR]  :  'I am the (cft) teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20250704 16:25:08.424" endtime="20250704 16:25:08.424"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
-<doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<msg timestamp="20250704 16:25:08.424" level="INFO">TEST 'Test Case tsm-cft-test.file-2' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250704 16:25:08.424" endtime="20250704 16:25:08.424"/>
 </kw>
 <doc>tsm-cft-test.file-2</doc>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<status status="PASS" starttime="20250704 16:25:08.422" endtime="20250704 16:25:08.424"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
-<doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:09.634" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241111 18:48:09.634" endtime="20241111 18:48:09.634"/>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<msg timestamp="20250704 16:25:08.425" level="INFO">SUITE 'Tsm-Cft-Test.File-2' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250704 16:25:08.425" endtime="20250704 16:25:08.425"/>
 </kw>
-<meta name="bundle_version">0.13.1.6</meta>
+<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">robot_config</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
-<meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
+<meta name="testtool">Robot Framework 6.1 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" starttime="20241111 18:48:09.539" endtime="20241111 18:48:09.634"/>
+<status status="PASS" starttime="20250704 16:25:08.276" endtime="20250704 16:25:08.425"/>
 </suite>
 <statistics>
 <total>

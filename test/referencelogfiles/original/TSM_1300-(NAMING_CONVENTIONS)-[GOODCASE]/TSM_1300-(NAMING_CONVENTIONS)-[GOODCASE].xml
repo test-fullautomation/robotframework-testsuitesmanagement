@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T12:40:59.803551" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:13.730456" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-25-Naming Conventions 1" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-25-naming_conventions_1.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T12:40:59.980925" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_naming_conventions_1'.</msg>
-<msg time="2025-07-04T12:40:59.981043" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg time="2025-07-04T12:40:59.983240" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg time="2025-07-04T12:40:59.983303" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
-<msg time="2025-07-04T12:40:59.983339" level="INFO">Set suite metadata 'bundle_version' to value '0.8.1'.</msg>
-<msg time="2025-07-04T12:40:59.983372" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg time="2025-07-04T12:40:59.983402" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg time="2025-07-04T12:40:59.983431" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg time="2025-07-04T12:40:59.983809" level="INFO">${ABC} = value of valid parameter name 1</msg>
-<msg time="2025-07-04T12:40:59.984082" level="INFO">${Ä_ABC} = value of valid parameter name 2</msg>
-<msg time="2025-07-04T12:40:59.984332" level="INFO">${ABC_ß} = value of valid parameter name 3</msg>
-<msg time="2025-07-04T12:40:59.984593" level="INFO">${𠼭_ABC} = value of valid parameter name 4</msg>
-<msg time="2025-07-04T12:40:59.984866" level="INFO">${ABC_𠼭} = value of valid parameter name 5</msg>
-<msg time="2025-07-04T12:40:59.985127" level="INFO">${ß_01_ABC} = value of valid parameter name 6</msg>
-<msg time="2025-07-04T12:40:59.985409" level="INFO">${𠼭_01_ABC} = value of valid parameter name 7</msg>
-<msg time="2025-07-04T12:40:59.985646" level="INFO">${D__E__F} = value of valid parameter name 8</msg>
-<msg time="2025-07-04T12:40:59.985928" level="INFO">${AB_𠼭_൯} = value of valid parameter name 9</msg>
-<msg time="2025-07-04T12:40:59.986223" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_naming_conventions_1', 'TargetName': 'Device_01', 'par...</msg>
-<msg time="2025-07-04T12:40:59.986259" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
-<msg time="2025-07-04T12:40:59.986325" level="INFO">RobotFramework_TestsuitesManagement version check passed!</msg>
-<msg time="2025-07-04T12:40:59.986345" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_naming_conventions_1.jsonp'</msg>
-<msg time="2025-07-04T12:40:59.986362" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg time="2025-07-04T12:40:59.986377" level="INFO">Number of test suites: 1</msg>
-<msg time="2025-07-04T12:40:59.986392" level="INFO">Total number of testcases: 1</msg>
+<msg time="2025-07-04T16:40:13.903075" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_naming_conventions_1'.</msg>
+<msg time="2025-07-04T16:40:13.903202" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-07-04T16:40:13.905564" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-07-04T16:40:13.905629" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-07-04T16:40:13.905665" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
+<msg time="2025-07-04T16:40:13.905701" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:13.905732" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:13.905761" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:13.906138" level="INFO">${ABC} = value of valid parameter name 1</msg>
+<msg time="2025-07-04T16:40:13.906398" level="INFO">${Ä_ABC} = value of valid parameter name 2</msg>
+<msg time="2025-07-04T16:40:13.906652" level="INFO">${ABC_ß} = value of valid parameter name 3</msg>
+<msg time="2025-07-04T16:40:13.906906" level="INFO">${𠼭_ABC} = value of valid parameter name 4</msg>
+<msg time="2025-07-04T16:40:13.907173" level="INFO">${ABC_𠼭} = value of valid parameter name 5</msg>
+<msg time="2025-07-04T16:40:13.907431" level="INFO">${ß_01_ABC} = value of valid parameter name 6</msg>
+<msg time="2025-07-04T16:40:13.907713" level="INFO">${𠼭_01_ABC} = value of valid parameter name 7</msg>
+<msg time="2025-07-04T16:40:13.908059" level="INFO">${D__E__F} = value of valid parameter name 8</msg>
+<msg time="2025-07-04T16:40:13.908372" level="INFO">${AB_𠼭_൯} = value of valid parameter name 9</msg>
+<msg time="2025-07-04T16:40:13.908665" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_naming_conventions_1', 'TargetName': 'Device_01', 'par...</msg>
+<msg time="2025-07-04T16:40:13.908703" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2025-07-04T16:40:13.908773" level="INFO">RobotFramework AIO (original) version check passed!</msg>
+<msg time="2025-07-04T16:40:13.908795" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_naming_conventions_1.jsonp'</msg>
+<msg time="2025-07-04T16:40:13.908813" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2025-07-04T16:40:13.908830" level="INFO">Number of test suites: 1</msg>
+<msg time="2025-07-04T16:40:13.908845" level="INFO">Total number of testcases: 1</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="PASS" start="2025-07-04T12:40:59.916216" elapsed="0.070220"/>
+<status status="PASS" start="2025-07-04T16:40:13.837516" elapsed="0.071370"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-25-naming_conventions_1" line="33">
 <kw name="Testcase Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T12:40:59.987433" level="INFO">Test Count: 1</msg>
+<msg time="2025-07-04T16:40:13.909945" level="INFO">Test Count: 1</msg>
 <doc>This keyword writes the number of counted tests to the log files.</doc>
-<status status="PASS" start="2025-07-04T12:40:59.987319" elapsed="0.000150"/>
+<status status="PASS" start="2025-07-04T16:40:13.909818" elapsed="0.000165"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.988025" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'tsm-test_config_naming_conventions_1'</msg>
+<msg time="2025-07-04T16:40:13.910537" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'tsm-test_config_naming_conventions_1'</msg>
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.987707" elapsed="0.000526"/>
+<status status="PASS" start="2025-07-04T16:40:13.910242" elapsed="0.000604"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.988630" level="INFO">PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 1'</msg>
+<msg time="2025-07-04T16:40:13.911239" level="INFO">PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 1'</msg>
 <arg>${ABC}</arg>
 <arg>PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.988495" elapsed="0.000397"/>
+<status status="PASS" start="2025-07-04T16:40:13.911104" elapsed="0.000314"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.989267" level="INFO">PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 2'</msg>
+<msg time="2025-07-04T16:40:13.911869" level="INFO">PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 2'</msg>
 <arg>${Ä_ABC}</arg>
 <arg>PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.989152" elapsed="0.000246"/>
+<status status="PASS" start="2025-07-04T16:40:13.911755" elapsed="0.000446"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.989760" level="INFO">PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 3'</msg>
+<msg time="2025-07-04T16:40:13.912607" level="INFO">PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 3'</msg>
 <arg>${ABC_ß}</arg>
 <arg>PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.989644" elapsed="0.000248"/>
+<status status="PASS" start="2025-07-04T16:40:13.912493" elapsed="0.000431"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.990283" level="INFO">PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 4'</msg>
+<msg time="2025-07-04T16:40:13.913266" level="INFO">PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 4'</msg>
 <arg>${𠼭_ABC}</arg>
 <arg>PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.990157" elapsed="0.000343"/>
+<status status="PASS" start="2025-07-04T16:40:13.913146" elapsed="0.000269"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.990824" level="INFO">PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 5'</msg>
+<msg time="2025-07-04T16:40:13.913712" level="INFO">PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 5'</msg>
 <arg>${ABC_𠼭}</arg>
 <arg>PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.990705" elapsed="0.000238"/>
+<status status="PASS" start="2025-07-04T16:40:13.913597" elapsed="0.000296"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.991176" level="INFO">PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 6'</msg>
+<msg time="2025-07-04T16:40:13.914194" level="INFO">PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 6'</msg>
 <arg>${ß_01_ABC}</arg>
 <arg>PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.991085" elapsed="0.000208"/>
+<status status="PASS" start="2025-07-04T16:40:13.914081" elapsed="0.000199"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.991514" level="INFO">PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 7'</msg>
+<msg time="2025-07-04T16:40:13.914513" level="INFO">PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 7'</msg>
 <arg>${𠼭_01_ABC}</arg>
 <arg>PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.991420" elapsed="0.000197"/>
+<status status="PASS" start="2025-07-04T16:40:13.914403" elapsed="0.000195"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.991947" level="INFO">PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 8'</msg>
+<msg time="2025-07-04T16:40:13.915193" level="INFO">PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 8'</msg>
 <arg>${D__E__F}</arg>
 <arg>PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.991860" elapsed="0.000150"/>
+<status status="PASS" start="2025-07-04T16:40:13.915072" elapsed="0.000218"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T12:40:59.992185" level="INFO">PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 9'</msg>
+<msg time="2025-07-04T16:40:13.915486" level="INFO">PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1) : [STR]  :  'value of valid parameter name 9'</msg>
 <arg>${AB_𠼭_൯}</arg>
 <arg>PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T12:40:59.992089" elapsed="0.000172"/>
+<status status="PASS" start="2025-07-04T16:40:13.915386" elapsed="0.000202"/>
 </kw>
 <kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T12:40:59.992506" level="INFO">TEST 'Test Case tsm-testfile-25-naming_conventions_1' finished with result 'PASS'</msg>
+<msg time="2025-07-04T16:40:13.915840" level="INFO">TEST 'Test Case tsm-testfile-25-naming_conventions_1' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testcase result to the log files.</doc>
-<status status="PASS" start="2025-07-04T12:40:59.992387" elapsed="0.000149"/>
+<status status="PASS" start="2025-07-04T16:40:13.915717" elapsed="0.000153"/>
 </kw>
 <doc>tsm-testfile-25-naming_conventions_1</doc>
-<status status="PASS" start="2025-07-04T12:40:59.986525" elapsed="0.006070"/>
+<status status="PASS" start="2025-07-04T16:40:13.908988" elapsed="0.006945"/>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T12:40:59.993098" level="INFO">SUITE 'Tsm-Testfile-25-Naming Conventions 1' finished with result 'PASS'</msg>
+<msg time="2025-07-04T16:40:13.916421" level="INFO">SUITE 'Tsm-Testfile-25-Naming Conventions 1' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T12:40:59.992977" elapsed="0.000154"/>
+<status status="PASS" start="2025-07-04T16:40:13.916306" elapsed="0.000145"/>
 </kw>
-<meta name="bundle_version">0.8.1</meta>
+<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_naming_conventions_1</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
@@ -128,7 +128,7 @@ and logs out the basic information about the test execution.</doc>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" start="2025-07-04T12:40:59.815488" elapsed="0.177669"/>
+<status status="PASS" start="2025-07-04T16:40:13.733494" elapsed="0.182981"/>
 </suite>
 <statistics>
 <total>

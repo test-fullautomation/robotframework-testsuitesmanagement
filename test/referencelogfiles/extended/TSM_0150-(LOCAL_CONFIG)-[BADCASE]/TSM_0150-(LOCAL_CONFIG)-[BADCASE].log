@@ -1,20 +1,23 @@
 ==============================================================================
-20241111 18:48:17.411 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20250704 16:25:17.899 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20241111 18:48:17.411 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20241111 18:48:17.426 - ERROR - Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp
-20241111 18:48:17.426 - ERROR - ---> The mandatory 'WelcomeString' element of configuration file is found in local config file
-20241111 18:48:17.426 - ERROR - ---> Wrong local config file was chosen, please check!!!
-20241111 18:48:17.426 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20241111 18:48:17.426 - INFO - +- END SETUP: tm.Testsuite Setup (15)
+20250704 16:25:17.902 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20250704 16:25:17.944 - ERROR - Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp
+20250704 16:25:17.944 - ERROR - ---> The mandatory 'WelcomeString' element of configuration file is found in local config file
+20250704 16:25:17.945 - ERROR - ---> Wrong local config file was chosen, please check!!!
+20250704 16:25:17.945 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20250704 16:25:17.945 - INFO - +- END SETUP: tm.Testsuite Setup (43)
 ------------------------------------------------------------------------------
-20241111 18:48:17.426 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20250704 16:25:17.945 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20241111 18:48:17.442 - INFO - +- END TEST: Test Case tsm-testfile-01 (16)
+20250704 16:25:17.946 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
 ------------------------------------------------------------------------------
-20241111 18:48:17.442 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20241111 18:48:17.442 - INFO - testsuite_teardown: Will be implemented later
-20241111 18:48:17.442 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20250704 16:25:17.946 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20250704 16:25:17.946 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 0 failed, 1 unknown
+20250704 16:25:17.946 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20241111 18:48:17.442 - INFO - + END SUITE: Tsm-Testfile-01 (94)
+20250704 16:25:17.947 - INFO - + END SUITE: Tsm-Testfile-01 (140)
 ==============================================================================

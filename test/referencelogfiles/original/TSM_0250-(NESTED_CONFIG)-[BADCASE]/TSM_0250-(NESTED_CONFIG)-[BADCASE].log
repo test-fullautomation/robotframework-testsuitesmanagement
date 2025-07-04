@@ -1,0 +1,43 @@
+==============================================================================
+2025-07-04 16:40:04.365042 - INFO - + START SUITE: Tsm-Testfile-03
+==============================================================================
+2025-07-04 16:40:04.467778 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:40:04.527152 - ERROR - Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+2025-07-04 16:40:04.527413 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp
+2025-07-04 16:40:04.528115 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:04.528244 - DEBUG - Exception: Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+
+During handling of the above exception, another exception occurred:
+
+Exception: Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+
+During handling of the above exception, another exception occurred:
+
+Exception: Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+
+During handling of the above exception, another exception occurred:
+
+Exception: Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+
+During handling of the above exception, another exception occurred:
+
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:04.528267 - INFO - +- END SETUP: tm.Testsuite Setup (0.060489 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.528372 - INFO - +- START TEST: Test Case tsm-testfile-03
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.528960 - INFO - +- END TEST: Test Case tsm-testfile-03 (0.000588 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.529336 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:40:04.529491 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:40:04.529532 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000196 s)
+==============================================================================
+2025-07-04 16:40:04.529566 - INFO - + END SUITE: Tsm-Testfile-03 (0.164524 s)
+==============================================================================

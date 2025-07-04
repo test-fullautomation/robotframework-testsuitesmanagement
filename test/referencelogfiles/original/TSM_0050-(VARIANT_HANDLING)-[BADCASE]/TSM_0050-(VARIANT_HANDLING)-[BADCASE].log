@@ -1,0 +1,53 @@
+==============================================================================
+2025-07-04 16:39:53.548171 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2025-07-04 16:39:53.651972 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:39:53.714034 - ERROR - Required parameter 'WelcomeString' is missing in file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp'.
+2025-07-04 16:39:53.714525 - ERROR - JSON schema validation failed!
+2025-07-04 16:39:53.714744 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:53.715062 - DEBUG - jsonschema.exceptions.ValidationError: 'WelcomeString' is a required property
+
+Failed validating 'required' in schema:
+    {'$schema': 'http://json-schema.org/draft-07/schema#',
+     '$id': './Config/configuration_schema.json',
+     'title': 'robot_config',
+     'description': 'ROBFW AIO configuration file in json format',
+     'type': 'object',
+     'properties': {'Project': {'type': 'string'},
+                    'WelcomeString': {'type': 'string'},
+                    'version': {'type': 'object'},
+                    'TargetName': {'type': 'string'},
+                    'Maximum_version': {'type': ['string', 'null']},
+                    'Minimum_version': {'type': ['string', 'null']},
+                    'params': {'type': 'object',
+                               'properties': {'global': {}},
+                               'required': ['global'],
+                               'additionalProperties': False}},
+     'required': ['Project', 'WelcomeString', 'TargetName'],
+     'additionalProperties': False}
+
+On instance:
+    DotDict({'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_missing_param', 'TargetName': 'Device_01', 'params': DotDict({'global': DotDict({'teststring_common': 'I am the common teststring valid for all variants and all test benches', 'teststring_bench': 'I am the teststring containing the default value for all test benches', 'teststring_variant': "I am the 'missing_param' configuration of tsm-test"})})})
+
+During handling of the above exception, another exception occurred:
+
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:53.715089 - INFO - +- END SETUP: tm.Testsuite Setup (0.063117 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:53.715197 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2025-07-04 16:39:53.715811 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000614 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:53.716467 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:39:53.716631 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:39:53.716675 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000208 s)
+==============================================================================
+2025-07-04 16:39:53.716707 - INFO - + END SUITE: Tsm-Testfile-02 (0.168536 s)
+==============================================================================

@@ -1,0 +1,29 @@
+==============================================================================
+2025-07-04 16:40:00.272088 - INFO - + START SUITE: Tsm-Cft-Test.File-2
+==============================================================================
+2025-07-04 16:40:00.375175 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2025-07-04 16:40:00.408125 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+2025-07-04 16:40:00.408421 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'
+2025-07-04 16:40:00.408973 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'
+2025-07-04 16:40:00.409059 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
+2025-07-04 16:40:00.409204 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:00.409299 - DEBUG - Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:00.409315 - INFO - +- END SETUP: tm.Testsuite Setup (0.03414 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:00.409420 - INFO - +- START TEST: Test Case tsm-cft-test.file-2 (BADCASE)
+------------------------------------------------------------------------------
+2025-07-04 16:40:00.410000 - INFO - +- END TEST: Test Case tsm-cft-test.file-2 (BADCASE) (0.00058 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:00.410402 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:40:00.410561 - INFO - SUITE 'Tsm-Cft-Test.File-2' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:40:00.410600 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000198 s)
+==============================================================================
+2025-07-04 16:40:00.410637 - INFO - + END SUITE: Tsm-Cft-Test.File-2 (0.138549 s)
+==============================================================================

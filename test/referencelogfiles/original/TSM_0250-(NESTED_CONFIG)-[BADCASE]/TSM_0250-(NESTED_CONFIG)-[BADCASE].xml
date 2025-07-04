@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:04.362558" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-03" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-03.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2025-07-04T16:40:04.527152" level="ERROR">Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.</msg>
+<msg time="2025-07-04T16:40:04.527413" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp</msg>
+<msg time="2025-07-04T16:40:04.528115" level="FAIL">Unable to load the test configuration. The test execution will be aborted!</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2025-07-04T16:40:04.467778" elapsed="0.060489">Unable to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-03" line="33">
+<doc>tsm-testfile-03</doc>
+<status status="FAIL" start="2025-07-04T16:40:04.528372" elapsed="0.000588">Parent suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2025-07-04T16:40:04.529491" level="INFO">SUITE 'Tsm-Testfile-03' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2025-07-04T16:40:04.529336" elapsed="0.000196"/>
+</kw>
+<status status="FAIL" start="2025-07-04T16:40:04.365042" elapsed="0.164524">Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-03" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-03</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-04T16:40:04.527152" level="ERROR">Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.</msg>
+<msg time="2025-07-04T16:40:04.527413" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp</msg>
+</errors>
+</robot>

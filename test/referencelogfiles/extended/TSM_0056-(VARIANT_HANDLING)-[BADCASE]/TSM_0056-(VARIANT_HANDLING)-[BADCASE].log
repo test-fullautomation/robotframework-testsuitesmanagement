@@ -1,19 +1,22 @@
 ==============================================================================
-20241111 18:48:12.114 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20250704 16:25:11.461 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20241111 18:48:12.114 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20241111 18:48:12.114 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
-20241111 18:48:12.114 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
-20241111 18:48:12.114 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20241111 18:48:12.114 - INFO - +- END SETUP: tm.Testsuite Setup (0)
+20250704 16:25:11.463 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20250704 16:25:11.463 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
+20250704 16:25:11.464 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
+20250704 16:25:11.465 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20250704 16:25:11.465 - INFO - +- END SETUP: tm.Testsuite Setup (2)
 ------------------------------------------------------------------------------
-20241111 18:48:12.114 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20250704 16:25:11.466 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20241111 18:48:12.114 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
+20250704 16:25:11.467 - INFO - +- END TEST: Test Case tsm-testfile-01 (0)
 ------------------------------------------------------------------------------
-20241111 18:48:12.114 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20241111 18:48:12.114 - INFO - testsuite_teardown: Will be implemented later
-20241111 18:48:12.114 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20250704 16:25:11.467 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20250704 16:25:11.467 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 0 failed, 1 unknown
+20250704 16:25:11.467 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20241111 18:48:12.114 - INFO - + END SUITE: Tsm-Testfile-01 (63)
+20250704 16:25:11.467 - INFO - + END SUITE: Tsm-Testfile-01 (99)
 ==============================================================================
