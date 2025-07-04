@@ -413,5 +413,17 @@ Test Use Cases
 
 ----
 
-Generated: 28.02.2025 - 17:13:36
+* **Test TSM_1400**
+
+  [UNICODE_DIGITS / GOODCASE]
+
+   **JSON file containing UNICODE digits**
+
+   Expected: Parameters are accepted and their values are logged correctly
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 04.07.2025 - 13:44:10
 

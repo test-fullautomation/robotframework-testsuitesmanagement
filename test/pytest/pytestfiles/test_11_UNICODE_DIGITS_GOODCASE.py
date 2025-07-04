@@ -14,7 +14,7 @@
 #  limitations under the License.
 # --------------------------------------------------------------------------------------------------------------
 #
-# test_10_NAMING_CONVENTIONS_GOODCASE.py
+# test_11_UNICODE_DIGITS_GOODCASE.py
 #
 # XC-CT/ECA3-Queckenstedt
 #
@@ -27,15 +27,15 @@ from pytestlibs.CExecute import CExecute
 
 # --------------------------------------------------------------------------------------------------------------
 
-class Test_NAMING_CONVENTIONS_GOODCASE:
+class Test_UNICODE_DIGITS_GOODCASE:
 
 # --------------------------------------------------------------------------------------------------------------
    # Expected: Parameters are accepted and their values are logged correctly
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["JSON file containing several valid parameter names",]
+      "Description", ["JSON file containing UNICODE digits",]
    )
-   def test_TSM_1300(self, Description):
-      nReturn = CExecute.Execute("TSM_1300")
+   def test_TSM_1400(self, Description):
+      nReturn = CExecute.Execute("TSM_1400")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

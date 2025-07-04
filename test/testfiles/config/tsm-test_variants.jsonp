@@ -121,5 +121,9 @@
   "naming_conventions_1" : {
                               "name" : "tsm-test_config_naming_conventions_1.jsonp",
                               "path" : "./"
-                           }
+                           },
+  "unicode_digits" : {
+                       "name" : "tsm-test_config_unicode_digits.jsonp",
+                       "path" : "./"
+                     }
 }

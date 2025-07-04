@@ -1,0 +1,49 @@
+==============================================================================
+2025-07-04 12:09:04.413123 - INFO - + START SUITE: Tsm-Testfile-26-Unicode Digits
+==============================================================================
+2025-07-04 12:09:04.514193 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 12:09:04.579323 - INFO - Set suite metadata 'project' to value 'tsm-test_config_unicode_digits'.
+2025-07-04 12:09:04.579456 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-07-04 12:09:04.581986 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-07-04 12:09:04.582050 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-07-04 12:09:04.582085 - INFO - Set suite metadata 'bundle_version' to value '0.8.1'.
+2025-07-04 12:09:04.582120 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-07-04 12:09:04.582152 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-07-04 12:09:04.582182 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-07-04 12:09:04.582620 - INFO - ${listparam_൯} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2025-07-04 12:09:04.582870 - INFO - ${listvalue} = 10
+2025-07-04 12:09:04.583116 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_unicode_digits', 'TargetName': 'Device_01', 'params': ...
+2025-07-04 12:09:04.583150 - INFO - Running with configuration level 2 (variant name in command line)
+2025-07-04 12:09:04.583217 - INFO - RobotFramework_TestsuitesManagement version check passed!
+2025-07-04 12:09:04.583238 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_unicode_digits.jsonp'
+2025-07-04 12:09:04.583255 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-07-04 12:09:04.583271 - INFO - Number of test suites: 1
+2025-07-04 12:09:04.583286 - INFO - Total number of testcases: 1
+2025-07-04 12:09:04.583327 - INFO - +- END SETUP: tm.Testsuite Setup (0.069134 s)
+------------------------------------------------------------------------------
+2025-07-04 12:09:04.583428 - INFO - +- START TEST: Test Case tsm-testfile-26-unicode_digits
+------------------------------------------------------------------------------
+2025-07-04 12:09:04.584061 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-07-04 12:09:04.584166 - INFO - Test Count: 1
+2025-07-04 12:09:04.584207 - INFO - +-- END SETUP: tm.Testcase Setup (0.000146 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-07-04 12:09:04.584352 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) ]
+2025-07-04 12:09:04.584625 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) : [STR]  :  'tsm-test_config_unicode_digits'
+2025-07-04 12:09:04.584809 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000457 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-07-04 12:09:04.584917 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${listvalue} | PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) ]
+2025-07-04 12:09:04.585020 - INFO - PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) : [INT]  :  10
+2025-07-04 12:09:04.585132 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000215 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-07-04 12:09:04.585266 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-07-04 12:09:04.585393 - INFO - TEST 'Test Case tsm-testfile-26-unicode_digits' finished with result 'PASS'
+2025-07-04 12:09:04.585424 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000158 s)
+------------------------------------------------------------------------------
+2025-07-04 12:09:04.585475 - INFO - +- END TEST: Test Case tsm-testfile-26-unicode_digits (0.002047 s)
+------------------------------------------------------------------------------
+2025-07-04 12:09:04.585900 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 12:09:04.586039 - INFO - SUITE 'Tsm-Testfile-26-Unicode Digits' finished with result 'PASS'
+2025-07-04 12:09:04.586079 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000179 s)
+==============================================================================
+2025-07-04 12:09:04.586106 - INFO - + END SUITE: Tsm-Testfile-26-Unicode Digits (0.172983 s)
+==============================================================================

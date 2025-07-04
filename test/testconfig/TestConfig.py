@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 13.11.2024
+# 04.07.2025
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -64,6 +64,8 @@
 # "tsm-testfile-22-implicit_creation_1.robot"  # (with variant configuration and additional log strings to test the implicit creation)
 # "tsm-testfile-23-implicit_creation_2.robot"  # (with variant configuration and additional log strings to test the implicit creation)
 # "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
+# "tsm-testfile-25-naming_conventions_1.robot"    # (with variant configuration and output of several (valid) parameter names (GC))
+# "tsm-testfile-26-unicode_digits.robot"          # (with variant configuration (GC))
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -1189,7 +1191,22 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-25-naming_conventions_1.robot" #
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_1\""
 dictUsecase['EXPECTEDRETURN']   = 0
-# listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1400"
+dictUsecase['DESCRIPTION']      = "JSON file containing UNICODE digits"
+dictUsecase['EXPECTATION']      = "Parameters are accepted and their values are logged correctly"
+dictUsecase['SECTION']          = "UNICODE_DIGITS"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-26-unicode_digits.robot" # (with variant configuration (GC))
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"unicode_digits\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 

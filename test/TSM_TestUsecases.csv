@@ -33,3 +33,4 @@ TSM_1100|IMPLICIT_CREATION|GOODCASE|Assignment of known parameter to unknown dic
 TSM_1101|IMPLICIT_CREATION|GOODCASE|Assignment of known parameter to unknown dictionary subkeys in imported JSON configuration file (same key names at all levels)
 TSM_1200|COMPOSITE_EXPRESSIONS|GOODCASE|JSON file containing several string concatenations in separate lines
 TSM_1300|NAMING_CONVENTIONS|GOODCASE|JSON file containing several valid parameter names
+TSM_1400|UNICODE_DIGITS|GOODCASE|JSON file containing UNICODE digits
