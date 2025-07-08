@@ -1,0 +1,22 @@
+==============================================================================
+2025-07-04 16:39:57.356420 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2025-07-04 16:39:57.461229 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:39:57.461440 - ERROR - Did not find configuration file: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\I_AM_NOT_EXISTING.jsonp'!
+2025-07-04 16:39:57.461720 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:57.462967 - DEBUG - Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:57.463004 - INFO - +- END SETUP: tm.Testsuite Setup (0.001775 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:57.463103 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2025-07-04 16:39:57.463671 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000568 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:57.464198 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:39:57.464341 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:39:57.464380 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000182 s)
+==============================================================================
+2025-07-04 16:39:57.464411 - INFO - + END SUITE: Tsm-Testfile-02 (0.107991 s)
+==============================================================================

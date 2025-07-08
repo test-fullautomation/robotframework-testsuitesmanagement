@@ -1,0 +1,35 @@
+==============================================================================
+2025-07-04 16:40:07.509213 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2025-07-04 16:40:07.615629 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:40:07.679346 - ERROR - Invalid Minimum version:Wrong format in version information '   '
+2025-07-04 16:40:07.679632 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'
+2025-07-04 16:40:07.680381 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:07.680502 - DEBUG - Exception: Wrong format in version information
+
+During handling of the above exception, another exception occurred:
+
+Exception: Wrong format in version information '   '
+
+During handling of the above exception, another exception occurred:
+
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:07.680522 - INFO - +- END SETUP: tm.Testsuite Setup (0.064893 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:07.680631 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2025-07-04 16:40:07.681284 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000653 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:07.682162 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:40:07.682333 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:40:07.682376 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000214 s)
+==============================================================================
+2025-07-04 16:40:07.682408 - INFO - + END SUITE: Tsm-Testfile-02 (0.173195 s)
+==============================================================================

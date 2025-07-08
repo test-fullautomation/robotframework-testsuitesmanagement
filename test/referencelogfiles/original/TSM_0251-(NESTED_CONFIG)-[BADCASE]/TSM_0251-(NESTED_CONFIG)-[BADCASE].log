@@ -1,0 +1,35 @@
+==============================================================================
+2025-07-04 16:40:04.803945 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2025-07-04 16:40:04.908089 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:40:04.978573 - ERROR - Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'
+2025-07-04 16:40:04.978900 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp
+2025-07-04 16:40:04.979852 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:04.979979 - DEBUG - KeyError: 'I-am-not-existing'
+
+During handling of the above exception, another exception occurred:
+
+Exception: Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'
+
+During handling of the above exception, another exception occurred:
+
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:40:04.980001 - INFO - +- END SETUP: tm.Testsuite Setup (0.071912 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.980106 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.980851 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000745 s)
+------------------------------------------------------------------------------
+2025-07-04 16:40:04.981457 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:40:04.981636 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:40:04.981680 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000223 s)
+==============================================================================
+2025-07-04 16:40:04.981712 - INFO - + END SUITE: Tsm-Testfile-02 (0.177767 s)
+==============================================================================

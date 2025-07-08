@@ -26,15 +26,14 @@
   "params" : {
               "global" : {
                            "ABC"       : "value of valid parameter name 1",
-                           "01ABC"     : "value of valid parameter name 2",
-                           "01_Ä_ABC"  : "value of valid parameter name 3",
-                           "01_ß_ABC"  : "value of valid parameter name 4",
-                           "01_𠼭_ABC" : "value of valid parameter name 5",
-                           "Ä_01_ABC"  : "value of valid parameter name 6",
-                           "ß_01_ABC"  : "value of valid parameter name 7",
-                           "𠼭_01_ABC" : "value of valid parameter name 8",
-                           "__DEF"     : "value of valid parameter name 9",
-                           "G__H__I"   : "value of valid parameter name 10"
+                           "Ä_ABC"     : "value of valid parameter name 2",
+                           "ABC_ß"     : "value of valid parameter name 3",
+                           "𠼭_ABC"    : "value of valid parameter name 4",
+                           "ABC_𠼭"    : "value of valid parameter name 5",
+                           "ß_01_ABC"  : "value of valid parameter name 6",
+                           "𠼭_01_ABC" : "value of valid parameter name 7",
+                           "D__E__F"   : "value of valid parameter name 8",
+                           "AB_𠼭_൯"       :   "value of valid parameter name 9" // character ൯  is Malayalam digit 9
                          }
              }
 }

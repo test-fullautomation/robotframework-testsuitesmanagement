@@ -35,15 +35,12 @@ Test Case tsm-testfile-25-naming_conventions_1
    rf.extensions.pretty_print    ${CONFIG.Project}        PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-25-naming_conventions_1)
 
    rf.extensions.pretty_print    ${ABC}            PARAMS-VERIFIKATION : ({ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${01ABC}          PARAMS-VERIFIKATION : ({01ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${01_Ä_ABC}       PARAMS-VERIFIKATION : ({01_Ä_ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${01_ß_ABC}       PARAMS-VERIFIKATION : ({01_ß_ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${01_𠼭_ABC}      PARAMS-VERIFIKATION : ({01_𠼭_ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${Ä_01_ABC}       PARAMS-VERIFIKATION : ({Ä_01_ABC} / tsm-testfile-25-naming_conventions_1)
+   rf.extensions.pretty_print    ${Ä_ABC}          PARAMS-VERIFIKATION : ({Ä_ABC} / tsm-testfile-25-naming_conventions_1)
+   rf.extensions.pretty_print    ${ABC_ß}          PARAMS-VERIFIKATION : ({ABC_ß} / tsm-testfile-25-naming_conventions_1)
+   rf.extensions.pretty_print    ${𠼭_ABC}         PARAMS-VERIFIKATION : ({𠼭_ABC} / tsm-testfile-25-naming_conventions_1)
+   rf.extensions.pretty_print    ${ABC_𠼭}         PARAMS-VERIFIKATION : ({ABC_𠼭} / tsm-testfile-25-naming_conventions_1)
    rf.extensions.pretty_print    ${ß_01_ABC}       PARAMS-VERIFIKATION : ({ß_01_ABC} / tsm-testfile-25-naming_conventions_1)
    rf.extensions.pretty_print    ${𠼭_01_ABC}      PARAMS-VERIFIKATION : ({𠼭_01_ABC} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${__DEF}          PARAMS-VERIFIKATION : ({__DEF} / tsm-testfile-25-naming_conventions_1)
-   rf.extensions.pretty_print    ${G__H__I}        PARAMS-VERIFIKATION : ({G__H__I} / tsm-testfile-25-naming_conventions_1)
-
-
+   rf.extensions.pretty_print    ${D__E__F}       PARAMS-VERIFIKATION : ({D__E__F} / tsm-testfile-25-naming_conventions_1)
+   rf.extensions.pretty_print    ${AB_𠼭_൯}        PARAMS-VERIFIKATION : ({AB_𠼭_൯}} / tsm-testfile-25-naming_conventions_1)
 

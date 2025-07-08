@@ -1,0 +1,28 @@
+==============================================================================
+2025-07-04 16:39:58.994695 - INFO - + START SUITE: Tsm-Testfile-09-Err-3
+==============================================================================
+2025-07-04 16:39:59.099420 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.jsonp ]
+2025-07-04 16:39:59.133939 - ERROR - Testsuite management - Loading configuration level 2 failed!
+2025-07-04 16:39:59.134141 - ERROR - The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.
+2025-07-04 16:39:59.134677 - ERROR - Please find the suitable variant in this list: 'variant1',
+2025-07-04 16:39:59.134819 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:59.134915 - DEBUG - Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:59.134933 - INFO - +- END SETUP: tm.Testsuite Setup (0.035513 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:59.135043 - INFO - +- START TEST: Test Case tsm-testfile-09-err-3
+------------------------------------------------------------------------------
+2025-07-04 16:39:59.135582 - INFO - +- END TEST: Test Case tsm-testfile-09-err-3 (0.000539 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:59.136115 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:39:59.136280 - INFO - SUITE 'Tsm-Testfile-09-Err-3' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:39:59.136325 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.00021 s)
+==============================================================================
+2025-07-04 16:39:59.136357 - INFO - + END SUITE: Tsm-Testfile-09-Err-3 (0.141662 s)
+==============================================================================
