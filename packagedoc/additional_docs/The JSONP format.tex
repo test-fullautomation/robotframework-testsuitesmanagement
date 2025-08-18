@@ -16,12 +16,20 @@
 
 \label{thejsonpformat}
 
-This chapter explains the format of JSON files used by the \pkg\ in detail. We concentrate here on the content of the JSON files
-and the corresponding results, available in Python dictionary format.
+The JSONP format is computed by the Python application \textbf{JsonPreprocessor}. Additionally to this, it is also possible to use the JSONP format
+within tests of a test automation framework called \textbf{RobotFramework AIO} (\href{https://robotframework-aio.org/}{homepage}).
+
+The component that within the \textbf{RobotFramework AIO} is responsible for the execution of the \textbf{JsonPreprocessor}, is called
+\textbf{TestsuitesManagement}. Because the \textbf{JsonPreprocessor} is a pure Python application, whereas the \textbf{RobotFramework AIO}
+is a framework with own syntax rules and conditions, in some cases the JSONP format deviates in both worlds. Where required you will find corresponding
+hints in this chapter. In all other cases the JSONP format is the same in \textbf{JsonPreprocessor} and \textbf{RobotFramework AIO}.
+
+This chapter explains the format of JSONP files in detail. We concentrate here on the content of the JSONP files and the corresponding results,
+available in Python dictionary format. 
 
 \section{Standard JSON format}
 
-The \pkg\ supports JSON files with standard extension \plog{.json} and standard content.
+The \textbf{JsonPreprocessor} supports JSON files with standard extension \plog{.json} and standard content.
 
 \textbullet\ JSON file:
 
@@ -54,6 +62,8 @@ The following example still contains standard JSON content, but with parameters 
 }
 \end{pythoncode}
 
+\newpage
+
 This content produces the following output:
 
 \begin{pythonlog}
@@ -77,8 +87,8 @@ JSON supports the boolean values \pcode{true} and \pcode{false}, and also the nu
 
 In Python, the corresponding values differ: \pcode{True}, \pcode{False} and \pcode{None}.
 
-Because the \pkg\ is a Python application and therefore the returned content is required to be formatted Python compatible,
-the \pkg\ does a conversion automatically.
+Because the \textbf{JsonPreprocessor} is a Python application and therefore the returned content is required to be formatted Python compatible,
+the \textbf{JsonPreprocessor} does a conversion automatically.
 
 Accepted in JSON files are both styles:
 
@@ -126,7 +136,7 @@ Comments can be added to JSON files with \pcode{//}:
 }
 \end{pythoncode}
 
-All lines starting with \pcode{//}, are ignored by the \pkg. The output of this example is the same than in the previous example.
+All lines starting with \pcode{//} are ignored by the \textbf{JsonPreprocessor}. The output of this example is the same as in the previous example.
 
 \vspace{2ex}
 
@@ -181,7 +191,7 @@ Therefore we extend the list of JSON files by a file containing the common part 
    \item A file \plog{componentB.jsonp} containing remaining parameters (with specific values) required for component \textit{B}
 \end{enumerate}
 
-Finally we use the import mechanism of the \pkg\ to import the file \plog{common.jsonp} in file \plog{componentA.jsonp} and also in
+Finally we use the import mechanism of the \textbf{JsonPreprocessor} to import the file \plog{common.jsonp} in file \plog{componentA.jsonp} and also in
 file \plog{componentB.jsonp}.
 
 \vspace{2ex}
@@ -622,7 +632,7 @@ We introduce a new file \plog{componentB.2.jsonp} that imports \plog{componentB.
 
 \begin{itemize}
    \item Existing parameters are accessed by a dollar operator and a pair of curly brackets (\pcode{$\{...\}}) with the parameter name inside.
-   \item If the entire expression of the right hand side of the colon is such a dollar operator expression, it is not required
+   \item If the entire expression of the right-hand side of the colon is such a dollar operator expression, it is not required
          to encapsulate this expression in quotes (in opposite to what pure JSON would require).
    \item Without quotes, the dollar operator keeps the data type of the referenced parameter. If you use quotes, the value of the used parameter
          will be converted to type \pcode{str}. This implicit string conversion is limited to parameters of simple data types like integers and floats.
@@ -644,7 +654,7 @@ also \pcode{int_val_b} is of type \pcode{int}:
 "int_val_b"            : ${int_val},
 \end{pythoncode}
 
-It is not required to encapsulate dollar operator expressions at the right hand side of the colon in quotes.
+It is not required to encapsulate dollar operator expressions at the right-hand side of the colon in quotes.
 But nevertheless, it is possible to use quotes. In case of:
 
 \begin{pythoncode}
@@ -766,8 +776,8 @@ Again we change the content of file \plog{componentB.2.jsonp}:
 }
 \end{pythoncode}
 
-The dollar operator syntax at the left hand side of the colon is the same than previously used on the right hand side.
-The entire expression at the left hand side of the colon must \textit{not} be encapsulated in quotes in this case.
+The dollar operator syntax at the left-hand side of the colon is the same as previously used on the right-hand side.
+The entire expression at the left-hand side of the colon must \textit{not} be encapsulated in quotes in this case.
 
 \textbf{Outcome:}
 
@@ -871,13 +881,13 @@ Single quotes are used to convert the content inside to a string.
          Without the quotes (\pcode{[$\{param\}]}), the content inside the square brackets is an integer.
 \end{itemize}
 
-In the context of \pkg\ JSON files, only strings and integers are expected to be inside square brackets (except the brackets are used to define a list).
+In the context of \textbf{JsonPreprocessor} JSON files, only strings and integers are expected to be inside square brackets (except the brackets are used to define a list).
 Other data types are not supported here.
 
 Whether a string or an integer is expected, depends on the data type of the parameter, the square bracket expression belongs to. Dictionaries require a string (a key name), lists require an integer (an index).
 Deviations will cause an error.
 
-Summarized the following combinations are valid (on both the left hand side of the colon and the right hand side of the colon):
+Summarized the following combinations are valid (on both the left-hand side of the colon and the right-hand side of the colon):
 
 \begin{pythoncode}
 ${listparam}[${intparam}]
@@ -896,7 +906,7 @@ The last example in this section covers the following use case:
 
 \begin{itemize}
    \item We have several JSON files, each for a certain purpose within a project (e.g. for every feature of this project a separate JSON file).
-   \item They belong together and therefore they are all imported into a main JSON file that is the file that is handed over to the \pkg.
+   \item They belong together and therefore they are all imported into a main JSON file that is the file that is handed over to the \textbf{JsonPreprocessor}.
    \item Every imported JSON file introduces a certain bunch of parameters. All parameters need to be a part of a common dictionary.
    \item Outcome is that finally only one single dictionary is used to access the parameters from all JSON files imported in the main JSON file.
 \end{itemize}
@@ -971,7 +981,7 @@ It is not required to start the code listed above, with dictionary initializatio
    ${project_values}['featureC_params'] : {},
 \end{pythoncode}
 
-These initializations are done implicitly by the \pkg. Further details about the implicit creation of dictionaries can be found in section
+These initializations are done implicitly by the \textbf{JsonPreprocessor}. Further details about the implicit creation of dictionaries can be found in section
 \hyperref[implicit-creation]{Implicit creation of dictionaries}.
 
 It is for sure still possible to do the initialization of a dictionary explicitly with \pcode{\{\}}. But keep in mind: This deletes all already existing keys in this dictionary!
@@ -1003,7 +1013,7 @@ Up to now we have accessed dictionary keys in this way (standard notation):
 ${dictionary}['key']['sub_key']
 \end{pythoncode}
 
-Additionally to this standard notation, the \pkg\ supports the so called \textit{dotdict} notation where keys
+Additionally to this standard notation, the \textbf{JsonPreprocessor} supports the so called \textit{dotdict} notation where keys
 are handled as attributes:
 
 \begin{pythoncode}
@@ -1131,7 +1141,7 @@ In section \hyperref[overwriting-parameters]{Overwriting parameters} we mentione
 The value of \pcode{newparam1} is defined by an expression that is encapsulated in quotes and contains - beneath hard coded parts - a dollar operator expression
 (that is the dynamic part).
 
-The same is also possible on the left hand side of the colon. In this case the name of a parameter is created dynamically.
+The same is also possible on the left-hand side of the colon. In this case the name of a parameter is created dynamically.
 
 \vspace{2ex}
 
@@ -1188,8 +1198,6 @@ This will not work (because of a key with name \pcode{A_2} does not yet exist):
 A substitution in key names is not allowed! Please update the key name "${strval}_2"
 \end{pythonlog}
 
-
-
 % --------------------------------------------------------------------------------------------------------------
 
 \newpage
@@ -1225,10 +1233,10 @@ In case of it is required to split the definition into several files, we have to
 
 The result will be the same as in the previous example.
 
-It can be seen now that this way of creating nested dictionaries is rather long winded, because every inititialization of a dictionary
+It can be seen now that this way of creating nested dictionaries is rather long-winded, because every initialization of a dictionary
 requires a separate line of code (at every level).
 
-To shorten the code, the \pkg\ supports an implicite creation of dictionaries.
+To shorten the code, the \textbf{JsonPreprocessor} supports an implicit creation of dictionaries.
 
 This is the resulting code in standard notation:
 
@@ -1272,7 +1280,7 @@ Please be aware of: In case of a missing level in between an expression like
 you will \textit{not} get an error message! The entire data structure will be created implicitly. The impact is that this method
 is very susceptible to typing mistakes.
 
-The implicite creation of data structures does not work with lists! In case you use a list index out of range, you will get
+The implicit creation of data structures does not work with lists! In case you use a list index out of range, you will get
 a corresponding error message.
 
 % --------------------------------------------------------------------------------------------------------------
@@ -1369,8 +1377,175 @@ The same error will happen in case of the standard notation is used:
 }
 \end{pythoncode}
 
+% --------------------------------------------------------------------------------------------------------------
+
+\newpage
+
+\section{Python inline code}
+
+It might be required to have access to Python builtin functions, e.g. for combining multiple lists into a single list.
+In pure Python this can be realized in the following way:
+
+\begin{pythoncode}
+A = [1,2,3]
+B = [4,5,6]
+C = A + B
+print(C)
+\end{pythoncode}
+
+With result:
+
+\begin{pythonlog}
+[1, 2, 3, 4, 5, 6]
+\end{pythonlog}
+
+In JSONP files, the implementation looks as follows:
+
+\begin{pythoncode}
+"A" : [1,2,3],
+"B" : [4,5,6],
+"C" : <\textless{}\textless{}>${A} + ${B}<\textgreater{}\textgreater{}>
+\end{pythoncode}
+
+The expression \pcode{$\{A\} + $\{B\}} is handled as Python inline code. It is possible to use dollar operator expressions
+inside Python inline code to access any other parameter defined in JSONP files.
+
+\vspace{2ex}
+
+The syntax of Python inline code is:
+
+\begin{pythoncode}
+<\textless{}\textless{}><(\emph{Python expression})><\textgreater{}\textgreater{}>
+\end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Limitations}
+
+The Python inline code syntax cannot be used within strings. The following code is invalid:
+
+\begin{pythoncode}
+"param" : "The value is <\textless{}\textless{}><(\emph{Python expression})><\textgreater{}\textgreater{}>"
+\end{pythoncode}
+
+The usage of Python inline code is limited to the right-hand side of the colon (\emph{key values}).
+This feature cannot be used to create key names.
+
+Python inline code cannot be used immediately to select list elements or dictionary keys that shall be overwritten. The following code is invalid:
+
+\begin{pythoncode}
+"param" : [1,2,3],
+${param}[<\textless{}\textless{}>0 if True else 1<\textgreater{}\textgreater{}>] : 4
+\end{pythoncode}
+
+This is a possible workaround:
+
+\begin{pythoncode}
+"param" : [1,2,3],
+"index" : <\textless{}\textless{}>0 if True else 1<\textgreater{}\textgreater{}>,
+${param}[${index}] : 4
+\end{pythoncode}
+
+% TODO when supported by JsonPreprocessor:
+
+% Python inline code can only be used to return values of data types supported by the JSON format. The following Python inline code returns a \pcode{datetime} object
+% and therefore is invalid:
+
+% \begin{pythoncode}
+% "now" : <\textless{}\textless{}>from datetime import datetime; now = datetime.now()<\textgreater{}\textgreater{}>
+% \end{pythoncode}
+
+\vspace{2ex}
+
+\textbf{Further examples}
+
+\textit{Create a list of dictionary keys:}
+
+\begin{pythoncode}
+"dict"     : {"kA" : "vA", "kB" : "vB"},
+"key_list" : <\textless{}\textless{}>list(${dict}.keys())<\textgreater{}\textgreater{}>
+\end{pythoncode}
+
+\textit{Define an import path:}
+
+\begin{pythoncode}
+"path_1" : "./file_1.jsonp",
+"path_2" : "./file_2.jsonp"
+//
+"[import]" : <\textless{}\textless{}>${path_1} if True else ${path_2}<\textgreater{}\textgreater{}>
+\end{pythoncode}
 
 
+% TODO when supported by JsonPreprocessor:
+    % // Python inline code with import of an additional module
+    % "element" : <<eval import itertools; combined_list=list(itertools.combinations([1, 2, 3], 2)); element=combined_list[0]>>
+    % C:\workplace\ROBFW\components\python-jsonpreprocessor\test\testfiles\jpp-test_config_2108.jsonp
+
+% --------------------------------------------------------------------------------------------------------------
+
+\newpage
+
+\section{Special characters within key names}
+
+Basically, the \textbf{JsonPreprocessor} considers the JSON naming convention for key names. Within JSONP files allowed is what JSON allows,
+but with the following limitation: The JSONP format extends the JSON format with some features using square, curly and angle brackets as syntax elements:
+\pcode{[}, \pcode{]}, \pcode{\{}, \pcode{\}}, \pcode{<}, \pcode{>}.
+
+\textbf{These brackets must not be used within key names!}
+
+This JSONP code:
+
+\begin{pythoncode}
+{
+    "[" : 1,
+    "B" : ${[}
+}
+\end{pythoncode}
+
+causes:
+
+\begin{pythonlog}
+Error: 'Invalid expression found: '${[}' - The brackets mismatch!!!'!
+\end{pythonlog}
+
+All other special characters can be used immediately:
+
+\begin{pythoncode}
+{
+    "$" : 1,
+    "B" : ${$}
+}
+\end{pythoncode}
+
+Result:
+
+\begin{pythonlog}
+DotDict({'$': 1, 'B': 1})
+\end{pythonlog}
+
+Strings are handled as raw strings. Therefore, masking has no effect:
+
+\begin{pythoncode}
+{
+    "\\$" : 1,
+    "B" : ${\\$}
+}
+\end{pythoncode}
+
+The backslashes are part of the key name:
+
+\begin{pythonlog}
+DotDict({'\\$': 1, 'B': 1})
+\end{pythonlog}
+
+\textit{The masking requires two backslashes! A single backslash will cause a JSON syntax error!}
+
+\vspace{2ex}
+
+\begin{boxhint}{Format deviation}
+In opposite to the \textbf{JsonPreprocessor}, the \textbf{TestsuitesManagement} of the \textbf{RobotFramework AIO} is more restrictive
+and does not allow any special characters. Key names are limited to letters and digits!
+\end{boxhint}
 
 
 
