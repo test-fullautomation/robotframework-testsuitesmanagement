@@ -1,0 +1,82 @@
+//  Copyright 2020-2025 Robert Bosch GmbH
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//**************************************************************************
+
+{
+  "WelcomeString"   : "Hello... Robot Framework is running now!",
+
+  "Maximum_version" : "1.0.0",
+  "Minimum_version" : "0.6.0",
+
+  "Project"         : "tsm-test_config_python_inline_code",
+  "TargetName"      : "Device_01",
+
+  "params" : {
+              "global" : {
+                            // JSONP content taken over from: https://github.com/test-fullautomation/python-jsonpreprocessor/tree/develop/test/testfiles
+                            //
+                            "A"       : 1,
+                            "B"       : 2,
+                            "kA"      : "kA",
+                            "kB"      : "kB",
+                            "choice"  : True,
+
+                            "value01" : <<"ABC">>,
+                            "value02" : <<25>>,
+                            "value03" : <<2.5>>,
+                            "value04" : <<True>>,
+                            "value05" : <<None>>,
+
+                            "value06" : <<[1, 2]>>,
+                            "value07" : <<{"kA" : 1, "kB" : 2}>>,
+
+                            "expression1" : [1, 2],
+                            "value08"     : <<${params.global.expression1}>>,
+
+                            "expression2" : {"kA" : 1, "kB" : 2},
+                            "value09"     : <<${params.global.expression2}>>,
+
+                            "value10" : <<1 if True else 2>>,
+                            "value11" : <<${params.global.A} if ${params.global.choice} else ${params.global.B}>>,
+
+                            // expression not resolved // "value12" : ["A", <<${params.global.A} if ${params.global.choice} else ${params.global.B}>>, "Z"],
+
+                            "value13" : {"kA" : "A",
+                                        "kB" : <<${params.global.A} if ${params.global.choice} else ${params.global.B}>>,
+                                        "kC" : "C"},
+
+                            // "listval"       : [1,2,3],
+                            // "dictval"       : {"kA" : "vA", "kB" : "vB"},
+                            // error // "value14" : ${params.global.listval}[<<${params.global.A} if ${params.global.choice} else ${params.global.B}>>],
+                            // error // "value15" : ${params.global.dictval}[<<${params.global.kA} if ${params.global.choice} else ${params.global.kB}>>]
+
+                            "list1"   : [1,2,3],
+                            "list2"   : [4,5,6],
+                            "value16" : <<${params.global.list1} + [${params.global.list2} + ${params.global.list1}]>>,
+
+                            "dict"    : {"kA" : "vA", "kB" : "vB"},
+                            "value17" : <<list(${params.global.dict}.keys())>>
+
+                            // error // "value18" : <<(${params.global.list1}[0] if ${params.global.choice} else ${params.global.list2.1}) + 1>>,
+                            // error // "code1"   : "(${params.global.list1}[0] if ${params.global.choice} else ${params.global.list2.1}) + 1",
+                            // error // "value19" : <<(${code1}) + 4>>,
+                       }
+            }
+}
+
+// // TODO:
+// // import paths
+// // slicing
+// // BADCASE
+
