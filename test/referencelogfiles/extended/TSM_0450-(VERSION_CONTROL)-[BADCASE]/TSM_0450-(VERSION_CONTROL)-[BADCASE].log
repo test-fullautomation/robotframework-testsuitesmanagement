@@ -1,19 +1,22 @@
 ==============================================================================
-20241111 18:48:21.114 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20250704 16:25:22.575 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20241111 18:48:21.114 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20241111 18:48:21.145 - ERROR - Invalid Maximum version: Wrong format in version information 'I am not a valid version'
-20241111 18:48:21.145 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
-20241111 18:48:21.145 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20241111 18:48:21.145 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20250704 16:25:22.577 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20250704 16:25:22.640 - ERROR - Invalid Maximum version: Wrong format in version information 'I am not a valid version'
+20250704 16:25:22.640 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
+20250704 16:25:22.641 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
+20250704 16:25:22.642 - INFO - +- END SETUP: tm.Testsuite Setup (65)
 ------------------------------------------------------------------------------
-20241111 18:48:21.145 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20250704 16:25:22.642 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20241111 18:48:21.145 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20250704 16:25:22.643 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20241111 18:48:21.145 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20241111 18:48:21.145 - INFO - testsuite_teardown: Will be implemented later
-20241111 18:48:21.145 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20250704 16:25:22.643 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20250704 16:25:22.643 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 0 failed, 1 unknown
+20250704 16:25:22.643 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20241111 18:48:21.145 - INFO - + END SUITE: Tsm-Testfile-02 (93)
+20250704 16:25:22.644 - INFO - + END SUITE: Tsm-Testfile-02 (171)
 ==============================================================================

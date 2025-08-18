@@ -1,284 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.9.16 on win32)" generated="20241111 18:48:26.926" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:24.738" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-06-Dotdict Syntax" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-06-dotdict_syntax.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
-<doc>This testsuite_setup defines the ``Testsuite Setup`` which is used to loads the RobotFramework AIO configuration,
-checks the version of RobotFramework AIO, and logs out the basic information of the robot run.</doc>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_json_dotdict'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.9.16 on win32)'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'bundle_version' to value '0.13.1.6'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${teststring_variant} = I am the 'json_dotdict' configuration of tsm-test</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${dTestDict} = {'ddKeyA': {'ddKeyA_2': 'ddKeyA_2_value'}, 'ddKeyB': {'ddKeyB_2': 'ddKeyB_2_value'}, 'ddKeyC': {'ddKeyC_2': {'ddKeyC_3': 'ddKeyC_3_value'}}}</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyB_param} = ddKeyB_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyA_2_param_1} = ddKeyA_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyA_2_param_2} = ddKeyA_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyA_2_param_3} = ddKeyA_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyA_2_param_4} = ddKeyA_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyA_2_param} = ddKeyA_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyB_2_param_1} = ddKeyB_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyB_2_param_2} = ddKeyB_2_value</msg>
-<msg timestamp="20241111 18:48:27.031" level="INFO">${ddKeyB_2_param_3} = ddKeyB_2_value</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">${ddKeyB_2_param_4} = ddKeyB_2_value</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Running with configuration level 2</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">RobotFramework AIO extended version check passed!</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_json_dotdict.jsonp'</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20241111 18:48:26.999" endtime="20241111 18:48:27.046"/>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<msg timestamp="20250704 16:25:24.930" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_json_dotdict'.</msg>
+<msg timestamp="20250704 16:25:24.931" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20250704 16:25:24.932" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20250704 16:25:24.933" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.</msg>
+<msg timestamp="20250704 16:25:24.933" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
+<msg timestamp="20250704 16:25:24.933" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:24.933" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:24.933" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20250704 16:25:24.934" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg timestamp="20250704 16:25:24.934" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg timestamp="20250704 16:25:24.934" level="INFO">${teststring_variant} = I am the 'json_dotdict' configuration of tsm-test</msg>
+<msg timestamp="20250704 16:25:24.934" level="INFO">${dTestDict} = {'ddKeyA': {'ddKeyA_2': 'ddKeyA_2_value'}, 'ddKeyB': {'ddKeyB_2': 'ddKeyB_2_value'}, 'ddKeyC': {'ddKeyC_2': {'ddKeyC_3': 'ddKeyC_3_value'}}}</msg>
+<msg timestamp="20250704 16:25:24.935" level="INFO">${ddKeyB_param} = ddKeyB_value</msg>
+<msg timestamp="20250704 16:25:24.935" level="INFO">${ddKeyA_2_param_1} = ddKeyA_2_value</msg>
+<msg timestamp="20250704 16:25:24.935" level="INFO">${ddKeyA_2_param_2} = ddKeyA_2_value</msg>
+<msg timestamp="20250704 16:25:24.935" level="INFO">${ddKeyA_2_param_3} = ddKeyA_2_value</msg>
+<msg timestamp="20250704 16:25:24.936" level="INFO">${ddKeyA_2_param_4} = ddKeyA_2_value</msg>
+<msg timestamp="20250704 16:25:24.936" level="INFO">${ddKeyA_2_param} = ddKeyA_2_value</msg>
+<msg timestamp="20250704 16:25:24.936" level="INFO">${ddKeyB_2_param_1} = ddKeyB_2_value</msg>
+<msg timestamp="20250704 16:25:24.937" level="INFO">${ddKeyB_2_param_2} = ddKeyB_2_value</msg>
+<msg timestamp="20250704 16:25:24.937" level="INFO">${ddKeyB_2_param_3} = ddKeyB_2_value</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">${ddKeyB_2_param_4} = ddKeyB_2_value</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">RobotFramework AIO (extended) version check passed!</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_json_dotdict.jsonp'</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20250704 16:25:24.938" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20250704 16:25:24.843" endtime="20250704 16:25:24.938"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-06-dotdict_syntax" line="32">
 <kw name="Testcase Setup" library="tm" type="SETUP">
-<doc>This testcase_setup defines the ``Testcase Setup`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<msg timestamp="20250704 16:25:24.939" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20250704 16:25:24.939" endtime="20250704 16:25:24.939"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'tsm-test_config_json_dotdict'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.940" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'tsm-test_config_json_dotdict'</msg>
+<status status="PASS" starttime="20250704 16:25:24.939" endtime="20250704 16:25:24.940"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.940" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<status status="PASS" starttime="20250704 16:25:24.940" endtime="20250704 16:25:24.940"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the 'json_dotdict' configuration of tsm-test'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.941" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the 'json_dotdict' configuration of tsm-test'</msg>
+<status status="PASS" starttime="20250704 16:25:24.940" endtime="20250704 16:25:24.941"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.941" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<status status="PASS" starttime="20250704 16:25:24.941" endtime="20250704 16:25:24.941"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict}</arg>
 <arg>PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/1) &gt; {ddKeyA} [DOTDICT] (1/1) &gt; {ddKeyA_2} [STR]  :  'ddKeyA_2_value'</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/2) &gt; {ddKeyB} [DOTDICT] (1/1) &gt; {ddKeyB_2} [STR]  :  'ddKeyB_2_value'</msg>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/3) &gt; {ddKeyC} [DOTDICT] (1/1) &gt; {ddKeyC_2} [DOTDICT] (1/1) &gt; {ddKeyC_3} [STR]  :  'ddKeyC_3_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.941" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/1) &gt; {ddKeyA} [DOTDICT] (1/1) &gt; {ddKeyA_2} [STR]  :  'ddKeyA_2_value'</msg>
+<msg timestamp="20250704 16:25:24.941" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/2) &gt; {ddKeyB} [DOTDICT] (1/1) &gt; {ddKeyB_2} [STR]  :  'ddKeyB_2_value'</msg>
+<msg timestamp="20250704 16:25:24.941" level="INFO">PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/3) &gt; {ddKeyC} [DOTDICT] (1/1) &gt; {ddKeyC_2} [DOTDICT] (1/1) &gt; {ddKeyC_3} [STR]  :  'ddKeyC_3_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.941" endtime="20250704 16:25:24.941"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyB_param}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.046" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.046"/>
+<msg timestamp="20250704 16:25:24.942" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.941" endtime="20250704 16:25:24.942"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyA_2_param_1}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.942" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.942" endtime="20250704 16:25:24.942"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyA_2_param_2}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.942" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.942" endtime="20250704 16:25:24.942"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyA_2_param_3}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.942" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.942" endtime="20250704 16:25:24.943"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyA_2_param_4}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.943" level="INFO">PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.943" endtime="20250704 16:25:24.943"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyB_2_param_1}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.943" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.943" endtime="20250704 16:25:24.943"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyB_2_param_2}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.943" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.943" endtime="20250704 16:25:24.943"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyB_2_param_3}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.944" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.943" endtime="20250704 16:25:24.944"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${ddKeyB_2_param_4}</arg>
 <arg>PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.944" level="INFO">PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.944" endtime="20250704 16:25:24.944"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3}</arg>
 <arg>PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.944" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.944" endtime="20250704 16:25:24.944"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3]</arg>
 <arg>PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.945" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.944" endtime="20250704 16:25:24.945"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3]</arg>
 <arg>PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.945" level="INFO">PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.945" endtime="20250704 16:25:24.945"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3]</arg>
 <arg>PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<msg timestamp="20250704 16:25:24.945" level="INFO">PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'</msg>
+<status status="PASS" starttime="20250704 16:25:24.945" endtime="20250704 16:25:24.945"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3}</arg>
 <arg>ddKeyC_3_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.946" endtime="20250704 16:25:24.946"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3]</arg>
 <arg>ddKeyC_3_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.946" endtime="20250704 16:25:24.946"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3]</arg>
 <arg>ddKeyC_3_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.946" endtime="20250704 16:25:24.946"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3]</arg>
 <arg>ddKeyC_3_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.947" endtime="20250704 16:25:24.947"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyB_param}</arg>
 <arg>ddKeyB_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.947" endtime="20250704 16:25:24.947"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyA_2_param}</arg>
 <arg>ddKeyA_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.947" endtime="20250704 16:25:24.947"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyA_2_param_1}</arg>
 <arg>ddKeyA_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.947" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyA_2_param_2}</arg>
 <arg>ddKeyA_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.948" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyA_2_param_3}</arg>
 <arg>ddKeyA_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.948" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyA_2_param_4}</arg>
 <arg>ddKeyA_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.948" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyB_2_param_1}</arg>
 <arg>ddKeyB_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.948" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyB_2_param_2}</arg>
 <arg>ddKeyB_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.948" endtime="20250704 16:25:24.948"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyB_2_param_3}</arg>
 <arg>ddKeyB_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.949" endtime="20250704 16:25:24.949"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ddKeyB_2_param_4}</arg>
 <arg>ddKeyB_2_value</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.949" endtime="20250704 16:25:24.949"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
-<doc>This testcase_teardown defines the ``Testcase Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">testcase_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<msg timestamp="20250704 16:25:24.949" level="INFO">TEST 'Test Case tsm-testfile-06-dotdict_syntax' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250704 16:25:24.949" endtime="20250704 16:25:24.949"/>
 </kw>
 <doc>tsm-testfile-06-dotdict_syntax</doc>
-<status status="PASS" starttime="20241111 18:48:27.046" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.938" endtime="20250704 16:25:24.949"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
-<doc>This testsuite_teardown defines the ``Testsuite Teardown`` keyword, currently this keyword does nothing,
-it's defined here for future requirements.</doc>
-<msg timestamp="20241111 18:48:27.051" level="INFO">testsuite_teardown: Will be implemented later</msg>
-<status status="PASS" starttime="20241111 18:48:27.051" endtime="20241111 18:48:27.051"/>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<msg timestamp="20250704 16:25:24.950" level="INFO">SUITE 'Tsm-Testfile-06-Dotdict Syntax' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250704 16:25:24.950" endtime="20250704 16:25:24.950"/>
 </kw>
-<meta name="bundle_version">0.13.1.6</meta>
+<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_json_dotdict</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
-<meta name="testtool">Robot Framework 6.1 (Python 3.9.16 on win32)</meta>
+<meta name="testtool">Robot Framework 6.1 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" starttime="20241111 18:48:26.926" endtime="20241111 18:48:27.051"/>
+<status status="PASS" starttime="20250704 16:25:24.741" endtime="20250704 16:25:24.950"/>
 </suite>
 <statistics>
 <total>

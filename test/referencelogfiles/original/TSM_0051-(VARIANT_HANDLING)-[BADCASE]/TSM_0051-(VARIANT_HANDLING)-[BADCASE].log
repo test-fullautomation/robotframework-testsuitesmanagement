@@ -1,0 +1,44 @@
+==============================================================================
+2025-07-04 16:39:53.994586 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2025-07-04 16:39:54.098383 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-07-04 16:39:54.155401 - ERROR - Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+2025-07-04 16:39:54.155648 - ERROR - Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
+2025-07-04 16:39:54.156327 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
+2025-07-04 16:39:54.156511 - FAIL - Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:54.156634 - DEBUG - json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+
+During handling of the above exception, another exception occurred:
+
+Exception: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
+In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
+
+During handling of the above exception, another exception occurred:
+
+Exception: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
+In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
+
+During handling of the above exception, another exception occurred:
+
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Exception: Unable to load the test configuration. The test execution will be aborted!
+2025-07-04 16:39:54.156657 - INFO - +- END SETUP: tm.Testsuite Setup (0.058274 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:54.156757 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2025-07-04 16:39:54.157388 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000631 s)
+------------------------------------------------------------------------------
+2025-07-04 16:39:54.157939 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-07-04 16:39:54.158101 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Unable to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2025-07-04 16:39:54.158143 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000204 s)
+==============================================================================
+2025-07-04 16:39:54.158174 - INFO - + END SUITE: Tsm-Testfile-02 (0.163588 s)
+==============================================================================

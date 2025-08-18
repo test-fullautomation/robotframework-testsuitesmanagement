@@ -121,5 +121,25 @@
   "naming_conventions_1" : {
                               "name" : "tsm-test_config_naming_conventions_1.jsonp",
                               "path" : "./"
-                           }
+                           },
+  "naming_conventions_2" : {
+                              "name" : "tsm-test_config_invalid_parameter_name_1.jsonp",
+                              "path" : "./"
+                           },
+  "naming_conventions_3" : {
+                              "name" : "tsm-test_config_invalid_parameter_name_2.jsonp",
+                              "path" : "./"
+                           },
+  "naming_conventions_4" : {
+                              "name" : "tsm-test_config_invalid_parameter_name_3.jsonp",
+                              "path" : "./"
+                           },
+  "unicode_digits" : {
+                       "name" : "tsm-test_config_unicode_digits.jsonp",
+                       "path" : "./"
+                     },
+  "python_inline_code" : {
+                           "name" : "tsm-test_config_python_inline_code.jsonp",
+                           "path" : "./"
+                         }
 }

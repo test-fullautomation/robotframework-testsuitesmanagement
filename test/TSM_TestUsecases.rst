@@ -159,6 +159,210 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0050**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With missing parameter in parameter configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0051**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With syntax error in parameter configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0052**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With syntax error within imported parameter configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0053**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With not existing imported parameter configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0054**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With not existing imported parameter configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0055**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Command line contains both: variant name and config file**
+
+   Expected: Both together is not accepted; test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0056**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Command line contains variant name, but no variant configuration file is given to suite setup**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0057**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Command line contains invalid variant name (not allowed characters in variant name)**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0058**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Command line contains unknown variant name (a variant with this name is not defined in variant configuration file)**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0059**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Command line contains unknown variant configuration file (a file with this name does not exist)**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0060**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Robot file refers to a variant configuration file with syntax errors**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0061**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Robot file refers to a variant configuration file with not existing parameter file for default variant**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0062**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Robot file refers to a variant configuration file with not existing path for variant1**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0063**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **Robot file refers to a variant configuration file with with missing 'default' variant; a variant name is not given in command line**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0064**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **A local config file is passed to command line parameter config_file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core); reason: a local config file is not a full configuration file
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0065**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has same name as configuration file, but configuration file exists twice: json/jsonp**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0066**
+
+  [VARIANT_HANDLING / BADCASE]
+
+   **With parameter configuration file taken from config folder (placed beside the executed robot file); robot file has another name as configuration file, but configuration file with default name exists twice: json/jsonp**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
 * **Test TSM_0100**
 
   [LOCAL_CONFIG / GOODCASE]
@@ -209,6 +413,30 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0150**
+
+  [LOCAL_CONFIG / BADCASE]
+
+   **A parameter config file is passed to command line parameter local_config; a variant configuration file is not involved**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0151**
+
+  [LOCAL_CONFIG / BADCASE]
+
+   **A parameter config file for variant1 is passed to command line parameter local_config; also variant2 configuration is requested**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
 * **Test TSM_0200**
 
   [NESTED_CONFIG / GOODCASE]
@@ -228,6 +456,30 @@ Test Use Cases
    **Variant with multiple nested configuration files and extended parameter definitions (new and overwritten values; all relevant data types)**
 
    Expected: Inside robot files all configuration parameters have proper value and are of proper data type
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0250**
+
+  [NESTED_CONFIG / BADCASE]
+
+   **Variant with multiple nested configuration files; cyclic import of JSON file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core); reason: cyclic import
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0251**
+
+  [NESTED_CONFIG / BADCASE]
+
+   **Assignment of unknown dictionary key in imported JSON configuration file**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 
    *Comment: Single file execution*
 
@@ -276,6 +528,66 @@ Test Use Cases
    **Only 'Minimum_version' is defined**
 
    Expected: Test is executed, because of the version control is optional
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0450**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'Maximum_version' is invalid (value is not a version number)**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0451**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'Minimum_version' is invalid (value contains blanks only)**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0452**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'Minimum_version' is bigger than 'Maximum_version'**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0453**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'Maximum_version' is smaller than current version**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_0454**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'Minimum_version' is bigger than current version**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 
    *Comment: Single file execution*
 
@@ -413,5 +725,65 @@ Test Use Cases
 
 ----
 
-Generated: 28.02.2025 - 17:13:36
+* **Test TSM_1350**
+
+  [NAMING_CONVENTIONS / BADCASE]
+
+   **JSON file containing an invalid parameter name**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1351**
+
+  [NAMING_CONVENTIONS / BADCASE]
+
+   **JSON file containing an invalid parameter name**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1352**
+
+  [NAMING_CONVENTIONS / BADCASE]
+
+   **JSON file containing an invalid parameter name**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1400**
+
+  [UNICODE_DIGITS / GOODCASE]
+
+   **JSON file containing UNICODE digits**
+
+   Expected: Parameters are accepted and their values are logged correctly
+
+   *Comment: Single file execution*
+
+----
+
+* **Test TSM_1500**
+
+  [PYTHON_INLINE_CODE / GOODCASE]
+
+   **JSON file containing Python inline code**
+
+   Expected: Python inline code is resolved and the results are logged correctly
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 18.08.2025 - 14:49:11
 

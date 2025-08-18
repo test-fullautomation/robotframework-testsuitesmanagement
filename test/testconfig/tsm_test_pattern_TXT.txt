@@ -46,8 +46,8 @@ Exception\soccurred
 (END\sSETUP:)\s.+(Testsuite\sSetup)
 (START\sSETUP:)\s.+(Testcase\sSetup)
 (END\sSETUP:)\s.+(Testcase\sSetup)
-(START\sTEST:\sTest\sCase\s.+?)\s*
-(END\sTEST:\sTest\sCase\s.+?)\s*
+(START\sTEST:\sTest\sCase\s.+?)\s+.+
+(END\sTEST:\sTest\sCase\s.+?)\s+.+
 (START\sTEARDOWN:)\s.+(Testcase\sTeardown)
 (END\sTEARDOWN:)\s.+(Testcase\sTeardown)
 (START\sTEARDOWN:)\s.+(Testsuite\sTeardown)
@@ -55,3 +55,10 @@ Exception\soccurred
 Nearby:\s'.+'
 In\sfile:
 Expecting\sproperty\sname\senclosed\sin\sdouble\squotes
+(ERROR)\s-\s(Variable\sname\s'.*?'\sis\sinvalid\.\sExpected\sformat:\s'.+?'\s\(letters,\sdigits,\sunderscores\))
+(TEST\s'.+?'\sfinished\swith\sresult\s'.+?'.*)
+(SUITE\s'.+?'\sfinished\swith\sresult\s'.+?'.*)
+(UNKNOWN\s-\s.+)
+(The\smandatory\s'.+'\selement\sof\sconfiguration\sfile\sis\sfound\sin\slocal\sconfig\sfile)
+(Wrong\slocal\sconfig\sfile\swas\schosen,\splease\scheck)
+

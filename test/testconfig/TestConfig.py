@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 13.11.2024
+# 18.08.2025
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -64,6 +64,9 @@
 # "tsm-testfile-22-implicit_creation_1.robot"  # (with variant configuration and additional log strings to test the implicit creation)
 # "tsm-testfile-23-implicit_creation_2.robot"  # (with variant configuration and additional log strings to test the implicit creation)
 # "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
+# "tsm-testfile-25-naming_conventions_1.robot"    # (with variant configuration and output of several (valid) parameter names (GC))
+# "tsm-testfile-26-unicode_digits.robot"          # (with variant configuration (GC))
+# "tsm-testfile-27-python_inline_code"            # (with variant configuration (GC))
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -266,9 +269,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_param\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -282,9 +283,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -298,9 +297,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"syntax_error_within_import\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -314,9 +311,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -330,9 +325,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"missing_imported_file\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -346,9 +339,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\" --variable config_file:\"./config/tsm-test_config_variant2.jsonp\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -362,9 +353,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -378,9 +367,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"in/va/lid\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -394,9 +381,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"I_AM_NOT_DEFINED\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -410,9 +395,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./config/I_AM_NOT_EXISTING.jsonp\"" # path relative to position of robot file
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -426,9 +409,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-07-err-1.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -442,9 +423,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -458,9 +437,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-08-err-2.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -474,9 +451,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-09-err-3.robot" # (with variant 
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -490,9 +465,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable config_file:\"./localconfig/tsm-test_localconfig_bench1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -506,9 +479,7 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-1.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -522,9 +493,7 @@ dictUsecase['TESTFILENAME']     = "configfoldertests2/tsm-cft-test.file-2.robot"
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = None
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -599,9 +568,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-01.robot" # (without variant con
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -615,9 +582,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant2\" --variable local_config:\"./config/tsm-test_config_variant1.jsonp\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -661,9 +626,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-03.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"cyclic_import\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -677,9 +640,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"invalid_assignment_1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -791,9 +752,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_05\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -807,9 +766,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_06\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -823,9 +780,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_07\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -839,9 +794,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_08\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
@@ -855,9 +808,7 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant config
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_09\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
-# # # https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/302
-# # # reference log files need to be adapted after bug fix
-# # # listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
@@ -1189,7 +1140,82 @@ dictUsecase['TESTFILENAME']     = "tsm-testfile-25-naming_conventions_1.robot" #
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_1\""
 dictUsecase['EXPECTEDRETURN']   = 0
-# listofdictUsecases.append(dictUsecase)
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1350"
+dictUsecase['DESCRIPTION']      = "JSON file containing an invalid parameter name"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "NAMING_CONVENTIONS"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_2\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1351"
+dictUsecase['DESCRIPTION']      = "JSON file containing an invalid parameter name"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "NAMING_CONVENTIONS"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_3\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1352"
+dictUsecase['DESCRIPTION']      = "JSON file containing an invalid parameter name"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "NAMING_CONVENTIONS"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"naming_conventions_4\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_1400"
+dictUsecase['DESCRIPTION']      = "JSON file containing UNICODE digits"
+dictUsecase['EXPECTATION']      = "Parameters are accepted and their values are logged correctly"
+dictUsecase['SECTION']          = "UNICODE_DIGITS"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-26-unicode_digits.robot" # (with variant configuration (GC))
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"unicode_digits\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+# 18.08.2025: feature still under stabilization; some parts in JSONP code commented out
+# see also: https://github.com/test-fullautomation/python-jsonpreprocessor/tree/develop/test/testfiles
+dictUsecase['TESTID']           = "TSM_1500"
+dictUsecase['DESCRIPTION']      = "JSON file containing Python inline code"
+dictUsecase['EXPECTATION']      = "Python inline code is resolved and the results are logged correctly"
+dictUsecase['SECTION']          = "PYTHON_INLINE_CODE"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-27-python_inline_code.robot" # (with variant configuration (GC))
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"python_inline_code\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
 del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 

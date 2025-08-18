@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:14.616656" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2025-07-04T16:40:14.799054" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_invalid_parameter_name_2'.</msg>
+<msg time="2025-07-04T16:40:14.799195" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-07-04T16:40:14.801199" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-07-04T16:40:14.801261" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-07-04T16:40:14.801298" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
+<msg time="2025-07-04T16:40:14.801332" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:14.801363" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:14.801393" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-07-04T16:40:14.801558" level="ERROR">Variable name '__ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)</msg>
+<msg time="2025-07-04T16:40:14.801728" level="ERROR">Please check variable '__ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_2.jsonp'</msg>
+<msg time="2025-07-04T16:40:14.802023" level="FAIL">Exception</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2025-07-04T16:40:14.736456" elapsed="0.065709">Exception</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
+<doc>tsm-testfile-02</doc>
+<status status="FAIL" start="2025-07-04T16:40:14.802269" elapsed="0.000638">Parent suite setup failed:
+Exception</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2025-07-04T16:40:14.803804" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Exception
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2025-07-04T16:40:14.803643" elapsed="0.000202"/>
+</kw>
+<meta name="bundle_version">0.14.1.33</meta>
+<meta name="machine">HI-C-0044M</meta>
+<meta name="project">tsm-test_config_invalid_parameter_name_2</meta>
+<meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="FAIL" start="2025-07-04T16:40:14.629413" elapsed="0.174462">Suite setup failed:
+Exception</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-02" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-02</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-04T16:40:14.801558" level="ERROR">Variable name '__ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)</msg>
+<msg time="2025-07-04T16:40:14.801728" level="ERROR">Please check variable '__ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_2.jsonp'</msg>
+</errors>
+</robot>
