@@ -63,3 +63,4 @@ TSM_1350|NAMING_CONVENTIONS|BADCASE|JSON file containing an invalid parameter na
 TSM_1351|NAMING_CONVENTIONS|BADCASE|JSON file containing an invalid parameter name
 TSM_1352|NAMING_CONVENTIONS|BADCASE|JSON file containing an invalid parameter name
 TSM_1400|UNICODE_DIGITS|GOODCASE|JSON file containing UNICODE digits
+TSM_1500|PYTHON_INLINE_CODE|GOODCASE|JSON file containing Python inline code

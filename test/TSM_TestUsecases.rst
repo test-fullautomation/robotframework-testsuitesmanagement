@@ -773,5 +773,17 @@ Test Use Cases
 
 ----
 
-Generated: 04.07.2025 - 16:41:19
+* **Test TSM_1500**
+
+  [PYTHON_INLINE_CODE / GOODCASE]
+
+   **JSON file containing Python inline code**
+
+   Expected: Python inline code is resolved and the results are logged correctly
+
+   *Comment: Single file execution*
+
+----
+
+Generated: 18.08.2025 - 14:49:11
 

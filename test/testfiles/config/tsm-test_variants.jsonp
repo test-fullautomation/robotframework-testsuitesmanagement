@@ -137,5 +137,9 @@
   "unicode_digits" : {
                        "name" : "tsm-test_config_unicode_digits.jsonp",
                        "path" : "./"
-                     }
+                     },
+  "python_inline_code" : {
+                           "name" : "tsm-test_config_python_inline_code.jsonp",
+                           "path" : "./"
+                         }
 }

@@ -22,7 +22,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 04.07.2025
+# 18.08.2025
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -66,6 +66,7 @@
 # "tsm-testfile-24-composite_expressions_1.robot" # (with variant configuration and additional log strings to test the string concatenation)
 # "tsm-testfile-25-naming_conventions_1.robot"    # (with variant configuration and output of several (valid) parameter names (GC))
 # "tsm-testfile-26-unicode_digits.robot"          # (with variant configuration (GC))
+# "tsm-testfile-27-python_inline_code"            # (with variant configuration (GC))
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -1196,6 +1197,23 @@ dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['TESTFILENAME']     = "tsm-testfile-26-unicode_digits.robot" # (with variant configuration (GC))
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"unicode_digits\""
+dictUsecase['EXPECTEDRETURN']   = 0
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+# 18.08.2025: feature still under stabilization; some parts in JSONP code commented out
+# see also: https://github.com/test-fullautomation/python-jsonpreprocessor/tree/develop/test/testfiles
+dictUsecase['TESTID']           = "TSM_1500"
+dictUsecase['DESCRIPTION']      = "JSON file containing Python inline code"
+dictUsecase['EXPECTATION']      = "Python inline code is resolved and the results are logged correctly"
+dictUsecase['SECTION']          = "PYTHON_INLINE_CODE"
+dictUsecase['SUBSECTION']       = "GOODCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-27-python_inline_code.robot" # (with variant configuration (GC))
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"python_inline_code\""
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase

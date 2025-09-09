@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250818 14:47:00.036" rpa="false" schemaversion="4">
+<suite id="s1" name="Tsm-Testfile-27-Python Inline Code" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-27-python_inline_code.robot">
+<kw name="Testsuite Setup" library="tm" type="SETUP">
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<msg timestamp="20250818 14:47:00.244" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_python_inline_code'.</msg>
+<msg timestamp="20250818 14:47:00.244" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20250818 14:47:00.246" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20250818 14:47:00.247" level="INFO">${A} = 1</msg>
+<msg timestamp="20250818 14:47:00.247" level="INFO">${B} = 2</msg>
+<msg timestamp="20250818 14:47:00.247" level="INFO">${kA} = kA</msg>
+<msg timestamp="20250818 14:47:00.247" level="INFO">${kB} = kB</msg>
+<msg timestamp="20250818 14:47:00.248" level="INFO">${choice} = True</msg>
+<msg timestamp="20250818 14:47:00.248" level="INFO">${value01} = ABC</msg>
+<msg timestamp="20250818 14:47:00.248" level="INFO">${value02} = 25</msg>
+<msg timestamp="20250818 14:47:00.248" level="INFO">${value03} = 2.5</msg>
+<msg timestamp="20250818 14:47:00.249" level="INFO">${value04} = True</msg>
+<msg timestamp="20250818 14:47:00.249" level="INFO">${value05} = None</msg>
+<msg timestamp="20250818 14:47:00.249" level="INFO">${value06} = [1, 2]</msg>
+<msg timestamp="20250818 14:47:00.250" level="INFO">${value07} = {'kA': 1, 'kB': 2}</msg>
+<msg timestamp="20250818 14:47:00.250" level="INFO">${expression1} = [1, 2]</msg>
+<msg timestamp="20250818 14:47:00.250" level="INFO">${value08} = [1, 2]</msg>
+<msg timestamp="20250818 14:47:00.251" level="INFO">${expression2} = {'kA': 1, 'kB': 2}</msg>
+<msg timestamp="20250818 14:47:00.251" level="INFO">${value09} = {'kA': 1, 'kB': 2}</msg>
+<msg timestamp="20250818 14:47:00.251" level="INFO">${value10} = 1</msg>
+<msg timestamp="20250818 14:47:00.252" level="INFO">${value11} = 1</msg>
+<msg timestamp="20250818 14:47:00.252" level="INFO">${value13} = {'kA': 'A', 'kB': 1, 'kC': 'C'}</msg>
+<msg timestamp="20250818 14:47:00.252" level="INFO">${list1} = [1, 2, 3]</msg>
+<msg timestamp="20250818 14:47:00.253" level="INFO">${list2} = [4, 5, 6]</msg>
+<msg timestamp="20250818 14:47:00.253" level="INFO">${value16} = [1, 2, 3, [4, 5, 6, 1, 2, 3]]</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">${dict} = {'kA': 'vA', 'kB': 'vB'}</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">${value17} = ['kA', 'kB']</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_python_inline_code', 'TargetName': 'Device_01', 'param...</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">RobotFramework AIO (extended) version check passed!</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_python_inline_code.jsonp'</msg>
+<msg timestamp="20250818 14:47:00.254" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20250818 14:47:00.255" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20250818 14:47:00.255" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20250818 14:47:00.150" endtime="20250818 14:47:00.255"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-27-python_inline_code" line="33">
+<kw name="Testcase Setup" library="tm" type="SETUP">
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<msg timestamp="20250818 14:47:00.256" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20250818 14:47:00.255" endtime="20250818 14:47:00.256"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value01}</arg>
+<arg>PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.256" level="INFO">PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code) : [STR]  :  'ABC'</msg>
+<status status="PASS" starttime="20250818 14:47:00.256" endtime="20250818 14:47:00.256"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value02}</arg>
+<arg>PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.256" level="INFO">PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code) : [INT]  :  25</msg>
+<status status="PASS" starttime="20250818 14:47:00.256" endtime="20250818 14:47:00.256"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value03}</arg>
+<arg>PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.257" level="INFO">PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code) : [FLOAT]  :  2.5</msg>
+<status status="PASS" starttime="20250818 14:47:00.257" endtime="20250818 14:47:00.257"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value04}</arg>
+<arg>PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.257" level="INFO">PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code) : [BOOL]  :  True</msg>
+<status status="PASS" starttime="20250818 14:47:00.257" endtime="20250818 14:47:00.257"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value05}</arg>
+<arg>PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.257" level="INFO">PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code) : [NONE]  :  None</msg>
+<status status="PASS" starttime="20250818 14:47:00.257" endtime="20250818 14:47:00.257"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value06}</arg>
+<arg>PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.257" level="INFO">PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) &gt; [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.257" level="INFO">PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) &gt; [INT]  :  2</msg>
+<status status="PASS" starttime="20250818 14:47:00.257" endtime="20250818 14:47:00.258"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value07}</arg>
+<arg>PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.258" level="INFO">PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) &gt; {kA} [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.258" level="INFO">PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) &gt; {kB} [INT]  :  2</msg>
+<status status="PASS" starttime="20250818 14:47:00.258" endtime="20250818 14:47:00.258"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value08}</arg>
+<arg>PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.258" level="INFO">PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) &gt; [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.258" level="INFO">PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) &gt; [INT]  :  2</msg>
+<status status="PASS" starttime="20250818 14:47:00.258" endtime="20250818 14:47:00.258"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value09}</arg>
+<arg>PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.259" level="INFO">PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) &gt; {kA} [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.259" level="INFO">PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) &gt; {kB} [INT]  :  2</msg>
+<status status="PASS" starttime="20250818 14:47:00.259" endtime="20250818 14:47:00.259"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value10}</arg>
+<arg>PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.259" level="INFO">PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code) : [INT]  :  1</msg>
+<status status="PASS" starttime="20250818 14:47:00.259" endtime="20250818 14:47:00.259"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value11}</arg>
+<arg>PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.259" level="INFO">PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code) : [INT]  :  1</msg>
+<status status="PASS" starttime="20250818 14:47:00.259" endtime="20250818 14:47:00.260"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value13}</arg>
+<arg>PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.260" level="INFO">PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/1) &gt; {kA} [STR]  :  'A'</msg>
+<msg timestamp="20250818 14:47:00.260" level="INFO">PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/2) &gt; {kB} [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.260" level="INFO">PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/3) &gt; {kC} [STR]  :  'C'</msg>
+<status status="PASS" starttime="20250818 14:47:00.260" endtime="20250818 14:47:00.260"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value16}</arg>
+<arg>PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.260" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/1) &gt; [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.260" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/2) &gt; [INT]  :  2</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/3) &gt; [INT]  :  3</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/1) &gt; [INT]  :  4</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/2) &gt; [INT]  :  5</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/3) &gt; [INT]  :  6</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/4) &gt; [INT]  :  1</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/5) &gt; [INT]  :  2</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) &gt; [LIST] (6/6) &gt; [INT]  :  3</msg>
+<status status="PASS" starttime="20250818 14:47:00.260" endtime="20250818 14:47:00.261"/>
+</kw>
+<kw name="Pretty Print" library="rf.extensions">
+<arg>${value17}</arg>
+<arg>PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) &gt; [STR]  :  'kA'</msg>
+<msg timestamp="20250818 14:47:00.261" level="INFO">PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) &gt; [STR]  :  'kB'</msg>
+<status status="PASS" starttime="20250818 14:47:00.261" endtime="20250818 14:47:00.261"/>
+</kw>
+<kw name="Testcase Teardown" library="tm" type="TEARDOWN">
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<msg timestamp="20250818 14:47:00.262" level="INFO">TEST 'Test Case tsm-testfile-27-python_inline_code' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250818 14:47:00.262" endtime="20250818 14:47:00.262"/>
+</kw>
+<doc>tsm-testfile-27-python_inline_code</doc>
+<status status="PASS" starttime="20250818 14:47:00.255" endtime="20250818 14:47:00.262"/>
+</test>
+<kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<msg timestamp="20250818 14:47:00.263" level="INFO">SUITE 'Tsm-Testfile-27-Python Inline Code' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20250818 14:47:00.262" endtime="20250818 14:47:00.263"/>
+</kw>
+<meta name="bundle_version">0.14.1.33</meta>
+<meta name="machine">HI-C-0044M</meta>
+<meta name="project">tsm-test_config_python_inline_code</meta>
+<meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 6.1 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="PASS" starttime="20250818 14:47:00.038" endtime="20250818 14:47:00.263"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0" unknown="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" unknown="0" id="s1" name="Tsm-Testfile-27-Python Inline Code">Tsm-Testfile-27-Python Inline Code</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
