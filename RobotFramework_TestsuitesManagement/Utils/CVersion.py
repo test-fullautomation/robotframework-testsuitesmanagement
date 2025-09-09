@@ -59,16 +59,20 @@ The package version is the version when this module is installed stand-alone
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
             self.reason = CVersionCheck.WITHOUTVERSION.value
+            return
         if self.sMinVersion != '':
             tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
             tMaxVersion = self.tupleVersion(self.sMaxVersion)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.reason = CVersionCheck.WRONGMINMAX.value
+            return
         if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
             self.reason = CVersionCheck.CONFLICTMIN.value
+            return
         if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
             self.reason = CVersionCheck.CONFLICTMAX.value
+            return
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
