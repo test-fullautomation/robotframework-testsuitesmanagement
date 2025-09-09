@@ -699,12 +699,11 @@ testsuite is terminated with "unknown" state
         elif oVersion.reason == CVersionCheck.CONFLICTMIN.value:
             header = "Version conflict."
             detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{self.sMaxVersion}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
         elif oVersion.reason == CVersionCheck.CONFLICTMAX.value:
-            header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
-            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMinVersion}'"
-            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
+            header = "Version conflict."
+            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
         else:
             logger.info(f"{BUNDLE_NAME} version check passed!")
             return
