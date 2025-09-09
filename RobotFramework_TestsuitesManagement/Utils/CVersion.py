@@ -19,6 +19,7 @@
 # Validates the current package version with maximum and minimum versions
 #
 import regex
+from enum import Enum
 
 class CVersionCheck(Enum):
     WITHOUTVERSION = "without_version_check"

@@ -405,7 +405,7 @@ robot with configuration level 2.")
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
             # Check the format of Maximum_version value
             try:
-                self.tupleVersion(self.sMaxVersion)
+                CVersion.tupleVersion(self.sMaxVersion)
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
@@ -415,7 +415,7 @@ robot with configuration level 2.")
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
             try:
-                self.tupleVersion(self.sMinVersion)
+                CVersion.tupleVersion(self.sMinVersion)
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
@@ -700,7 +700,7 @@ testsuite is terminated with "unknown" state
             header = "Version conflict."
             detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
             detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{self.sMaxVersion}'"
-        elif oVersion.reason == CVersionCheck.CONFLICTMAX.vlaue:
+        elif oVersion.reason == CVersionCheck.CONFLICTMAX.value:
             header = "Wrong use of max/min version control in configuration."
             detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
             detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMinVersion}'"
