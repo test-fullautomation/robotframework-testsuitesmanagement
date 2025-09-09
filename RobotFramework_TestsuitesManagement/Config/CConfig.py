@@ -44,6 +44,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
 from RobotFramework_TestsuitesManagement.version import VERSION, VERSION_DATE
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, CVersionCheck
 
 INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
 BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
@@ -675,239 +676,38 @@ This __getUserName method gets current account name login to run the test.
 
         return sUserName
 
-    def verifyVersion(self):
+    def versionCheck(self):
         '''
-This verifyVersion validates the current package version with maximum and
-minimum version (if provided in the configuration file).
+This versionCheck validates the current package version with maximum and minimum version 
+(if provided in the configuration file).
 
-The package version is:
-
-- RobotFramework_TestsuitesManagement version when this module is installed
-stand-alone (via `pip` or directly from sourcecode)
-
-- RobotFramework AIO version when this module is bundled with RobotFramework AIO
-package
-
-In case the current version is not between min and max version, then the
-execution of testsuite is terminated with "unknown" state
-
-**Arguments:**
-
-* No input parameter is required
-
-**Returns:**
-
-* No return variable
+In case the current version is not between min and max version, then the execution of 
+testsuite is terminated with "unknown" state
         '''
-        sCurrentVersion = BUNDLE_VERSION
-        tCurrentVersion = self.tupleVersion(sCurrentVersion)
-
-        # Verify format of provided min and max versions then parse to tuples
-        tMinVersion = None
-        tMaxVersion = None
-        if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
+        oVersion = CVersion(BUNDLE_NAME, self.sMinVersion, self.sMaxVersion, BUNDLE_VERSION)
+        oVersion.verifyVersion()
+        header = ''
+        detail = ''
+        if oVersion.reason == CVersionCheck.WITHOUTVERSION.value:
             logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
-        if self.sMinVersion != '':
-            tMinVersion = self.tupleVersion(self.sMinVersion)
-        if self.sMaxVersion != '':
-            tMaxVersion = self.tupleVersion(self.sMaxVersion)
-        bVersionCheck = True
-        if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.versioncontrol_error('wrong_minmax', self.sMinVersion, self.sMaxVersion)
-            bVersionCheck = False
-        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
-            self.versioncontrol_error('conflict_min', self.sMinVersion, sCurrentVersion)
-            bVersionCheck = False
-        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-            self.versioncontrol_error('conflict_max', self.sMaxVersion, sCurrentVersion)
-            bVersionCheck = False
-
-        if bVersionCheck:
-            logger.info(f"{BUNDLE_NAME} version check passed!")
-
-    @staticmethod
-    def bValidateMinVersion(tCurrentVersion, tMinVersion):
-        '''
-This bValidateMinVersion validates the current version with required minimun version.
-
-**Arguments:**
-
-* ``tCurrentVersion``
-
-  / *Condition*: required / *Type*: tuple /
-
-  Current package version.
-
-* ``tMinVersion``
-
-  / *Condition*: required / *Type*: tuple /
-
-  The minimum version of package.
-
-**Returns:**
-
-* ``True`` or ``False``
-        '''
-        return tCurrentVersion >= tMinVersion
-
-    @staticmethod
-    def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-        '''
-This bValidateMaxVersion validates the current version with required minimun version.
-
-**Arguments:**
-
-* ``tCurrentVersion``
-
-  / *Condition*: required / *Type*: tuple /
-
-  Current package version.
-
-* ``tMinVersion``
-
-  / *Condition*: required / *Type*: tuple /
-
-  The minimum version of package.
-
-**Returns:**
-
-* ``True or False``
-        '''
-        return tCurrentVersion <= tMaxVersion
-
-    @staticmethod
-    def bValidateSubVersion(sVersion):
-        '''
-This bValidateSubVersion validates the format of provided sub version and parse
-it into sub tuple for version comparision.
-
-**Arguments:**
-
-* ``sVersion``
-
-  / *Condition*: required / *Type*: string /
-
-  The version of package.
-
-**Returns:**
-
-* ``lSubVersion``
-
-  / *Type*: tuple /
-        '''
-        lSubVersion = [0,0,0]
-        oMatch = regex.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
-        if oMatch:
-            lSubVersion[0] = int(oMatch.group(1))
-            # a < b < rc < released (without any character)
-            if oMatch.group(2):
-                if oMatch.group(2) == 'a':
-                    lSubVersion[1] = 0
-                elif oMatch.group(2) == 'b':
-                    lSubVersion[1] = 1
-                elif oMatch.group(2) == 'rc':
-                    lSubVersion[1] = 2
-            else:
-                lSubVersion[1] = 3
-
-            if oMatch.group(3):
-                lSubVersion[2] = int(oMatch.group(3))
-            else:
-                lSubVersion[2] = 0
-
-            return tuple(lSubVersion)
-        else:
-            raise Exception("Wrong format in version information")
-
-    @staticmethod
-    def tupleVersion(sVersion):
-        '''
-This tupleVersion returns a tuple which contains the (major, minor, patch) version.
-
-In case minor/patch version is missing, it is set to 0.
-E.g: "1" is transformed to "1.0.0" and "1.1" is transformed to "1.1.0"
-
-This tupleVersion also support version which contains Alpha (a), Beta (b) or
-Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
-
-**Arguments:**
-
-* ``sVersion``
-
-  / *Condition*: required / *Type*: string /
-
-  The version of package.
-
-**Returns:**
-
-* ``lVersion``
-
-  / *Type*: tuple /
-
-  A tuple which contains the (major, minor, patch) version.
-
-
-        '''
-        lVersion = sVersion.split(".")
-        if len(lVersion) == 1:
-            lVersion.extend(["0", "0"])
-        elif len(lVersion) == 2:
-            lVersion.append("0")
-        elif len(lVersion) >= 3:
-            # Just ignore and remove the remaining
-            lVersion = lVersion[:3]
-        try:
-            # verify the version info is a number
-            return tuple(map(lambda x: CConfig.bValidateSubVersion(x), lVersion))
-        except Exception as error:
-            raise Exception(f"{error} '{sVersion}'")
-
-    def versioncontrol_error(self, reason, version1, version2):
-        '''
-Wrapper version control error log:
-
-Log error message of version control due to reason and set to unknown state.
-
-**Arguments:**
-
-* ``reason``
-
-  / *Condition*: required / *Type*: string /
-
-  ``reason`` can only be ``conflict_min``, ``conflict_max`` and ``wrong_minmax``.
-
-* ``version1``
-
-  / *Condition*: required / *Type*: string /
-
-* ``version2``
-
-  / *Condition*: required / *Type*: string /
-
-**Returns:**
-
-* No return variable
-        '''
-
-        header = ""
-        detail = ""
-        if reason=="conflict_min":
-            header = "Version conflict."
-            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{version1}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{version2}'"
-        elif reason=="conflict_max":
-            header = "Version conflict."
-            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{version1}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{version2}'"
-        elif reason=="wrong_minmax":
+        elif oVersion.reason == CVersionCheck.WRONGMINMAX.value:
             header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{version1}'"
-            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{version2}'"
+            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
+            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
+        elif oVersion.reason == CVersionCheck.CONFLICTMIN.value:
+            header = "Version conflict."
+            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{self.sMaxVersion}'"
+        elif oVersion.reason == CVersionCheck.CONFLICTMAX.vlaue:
+            header = "Wrong use of max/min version control in configuration."
+            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
+            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMinVersion}'"
             detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
         else:
+            logger.info(f"{BUNDLE_NAME} version check passed!")
             return
-
         BuiltIn().log(f"{header}" +
         f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
         f"\nconfig    : {self.sTestCfgFile}" +

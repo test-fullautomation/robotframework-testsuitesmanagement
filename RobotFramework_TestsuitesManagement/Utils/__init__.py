@@ -15,3 +15,4 @@
 
 from .LibListener import LibListener
 from .CStruct import CStruct
+from .CVersion import CVersion

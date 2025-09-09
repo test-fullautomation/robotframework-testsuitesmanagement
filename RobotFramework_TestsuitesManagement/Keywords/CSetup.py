@@ -99,7 +99,7 @@ and logs out the basic information about the test execution.
         else:
             logger.info(msg)
 
-        TM.CTestsuitesCfg.oConfig.verifyVersion()
+        TM.CTestsuitesCfg.oConfig.versionCheck()
         logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
         if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
