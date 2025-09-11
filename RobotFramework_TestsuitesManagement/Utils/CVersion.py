@@ -31,14 +31,16 @@ class CVersion():
     '''
 Validates a bundle version of an installed package
     '''
-    def __init__(self, sBundleName, sMinVersion, sMaxVersion, sCurrentVersion):
-        self.sBundleName       = sBundleName
+    def __init__(self, sMinVersion, sMaxVersion):
+        if not isinstance(sMinVersion, str):
+            raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
+        elif  not isinstance(sMaxVersion, str):
+            raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
         self.sMaxVersion       = sMaxVersion
         self.sMinVersion       = sMinVersion
-        self.sCurrentVersion   = sCurrentVersion
         self.reason            = None
 
-    def verifyVersion(self):
+    def verifyVersion(self, sCurrentVersion = None):
         '''
 This verifyVersion validates the current package version with maximum and minimum version.
 
@@ -46,33 +48,41 @@ The package version is the version when this module is installed stand-alone
 
 **Arguments:**
 
-* No input parameter is required
+* ``sCurrentVersion``
+
+  / *Condition*: optional / *Type*: string /
 
 **Returns:**
 
 * No return variable
         '''
-        tCurrentVersion = self.tupleVersion(self.sCurrentVersion)
+        if sCurrentVersion is not None and isinstance(sCurrentVersion, str):
+            tCurrentVersion = self.tupleVersion(sCurrentVersion)
+        else:
+            if sCurrentVersion is not None:
+                raise Exception(f"The version is required string format but received '{type(sCurrentVersion)}'")
 
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
             self.reason = CVersionCheck.WITHOUTVERSION.value
-            return
+            return True
         if self.sMinVersion != '':
             tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
             tMaxVersion = self.tupleVersion(self.sMaxVersion)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.reason = CVersionCheck.WRONGMINMAX.value
-            return
-        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
-            self.reason = CVersionCheck.CONFLICTMIN.value
-            return
-        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-            self.reason = CVersionCheck.CONFLICTMAX.value
-            return
+            return False
+        if tCurrentVersion is not None:
+            if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
+                self.reason = CVersionCheck.CONFLICTMIN.value
+                return False
+            if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
+                self.reason = CVersionCheck.CONFLICTMAX.value
+                return False
+        return True
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):

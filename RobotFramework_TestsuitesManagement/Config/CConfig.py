@@ -684,8 +684,8 @@ This versionCheck validates the current package version with maximum and minimum
 In case the current version is not between min and max version, then the execution of 
 testsuite is terminated with "unknown" state
         '''
-        oVersion = CVersion(BUNDLE_NAME, self.sMinVersion, self.sMaxVersion, BUNDLE_VERSION)
-        oVersion.verifyVersion()
+        oVersion = CVersion(self.sMinVersion, self.sMaxVersion)
+        oVersion.verifyVersion(BUNDLE_VERSION)
         header = ''
         detail = ''
         if oVersion.reason == CVersionCheck.WITHOUTVERSION.value:
