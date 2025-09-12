@@ -158,6 +158,7 @@ Internally this is realized by the following regex pattern:
 
 * Extended logging of test results
 * Replaced ``re`` package by ``regex`` package
+* Created the version check module as a separate object
 "
                   ]
                 }
