@@ -112,7 +112,7 @@ This bValidateMinVersion validates the current version with required minimun ver
     @staticmethod
     def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
         '''
-This bValidateMaxVersion validates the current version with required minimun version.
+This bValidateMaxVersion validates the current version with required minimum version.
 
 **Arguments:**
 
