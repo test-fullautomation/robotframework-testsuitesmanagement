@@ -686,8 +686,6 @@ testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion(self.sMinVersion, self.sMaxVersion)
         oVersion.verifyVersion(BUNDLE_VERSION)
-        header = ''
-        detail = ''
         if oVersion.reason == CVersionCheck.WITHOUTVERSION.value:
             logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
