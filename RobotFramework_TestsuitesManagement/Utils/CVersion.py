@@ -122,11 +122,11 @@ This bValidateMaxVersion validates the current version with required minimun ver
 
   Current package version.
 
-* ``tMinVersion``
+* ``tMaxVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  The minimum version of package.
+  The maximum version of package.
 
 **Returns:**
 
