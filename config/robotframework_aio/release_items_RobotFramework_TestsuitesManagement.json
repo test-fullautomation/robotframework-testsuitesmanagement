@@ -154,11 +154,31 @@ Internally this is realized by the following regex pattern:
 * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
 * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
 
+**Python interface for version checking**
+
+``sMinVersion`` and ``sMaxVersion`` are provide when initializing a **CVersion()** object. 
+
+* If ``sMinVersion`` and ``sMaxVersion`` are empty, the version checking will be ignored.
+
+The function ``verifyVersion()`` in the **CVersion()** object is used to verify the currently installed version of the ROBFW-AIO package. 
+This function returns ``True`` or ``False`` together with a reason.
+
+There are three reasons in case version verify failed:
+
+* ``wrong_minmax``: Wrong use of max/min version control, the MinVersion is younger than the MaxVersion.
+* ``conflict_min``: The test execution requires the MinVersion but the installed version is older.
+* ``conflict_max``: The test execution requires the MaxVersion but the installed version is younger.
+
+*Examples*
+
+Initialize a ``CVersion()`` object, for example: ``oVersion = CVersion(sMinVersion, sMaxVersion)``
+
+Then calling the function ``verifyVersion()`` for version checking, for example: ``res, reason = oVersion.verifyVersion()``
+
 **Maintenance**
 
 * Extended logging of test results
 * Replaced ``re`` package by ``regex`` package
-* Created the version check module as a separate object
 "
                   ]
                 }

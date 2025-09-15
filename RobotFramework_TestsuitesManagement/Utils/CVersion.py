@@ -43,7 +43,7 @@ Validates a bundle version of an installed package
 
     def verifyVersion(self, sCurrentVersion = None):
         '''
-This verifyVersion validates the current package version with maximum and minimum version.
+This method verifyVersion validates the current ROBFW-AIO package version with maximum and minimum version.
 
 The package version is the version when this module is installed stand-alone
 
@@ -55,7 +55,17 @@ The package version is the version when this module is installed stand-alone
 
 **Returns:**
 
-* No return variable
+* ``response``
+
+  / *Type*: boolean /
+
+  ``True`` if version checking is fine else ``False``. 
+
+  * ``reason``
+
+  / *Type*: String /
+
+  A short reason if version checking is failed. 
         '''
         if sCurrentVersion is None:
             # Verify with the installed version of ROBFW-AIO in case the sCurrentVersion is not set.
