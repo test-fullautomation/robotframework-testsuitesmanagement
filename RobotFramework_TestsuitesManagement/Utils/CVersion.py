@@ -18,6 +18,7 @@
 #
 # Validates the current package version with maximum and minimum versions
 #
+import os
 import regex
 from enum import Enum
 
@@ -56,33 +57,50 @@ The package version is the version when this module is installed stand-alone
 
 * No return variable
         '''
-        if sCurrentVersion is not None and isinstance(sCurrentVersion, str):
+        if sCurrentVersion is None:
+            # Verify with the installed version of ROBFW-AIO in case the sCurrentVersion is not set.
+            try:
+                ROBFWAIOInstalledFolder = os.path.dirname(os.environ.get('RobotPythonPath'))
+            except:
+                raise Exception("RobotFramework AIO is not installed or the environment \
+variable 'RobotPythonPath' is missing")
+            try:
+                with open(f"{ROBFWAIOInstalledFolder}\\version.txt", 'r') as f:
+                    content = f.read()
+            except:
+                raise Exception(f"Could not read the file '{ROBFWAIOInstalledFolder}\\version.txt'.")
+            match = regex.search(r"RobotFramework AIO \(BIOS\)\s+([0-9.]+)", content)
+            if match:
+                sCurrentVersion = match.group(1)
+            else:
+                raise Exception(f"Could not get the version from the file '{ROBFWAIOInstalledFolder}\\version.txt'.")
+
+        if isinstance(sCurrentVersion, str):
             tCurrentVersion = self.tupleVersion(sCurrentVersion)
         else:
-            if sCurrentVersion is not None:
-                raise Exception(f"The version is required string format but received '{type(sCurrentVersion)}'")
+            raise Exception(f"The version is required string format but received '{type(sCurrentVersion)}'")
 
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
             self.reason = CVersionCheck.WITHOUTVERSION.value
-            return True
+            return True, self.reason
         if self.sMinVersion != '':
             tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
             tMaxVersion = self.tupleVersion(self.sMaxVersion)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.reason = CVersionCheck.WRONGMINMAX.value
-            return False
+            return False, self.reason
         if tCurrentVersion is not None:
             if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
                 self.reason = CVersionCheck.CONFLICTMIN.value
-                return False
+                return False, self.reason
             if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
                 self.reason = CVersionCheck.CONFLICTMAX.value
-                return False
-        return True
+                return False, self.reason
+        return True, self.reason
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):

@@ -685,26 +685,29 @@ In case the current version is not between min and max version, then the executi
 testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion(self.sMinVersion, self.sMaxVersion)
-        oVersion.verifyVersion(BUNDLE_VERSION)
-        if oVersion.reason == CVersionCheck.WITHOUTVERSION.value:
-            logger.info(f"Running without {BUNDLE_NAME} version check!")
-            return
-        elif oVersion.reason == CVersionCheck.WRONGMINMAX.value:
-            header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
-            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
-        elif oVersion.reason == CVersionCheck.CONFLICTMIN.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
-        elif oVersion.reason == CVersionCheck.CONFLICTMAX.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
+        res, reason = oVersion.verifyVersion(BUNDLE_VERSION)
+        if res:
+            if reason == CVersionCheck.WITHOUTVERSION.value:
+                logger.info(f"Running without {BUNDLE_NAME} version check!")
+                return
+            else:
+                logger.info(f"{BUNDLE_NAME} version check passed!")
+                return
         else:
-            logger.info(f"{BUNDLE_NAME} version check passed!")
-            return
+            if reason == CVersionCheck.WRONGMINMAX.value:
+                header = "Wrong use of max/min version control in configuration."
+                detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
+                detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+                detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
+            elif reason == CVersionCheck.CONFLICTMIN.value:
+                header = "Version conflict."
+                detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
+                detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
+            elif reason == CVersionCheck.CONFLICTMAX.value:
+                header = "Version conflict."
+                detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+                detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
+
         BuiltIn().log(f"{header}" +
         f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
         f"\nconfig    : {self.sTestCfgFile}" +
