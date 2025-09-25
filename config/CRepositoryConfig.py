@@ -42,9 +42,9 @@ from PythonExtensionsCollection.String.CString import CString
 # because of partially same names for packace constants and meta information constants we do a mapping here
 from RobotFramework_TestsuitesManagement.version import VERSION as PACKAGEVERSION
 from RobotFramework_TestsuitesManagement.version import VERSION_DATE as PACKAGEVERSIONDATE
-from RobotFramework_TestsuitesManagement.Config.CConfig import BUNDLE_NAME as META_NAME
-from RobotFramework_TestsuitesManagement.Config.CConfig import BUNDLE_VERSION as META_VERSION
-from RobotFramework_TestsuitesManagement.Config.CConfig import BUNDLE_VERSION_DATE as META_VERSION_DATE
+from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_NAME as META_NAME
+from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_VERSION as META_VERSION
+from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_VERSION_DATE as META_VERSION_DATE
 
 col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED

@@ -20,7 +20,77 @@
 #
 import os
 import regex
+import json
 from enum import Enum
+from jsonschema import validate
+from robot.api import logger
+from RobotFramework_TestsuitesManagement.version import VERSION, VERSION_DATE
+
+INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
+BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
+BUNDLE_VERSION = VERSION
+BUNDLE_VERSION_DATE = VERSION_DATE
+
+# Load package context file
+context_filename = "package_context.json"
+context_filepath = os.path.join(os.path.dirname(__file__), context_filename)
+context_config = None
+
+if os.path.isfile(context_filepath):
+    if os.stat(context_filepath).st_size == 0:
+        logger.warn(f"The '{context_filepath}' file is existing but empty.")
+    else:
+        package_context_schema = {
+            "type": "object",
+            'additionalProperties': False,
+            "properties": {
+                "installer_location": {"type": "string"},
+                "bundle_name": {"type": "string"},
+                "bundle_version": {"type": "string"},
+                "bundle_version_date": {"type": "string"}
+            }
+        }
+        try:
+            with open(context_filepath) as f:
+                context_config = json.load(f)
+        except Exception as reason:
+            logger.error(f"Cannot load the '{context_filepath}' file. Reason: {reason}")
+            exit(1)
+        
+        try:
+            validate(instance=context_config, schema=package_context_schema)
+        except Exception as reason:
+            logger.error(f"Invalid '{context_filepath}' file. Reason: {reason}")
+            exit(1)
+
+        if ('installer_location' in context_config) and context_config['installer_location']:
+            INSTALLER_LOCATION = context_config['installer_location']
+        if ('bundle_name' in context_config) and context_config['bundle_name']:
+            BUNDLE_NAME = context_config['bundle_name']
+        if ('bundle_version' in context_config) and context_config['bundle_version']:
+            BUNDLE_VERSION = context_config['bundle_version']
+        if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
+            BUNDLE_VERSION_DATE = context_config['bundle_version_date']
+
+def bundle_version():
+   '''
+This function prints out the package version which is:
+
+- RobotFramework_TestsuitesManagement version when this module is installed
+stand-alone (via `pip` or directly from sourcecode)
+
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO
+package
+
+**Arguments:**
+
+* No input parameter is required
+
+**Returns:**
+
+* No return variable
+   '''
+   print(f"{BUNDLE_VERSION}")
 
 class CVersionCheck(Enum):
     WITHOUTVERSION = "without_version_check"
@@ -41,7 +111,7 @@ Validates a bundle version of an installed package
         self.sMinVersion       = sMinVersion
         self.reason            = None
 
-    def verifyVersion(self, sCurrentVersion = None):
+    def verifyVersion(self):
         '''
 This method verifyVersion validates the current ROBFW-AIO package version with maximum and minimum version.
 
@@ -49,9 +119,7 @@ The package version is the version when this module is installed stand-alone
 
 **Arguments:**
 
-* ``sCurrentVersion``
-
-  / *Condition*: optional / *Type*: string /
+* None
 
 **Returns:**
 
@@ -67,29 +135,7 @@ The package version is the version when this module is installed stand-alone
 
   A short reason if version checking is failed. 
         '''
-        if sCurrentVersion is None:
-            # Verify with the installed version of ROBFW-AIO in case the sCurrentVersion is not set.
-            try:
-                ROBFWAIOInstalledFolder = os.path.dirname(os.environ.get('RobotPythonPath'))
-            except:
-                raise Exception("RobotFramework AIO is not installed or the environment \
-variable 'RobotPythonPath' is missing")
-            try:
-                with open(f"{ROBFWAIOInstalledFolder}\\version.txt", 'r') as f:
-                    content = f.read()
-            except:
-                raise Exception(f"Could not read the file '{ROBFWAIOInstalledFolder}\\version.txt'.")
-            match = regex.search(r"RobotFramework AIO \(BIOS\)\s+([0-9.]+)", content)
-            if match:
-                sCurrentVersion = match.group(1)
-            else:
-                raise Exception(f"Could not get the version from the file '{ROBFWAIOInstalledFolder}\\version.txt'.")
-
-        if isinstance(sCurrentVersion, str):
-            tCurrentVersion = self.tupleVersion(sCurrentVersion)
-        else:
-            raise Exception(f"The version is required string format but received '{type(sCurrentVersion)}'")
-
+        tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
