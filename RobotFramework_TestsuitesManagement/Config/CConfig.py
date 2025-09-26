@@ -642,13 +642,13 @@ testsuite is terminated with "unknown" state
                 detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
                 detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
 
-        BuiltIn().log(f"{header}" +
-        f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
-        f"\nconfig    : {self.sTestCfgFile}" +
-        f"\n{detail}\n"
-        f"\nPlease install the required {BUNDLE_NAME} version." +
-        f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
-        raise Exception('Version control error!!!')
+            BuiltIn().log(f"{header}" +
+            f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
+            f"\nconfig    : {self.sTestCfgFile}" +
+            f"\n{detail}\n"
+            f"\nPlease install the required {BUNDLE_NAME} version." +
+            f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
+            raise Exception('Version control error!!!')
 
 if __name__ == "__main__":
     bundle_version()
