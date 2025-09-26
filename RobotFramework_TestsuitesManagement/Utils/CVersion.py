@@ -92,7 +92,7 @@ package
    '''
    print(f"{BUNDLE_VERSION}")
 
-class CVersionCheck(Enum):
+class CVersionCheckResult(Enum):
     WITHOUTVERSION = "without_version_check"
     WRONGMINMAX    = "wrong_minmax"
     CONFLICTMIN    = "conflict_min"
@@ -140,21 +140,21 @@ The package version is the version when this module is installed stand-alone
         tMinVersion = None
         tMaxVersion = None
         if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
-            self.reason = CVersionCheck.WITHOUTVERSION.value
+            self.reason = CVersionCheckResult.WITHOUTVERSION.value
             return True, self.reason
         if self.sMinVersion != '':
             tMinVersion = self.tupleVersion(self.sMinVersion)
         if self.sMaxVersion != '':
             tMaxVersion = self.tupleVersion(self.sMaxVersion)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.reason = CVersionCheck.WRONGMINMAX.value
+            self.reason = CVersionCheckResult.WRONGMINMAX.value
             return False, self.reason
         if tCurrentVersion is not None:
             if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
-                self.reason = CVersionCheck.CONFLICTMIN.value
+                self.reason = CVersionCheckResult.CONFLICTMIN.value
                 return False, self.reason
             if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-                self.reason = CVersionCheck.CONFLICTMAX.value
+                self.reason = CVersionCheckResult.CONFLICTMAX.value
                 return False, self.reason
         return True, self.reason
 
