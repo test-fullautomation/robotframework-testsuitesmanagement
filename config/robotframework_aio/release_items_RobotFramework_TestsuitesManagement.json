@@ -154,26 +154,38 @@ Internally this is realized by the following regex pattern:
 * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
 * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
 
-**Python interface for version checking**
+**Python interface for checking the bundle version**
 
-``sMinVersion`` and ``sMaxVersion`` are provide when initializing a **CVersion()** object. 
+The goal is to enable **RobotFramework AIO** users who work purely in Python, without using robot files, to verify which version is installed.
 
-* If ``sMinVersion`` and ``sMaxVersion`` are empty, the version checking will be ignored.
+*Example*
 
-The function ``verifyVersion()`` in the **CVersion()** object is used to verify the currently installed version of the ROBFW-AIO package. 
-This function returns ``True`` or ``False`` together with a reason.
+| ``from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion``
+| ``oVersion = CVersion()``
+| ``result, reason = oVersion.verifyVersion(min_version, max_version)``
 
-There are three reasons in case version verify failed:
+The parameters ``min_version`` and  ``max_version`` define the expected range of the bundle version. This is verified
+against the version of the currently installed bundle. The format is: ``\\d\\.\\d\\.\\d``
 
-* ``wrong_minmax``: Wrong use of max/min version control, the MinVersion is younger than the MaxVersion.
-* ``conflict_min``: The test execution requires the MinVersion but the installed version is older.
-* ``conflict_max``: The test execution requires the MaxVersion but the installed version is younger.
+It is possible to set a version to ``None`` or to ``\"\"``. The impact is that this version number (*min* or *max*) is not part
+of the version check.
 
-*Examples*
+Two values are returned:
 
-Initialize a ``CVersion()`` object, for example: ``oVersion = CVersion(sMinVersion, sMaxVersion)``
+1. ``result``: A boolean variable that is either ``True`` in case of the version check is passed or ``False`` in cace of the version check fails.
+2. ``reason``: In case of the version check is passed, ``reason`` is ``None``. In case the version check fails, ``reason`` contains a short token string indicating the reason for the failure.
 
-Then calling the function ``verifyVersion()`` for version checking, for example: ``res, reason = oVersion.verifyVersion()``
+The method ``verifyVersion`` does not return a full error message, but a small token string only.
+This enables users to formulate their own error messages.
+
+These are the token strings together with their meanings:
+
+* ``wrong_minmax``: Mismatch of minimum version and maximum version: The minimum version is younger than the maximum version.
+* ``conflict_min``: The test execution requires the minimum version, but the installed version is older.
+* ``conflict_max``: The test execution requires the maximum version, but the installed version is younger.
+* ``internal_error``: An internal error happened (any issue in JSON configuration file).
+
+More details can be found in the components documentation `TestsuitesManagement <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 
 **Maintenance**
 
