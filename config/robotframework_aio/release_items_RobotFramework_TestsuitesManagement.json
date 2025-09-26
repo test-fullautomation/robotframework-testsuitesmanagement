@@ -180,6 +180,7 @@ This enables users to formulate their own error messages.
 
 These are the token strings together with their meanings:
 
+* ``without_version_check``: Version check not executed.
 * ``wrong_minmax``: Mismatch of minimum version and maximum version: The minimum version is younger than the maximum version.
 * ``conflict_min``: The test execution requires the minimum version, but the installed version is older.
 * ``conflict_max``: The test execution requires the maximum version, but the installed version is younger.
