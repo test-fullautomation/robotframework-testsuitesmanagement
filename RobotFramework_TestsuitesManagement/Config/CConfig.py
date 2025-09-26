@@ -44,7 +44,7 @@ from robot.version import get_full_version, get_version
 from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, CVersionCheckResult
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult
 
 class CConfig():
     '''
@@ -621,23 +621,23 @@ testsuite is terminated with "unknown" state
         oVersion = CVersion(self.sMinVersion, self.sMaxVersion)
         res, reason = oVersion.verifyVersion()
         if res:
-            if reason == CVersionCheckResult.WITHOUTVERSION.value:
+            if reason == enVersionCheckResult.WITHOUTVERSION.value:
                 logger.info(f"Running without {BUNDLE_NAME} version check!")
                 return
             else:
                 logger.info(f"{BUNDLE_NAME} version check passed!")
                 return
         else:
-            if reason == CVersionCheckResult.WRONGMINMAX.value:
+            if reason == enVersionCheckResult.WRONGMINMAX.value:
                 header = "Wrong use of max/min version control in configuration."
                 detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
                 detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
                 detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
-            elif reason == CVersionCheckResult.CONFLICTMIN.value:
+            elif reason == enVersionCheckResult.CONFLICTMIN.value:
                 header = "Version conflict."
                 detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
                 detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
-            elif reason == CVersionCheckResult.CONFLICTMAX.value:
+            elif reason == enVersionCheckResult.CONFLICTMAX.value:
                 header = "Version conflict."
                 detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
                 detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
