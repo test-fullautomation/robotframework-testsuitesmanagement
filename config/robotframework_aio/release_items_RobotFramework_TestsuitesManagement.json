@@ -154,9 +154,20 @@ Internally this is realized by the following regex pattern:
 * Valid key names are: ``\"abcParam\"``, ``\"abcParam01\"``, ``\"abc_Param_01\"``, ...
 * Invalid key names are: ``\"+param01\"``, ``\"param$01\"``, ``\"abc#Param\"``, ``\"01abc_Param\"``, ...
 
+**Maintenance**
+
+* Extended logging of test results
+* Replaced ``re`` package by ``regex`` package
+"
+                                      ],
+                  "0.14.2.;0.15.0." : [
+"
 **Python interface for checking the bundle version**
 
-The goal is to enable **RobotFramework AIO** users who work purely in Python, without using robot files, to verify which version is installed.
+The goal of this Python interface is to enable **RobotFramework AIO** users who work purely in Python, without using robot files, to verify which version is installed.
+
+The *bundle version* is either the version of the entire **RobotFramework AIO** or, if installed standalone, the version
+of the **TestsuitesManagement**.
 
 *Example*
 
@@ -165,7 +176,7 @@ The goal is to enable **RobotFramework AIO** users who work purely in Python, wi
 | ``result, reason = oVersion.verifyVersion(min_version, max_version)``
 
 The parameters ``min_version`` and  ``max_version`` define the expected range of the bundle version. This is verified
-against the version of the currently installed bundle. The format is: ``\\d\\.\\d\\.\\d``
+against the version of the currently installed bundle. The format of the version string is: ``\\d\\.\\d\\.\\d``.
 
 It is possible to set a version to ``None`` or to ``\"\"``. The impact is that this version number (*min* or *max*) is not part
 of the version check.
@@ -187,11 +198,6 @@ These are the token strings together with their meanings:
 * ``internal_error``: An internal error happened (any issue in JSON configuration file).
 
 More details can be found in the components documentation `TestsuitesManagement <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
-
-**Maintenance**
-
-* Extended logging of test results
-* Replaced ``re`` package by ``regex`` package
 "
                   ]
                 }
