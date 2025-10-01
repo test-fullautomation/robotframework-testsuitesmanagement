@@ -104,9 +104,15 @@ Validates a bundle version of an installed package
     '''
     def __init__(self, sMinVersion, sMaxVersion):
         if not isinstance(sMinVersion, str):
-            raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
+            if sMinVersion is None:
+                sMinVersion = ''
+            else:
+                raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
         elif  not isinstance(sMaxVersion, str):
-            raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
+            if sMaxVersion is None:
+                sMaxVersion = ''
+            else:
+                raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
         self.sMaxVersion       = sMaxVersion
         self.sMinVersion       = sMinVersion
         self.reason            = None
