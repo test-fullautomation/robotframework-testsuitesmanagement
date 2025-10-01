@@ -345,6 +345,9 @@ robot with configuration level 2.")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
                 self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                 raise Exception
+        else:
+            # Set to empty string when None or not present (equivalent to no version checking)
+            self.sMaxVersion = ""
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
@@ -355,6 +358,9 @@ robot with configuration level 2.")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
                 self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
                 raise Exception
+        else:
+            # Set to empty string when None or not present (equivalent to no version checking)
+            self.sMinVersion = ""
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)

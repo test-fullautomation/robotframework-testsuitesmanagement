@@ -103,6 +103,12 @@ class CVersion():
 Validates a bundle version of an installed package
     '''
     def __init__(self, sMinVersion, sMaxVersion):
+        # Convert None to empty string to indicate version checking should be skipped
+        if sMinVersion is None:
+            sMinVersion = ""
+        if sMaxVersion is None:
+            sMaxVersion = ""
+            
         if not isinstance(sMinVersion, str):
             raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
         elif  not isinstance(sMaxVersion, str):
