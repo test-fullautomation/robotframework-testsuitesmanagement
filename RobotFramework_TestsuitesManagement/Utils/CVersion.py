@@ -33,7 +33,7 @@ BUNDLE_VERSION_DATE = VERSION_DATE
 
 # Load package context file
 context_filename = "package_context.json"
-context_filepath = os.path.join(os.path.dirname(__file__), context_filename)
+context_filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), f"Config/{context_filename}")
 context_config = None
 
 if os.path.isfile(context_filepath):
