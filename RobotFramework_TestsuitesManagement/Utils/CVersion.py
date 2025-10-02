@@ -151,7 +151,7 @@ The package version is the version when this module is installed stand-alone
         tMaxVersion = None
         if sMinVersion.strip() == '' and sMaxVersion.strip() == '':
             self.reason = enVersionCheckResult.WITHOUTVERSION.value
-            return True, self.reason
+            return None, self.reason
         if sMinVersion != '':
             tMinVersion = self.tupleVersion(sMinVersion)
         if sMaxVersion != '':

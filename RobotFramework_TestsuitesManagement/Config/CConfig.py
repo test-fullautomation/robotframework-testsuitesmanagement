@@ -620,13 +620,12 @@ testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion()
         res, reason = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
-        if res:
-            if reason == enVersionCheckResult.WITHOUTVERSION.value:
-                logger.info(f"Running without {BUNDLE_NAME} version check!")
-                return
-            else:
-                logger.info(f"{BUNDLE_NAME} version check passed!")
-                return
+        if res is None:
+            logger.info(f"Running without {BUNDLE_NAME} version check!")
+            return
+        elif res is True:
+            logger.info(f"{BUNDLE_NAME} version check passed!")
+            return
         else:
             if reason == enVersionCheckResult.WRONGMINMAX.value:
                 header = "Wrong use of max/min version control in configuration."
