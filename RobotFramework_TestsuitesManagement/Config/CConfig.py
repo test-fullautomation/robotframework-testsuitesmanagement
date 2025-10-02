@@ -562,7 +562,7 @@ This __getMachineName method gets current machine name which is running the test
         if platform.system().lower()!="windows":
             try:
                 sMachineName = socket.gethostname()
-            except Exception(reason):
+            except:
                 pass
         else:
             try:
@@ -618,8 +618,8 @@ This versionCheck validates the current package version with maximum and minimum
 In case the current version is not between min and max version, then the execution of 
 testsuite is terminated with "unknown" state
         '''
-        oVersion = CVersion(self.sMinVersion, self.sMaxVersion)
-        res, reason = oVersion.verifyVersion()
+        oVersion = CVersion()
+        res, reason = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
         if res:
             if reason == enVersionCheckResult.WITHOUTVERSION.value:
                 logger.info(f"Running without {BUNDLE_NAME} version check!")

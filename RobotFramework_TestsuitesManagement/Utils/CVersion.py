@@ -102,22 +102,10 @@ class CVersion():
     '''
 Validates a bundle version of an installed package
     '''
-    def __init__(self, sMinVersion, sMaxVersion):
-        if not isinstance(sMinVersion, str):
-            if sMinVersion is None:
-                sMinVersion = ''
-            else:
-                raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
-        elif  not isinstance(sMaxVersion, str):
-            if sMaxVersion is None:
-                sMaxVersion = ''
-            else:
-                raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
-        self.sMaxVersion       = sMaxVersion
-        self.sMinVersion       = sMinVersion
-        self.reason            = None
+    def __init__(self):
+        self.reason = None
 
-    def verifyVersion(self):
+    def verifyVersion(self, sMinVersion='', sMaxVersion=''):
         '''
 This method verifyVersion validates the current ROBFW-AIO package version with maximum and minimum version.
 
@@ -125,7 +113,13 @@ The package version is the version when this module is installed stand-alone
 
 **Arguments:**
 
-* None
+* ``sMinVersion``
+
+   / *Condition*: optional / *Type*: string /
+
+* ``sMaxVersion``
+
+   / *Condition*: optional / *Type*: string /
 
 **Returns:**
 
@@ -141,17 +135,27 @@ The package version is the version when this module is installed stand-alone
 
   A short reason if version checking is failed. 
         '''
+        if not isinstance(sMinVersion, str):
+            if sMinVersion is None:
+                sMinVersion = ''
+            else:
+                raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
+        elif  not isinstance(sMaxVersion, str):
+            if sMaxVersion is None:
+                sMaxVersion = ''
+            else:
+                raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
         tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
-        if self.sMinVersion.strip() == '' and self.sMaxVersion.strip() == '':
+        if sMinVersion.strip() == '' and sMaxVersion.strip() == '':
             self.reason = enVersionCheckResult.WITHOUTVERSION.value
             return True, self.reason
-        if self.sMinVersion != '':
-            tMinVersion = self.tupleVersion(self.sMinVersion)
-        if self.sMaxVersion != '':
-            tMaxVersion = self.tupleVersion(self.sMaxVersion)
+        if sMinVersion != '':
+            tMinVersion = self.tupleVersion(sMinVersion)
+        if sMaxVersion != '':
+            tMaxVersion = self.tupleVersion(sMaxVersion)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.reason = enVersionCheckResult.WRONGMINMAX.value
             return False, self.reason
