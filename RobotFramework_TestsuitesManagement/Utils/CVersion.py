@@ -140,7 +140,7 @@ The package version is the version when this module is installed stand-alone
                 sMinVersion = ''
             else:
                 raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
-        elif  not isinstance(sMaxVersion, str):
+        if  not isinstance(sMaxVersion, str):
             if sMaxVersion is None:
                 sMaxVersion = ''
             else:
