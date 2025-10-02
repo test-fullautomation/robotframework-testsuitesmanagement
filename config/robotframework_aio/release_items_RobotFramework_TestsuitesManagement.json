@@ -183,7 +183,7 @@ of the version check.
 
 Two values are returned:
 
-1. ``result``: A boolean variable that is either ``True`` in case of the version check is passed or ``False`` in case of the version check fails.
+1. ``result``: A boolean variable that is either ``True`` in case of the version check is passed, ``False`` in case of the version check fails or ``None`` in case of running without version check.
 2. ``reason``: In case of the version check is passed, ``reason`` is ``None``. In case the version check fails, ``reason`` contains a short token string indicating the reason for the failure.
 
 The method ``verifyVersion`` does not return a full error message, but a small token string only.
