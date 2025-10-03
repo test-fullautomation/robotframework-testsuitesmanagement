@@ -97,6 +97,7 @@ class enVersionCheckResult(Enum):
     WRONGMINMAX    = "wrong_minmax"
     CONFLICTMIN    = "conflict_min"
     CONFLICTMAX    = "conflict_max"
+    UNKNOWN        = "internal_error" # error when reads the RobotFramework AIO bundle version 
 
 class CVersion():
     '''
@@ -145,7 +146,11 @@ The package version is the version when this module is installed stand-alone
                 sMaxVersion = ''
             else:
                 raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
-        tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
+        try:
+            tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
+        except:
+            self.reason = enVersionCheckResult.UNKNOWN.value
+            return False, self.reason
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
