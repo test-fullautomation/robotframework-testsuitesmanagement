@@ -612,8 +612,7 @@ This __getUserName method gets current account name login to run the test.
 
     def versionCheck(self):
         '''
-This versionCheck validates the current package version with maximum and minimum version 
-(if provided in the configuration file).
+This method validates the current package version with maximum and minimum version.
 
 In case the current version is not between min and max version, then the execution of 
 testsuite is terminated with "unknown" state

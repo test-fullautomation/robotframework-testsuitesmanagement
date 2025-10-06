@@ -140,12 +140,12 @@ The package version is the version when this module is installed stand-alone
             if sMinVersion is None:
                 sMinVersion = ''
             else:
-                raise Exception(f"The version is required string format but received '{type(sMinVersion)}'")
+                raise Exception(f"The minimum version requires a string format, but the type is '{type(sMinVersion)}'")
         if  not isinstance(sMaxVersion, str):
             if sMaxVersion is None:
                 sMaxVersion = ''
             else:
-                raise Exception(f"The version is required string format but received '{type(sMaxVersion)}'")
+                raise Exception(f"The maximum version requires a string format, but the type is '{type(sMaxVersion)}'")
         try:
             tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
         except:
