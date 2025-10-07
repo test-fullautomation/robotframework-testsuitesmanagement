@@ -98,7 +98,7 @@ class enVersionCheckResult(Enum):
     WRONGMINMAX    = "wrong_minmax"
     CONFLICTMIN    = "conflict_min"
     CONFLICTMAX    = "conflict_max"
-    UNKNOWN        = "internal_error" # error when reads the RobotFramework AIO bundle version 
+    UNKNOWN        = "internal_error" # error when reading the RobotFramework AIO bundle version 
 
 class CVersion():
     '''
