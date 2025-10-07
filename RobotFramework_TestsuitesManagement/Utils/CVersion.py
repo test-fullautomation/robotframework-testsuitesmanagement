@@ -42,13 +42,14 @@ if os.path.isfile(context_filepath):
     else:
         package_context_schema = {
             "type": "object",
-            'additionalProperties': False,
+            "additionalProperties": False,
             "properties": {
                 "installer_location": {"type": "string"},
                 "bundle_name": {"type": "string"},
                 "bundle_version": {"type": "string"},
                 "bundle_version_date": {"type": "string"}
-            }
+            },
+            "required": ["bundle_name", "bundle_version", "bundle_version_date"]
         }
         try:
             with open(context_filepath) as f:
@@ -106,7 +107,7 @@ Validates a bundle version of an installed package
     def __init__(self):
         self.reason = None
 
-    def verifyVersion(self, sMinVersion='', sMaxVersion=''):
+    def verifyVersion(self, min_version='', max_version=''):
         '''
 This method verifyVersion validates the current ROBFW-AIO package version with maximum and minimum version.
 
@@ -114,11 +115,11 @@ The package version is the version when this module is installed stand-alone
 
 **Arguments:**
 
-* ``sMinVersion``
+* ``min_version``
 
    / *Condition*: optional / *Type*: string /
 
-* ``sMaxVersion``
+* ``max_version``
 
    / *Condition*: optional / *Type*: string /
 
@@ -136,16 +137,16 @@ The package version is the version when this module is installed stand-alone
 
   A short reason if version checking is failed. 
         '''
-        if not isinstance(sMinVersion, str):
-            if sMinVersion is None:
-                sMinVersion = ''
+        if not isinstance(min_version, str):
+            if min_version is None:
+                min_version = ''
             else:
-                raise Exception(f"The minimum version requires a string format, but the type is '{type(sMinVersion)}'")
-        if  not isinstance(sMaxVersion, str):
-            if sMaxVersion is None:
-                sMaxVersion = ''
+                raise Exception(f"The minimum version requires a string format, but the type is '{type(min_version)}'")
+        if  not isinstance(max_version, str):
+            if max_version is None:
+                max_version = ''
             else:
-                raise Exception(f"The maximum version requires a string format, but the type is '{type(sMaxVersion)}'")
+                raise Exception(f"The maximum version requires a string format, but the type is '{type(max_version)}'")
         try:
             tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
         except:
@@ -154,13 +155,13 @@ The package version is the version when this module is installed stand-alone
         # Verify format of provided min and max versions then parse to tuples
         tMinVersion = None
         tMaxVersion = None
-        if sMinVersion.strip() == '' and sMaxVersion.strip() == '':
+        if min_version.strip() == '' and max_version.strip() == '':
             self.reason = enVersionCheckResult.WITHOUTVERSION.value
             return None, self.reason
-        if sMinVersion != '':
-            tMinVersion = self.tupleVersion(sMinVersion)
-        if sMaxVersion != '':
-            tMaxVersion = self.tupleVersion(sMaxVersion)
+        if min_version != '':
+            tMinVersion = self.tupleVersion(min_version)
+        if max_version != '':
+            tMaxVersion = self.tupleVersion(max_version)
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             self.reason = enVersionCheckResult.WRONGMINMAX.value
             return False, self.reason
