@@ -55,14 +55,16 @@ if os.path.isfile(context_filepath):
             with open(context_filepath) as f:
                 context_config = json.load(f)
         except Exception as reason:
-            logger.error(f"Cannot load the '{context_filepath}' file. Reason: {reason}")
-            exit(1)
+            errorMsg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
+            logger.error(errorMsg)
+            raise Exception(errorMsg)
         
         try:
             validate(instance=context_config, schema=package_context_schema)
         except Exception as reason:
-            logger.error(f"Invalid '{context_filepath}' file. Reason: {reason}")
-            exit(1)
+            errorMsg = f"Invalid '{context_filepath}' file. Reason: {reason}"
+            logger.error(errorMsg)
+            raise Exception(errorMsg)
 
         if ('installer_location' in context_config) and context_config['installer_location']:
             INSTALLER_LOCATION = context_config['installer_location']

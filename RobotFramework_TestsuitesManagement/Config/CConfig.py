@@ -639,6 +639,9 @@ testsuite is terminated with "unknown" state
                 header = "Version conflict."
                 detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
                 detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
+            elif reason == enVersionCheckResult.UNKNOWN.value:
+                header = "Internal error"
+                detail = "Error when reading the RobotFramework AIO bundle version."
 
             BuiltIn().log(f"{header}" +
             f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
