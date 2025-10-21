@@ -212,3 +212,16 @@ Loads a json file and returns a json object.
             jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)
             return oJsonData
+
+    @keyword
+    def get_version(self):
+        '''
+This function returns the package version which is:
+
+- RobotFramework_TestsuitesManagement version when this module is installed
+stand-alone (via `pip` or directly from sourcecode)
+
+- RobotFramework AIO version when this module is bundled with RobotFramework AIO
+package
+        '''
+        return TM.VERSION
