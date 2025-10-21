@@ -218,10 +218,10 @@ Loads a json file and returns a json object.
         '''
 This function returns the package version which is:
 
-- RobotFramework_TestsuitesManagement version when this module is installed
-stand-alone (via `pip` or directly from sourcecode)
+* RobotFramework_TestsuitesManagement version when this module is installed
+  stand-alone (via `pip` or directly from sourcecode)
 
-- RobotFramework AIO version when this module is bundled with RobotFramework AIO
-package
+* RobotFramework AIO version when this module is bundled with RobotFramework AIO
+  package
         '''
         return TM.VERSION
