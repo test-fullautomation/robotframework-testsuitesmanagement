@@ -85,7 +85,7 @@ The content of the configuration files is described in the next section.
 
 \section{Content of configuration files}
 
-\textbf{1. variant configuration file}
+\subsection{Variant configuration file}
 
 This file configures the access to all variant dependent \plog{robot_config*.jsonp} files.
 
@@ -124,7 +124,8 @@ It is of course still possible to use the standard notation for relative paths:
 
 \newpage
 
-\textbf{2. parameter configuration files}
+\subsection{Parameter configuration files}
+\label{sec:parameter_config_files}
 
 In these configuration files all parameters are defined, that shall be available globally during test execution.
 
@@ -182,7 +183,7 @@ Log    Maximum_version : ${CONFIG}[Maximum_version]
 Log    Project : ${CONFIG}[Project]
 \end{robotcode}
 
-\vspace{1ex}
+\newpage
 
 The following example is an extended version of a configuration file containing also some user defined parameters.
 
@@ -689,3 +690,66 @@ to distinguish between variables!
 
 % --------------------------------------------------------------------------------------------------------------
 
+\newpage
+
+\section{Python interface for checking the bundle version}
+
+The goal of this Python interface is to enable \textbf{RobotFramework AIO} users who work purely in Python, without using robot files,
+to verify which bundle version is installed. The bundle version is either the version of the entire \textbf{RobotFramework AIO}
+or, if installed standalone, the version of the \textbf{TestsuitesManagement}.
+
+\vspace{2ex}
+
+\textbf{Example}
+
+\begin{pythoncode}
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion
+oVersion = CVersion()
+result, reason = oVersion.verifyVersion(min_version, max_version)
+\end{pythoncode}
+
+The parameters \pcode{min_version} and  \pcode{max_version} define the expected range of the bundle version. This is verified
+against the version of the currently installed bundle. The format of the version string is: \pcode{\\d\\.\\d\\.\\d}.
+
+It is possible to set a version to \pcode{None} or to \pcode{\"\"}. The impact is that this version number (\textit{min}
+or \textit{max}) is not part of the version check.
+
+Two values are returned:
+
+\begin{enumerate}
+   \item \pcode{result}\\
+        A boolean variable that is either \pcode{True} in case of the version check is passed or \pcode{False}
+        in case of the version check fails.
+   \item \pcode{reason}\\
+        In case of the version check is passed, \pcode{reason} is \pcode{None}. In case the version check fails,
+        \pcode{reason} contains a short token string indicating the reason for the failure.
+\end{enumerate}
+
+The method \pcode{verifyVersion} does not return a full error message, but a small token string only.
+This enables users to formulate their own error messages.
+
+These are the token strings together with their meanings:
+
+\begin{itemize}
+   \item \pcode{without_version_check} \\
+         Version check not executed.
+
+   \item \pcode{wrong_minmax} \\
+         Mismatch of \emph{minimum version} and \emph{maximum version}: The \emph{minimum version} is younger
+         than the \emph{maximum version}.
+
+   \item \pcode{conflict_min} \\
+         The test execution requires the \emph{minimum version}, but the installed version is older.
+
+   \item \pcode{conflict_max} \\
+         The test execution requires the \emph{maximum version}, but the installed version is younger.
+
+   \item \pcode{internal_error} \\
+         An internal error happened (any issue in JSON configuration file).
+\end{itemize}
+
+How the version check works in detail, is explaind in \ref{sec:parameter_config_files}.
+
+
+
+% --------------------------------------------------------------------------------------------------------------
