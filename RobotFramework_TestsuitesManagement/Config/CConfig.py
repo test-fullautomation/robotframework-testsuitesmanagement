@@ -618,31 +618,32 @@ In case the current version is not between min and max version, then the executi
 testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion()
-        res, reason = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
-        if res is None:
+        reason = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
+        header = None
+        detail = None
+        if reason==enVersionCheckResult.CHECK_NOT_EXECUTED.value:
             logger.info(f"Running without {BUNDLE_NAME} version check!")
             return
-        elif res is True:
+        elif reason==enVersionCheckResult.CHECK_PASSED.value:
             logger.info(f"{BUNDLE_NAME} version check passed!")
             return
-        else:
-            if reason == enVersionCheckResult.WRONGMINMAX.value:
-                header = "Wrong use of max/min version control in configuration."
-                detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
-                detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-                detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
-            elif reason == enVersionCheckResult.CONFLICTMIN.value:
-                header = "Version conflict."
-                detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
-                detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
-            elif reason == enVersionCheckResult.CONFLICTMAX.value:
-                header = "Version conflict."
-                detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-                detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
-            elif reason == enVersionCheckResult.UNKNOWN.value:
-                header = "Internal error"
-                detail = "Error when reading the RobotFramework AIO bundle version."
-
+        elif reason==enVersionCheckResult.WRONG_MINMAX_RELATION.value:
+            header = "Wrong use of max/min version control in configuration."
+            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
+            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
+        elif reason==enVersionCheckResult.CONFLICT_MIN.value:
+            header = "Version conflict."
+            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
+        elif reason==enVersionCheckResult.CONFLICT_MAX.value:
+            header = "Version conflict."
+            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
+            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
+        elif reason==enVersionCheckResult.INTERNAL_ERROR.value:
+            header = "Internal error"
+            detail = "Error when reading the RobotFramework AIO bundle version."
+        if header is not None:
             BuiltIn().log(f"{header}" +
             f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
             f"\nconfig    : {self.sTestCfgFile}" +

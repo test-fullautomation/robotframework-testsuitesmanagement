@@ -31,7 +31,7 @@ BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
 BUNDLE_VERSION = VERSION
 BUNDLE_VERSION_DATE = VERSION_DATE
 
-# Load package context file
+# Load package context file to get the bundle version
 context_filename = "package_context.json"
 context_filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), f"Config/{context_filename}")
 context_config = None
@@ -96,24 +96,66 @@ package
    print(f"{BUNDLE_VERSION}")
 
 class enVersionCheckResult(Enum):
-    WITHOUTVERSION = "without_version_check"
-    WRONGMINMAX    = "wrong_minmax"
-    CONFLICTMIN    = "conflict_min"
-    CONFLICTMAX    = "conflict_max"
-    UNKNOWN        = "internal_error" # error when reading the RobotFramework AIO bundle version 
+    """Defines different states that identify the result of the version check"""
+    # min_version and max_version set to None
+    CHECK_NOT_EXECUTED    = "CHECK_NOT_EXECUTED"
+    # version check passed
+    CHECK_PASSED          = "CHECK_PASSED"
+    # valid version found
+    IS_VALID              = "IS_VALID"
+    # version is not valid
+    CONFLICT_MIN          = "CONFLICT_MIN"
+    CONFLICT_MAX          = "CONFLICT_MAX"
+    # internal errors
+    WRONG_MINMAX_RELATION = "WRONG_MINMAX_RELATION"
+    FORMAT_ERROR          = "FORMAT_ERROR"
+    FILE_ERROR            = "FILE_ERROR"
+    INTERNAL_ERROR        = "INTERNAL_ERROR"
+
+class StatusMessages:
+    """Dictionary wrapper for status messages of version check. Needs to use the same keys like defined in enVersionCheckResult"""
+    def __init__(self):
+        self._messages = {
+            "CHECK_NOT_EXECUTED"    : "Version check is skipped because both 'min_version' and 'max_version' are set to None",
+            "IS_VALID"              : "The version is valid.",
+            "CONFLICT_MIN"          : "The test execution requires the minimum version, but the installed version is older.",
+            "CONFLICT_MAX"          : "The test execution requires the maximum version, but the installed version is younger.",
+            "WRONG_MINMAX_RELATION" : "Mismatch of minimum version and maximum version: The minimum version is younger than the maximum version.",
+            "FORMAT_ERROR"          : "A version number has an invalid format.",
+            "FILE_ERROR"            : "A syntax error occurred while parsing the file containing the bundle version number.",
+            "INTERNAL_ERROR"        : "Version could not be verified because of an internal error. Please contact the AIO team."
+        }
+
+    def get(self, key, default=None):
+        """Get a status message by key."""
+        return self._messages.get(key, default)
+
+    def set(self, key, value):
+        """Set a status message."""
+        self._messages[key] = value
+
+    def __getitem__(self, key):
+        """Allow dict-style access: messages['VALID']"""
+        return self._messages[key]
+
+    def __setitem__(self, key, value):
+        """Allow dict-style assignment: messages['VALID'] = 'text'"""
+        self._messages[key] = value
 
 class CVersion():
     '''
 Validates a bundle version of an installed package
     '''
     def __init__(self):
-        self.reason = None
+        pass
 
-    def verifyVersion(self, min_version='', max_version=''):
+    # LOW LEVEL
+    def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
         '''
-This method verifyVersion validates the current ROBFW-AIO package version with maximum and minimum version.
+This method executes the version check, min_version and max_version are checked against the reference_version.
 
-The package version is the version when this module is installed stand-alone
+Users can define own reference versions. But if reference_version is None, the internally 
+defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will be used as reference.
 
 **Arguments:**
 
@@ -125,56 +167,132 @@ The package version is the version when this module is installed stand-alone
 
    / *Condition*: optional / *Type*: string /
 
+* ``reference_version``
+
+   / *Condition*: optional / *Type*: string /
+
 **Returns:**
 
-* ``response``
-
-  / *Type*: boolean /
-
-  ``True`` if version checking is fine else ``False``. 
-
-  * ``reason``
+* ``reason``
 
   / *Type*: String /
 
   A short reason if version checking is failed. 
         '''
-        if not isinstance(min_version, str):
-            if min_version is None:
-                min_version = ''
-            else:
-                raise Exception(f"The minimum version requires a string format, but the type is '{type(min_version)}'")
-        if  not isinstance(max_version, str):
-            if max_version is None:
-                max_version = ''
-            else:
-                raise Exception(f"The maximum version requires a string format, but the type is '{type(max_version)}'")
-        try:
-            tCurrentVersion = self.tupleVersion(BUNDLE_VERSION)
-        except:
-            self.reason = enVersionCheckResult.UNKNOWN.value
-            return False, self.reason
-        # Verify format of provided min and max versions then parse to tuples
+        # define the reference version: either defined by user or by RobotFramework AIO installer
+        # or by TestsuitesManagement installer
         tMinVersion = None
         tMaxVersion = None
-        if min_version.strip() == '' and max_version.strip() == '':
-            self.reason = enVersionCheckResult.WITHOUTVERSION.value
-            return None, self.reason
-        if min_version != '':
-            tMinVersion = self.tupleVersion(min_version)
-        if max_version != '':
-            tMaxVersion = self.tupleVersion(max_version)
+        tCurrentVersion = None
+        if reference_version==None:
+            reference_version = BUNDLE_VERSION
+            try:
+                tCurrentVersion = self.tupleVersion(reference_version)
+            except:
+                return enVersionCheckResult.INTERNAL_ERROR.value
+        else:
+            if not isinstance(reference_version, str):
+                return enVersionCheckResult.FORMAT_ERROR.value
+            else:
+                try:
+                    tCurrentVersion = self.tupleVersion(reference_version)
+                except:
+                    return enVersionCheckResult.FORMAT_ERROR.value
+        if min_version is None and max_version is None:
+            return enVersionCheckResult.CHECK_NOT_EXECUTED.value
+        if min_version is not None:
+            if not isinstance(min_version, str):
+                return enVersionCheckResult.FORMAT_ERROR.value
+            else:
+                try:
+                    tMinVersion = self.tupleVersion(min_version)
+                except:
+                    return enVersionCheckResult.FORMAT_ERROR.value
+        if max_version is not None:
+            if not isinstance(max_version, str):
+                return enVersionCheckResult.FORMAT_ERROR.value
+            else:
+                try:
+                    tMaxVersion = self.tupleVersion(max_version)
+                except:
+                    return enVersionCheckResult.FORMAT_ERROR.value
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.reason = enVersionCheckResult.WRONGMINMAX.value
-            return False, self.reason
-        if tCurrentVersion is not None:
-            if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
-                self.reason = enVersionCheckResult.CONFLICTMIN.value
-                return False, self.reason
-            if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-                self.reason = enVersionCheckResult.CONFLICTMAX.value
-                return False, self.reason
-        return True, self.reason
+            return enVersionCheckResult.WRONG_MINMAX_RELATION.value
+        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
+            return enVersionCheckResult.CONFLICT_MIN.value
+        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
+            return enVersionCheckResult.CONFLICT_MAX.value
+        return enVersionCheckResult.CHECK_PASSED.value
+
+    # HIGH LEVEL
+    def checkVersion(self, min_version=None, max_version=None, reference_version=None, logger=None, status_messages=None):
+        '''
+This method executes the version check, min_version and max_version are checked against the reference_version.
+
+Users can define own reference versions. But if reference_version is None, the internally defined 
+bundle_version will be used as reference.
+
+**Arguments:**
+
+* ``min_version``
+
+   / *Condition*: optional / *Type*: string /
+
+* ``max_version``
+
+   / *Condition*: optional / *Type*: string /
+
+* ``reference_version``
+
+   / *Condition*: optional / *Type*: string /
+
+* ``logger``
+
+   / *Condition*: optional / *Type*: object /
+
+* ``status_messages``
+
+   / *Condition*: optional / *Type*: dict /
+
+**Returns:**
+
+* ``True``
+
+  / *Type*: boolean /
+
+  Executed version check passed or check not executed.
+
+* ``False``
+
+  / *Type*: boolean /
+
+  Executed version check failed.
+        '''
+        # either use predefined status messages or user defined status messages
+        if status_messages is None:
+            status_messages = StatusMessages()
+        # get and log the result of the version check
+        result = self.verifyVersion(min_version, max_version, reference_version)
+        status_message = status_messages[result]
+        if logger is None:
+            # debug output to test this example code
+            print(f"version check status: '{status_message}'")
+        else:
+            pass
+            # (let the logger log whatever to whereever)
+        # mapping between the result of the version check and the reaction on this result
+        # 1. exceptions
+        if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
+                    enVersionCheckResult.FORMAT_ERROR.value,
+                    enVersionCheckResult.FILE_ERROR.value,
+                    enVersionCheckResult.INTERNAL_ERROR.value):
+            raise Exception(status_message)
+        # 2. executed version check failed
+        elif result in (enVersionCheckResult.CONFLICT_MIN.value,
+                        enVersionCheckResult.CONFLICT_MAX.value):
+            return False
+
+        return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "IS_VALID" (positive result that allows the test execution to continue)
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
