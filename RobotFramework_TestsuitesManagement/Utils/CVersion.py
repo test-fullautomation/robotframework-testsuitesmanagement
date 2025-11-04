@@ -147,7 +147,12 @@ class CVersion():
 Validates a bundle version of an installed package
     '''
     def __init__(self):
-        pass
+        # identify the current run with the TestsuitesManagement version or the RobotFramework AIO bundle version
+        self.is_robotframework_aio = False
+        global context_config
+        if context_config is not None and 'bundle_version' in context_config \
+            and context_config['bundle_version']:
+            self.is_robotframework_aio = True
 
     # LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
@@ -192,12 +197,12 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
                 return enVersionCheckResult.INTERNAL_ERROR.value
         else:
             if not isinstance(reference_version, str):
-                return enVersionCheckResult.FORMAT_ERROR.value
+                return enVersionCheckResult.INTERNAL_ERROR.value
             else:
                 try:
                     tCurrentVersion = self.tupleVersion(reference_version)
                 except:
-                    return enVersionCheckResult.FORMAT_ERROR.value
+                    return enVersionCheckResult.INTERNAL_ERROR.value
         if min_version is None and max_version is None:
             return enVersionCheckResult.CHECK_NOT_EXECUTED.value
         if min_version is not None:

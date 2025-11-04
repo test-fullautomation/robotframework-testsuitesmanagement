@@ -641,15 +641,21 @@ testsuite is terminated with "unknown" state
             detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
             detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
         elif reason==enVersionCheckResult.INTERNAL_ERROR.value:
-            header = "Internal error"
-            detail = "Error when reading the RobotFramework AIO bundle version."
+            header = f"Incorrect version format '{BUNDLE_VERSION}' detected while reading "
+            if oVersion.is_robotframework_aio:
+                header = header + "the RobotFramework AIO bundle version. Please contact the AIO team."
+            else:
+                header = header + "the TestsuitesManagement version. Please contact the AIO team."
         if header is not None:
-            BuiltIn().log(f"{header}" +
-            f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
-            f"\nconfig    : {self.sTestCfgFile}" +
-            f"\n{detail}\n"
-            f"\nPlease install the required {BUNDLE_NAME} version." +
-            f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
+            if reason==enVersionCheckResult.INTERNAL_ERROR.value:
+                BuiltIn().log(f"{header}", "ERROR")
+            else:
+                BuiltIn().log(f"{header}" +
+                f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
+                f"\nconfig    : {self.sTestCfgFile}" +
+                f"\n{detail}\n"
+                f"\nPlease install the required {BUNDLE_NAME} version." +
+                f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
             raise Exception('Version control error!!!')
 
 if __name__ == "__main__":
