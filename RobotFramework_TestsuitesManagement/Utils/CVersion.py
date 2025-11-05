@@ -312,7 +312,7 @@ bundle_version will be used as reference.
                         enVersionCheckResult.CONFLICT_MAX.value):
             if logger_mechanism is None:
                 # logger mechanism is not defined, using robot logger mechanism
-                vlogger.info(f"Version check: '{status_message}'")
+                vlogger.error(f"Version check: '{status_message}'")
             else:
                 pass
                 # (let the logger log whatever to whereever)
