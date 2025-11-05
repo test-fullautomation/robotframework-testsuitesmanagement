@@ -300,6 +300,7 @@ bundle_version will be used as reference.
             status_message = status_message.replace('<max_version>', max_version)
         status_message = status_message.replace('<installed_version>', BUNDLE_VERSION) if reference_version is None else \
                             status_message.replace('<installed_version>', reference_version)
+        status_message = f"{status_message} ({BUNDLE_NAME})"
         # mapping between the result of the version check and the reaction on this result
         # 1. exceptions
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
