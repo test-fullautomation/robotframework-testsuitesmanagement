@@ -115,10 +115,10 @@ class StatusMessages:
     def __init__(self):
         self._messages = {
             "CHECK_NOT_EXECUTED"    : "Version check is skipped because both 'min_version' and 'max_version' are set to None",
-            "IS_VALID"              : "The version is valid.",
-            "CONFLICT_MIN"          : "The test execution requires the minimum version, but the installed version is older.",
-            "CONFLICT_MAX"          : "The test execution requires the maximum version, but the installed version is younger.",
-            "WRONG_MINMAX_RELATION" : "Mismatch of minimum version and maximum version: The minimum version is younger than the maximum version.",
+            "CHECK_PASSED"              : "The version is valid.",
+            "CONFLICT_MIN"          : "The test execution requires the minimum version '<min_version>', but the installed version '<installed_version>' is older.",
+            "CONFLICT_MAX"          : "The test execution requires the maximum version '<max_version>', but the installed version '<installed_version>' is younger.",
+            "WRONG_MINMAX_RELATION" : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'.",
             "FORMAT_ERROR"          : "A version number has an invalid format.",
             "FILE_ERROR"            : "A syntax error occurred while parsing the file containing the bundle version number.",
             "INTERNAL_ERROR"        : "Version could not be verified because of an internal error. Please contact the AIO team."
@@ -235,7 +235,7 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         return enVersionCheckResult.CHECK_PASSED.value
 
     # HIGH LEVEL
-    def checkVersion(self, min_version=None, max_version=None, reference_version=None, logger=None, status_messages=None):
+    def checkVersion(self, min_version=None, max_version=None, reference_version=None, logger_mechanism=None, status_messages=None):
         '''
 This method executes the version check, min_version and max_version are checked against the reference_version.
 
@@ -284,12 +284,12 @@ bundle_version will be used as reference.
         # get and log the result of the version check
         result = self.verifyVersion(min_version, max_version, reference_version)
         status_message = status_messages[result]
-        if logger is None:
-            # debug output to test this example code
-            print(f"version check status: '{status_message}'")
-        else:
-            pass
-            # (let the logger log whatever to whereever)
+        if min_version is not None:
+            status_message = status_message.replace('<min_version>', min_version)
+        if max_version is not None:
+            status_message = status_message.replace('<max_version>', max_version)
+        status_message = status_message.replace('<installed_version>', BUNDLE_VERSION) if reference_version is None else \
+                            status_message.replace('<installed_version>', reference_version)
         # mapping between the result of the version check and the reaction on this result
         # 1. exceptions
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
@@ -300,6 +300,12 @@ bundle_version will be used as reference.
         # 2. executed version check failed
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
+            if logger_mechanism is None:
+                # logger mechanism is not defined, using robot logger mechanism
+                logger.info(f"version check status: '{status_message}'")
+            else:
+                pass
+                # (let the logger log whatever to whereever)
             return False
 
         return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "IS_VALID" (positive result that allows the test execution to continue)
