@@ -646,8 +646,11 @@ testsuite is terminated with "unknown" state
                 header = header + "the RobotFramework AIO bundle version. Please contact the AIO team."
             else:
                 header = header + "the TestsuitesManagement version. Please contact the AIO team."
+        elif reason==enVersionCheckResult.FORMAT_ERROR.value:
+            header = f"Invalid version format '{oVersion.invalid_format}': expected format is 'major.minor.patch' (e.g. 0.1.2)"
         if header is not None:
-            if reason==enVersionCheckResult.INTERNAL_ERROR.value:
+            if reason in (enVersionCheckResult.INTERNAL_ERROR.value, 
+                          enVersionCheckResult.FORMAT_ERROR.value):
                 BuiltIn().log(f"{header}", "ERROR")
             else:
                 BuiltIn().log(f"{header}" +

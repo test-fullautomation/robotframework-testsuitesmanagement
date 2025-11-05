@@ -101,8 +101,6 @@ class enVersionCheckResult(Enum):
     CHECK_NOT_EXECUTED    = "CHECK_NOT_EXECUTED"
     # version check passed
     CHECK_PASSED          = "CHECK_PASSED"
-    # valid version found
-    IS_VALID              = "IS_VALID"
     # version is not valid
     CONFLICT_MIN          = "CONFLICT_MIN"
     CONFLICT_MAX          = "CONFLICT_MAX"
@@ -147,6 +145,7 @@ class CVersion():
 Validates a bundle version of an installed package
     '''
     def __init__(self):
+        self.invalid_format = None
         # identify the current run with the TestsuitesManagement version or the RobotFramework AIO bundle version
         self.is_robotframework_aio = False
         global context_config
@@ -208,6 +207,9 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         if min_version is not None:
             if not isinstance(min_version, str):
                 return enVersionCheckResult.FORMAT_ERROR.value
+            elif len(min_version.split('.'))>3:
+                self.invalid_format = min_version
+                return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMinVersion = self.tupleVersion(min_version)
@@ -215,6 +217,9 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
                     return enVersionCheckResult.FORMAT_ERROR.value
         if max_version is not None:
             if not isinstance(max_version, str):
+                return enVersionCheckResult.FORMAT_ERROR.value
+            elif len(max_version.split('.'))>3:
+                self.invalid_format = max_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
