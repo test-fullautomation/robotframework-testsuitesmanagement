@@ -23,13 +23,23 @@ import regex
 import json
 from enum import Enum
 from jsonschema import validate
-from robot.api import logger
+from robot.api import logger # to be replaced by logging
+import logging # use logger independent from Robot Framework
 from RobotFramework_TestsuitesManagement.version import VERSION, VERSION_DATE
 
 INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
 BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
 BUNDLE_VERSION = VERSION
 BUNDLE_VERSION_DATE = VERSION_DATE
+
+# very basic internal default logger
+vlogger = logging.getLogger("versionlogger")
+vlogger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+console.setFormatter(formatter)
+vlogger.addHandler(console)
 
 # Load package context file to get the bundle version
 context_filename = "package_context.json"
@@ -114,8 +124,8 @@ class StatusMessages:
     """Dictionary wrapper for status messages of version check. Needs to use the same keys like defined in enVersionCheckResult"""
     def __init__(self):
         self._messages = {
-            "CHECK_NOT_EXECUTED"    : "Version check is skipped because both 'min_version' and 'max_version' are set to None",
-            "CHECK_PASSED"              : "The version is valid.",
+            "CHECK_NOT_EXECUTED"    : "Version check is skipped because both 'min_version' and 'max_version' are set to None.",
+            "CHECK_PASSED"          : "Version check passed.",
             "CONFLICT_MIN"          : "The test execution requires the minimum version '<min_version>', but the installed version '<installed_version>' is older.",
             "CONFLICT_MAX"          : "The test execution requires the maximum version '<max_version>', but the installed version '<installed_version>' is younger.",
             "WRONG_MINMAX_RELATION" : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'.",
@@ -302,13 +312,14 @@ bundle_version will be used as reference.
                         enVersionCheckResult.CONFLICT_MAX.value):
             if logger_mechanism is None:
                 # logger mechanism is not defined, using robot logger mechanism
-                logger.info(f"version check status: '{status_message}'")
+                vlogger.info(f"Version check: '{status_message}'")
             else:
                 pass
                 # (let the logger log whatever to whereever)
+                # TODO: input parameter 'logger_mechanism' needs to be used here
             return False
 
-        return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "IS_VALID" (positive result that allows the test execution to continue)
+        return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
