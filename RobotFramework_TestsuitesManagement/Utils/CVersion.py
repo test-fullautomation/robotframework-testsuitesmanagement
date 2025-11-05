@@ -319,6 +319,13 @@ bundle_version will be used as reference.
                 # TODO: input parameter 'logger_mechanism' needs to be used here
             return False
 
+        if logger_mechanism is None:
+            # logger mechanism is not defined, using robot logger mechanism
+            vlogger.info(f"Version check: '{status_message}'")
+        else:
+            pass
+            # (let the logger log whatever to whereever)
+            # TODO: input parameter 'logger_mechanism' needs to be used here
         return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
 
     @staticmethod
