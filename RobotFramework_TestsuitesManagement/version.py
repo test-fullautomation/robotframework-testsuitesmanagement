@@ -20,3 +20,4 @@
 #
 VERSION      = "0.8.2"
 VERSION_DATE = "13.9.2025"
+APP_NAME     = "RobotFramework_TestsuitesManagement"

@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2025 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -23,87 +23,225 @@ import regex
 import json
 from enum import Enum
 from jsonschema import validate
-from robot.api import logger # to be replaced by logging
-import logging # use logger independent from Robot Framework
-from RobotFramework_TestsuitesManagement.version import VERSION, VERSION_DATE
+from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
+from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
+from RobotFramework_TestsuitesManagement.version import APP_NAME as TSM_APP_NAME
 
-INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
-BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
-BUNDLE_VERSION = VERSION
-BUNDLE_VERSION_DATE = VERSION_DATE
+import logging # use logger independent from Robot Framework (like defined in component_logger_config)
+from RobotFramework_TestsuitesManagement.Utils import component_logger_config
+from PythonExtensionsCollection.String.CString import CString
 
-# very basic internal default logger
-vlogger = logging.getLogger("versionlogger")
-vlogger.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-console = logging.StreamHandler()
-console.setLevel(logging.INFO)
-console.setFormatter(formatter)
-vlogger.addHandler(console)
+# content check of RobotFramework AIO configuration file 'package_context.json'
+PACKAGE_CONTEXT_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "installer_location": {"type": "string"},
+        "bundle_name": {"type": "string"},
+        "bundle_version": {"type": "string"},
+        "bundle_version_date": {"type": "string"}
+    },
+    "required": ["bundle_name", "bundle_version", "bundle_version_date"]
+}
 
-# Load package context file to get the bundle version
-context_filename = "package_context.json"
-context_filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), f"Config/{context_filename}")
-context_config = None
+# initialize default version logger
+vlogger = logging.getLogger(__name__)
 
-if os.path.isfile(context_filepath):
-    if os.stat(context_filepath).st_size == 0:
-        logger.warn(f"The '{context_filepath}' file is existing but empty.")
-    else:
-        package_context_schema = {
-            "type": "object",
-            "additionalProperties": False,
-            "properties": {
-                "installer_location": {"type": "string"},
-                "bundle_name": {"type": "string"},
-                "bundle_version": {"type": "string"},
-                "bundle_version_date": {"type": "string"}
-            },
-            "required": ["bundle_name", "bundle_version", "bundle_version_date"]
-        }
-        try:
-            with open(context_filepath) as f:
-                context_config = json.load(f)
-        except Exception as reason:
-            errorMsg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
-            logger.error(errorMsg)
-            raise Exception(errorMsg)
+class VersionsConfig:
+    """
+Configuration class containing all version information
+    """
+    def __init__(self):
+
+        # * tsm_version, tsm_version_date, tsm_app_name, tsm_installer_location
+        #   belong to the TestsuitesManagement (this application).
+        # * bundle_version, bundle_version_date, bundle_name, bundle_installer_location
+        #   belong to the entire bundle (RobotFramework AIO).
+        # * reference_version, reference_version_date, reference_app_name, reference_installer_location
+        #   belong either to the TestsuitesManagement or to the RobotFramework AIO, depending on the existence
+        #   of a certain RobotFramework AIO configuration file (package_context.json).
+        #   reference_... is used for the version control.
+
+        # === (1) Information about this application
+        self.__tsm_version            = TSM_VERSION
+        self.__tsm_version_date       = TSM_VERSION_DATE
+        self.__tsm_app_name           = TSM_APP_NAME
+        self.__tsm_installer_location = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
+        # default (assumed to be this application = standalone installation of TestsuitesManagement):
+        self.__reference_version            = self.__tsm_version
+        self.__reference_version_date       = self.__tsm_version_date
+        self.__reference_app_name           = self.__tsm_app_name
+        self.__reference_installer_location = self.__tsm_installer_location
+
+        # === (2) Information about the entire RobotFramework AIO bundle (if available)
+        # Detect if TestsuitesManagement is installed standalone or as part of the RobotFramework AIO.
+        # This depends on the existence of a file named 'package_context.json' within the 'Config' folder
+        # of the TestsuitesManagement installation.
+        self.__bundle_version            = None
+        self.__bundle_version_date       = None
+        self.__bundle_name               = None
+        self.__bundle_installer_location = None
+        self.__is_robotframework_aio     = False
+        absolute_reference_path = os.path.join(os.path.dirname(os.path.dirname(__file__)))
+        aio_package_context_file = CString.NormalizePath("Config/package_context.json", sReferencePathAbs=absolute_reference_path)
+        if os.path.isfile(aio_package_context_file):
+            # File indicating a RobotFramework AIO installation found. Reading reference information from there.
+            aio_package_context = None
+            if os.stat(aio_package_context_file).st_size == 0:
+                raise Exception(f"The RobotFramework AIO package context file is existing, but completely empty ({aio_package_context_file}).")
+            try:
+                with open(aio_package_context_file) as file:
+                    aio_package_context = json.load(file)
+            except Exception as reason:
+                # errorMsg = f"Cannot load the RobotFramework AIO package context file '{aio_package_context}' file. Reason: {reason}"
+                # or maybe shorter
+                errorMsg = f"{reason} (file 'aio_package_context_file')"
+                raise Exception(errorMsg)
+            try:
+                validate(instance=aio_package_context, schema=PACKAGE_CONTEXT_SCHEMA)
+            except Exception as reason:
+                # errorMsg = f"Invalid content of file '{aio_package_context_file}' file. Reason: {reason}"
+                # or maybe shorter
+                errorMsg = f"{reason} (file 'aio_package_context_file')"
+                raise Exception(errorMsg)
+
+            if aio_package_context.get('installer_location'):
+                # TODO: is optional ?
+                self.__bundle_installer_location = aio_package_context['installer_location']
+            if aio_package_context.get('bundle_name'):
+                self.__bundle_name = aio_package_context['bundle_name']
+            if aio_package_context.get('bundle_version'):
+                self.__bundle_version = aio_package_context['bundle_version']
+            if aio_package_context.get('bundle_version_date'):
+                self.__bundle_version_date = aio_package_context['bundle_version_date']
+
+            # paranoia check
+            if (self.__bundle_name is None) or (self.__bundle_version is None) or (self.__bundle_version_date is None):
+                # (but already PACKAGE_CONTEXT_SCHEMA should prevent this)
+                raise Exception(f"Incomplete package context file '{aio_package_context_file}'")
+
+            # set the reference to the bundle (because TestsuitesManagement is part of RobotFramework AIO)
+            self.__reference_version            = self.__bundle_version
+            self.__reference_version_date       = self.__bundle_version_date
+            self.__reference_app_name           = self.__bundle_name
+            self.__reference_installer_location = self.__bundle_installer_location
+            self.__is_robotframework_aio        = True
+
+    def is_robotframework_aio(self):
+        return self.__is_robotframework_aio
+
+    # not sure if we need all of the following methods; let's see
+
+    def get_reference_version(self):
+        return self.__reference_version
+
+    def get_reference_version_date(self):
+        return self.__reference_version_date
+
+    def get_reference_app_name(self):
+        return self.__reference_app_name
+
+    def get_reference_installer_location(self):
+        return self.__reference_installer_location
+
+    def get_tsm_version(self):
+        return self.__tsm_version
+
+    def get_tsm_version_date(self):
+        return self.__tsm_version_date
+
+    def get_tsm_app_name(self):
+        return self.__tsm_app_name
+
+    def get_tsm_installer_location(self):
+        return self.__tsm_installer_location
+
+    def get_bundle_version(self):
+        return self.__bundle_version
+
+    def get_bundle_version_date(self):
+        return self.__bundle_version_date
+
+    def get_bundle_name(self):
+        return self.__bundle_name
+
+    def get_bundle_installer_location(self):
+        return self.__bundle_installer_location
+
+# eof class VersionsConfig:
+
+
+
+# # # INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
+# # # BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
+# # # BUNDLE_VERSION = TSM_VERSION
+# # # BUNDLE_VERSION_DATE = TSM_VERSION_DATE
+
+# # # # Load package context file to get the bundle version
+# # # context_filename = "package_context.json"
+# # # context_filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), f"Config/{context_filename}")
+# # # context_config = None
+
+# # # if os.path.isfile(context_filepath):
+    # # # if os.stat(context_filepath).st_size == 0:
+        # # # vlogger.warn(f"The '{context_filepath}' file is existing but empty.")
+    # # # else:
+        # # # package_context_schema = {
+            # # # "type": "object",
+            # # # "additionalProperties": False,
+            # # # "properties": {
+                # # # "installer_location": {"type": "string"},
+                # # # "bundle_name": {"type": "string"},
+                # # # "bundle_version": {"type": "string"},
+                # # # "bundle_version_date": {"type": "string"}
+            # # # },
+            # # # "required": ["bundle_name", "bundle_version", "bundle_version_date"]
+        # # # }
+        # # # try:
+            # # # with open(context_filepath) as f:
+                # # # context_config = json.load(f)
+        # # # except Exception as reason:
+            # # # errorMsg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
+            # # # vlogger.error(errorMsg)
+            # # # raise Exception(errorMsg)
         
-        try:
-            validate(instance=context_config, schema=package_context_schema)
-        except Exception as reason:
-            errorMsg = f"Invalid '{context_filepath}' file. Reason: {reason}"
-            logger.error(errorMsg)
-            raise Exception(errorMsg)
+        # # # try:
+            # # # validate(instance=context_config, schema=package_context_schema)
+        # # # except Exception as reason:
+            # # # errorMsg = f"Invalid '{context_filepath}' file. Reason: {reason}"
+            # # # vlogger.error(errorMsg)
+            # # # raise Exception(errorMsg)
 
-        if ('installer_location' in context_config) and context_config['installer_location']:
-            INSTALLER_LOCATION = context_config['installer_location']
-        if ('bundle_name' in context_config) and context_config['bundle_name']:
-            BUNDLE_NAME = context_config['bundle_name']
-        if ('bundle_version' in context_config) and context_config['bundle_version']:
-            BUNDLE_VERSION = context_config['bundle_version']
-        if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
-            BUNDLE_VERSION_DATE = context_config['bundle_version_date']
+        # # # if ('installer_location' in context_config) and context_config['installer_location']:
+            # # # INSTALLER_LOCATION = context_config['installer_location']
+        # # # if ('bundle_name' in context_config) and context_config['bundle_name']:
+            # # # BUNDLE_NAME = context_config['bundle_name']
+        # # # if ('bundle_version' in context_config) and context_config['bundle_version']:
+            # # # BUNDLE_VERSION = context_config['bundle_version']
+        # # # if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
+            # # # BUNDLE_VERSION_DATE = context_config['bundle_version_date']
 
-def bundle_version():
-   '''
-This function prints out the package version which is:
 
-- RobotFramework_TestsuitesManagement version when this module is installed
-stand-alone (via `pip` or directly from sourcecode)
+# # # def bundle_version():
+   # # # '''
+# # # This function prints out the package version which is:
 
-- RobotFramework AIO version when this module is bundled with RobotFramework AIO
-package
+# # # - RobotFramework_TestsuitesManagement version when this module is installed
+# # # stand-alone (via `pip` or directly from sourcecode)
 
-**Arguments:**
+# # # - RobotFramework AIO version when this module is bundled with RobotFramework AIO
+# # # package
 
-* No input parameter is required
+# # # **Arguments:**
 
-**Returns:**
+# # # * No input parameter is required
 
-* No return variable
-   '''
-   print(f"{BUNDLE_VERSION}")
+# # # **Returns:**
+
+# # # * No return variable
+   # # # '''
+   # # # print(f"{BUNDLE_VERSION}")
+
 
 class enVersionCheckResult(Enum):
     """Defines different states that identify the result of the version check"""
@@ -152,16 +290,28 @@ class StatusMessages:
 
 class CVersion():
     '''
-Validates a bundle version of an installed package
+Validate a user-defined version against a reference version.
+
+The reference is either:
+* the version of the TestsuitesManagement (in case of a stand-alone installation)
+* the version of the RobotFramework AIO (TestsuitesManagement is part of a bundle)
     '''
     def __init__(self):
-        self.invalid_format = None
-        # identify the current run with the TestsuitesManagement version or the RobotFramework AIO bundle version
-        self.is_robotframework_aio = False
-        global context_config
-        if context_config is not None and 'bundle_version' in context_config \
-            and context_config['bundle_version']:
-            self.is_robotframework_aio = True
+        versions_config = VersionsConfig()
+        # get to know if TestsuitesManagement is part of a bundle or not
+        self.is_robotframework_aio = versions_config.is_robotframework_aio()
+        vlogger.info(f"============= self.is_robotframework_aio: {self.is_robotframework_aio}")
+
+        # Identify the current run with the TestsuitesManagement version or the RobotFramework AIO bundle version
+        # already set above # self.is_robotframework_aio = False
+        # # # global context_config
+        # # # if context_config is not None and 'bundle_version' in context_config \
+            # # # and context_config['bundle_version']:
+            # already set above # self.is_robotframework_aio = True
+
+        # contains the version number that has an invalid format
+        self.version_number_invalid_format = None
+
 
     # LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
@@ -218,7 +368,7 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
             if not isinstance(min_version, str):
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
-                self.invalid_format = min_version
+                self.version_number_invalid_format = min_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
@@ -229,7 +379,7 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
             if not isinstance(max_version, str):
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
-                self.invalid_format = max_version
+                self.version_number_invalid_format = max_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
@@ -245,7 +395,7 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         return enVersionCheckResult.CHECK_PASSED.value
 
     # HIGH LEVEL
-    def checkVersion(self, min_version=None, max_version=None, reference_version=None, logger_mechanism=None, status_messages=None):
+    def checkVersion(self, min_version=None, max_version=None, reference_version=None, ext_logger=None, status_messages=None):
         '''
 This method executes the version check, min_version and max_version are checked against the reference_version.
 
@@ -266,7 +416,7 @@ bundle_version will be used as reference.
 
    / *Condition*: optional / *Type*: string /
 
-* ``logger``
+* ``ext_logger``
 
    / *Condition*: optional / *Type*: object /
 
@@ -288,6 +438,11 @@ bundle_version will be used as reference.
 
   Executed version check failed.
         '''
+        # # initialize default version logger
+        # vlogger = logging.getLogger(__name__)
+        # if ext_logger is not None:
+            # # if defined: use external logger
+            # vlogger = ext_logger
         # either use predefined status messages or user defined status messages
         if status_messages is None:
             status_messages = StatusMessages()
@@ -307,26 +462,14 @@ bundle_version will be used as reference.
                     enVersionCheckResult.FORMAT_ERROR.value,
                     enVersionCheckResult.FILE_ERROR.value,
                     enVersionCheckResult.INTERNAL_ERROR.value):
-            raise Exception(status_message)
+            raise Exception(f"Version check exception: {status_message}")
         # 2. executed version check failed
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
-            if logger_mechanism is None:
-                # logger mechanism is not defined, using robot logger mechanism
-                vlogger.error(f"Version check: '{status_message}'")
-            else:
-                pass
-                # (let the logger log whatever to whereever)
-                # TODO: input parameter 'logger_mechanism' needs to be used here
+            vlogger.error(f"Version check error: {status_message}")
             return False
 
-        if logger_mechanism is None:
-            # logger mechanism is not defined, using robot logger mechanism
-            vlogger.info(f"Version check: '{status_message}'")
-        else:
-            pass
-            # (let the logger log whatever to whereever)
-            # TODO: input parameter 'logger_mechanism' needs to be used here
+        vlogger.info(f"{status_message}")
         return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
 
     @staticmethod
