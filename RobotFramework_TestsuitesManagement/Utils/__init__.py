@@ -15,5 +15,5 @@
 
 from .LibListener import LibListener
 from .CStruct import CStruct
-# ?? clarify ?? from .CVersion import CVersion, bundle_version, BUNDLE_VERSION, BUNDLE_NAME, INSTALLER_LOCATION
-from .CVersion import CVersion
+# from .CVersion import CVersion, bundle_version, BUNDLE_VERSION, BUNDLE_NAME, INSTALLER_LOCATION
+from .CVersion import CVersion, BUNDLE_VERSION, BUNDLE_NAME, INSTALLER_LOCATION

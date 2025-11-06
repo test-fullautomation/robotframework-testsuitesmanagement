@@ -170,6 +170,16 @@ Configuration class containing all version information
 
 # eof class VersionsConfig:
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Unfortunately these global variables are imported several times from outside.
+# Therefore, we need to define them here (but this should be a temporary solution only).
+# !!! TODO: Content and usage urgently need to be reworked !!!
+versions_config = VersionsConfig()
+BUNDLE_NAME         = versions_config.get_bundle_name()
+BUNDLE_VERSION      = versions_config.get_bundle_version()
+BUNDLE_VERSION_DATE = versions_config.get_bundle_version_date()
+INSTALLER_LOCATION  = versions_config.get_bundle_installer_location()
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 # # # INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
