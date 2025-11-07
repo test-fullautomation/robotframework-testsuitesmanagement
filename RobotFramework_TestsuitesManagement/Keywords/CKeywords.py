@@ -1,4 +1,4 @@
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2025 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -21,8 +21,10 @@ from robot.api import logger
 
 from robot.libraries.BuiltIn import BuiltIn
 
+from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 
-
+# access to application configuration
+TSM_APP_CONFIG = AppConfig()
 
 class CSetupKeywords(object):
     '''
@@ -155,6 +157,7 @@ In case new robot keyword is required, it will be defined and implemented in thi
 
     @keyword
     def get_config(self):
+# !!! TODO: Distinguish between test configuration and app configuration !!!
         '''
 This get_config defines the ``Get Config`` keyword gets the current config object of RobotFramework AIO.
 
@@ -213,15 +216,91 @@ Loads a json file and returns a json object.
             oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)
             return oJsonData
 
+
+    # # # # old version
+    # # # @keyword
+    # # # def get_version(self):
+        # # # '''
+# # # This function returns the package version which is:
+
+# # # * RobotFramework_TestsuitesManagement version when this module is installed
+  # # # stand-alone (via `pip` or directly from sourcecode)
+
+# # # * RobotFramework AIO version when this module is bundled with RobotFramework AIO
+  # # # package
+        # # # '''
+        # # # return TM.VERSION
+
+
+# TSM_APP_CONFIG.is_robotframework_aio()
+# TSM_APP_CONFIG.get_package_context_file()
+# TSM_APP_CONFIG.get_reference_version()
+# TSM_APP_CONFIG.get_reference_version_date()
+# TSM_APP_CONFIG.get_reference_app_name()
+# TSM_APP_CONFIG.get_reference_installer_location()
+# TSM_APP_CONFIG.get_tsm_version()
+# TSM_APP_CONFIG.get_tsm_version_date()
+# TSM_APP_CONFIG.get_tsm_app_name()
+# TSM_APP_CONFIG.get_tsm_installer_location()
+# TSM_APP_CONFIG.get_bundle_version()
+# TSM_APP_CONFIG.get_bundle_version_date()
+# TSM_APP_CONFIG.get_bundle_name()
+# TSM_APP_CONFIG.get_bundle_installer_location()
+
     @keyword
-    def get_version(self):
-        '''
-This function returns the package version which is:
+    def is_robotframework_aio(self):
+        return TSM_APP_CONFIG.is_robotframework_aio()
 
-* RobotFramework_TestsuitesManagement version when this module is installed
-  stand-alone (via `pip` or directly from sourcecode)
+    @keyword
+    def get_package_context_file(self):
+        return TSM_APP_CONFIG.get_package_context_file()
 
-* RobotFramework AIO version when this module is bundled with RobotFramework AIO
-  package
-        '''
-        return TM.VERSION
+    @keyword
+    def get_reference_version(self):
+        return TSM_APP_CONFIG.get_reference_version()
+
+    @keyword
+    def get_reference_version_date(self):
+        return TSM_APP_CONFIG.get_reference_version_date()
+
+    @keyword
+    def get_reference_app_name(self):
+        return TSM_APP_CONFIG.get_reference_app_name()
+
+    @keyword
+    def get_reference_installer_location(self):
+        return TSM_APP_CONFIG.get_reference_installer_location()
+
+    @keyword
+    def get_tsm_version(self):
+        return TSM_APP_CONFIG.get_tsm_version()
+
+    @keyword
+    def get_tsm_version_date(self):
+        return TSM_APP_CONFIG.get_tsm_version_date()
+
+    @keyword
+    def get_tsm_app_name(self):
+        return TSM_APP_CONFIG.get_tsm_app_name()
+
+    @keyword
+    def get_tsm_installer_location(self):
+        return TSM_APP_CONFIG.get_tsm_installer_location()
+
+    @keyword
+    def get_bundle_version(self):
+        return TSM_APP_CONFIG.get_bundle_version()
+
+    @keyword
+    def get_bundle_version_date(self):
+        return TSM_APP_CONFIG.get_bundle_version_date()
+
+    @keyword
+    def get_bundle_name(self):
+        return TSM_APP_CONFIG.get_bundle_name()
+
+    @keyword
+    def get_bundle_installer_location(self):
+        return TSM_APP_CONFIG.get_bundle_installer_location()
+
+

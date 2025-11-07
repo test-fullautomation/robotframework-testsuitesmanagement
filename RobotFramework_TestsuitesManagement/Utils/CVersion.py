@@ -23,162 +23,25 @@ import regex
 import json
 from enum import Enum
 from jsonschema import validate
-from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
-from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
-from RobotFramework_TestsuitesManagement.version import APP_NAME as TSM_APP_NAME
+# # # from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
+# # # from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
 
 import logging # use logger independent from Robot Framework (like defined in component_logger_config)
 from RobotFramework_TestsuitesManagement.Utils import component_logger_config
+from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 from PythonExtensionsCollection.String.CString import CString
-
-# content check of RobotFramework AIO configuration file 'package_context.json'
-PACKAGE_CONTEXT_SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "properties": {
-        "installer_location": {"type": "string"},
-        "bundle_name": {"type": "string"},
-        "bundle_version": {"type": "string"},
-        "bundle_version_date": {"type": "string"}
-    },
-    "required": ["bundle_name", "bundle_version", "bundle_version_date"]
-}
 
 # initialize default version logger
 vlogger = logging.getLogger(__name__)
 
-class VersionsConfig:
-    """
-Configuration class containing all version information
-    """
-    def __init__(self):
-
-        # * tsm_version, tsm_version_date, tsm_app_name, tsm_installer_location
-        #   belong to the TestsuitesManagement (this application).
-        # * bundle_version, bundle_version_date, bundle_name, bundle_installer_location
-        #   belong to the entire bundle (RobotFramework AIO).
-        # * reference_version, reference_version_date, reference_app_name, reference_installer_location
-        #   belong either to the TestsuitesManagement or to the RobotFramework AIO, depending on the existence
-        #   of a certain RobotFramework AIO configuration file (package_context.json).
-        #   reference_... is used for the version control.
-
-        # === (1) Information about this application
-        self.__tsm_version            = TSM_VERSION
-        self.__tsm_version_date       = TSM_VERSION_DATE
-        self.__tsm_app_name           = TSM_APP_NAME
-        self.__tsm_installer_location = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
-        # default (assumed to be this application = standalone installation of TestsuitesManagement):
-        self.__reference_version            = self.__tsm_version
-        self.__reference_version_date       = self.__tsm_version_date
-        self.__reference_app_name           = self.__tsm_app_name
-        self.__reference_installer_location = self.__tsm_installer_location
-
-        # === (2) Information about the entire RobotFramework AIO bundle (if available)
-        # Detect if TestsuitesManagement is installed standalone or as part of the RobotFramework AIO.
-        # This depends on the existence of a file named 'package_context.json' within the 'Config' folder
-        # of the TestsuitesManagement installation.
-        self.__bundle_version            = None
-        self.__bundle_version_date       = None
-        self.__bundle_name               = None
-        self.__bundle_installer_location = None
-        self.__is_robotframework_aio     = False
-        absolute_reference_path = os.path.join(os.path.dirname(os.path.dirname(__file__)))
-        aio_package_context_file = CString.NormalizePath("Config/package_context.json", sReferencePathAbs=absolute_reference_path)
-        if os.path.isfile(aio_package_context_file):
-            # File indicating a RobotFramework AIO installation found. Reading reference information from there.
-            aio_package_context = None
-            if os.stat(aio_package_context_file).st_size == 0:
-                raise Exception(f"The RobotFramework AIO package context file is existing, but completely empty ({aio_package_context_file}).")
-            try:
-                with open(aio_package_context_file) as file:
-                    aio_package_context = json.load(file)
-            except Exception as reason:
-                # errorMsg = f"Cannot load the RobotFramework AIO package context file '{aio_package_context}' file. Reason: {reason}"
-                # or maybe shorter
-                errorMsg = f"{reason} (file 'aio_package_context_file')"
-                raise Exception(errorMsg)
-            try:
-                validate(instance=aio_package_context, schema=PACKAGE_CONTEXT_SCHEMA)
-            except Exception as reason:
-                # errorMsg = f"Invalid content of file '{aio_package_context_file}' file. Reason: {reason}"
-                # or maybe shorter
-                errorMsg = f"{reason} (file 'aio_package_context_file')"
-                raise Exception(errorMsg)
-
-            if aio_package_context.get('installer_location'):
-                # TODO: is optional ?
-                self.__bundle_installer_location = aio_package_context['installer_location']
-            if aio_package_context.get('bundle_name'):
-                self.__bundle_name = aio_package_context['bundle_name']
-            if aio_package_context.get('bundle_version'):
-                self.__bundle_version = aio_package_context['bundle_version']
-            if aio_package_context.get('bundle_version_date'):
-                self.__bundle_version_date = aio_package_context['bundle_version_date']
-
-            # paranoia check
-            if (self.__bundle_name is None) or (self.__bundle_version is None) or (self.__bundle_version_date is None):
-                # (but already PACKAGE_CONTEXT_SCHEMA should prevent this)
-                raise Exception(f"Incomplete package context file '{aio_package_context_file}'")
-
-            # set the reference to the bundle (because TestsuitesManagement is part of RobotFramework AIO)
-            self.__reference_version            = self.__bundle_version
-            self.__reference_version_date       = self.__bundle_version_date
-            self.__reference_app_name           = self.__bundle_name
-            self.__reference_installer_location = self.__bundle_installer_location
-            self.__is_robotframework_aio        = True
-
-    def is_robotframework_aio(self):
-        return self.__is_robotframework_aio
-
-    # not sure if we need all of the following methods; let's see
-
-    def get_reference_version(self):
-        return self.__reference_version
-
-    def get_reference_version_date(self):
-        return self.__reference_version_date
-
-    def get_reference_app_name(self):
-        return self.__reference_app_name
-
-    def get_reference_installer_location(self):
-        return self.__reference_installer_location
-
-    def get_tsm_version(self):
-        return self.__tsm_version
-
-    def get_tsm_version_date(self):
-        return self.__tsm_version_date
-
-    def get_tsm_app_name(self):
-        return self.__tsm_app_name
-
-    def get_tsm_installer_location(self):
-        return self.__tsm_installer_location
-
-    def get_bundle_version(self):
-        return self.__bundle_version
-
-    def get_bundle_version_date(self):
-        return self.__bundle_version_date
-
-    def get_bundle_name(self):
-        return self.__bundle_name
-
-    def get_bundle_installer_location(self):
-        return self.__bundle_installer_location
-
-# eof class VersionsConfig:
-
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Unfortunately these global variables are imported several times from outside.
-# Therefore, we need to define them here (but this should be a temporary solution only).
+# Therefore, we need to provide them here (but this should be a temporary solution only).
 # !!! TODO: Content and usage urgently need to be reworked !!!
-versions_config = VersionsConfig()
-BUNDLE_NAME         = versions_config.get_bundle_name()
-BUNDLE_VERSION      = versions_config.get_bundle_version()
-BUNDLE_VERSION_DATE = versions_config.get_bundle_version_date()
-INSTALLER_LOCATION  = versions_config.get_bundle_installer_location()
+BUNDLE_NAME         = None
+BUNDLE_VERSION      = None
+BUNDLE_VERSION_DATE = None
+INSTALLER_LOCATION  = None
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -211,16 +74,16 @@ INSTALLER_LOCATION  = versions_config.get_bundle_installer_location()
             # # # with open(context_filepath) as f:
                 # # # context_config = json.load(f)
         # # # except Exception as reason:
-            # # # errorMsg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
-            # # # vlogger.error(errorMsg)
-            # # # raise Exception(errorMsg)
+            # # # err_msg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
+            # # # vlogger.error(err_msg)
+            # # # raise Exception(err_msg)
         
         # # # try:
             # # # validate(instance=context_config, schema=package_context_schema)
         # # # except Exception as reason:
-            # # # errorMsg = f"Invalid '{context_filepath}' file. Reason: {reason}"
-            # # # vlogger.error(errorMsg)
-            # # # raise Exception(errorMsg)
+            # # # err_msg = f"Invalid '{context_filepath}' file. Reason: {reason}"
+            # # # vlogger.error(err_msg)
+            # # # raise Exception(err_msg)
 
         # # # if ('installer_location' in context_config) and context_config['installer_location']:
             # # # INSTALLER_LOCATION = context_config['installer_location']
@@ -254,78 +117,78 @@ INSTALLER_LOCATION  = versions_config.get_bundle_installer_location()
 
 
 class enVersionCheckResult(Enum):
-    """Defines different states that identify the result of the version check"""
+    """
+Defines different states that identify the result of the version check
+    """
     # min_version and max_version set to None
-    CHECK_NOT_EXECUTED    = "CHECK_NOT_EXECUTED"
+    CHECK_NOT_EXECUTED       = "CHECK_NOT_EXECUTED"
     # version check passed
-    CHECK_PASSED          = "CHECK_PASSED"
+    CHECK_PASSED             = "CHECK_PASSED"
     # version is not valid
-    CONFLICT_MIN          = "CONFLICT_MIN"
-    CONFLICT_MAX          = "CONFLICT_MAX"
+    CONFLICT_MIN             = "CONFLICT_MIN"
+    CONFLICT_MAX             = "CONFLICT_MAX"
     # internal errors
-    WRONG_MINMAX_RELATION = "WRONG_MINMAX_RELATION"
-    FORMAT_ERROR          = "FORMAT_ERROR"
-    FILE_ERROR            = "FILE_ERROR"
-    INTERNAL_ERROR        = "INTERNAL_ERROR"
+    WRONG_MINMAX_RELATION    = "WRONG_MINMAX_RELATION"
+    FORMAT_ERROR             = "FORMAT_ERROR"
+    BUNDLE_CONFIG_FILE_ERROR = "BUNDLE_CONFIG_FILE_ERROR"
+    INTERNAL_ERROR           = "INTERNAL_ERROR"
 
 class StatusMessages:
-    """Dictionary wrapper for status messages of version check. Needs to use the same keys like defined in enVersionCheckResult"""
+    """
+Dictionary wrapper for status messages of version check. Needs to use the same keys like defined in enVersionCheckResult
+    """
     def __init__(self):
         self._messages = {
-            "CHECK_NOT_EXECUTED"    : "Version check is skipped because both 'min_version' and 'max_version' are set to None.",
-            "CHECK_PASSED"          : "Version check passed.",
-            "CONFLICT_MIN"          : "The test execution requires the minimum version '<min_version>', but the installed version '<installed_version>' is older.",
-            "CONFLICT_MAX"          : "The test execution requires the maximum version '<max_version>', but the installed version '<installed_version>' is younger.",
-            "WRONG_MINMAX_RELATION" : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'.",
-            "FORMAT_ERROR"          : "A version number has an invalid format.",
-            "FILE_ERROR"            : "A syntax error occurred while parsing the file containing the bundle version number.",
-            "INTERNAL_ERROR"        : "Version could not be verified because of an internal error. Please contact the AIO team."
+            "CHECK_NOT_EXECUTED"       : "Version check is skipped because both 'min_version' and 'max_version' are set to None",
+            "CHECK_PASSED"             : "Version check passed",
+            "CONFLICT_MIN"             : "The test execution requires the minimum version '<min_version>', but the installed version '<installed_version>' is older",
+            "CONFLICT_MAX"             : "The test execution requires the maximum version '<max_version>', but the installed version '<installed_version>' is younger",
+            "WRONG_MINMAX_RELATION"    : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'",
+            "FORMAT_ERROR"             : "A version number has an invalid format",
+            "BUNDLE_CONFIG_FILE_ERROR" : "A syntax error occurred while accessing or parsing the bundle configuration file",
+            "INTERNAL_ERROR"           : "Version could not be verified because of an internal error. Please contact the AIO team"
         }
 
     def get(self, key, default=None):
-        """Get a status message by key."""
+        """
+Get a status message by key.
+        """
         return self._messages.get(key, default)
 
     def set(self, key, value):
-        """Set a status message."""
+        """
+Set a status message.
+        """
         self._messages[key] = value
 
     def __getitem__(self, key):
-        """Allow dict-style access: messages['VALID']"""
+        """
+Allow dict-style access: messages['VALID']
+        """
         return self._messages[key]
 
     def __setitem__(self, key, value):
-        """Allow dict-style assignment: messages['VALID'] = 'text'"""
+        """
+Allow dict-style assignment: messages['VALID'] = 'text'
+        """
         self._messages[key] = value
 
 class CVersion():
-    '''
+    """
 Validate a user-defined version against a reference version.
 
 The reference is either:
 * the version of the TestsuitesManagement (in case of a stand-alone installation)
 * the version of the RobotFramework AIO (TestsuitesManagement is part of a bundle)
-    '''
+    """
     def __init__(self):
-        versions_config = VersionsConfig()
-        # get to know if TestsuitesManagement is part of a bundle or not
-        self.is_robotframework_aio = versions_config.is_robotframework_aio()
-        vlogger.info(f"============= self.is_robotframework_aio: {self.is_robotframework_aio}")
-
-        # Identify the current run with the TestsuitesManagement version or the RobotFramework AIO bundle version
-        # already set above # self.is_robotframework_aio = False
-        # # # global context_config
-        # # # if context_config is not None and 'bundle_version' in context_config \
-            # # # and context_config['bundle_version']:
-            # already set above # self.is_robotframework_aio = True
-
         # contains the version number that has an invalid format
         self.version_number_invalid_format = None
 
 
     # LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
-        '''
+        """
 This method executes the version check, min_version and max_version are checked against the reference_version.
 
 Users can define own reference versions. But if reference_version is None, the internally 
@@ -347,31 +210,59 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
 
 **Returns:**
 
-* ``reason``
+* ``result``
 
   / *Type*: String /
 
-  A short reason if version checking is failed. 
-        '''
-        # define the reference version: either defined by user or by RobotFramework AIO installer
-        # or by TestsuitesManagement installer
-        tMinVersion = None
-        tMaxVersion = None
-        tCurrentVersion = None
-        if reference_version==None:
-            reference_version = BUNDLE_VERSION
-            try:
-                tCurrentVersion = self.tupleVersion(reference_version)
-            except:
-                return enVersionCheckResult.INTERNAL_ERROR.value
-        else:
-            if not isinstance(reference_version, str):
-                return enVersionCheckResult.INTERNAL_ERROR.value
-            else:
-                try:
-                    tCurrentVersion = self.tupleVersion(reference_version)
-                except:
-                    return enVersionCheckResult.INTERNAL_ERROR.value
+  A token string indicating the result of the vesion check.
+        """
+        # access to application configuration
+        # AppConfig(): [] other / [X] verifyVersion / [] checkVersion
+        try:
+            app_config = AppConfig()
+        except Exception as ex:
+            vlogger.error(f"{ex}")
+            return enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value
+
+        # !!! TODO: remove this workaround !!!
+        # !!! DOWNWARD COMPATIBILITY ONLY !!!
+        global BUNDLE_NAME
+        global BUNDLE_VERSION
+        global BUNDLE_VERSION_DATE
+        global INSTALLER_LOCATION
+        BUNDLE_NAME         = app_config.get_bundle_name()
+        BUNDLE_VERSION      = app_config.get_bundle_version()
+        BUNDLE_VERSION_DATE = app_config.get_bundle_version_date()
+        INSTALLER_LOCATION  = app_config.get_bundle_installer_location()
+        # !!! DOWNWARD COMPATIBILITY ONLY !!!
+
+        # NEW
+        if reference_version is None:
+            # reference defined by application (either TestsuitesManagement or RobotFramework AIO)
+            # # reference_app_name           = app_config.get_reference_app_name()
+            reference_version            = app_config.get_reference_version()
+            # # reference_version_date       = app_config.get_reference_version_date()
+            # # reference_installer_location = app_config.get_reference_installer_location()
+        # # else:
+            # # # reference defined by user
+            # # reference_app_name           = "user"
+            # # # reference_version          (is verifyVersion parameter)
+            # # reference_version_date       = None # no meaning in this context
+            # # reference_installer_location = None # no meaning in this context
+
+        # additional check of possible users input
+        if not isinstance(reference_version, str):
+            return enVersionCheckResult.FORMAT_ERROR.value
+
+        # time object variables
+        tMinVersion       = None
+        tMaxVersion       = None
+        tReferenceVersion = None # previously tCurrentVersion
+        try:
+            tReferenceVersion = self.tupleVersion(reference_version)
+        except:
+            return enVersionCheckResult.FORMAT_ERROR.value
+
         if min_version is None and max_version is None:
             return enVersionCheckResult.CHECK_NOT_EXECUTED.value
         if min_version is not None:
@@ -398,9 +289,9 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
                     return enVersionCheckResult.FORMAT_ERROR.value
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
             return enVersionCheckResult.WRONG_MINMAX_RELATION.value
-        if tMinVersion and not self.bValidateMinVersion(tCurrentVersion, tMinVersion):
+        if tMinVersion and not self.bValidateMinVersion(tReferenceVersion, tMinVersion):
             return enVersionCheckResult.CONFLICT_MIN.value
-        if tMaxVersion and not self.bValidateMaxVersion(tCurrentVersion, tMaxVersion):
+        if tMaxVersion and not self.bValidateMaxVersion(tReferenceVersion, tMaxVersion):
             return enVersionCheckResult.CONFLICT_MAX.value
         return enVersionCheckResult.CHECK_PASSED.value
 
@@ -448,31 +339,48 @@ bundle_version will be used as reference.
 
   Executed version check failed.
         '''
-        # # initialize default version logger
-        # vlogger = logging.getLogger(__name__)
-        # if ext_logger is not None:
-            # # if defined: use external logger
-            # vlogger = ext_logger
         # either use predefined status messages or user defined status messages
         if status_messages is None:
             status_messages = StatusMessages()
+
+        # access to application configuration
+        # AppConfig(): [] other / [] verifyVersion / [X] checkVersion
+        try:
+            app_config = AppConfig()
+        except Exception as ex:
+            vlogger.error(f"{ex}")
+            # access to bundle configuration file not possible, therefore version check not possible
+            # (currently the only reason for AppConfig exceptions)
+            status_message = status_messages[enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value]
+            raise Exception(f"{status_message}")
+
+
         # get and log the result of the version check
         result = self.verifyVersion(min_version, max_version, reference_version)
         status_message = status_messages[result]
+        # # # if result == enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value:
+            # # # # access to bundle configuration file not possible, therefore version check not possible
+# # # # # get_package_context_file()
+            # # # # # status_message = status_message.replace('<bundle_file>', ####)
+            # # # raise Exception(f"{status_message}")
+
+
         if min_version is not None:
             status_message = status_message.replace('<min_version>', min_version)
         if max_version is not None:
             status_message = status_message.replace('<max_version>', max_version)
+
+        # !!! TODO: This depends on reference_version. If set by user, it's not an '<installed_version>'
+        # and it's not the BUNDLE_VERSION, it's the reference version set by user !!!
         status_message = status_message.replace('<installed_version>', BUNDLE_VERSION) if reference_version is None else \
                             status_message.replace('<installed_version>', reference_version)
         status_message = f"{status_message} ({BUNDLE_NAME})"
         # mapping between the result of the version check and the reaction on this result
         # 1. exceptions
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
-                    enVersionCheckResult.FORMAT_ERROR.value,
-                    enVersionCheckResult.FILE_ERROR.value,
-                    enVersionCheckResult.INTERNAL_ERROR.value):
-            raise Exception(f"Version check exception: {status_message}")
+                      enVersionCheckResult.FORMAT_ERROR.value,
+                      enVersionCheckResult.INTERNAL_ERROR.value):
+            raise Exception(f"{status_message}")
         # 2. executed version check failed
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
@@ -618,3 +526,4 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
             return tuple(map(lambda x: CVersion.bValidateSubVersion(x), lVersion))
         except Exception as error:
             raise Exception(f"{error} '{sVersion}'")
+

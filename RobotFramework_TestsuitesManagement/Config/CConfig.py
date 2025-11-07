@@ -35,7 +35,8 @@ from builtins import staticmethod
 
 import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult, VersionsConfig
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult, \
+                                                               INSTALLER_LOCATION, BUNDLE_NAME, BUNDLE_VERSION
 from PythonExtensionsCollection.String.CString import CString
 
 from JsonPreprocessor import CJsonPreprocessor
@@ -45,15 +46,6 @@ from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
 
-
-# --------------------------------------------------------------------------------------------------------------
-# successor of
-# from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult, \
-    # bundle_version, INSTALLER_LOCATION, BUNDLE_NAME, BUNDLE_VERSION
-# alternatively access values from CVersion.py 'class VersionsConfig'
-versions_config = VersionsConfig()
-# Mapping between new names prepared within VersionsConfig and old names stillused within this module.
-# TODO: Later this must be tidied up!
 
 class CConfig():
     '''
@@ -671,4 +663,6 @@ testsuite is terminated with "unknown" state
             raise Exception('Version control error!!!')
 
 if __name__ == "__main__":
-    bundle_version()
+    # # # bundle_version()
+    print("Hello TestsuitesManagement")
+    # TODO: dump of all application information taken from AppConfig
