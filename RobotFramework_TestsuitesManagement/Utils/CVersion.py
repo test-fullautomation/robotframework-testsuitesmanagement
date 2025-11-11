@@ -26,13 +26,13 @@ from jsonschema import validate
 # # # from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
 # # # from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
 
-import logging # use logger independent from Robot Framework (like defined in component_logger_config)
-from RobotFramework_TestsuitesManagement.Utils import component_logger_config
+import logging # use logger independent from Robot Framework (like defined in app_logger_config)
+from RobotFramework_TestsuitesManagement.Utils import app_logger_config
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 from PythonExtensionsCollection.String.CString import CString
 
 # initialize default version logger
-vlogger = logging.getLogger(__name__)
+applogger = logging.getLogger(__name__)
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Unfortunately these global variables are imported several times from outside.
@@ -57,7 +57,7 @@ INSTALLER_LOCATION  = None
 
 # # # if os.path.isfile(context_filepath):
     # # # if os.stat(context_filepath).st_size == 0:
-        # # # vlogger.warn(f"The '{context_filepath}' file is existing but empty.")
+        # # # applogger.warn(f"The '{context_filepath}' file is existing but empty.")
     # # # else:
         # # # package_context_schema = {
             # # # "type": "object",
@@ -75,14 +75,14 @@ INSTALLER_LOCATION  = None
                 # # # context_config = json.load(f)
         # # # except Exception as reason:
             # # # err_msg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
-            # # # vlogger.error(err_msg)
+            # # # applogger.error(err_msg)
             # # # raise Exception(err_msg)
         
         # # # try:
             # # # validate(instance=context_config, schema=package_context_schema)
         # # # except Exception as reason:
             # # # err_msg = f"Invalid '{context_filepath}' file. Reason: {reason}"
-            # # # vlogger.error(err_msg)
+            # # # applogger.error(err_msg)
             # # # raise Exception(err_msg)
 
         # # # if ('installer_location' in context_config) and context_config['installer_location']:
@@ -141,10 +141,10 @@ Dictionary wrapper for status messages of version check. Needs to use the same k
         self._messages = {
             "CHECK_NOT_EXECUTED"       : "Version check is skipped because both 'min_version' and 'max_version' are set to None",
             "CHECK_PASSED"             : "Version check passed",
-            "CONFLICT_MIN"             : "The test execution requires the minimum version '<min_version>', but the installed version '<installed_version>' is older",
-            "CONFLICT_MAX"             : "The test execution requires the maximum version '<max_version>', but the installed version '<installed_version>' is younger",
+            "CONFLICT_MIN"             : "The test execution requires the minimum version '<min_version>', but the reference version '<reference_version>' is older",
+            "CONFLICT_MAX"             : "The test execution requires the maximum version '<max_version>', but the reference version '<reference_version>' is younger",
             "WRONG_MINMAX_RELATION"    : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'",
-            "FORMAT_ERROR"             : "A version number has an invalid format",
+            "FORMAT_ERROR"             : "A version number has an invalid format: <invalid_format_reason>",
             "BUNDLE_CONFIG_FILE_ERROR" : "A syntax error occurred while accessing or parsing the bundle configuration file",
             "INTERNAL_ERROR"           : "Version could not be verified because of an internal error. Please contact the AIO team"
         }
@@ -173,7 +173,7 @@ Allow dict-style assignment: messages['VALID'] = 'text'
         """
         self._messages[key] = value
 
-class CVersion():
+class CVersion:
     """
 Validate a user-defined version against a reference version.
 
@@ -183,8 +183,8 @@ The reference is either:
     """
     def __init__(self):
         # contains the version number that has an invalid format
-        self.version_number_invalid_format = None
-
+        self.__version_number_invalid_format = None
+        self.__last_error = None
 
     # LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
@@ -216,12 +216,18 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
 
   A token string indicating the result of the vesion check.
         """
+        # reinit some flags
+        self.__version_number_invalid_format = None
+        self.__last_error = None
+        app_config = None
+
         # access to application configuration
-        # AppConfig(): [] other / [X] verifyVersion / [] checkVersion
+        # [] CConfig / [] CKeywords / [X] verifyVersion / [] checkVersion
         try:
             app_config = AppConfig()
         except Exception as ex:
-            vlogger.error(f"{ex}")
+            self.__last_error = f"[verifyVersion]: {ex}"
+            applogger.error(self.__last_error)
             return enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value
 
         # !!! TODO: remove this workaround !!!
@@ -236,22 +242,12 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         INSTALLER_LOCATION  = app_config.get_bundle_installer_location()
         # !!! DOWNWARD COMPATIBILITY ONLY !!!
 
-        # NEW
-        if reference_version is None:
-            # reference defined by application (either TestsuitesManagement or RobotFramework AIO)
-            # # reference_app_name           = app_config.get_reference_app_name()
-            reference_version            = app_config.get_reference_version()
-            # # reference_version_date       = app_config.get_reference_version_date()
-            # # reference_installer_location = app_config.get_reference_installer_location()
-        # # else:
-            # # # reference defined by user
-            # # reference_app_name           = "user"
-            # # # reference_version          (is verifyVersion parameter)
-            # # reference_version_date       = None # no meaning in this context
-            # # reference_installer_location = None # no meaning in this context
+        if not reference_version:
+            reference_version = app_config.get_reference_version()
 
         # additional check of possible users input
         if not isinstance(reference_version, str):
+            self.__last_error = f"[verifyVersion]: reference_version '{reference_version}' is not of expected format 'str'"
             return enVersionCheckResult.FORMAT_ERROR.value
 
         # time object variables
@@ -260,38 +256,48 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         tReferenceVersion = None # previously tCurrentVersion
         try:
             tReferenceVersion = self.tupleVersion(reference_version)
-        except:
+        except Exception as ex:
+            self.__last_error = f"[verifyVersion]: {ex}"
             return enVersionCheckResult.FORMAT_ERROR.value
 
         if min_version is None and max_version is None:
             return enVersionCheckResult.CHECK_NOT_EXECUTED.value
         if min_version is not None:
             if not isinstance(min_version, str):
+                self.__last_error = f"[verifyVersion]: min_version '{min_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
-                self.version_number_invalid_format = min_version
+                self.__last_error = f"[verifyVersion]: min_version '{min_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__version_number_invalid_format = min_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMinVersion = self.tupleVersion(min_version)
-                except:
+                except Exception as ex:
+                    self.__last_error = f"[verifyVersion]: {ex}"
                     return enVersionCheckResult.FORMAT_ERROR.value
         if max_version is not None:
             if not isinstance(max_version, str):
+                self.__last_error = f"[verifyVersion]: max_version '{max_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
-                self.version_number_invalid_format = max_version
+                self.__last_error = f"[verifyVersion]: max_version '{max_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__version_number_invalid_format = max_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMaxVersion = self.tupleVersion(max_version)
-                except:
+                except Exception as ex:
+                    self.__last_error = f"[verifyVersion]: {ex}"
                     return enVersionCheckResult.FORMAT_ERROR.value
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
+            self.__last_error = "[verifyVersion]: WRONG_MINMAX_RELATION"
             return enVersionCheckResult.WRONG_MINMAX_RELATION.value
         if tMinVersion and not self.bValidateMinVersion(tReferenceVersion, tMinVersion):
+            self.__last_error = "[verifyVersion]: CONFLICT_MIN"
             return enVersionCheckResult.CONFLICT_MIN.value
         if tMaxVersion and not self.bValidateMaxVersion(tReferenceVersion, tMaxVersion):
+            self.__last_error = "[verifyVersion]: CONFLICT_MAX"
             return enVersionCheckResult.CONFLICT_MAX.value
         return enVersionCheckResult.CHECK_PASSED.value
 
@@ -339,56 +345,85 @@ bundle_version will be used as reference.
 
   Executed version check failed.
         '''
+        # Caution: Python logger         : logger.warning
+        #     But: Robot Framework logger: logger.warn
+        # Because of this deviation (and because it is not really required), warning/warn is not used here.
+        # Either we use here level 'error' or we raise an exception!
+        logger = applogger # default
+        if ext_logger:
+            # user want to use own logger
+            logger = ext_logger
+
         # either use predefined status messages or user defined status messages
-        if status_messages is None:
+        if not status_messages:
             status_messages = StatusMessages()
 
         # access to application configuration
-        # AppConfig(): [] other / [] verifyVersion / [X] checkVersion
+        # [] CConfig / [] CKeywords / [] verifyVersion / [X] checkVersion
         try:
             app_config = AppConfig()
         except Exception as ex:
-            vlogger.error(f"{ex}")
-            # access to bundle configuration file not possible, therefore version check not possible
-            # (currently the only reason for AppConfig exceptions)
-            status_message = status_messages[enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value]
-            raise Exception(f"{status_message}")
-
+            logger.error(f"[checkVersion]: {ex}")
+            raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
         # get and log the result of the version check
         result = self.verifyVersion(min_version, max_version, reference_version)
         status_message = status_messages[result]
-        # # # if result == enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value:
-            # # # # access to bundle configuration file not possible, therefore version check not possible
-# # # # # get_package_context_file()
-            # # # # # status_message = status_message.replace('<bundle_file>', ####)
-            # # # raise Exception(f"{status_message}")
 
-
-        if min_version is not None:
+        # apply current calues
+        if min_version:
             status_message = status_message.replace('<min_version>', min_version)
-        if max_version is not None:
+        if max_version:
             status_message = status_message.replace('<max_version>', max_version)
+        if self.__last_error:
+            status_message = status_message.replace('<invalid_format_reason>', self.__last_error)
+        else:
+            status_message = status_message.replace('<invalid_format_reason>', "reason not available")
 
-        # !!! TODO: This depends on reference_version. If set by user, it's not an '<installed_version>'
-        # and it's not the BUNDLE_VERSION, it's the reference version set by user !!!
-        status_message = status_message.replace('<installed_version>', BUNDLE_VERSION) if reference_version is None else \
-                            status_message.replace('<installed_version>', reference_version)
-        status_message = f"{status_message} ({BUNDLE_NAME})"
-        # mapping between the result of the version check and the reaction on this result
-        # 1. exceptions
+        # add app specific information
+        if reference_version:
+            # reference_version is set by user (as checkVersion parameter)
+            reference_app_name = None # if reference_version is set by user, we do not have a corresponding name for an application
+        else:
+            # get the reference version and reference app name from app config
+            reference_version = app_config.get_reference_version()
+            reference_app_name = app_config.get_reference_app_name()
+        status_message = status_message.replace('<reference_version>', reference_version)
+        if reference_app_name:
+            # add the name of the applictaion used as reference
+            status_message = f"{status_message} ({reference_app_name})"
+
+        # Mapping between the result of the version check and the reaction on this result
+        # 1. premature end of execution because of errors
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
                       enVersionCheckResult.FORMAT_ERROR.value,
                       enVersionCheckResult.INTERNAL_ERROR.value):
-            raise Exception(f"{status_message}")
-        # 2. executed version check failed
+            logger.error(f"{status_message}")
+            raise Exception("Execution will be aborted because of a critical version number issue")
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
-            vlogger.error(f"Version check error: {status_message}")
-            return False
+            logger.error(f"Version check failed: {status_message}")
+            raise Exception("Execution will be aborted because of a failed version check")
 
-        vlogger.info(f"{status_message}")
+        # 2. the good case
+        logger.info(f"{status_message}")
         return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
+
+
+    def get_last_error(self):
+        """
+Returns the most recently occurred error (during execution of low level method verifyVersion)
+        """
+        return self.__last_error
+
+    def get_version_number_invalid_format(self):
+        # TODO: currently used in versionCheck of CConfig.
+        #       better solution needed; this method should be removed later
+        """
+Returns the version number with invalid format
+        """
+        return self.__version_number_invalid_format
+
 
     @staticmethod
     def bValidateMinVersion(tCurrentVersion, tMinVersion):
@@ -482,7 +517,7 @@ it into sub tuple for version comparision.
 
             return tuple(lSubVersion)
         else:
-            raise Exception("Wrong format in version information")
+            raise Exception(f"Invalid version format '{sVersion}'")
         
     @staticmethod
     def tupleVersion(sVersion):
@@ -510,8 +545,6 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
   / *Type*: tuple /
 
   A tuple which contains the (major, minor, patch) version.
-
-
         '''
         lVersion = sVersion.split(".")
         if len(lVersion) == 1:
@@ -525,5 +558,6 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
             # verify the version info is a number
             return tuple(map(lambda x: CVersion.bValidateSubVersion(x), lVersion))
         except Exception as error:
-            raise Exception(f"{error} '{sVersion}'")
+            raise Exception(f"{error} (within '{sVersion}')")
+
 

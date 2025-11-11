@@ -25,12 +25,13 @@ from jsonschema import validate
 from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
 from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
 
-from RobotFramework_TestsuitesManagement.Utils import component_logger_config
+from RobotFramework_TestsuitesManagement.Utils import app_logger_config
 from PythonExtensionsCollection.String.CString import CString
 
-import logging # use logger independent from Robot Framework (like defined in component_logger_config)
+import logging # use logger independent from Robot Framework (like defined in app_logger_config)
 # initialize default version logger
-vlogger = logging.getLogger(__name__)
+applogger = logging.getLogger(__name__)
+applogger.setLevel(logging.DEBUG) # must belong to this logger only (therefore DEBUG not defined in app_logger_config.py)
 
 # content check of RobotFramework AIO configuration file 'package_context.json'
 PACKAGE_CONTEXT_SCHEMA = {
@@ -132,51 +133,97 @@ Configuration class that contains all the information about the application.
     # eof def __init__(self):
 
     def is_robotframework_aio(self):
+        """
+Returns
+* ``True``: RobotFramework AIO is installed
+* ``False``: RobotFramework AIO is not installed (= standalone installation of TestsuitesManagement)
+        """
         return self.__is_robotframework_aio
 
     def get_package_context_file(self):
+        """
+Returns path and name of package context file
+        """
         return self.__aio_package_context_file
 
     # TODO:
     # def dump_app_config(self):
         # all versions, dates, names
 
-    # !!! TODO: map the following methods to keywords !!!
-
     def get_reference_version(self):
+        """
+Returns the version number used as reference for version checks. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
         return self.__reference_version
 
     def get_reference_version_date(self):
+        """
+Returns the version date belonging to the reference. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
         return self.__reference_version_date
 
     def get_reference_app_name(self):
+        """
+Returns the name of the reference application. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
         return self.__reference_app_name
 
     def get_reference_installer_location(self):
+        """
+Returns the location of the reference installer. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
         return self.__reference_installer_location
 
     def get_tsm_version(self):
+        """
+Returns the version of the TestsuitesManagement.
+        """
         return self.__tsm_version
 
     def get_tsm_version_date(self):
+        """
+Returns the version date of the TestsuitesManagement.
+        """
         return self.__tsm_version_date
 
     def get_tsm_app_name(self):
+        """
+Returns the application name of the TestsuitesManagement.
+        """
         return self.__tsm_app_name
 
     def get_tsm_installer_location(self):
+        """
+Returns the location of the TestsuitesManagement installer.
+        """
         return self.__tsm_installer_location
 
     def get_bundle_version(self):
+        """
+Returns the version of the entire RobotFramework AIO bundle.
+        """
         return self.__bundle_version
 
     def get_bundle_version_date(self):
+        """
+Returns the version date of the entire RobotFramework AIO bundle.
+        """
         return self.__bundle_version_date
 
     def get_bundle_name(self):
+        """
+Returns the name of the entire RobotFramework AIO bundle.
+        """
         return self.__bundle_name
 
     def get_bundle_installer_location(self):
+        """
+Returns the location of the installer of the entire RobotFramework AIO bundle.
+        """
         return self.__bundle_installer_location
 
 # eof class AppConfig:

@@ -19,6 +19,10 @@
 # Defines a component specific logger configuration for Robot Framework independent internal loggers
 # (used in Python methods)
 
+# 'level': 'INFO'
+# also belongs to loggers of imported libraries - therefore not set to DEBUG here; would be too much!
+# => Level DEBUG currently not supported here.
+
 import logging.config
 
 LOGGING_CONFIG = {
@@ -26,26 +30,26 @@ LOGGING_CONFIG = {
     'disable_existing_loggers': False,  # loggers shall not influence each other!
     'formatters': {
         'standard': {
-            'format': '%(asctime)s - %(levelname)s - %(message)s'
+            'format': '(TSM) %(asctime)s - %(levelname)s - %(message)s'
         },
     },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'standard',
-            'level': 'DEBUG',
+            'level': 'INFO',
         },
         # TODO: which file to be defined
         # 'file': {
             # 'class': 'logging.FileHandler',
             # 'filename': 'app.log',
             # 'formatter': 'standard',
-            # 'level': 'DEBUG',
+            # 'level': 'INFO',
         # },
     },
     'root': {
         'handlers': ['console'], # , 'file'],
-        'level': 'DEBUG',
+        'level': 'INFO',
     },
 }
 

@@ -22,9 +22,7 @@ from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
-
-# access to application configuration
-TSM_APP_CONFIG = AppConfig()
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion
 
 class CSetupKeywords(object):
     '''
@@ -101,7 +99,7 @@ and logs out the basic information about the test execution.
         else:
             logger.info(msg)
 
-        TM.CTestsuitesCfg.oConfig.versionCheck()
+        TM.CTestsuitesCfg.oConfig.checkVersion()
         logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
         if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
@@ -146,14 +144,21 @@ This keyword writes information about the testcase result to the log files.
 
 class CGeneralKeywords(object):
     '''
-This CGeneralKeywords class defines the keywords which will be using in RobotFramework AIO test script.
-
-``Get Config`` keyword gets the current config object of robot run.
-
-``Load Json`` keyword loads json file then return json object.
-
-In case new robot keyword is required, it will be defined and implemented in this class.
+Class to define general keywords, that have nothing to do with the setups and teardowns
+of suites and tests.
     '''
+
+    def __init__(self):
+        # access to application configuration
+        self.__tsm_app_config       = None
+        self.__tsm_app_config_error = None
+        # [] CConfig / [X] CKeywords / [] verifyVersion / [] checkVersion
+        try:
+            self.__tsm_app_config = AppConfig()
+        except Exception as ex:
+            # Will be used when keyword (that requires this config) is executed.
+            # No exit here!
+            self.__tsm_app_config_error = f"{ex}"
 
     @keyword
     def get_config(self):
@@ -217,90 +222,146 @@ Loads a json file and returns a json object.
             return oJsonData
 
 
-    # # # # old version
-    # # # @keyword
-    # # # def get_version(self):
-        # # # '''
-# # # This function returns the package version which is:
-
-# # # * RobotFramework_TestsuitesManagement version when this module is installed
-  # # # stand-alone (via `pip` or directly from sourcecode)
-
-# # # * RobotFramework AIO version when this module is bundled with RobotFramework AIO
-  # # # package
-        # # # '''
-        # # # return TM.VERSION
-
-
-# TSM_APP_CONFIG.is_robotframework_aio()
-# TSM_APP_CONFIG.get_package_context_file()
-# TSM_APP_CONFIG.get_reference_version()
-# TSM_APP_CONFIG.get_reference_version_date()
-# TSM_APP_CONFIG.get_reference_app_name()
-# TSM_APP_CONFIG.get_reference_installer_location()
-# TSM_APP_CONFIG.get_tsm_version()
-# TSM_APP_CONFIG.get_tsm_version_date()
-# TSM_APP_CONFIG.get_tsm_app_name()
-# TSM_APP_CONFIG.get_tsm_installer_location()
-# TSM_APP_CONFIG.get_bundle_version()
-# TSM_APP_CONFIG.get_bundle_version_date()
-# TSM_APP_CONFIG.get_bundle_name()
-# TSM_APP_CONFIG.get_bundle_installer_location()
-
     @keyword
     def is_robotframework_aio(self):
-        return TSM_APP_CONFIG.is_robotframework_aio()
+        """
+Returns
+* ``True``: RobotFramework AIO is installed
+* ``False``: RobotFramework AIO is not installed (= standalone installation of TestsuitesManagement)
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.is_robotframework_aio()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_package_context_file(self):
-        return TSM_APP_CONFIG.get_package_context_file()
+        """
+Returns path and name of package context file
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_package_context_file()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_reference_version(self):
-        return TSM_APP_CONFIG.get_reference_version()
+        """
+Returns the version number used as reference for version checks. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_reference_version()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_reference_version_date(self):
-        return TSM_APP_CONFIG.get_reference_version_date()
+        """
+Returns the version date belonging to the reference. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_reference_version_date()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_reference_app_name(self):
-        return TSM_APP_CONFIG.get_reference_app_name()
+        """
+Returns the name of the reference application. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_reference_app_name()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_reference_installer_location(self):
-        return TSM_APP_CONFIG.get_reference_installer_location()
+        """
+Returns the location of the reference installer. The reference is either the RobotFramework AIO
+or the TestsuitesManagement, depending on what is installed.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_reference_installer_location()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_tsm_version(self):
-        return TSM_APP_CONFIG.get_tsm_version()
+        """
+Returns the version of the TestsuitesManagement.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_tsm_version()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_tsm_version_date(self):
-        return TSM_APP_CONFIG.get_tsm_version_date()
+        """
+Returns the version date of the TestsuitesManagement.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_tsm_version_date()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_tsm_app_name(self):
-        return TSM_APP_CONFIG.get_tsm_app_name()
+        """
+Returns the application name of the TestsuitesManagement.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_tsm_app_name()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_tsm_installer_location(self):
-        return TSM_APP_CONFIG.get_tsm_installer_location()
+        """
+Returns the location of the TestsuitesManagement installer.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_tsm_installer_location()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_bundle_version(self):
-        return TSM_APP_CONFIG.get_bundle_version()
+        """
+Returns the version of the entire RobotFramework AIO bundle.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_bundle_version()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_bundle_version_date(self):
-        return TSM_APP_CONFIG.get_bundle_version_date()
+        """
+Returns the version date of the entire RobotFramework AIO bundle.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_bundle_version_date()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_bundle_name(self):
-        return TSM_APP_CONFIG.get_bundle_name()
+        """
+Returns the name of the entire RobotFramework AIO bundle.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_bundle_name()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
     def get_bundle_installer_location(self):
-        return TSM_APP_CONFIG.get_bundle_installer_location()
+        """
+Returns the location of the installer of the entire RobotFramework AIO bundle.
+        """
+        if self.__tsm_app_config:
+            return self.__tsm_app_config.get_bundle_installer_location()
+        raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
+    @keyword
+    def check_version(self, min_version=None, max_version=None, reference_version=None):
+        """
+This keyword executes a version check, min_version and max_version are checked against the reference_version.
+        """
+        # Keyword wrapper for high level method '``checkVersion``' defined in CVersion.py
+        version = CVersion()
+        result = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger) # 'logger' is the one from robot.api
+        return result
+    # A corrsponding keyword wrapper for the low level method '``verifyVersion``' is currently not implemented (and most probably will not be required).
 
