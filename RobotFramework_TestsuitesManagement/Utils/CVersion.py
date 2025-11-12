@@ -23,16 +23,12 @@ import regex
 import json
 from enum import Enum
 from jsonschema import validate
-# # # from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
-# # # from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
-
-import logging # use logger independent from Robot Framework (like defined in app_logger_config)
-from RobotFramework_TestsuitesManagement.Utils import app_logger_config
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
+from RobotFramework_TestsuitesManagement.Utils import app_logger
 from PythonExtensionsCollection.String.CString import CString
 
-# initialize default version logger
-applogger = logging.getLogger(__name__)
+# create an application specific logger
+app_logger = app_logger.setup_app_logger()
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Unfortunately these global variables are imported several times from outside.
@@ -43,77 +39,6 @@ BUNDLE_VERSION      = None
 BUNDLE_VERSION_DATE = None
 INSTALLER_LOCATION  = None
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-# # # INSTALLER_LOCATION = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/releases"
-# # # BUNDLE_NAME = "RobotFramework_TestsuitesManagement"
-# # # BUNDLE_VERSION = TSM_VERSION
-# # # BUNDLE_VERSION_DATE = TSM_VERSION_DATE
-
-# # # # Load package context file to get the bundle version
-# # # context_filename = "package_context.json"
-# # # context_filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), f"Config/{context_filename}")
-# # # context_config = None
-
-# # # if os.path.isfile(context_filepath):
-    # # # if os.stat(context_filepath).st_size == 0:
-        # # # applogger.warn(f"The '{context_filepath}' file is existing but empty.")
-    # # # else:
-        # # # package_context_schema = {
-            # # # "type": "object",
-            # # # "additionalProperties": False,
-            # # # "properties": {
-                # # # "installer_location": {"type": "string"},
-                # # # "bundle_name": {"type": "string"},
-                # # # "bundle_version": {"type": "string"},
-                # # # "bundle_version_date": {"type": "string"}
-            # # # },
-            # # # "required": ["bundle_name", "bundle_version", "bundle_version_date"]
-        # # # }
-        # # # try:
-            # # # with open(context_filepath) as f:
-                # # # context_config = json.load(f)
-        # # # except Exception as reason:
-            # # # err_msg = f"Cannot load the '{context_filepath}' file. Reason: {reason}"
-            # # # applogger.error(err_msg)
-            # # # raise Exception(err_msg)
-        
-        # # # try:
-            # # # validate(instance=context_config, schema=package_context_schema)
-        # # # except Exception as reason:
-            # # # err_msg = f"Invalid '{context_filepath}' file. Reason: {reason}"
-            # # # applogger.error(err_msg)
-            # # # raise Exception(err_msg)
-
-        # # # if ('installer_location' in context_config) and context_config['installer_location']:
-            # # # INSTALLER_LOCATION = context_config['installer_location']
-        # # # if ('bundle_name' in context_config) and context_config['bundle_name']:
-            # # # BUNDLE_NAME = context_config['bundle_name']
-        # # # if ('bundle_version' in context_config) and context_config['bundle_version']:
-            # # # BUNDLE_VERSION = context_config['bundle_version']
-        # # # if ('bundle_version_date' in context_config) and context_config['bundle_version_date']:
-            # # # BUNDLE_VERSION_DATE = context_config['bundle_version_date']
-
-
-# # # def bundle_version():
-   # # # '''
-# # # This function prints out the package version which is:
-
-# # # - RobotFramework_TestsuitesManagement version when this module is installed
-# # # stand-alone (via `pip` or directly from sourcecode)
-
-# # # - RobotFramework AIO version when this module is bundled with RobotFramework AIO
-# # # package
-
-# # # **Arguments:**
-
-# # # * No input parameter is required
-
-# # # **Returns:**
-
-# # # * No return variable
-   # # # '''
-   # # # print(f"{BUNDLE_VERSION}")
 
 
 class enVersionCheckResult(Enum):
@@ -227,7 +152,7 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
             app_config = AppConfig()
         except Exception as ex:
             self.__last_error = f"[verifyVersion]: {ex}"
-            applogger.error(self.__last_error)
+            app_logger.error(self.__last_error)
             return enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value
 
         # !!! TODO: remove this workaround !!!
@@ -291,13 +216,19 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
                     self.__last_error = f"[verifyVersion]: {ex}"
                     return enVersionCheckResult.FORMAT_ERROR.value
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.__last_error = "[verifyVersion]: WRONG_MINMAX_RELATION"
+            self.__last_error = f"[verifyVersion] (WRONG_MINMAX_RELATION): min_version ({min_version}) > max_version ({max_version})"
             return enVersionCheckResult.WRONG_MINMAX_RELATION.value
         if tMinVersion and not self.bValidateMinVersion(tReferenceVersion, tMinVersion):
-            self.__last_error = "[verifyVersion]: CONFLICT_MIN"
+            self.__last_error = f"[verifyVersion] (CONFLICT_MIN): Required is minimum version '{min_version}', but the reference version '{reference_version}' is older"
+            reference_app_name = app_config.get_reference_app_name()
+            if reference_app_name:
+                self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MIN.value
         if tMaxVersion and not self.bValidateMaxVersion(tReferenceVersion, tMaxVersion):
-            self.__last_error = "[verifyVersion]: CONFLICT_MAX"
+            self.__last_error = f"[verifyVersion] (CONFLICT_MAX): Required is maximum version '{max_version}', but the reference version '{reference_version}' is younger"
+            reference_app_name = app_config.get_reference_app_name()
+            if reference_app_name:
+                self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MAX.value
         return enVersionCheckResult.CHECK_PASSED.value
 
@@ -349,7 +280,7 @@ bundle_version will be used as reference.
         #     But: Robot Framework logger: logger.warn
         # Because of this deviation (and because it is not really required), warning/warn is not used here.
         # Either we use here level 'error' or we raise an exception!
-        logger = applogger # default
+        logger = app_logger # default
         if ext_logger:
             # user want to use own logger
             logger = ext_logger

@@ -24,14 +24,7 @@ from enum import Enum
 from jsonschema import validate
 from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
 from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE
-
-from RobotFramework_TestsuitesManagement.Utils import app_logger_config
 from PythonExtensionsCollection.String.CString import CString
-
-import logging # use logger independent from Robot Framework (like defined in app_logger_config)
-# initialize default version logger
-applogger = logging.getLogger(__name__)
-applogger.setLevel(logging.DEBUG) # must belong to this logger only (therefore DEBUG not defined in app_logger_config.py)
 
 # content check of RobotFramework AIO configuration file 'package_context.json'
 PACKAGE_CONTEXT_SCHEMA = {
