@@ -74,6 +74,15 @@ Dictionary wrapper for status messages of version check. Needs to use the same k
             "INTERNAL_ERROR"           : "Version could not be verified because of an internal error. Please contact the AIO team"
         }
 
+    def get_messages_dict(self):
+        """
+Returns the entire messages dictionary.
+
+Background: Robot Framework requires a concrete dictionary, and not a class object containing a dictionary
+        """
+        return self._messages
+
+
     def get(self, key, default=None):
         """
 Get a status message by key.
@@ -102,7 +111,8 @@ class CVersion:
     """
 Validate a user-defined version against a reference version.
 
-The reference is either:
+The reference can be:
+
 * the version of the TestsuitesManagement (in case of a stand-alone installation)
 * the version of the RobotFramework AIO (TestsuitesManagement is part of a bundle)
     """
@@ -110,34 +120,37 @@ The reference is either:
         # contains the version number that has an invalid format
         self.__version_number_invalid_format = None
         self.__last_error = None
+        self.__reference_version_defined_by_user = False
 
     # LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
         """
-This method executes the version check, min_version and max_version are checked against the reference_version.
+This method executes a version check at low level (a token string is returned only).
 
-Users can define own reference versions. But if reference_version is None, the internally 
-defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will be used as reference.
+The ``min_version`` and the ``max_version`` are checked against the ``reference_version``.
+
+If the ``reference_version`` is ``None`` (= not defined by user), the internally 
+defined bundle version (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
 
 **Arguments:**
 
 * ``min_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 * ``max_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 * ``reference_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 **Returns:**
 
 * ``result``
 
-  / *Type*: String /
+  / *Type*: str /
 
   A token string indicating the result of the vesion check.
         """
@@ -167,74 +180,88 @@ defined bundle_version (either RobotFramework AIO or TestsuitesManagement) will 
         INSTALLER_LOCATION  = app_config.get_bundle_installer_location()
         # !!! DOWNWARD COMPATIBILITY ONLY !!!
 
+        # if available, the reference application name will (in some cases) be added to the 'last error' message
+        reference_app_name = app_config.get_reference_app_name()
+
         if not reference_version:
+            # reference_version not defined by user => get the computed reference version from application configuration
             reference_version = app_config.get_reference_version()
+            self.__reference_version_defined_by_user = False
+        else:
+            # reference_version defined by user => we do not have a corresponding name
+            self.__reference_version_defined_by_user = True
 
         # additional check of possible users input
         if not isinstance(reference_version, str):
             self.__last_error = f"[verifyVersion]: reference_version '{reference_version}' is not of expected format 'str'"
             return enVersionCheckResult.FORMAT_ERROR.value
 
-        # time object variables
+        # version tuples
         tMinVersion       = None
         tMaxVersion       = None
-        tReferenceVersion = None # previously tCurrentVersion
+        tReferenceVersion = None
+
+        # version check required?
+        if min_version is None and max_version is None:
+            self.__last_error = None # possible previous errors are irrelevant now
+            return enVersionCheckResult.CHECK_NOT_EXECUTED.value
+        # reference version check
         try:
             tReferenceVersion = self.tupleVersion(reference_version)
         except Exception as ex:
-            self.__last_error = f"[verifyVersion]: {ex}"
+            self.__last_error = f"[verifyVersion]: {ex} (reference_version)"
+            if reference_app_name and not self.__reference_version_defined_by_user:
+                self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.FORMAT_ERROR.value
-
-        if min_version is None and max_version is None:
-            return enVersionCheckResult.CHECK_NOT_EXECUTED.value
+        # minimum version check
         if min_version is not None:
             if not isinstance(min_version, str):
-                self.__last_error = f"[verifyVersion]: min_version '{min_version}' is not of expected format 'str'"
+                self.__last_error = f"[verifyVersion]: minimum version '{min_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
-                self.__last_error = f"[verifyVersion]: min_version '{min_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"[verifyVersion]: minimum version '{min_version}' contains too many parts (expected is: major.minor.patch)"
                 self.__version_number_invalid_format = min_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMinVersion = self.tupleVersion(min_version)
                 except Exception as ex:
-                    self.__last_error = f"[verifyVersion]: {ex}"
+                    self.__last_error = f"[verifyVersion]: {ex} (min_version)"
                     return enVersionCheckResult.FORMAT_ERROR.value
+        # maximum version check
         if max_version is not None:
             if not isinstance(max_version, str):
-                self.__last_error = f"[verifyVersion]: max_version '{max_version}' is not of expected format 'str'"
+                self.__last_error = f"[verifyVersion]: maximum version '{max_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
-                self.__last_error = f"[verifyVersion]: max_version '{max_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"[verifyVersion]: maximum version '{max_version}' contains too many parts (expected is: major.minor.patch)"
                 self.__version_number_invalid_format = max_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMaxVersion = self.tupleVersion(max_version)
                 except Exception as ex:
-                    self.__last_error = f"[verifyVersion]: {ex}"
+                    self.__last_error = f"[verifyVersion]: {ex} (max_version)"
                     return enVersionCheckResult.FORMAT_ERROR.value
+        # minimum/maximum relation check
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.__last_error = f"[verifyVersion] (WRONG_MINMAX_RELATION): min_version ({min_version}) > max_version ({max_version})"
+            self.__last_error = f"[verifyVersion] (WRONG_MINMAX_RELATION): minimum version ({min_version}) > maximum version ({max_version})"
             return enVersionCheckResult.WRONG_MINMAX_RELATION.value
         if tMinVersion and not self.bValidateMinVersion(tReferenceVersion, tMinVersion):
             self.__last_error = f"[verifyVersion] (CONFLICT_MIN): Required is minimum version '{min_version}', but the reference version '{reference_version}' is older"
-            reference_app_name = app_config.get_reference_app_name()
-            if reference_app_name:
+            if reference_app_name and not self.__reference_version_defined_by_user:
                 self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MIN.value
         if tMaxVersion and not self.bValidateMaxVersion(tReferenceVersion, tMaxVersion):
             self.__last_error = f"[verifyVersion] (CONFLICT_MAX): Required is maximum version '{max_version}', but the reference version '{reference_version}' is younger"
-            reference_app_name = app_config.get_reference_app_name()
-            if reference_app_name:
+            if reference_app_name and not self.__reference_version_defined_by_user:
                 self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MAX.value
         return enVersionCheckResult.CHECK_PASSED.value
 
     # HIGH LEVEL
     def checkVersion(self, min_version=None, max_version=None, reference_version=None, ext_logger=None, status_messages=None):
-        '''
+        """
 This method executes the version check, min_version and max_version are checked against the reference_version.
 
 Users can define own reference versions. But if reference_version is None, the internally defined 
@@ -244,23 +271,23 @@ bundle_version will be used as reference.
 
 * ``min_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 * ``max_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 * ``reference_version``
 
-   / *Condition*: optional / *Type*: string /
+  / *Condition*: optional / *Type*: str /
 
 * ``ext_logger``
 
-   / *Condition*: optional / *Type*: object /
+  / *Condition*: optional / *Type*: object /
 
 * ``status_messages``
 
-   / *Condition*: optional / *Type*: dict /
+  / *Condition*: optional / *Type*: dict /
 
 **Returns:**
 
@@ -275,14 +302,14 @@ bundle_version will be used as reference.
   / *Type*: boolean /
 
   Executed version check failed.
-        '''
+        """
         # Caution: Python logger         : logger.warning
         #     But: Robot Framework logger: logger.warn
         # Because of this deviation (and because it is not really required), warning/warn is not used here.
         # Either we use here level 'error' or we raise an exception!
         logger = app_logger # default
         if ext_logger:
-            # user want to use own logger
+            # user want to use own logger (also in case of this is executed by TestsuitesManagement in scope of Robot Framework, ext_logger would be from robot.api in this case)
             logger = ext_logger
 
         # either use predefined status messages or user defined status messages
@@ -312,33 +339,37 @@ bundle_version will be used as reference.
             status_message = status_message.replace('<invalid_format_reason>', "reason not available")
 
         # add app specific information
+        reference_app_name = None
         if reference_version:
             # reference_version is set by user (as checkVersion parameter)
-            reference_app_name = None # if reference_version is set by user, we do not have a corresponding name for an application
+            self.__reference_version_defined_by_user = True
         else:
             # get the reference version and reference app name from app config
-            reference_version = app_config.get_reference_version()
+            self.__reference_version_defined_by_user = False
+            reference_version  = app_config.get_reference_version()
             reference_app_name = app_config.get_reference_app_name()
         status_message = status_message.replace('<reference_version>', reference_version)
-        if reference_app_name:
+        if reference_app_name and not self.__reference_version_defined_by_user:
             # add the name of the applictaion used as reference
             status_message = f"{status_message} ({reference_app_name})"
 
         # Mapping between the result of the version check and the reaction on this result
-        # 1. premature end of execution because of errors
+        # 1. premature end of execution because of errors (bad cases)
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
                       enVersionCheckResult.FORMAT_ERROR.value,
                       enVersionCheckResult.INTERNAL_ERROR.value):
             logger.error(f"{status_message}")
-            raise Exception("Execution will be aborted because of a critical version number issue")
+            raise Exception("Execution will be aborted because of a critical version check issue")
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
             logger.error(f"Version check failed: {status_message}")
             raise Exception("Execution will be aborted because of a failed version check")
 
-        # 2. the good case
+        # 2. good cases
+        #    Belong to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
+        self.__last_error = None # possible previous errors are irrelevant now
         logger.info(f"{status_message}")
-        return True # belongs to remaining states: "CHECK_NOT_EXECUTED" and "CHECK_PASSED" (positive result that allows the test execution to continue)
+        return True
 
 
     def get_last_error(self):
@@ -347,85 +378,76 @@ Returns the most recently occurred error (during execution of low level method v
         """
         return self.__last_error
 
-    def get_version_number_invalid_format(self):
-        # TODO: currently used in versionCheck of CConfig.
-        #       better solution needed; this method should be removed later
-        """
-Returns the version number with invalid format
-        """
-        return self.__version_number_invalid_format
-
 
     @staticmethod
-    def bValidateMinVersion(tCurrentVersion, tMinVersion):
-        '''
-This bValidateMinVersion validates the current version with required minimun version.
+    def bValidateMinVersion(tReferenceVersion, tMinVersion):
+        """
+Static method to validate the required minimum version against the reference version.
 
 **Arguments:**
 
-* ``tCurrentVersion``
+* ``tReferenceVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  Current package version.
+  The version used as reference
 
 * ``tMinVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  The minimum version of package.
+  The required minimum version
 
 **Returns:**
 
 * ``True`` or ``False``
-        '''
-        return tCurrentVersion >= tMinVersion
+        """
+        return tReferenceVersion >= tMinVersion
     
     @staticmethod
-    def bValidateMaxVersion(tCurrentVersion, tMaxVersion):
-        '''
-This bValidateMaxVersion validates the current version with required minimum version.
+    def bValidateMaxVersion(tReferenceVersion, tMaxVersion):
+        """
+Static method to validate the required maximum version against the reference version.
 
 **Arguments:**
 
-* ``tCurrentVersion``
+* ``tReferenceVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  Current package version.
+  The version used as reference
 
 * ``tMaxVersion``
 
   / *Condition*: required / *Type*: tuple /
 
-  The maximum version of package.
+  The required maximum version
 
 **Returns:**
 
-* ``True or False``
-        '''
-        return tCurrentVersion <= tMaxVersion
+* ``True`` or ``False``
+        """
+        return tReferenceVersion <= tMaxVersion
     
     @staticmethod
     def bValidateSubVersion(sVersion):
-        '''
-This bValidateSubVersion validates the format of provided sub version and parse
-it into sub tuple for version comparision.
+        """
+Static method to validate the format of the provided sub-version and parse it into a sub-tuple for version comparison.
 
 **Arguments:**
 
 * ``sVersion``
 
-  / *Condition*: required / *Type*: string /
+  / *Condition*: required / *Type*: str /
 
-  The version of package.
+  A part of the entire version string (either the major version, the minor version or the patch version)
 
 **Returns:**
 
 * ``lSubVersion``
 
   / *Type*: tuple /
-        '''
+        """
         lSubVersion = [0,0,0]
         oMatch = regex.match(r"^(\d+)(?:-?(a|b|rc)(\d*))?$", sVersion)
         if oMatch:
@@ -452,22 +474,27 @@ it into sub tuple for version comparision.
         
     @staticmethod
     def tupleVersion(sVersion):
-        '''
-This tupleVersion returns a tuple which contains the (major, minor, patch) version.
+        """
+Static method to convert a version string to a tuple of the format: (major, minor, patch)
 
 In case minor/patch version is missing, it is set to 0.
 E.g: "1" is transformed to "1.0.0" and "1.1" is transformed to "1.1.0"
 
-This tupleVersion also support version which contains Alpha (a), Beta (b) or
-Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
+This method also supports version strings containing additional tags indicating certain types of versions:
+
+* Alpha version: '``a``'
+* Beta version: '``b``'
+* Release candidate: '``rc``'
+
+Examples: ``"1.2rc3"``, ``"1.2.1b1"``
 
 **Arguments:**
 
 * ``sVersion``
 
-  / *Condition*: required / *Type*: string /
+  / *Condition*: required / *Type*: str /
 
-  The version of package.
+  The version string to be converted
 
 **Returns:**
 
@@ -476,7 +503,7 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
   / *Type*: tuple /
 
   A tuple which contains the (major, minor, patch) version.
-        '''
+        """
         lVersion = sVersion.split(".")
         if len(lVersion) == 1:
             lVersion.extend(["0", "0"])
@@ -490,5 +517,4 @@ Release candidate (rc): E.g: "1.2rc3", "1.2.1b1", ...
             return tuple(map(lambda x: CVersion.bValidateSubVersion(x), lVersion))
         except Exception as error:
             raise Exception(f"{error} (within '{sVersion}')")
-
 

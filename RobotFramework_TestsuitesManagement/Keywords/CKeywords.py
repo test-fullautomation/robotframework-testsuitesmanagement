@@ -23,6 +23,7 @@ from robot.libraries.BuiltIn import BuiltIn
 
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion
+from RobotFramework_TestsuitesManagement.Utils.CVersion import StatusMessages
 
 class CSetupKeywords(object):
     '''
@@ -355,13 +356,22 @@ Returns the location of the installer of the entire RobotFramework AIO bundle.
         raise Exception(f"Configuration exception: {self.__tsm_app_config_error}")
 
     @keyword
-    def check_version(self, min_version=None, max_version=None, reference_version=None):
+    def check_version(self, min_version=None, max_version=None, reference_version=None, status_messages=None):
         """
 This keyword executes a version check, min_version and max_version are checked against the reference_version.
         """
         # Keyword wrapper for high level method '``checkVersion``' defined in CVersion.py
         version = CVersion()
-        result = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger) # 'logger' is the one from robot.api
+        result  = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger, status_messages=status_messages) # 'logger' is the one from robot.api
         return result
     # A corrsponding keyword wrapper for the low level method '``verifyVersion``' is currently not implemented (and most probably will not be required).
+
+    @keyword
+    def get_status_messages(self):
+        """
+Returns the StatusMessages object.
+        """
+        status_messages      = StatusMessages()
+        dict_status_messages = status_messages.get_messages_dict()
+        return dict_status_messages
 

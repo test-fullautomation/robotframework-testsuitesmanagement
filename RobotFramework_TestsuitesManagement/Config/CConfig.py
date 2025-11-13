@@ -35,7 +35,7 @@ from builtins import staticmethod
 
 import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult, BUNDLE_VERSION
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 
 from PythonExtensionsCollection.String.CString import CString
@@ -52,11 +52,11 @@ class CConfig():
     '''
 Defines the properties of configuration and holds the identified config files.
 
-The loading configuration method is divided into 4 levels, level1 has the highest priority, Level4 has the lowest priority.
+The loading configuration method is divided into 4 levels: level1 has the highest priority, level4 has the lowest priority.
 
-**Level1:** Handed over by command line argument
+**Level1:** Defined in command line
 
-**Level2:** Read from content of json config file
+**Level2:** Read from content of JSON config file
 
    .. code:: json
 
@@ -353,23 +353,33 @@ robot with configuration level 2.")
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
             # Check the format of Maximum_version value
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # But it is also plausible to do the check already here (as early as possible).
+            # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
+            # Can this be merged anyway?
             try:
                 CVersion.tupleVersion(self.sMaxVersion)
             except Exception as error:
-                self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
+                self.sLoadedCfgLog['error'].append(f"Maximum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
                 self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
                 raise Exception(f"The test execution will be aborted!")
+
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # But it is also plausible to do the check already here (as early as possible).
+            # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
+            # Can this be merged anyway?
             try:
                 CVersion.tupleVersion(self.sMinVersion)
             except Exception as error:
-                self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
+                self.sLoadedCfgLog['error'].append(f"Minimum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
                 self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
                 raise Exception(f"The test execution will be aborted!")
+
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)
@@ -382,9 +392,11 @@ robot with configuration level 2.")
             reference_app_name = self.__tsm_app_config.get_reference_app_name()
             BuiltIn().set_suite_metadata("reference_version", reference_version, top=True)
             BuiltIn().set_suite_metadata("reference_app_name", reference_app_name, top=True)
-        # else:     TODO: debug this
-            # logger.error(f"{self.__tsm_app_config_error}")          # already logged at other position
-            # raise Exception(f"Execution will be aborted because it's not possible to load the application configuration") # not printed
+        else:
+            # TODO: Verify this. Seems not to be required.
+            #       Error already logged at other position. Exception not logged.
+            logger.error(f"{self.__tsm_app_config_error}")
+            raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
         if not ("version_sw" in suiteMetadata and self.rMetaData.sVersionSW == None):
             BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
@@ -634,9 +646,8 @@ This __getUserName method gets current account name login to run the test.
 
         return sUserName
 
-    def checkVersion(self): # previously versionCheck
-        # !!! same method name like oVersion.checkVersion() !!!
-        # TODO: might this cause troubles? better Name?
+    def checkVersion(self):
+        # same method name like CVersion()::checkVersion()!
         '''
 This method validates the current package version with maximum and minimum version.
 
@@ -645,17 +656,11 @@ testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion()
         # We use the LOW LEVEL method 'oVersion.verifyVersion' here (instead of the HIGH LEVEL method 'oVersion.checkVersion()'),
-        # to be able to provide error messages that are a bit more related to the RobotFramework AIO (whereas
+        # to be able to provide error messages that are a bit more in scope of RobotFramework AIO tests (whereas
         # 'oVersion.checkVersion()' itself contains more generic error messages for Python developers, who use the version check
         # outside RobotFramework AIO tests.
-        # Nevertheless, details about what happened, we get from 'oVersion.get_last_error()'.
-        # TODO: Is it maybe possible and useful to use the high level method oVersion.checkVersion() instead?
-
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# TODO:
-# replace hard coded err msg by 'oVersion.get_last_error()
-# Remove BUNDLE_VERSION from here and from __init__
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        # Nevertheless, details about what happened we (mostly) get from 'oVersion.get_last_error()'. These error messages are
+        # most precise. Partially the error messages are hard coded here.
 
         # from application configuration get reference information required for versioning and logging
         if self.__tsm_app_config:
@@ -666,52 +671,93 @@ testsuite is terminated with "unknown" state
             logger.error(f"{self.__tsm_app_config_error}")
             raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
+        # call of LOW LEVEL version control method
         result = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
-        header = None
-        detail = None
+
+        version_check_has_issue = False
+        exception               = None
+        error                   = None
+        last_error              = None
+        addition1               = None # set in case of exception only
+        addition2               = None # set in case of exception only
+
+        # -- good cases
         if result==enVersionCheckResult.CHECK_NOT_EXECUTED.value:
             logger.info(f"Running without {reference_app_name} version check!")
             return
         elif result==enVersionCheckResult.CHECK_PASSED.value:
             logger.info(f"{reference_app_name} version check passed!")
             return
-        elif result==enVersionCheckResult.WRONG_MINMAX_RELATION.value:
-            header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum {reference_app_name} version                 '{self.sMinVersion}'"
-            detail +=f"\nis younger than the configured maximum {reference_app_name} version '{self.sMaxVersion}'"
-            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
-        elif result==enVersionCheckResult.CONFLICT_MIN.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires minimum {reference_app_name} version '{self.sMinVersion}'"
-            detail +=f"\nbut the installed {reference_app_name} version is older          '{reference_version}'"
-        elif result==enVersionCheckResult.CONFLICT_MAX.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires maximum {reference_app_name} version '{self.sMaxVersion}'"
-            detail +=f"\nbut the installed {reference_app_name} version is younger        '{reference_version}'"
-        elif result==enVersionCheckResult.INTERNAL_ERROR.value:
-            header = f"Incorrect version format '{reference_version}' detected while reading "
-            if oVersion.is_robotframework_aio:
-                header = header + "the RobotFramework AIO bundle version. Please contact the AIO team."
-            else:
-                header = header + "the TestsuitesManagement version. Please contact the AIO team."
-        elif result==enVersionCheckResult.FORMAT_ERROR.value:
-            # TODO: get oVersion.invalid_format from other sources  # header = f"Invalid version format '{oVersion.invalid_format}': expected format is 'major.minor.patch' (e.g. 0.1.2)"
-            # header = f"Invalid version format '{oVersion.get_version_number_invalid_format()}': expected format is 'major.minor.patch' (e.g. 0.1.2)"
-            header = oVersion.get_last_error()
-        if header is not None:
-            if result in (enVersionCheckResult.INTERNAL_ERROR.value, 
-                          enVersionCheckResult.FORMAT_ERROR.value):
-                logger.error(f"{header}")
-            else:
-                logger.error(f"{header}" +
-                f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
-                f"\nconfig    : {self.sTestCfgFile}" +
-                f"\n{detail}\n"
-                f"\nPlease install the required {reference_app_name} version." +
-                f"\nYou can find an installer here: {reference_installer_location}\n")
-            raise Exception(f"Execution will be aborted because of a version control error")
+        # -- bad cases
+        elif result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
+                        enVersionCheckResult.FORMAT_ERROR.value,
+                        enVersionCheckResult.INTERNAL_ERROR.value):
+            version_check_has_issue = True
+            error      = "Something basic went wrong with the version check. This requires to fix the defined version numbers."
+            last_error = oVersion.get_last_error()
+            if result == enVersionCheckResult.FORMAT_ERROR.value:
+                addition1 = "The expected version format is 'major.minor.patch' (e.g. 0.1.2)"
+            addition2  = f"Affected configuration file: '{self.sTestCfgFile}'"
+            exception  = "Execution will be aborted because of a critical version check issue."
+        elif result in (enVersionCheckResult.CONFLICT_MIN.value,
+                        enVersionCheckResult.CONFLICT_MAX.value):
+            version_check_has_issue = True
+            error      = f"A failed version check requires to update the used software or to adapt the expected minimum version and the expected maximum version."
+            last_error = oVersion.get_last_error()
+            addition1  = f"Affected configuration file: '{self.sTestCfgFile}'"
+            addition2  = f"{reference_app_name} installer are available here: '{reference_installer_location}'"
+            exception  = "Execution will be aborted because of a failed version check."
+        else:
+            # paranoia handling
+            version_check_has_issue = True
+            last_error = f"Code internal error: got not handled version check result: '{result}'."
+            exception  = "Execution will be aborted because of an internal code error. Please contact the AIO team."
+
+        test_suite = CString.NormalizePath(f"{BuiltIn().get_variable_value('${SUITE SOURCE}')}")
+        logger.info(f"Testsuite : '{test_suite}'")
+
+        if version_check_has_issue:
+            if error:
+                logger.error(f"{error}")
+            logger.error(f"{last_error}")
+            if addition1:
+                logger.info(f"{addition1}")
+            if addition2:
+                logger.info(f"{addition2}")
+            raise Exception(f"{exception}")
+
+        return
 
 if __name__ == "__main__":
-    # # # bundle_version()
-    print("Hello TestsuitesManagement")
-    # TODO: dump of some application information taken from AppConfig
+    # small test:
+    app_config = None
+    print()
+    try:
+        app_config = AppConfig()
+        print(f"==> is_robotframework_aio     : '{app_config.is_robotframework_aio()}'")
+        print(f"==> tsm_version               : '{app_config.get_tsm_version()}'")
+        print(f"==> tsm_version_date          : '{app_config.get_tsm_version_date()}'")
+        print(f"==> tsm_app_name              : '{app_config.get_tsm_app_name()}'")
+        print(f"==> tsm_installer_location    : '{app_config.get_tsm_installer_location()}'")
+        print(f"==> bundle_version            : '{app_config.get_bundle_version()}'")
+        print(f"==> bundle_version_date       : '{app_config.get_bundle_version_date()}'")
+        print(f"==> bundle_name               : '{app_config.get_bundle_name()}'")
+        print(f"==> bundle_installer_location : '{app_config.get_bundle_installer_location()}'")
+    except Exception as ex:
+        print(f"Exception in __main__: {ex}")
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
