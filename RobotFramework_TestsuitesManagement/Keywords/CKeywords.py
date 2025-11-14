@@ -163,7 +163,9 @@ of suites and tests.
 
     @keyword
     def get_config(self):
-# !!! TODO: Distinguish between test configuration and app configuration !!!
+    # !!! TODO: A better distinction by name between the newly introduced application-specific configuration (AppConfig)
+    # and the configuration that relates to the test (the variant configuration) would be desirable.
+    # Maybe rename this keyword from 'get_config' to 'get_test_config'.
         '''
 This get_config defines the ``Get Config`` keyword gets the current config object of RobotFramework AIO.
 

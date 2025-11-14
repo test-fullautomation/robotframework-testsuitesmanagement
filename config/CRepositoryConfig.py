@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2024 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 #
 # CRepositoryConfig.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # Purpose:
 # - Compute and store all repository specific information, like the repository name,
@@ -29,7 +29,7 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 18.07.2022
+# 14.11.2025
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -42,9 +42,6 @@ from PythonExtensionsCollection.String.CString import CString
 # because of partially same names for packace constants and meta information constants we do a mapping here
 from RobotFramework_TestsuitesManagement.version import VERSION as PACKAGEVERSION
 from RobotFramework_TestsuitesManagement.version import VERSION_DATE as PACKAGEVERSIONDATE
-from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_NAME as META_NAME
-from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_VERSION as META_VERSION
-from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_VERSION_DATE as META_VERSION_DATE
 
 col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED
@@ -86,11 +83,6 @@ class CRepositoryConfig():
         # add version and date of the package this repository configuration belongs to
         self.__dictRepositoryConfig['PACKAGEVERSION'] = PACKAGEVERSION
         self.__dictRepositoryConfig['PACKAGEDATE']    = PACKAGEVERSIONDATE
-
-        # add meta information of the package this repository configuration belongs to
-        self.__dictRepositoryConfig['META_NAME']         = META_NAME
-        self.__dictRepositoryConfig['META_VERSION']      = META_VERSION
-        self.__dictRepositoryConfig['META_VERSION_DATE'] = META_VERSION_DATE
 
         # make absolute path to package documentation
         self.__dictRepositoryConfig['PACKAGEDOC'] = CString.NormalizePath(sPath=self.__dictRepositoryConfig['PACKAGEDOC'], sReferencePathAbs=self.__sReferencePath)

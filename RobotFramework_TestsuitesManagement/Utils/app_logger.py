@@ -16,8 +16,13 @@
 #
 # **************************************************************************************************************
 #
-# Defines a application specific logger (for CVersion of TestsuitesManagement only)
+# Defines an application specific logger (for CVersion of TestsuitesManagement only)
 # that does not influence other modules.
+#
+# The robot.api logger must only be used in Python code that is executed as part of a Robot Framework keyword
+# execution. But CVersion can also be used stand-alone in pure Python scripts outside the scope of the
+# Robot Framework. Therefore, we need to use a pue Python logger. This file contains the definition
+# of such a logger.
 
 import logging
 import sys
@@ -41,11 +46,7 @@ def setup_app_logger(name='TestsuitesManagement', level=logging.INFO):
     
     # create a formatter
     formatter = logging.Formatter(
-        # debug version
-        # fmt='%(name)s - %(levelname)s - %(message)s',
-        # short version
         fmt='[%(name)s] %(message)s',
-        # not used: datefmt='%Y-%m-%d %H:%M:%S'
     )
     
     # add handler to console

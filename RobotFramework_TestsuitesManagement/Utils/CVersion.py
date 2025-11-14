@@ -30,17 +30,6 @@ from PythonExtensionsCollection.String.CString import CString
 # create an application specific logger
 app_logger = app_logger.setup_app_logger()
 
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# Unfortunately these global variables are imported several times from outside.
-# Therefore, we need to provide them here (but this should be a temporary solution only).
-# !!! TODO: Content and usage urgently need to be reworked !!!
-BUNDLE_NAME         = None
-BUNDLE_VERSION      = None
-BUNDLE_VERSION_DATE = None
-INSTALLER_LOCATION  = None
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
 class enVersionCheckResult(Enum):
     """
 Defines different states that identify the result of the version check
@@ -69,7 +58,7 @@ Dictionary wrapper for status messages of version check. Needs to use the same k
             "CONFLICT_MIN"             : "The test execution requires the minimum version '<min_version>', but the reference version '<reference_version>' is older",
             "CONFLICT_MAX"             : "The test execution requires the maximum version '<max_version>', but the reference version '<reference_version>' is younger",
             "WRONG_MINMAX_RELATION"    : "Mismatch of minimum version and maximum version: The minimum version '<min_version>' is younger than the maximum version '<max_version>'",
-            "FORMAT_ERROR"             : "A version number has an invalid format: <invalid_format_reason>",
+            "FORMAT_ERROR"             : "Version format error: <invalid_format_reason>",
             "BUNDLE_CONFIG_FILE_ERROR" : "A syntax error occurred while accessing or parsing the bundle configuration file",
             "INTERNAL_ERROR"           : "Version could not be verified because of an internal error. Please contact the AIO team"
         }
@@ -118,11 +107,10 @@ The reference can be:
     """
     def __init__(self):
         # contains the version number that has an invalid format
-        self.__version_number_invalid_format = None
         self.__last_error = None
         self.__reference_version_defined_by_user = False
 
-    # LOW LEVEL
+    # -- LOW LEVEL
     def verifyVersion(self, min_version=None, max_version=None, reference_version=None):
         """
 This method executes a version check at low level (a token string is returned only).
@@ -130,7 +118,7 @@ This method executes a version check at low level (a token string is returned on
 The ``min_version`` and the ``max_version`` are checked against the ``reference_version``.
 
 If the ``reference_version`` is ``None`` (= not defined by user), the internally 
-defined bundle version (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
+defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
 
 **Arguments:**
 
@@ -154,8 +142,9 @@ defined bundle version (either RobotFramework AIO or TestsuitesManagement) will 
 
   A token string indicating the result of the vesion check.
         """
+        # -- LOW LEVEL
+        # 
         # reinit some flags
-        self.__version_number_invalid_format = None
         self.__last_error = None
         app_config = None
 
@@ -165,20 +154,8 @@ defined bundle version (either RobotFramework AIO or TestsuitesManagement) will 
             app_config = AppConfig()
         except Exception as ex:
             self.__last_error = f"[verifyVersion]: {ex}"
-            app_logger.error(self.__last_error)
+            app_logger.error(f"{self.__last_error}")
             return enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value
-
-        # !!! TODO: remove this workaround !!!
-        # !!! DOWNWARD COMPATIBILITY ONLY !!!
-        global BUNDLE_NAME
-        global BUNDLE_VERSION
-        global BUNDLE_VERSION_DATE
-        global INSTALLER_LOCATION
-        BUNDLE_NAME         = app_config.get_bundle_name()
-        BUNDLE_VERSION      = app_config.get_bundle_version()
-        BUNDLE_VERSION_DATE = app_config.get_bundle_version_date()
-        INSTALLER_LOCATION  = app_config.get_bundle_installer_location()
-        # !!! DOWNWARD COMPATIBILITY ONLY !!!
 
         # if available, the reference application name will (in some cases) be added to the 'last error' message
         reference_app_name = app_config.get_reference_app_name()
@@ -220,7 +197,6 @@ defined bundle version (either RobotFramework AIO or TestsuitesManagement) will 
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
                 self.__last_error = f"[verifyVersion]: minimum version '{min_version}' contains too many parts (expected is: major.minor.patch)"
-                self.__version_number_invalid_format = min_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
@@ -235,7 +211,6 @@ defined bundle version (either RobotFramework AIO or TestsuitesManagement) will 
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
                 self.__last_error = f"[verifyVersion]: maximum version '{max_version}' contains too many parts (expected is: major.minor.patch)"
-                self.__version_number_invalid_format = max_version
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
@@ -259,13 +234,18 @@ defined bundle version (either RobotFramework AIO or TestsuitesManagement) will 
             return enVersionCheckResult.CONFLICT_MAX.value
         return enVersionCheckResult.CHECK_PASSED.value
 
-    # HIGH LEVEL
+    # -- HIGH LEVEL
     def checkVersion(self, min_version=None, max_version=None, reference_version=None, ext_logger=None, status_messages=None):
         """
-This method executes the version check, min_version and max_version are checked against the reference_version.
+This method executes the version check at high level.
 
-Users can define own reference versions. But if reference_version is None, the internally defined 
-bundle_version will be used as reference.
+The ``min_version`` and the ``max_version`` are checked against the ``reference_version``.
+
+If the ``reference_version`` is ``None`` (= not defined by user), the internally 
+defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
+
+The execution includes error messages and exception handling (in opposite to the low level method ``verifyVersion``).
+Impact is that this method influences the execution of the application that calls it.
 
 **Arguments:**
 
@@ -303,25 +283,32 @@ bundle_version will be used as reference.
 
   Executed version check failed.
         """
+        # -- HIGH LEVEL
+        # 
         # Caution: Python logger         : logger.warning
         #     But: Robot Framework logger: logger.warn
         # Because of this deviation (and because it is not really required), warning/warn is not used here.
         # Either we use here level 'error' or we raise an exception!
         logger = app_logger # default
         if ext_logger:
-            # user want to use own logger (also in case of this is executed by TestsuitesManagement in scope of Robot Framework, ext_logger would be from robot.api in this case)
+            # User want to use own logger (also in case of this is executed by TestsuitesManagement in scope of Robot Framework.
+            # ext_logger would be from robot.api in this case.
             logger = ext_logger
 
         # either use predefined status messages or user defined status messages
         if not status_messages:
             status_messages = StatusMessages()
 
+        # reinit flag
+        self.__last_error = None
+
         # access to application configuration
         # [] CConfig / [] CKeywords / [] verifyVersion / [X] checkVersion
         try:
             app_config = AppConfig()
         except Exception as ex:
-            logger.error(f"[checkVersion]: {ex}")
+            self.__last_error = f"[checkVersion]: {ex}"
+            logger.error(f"{self.__last_error}")
             raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
         # get and log the result of the version check
@@ -358,11 +345,13 @@ bundle_version will be used as reference.
         if result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
                       enVersionCheckResult.FORMAT_ERROR.value,
                       enVersionCheckResult.INTERNAL_ERROR.value):
-            logger.error(f"{status_message}")
+            self.__last_error = f"{status_message}"
+            logger.error(f"{self.__last_error}")
             raise Exception("Execution will be aborted because of a critical version check issue")
         elif result in (enVersionCheckResult.CONFLICT_MIN.value,
                         enVersionCheckResult.CONFLICT_MAX.value):
-            logger.error(f"Version check failed: {status_message}")
+            self.__last_error = f"Version check failed: {status_message}"
+            logger.error(self.__last_error)
             raise Exception("Execution will be aborted because of a failed version check")
 
         # 2. good cases
@@ -374,7 +363,7 @@ bundle_version will be used as reference.
 
     def get_last_error(self):
         """
-Returns the most recently occurred error (during execution of low level method verifyVersion)
+Returns the most recently occurred error (during execution of low level method ``verifyVersion``)
         """
         return self.__last_error
 

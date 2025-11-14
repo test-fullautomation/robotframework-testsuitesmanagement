@@ -139,10 +139,6 @@ Returns path and name of package context file
         """
         return self.__aio_package_context_file
 
-    # TODO:
-    # def dump_app_config(self):
-        # all versions, dates, names
-
     def get_reference_version(self):
         """
 Returns the version number used as reference for version checks. The reference is either the RobotFramework AIO
@@ -218,6 +214,10 @@ Returns the name of the entire RobotFramework AIO bundle.
 Returns the location of the installer of the entire RobotFramework AIO bundle.
         """
         return self.__bundle_installer_location
+
+    # TODO:
+    # def dump_app_config(self):
+        # all versions, dates, names
 
 # eof class AppConfig:
 
