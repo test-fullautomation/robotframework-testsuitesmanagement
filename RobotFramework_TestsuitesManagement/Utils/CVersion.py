@@ -153,7 +153,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
         try:
             app_config = AppConfig()
         except Exception as ex:
-            self.__last_error = f"[verifyVersion]: {ex}"
+            self.__last_error = f"{ex}"
             app_logger.error(f"{self.__last_error}")
             return enVersionCheckResult.BUNDLE_CONFIG_FILE_ERROR.value
 
@@ -170,7 +170,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
 
         # additional check of possible users input
         if not isinstance(reference_version, str):
-            self.__last_error = f"[verifyVersion]: reference_version '{reference_version}' is not of expected format 'str'"
+            self.__last_error = f"reference_version '{reference_version}' is not of expected format 'str'"
             return enVersionCheckResult.FORMAT_ERROR.value
 
         # version tuples
@@ -186,49 +186,49 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
         try:
             tReferenceVersion = self.tupleVersion(reference_version)
         except Exception as ex:
-            self.__last_error = f"[verifyVersion]: {ex} (reference_version)"
+            self.__last_error = f"{ex} (reference_version)"
             if reference_app_name and not self.__reference_version_defined_by_user:
                 self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.FORMAT_ERROR.value
         # minimum version check
         if min_version is not None:
             if not isinstance(min_version, str):
-                self.__last_error = f"[verifyVersion]: minimum version '{min_version}' is not of expected format 'str'"
+                self.__last_error = f"minimum version '{min_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
-                self.__last_error = f"[verifyVersion]: minimum version '{min_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"minimum version '{min_version}' contains too many parts (expected is: major.minor.patch)"
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMinVersion = self.tupleVersion(min_version)
                 except Exception as ex:
-                    self.__last_error = f"[verifyVersion]: {ex} (min_version)"
+                    self.__last_error = f"{ex} (min_version)"
                     return enVersionCheckResult.FORMAT_ERROR.value
         # maximum version check
         if max_version is not None:
             if not isinstance(max_version, str):
-                self.__last_error = f"[verifyVersion]: maximum version '{max_version}' is not of expected format 'str'"
+                self.__last_error = f"maximum version '{max_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
-                self.__last_error = f"[verifyVersion]: maximum version '{max_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"maximum version '{max_version}' contains too many parts (expected is: major.minor.patch)"
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
                     tMaxVersion = self.tupleVersion(max_version)
                 except Exception as ex:
-                    self.__last_error = f"[verifyVersion]: {ex} (max_version)"
+                    self.__last_error = f"{ex} (max_version)"
                     return enVersionCheckResult.FORMAT_ERROR.value
         # minimum/maximum relation check
         if tMinVersion and tMaxVersion and (tMinVersion > tMaxVersion):
-            self.__last_error = f"[verifyVersion] (WRONG_MINMAX_RELATION): minimum version ({min_version}) > maximum version ({max_version})"
+            self.__last_error = f"(WRONG_MINMAX_RELATION): minimum version ({min_version}) > maximum version ({max_version})"
             return enVersionCheckResult.WRONG_MINMAX_RELATION.value
         if tMinVersion and not self.bValidateMinVersion(tReferenceVersion, tMinVersion):
-            self.__last_error = f"[verifyVersion] (CONFLICT_MIN): Required is minimum version '{min_version}', but the reference version '{reference_version}' is older"
+            self.__last_error = f"(CONFLICT_MIN): Required is minimum version '{min_version}', but the reference version '{reference_version}' is older"
             if reference_app_name and not self.__reference_version_defined_by_user:
                 self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MIN.value
         if tMaxVersion and not self.bValidateMaxVersion(tReferenceVersion, tMaxVersion):
-            self.__last_error = f"[verifyVersion] (CONFLICT_MAX): Required is maximum version '{max_version}', but the reference version '{reference_version}' is younger"
+            self.__last_error = f"(CONFLICT_MAX): Required is maximum version '{max_version}', but the reference version '{reference_version}' is younger"
             if reference_app_name and not self.__reference_version_defined_by_user:
                 self.__last_error = f"{self.__last_error} ({reference_app_name})"
             return enVersionCheckResult.CONFLICT_MAX.value
@@ -307,7 +307,7 @@ Impact is that this method influences the execution of the application that call
         try:
             app_config = AppConfig()
         except Exception as ex:
-            self.__last_error = f"[checkVersion]: {ex}"
+            self.__last_error = f"{ex}"
             logger.error(f"{self.__last_error}")
             raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 

@@ -1,42 +1,39 @@
 ==============================================================================
-20250704 16:25:23.937 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251117 13:36:26.799 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20250704 16:25:23.938 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250704 16:25:24.003 - INFO - Set suite metadata 'project' to value 'tsm-test_config_version_control.08'.
-20250704 16:25:24.004 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20250704 16:25:24.005 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20250704 16:25:24.006 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20250704 16:25:24.006 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-20250704 16:25:24.006 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20250704 16:25:24.006 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20250704 16:25:24.007 - INFO - Set suite metadata 'version_test' to value 'None'.
-20250704 16:25:24.007 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20250704 16:25:24.007 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20250704 16:25:24.007 - INFO - ${teststring_variant} = I am the 'version_control_08' configuration of tsm-test
-20250704 16:25:24.008 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.2.0', 'Minimum_version': '0.1.0', 'Project': 'tsm-test_config_version_control.08', 'TargetName': 'Device_01', 'param...
-20250704 16:25:24.008 - INFO - Running with configuration level 2 (variant name in command line)
-20250704 16:25:24.008 - ERROR - Version conflict.
-Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
-config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.08.jsonp
-
-The test execution requires maximum RobotFramework AIO (extended) version '0.2.0'
-but the installed RobotFramework AIO (extended) version is younger        '0.14.1.33'
-
-Please install the required RobotFramework AIO (extended) version.
-You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
-20250704 16:25:24.008 - UNKNOWN - Version control error!!!
-20250704 16:25:24.010 - INFO - +- END SETUP: tm.Testsuite Setup (72)
+20251117 13:36:26.802 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251117 13:36:26.837 - INFO - Set suite metadata 'project' to value 'tsm-test_config_version_control.08'.
+20251117 13:36:26.837 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251117 13:36:26.838 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251117 13:36:26.839 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251117 13:36:26.839 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20251117 13:36:26.840 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20251117 13:36:26.840 - INFO - ${teststring_variant} = I am the 'version_control_08' configuration of tsm-test
+20251117 13:36:26.840 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.2.0', 'Minimum_version': '0.1.0', 'Project': 'tsm-test_config_version_control.08', 'TargetName': 'Device_01', 'param...
+20251117 13:36:26.840 - INFO - Running with configuration level 2 (variant name in command line)
+20251117 13:36:26.841 - INFO - Testsuite : 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/tsm-testfile-02.robot'
+20251117 13:36:26.841 - ERROR - A failed version check requires to update the used software or to adapt the expected minimum version and the expected maximum version.
+20251117 13:36:26.842 - ERROR - (CONFLICT_MAX): Required is maximum version '0.2.0', but the reference version '0.14.2.26' is younger (RobotFramework AIO (extended))
+20251117 13:36:26.842 - INFO - Affected configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.08.jsonp'
+20251117 13:36:26.842 - INFO - RobotFramework AIO (extended) installer are available here: 'https://github.com/test-fullautomation/RobotFramework_AIO/releases'
+20251117 13:36:26.842 - UNKNOWN - Execution will be aborted because of a failed version check.
+20251117 13:36:26.843 - INFO - +- END SETUP: tm.Testsuite Setup (41)
 ------------------------------------------------------------------------------
-20250704 16:25:24.010 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251117 13:36:26.843 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:24.011 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20251117 13:36:26.844 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20250704 16:25:24.012 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:24.012 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Version control error!!!
+20251117 13:36:26.844 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251117 13:36:26.844 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Execution will be aborted because of a failed version check.
 
 1 test, 0 passed, 0 failed, 1 unknown
-20250704 16:25:24.012 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251117 13:36:26.845 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20250704 16:25:24.012 - INFO - + END SUITE: Tsm-Testfile-02 (175)
+20251117 13:36:26.845 - INFO - + END SUITE: Tsm-Testfile-02 (186)
 ==============================================================================

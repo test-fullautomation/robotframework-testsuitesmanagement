@@ -1,23 +1,23 @@
 ==============================================================================
-20250704 16:25:12.301 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251117 11:02:31.642 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20250704 16:25:12.302 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250704 16:25:12.363 - ERROR - Testsuite management - Loading configuration level 2 failed!
-20250704 16:25:12.363 - ERROR - The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.
-20250704 16:25:12.364 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits',
-20250704 16:25:12.365 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20250704 16:25:12.365 - INFO - +- END SETUP: tm.Testsuite Setup (63)
+20251117 11:02:31.646 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251117 11:02:31.673 - ERROR - Testsuite management - Loading configuration level 2 failed!
+20251117 11:02:31.674 - ERROR - The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.
+20251117 11:02:31.674 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', 'python_inline_code',
+20251117 11:02:31.674 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251117 11:02:31.674 - INFO - +- END SETUP: tm.Testsuite Setup (28)
 ------------------------------------------------------------------------------
-20250704 16:25:12.365 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251117 11:02:31.675 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:12.366 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20251117 11:02:31.675 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20250704 16:25:12.366 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:12.366 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+20251117 11:02:31.675 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251117 11:02:31.676 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20250704 16:25:12.366 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251117 11:02:31.676 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20250704 16:25:12.366 - INFO - + END SUITE: Tsm-Testfile-02 (165)
+20251117 11:02:31.676 - INFO - + END SUITE: Tsm-Testfile-02 (166)
 ==============================================================================

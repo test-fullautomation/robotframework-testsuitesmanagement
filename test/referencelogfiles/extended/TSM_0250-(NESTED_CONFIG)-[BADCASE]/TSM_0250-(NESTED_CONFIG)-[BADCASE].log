@@ -1,22 +1,22 @@
 ==============================================================================
-20250704 16:25:19.825 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
+20251117 13:12:12.418 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
 ==============================================================================
-20250704 16:25:19.827 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250704 16:25:19.886 - ERROR - Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
-20250704 16:25:19.887 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp
-20250704 16:25:19.887 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20250704 16:25:19.887 - INFO - +- END SETUP: tm.Testsuite Setup (60)
+20251117 13:12:12.421 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251117 13:12:12.452 - ERROR - Cyclic import detection: The file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+20251117 13:12:12.453 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp
+20251117 13:12:12.453 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251117 13:12:12.453 - INFO - +- END SETUP: tm.Testsuite Setup (32)
 ------------------------------------------------------------------------------
-20250704 16:25:19.888 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
+20251117 13:12:12.454 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:19.888 - INFO - +- END TEST: Test Case tsm-testfile-03 (0)
+20251117 13:12:12.454 - INFO - +- END TEST: Test Case tsm-testfile-03 (1)
 ------------------------------------------------------------------------------
-20250704 16:25:19.889 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:19.889 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+20251117 13:12:12.454 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251117 13:12:12.455 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20250704 16:25:19.889 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251117 13:12:12.455 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20250704 16:25:19.889 - INFO - + END SUITE: Tsm-Testfile-03 (162)
+20251117 13:12:12.455 - INFO - + END SUITE: Tsm-Testfile-03 (170)
 ==============================================================================

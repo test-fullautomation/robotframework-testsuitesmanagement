@@ -1,24 +1,24 @@
 ==============================================================================
-20250704 16:25:11.853 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251117 11:01:50.911 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20250704 16:25:11.854 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250704 16:25:11.912 - ERROR - Testsuite management - Loading configuration level 2 failed!
-20250704 16:25:11.912 - ERROR - The variant name 'in/va/lid' is invalid.
-20250704 16:25:11.912 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits',
-20250704 16:25:11.913 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'
-20250704 16:25:11.913 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20250704 16:25:11.913 - INFO - +- END SETUP: tm.Testsuite Setup (59)
+20251117 11:01:50.914 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251117 11:01:50.942 - ERROR - Testsuite management - Loading configuration level 2 failed!
+20251117 11:01:50.943 - ERROR - The variant name 'in/va/lid' is invalid.
+20251117 11:01:50.943 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', 'python_inline_code',
+20251117 11:01:50.944 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'
+20251117 11:01:50.944 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251117 11:01:50.944 - INFO - +- END SETUP: tm.Testsuite Setup (31)
 ------------------------------------------------------------------------------
-20250704 16:25:11.913 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251117 11:01:50.944 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:11.914 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20251117 11:01:50.945 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20250704 16:25:11.914 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:11.914 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+20251117 11:01:50.945 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251117 11:01:50.945 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20250704 16:25:11.914 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251117 11:01:50.945 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20250704 16:25:11.915 - INFO - + END SUITE: Tsm-Testfile-02 (160)
+20251117 11:01:50.946 - INFO - + END SUITE: Tsm-Testfile-02 (171)
 ==============================================================================

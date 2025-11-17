@@ -115,8 +115,8 @@ for None so that subclasses will create their own __single objects.
         self.sTestSuiteCfg     = ''
         self.sTestCfgFile      = ''
         self.sTestcasePath     = ''
-        self.sMaxVersion       = ''
-        self.sMinVersion       = ''
+        self.sMaxVersion       = None
+        self.sMinVersion       = None
         self.sLocalConfig      = ''
         self.lBuitInVariables  = []
         self.configLevel       = TM.CConfigLevel.LEVEL_4

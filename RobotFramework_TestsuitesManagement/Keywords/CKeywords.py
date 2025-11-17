@@ -365,6 +365,12 @@ This keyword executes a version check, min_version and max_version are checked a
         # Keyword wrapper for high level method '``checkVersion``' defined in CVersion.py
         version = CVersion()
         result  = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger, status_messages=status_messages) # 'logger' is the one from robot.api
+        # In case of an error, 'result' contains the outcome of this error (abort of test execution), that is not very detailed.
+        # More helpful details are provided by the last error. Therefore, we return this one.
+        # Relevant only in case of 'run_keyword_and_ignore_error' is used. Otherwise the exception is already thrown.
+        last_error = version.get_last_error()
+        if last_error:
+            result = last_error
         return result
     # A corrsponding keyword wrapper for the low level method '``verifyVersion``' is currently not implemented (and most probably will not be required).
 
