@@ -196,7 +196,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
                 self.__last_error = f"minimum version '{min_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(min_version.split('.'))>3:
-                self.__last_error = f"minimum version '{min_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"minimum version '{min_version}' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)"
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:
@@ -210,7 +210,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
                 self.__last_error = f"maximum version '{max_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
             elif len(max_version.split('.'))>3:
-                self.__last_error = f"maximum version '{max_version}' contains too many parts (expected is: major.minor.patch)"
+                self.__last_error = f"maximum version '{max_version}' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)"
                 return enVersionCheckResult.FORMAT_ERROR.value
             else:
                 try:

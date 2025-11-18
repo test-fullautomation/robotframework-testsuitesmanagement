@@ -58,6 +58,12 @@ TSM_0451|VERSION_CONTROL|BADCASE|'Minimum_version' is invalid (value contains bl
 TSM_0452|VERSION_CONTROL|BADCASE|'Minimum_version' is bigger than 'Maximum_version'
 TSM_0453|VERSION_CONTROL|BADCASE|'Maximum_version' is smaller than current version
 TSM_0454|VERSION_CONTROL|BADCASE|'Minimum_version' is bigger than current version
+TSM_0455|VERSION_CONTROL|BADCASE|Invalid 'min_version': extra character
+TSM_0456|VERSION_CONTROL|BADCASE|Invalid 'max_version': blanks only
+TSM_0457|VERSION_CONTROL|BADCASE|Invalid 'min_version': too many parts
+TSM_0458|VERSION_CONTROL|BADCASE|'min_version' is bigger than 'max_version'
+TSM_0459|VERSION_CONTROL|BADCASE|'max_version' is smaller than 'reference_version'
+TSM_0460|VERSION_CONTROL|BADCASE|'min_version' is bigger than 'reference_version'
 TSM_0800|JSON_DOTDICT|GOODCASE|Nested imports of JSON files with dotdict syntax
 TSM_0900|PARAMETER_PRIORITY|GOODCASE|Test with several sources of parameters: config file (selected by variant name), local config and variable file
 TSM_0901|PARAMETER_PRIORITY|GOODCASE|Test with several sources of parameters: config file, local config, variable file

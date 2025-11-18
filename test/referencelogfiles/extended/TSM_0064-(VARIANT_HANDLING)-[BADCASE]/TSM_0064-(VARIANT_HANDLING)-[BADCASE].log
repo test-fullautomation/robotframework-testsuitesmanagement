@@ -1,22 +1,22 @@
 ==============================================================================
-20251118 11:30:04.200 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
+20251118 15:58:21.516 - INFO - + START SUITE: Tsm-Testfile-01 [ ]
 ==============================================================================
-20251118 11:30:04.203 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20251118 11:30:04.212 - ERROR - Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
-20251118 11:30:04.212 - ERROR - JSON schema validation failed!
-20251118 11:30:04.213 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251118 11:30:04.213 - INFO - +- END SETUP: tm.Testsuite Setup (10)
+20251118 15:58:21.519 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20251118 15:58:21.528 - ERROR - Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+20251118 15:58:21.529 - ERROR - JSON schema validation failed!
+20251118 15:58:21.529 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251118 15:58:21.529 - INFO - +- END SETUP: tm.Testsuite Setup (10)
 ------------------------------------------------------------------------------
-20251118 11:30:04.213 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
+20251118 15:58:21.529 - INFO - +- START TEST: Test Case tsm-testfile-01 [ ]
 ------------------------------------------------------------------------------
-20251118 11:30:04.214 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
+20251118 15:58:21.530 - INFO - +- END TEST: Test Case tsm-testfile-01 (1)
 ------------------------------------------------------------------------------
-20251118 11:30:04.214 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 11:30:04.214 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251118 15:58:21.530 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 15:58:21.530 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251118 11:30:04.214 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251118 15:58:21.530 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251118 11:30:04.215 - INFO - + END SUITE: Tsm-Testfile-01 (144)
+20251118 15:58:21.531 - INFO - + END SUITE: Tsm-Testfile-01 (141)
 ==============================================================================

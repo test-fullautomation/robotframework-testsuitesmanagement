@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 04.07.2025 - 16:41:19
+# 18.11.2025 - 16:12:29
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -73,5 +73,59 @@ class Test_VERSION_CONTROL_BADCASE:
    )
    def test_TSM_0454(self, Description):
       nReturn = CExecute.Execute("TSM_0454")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Invalid 'min_version': extra character",]
+   )
+   def test_TSM_0455(self, Description):
+      nReturn = CExecute.Execute("TSM_0455")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Invalid 'max_version': blanks only",]
+   )
+   def test_TSM_0456(self, Description):
+      nReturn = CExecute.Execute("TSM_0456")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["Invalid 'min_version': too many parts",]
+   )
+   def test_TSM_0457(self, Description):
+      nReturn = CExecute.Execute("TSM_0457")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["'min_version' is bigger than 'max_version'",]
+   )
+   def test_TSM_0458(self, Description):
+      nReturn = CExecute.Execute("TSM_0458")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["'max_version' is smaller than 'reference_version'",]
+   )
+   def test_TSM_0459(self, Description):
+      nReturn = CExecute.Execute("TSM_0459")
+      assert nReturn == 0
+# --------------------------------------------------------------------------------------------------------------
+   # Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+   # (Single file execution)
+   @pytest.mark.parametrize(
+      "Description", ["'min_version' is bigger than 'reference_version'",]
+   )
+   def test_TSM_0460(self, Description):
+      nReturn = CExecute.Execute("TSM_0460")
       assert nReturn == 0
 # --------------------------------------------------------------------------------------------------------------

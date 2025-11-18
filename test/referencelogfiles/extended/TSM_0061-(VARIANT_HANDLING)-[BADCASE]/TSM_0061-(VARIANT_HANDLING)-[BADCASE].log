@@ -1,21 +1,21 @@
 ==============================================================================
-20251118 11:30:02.905 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
+20251118 15:58:20.243 - INFO - + START SUITE: Tsm-Testfile-08-Err-2 [ ]
 ==============================================================================
-20251118 11:30:02.908 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
-20251118 11:30:02.915 - ERROR - Did not find configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
-20251118 11:30:02.916 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251118 11:30:02.916 - INFO - +- END SETUP: tm.Testsuite Setup (8)
+20251118 15:58:20.245 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+20251118 15:58:20.251 - ERROR - Did not find configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
+20251118 15:58:20.251 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251118 15:58:20.251 - INFO - +- END SETUP: tm.Testsuite Setup (6)
 ------------------------------------------------------------------------------
-20251118 11:30:02.916 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2 [ ]
+20251118 15:58:20.252 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2 [ ]
 ------------------------------------------------------------------------------
-20251118 11:30:02.917 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (1)
+20251118 15:58:20.252 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (0)
 ------------------------------------------------------------------------------
-20251118 11:30:02.917 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 11:30:02.917 - INFO - SUITE 'Tsm-Testfile-08-Err-2' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251118 15:58:20.253 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 15:58:20.253 - INFO - SUITE 'Tsm-Testfile-08-Err-2' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251118 11:30:02.917 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251118 15:58:20.253 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251118 11:30:02.918 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (149)
+20251118 15:58:20.253 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (147)
 ==============================================================================

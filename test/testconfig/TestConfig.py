@@ -67,16 +67,16 @@
 # "tsm-testfile-25-naming_conventions_1.robot"    # (with variant configuration and output of several (valid) parameter names (GC))
 # "tsm-testfile-26-unicode_digits.robot"          # (with variant configuration (GC))
 # "tsm-testfile-27-python_inline_code"            # (with variant configuration (GC))
-# "tsm-testfile-80-version-control-01"            # (with variant configuration)
-# "tsm-testfile-81-version-control-02"            # (with variant configuration)
-# "tsm-testfile-82-version-control-03"            # (with variant configuration)
-# "tsm-testfile-83-version-control-04"            # (with variant configuration)
-# "tsm-testfile-84-version-control-05"            # (with variant configuration)
-# "tsm-testfile-85-version-control-06"            # (with variant configuration)
-# "tsm-testfile-86-version-control-07"            # (with variant configuration)
-# "tsm-testfile-87-version-control-08"            # (with variant configuration)
-# "tsm-testfile-88-version-control-09"            # (with variant configuration)
-# "tsm-testfile-89-version-control-10"            # (with variant configuration)
+# "tsm-testfile-40-version-control-01"            # (with variant configuration)
+# "tsm-testfile-41-version-control-02"            # (with variant configuration)
+# "tsm-testfile-42-version-control-03"            # (with variant configuration)
+# "tsm-testfile-43-version-control-04"            # (with variant configuration)
+# "tsm-testfile-44-version-control-05"            # (with variant configuration)
+# "tsm-testfile-45-version-control-06"            # (with variant configuration)
+# "tsm-testfile-46-version-control-07"            # (with variant configuration)
+# "tsm-testfile-47-version-control-08"            # (with variant configuration)
+# "tsm-testfile-48-version-control-09"            # (with variant configuration)
+# "tsm-testfile-49-version-control-10"            # (with variant configuration)
 #
 # configfoldertests1/tsm-cft-test.file-1.robot (configuration files identified by 'config' folder nearby the executed robot files)
 # configfoldertests1/tsm-cft-test.file-2.robot (configuration files identified by 'config' folder nearby the executed robot files)
@@ -763,7 +763,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-80-version-control-01.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-40-version-control-01.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -778,7 +778,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-81-version-control-02.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-41-version-control-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -793,7 +793,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-82-version-control-03.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-42-version-control-03.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -808,7 +808,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-83-version-control-04.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-43-version-control-04.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -823,7 +823,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-84-version-control-05.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-44-version-control-05.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -838,7 +838,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-85-version-control-06.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-45-version-control-06.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -853,7 +853,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-86-version-control-07.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-46-version-control-07.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -868,7 +868,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-87-version-control-08.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-47-version-control-08.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -883,7 +883,7 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-88-version-control-09.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-48-version-control-09.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
@@ -898,23 +898,13 @@ dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
 dictUsecase['COMMENT']          = "Single file execution"
 dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
-dictUsecase['TESTFILENAME']     = "tsm-testfile-89-version-control-10.robot" # (with variant configuration)
+dictUsecase['TESTFILENAME']     = "tsm-testfile-49-version-control-10.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = 0
 listofdictUsecases.append(dictUsecase)
 del dictUsecase
-
-
-
-
-
-
-
-
-
-
-
+# --------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0450"
@@ -987,6 +977,96 @@ dictUsecase['HINT']             = "Belongs to version numbers within variant con
 dictUsecase['TESTFILENAME']     = "tsm-testfile-02.robot" # (with variant configuration)
 dictUsecase['TESTFOLDERNAME']   = None
 dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"version_control_09\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0455"
+dictUsecase['DESCRIPTION']      = "Invalid 'min_version': extra character"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-50-version-control-11.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0456"
+dictUsecase['DESCRIPTION']      = "Invalid 'max_version': blanks only"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-51-version-control-12.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0457"
+dictUsecase['DESCRIPTION']      = "Invalid 'min_version': too many parts"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-52-version-control-13.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0458"
+dictUsecase['DESCRIPTION']      = "'min_version' is bigger than 'max_version'"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-53-version-control-14.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0459"
+dictUsecase['DESCRIPTION']      = "'max_version' is smaller than 'reference_version'"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-54-version-control-15.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
+dictUsecase['EXPECTEDRETURN']   = None # 256
+listofdictUsecases.append(dictUsecase)
+del dictUsecase
+# --------------------------------------------------------------------------------------------------------------
+dictUsecase = {}
+dictUsecase['TESTID']           = "TSM_0460"
+dictUsecase['DESCRIPTION']      = "'min_version' is bigger than 'reference_version'"
+dictUsecase['EXPECTATION']      = "Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)"
+dictUsecase['SECTION']          = "VERSION_CONTROL"
+dictUsecase['SUBSECTION']       = "BADCASE"
+dictUsecase['COMMENT']          = "Single file execution"
+dictUsecase['HINT']             = "Belongs to versions within robot files (Robot Framework version interface)"
+dictUsecase['TESTFILENAME']     = "tsm-testfile-55-version-control-16.robot" # (with variant configuration)
+dictUsecase['TESTFOLDERNAME']   = None
+dictUsecase['ADDITIONALPARAMS'] = "--variable variant:\"variant1\""
 dictUsecase['EXPECTEDRETURN']   = None # 256
 listofdictUsecases.append(dictUsecase)
 del dictUsecase

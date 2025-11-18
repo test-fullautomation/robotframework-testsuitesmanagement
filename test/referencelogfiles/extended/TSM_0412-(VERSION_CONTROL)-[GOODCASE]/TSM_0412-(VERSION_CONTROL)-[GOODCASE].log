@@ -1,71 +1,79 @@
 ==============================================================================
-20251118 11:30:15.555 - INFO - + START SUITE: Tsm-Testfile-88-Version-Control-09 [ ]
+20251118 15:58:33.130 - INFO - + START SUITE: Tsm-Testfile-48-Version-Control-09 [ ]
 ==============================================================================
-20251118 11:30:15.557 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251118 11:30:15.591 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
-20251118 11:30:15.591 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20251118 11:30:15.592 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20251118 11:30:15.593 - INFO - Set suite metadata 'version_test' to value 'None'.
-20251118 11:30:15.594 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20251118 11:30:15.594 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20251118 11:30:15.594 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
-20251118 11:30:15.594 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
-20251118 11:30:15.594 - INFO - Running with configuration level 2 (variant name in command line)
-20251118 11:30:15.596 - INFO - RobotFramework AIO (extended) version check passed!
-20251118 11:30:15.596 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
-20251118 11:30:15.596 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20251118 11:30:15.596 - INFO - Number of test suites: 1
-20251118 11:30:15.596 - INFO - Total number of testcases: 1
-20251118 11:30:15.596 - INFO - +- END SETUP: tm.Testsuite Setup (39)
+20251118 15:58:33.133 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 15:58:33.168 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20251118 15:58:33.168 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251118 15:58:33.170 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251118 15:58:33.171 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20251118 15:58:33.171 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20251118 15:58:33.171 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20251118 15:58:33.171 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20251118 15:58:33.171 - INFO - Running with configuration level 2 (variant name in command line)
+20251118 15:58:33.173 - INFO - RobotFramework AIO (extended) version check passed!
+20251118 15:58:33.173 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+20251118 15:58:33.173 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251118 15:58:33.173 - INFO - Number of test suites: 1
+20251118 15:58:33.173 - INFO - Total number of testcases: 1
+20251118 15:58:33.173 - INFO - +- END SETUP: tm.Testsuite Setup (40)
 ------------------------------------------------------------------------------
-20251118 11:30:15.596 - INFO - +- START TEST: Test Case tsm-testfile-88-version-control-09 [ ]
+20251118 15:58:33.173 - INFO - +- START TEST: Test Case tsm-testfile-48-version-control-09 [ ]
 ------------------------------------------------------------------------------
-20251118 11:30:15.597 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20251118 11:30:15.597 - INFO - Test Count: 1
-20251118 11:30:15.597 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20251118 15:58:33.174 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251118 15:58:33.174 - INFO - Test Count: 1
+20251118 15:58:33.174 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.597 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-88-version-control-09) ]
-20251118 11:30:15.597 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-88-version-control-09) : [STR]  :  'tsm-test_config_variant1'
-20251118 11:30:15.598 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 15:58:33.174 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.174 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-48-version-control-09) : [STR]  :  'tsm-test_config_variant1'
+20251118 15:58:33.175 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.598 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-88-version-control-09) ]
-20251118 11:30:15.598 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-88-version-control-09) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20251118 11:30:15.598 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 15:58:33.175 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.175 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-48-version-control-09) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20251118 15:58:33.175 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.598 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-88-version-control-09) ]
-20251118 11:30:15.598 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-88-version-control-09) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
-20251118 11:30:15.598 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 15:58:33.175 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.175 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-48-version-control-09) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20251118 15:58:33.175 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.598 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-88-version-control-09) ]
-20251118 11:30:15.598 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-88-version-control-09) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20251118 11:30:15.599 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251118 15:58:33.175 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.175 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-48-version-control-09) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20251118 15:58:33.175 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.599 - INFO - +-- START KEYWORD: tm.Get Tsm Version [ ]
-20251118 11:30:15.599 - INFO - ${tsm_version} = 0.9.0
-20251118 11:30:15.599 - INFO - +-- END KEYWORD: tm.Get Tsm Version (0)
+20251118 15:58:33.175 - INFO - +-- START KEYWORD: tm.Get Tsm Version [ ]
+20251118 15:58:33.175 - INFO - ${tsm_version} = 0.9.0
+20251118 15:58:33.176 - INFO - +-- END KEYWORD: tm.Get Tsm Version (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.599 - INFO - +-- START KEYWORD: tm.Check Version [ min_version=0.1.0 | max_version=0.20.0 | reference_version=${tsm_version} ]
-20251118 11:30:15.601 - INFO - Version check passed
-20251118 11:30:15.601 - INFO - ${result} = True
-20251118 11:30:15.601 - INFO - +-- END KEYWORD: tm.Check Version (2)
+20251118 15:58:33.176 - INFO - +-- START KEYWORD: tm.Check Version [ min_version=0.1.0 | max_version=0.20.0 | reference_version=${tsm_version} ]
+20251118 15:58:33.178 - INFO - Version check passed
+20251118 15:58:33.178 - INFO - ${result} = True
+20251118 15:58:33.178 - INFO - +-- END KEYWORD: tm.Check Version (2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.601 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${result} | ${True} ]
-20251118 11:30:15.602 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (1)
+20251118 15:58:33.178 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${tsm_version} | PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.178 - INFO - PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09) : [STR]  :  '0.9.0'
+20251118 15:58:33.178 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 11:30:15.602 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20251118 11:30:15.602 - INFO - TEST 'Test Case tsm-testfile-88-version-control-09' finished with result 'PASS'
-20251118 11:30:15.602 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20251118 15:58:33.178 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${result} | PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09) ]
+20251118 15:58:33.178 - INFO - PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09) : [BOOL]  :  True
+20251118 15:58:33.179 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 15:58:33.179 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${result} | ${True} ]
+20251118 15:58:33.179 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 15:58:33.179 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251118 15:58:33.179 - INFO - TEST 'Test Case tsm-testfile-48-version-control-09' finished with result 'PASS'
+20251118 15:58:33.179 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20251118 11:30:15.602 - INFO - +- END TEST: Test Case tsm-testfile-88-version-control-09 (6)
+20251118 15:58:33.180 - INFO - +- END TEST: Test Case tsm-testfile-48-version-control-09 (6)
 ------------------------------------------------------------------------------
-20251118 11:30:15.603 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 11:30:15.603 - INFO - SUITE 'Tsm-Testfile-88-Version-Control-09' finished with result 'PASS'
-20251118 11:30:15.603 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251118 15:58:33.180 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 15:58:33.180 - INFO - SUITE 'Tsm-Testfile-48-Version-Control-09' finished with result 'PASS'
+20251118 15:58:33.180 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251118 11:30:15.603 - INFO - + END SUITE: Tsm-Testfile-88-Version-Control-09 (183)
+20251118 15:58:33.180 - INFO - + END SUITE: Tsm-Testfile-48-Version-Control-09 (188)
 ==============================================================================

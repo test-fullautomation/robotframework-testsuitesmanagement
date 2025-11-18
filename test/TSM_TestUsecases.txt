@@ -325,6 +325,42 @@ Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN
 Comment....: Single file execution
 Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
+Test TSM_0455 / VERSION_CONTROL / BADCASE
+Description: Invalid 'min_version': extra character
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0456 / VERSION_CONTROL / BADCASE
+Description: Invalid 'max_version': blanks only
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0457 / VERSION_CONTROL / BADCASE
+Description: Invalid 'min_version': too many parts
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0458 / VERSION_CONTROL / BADCASE
+Description: 'min_version' is bigger than 'max_version'
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0459 / VERSION_CONTROL / BADCASE
+Description: 'max_version' is smaller than 'reference_version'
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0460 / VERSION_CONTROL / BADCASE
+Description: 'min_version' is bigger than 'reference_version'
+Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
 Test TSM_0800 / JSON_DOTDICT / GOODCASE
 Description: Nested imports of JSON files with dotdict syntax
 Expectation: dotdict syntax in JSON files is possible
@@ -405,5 +441,5 @@ Description: JSON file containing Python inline code
 Expectation: Python inline code is resolved and the results are logged correctly
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 18.11.2025 - 11:36:10
+Generated: 18.11.2025 - 16:12:29
 

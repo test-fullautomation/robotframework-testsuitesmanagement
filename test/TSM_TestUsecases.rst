@@ -751,6 +751,90 @@ Test Use Cases
 
 ----
 
+* **Test TSM_0455**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **Invalid 'min_version': extra character**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0456**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **Invalid 'max_version': blanks only**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0457**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **Invalid 'min_version': too many parts**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0458**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'min_version' is bigger than 'max_version'**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0459**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'max_version' is smaller than 'reference_version'**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0460**
+
+  [VERSION_CONTROL / BADCASE]
+
+   **'min_version' is bigger than 'reference_version'**
+
+   Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
 * **Test TSM_0800**
 
   [JSON_DOTDICT / GOODCASE]
@@ -943,5 +1027,5 @@ Test Use Cases
 
 ----
 
-Generated: 18.11.2025 - 11:36:10
+Generated: 18.11.2025 - 16:12:29
 
