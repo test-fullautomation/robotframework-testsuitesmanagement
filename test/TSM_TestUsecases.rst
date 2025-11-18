@@ -495,6 +495,8 @@ Test Use Cases
 
    *Comment: Single file execution*
 
+   *Hint: Belongs to version numbers within variant configuration*
+
 ----
 
 * **Test TSM_0401**
@@ -506,6 +508,8 @@ Test Use Cases
    Expected: Test is executed, because of the version control is optional
 
    *Comment: Single file execution*
+
+   *Hint: Belongs to version numbers within variant configuration*
 
 ----
 
@@ -519,6 +523,8 @@ Test Use Cases
 
    *Comment: Single file execution*
 
+   *Hint: Belongs to version numbers within variant configuration*
+
 ----
 
 * **Test TSM_0403**
@@ -530,6 +536,148 @@ Test Use Cases
    Expected: Test is executed, because of the version control is optional
 
    *Comment: Single file execution*
+
+   *Hint: Belongs to version numbers within variant configuration*
+
+----
+
+* **Test TSM_0404**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **'max_version', 'min_version' and 'reference_version' not defined**
+
+   Expected: Test is executed, because of the version control is optional
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0405**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined**
+
+   Expected: Test is executed, because of the version control is optional
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0406**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **Only 'max_version' is defined**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0407**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **Only 'min_version' is defined**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0408**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **Only 'reference_version' is defined**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0409**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **All defined: 'min_version', 'max_version' and 'reference_version' (major.minor.patch)**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0410**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **All defined: 'min_version', 'max_version' and 'reference_version' (major.minor)**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0411**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **All defined: 'min_version', 'max_version' and 'reference_version' (major)**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0412**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **Both 'min_version' and 'max_version' are defined. Reference is the TestsuitesManagement.**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
+
+----
+
+* **Test TSM_0413**
+
+  [VERSION_CONTROL / GOODCASE]
+
+   **Version check with user defined error message**
+
+   Expected: Test is executed
+
+   *Comment: Single file execution*
+
+   *Hint: Belongs to versions within robot files (Robot Framework version interface)*
 
 ----
 
@@ -543,6 +691,8 @@ Test Use Cases
 
    *Comment: Single file execution*
 
+   *Hint: Belongs to version numbers within variant configuration*
+
 ----
 
 * **Test TSM_0451**
@@ -554,6 +704,8 @@ Test Use Cases
    Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 
    *Comment: Single file execution*
+
+   *Hint: Belongs to version numbers within variant configuration*
 
 ----
 
@@ -567,6 +719,8 @@ Test Use Cases
 
    *Comment: Single file execution*
 
+   *Hint: Belongs to version numbers within variant configuration*
+
 ----
 
 * **Test TSM_0453**
@@ -579,6 +733,8 @@ Test Use Cases
 
    *Comment: Single file execution*
 
+   *Hint: Belongs to version numbers within variant configuration*
+
 ----
 
 * **Test TSM_0454**
@@ -590,6 +746,8 @@ Test Use Cases
    Expected: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 
    *Comment: Single file execution*
+
+   *Hint: Belongs to version numbers within variant configuration*
 
 ----
 
@@ -785,5 +943,5 @@ Test Use Cases
 
 ----
 
-Generated: 18.08.2025 - 14:49:11
+Generated: 18.11.2025 - 11:36:10
 

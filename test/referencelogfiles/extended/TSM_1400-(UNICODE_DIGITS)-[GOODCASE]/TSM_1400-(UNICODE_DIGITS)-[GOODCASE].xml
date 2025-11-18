@@ -1,71 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:31.135" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 11:30:25.230" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-26-Unicode Digits" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-26-unicode_digits.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:31.307" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_unicode_digits'.</msg>
-<msg timestamp="20250704 16:25:31.307" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg timestamp="20250704 16:25:31.309" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg timestamp="20250704 16:25:31.310" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.</msg>
-<msg timestamp="20250704 16:25:31.310" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
-<msg timestamp="20250704 16:25:31.310" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg timestamp="20250704 16:25:31.310" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg timestamp="20250704 16:25:31.310" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">${listparam_൯} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">${listvalue} = 10</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_unicode_digits', 'TargetName': 'Device_01', 'params': ...</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">RobotFramework AIO (extended) version check passed!</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_unicode_digits.jsonp'</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">Number of test suites: 1</msg>
-<msg timestamp="20250704 16:25:31.311" level="INFO">Total number of testcases: 1</msg>
-<status status="PASS" starttime="20250704 16:25:31.240" endtime="20250704 16:25:31.311"/>
+<msg timestamp="20251118 11:30:25.407" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_unicode_digits'.</msg>
+<msg timestamp="20251118 11:30:25.407" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg timestamp="20251118 11:30:25.408" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg timestamp="20251118 11:30:25.409" level="INFO">${listparam_൯} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</msg>
+<msg timestamp="20251118 11:30:25.410" level="INFO">${listvalue} = 10</msg>
+<msg timestamp="20251118 11:30:25.410" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_unicode_digits', 'TargetName': 'Device_01', 'params': ...</msg>
+<msg timestamp="20251118 11:30:25.410" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg timestamp="20251118 11:30:25.411" level="INFO">RobotFramework AIO (extended) version check passed!</msg>
+<msg timestamp="20251118 11:30:25.411" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_unicode_digits.jsonp'</msg>
+<msg timestamp="20251118 11:30:25.411" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg timestamp="20251118 11:30:25.411" level="INFO">Number of test suites: 1</msg>
+<msg timestamp="20251118 11:30:25.411" level="INFO">Total number of testcases: 1</msg>
+<status status="PASS" starttime="20251118 11:30:25.370" endtime="20251118 11:30:25.411"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-26-unicode_digits" line="33">
 <kw name="Testcase Setup" library="tm" type="SETUP">
 <doc>This keyword writes the number of counted tests to the log files.</doc>
-<msg timestamp="20250704 16:25:31.312" level="INFO">Test Count: 1</msg>
-<status status="PASS" starttime="20250704 16:25:31.312" endtime="20250704 16:25:31.312"/>
+<msg timestamp="20251118 11:30:25.412" level="INFO">Test Count: 1</msg>
+<status status="PASS" starttime="20251118 11:30:25.412" endtime="20251118 11:30:25.412"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20250704 16:25:31.313" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) : [STR]  :  'tsm-test_config_unicode_digits'</msg>
-<status status="PASS" starttime="20250704 16:25:31.312" endtime="20250704 16:25:31.313"/>
+<msg timestamp="20251118 11:30:25.413" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) : [STR]  :  'tsm-test_config_unicode_digits'</msg>
+<status status="PASS" starttime="20251118 11:30:25.413" endtime="20251118 11:30:25.413"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
 <arg>${listvalue}</arg>
 <arg>PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20250704 16:25:31.313" level="INFO">PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) : [INT]  :  10</msg>
-<status status="PASS" starttime="20250704 16:25:31.313" endtime="20250704 16:25:31.313"/>
+<msg timestamp="20251118 11:30:25.413" level="INFO">PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) : [INT]  :  10</msg>
+<status status="PASS" starttime="20251118 11:30:25.413" endtime="20251118 11:30:25.413"/>
 </kw>
 <kw name="Testcase Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testcase result to the log files.</doc>
-<msg timestamp="20250704 16:25:31.313" level="INFO">TEST 'Test Case tsm-testfile-26-unicode_digits' finished with result 'PASS'</msg>
-<status status="PASS" starttime="20250704 16:25:31.313" endtime="20250704 16:25:31.313"/>
+<msg timestamp="20251118 11:30:25.414" level="INFO">TEST 'Test Case tsm-testfile-26-unicode_digits' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20251118 11:30:25.414" endtime="20251118 11:30:25.414"/>
 </kw>
 <doc>tsm-testfile-26-unicode_digits</doc>
-<status status="PASS" starttime="20250704 16:25:31.311" endtime="20250704 16:25:31.314"/>
+<status status="PASS" starttime="20251118 11:30:25.412" endtime="20251118 11:30:25.414"/>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:31.314" level="INFO">SUITE 'Tsm-Testfile-26-Unicode Digits' finished with result 'PASS'</msg>
-<status status="PASS" starttime="20250704 16:25:31.314" endtime="20250704 16:25:31.314"/>
+<msg timestamp="20251118 11:30:25.414" level="INFO">SUITE 'Tsm-Testfile-26-Unicode Digits' finished with result 'PASS'</msg>
+<status status="PASS" starttime="20251118 11:30:25.414" endtime="20251118 11:30:25.415"/>
 </kw>
-<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_unicode_digits</meta>
+<meta name="reference_app_name">RobotFramework AIO (extended)</meta>
+<meta name="reference_version">0.14.2.26</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 6.1 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" starttime="20250704 16:25:31.139" endtime="20250704 16:25:31.314"/>
+<status status="PASS" starttime="20251118 11:30:25.233" endtime="20251118 11:30:25.415"/>
 </suite>
 <statistics>
 <total>

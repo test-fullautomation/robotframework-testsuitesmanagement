@@ -1,134 +1,135 @@
 ==============================================================================
-20250818 14:47:00.148 - INFO - + START SUITE: Tsm-Testfile-27-Python Inline Code [ ]
+20251118 11:30:25.838 - INFO - + START SUITE: Tsm-Testfile-27-Python Inline Code [ ]
 ==============================================================================
-20250818 14:47:00.150 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250818 14:47:00.244 - INFO - Set suite metadata 'project' to value 'tsm-test_config_python_inline_code'.
-20250818 14:47:00.244 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20250818 14:47:00.246 - INFO - Set suite metadata 'version_test' to value 'None'.
-20250818 14:47:00.247 - INFO - ${A} = 1
-20250818 14:47:00.247 - INFO - ${B} = 2
-20250818 14:47:00.247 - INFO - ${kA} = kA
-20250818 14:47:00.247 - INFO - ${kB} = kB
-20250818 14:47:00.248 - INFO - ${choice} = True
-20250818 14:47:00.248 - INFO - ${value01} = ABC
-20250818 14:47:00.248 - INFO - ${value02} = 25
-20250818 14:47:00.248 - INFO - ${value03} = 2.5
-20250818 14:47:00.249 - INFO - ${value04} = True
-20250818 14:47:00.249 - INFO - ${value05} = None
-20250818 14:47:00.249 - INFO - ${value06} = [1, 2]
-20250818 14:47:00.250 - INFO - ${value07} = {'kA': 1, 'kB': 2}
-20250818 14:47:00.250 - INFO - ${expression1} = [1, 2]
-20250818 14:47:00.250 - INFO - ${value08} = [1, 2]
-20250818 14:47:00.251 - INFO - ${expression2} = {'kA': 1, 'kB': 2}
-20250818 14:47:00.251 - INFO - ${value09} = {'kA': 1, 'kB': 2}
-20250818 14:47:00.251 - INFO - ${value10} = 1
-20250818 14:47:00.252 - INFO - ${value11} = 1
-20250818 14:47:00.252 - INFO - ${value13} = {'kA': 'A', 'kB': 1, 'kC': 'C'}
-20250818 14:47:00.252 - INFO - ${list1} = [1, 2, 3]
-20250818 14:47:00.253 - INFO - ${list2} = [4, 5, 6]
-20250818 14:47:00.253 - INFO - ${value16} = [1, 2, 3, [4, 5, 6, 1, 2, 3]]
-20250818 14:47:00.254 - INFO - ${dict} = {'kA': 'vA', 'kB': 'vB'}
-20250818 14:47:00.254 - INFO - ${value17} = ['kA', 'kB']
-20250818 14:47:00.254 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_python_inline_code', 'TargetName': 'Device_01', 'param...
-20250818 14:47:00.254 - INFO - Running with configuration level 2 (variant name in command line)
-20250818 14:47:00.254 - INFO - RobotFramework AIO (extended) version check passed!
-20250818 14:47:00.254 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_python_inline_code.jsonp'
-20250818 14:47:00.254 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20250818 14:47:00.255 - INFO - Number of test suites: 1
-20250818 14:47:00.255 - INFO - Total number of testcases: 1
-20250818 14:47:00.255 - INFO - +- END SETUP: tm.Testsuite Setup (105)
+20251118 11:30:25.841 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 11:30:25.894 - INFO - Set suite metadata 'project' to value 'tsm-test_config_python_inline_code'.
+20251118 11:30:25.894 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251118 11:30:25.896 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251118 11:30:25.896 - INFO - ${A} = 1
+20251118 11:30:25.897 - INFO - ${B} = 2
+20251118 11:30:25.897 - INFO - ${kA} = kA
+20251118 11:30:25.897 - INFO - ${kB} = kB
+20251118 11:30:25.897 - INFO - ${choice} = True
+20251118 11:30:25.898 - INFO - ${value01} = ABC
+20251118 11:30:25.898 - INFO - ${value02} = 25
+20251118 11:30:25.898 - INFO - ${value03} = 2.5
+20251118 11:30:25.898 - INFO - ${value04} = True
+20251118 11:30:25.899 - INFO - ${value05} = None
+20251118 11:30:25.899 - INFO - ${value06} = [1, 2]
+20251118 11:30:25.899 - INFO - ${value07} = {'kA': 1, 'kB': 2}
+20251118 11:30:25.899 - INFO - ${expression1} = [1, 2]
+20251118 11:30:25.900 - INFO - ${value08} = [1, 2]
+20251118 11:30:25.900 - INFO - ${expression2} = {'kA': 1, 'kB': 2}
+20251118 11:30:25.900 - INFO - ${value09} = {'kA': 1, 'kB': 2}
+20251118 11:30:25.901 - INFO - ${value10} = 1
+20251118 11:30:25.901 - INFO - ${value11} = 1
+20251118 11:30:25.902 - INFO - ${value13} = {'kA': 'A', 'kB': 1, 'kC': 'C'}
+20251118 11:30:25.902 - INFO - ${list1} = [1, 2, 3]
+20251118 11:30:25.902 - INFO - ${list2} = [4, 5, 6]
+20251118 11:30:25.903 - INFO - ${value16} = [1, 2, 3, [4, 5, 6, 1, 2, 3]]
+20251118 11:30:25.903 - INFO - ${dict} = {'kA': 'vA', 'kB': 'vB'}
+20251118 11:30:25.904 - INFO - ${value17} = ['kA', 'kB']
+20251118 11:30:25.904 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_python_inline_code', 'TargetName': 'Device_01', 'param...
+20251118 11:30:25.904 - INFO - Running with configuration level 2 (variant name in command line)
+20251118 11:30:25.905 - INFO - RobotFramework AIO (extended) version check passed!
+20251118 11:30:25.905 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_python_inline_code.jsonp'
+20251118 11:30:25.905 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251118 11:30:25.905 - INFO - Number of test suites: 1
+20251118 11:30:25.905 - INFO - Total number of testcases: 1
+20251118 11:30:25.905 - INFO - +- END SETUP: tm.Testsuite Setup (64)
 ------------------------------------------------------------------------------
-20250818 14:47:00.255 - INFO - +- START TEST: Test Case tsm-testfile-27-python_inline_code [ ]
+20251118 11:30:25.906 - INFO - +- START TEST: Test Case tsm-testfile-27-python_inline_code [ ]
 ------------------------------------------------------------------------------
-20250818 14:47:00.255 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20250818 14:47:00.256 - INFO - Test Count: 1
-20250818 14:47:00.256 - INFO - +-- END SETUP: tm.Testcase Setup (1)
+20251118 11:30:25.906 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251118 11:30:25.906 - INFO - Test Count: 1
+20251118 11:30:25.907 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.256 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value01} | PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.256 - INFO - PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code) : [STR]  :  'ABC'
-20250818 14:47:00.256 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.907 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value01} | PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.907 - INFO - PARAMS-VERIFIKATION : ({value01} / tsm-testfile-27-python_inline_code) : [STR]  :  'ABC'
+20251118 11:30:25.907 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.256 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value02} | PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.256 - INFO - PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code) : [INT]  :  25
-20250818 14:47:00.256 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.907 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value02} | PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.908 - INFO - PARAMS-VERIFIKATION : ({value02} / tsm-testfile-27-python_inline_code) : [INT]  :  25
+20251118 11:30:25.908 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.257 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value03} | PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.257 - INFO - PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code) : [FLOAT]  :  2.5
-20250818 14:47:00.257 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.908 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value03} | PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.908 - INFO - PARAMS-VERIFIKATION : ({value03} / tsm-testfile-27-python_inline_code) : [FLOAT]  :  2.5
+20251118 11:30:25.908 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.257 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value04} | PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.257 - INFO - PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code) : [BOOL]  :  True
-20250818 14:47:00.257 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.908 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value04} | PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.909 - INFO - PARAMS-VERIFIKATION : ({value04} / tsm-testfile-27-python_inline_code) : [BOOL]  :  True
+20251118 11:30:25.909 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.257 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value05} | PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.257 - INFO - PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code) : [NONE]  :  None
-20250818 14:47:00.257 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.909 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value05} | PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.909 - INFO - PARAMS-VERIFIKATION : ({value05} / tsm-testfile-27-python_inline_code) : [NONE]  :  None
+20251118 11:30:25.909 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.257 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value06} | PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.257 - INFO - PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [INT]  :  1
-20250818 14:47:00.257 - INFO - PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [INT]  :  2
-20250818 14:47:00.258 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251118 11:30:25.909 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value06} | PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.909 - INFO - PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [INT]  :  1
+20251118 11:30:25.909 - INFO - PARAMS-VERIFIKATION : ({value06} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [INT]  :  2
+20251118 11:30:25.909 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.258 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value07} | PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.258 - INFO - PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) > {kA} [INT]  :  1
-20250818 14:47:00.258 - INFO - PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) > {kB} [INT]  :  2
-20250818 14:47:00.258 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.909 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value07} | PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) > {kA} [INT]  :  1
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value07} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) > {kB} [INT]  :  2
+20251118 11:30:25.910 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.258 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value08} | PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.258 - INFO - PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [INT]  :  1
-20250818 14:47:00.258 - INFO - PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [INT]  :  2
-20250818 14:47:00.259 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.910 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value08} | PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [INT]  :  1
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value08} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [INT]  :  2
+20251118 11:30:25.910 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.259 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value09} | PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.259 - INFO - PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) > {kA} [INT]  :  1
-20250818 14:47:00.259 - INFO - PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) > {kB} [INT]  :  2
-20250818 14:47:00.259 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.910 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value09} | PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/1) > {kA} [INT]  :  1
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value09} / tsm-testfile-27-python_inline_code) : [DOTDICT] (2/2) > {kB} [INT]  :  2
+20251118 11:30:25.910 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.259 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value10} | PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.259 - INFO - PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code) : [INT]  :  1
-20250818 14:47:00.259 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.910 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value10} | PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.910 - INFO - PARAMS-VERIFIKATION : ({value10} / tsm-testfile-27-python_inline_code) : [INT]  :  1
+20251118 11:30:25.911 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.259 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value11} | PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.259 - INFO - PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code) : [INT]  :  1
-20250818 14:47:00.260 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251118 11:30:25.911 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value11} | PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value11} / tsm-testfile-27-python_inline_code) : [INT]  :  1
+20251118 11:30:25.911 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.260 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value13} | PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.260 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/1) > {kA} [STR]  :  'A'
-20250818 14:47:00.260 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/2) > {kB} [INT]  :  1
-20250818 14:47:00.260 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/3) > {kC} [STR]  :  'C'
-20250818 14:47:00.260 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.911 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value13} | PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/1) > {kA} [STR]  :  'A'
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/2) > {kB} [INT]  :  1
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value13} / tsm-testfile-27-python_inline_code) : [DOTDICT] (3/3) > {kC} [STR]  :  'C'
+20251118 11:30:25.911 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.260 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value16} | PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.260 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/1) > [INT]  :  1
-20250818 14:47:00.260 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/2) > [INT]  :  2
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/3) > [INT]  :  3
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/1) > [INT]  :  4
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/2) > [INT]  :  5
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/3) > [INT]  :  6
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/4) > [INT]  :  1
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/5) > [INT]  :  2
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/6) > [INT]  :  3
-20250818 14:47:00.261 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251118 11:30:25.911 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value16} | PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/1) > [INT]  :  1
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/2) > [INT]  :  2
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/3) > [INT]  :  3
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/1) > [INT]  :  4
+20251118 11:30:25.911 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/2) > [INT]  :  5
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/3) > [INT]  :  6
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/4) > [INT]  :  1
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/5) > [INT]  :  2
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value16} / tsm-testfile-27-python_inline_code) : [LIST] (4/4) > [LIST] (6/6) > [INT]  :  3
+20251118 11:30:25.912 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.261 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value17} | PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) ]
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [STR]  :  'kA'
-20250818 14:47:00.261 - INFO - PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [STR]  :  'kB'
-20250818 14:47:00.262 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251118 11:30:25.912 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${value17} | PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) ]
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/1) > [STR]  :  'kA'
+20251118 11:30:25.912 - INFO - PARAMS-VERIFIKATION : ({value17} / tsm-testfile-27-python_inline_code) : [LIST] (2/2) > [STR]  :  'kB'
+20251118 11:30:25.912 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250818 14:47:00.262 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20250818 14:47:00.262 - INFO - TEST 'Test Case tsm-testfile-27-python_inline_code' finished with result 'PASS'
-20250818 14:47:00.262 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20251118 11:30:25.912 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251118 11:30:25.913 - INFO - TEST 'Test Case tsm-testfile-27-python_inline_code' finished with result 'PASS'
+20251118 11:30:25.913 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20250818 14:47:00.262 - INFO - +- END TEST: Test Case tsm-testfile-27-python_inline_code (7)
+20251118 11:30:25.913 - INFO - +- END TEST: Test Case tsm-testfile-27-python_inline_code (8)
 ------------------------------------------------------------------------------
-20250818 14:47:00.262 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250818 14:47:00.263 - INFO - SUITE 'Tsm-Testfile-27-Python Inline Code' finished with result 'PASS'
-20250818 14:47:00.263 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20251118 11:30:25.913 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 11:30:25.913 - INFO - SUITE 'Tsm-Testfile-27-Python Inline Code' finished with result 'PASS'
+20251118 11:30:25.913 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20250818 14:47:00.263 - INFO - + END SUITE: Tsm-Testfile-27-Python Inline Code (225)
+20251118 11:30:25.914 - INFO - + END SUITE: Tsm-Testfile-27-Python Inline Code (212)
 ==============================================================================

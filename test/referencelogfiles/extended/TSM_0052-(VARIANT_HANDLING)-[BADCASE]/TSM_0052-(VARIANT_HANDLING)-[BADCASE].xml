@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:09.611" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 11:29:58.803" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:09.773" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
-<msg timestamp="20250704 16:25:09.773" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
-<msg timestamp="20250704 16:25:09.774" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
-<msg timestamp="20250704 16:25:09.774" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20250704 16:25:09.714" endtime="20250704 16:25:09.774"/>
+<msg timestamp="20251118 11:29:58.976" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
+<msg timestamp="20251118 11:29:58.976" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg timestamp="20251118 11:29:58.977" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
+<msg timestamp="20251118 11:29:58.977" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251118 11:29:58.944" endtime="20251118 11:29:58.978"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20250704 16:25:09.774" endtime="20250704 16:25:09.775">Parent suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251118 11:29:58.978" endtime="20251118 11:29:58.978">Parent suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:09.776" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+<msg timestamp="20251118 11:29:58.979" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20250704 16:25:09.775" endtime="20250704 16:25:09.776"/>
+<status status="PASS" starttime="20251118 11:29:58.979" endtime="20251118 11:29:58.979"/>
 </kw>
-<status status="UNKNOWN" starttime="20250704 16:25:09.613" endtime="20250704 16:25:09.776">Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251118 11:29:58.806" endtime="20251118 11:29:58.979">Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -38,8 +38,8 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250704 16:25:09.773" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
-<msg timestamp="20250704 16:25:09.773" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
-<msg timestamp="20250704 16:25:09.774" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
+<msg timestamp="20251118 11:29:58.976" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
+<msg timestamp="20251118 11:29:58.976" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg timestamp="20251118 11:29:58.977" level="ERROR">In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
 </errors>
 </robot>

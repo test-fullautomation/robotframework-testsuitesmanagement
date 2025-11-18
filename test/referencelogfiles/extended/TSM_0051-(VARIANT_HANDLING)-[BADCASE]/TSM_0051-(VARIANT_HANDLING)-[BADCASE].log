@@ -1,23 +1,23 @@
 ==============================================================================
-20251117 10:54:55.035 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251118 11:29:58.486 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20251117 10:54:55.038 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251117 10:54:55.068 - ERROR - Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
-20251117 10:54:55.068 - ERROR - Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
-20251117 10:54:55.069 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
-20251117 10:54:55.069 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251117 10:54:55.069 - INFO - +- END SETUP: tm.Testsuite Setup (31)
+20251118 11:29:58.490 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 11:29:58.519 - ERROR - Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+20251118 11:29:58.519 - ERROR - Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
+20251118 11:29:58.520 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
+20251118 11:29:58.520 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251118 11:29:58.520 - INFO - +- END SETUP: tm.Testsuite Setup (30)
 ------------------------------------------------------------------------------
-20251117 10:54:55.070 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251118 11:29:58.520 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20251117 10:54:55.070 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20251118 11:29:58.521 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20251117 10:54:55.070 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251117 10:54:55.071 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251118 11:29:58.521 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 11:29:58.522 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251117 10:54:55.071 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20251118 11:29:58.522 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20251117 10:54:55.071 - INFO - + END SUITE: Tsm-Testfile-02 (176)
+20251118 11:29:58.522 - INFO - + END SUITE: Tsm-Testfile-02 (169)
 ==============================================================================

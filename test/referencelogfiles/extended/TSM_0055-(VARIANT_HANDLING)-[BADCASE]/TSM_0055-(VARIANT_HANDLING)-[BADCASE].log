@@ -1,23 +1,23 @@
 ==============================================================================
-20251117 10:59:38.971 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251118 11:30:00.309 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20251117 10:59:38.974 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251117 10:59:38.974 - ERROR - Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.
-20251117 10:59:38.974 - ERROR - ---> It is not possible to use both together, because they belong to the same feature (the variant selection).
-20251117 10:59:38.975 - ERROR - ---> Please remove one of them.
-20251117 10:59:38.975 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251117 10:59:38.975 - INFO - +- END SETUP: tm.Testsuite Setup (1)
+20251118 11:30:00.311 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 11:30:00.312 - ERROR - Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.
+20251118 11:30:00.312 - ERROR - ---> It is not possible to use both together, because they belong to the same feature (the variant selection).
+20251118 11:30:00.312 - ERROR - ---> Please remove one of them.
+20251118 11:30:00.313 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251118 11:30:00.313 - INFO - +- END SETUP: tm.Testsuite Setup (2)
 ------------------------------------------------------------------------------
-20251117 10:59:38.975 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251118 11:30:00.313 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20251117 10:59:38.976 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20251118 11:30:00.314 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
 ------------------------------------------------------------------------------
-20251117 10:59:38.976 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251117 10:59:38.976 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251118 11:30:00.314 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 11:30:00.314 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251117 10:59:38.976 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251118 11:30:00.314 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251117 10:59:38.977 - INFO - + END SUITE: Tsm-Testfile-02 (139)
+20251118 11:30:00.314 - INFO - + END SUITE: Tsm-Testfile-02 (142)
 ==============================================================================

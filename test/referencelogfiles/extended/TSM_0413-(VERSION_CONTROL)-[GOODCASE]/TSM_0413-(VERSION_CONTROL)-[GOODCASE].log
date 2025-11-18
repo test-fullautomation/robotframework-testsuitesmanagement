@@ -1,0 +1,73 @@
+==============================================================================
+20251118 11:30:15.989 - INFO - + START SUITE: Tsm-Testfile-89-Version-Control-10 [ ]
+==============================================================================
+20251118 11:30:15.992 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 11:30:16.027 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+20251118 11:30:16.027 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251118 11:30:16.028 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251118 11:30:16.029 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251118 11:30:16.029 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20251118 11:30:16.030 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20251118 11:30:16.030 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+20251118 11:30:16.030 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+20251118 11:30:16.030 - INFO - Running with configuration level 2 (variant name in command line)
+20251118 11:30:16.031 - INFO - RobotFramework AIO (extended) version check passed!
+20251118 11:30:16.031 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+20251118 11:30:16.031 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251118 11:30:16.031 - INFO - Number of test suites: 1
+20251118 11:30:16.031 - INFO - Total number of testcases: 1
+20251118 11:30:16.032 - INFO - +- END SETUP: tm.Testsuite Setup (40)
+------------------------------------------------------------------------------
+20251118 11:30:16.032 - INFO - +- START TEST: Test Case tsm-testfile-89-version-control-10 [ ]
+------------------------------------------------------------------------------
+20251118 11:30:16.032 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251118 11:30:16.033 - INFO - Test Count: 1
+20251118 11:30:16.033 - INFO - +-- END SETUP: tm.Testcase Setup (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.033 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-89-version-control-10) ]
+20251118 11:30:16.033 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-89-version-control-10) : [STR]  :  'tsm-test_config_variant1'
+20251118 11:30:16.034 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.034 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-89-version-control-10) ]
+20251118 11:30:16.034 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-89-version-control-10) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20251118 11:30:16.034 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.034 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-89-version-control-10) ]
+20251118 11:30:16.035 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-89-version-control-10) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+20251118 11:30:16.035 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.035 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-89-version-control-10) ]
+20251118 11:30:16.035 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-89-version-control-10) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20251118 11:30:16.035 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.035 - INFO - +-- START KEYWORD: tm.Get Status Messages [ ]
+20251118 11:30:16.035 - INFO - ${status_messages} = {'CHECK_NOT_EXECUTED': "Version check is skipped because both 'min_version' and 'max_version' are set to None", 'CHECK_PASSED': 'Version check passed', 'CONFLICT_MIN': "The test execution requires the...
+20251118 11:30:16.035 - INFO - +-- END KEYWORD: tm.Get Status Messages (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.036 - INFO - +-- START KEYWORD: set_to_dictionary [ ${status_messages} | CHECK_PASSED=User defined 'CHECK_PASSED status message' ]
+20251118 11:30:16.036 - UNKNOWN - No keyword with name 'set_to_dictionary' found.
+20251118 11:30:16.036 - INFO - +-- END KEYWORD: set_to_dictionary (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.036 - INFO - +-- START KEYWORD: tm.Check Version [ min_version=0.1.0 | max_version=0.20.0 | reference_version=0.3.0 | status_messages=${status_messages} ]
+20251118 11:30:16.036 - INFO - +-- END KEYWORD: tm.Check Version (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.036 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${result} | ${True} ]
+20251118 11:30:16.037 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20251118 11:30:16.037 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251118 11:30:16.037 - INFO - TEST 'Test Case tsm-testfile-89-version-control-10' finished with result 'UNKNOWN', reason: No keyword with name 'set_to_dictionary' found.
+20251118 11:30:16.037 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+------------------------------------------------------------------------------
+20251118 11:30:16.037 - INFO - +- END TEST: Test Case tsm-testfile-89-version-control-10 (5)
+------------------------------------------------------------------------------
+20251118 11:30:16.038 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 11:30:16.038 - INFO - SUITE 'Tsm-Testfile-89-Version-Control-10' finished with result 'UNKNOWN', reason: 1 test, 0 passed, 0 failed, 1 unknown
+20251118 11:30:16.038 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+==============================================================================
+20251118 11:30:16.038 - INFO - + END SUITE: Tsm-Testfile-89-Version-Control-10 (182)
+==============================================================================

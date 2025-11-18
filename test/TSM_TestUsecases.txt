@@ -215,46 +215,115 @@ Test TSM_0400 / VERSION_CONTROL / GOODCASE
 Description: 'Maximum_version' and 'Minimum_version' not defined
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0401 / VERSION_CONTROL / GOODCASE
 Description: 'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0402 / VERSION_CONTROL / GOODCASE
 Description: Only 'Maximum_version' is defined
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0403 / VERSION_CONTROL / GOODCASE
 Description: Only 'Minimum_version' is defined
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0404 / VERSION_CONTROL / GOODCASE
+Description: 'max_version', 'min_version' and 'reference_version' not defined
+Expectation: Test is executed, because of the version control is optional
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0405 / VERSION_CONTROL / GOODCASE
+Description: 'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined
+Expectation: Test is executed, because of the version control is optional
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0406 / VERSION_CONTROL / GOODCASE
+Description: Only 'max_version' is defined
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0407 / VERSION_CONTROL / GOODCASE
+Description: Only 'min_version' is defined
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0408 / VERSION_CONTROL / GOODCASE
+Description: Only 'reference_version' is defined
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0409 / VERSION_CONTROL / GOODCASE
+Description: All defined: 'min_version', 'max_version' and 'reference_version' (major.minor.patch)
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0410 / VERSION_CONTROL / GOODCASE
+Description: All defined: 'min_version', 'max_version' and 'reference_version' (major.minor)
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0411 / VERSION_CONTROL / GOODCASE
+Description: All defined: 'min_version', 'max_version' and 'reference_version' (major)
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0412 / VERSION_CONTROL / GOODCASE
+Description: Both 'min_version' and 'max_version' are defined. Reference is the TestsuitesManagement.
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
+------------------------------------------------------------------------------------------------------------------------
+Test TSM_0413 / VERSION_CONTROL / GOODCASE
+Description: Version check with user defined error message
+Expectation: Test is executed
+Comment....: Single file execution
+Hint.......: Belongs to versions within robot files (Robot Framework version interface)
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0450 / VERSION_CONTROL / BADCASE
 Description: 'Maximum_version' is invalid (value is not a version number)
 Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0451 / VERSION_CONTROL / BADCASE
 Description: 'Minimum_version' is invalid (value contains blanks only)
 Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0452 / VERSION_CONTROL / BADCASE
 Description: 'Minimum_version' is bigger than 'Maximum_version'
 Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0453 / VERSION_CONTROL / BADCASE
 Description: 'Maximum_version' is smaller than current version
 Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0454 / VERSION_CONTROL / BADCASE
 Description: 'Minimum_version' is bigger than current version
 Expectation: Test is not executed; error message; test result is FAIL or UNKNOWN (depending on the Robot Framework core)
 Comment....: Single file execution
+Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0800 / JSON_DOTDICT / GOODCASE
 Description: Nested imports of JSON files with dotdict syntax
@@ -336,5 +405,5 @@ Description: JSON file containing Python inline code
 Expectation: Python inline code is resolved and the results are logged correctly
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 18.08.2025 - 14:49:11
+Generated: 18.11.2025 - 11:36:10
 

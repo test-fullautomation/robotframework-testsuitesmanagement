@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:12.190" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 11:30:01.462" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:12.363" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
-<msg timestamp="20250704 16:25:12.363" level="ERROR">The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.</msg>
-<msg timestamp="20250704 16:25:12.364" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', </msg>
-<msg timestamp="20250704 16:25:12.365" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20250704 16:25:12.302" endtime="20250704 16:25:12.365"/>
+<msg timestamp="20251118 11:30:01.637" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg timestamp="20251118 11:30:01.637" level="ERROR">The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.</msg>
+<msg timestamp="20251118 11:30:01.638" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', 'python_inline_code', </msg>
+<msg timestamp="20251118 11:30:01.638" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251118 11:30:01.609" endtime="20251118 11:30:01.638"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20250704 16:25:12.365" endtime="20250704 16:25:12.366">Parent suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251118 11:30:01.638" endtime="20251118 11:30:01.639">Parent suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:12.366" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+<msg timestamp="20251118 11:30:01.639" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20250704 16:25:12.366" endtime="20250704 16:25:12.366"/>
+<status status="PASS" starttime="20251118 11:30:01.639" endtime="20251118 11:30:01.639"/>
 </kw>
-<status status="UNKNOWN" starttime="20250704 16:25:12.201" endtime="20250704 16:25:12.366">Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251118 11:30:01.473" endtime="20251118 11:30:01.639">Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -38,8 +38,8 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250704 16:25:12.363" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
-<msg timestamp="20250704 16:25:12.363" level="ERROR">The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.</msg>
-<msg timestamp="20250704 16:25:12.364" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', </msg>
+<msg timestamp="20251118 11:30:01.637" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg timestamp="20251118 11:30:01.637" level="ERROR">The variant 'I_AM_NOT_DEFINED' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants.jsonp'.</msg>
+<msg timestamp="20251118 11:30:01.638" level="ERROR">Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', 'python_inline_code', </msg>
 </errors>
 </robot>

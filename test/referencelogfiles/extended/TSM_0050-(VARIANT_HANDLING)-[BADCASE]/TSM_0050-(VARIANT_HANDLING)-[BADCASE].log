@@ -1,22 +1,22 @@
 ==============================================================================
-20251117 10:51:33.481 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251118 11:29:58.032 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20251117 10:51:33.484 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251117 10:51:33.518 - ERROR - Required parameter 'WelcomeString' is missing in file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp'.
-20251117 10:51:33.519 - ERROR - JSON schema validation failed!
-20251117 10:51:33.520 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251117 10:51:33.520 - INFO - +- END SETUP: tm.Testsuite Setup (36)
+20251118 11:29:58.035 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251118 11:29:58.069 - ERROR - Required parameter 'WelcomeString' is missing in file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp'.
+20251118 11:29:58.069 - ERROR - JSON schema validation failed!
+20251118 11:29:58.070 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251118 11:29:58.070 - INFO - +- END SETUP: tm.Testsuite Setup (35)
 ------------------------------------------------------------------------------
-20251117 10:51:33.520 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251118 11:29:58.070 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20251117 10:51:33.521 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
+20251118 11:29:58.071 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20251117 10:51:33.521 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251117 10:51:33.522 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251118 11:29:58.071 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251118 11:29:58.071 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251117 10:51:33.522 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20251118 11:29:58.071 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251117 10:51:33.522 - INFO - + END SUITE: Tsm-Testfile-02 (176)
+20251118 11:29:58.072 - INFO - + END SUITE: Tsm-Testfile-02 (181)
 ==============================================================================
