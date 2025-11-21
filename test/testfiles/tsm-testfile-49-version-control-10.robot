@@ -20,6 +20,8 @@
 
 *** Settings ***
 
+# Library 'Collections' is required for keyword 'set_to_dictionary' only in this test
+Library    Collections
 Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
 Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
 

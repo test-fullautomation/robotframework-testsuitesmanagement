@@ -1,49 +1,50 @@
 ==============================================================================
-2025-07-04 16:40:15.505400 - INFO - + START SUITE: Tsm-Testfile-26-Unicode Digits
+2025-11-21 10:15:40.619904 - INFO - + START SUITE: Tsm-Testfile-26-Unicode Digits
 ==============================================================================
-2025-07-04 16:40:15.610433 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:15.676880 - INFO - Set suite metadata 'project' to value 'tsm-test_config_unicode_digits'.
-2025-07-04 16:40:15.677014 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:40:15.679039 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:40:15.679102 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:40:15.679138 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:40:15.679171 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:40:15.679203 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:40:15.679232 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:40:15.679646 - INFO - ${listparam_൯} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-2025-07-04 16:40:15.679898 - INFO - ${listvalue} = 10
-2025-07-04 16:40:15.680142 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_unicode_digits', 'TargetName': 'Device_01', 'params': ...
-2025-07-04 16:40:15.680177 - INFO - Running with configuration level 2 (variant name in command line)
-2025-07-04 16:40:15.680247 - INFO - RobotFramework AIO (original) version check passed!
-2025-07-04 16:40:15.680268 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_unicode_digits.jsonp'
-2025-07-04 16:40:15.680286 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 16:40:15.680301 - INFO - Number of test suites: 1
-2025-07-04 16:40:15.680317 - INFO - Total number of testcases: 1
-2025-07-04 16:40:15.680359 - INFO - +- END SETUP: tm.Testsuite Setup (0.069926 s)
+2025-11-21 10:15:40.758522 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:40.797074 - INFO - Set suite metadata 'project' to value 'tsm-test_config_unicode_digits'.
+2025-11-21 10:15:40.797191 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:40.799438 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:40.799501 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:40.799542 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:40.799575 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:40.799607 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:40.799637 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:40.799667 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:40.800087 - INFO - ${listparam_൯} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2025-11-21 10:15:40.800334 - INFO - ${listvalue} = 10
+2025-11-21 10:15:40.800582 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_unicode_digits', 'TargetName': 'Device_01', 'params': ...
+2025-11-21 10:15:40.800616 - INFO - Running with configuration level 2 (variant name in command line)
+2025-11-21 10:15:40.801843 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:40.801882 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_unicode_digits.jsonp'
+2025-11-21 10:15:40.801904 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:40.801921 - INFO - Number of test suites: 1
+2025-11-21 10:15:40.801937 - INFO - Total number of testcases: 1
+2025-11-21 10:15:40.801979 - INFO - +- END SETUP: tm.Testsuite Setup (0.043457 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:15.680460 - INFO - +- START TEST: Test Case tsm-testfile-26-unicode_digits
+2025-11-21 10:15:40.802077 - INFO - +- START TEST: Test Case tsm-testfile-26-unicode_digits
 ------------------------------------------------------------------------------
-2025-07-04 16:40:15.681157 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 16:40:15.681260 - INFO - Test Count: 1
-2025-07-04 16:40:15.681298 - INFO - +-- END SETUP: tm.Testcase Setup (0.000141 s)
+2025-11-21 10:15:40.802771 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:40.802881 - INFO - Test Count: 1
+2025-11-21 10:15:40.802922 - INFO - +-- END SETUP: tm.Testcase Setup (0.000151 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:15.681447 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) ]
-2025-07-04 16:40:15.681721 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) : [STR]  :  'tsm-test_config_unicode_digits'
-2025-07-04 16:40:15.681859 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000412 s)
+2025-11-21 10:15:40.803166 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) ]
+2025-11-21 10:15:40.803444 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-26-unicode_digits) : [STR]  :  'tsm-test_config_unicode_digits'
+2025-11-21 10:15:40.803528 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000362 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:15.681978 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${listvalue} | PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) ]
-2025-07-04 16:40:15.682092 - INFO - PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) : [INT]  :  10
-2025-07-04 16:40:15.682158 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00018 s)
+2025-11-21 10:15:40.803639 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${listvalue} | PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) ]
+2025-11-21 10:15:40.803885 - INFO - PARAMS-VERIFIKATION : ({listvalue} / tsm-testfile-26-unicode_digits) : [INT]  :  10
+2025-11-21 10:15:40.804042 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000403 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:15.682281 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 16:40:15.682406 - INFO - TEST 'Test Case tsm-testfile-26-unicode_digits' finished with result 'PASS'
-2025-07-04 16:40:15.682439 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000158 s)
+2025-11-21 10:15:40.804193 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:40.804318 - INFO - TEST 'Test Case tsm-testfile-26-unicode_digits' finished with result 'PASS'
+2025-11-21 10:15:40.804375 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000182 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:15.682495 - INFO - +- END TEST: Test Case tsm-testfile-26-unicode_digits (0.002035 s)
+2025-11-21 10:15:40.804512 - INFO - +- END TEST: Test Case tsm-testfile-26-unicode_digits (0.002435 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:15.682867 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:15.682992 - INFO - SUITE 'Tsm-Testfile-26-Unicode Digits' finished with result 'PASS'
-2025-07-04 16:40:15.683026 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000159 s)
+2025-11-21 10:15:40.804950 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:40.805074 - INFO - SUITE 'Tsm-Testfile-26-Unicode Digits' finished with result 'PASS'
+2025-11-21 10:15:40.805107 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000157 s)
 ==============================================================================
-2025-07-04 16:40:15.683053 - INFO - + END SUITE: Tsm-Testfile-26-Unicode Digits (0.177653 s)
+2025-11-21 10:15:40.805135 - INFO - + END SUITE: Tsm-Testfile-26-Unicode Digits (0.185231 s)
 ==============================================================================

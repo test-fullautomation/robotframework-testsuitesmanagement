@@ -61,4 +61,10 @@ Expecting\sproperty\sname\senclosed\sin\sdouble\squotes
 (UNKNOWN\s-\s.+)
 (The\smandatory\s'.+'\selement\sof\sconfiguration\sfile\sis\sfound\sin\slocal\sconfig\sfile)
 (Wrong\slocal\sconfig\sfile\swas\schosen,\splease\scheck)
+(Version\scheck\spassed)\s(.+)
+(Version\scheck\sfailed):\s(.+)
+(Version\scheck\sis\sskipped):\s(.+)
+(Version\sformat\serror):\s(.+)
+(Mismatch\sof\sminimum\sversion\sand\smaximum\sversion):\s(.+)
+(User\sdefined)\s(.+)
 

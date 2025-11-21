@@ -1,32 +1,32 @@
 ==============================================================================
-20251118 15:58:44.234 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
+20251121 10:00:14.709 - INFO - + START SUITE: Tsm-Testfile-02 [ ]
 ==============================================================================
-20251118 15:58:44.237 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251118 15:58:44.270 - INFO - Set suite metadata 'project' to value 'tsm-test_config_invalid_parameter_name_1'.
-20251118 15:58:44.270 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20251118 15:58:44.271 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20251118 15:58:44.271 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20251118 15:58:44.271 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
-20251118 15:58:44.272 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
-20251118 15:58:44.272 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20251118 15:58:44.272 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20251118 15:58:44.272 - INFO - Set suite metadata 'version_test' to value 'None'.
-20251118 15:58:44.272 - ERROR - Variable name '0ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)
-20251118 15:58:44.272 - ERROR - Please check variable '0ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_1.jsonp'
-20251118 15:58:44.272 - ERROR - The test execution will be aborted!
-20251118 15:58:44.272 - UNKNOWN - Exception
-20251118 15:58:44.272 - INFO - +- END SETUP: tm.Testsuite Setup (35)
+20251121 10:00:14.712 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251121 10:00:14.745 - INFO - Set suite metadata 'project' to value 'tsm-test_config_invalid_parameter_name_1'.
+20251121 10:00:14.745 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251121 10:00:14.747 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251121 10:00:14.747 - ERROR - Variable name '0ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)
+20251121 10:00:14.748 - ERROR - Please check variable '0ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_1.jsonp'
+20251121 10:00:14.748 - ERROR - The test execution will be aborted!
+20251121 10:00:14.748 - UNKNOWN - Exception
+20251121 10:00:14.748 - INFO - +- END SETUP: tm.Testsuite Setup (36)
 ------------------------------------------------------------------------------
-20251118 15:58:44.273 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
+20251121 10:00:14.748 - INFO - +- START TEST: Test Case tsm-testfile-02 [ ]
 ------------------------------------------------------------------------------
-20251118 15:58:44.273 - INFO - +- END TEST: Test Case tsm-testfile-02 (0)
+20251121 10:00:14.749 - INFO - +- END TEST: Test Case tsm-testfile-02 (1)
 ------------------------------------------------------------------------------
-20251118 15:58:44.273 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 15:58:44.274 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251121 10:00:14.749 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 10:00:14.749 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Exception
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251118 15:58:44.274 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
+20251121 10:00:14.749 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251118 15:58:44.274 - INFO - + END SUITE: Tsm-Testfile-02 (179)
+20251121 10:00:14.750 - INFO - + END SUITE: Tsm-Testfile-02 (175)
 ==============================================================================

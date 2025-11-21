@@ -712,7 +712,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0401"
-dictUsecase['DESCRIPTION']      = "'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'"
+dictUsecase['DESCRIPTION']      = "'Maximum_version' initialized with 'None'; 'Minimum_version' initialized with 'null'"
 dictUsecase['EXPECTATION']      = "Test is executed, because of the version control is optional"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"
@@ -772,7 +772,7 @@ del dictUsecase
 # --------------------------------------------------------------------------------------------------------------
 dictUsecase = {}
 dictUsecase['TESTID']           = "TSM_0405"
-dictUsecase['DESCRIPTION']      = "'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined"
+dictUsecase['DESCRIPTION']      = "'max_version' initialized with 'None'; 'min_version' initialized with 'null'; 'reference_version' not defined"
 dictUsecase['EXPECTATION']      = "Test is executed, because of the version control is optional"
 dictUsecase['SECTION']          = "VERSION_CONTROL"
 dictUsecase['SUBSECTION']       = "GOODCASE"

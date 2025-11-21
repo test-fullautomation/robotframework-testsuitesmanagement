@@ -1,170 +1,170 @@
 ==============================================================================
-20251118 15:58:39.052 - INFO - + START SUITE: Tsm-Testfile-06-Dotdict Syntax [ ]
+20251121 10:00:09.703 - INFO - + START SUITE: Tsm-Testfile-06-Dotdict Syntax [ ]
 ==============================================================================
-20251118 15:58:39.055 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251118 15:58:39.114 - INFO - Set suite metadata 'project' to value 'tsm-test_config_json_dotdict'.
-20251118 15:58:39.114 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20251118 15:58:39.115 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20251118 15:58:39.115 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20251118 15:58:39.116 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
-20251118 15:58:39.116 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
-20251118 15:58:39.116 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20251118 15:58:39.116 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20251118 15:58:39.116 - INFO - Set suite metadata 'version_test' to value 'None'.
-20251118 15:58:39.116 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-20251118 15:58:39.116 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20251118 15:58:39.116 - INFO - ${teststring_variant} = I am the 'json_dotdict' configuration of tsm-test
-20251118 15:58:39.117 - INFO - ${dTestDict} = {'ddKeyA': {'ddKeyA_2': 'ddKeyA_2_value'}, 'ddKeyB': {'ddKeyB_2': 'ddKeyB_2_value'}, 'ddKeyC': {'ddKeyC_2': {'ddKeyC_3': 'ddKeyC_3_value'}}}
-20251118 15:58:39.117 - INFO - ${ddKeyB_param} = ddKeyB_value
-20251118 15:58:39.117 - INFO - ${ddKeyA_2_param_1} = ddKeyA_2_value
-20251118 15:58:39.117 - INFO - ${ddKeyA_2_param_2} = ddKeyA_2_value
-20251118 15:58:39.118 - INFO - ${ddKeyA_2_param_3} = ddKeyA_2_value
-20251118 15:58:39.118 - INFO - ${ddKeyA_2_param_4} = ddKeyA_2_value
-20251118 15:58:39.119 - INFO - ${ddKeyA_2_param} = ddKeyA_2_value
-20251118 15:58:39.119 - INFO - ${ddKeyB_2_param_1} = ddKeyB_2_value
-20251118 15:58:39.119 - INFO - ${ddKeyB_2_param_2} = ddKeyB_2_value
-20251118 15:58:39.120 - INFO - ${ddKeyB_2_param_3} = ddKeyB_2_value
-20251118 15:58:39.120 - INFO - ${ddKeyB_2_param_4} = ddKeyB_2_value
-20251118 15:58:39.120 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...
-20251118 15:58:39.120 - INFO - Running with configuration level 2 (variant name in command line)
-20251118 15:58:39.122 - INFO - RobotFramework AIO (extended) version check passed!
-20251118 15:58:39.122 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_json_dotdict.jsonp'
-20251118 15:58:39.122 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20251118 15:58:39.122 - INFO - Number of test suites: 1
-20251118 15:58:39.122 - INFO - Total number of testcases: 1
-20251118 15:58:39.122 - INFO - +- END SETUP: tm.Testsuite Setup (67)
+20251121 10:00:09.706 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251121 10:00:09.767 - INFO - Set suite metadata 'project' to value 'tsm-test_config_json_dotdict'.
+20251121 10:00:09.767 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251121 10:00:09.769 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251121 10:00:09.770 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+20251121 10:00:09.770 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20251121 10:00:09.770 - INFO - ${teststring_variant} = I am the 'json_dotdict' configuration of tsm-test
+20251121 10:00:09.770 - INFO - ${dTestDict} = {'ddKeyA': {'ddKeyA_2': 'ddKeyA_2_value'}, 'ddKeyB': {'ddKeyB_2': 'ddKeyB_2_value'}, 'ddKeyC': {'ddKeyC_2': {'ddKeyC_3': 'ddKeyC_3_value'}}}
+20251121 10:00:09.770 - INFO - ${ddKeyB_param} = ddKeyB_value
+20251121 10:00:09.771 - INFO - ${ddKeyA_2_param_1} = ddKeyA_2_value
+20251121 10:00:09.771 - INFO - ${ddKeyA_2_param_2} = ddKeyA_2_value
+20251121 10:00:09.771 - INFO - ${ddKeyA_2_param_3} = ddKeyA_2_value
+20251121 10:00:09.772 - INFO - ${ddKeyA_2_param_4} = ddKeyA_2_value
+20251121 10:00:09.772 - INFO - ${ddKeyA_2_param} = ddKeyA_2_value
+20251121 10:00:09.772 - INFO - ${ddKeyB_2_param_1} = ddKeyB_2_value
+20251121 10:00:09.773 - INFO - ${ddKeyB_2_param_2} = ddKeyB_2_value
+20251121 10:00:09.773 - INFO - ${ddKeyB_2_param_3} = ddKeyB_2_value
+20251121 10:00:09.773 - INFO - ${ddKeyB_2_param_4} = ddKeyB_2_value
+20251121 10:00:09.774 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_json_dotdict', 'TargetName': 'Device_01', 'params': {}...
+20251121 10:00:09.774 - INFO - Running with configuration level 2 (variant name in command line)
+20251121 10:00:09.775 - INFO - RobotFramework AIO (extended) version check passed!
+20251121 10:00:09.775 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_json_dotdict.jsonp'
+20251121 10:00:09.775 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251121 10:00:09.775 - INFO - Number of test suites: 1
+20251121 10:00:09.775 - INFO - Total number of testcases: 1
+20251121 10:00:09.775 - INFO - +- END SETUP: tm.Testsuite Setup (69)
 ------------------------------------------------------------------------------
-20251118 15:58:39.122 - INFO - +- START TEST: Test Case tsm-testfile-06-dotdict_syntax [ ]
+20251121 10:00:09.775 - INFO - +- START TEST: Test Case tsm-testfile-06-dotdict_syntax [ ]
 ------------------------------------------------------------------------------
-20251118 15:58:39.123 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20251118 15:58:39.123 - INFO - Test Count: 1
-20251118 15:58:39.123 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20251121 10:00:09.776 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251121 10:00:09.776 - INFO - Test Count: 1
+20251121 10:00:09.776 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.123 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.123 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'tsm-test_config_json_dotdict'
-20251118 15:58:39.124 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.776 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.776 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'tsm-test_config_json_dotdict'
+20251121 10:00:09.777 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.124 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.124 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-20251118 15:58:39.124 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.777 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.777 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+20251121 10:00:09.777 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.124 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.124 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the 'json_dotdict' configuration of tsm-test'
-20251118 15:58:39.124 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.777 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.777 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the 'json_dotdict' configuration of tsm-test'
+20251121 10:00:09.777 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.124 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.124 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20251118 15:58:39.124 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.777 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.777 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20251121 10:00:09.777 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.125 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict} | PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.125 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/1) > {ddKeyA} [DOTDICT] (1/1) > {ddKeyA_2} [STR]  :  'ddKeyA_2_value'
-20251118 15:58:39.125 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/2) > {ddKeyB} [DOTDICT] (1/1) > {ddKeyB_2} [STR]  :  'ddKeyB_2_value'
-20251118 15:58:39.125 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/3) > {ddKeyC} [DOTDICT] (1/1) > {ddKeyC_2} [DOTDICT] (1/1) > {ddKeyC_3} [STR]  :  'ddKeyC_3_value'
-20251118 15:58:39.125 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.777 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict} | PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/1) > {ddKeyA} [DOTDICT] (1/1) > {ddKeyA_2} [STR]  :  'ddKeyA_2_value'
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/2) > {ddKeyB} [DOTDICT] (1/1) > {ddKeyB_2} [STR]  :  'ddKeyB_2_value'
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({dTestDict} / tsm-testfile-06-dotdict_syntax) : [DOTDICT] (3/3) > {ddKeyC} [DOTDICT] (1/1) > {ddKeyC_2} [DOTDICT] (1/1) > {ddKeyC_3} [STR]  :  'ddKeyC_3_value'
+20251121 10:00:09.778 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.125 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_param} | PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.125 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_value'
-20251118 15:58:39.125 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.778 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_param} | PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_param} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_value'
+20251121 10:00:09.778 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.125 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_1} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.125 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
-20251118 15:58:39.125 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.778 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_1} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
+20251121 10:00:09.778 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.126 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_2} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.126 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
-20251118 15:58:39.126 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 10:00:09.778 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_2} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.778 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
+20251121 10:00:09.779 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.126 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_3} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.126 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
-20251118 15:58:39.126 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.779 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_3} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.779 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
+20251121 10:00:09.779 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.126 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_4} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.126 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
-20251118 15:58:39.126 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.779 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyA_2_param_4} | PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.779 - INFO - PARAMS-VERIFIKATION : ({ddKeyA_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyA_2_value'
+20251121 10:00:09.779 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.126 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_1} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.126 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
-20251118 15:58:39.126 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.779 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_1} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.779 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_1} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
+20251121 10:00:09.779 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.126 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_2} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.127 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
-20251118 15:58:39.127 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 10:00:09.779 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_2} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.779 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_2} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
+20251121 10:00:09.779 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.127 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_3} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.127 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
-20251118 15:58:39.127 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.780 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_3} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.780 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
+20251121 10:00:09.780 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.127 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_4} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.127 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
-20251118 15:58:39.127 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.780 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${ddKeyB_2_param_4} | PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.780 - INFO - PARAMS-VERIFIKATION : ({ddKeyB_2_param_4} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyB_2_value'
+20251121 10:00:09.780 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.127 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.127 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
-20251118 15:58:39.127 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.780 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.780 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
+20251121 10:00:09.780 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.128 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.128 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
-20251118 15:58:39.128 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 10:00:09.780 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.781 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
+20251121 10:00:09.781 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.128 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.128 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
-20251118 15:58:39.128 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:09.781 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.781 - INFO - PARAMS-VERIFIKATION : ({dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
+20251121 10:00:09.781 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.128 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
-20251118 15:58:39.128 - INFO - PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
-20251118 15:58:39.129 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 10:00:09.781 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] | PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) ]
+20251121 10:00:09.781 - INFO - PARAMS-VERIFIKATION : ({dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] / tsm-testfile-06-dotdict_syntax) : [STR]  :  'ddKeyC_3_value'
+20251121 10:00:09.782 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.129 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} | ddKeyC_3_value ]
-20251118 15:58:39.129 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.782 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC.ddKeyC_2.ddKeyC_3} | ddKeyC_3_value ]
+20251121 10:00:09.782 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.129 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] | ddKeyC_3_value ]
-20251118 15:58:39.129 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.782 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC.ddKeyC_2}[ddKeyC_3] | ddKeyC_3_value ]
+20251121 10:00:09.782 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.129 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] | ddKeyC_3_value ]
-20251118 15:58:39.130 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (1)
+20251121 10:00:09.782 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict.ddKeyC}[ddKeyC_2][ddKeyC_3] | ddKeyC_3_value ]
+20251121 10:00:09.783 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.130 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] | ddKeyC_3_value ]
-20251118 15:58:39.130 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.783 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dTestDict}[ddKeyC][ddKeyC_2][ddKeyC_3] | ddKeyC_3_value ]
+20251121 10:00:09.783 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.130 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_param} | ddKeyB_value ]
-20251118 15:58:39.130 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.783 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_param} | ddKeyB_value ]
+20251121 10:00:09.783 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.130 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param} | ddKeyA_2_value ]
-20251118 15:58:39.130 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.783 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param} | ddKeyA_2_value ]
+20251121 10:00:09.783 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.130 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_1} | ddKeyA_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.783 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_1} | ddKeyA_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.131 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_2} | ddKeyA_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.784 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_2} | ddKeyA_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.131 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_3} | ddKeyA_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.784 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_3} | ddKeyA_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.131 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_4} | ddKeyA_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.784 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyA_2_param_4} | ddKeyA_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.131 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_1} | ddKeyB_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.784 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_1} | ddKeyB_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.131 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_2} | ddKeyB_2_value ]
-20251118 15:58:39.131 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.784 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_2} | ddKeyB_2_value ]
+20251121 10:00:09.784 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.132 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_3} | ddKeyB_2_value ]
-20251118 15:58:39.132 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (1)
+20251121 10:00:09.785 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_3} | ddKeyB_2_value ]
+20251121 10:00:09.785 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.132 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_4} | ddKeyB_2_value ]
-20251118 15:58:39.132 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
+20251121 10:00:09.785 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${ddKeyB_2_param_4} | ddKeyB_2_value ]
+20251121 10:00:09.785 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:39.132 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20251118 15:58:39.132 - INFO - TEST 'Test Case tsm-testfile-06-dotdict_syntax' finished with result 'PASS'
-20251118 15:58:39.132 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20251121 10:00:09.785 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251121 10:00:09.785 - INFO - TEST 'Test Case tsm-testfile-06-dotdict_syntax' finished with result 'PASS'
+20251121 10:00:09.785 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20251118 15:58:39.132 - INFO - +- END TEST: Test Case tsm-testfile-06-dotdict_syntax (10)
+20251121 10:00:09.785 - INFO - +- END TEST: Test Case tsm-testfile-06-dotdict_syntax (10)
 ------------------------------------------------------------------------------
-20251118 15:58:39.133 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 15:58:39.133 - INFO - SUITE 'Tsm-Testfile-06-Dotdict Syntax' finished with result 'PASS'
-20251118 15:58:39.133 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251121 10:00:09.786 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 10:00:09.786 - INFO - SUITE 'Tsm-Testfile-06-Dotdict Syntax' finished with result 'PASS'
+20251121 10:00:09.786 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20251118 15:58:39.133 - INFO - + END SUITE: Tsm-Testfile-06-Dotdict Syntax (217)
+20251121 10:00:09.786 - INFO - + END SUITE: Tsm-Testfile-06-Dotdict Syntax (219)
 ==============================================================================

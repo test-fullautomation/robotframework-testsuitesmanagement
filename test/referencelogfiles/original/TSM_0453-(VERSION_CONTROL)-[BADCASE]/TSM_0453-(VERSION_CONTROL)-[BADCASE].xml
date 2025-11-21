@@ -1,59 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:08.382832" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:30.405234" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:08.552923" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_version_control.08'.</msg>
-<msg time="2025-07-04T16:40:08.553052" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg time="2025-07-04T16:40:08.554512" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg time="2025-07-04T16:40:08.555710" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
-<msg time="2025-07-04T16:40:08.555769" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
-<msg time="2025-07-04T16:40:08.555807" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:08.555838" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:08.555869" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:08.556245" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg time="2025-07-04T16:40:08.556458" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg time="2025-07-04T16:40:08.556662" level="INFO">${teststring_variant} = I am the 'version_control_08' configuration of tsm-test</msg>
-<msg time="2025-07-04T16:40:08.556897" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.2.0', 'Minimum_version': '0.1.0', 'Project': 'tsm-test_config_version_control.08', 'TargetName': 'Device_01', 'param...</msg>
-<msg time="2025-07-04T16:40:08.556931" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
-<msg time="2025-07-04T16:40:08.557035" level="ERROR">Version conflict.
-Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
-config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.08.jsonp
-
-The test execution requires maximum RobotFramework AIO (original) version '0.2.0'
-but the installed RobotFramework AIO (original) version is younger        '0.14.1.33'
-
-Please install the required RobotFramework AIO (original) version.
-You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
-</msg>
-<msg time="2025-07-04T16:40:08.557347" level="FAIL">Version control error!!!</msg>
+<msg time="2025-11-21T10:15:30.596552" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_version_control.08'.</msg>
+<msg time="2025-11-21T10:15:30.596680" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-11-21T10:15:30.598225" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-11-21T10:15:30.598823" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-11-21T10:15:30.598876" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg time="2025-11-21T10:15:30.598918" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.</msg>
+<msg time="2025-11-21T10:15:30.598955" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:30.598991" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:30.599028" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:30.599482" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg time="2025-11-21T10:15:30.599740" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg time="2025-11-21T10:15:30.599971" level="INFO">${teststring_variant} = I am the 'version_control_08' configuration of tsm-test</msg>
+<msg time="2025-11-21T10:15:30.600242" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '0.2.0', 'Minimum_version': '0.1.0', 'Project': 'tsm-test_config_version_control.08', 'TargetName': 'Device_01', 'param...</msg>
+<msg time="2025-11-21T10:15:30.600278" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2025-11-21T10:15:30.601683" level="INFO">Testsuite : 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/tsm-testfile-02.robot'</msg>
+<msg time="2025-11-21T10:15:30.601734" level="ERROR">A failed version check requires to update the used software or to adapt the expected minimum version and the expected maximum version.</msg>
+<msg time="2025-11-21T10:15:30.601975" level="ERROR">(CONFLICT_MAX): Required is maximum version '0.2.0', but the reference version '0.14.2.26' is younger (RobotFramework AIO (original))</msg>
+<msg time="2025-11-21T10:15:30.602093" level="INFO">Affected configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.08.jsonp'</msg>
+<msg time="2025-11-21T10:15:30.602123" level="INFO">RobotFramework AIO (original) installer are available here: '\\bosch.com\dfsrb\DfsDE\DIV\CM\DI\Projects\Common\RobotFramework\Releases'</msg>
+<msg time="2025-11-21T10:15:30.602208" level="FAIL">Execution will be aborted because of a failed version check.</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="FAIL" start="2025-07-04T16:40:08.488084" elapsed="0.070536">Version control error!!!</status>
+<status status="FAIL" start="2025-11-21T10:15:30.561046" elapsed="0.042416">Execution will be aborted because of a failed version check.</status>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="FAIL" start="2025-07-04T16:40:08.558732" elapsed="0.000670">Parent suite setup failed:
-Version control error!!!</status>
+<status status="FAIL" start="2025-11-21T10:15:30.603581" elapsed="0.000616">Parent suite setup failed:
+Execution will be aborted because of a failed version check.</status>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:08.560091" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Version control error!!!
+<msg time="2025-11-21T10:15:30.604958" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Execution will be aborted because of a failed version check.
 
 1 test, 0 passed, 1 failed</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:08.559932" elapsed="0.000202"/>
+<status status="PASS" start="2025-11-21T10:15:30.604792" elapsed="0.000208"/>
 </kw>
-<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_version_control.08</meta>
+<meta name="reference_app_name">RobotFramework AIO (original)</meta>
+<meta name="reference_version">0.14.2.26</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="FAIL" start="2025-07-04T16:40:08.385373" elapsed="0.174793">Suite setup failed:
-Version control error!!!</status>
+<status status="FAIL" start="2025-11-21T10:15:30.416797" elapsed="0.188236">Suite setup failed:
+Execution will be aborted because of a failed version check.</status>
 </suite>
 <statistics>
 <total>
@@ -66,15 +63,7 @@ Version control error!!!</status>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-04T16:40:08.557035" level="ERROR">Version conflict.
-Testsuite : C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot
-config    : C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.08.jsonp
-
-The test execution requires maximum RobotFramework AIO (original) version '0.2.0'
-but the installed RobotFramework AIO (original) version is younger        '0.14.1.33'
-
-Please install the required RobotFramework AIO (original) version.
-You can find an installer here: https://github.com/test-fullautomation/RobotFramework_AIO/releases
-</msg>
+<msg time="2025-11-21T10:15:30.601734" level="ERROR">A failed version check requires to update the used software or to adapt the expected minimum version and the expected maximum version.</msg>
+<msg time="2025-11-21T10:15:30.601975" level="ERROR">(CONFLICT_MAX): Required is maximum version '0.2.0', but the reference version '0.14.2.26' is younger (RobotFramework AIO (original))</msg>
 </errors>
 </robot>

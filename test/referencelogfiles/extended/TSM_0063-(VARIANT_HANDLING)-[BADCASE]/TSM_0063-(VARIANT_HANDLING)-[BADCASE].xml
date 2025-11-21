@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 15:58:20.950" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:51.869" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-09-Err-3" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-09-err-3.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants_err_3.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
-<msg timestamp="20251118 15:58:21.109" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20251118 15:58:21.103" endtime="20251118 15:58:21.109"/>
+<msg timestamp="20251121 09:59:52.018" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg timestamp="20251121 09:59:52.018" level="ERROR">The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
+<msg timestamp="20251121 09:59:52.019" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
+<msg timestamp="20251121 09:59:52.019" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:52.012" endtime="20251121 09:59:52.019"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-09-err-3" line="32">
 <doc>tsm-testfile-09-err-3</doc>
-<status status="UNKNOWN" starttime="20251118 15:58:21.109" endtime="20251118 15:58:21.109">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:52.019" endtime="20251121 09:59:52.020">Parent suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20251118 15:58:21.110" level="INFO">SUITE 'Tsm-Testfile-09-Err-3' finished with result 'UNKNOWN', reason: Suite setup unknown:
+<msg timestamp="20251121 09:59:52.020" level="INFO">SUITE 'Tsm-Testfile-09-Err-3' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20251118 15:58:21.110" endtime="20251118 15:58:21.110"/>
+<status status="PASS" starttime="20251121 09:59:52.020" endtime="20251121 09:59:52.021"/>
 </kw>
-<status status="UNKNOWN" starttime="20251118 15:58:20.962" endtime="20251118 15:58:21.110">Suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:51.872" endtime="20251121 09:59:52.021">Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
@@ -38,8 +38,8 @@ Not possible to load the test configuration. The test execution will be aborted!
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
-<msg timestamp="20251118 15:58:21.108" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
+<msg timestamp="20251121 09:59:52.018" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg timestamp="20251121 09:59:52.018" level="ERROR">The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
+<msg timestamp="20251121 09:59:52.019" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
 </errors>
 </robot>

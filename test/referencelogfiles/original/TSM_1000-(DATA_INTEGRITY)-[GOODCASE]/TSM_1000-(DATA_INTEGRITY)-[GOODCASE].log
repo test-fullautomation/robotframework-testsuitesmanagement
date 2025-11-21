@@ -1,63 +1,64 @@
 ==============================================================================
-2025-07-04 16:40:11.511806 - INFO - + START SUITE: Tsm-Testfile-21-Data Integrity
+2025-11-21 10:15:36.494722 - INFO - + START SUITE: Tsm-Testfile-21-Data Integrity
 ==============================================================================
-2025-07-04 16:40:11.617225 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:11.659931 - INFO - Set suite metadata 'project' to value 'tsm-test_config_data_integrity_1'.
-2025-07-04 16:40:11.660046 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:40:11.661808 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:40:11.661876 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:40:11.661912 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:40:11.661946 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:40:11.661977 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:40:11.662007 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:40:11.662409 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-2025-07-04 16:40:11.662634 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-2025-07-04 16:40:11.662837 - INFO - ${teststring_variant} = I am the variant 'data_integrity_1' configuration of tsm-test
-2025-07-04 16:40:11.663029 - INFO - ${teststring_data_integrity} = a.1,b.2;c.3,d.4  ;  e.5  ,  f.6
-2025-07-04 16:40:11.663306 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_data_integrity_1', 'TargetName': 'Device_01', 'params'...
-2025-07-04 16:40:11.663342 - INFO - Running with configuration level 1 (configuration file in command line)
-2025-07-04 16:40:11.663410 - INFO - RobotFramework AIO (original) version check passed!
-2025-07-04 16:40:11.663432 - INFO - Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_data_integrity_1.jsonp'
-2025-07-04 16:40:11.663449 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 16:40:11.663465 - INFO - Number of test suites: 1
-2025-07-04 16:40:11.663481 - INFO - Total number of testcases: 1
-2025-07-04 16:40:11.663520 - INFO - +- END SETUP: tm.Testsuite Setup (0.046295 s)
+2025-11-21 10:15:36.638469 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:36.649775 - INFO - Set suite metadata 'project' to value 'tsm-test_config_data_integrity_1'.
+2025-11-21 10:15:36.649907 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:36.651803 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:36.651882 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:36.651921 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:36.651953 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:36.651985 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:36.652015 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:36.652045 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:36.652446 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2025-11-21 10:15:36.652675 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2025-11-21 10:15:36.652883 - INFO - ${teststring_variant} = I am the variant 'data_integrity_1' configuration of tsm-test
+2025-11-21 10:15:36.653078 - INFO - ${teststring_data_integrity} = a.1,b.2;c.3,d.4  ;  e.5  ,  f.6
+2025-11-21 10:15:36.653357 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_data_integrity_1', 'TargetName': 'Device_01', 'params'...
+2025-11-21 10:15:36.653392 - INFO - Running with configuration level 1 (configuration file in command line)
+2025-11-21 10:15:36.655013 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:36.655083 - INFO - Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_data_integrity_1.jsonp'
+2025-11-21 10:15:36.655105 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:36.655123 - INFO - Number of test suites: 1
+2025-11-21 10:15:36.655139 - INFO - Total number of testcases: 1
+2025-11-21 10:15:36.655185 - INFO - +- END SETUP: tm.Testsuite Setup (0.016716 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:11.663619 - INFO - +- START TEST: Test Case tsm-testfile-21-data_integrity
+2025-11-21 10:15:36.655307 - INFO - +- START TEST: Test Case tsm-testfile-21-data_integrity
 ------------------------------------------------------------------------------
-2025-07-04 16:40:11.664197 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 16:40:11.664284 - INFO - Test Count: 1
-2025-07-04 16:40:11.664321 - INFO - +-- END SETUP: tm.Testcase Setup (0.000124 s)
+2025-11-21 10:15:36.655982 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:36.656091 - INFO - Test Count: 1
+2025-11-21 10:15:36.656134 - INFO - +-- END SETUP: tm.Testcase Setup (0.000152 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.664499 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) ]
-2025-07-04 16:40:11.664794 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) : [STR]  :  'tsm-test_config_data_integrity_1'
-2025-07-04 16:40:11.664880 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000381 s)
+2025-11-21 10:15:36.656282 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) ]
+2025-11-21 10:15:36.656597 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) : [STR]  :  'tsm-test_config_data_integrity_1'
+2025-11-21 10:15:36.656690 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000408 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.665008 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) ]
-2025-07-04 16:40:11.665125 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-2025-07-04 16:40:11.665191 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000183 s)
+2025-11-21 10:15:36.656799 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) ]
+2025-11-21 10:15:36.656909 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2025-11-21 10:15:36.657010 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000211 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.665301 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) ]
-2025-07-04 16:40:11.665402 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the variant 'data_integrity_1' configuration of tsm-test'
-2025-07-04 16:40:11.665460 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000159 s)
+2025-11-21 10:15:36.657117 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) ]
+2025-11-21 10:15:36.657213 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the variant 'data_integrity_1' configuration of tsm-test'
+2025-11-21 10:15:36.657278 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000161 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.665543 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) ]
-2025-07-04 16:40:11.665631 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the teststring containing the default value for all test benches'
-2025-07-04 16:40:11.665687 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000144 s)
+2025-11-21 10:15:36.657369 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) ]
+2025-11-21 10:15:36.657455 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2025-11-21 10:15:36.657516 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000147 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.665766 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_data_integrity} | PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) ]
-2025-07-04 16:40:11.665851 - INFO - PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) : [STR]  :  'a.1,b.2;c.3,d.4  ;  e.5  ,  f.6'
-2025-07-04 16:40:11.665902 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000136 s)
+2025-11-21 10:15:36.657623 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_data_integrity} | PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) ]
+2025-11-21 10:15:36.657723 - INFO - PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) : [STR]  :  'a.1,b.2;c.3,d.4  ;  e.5  ,  f.6'
+2025-11-21 10:15:36.657787 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000164 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:11.666013 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 16:40:11.666139 - INFO - TEST 'Test Case tsm-testfile-21-data_integrity' finished with result 'PASS'
-2025-07-04 16:40:11.666172 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000159 s)
+2025-11-21 10:15:36.657919 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:36.658045 - INFO - TEST 'Test Case tsm-testfile-21-data_integrity' finished with result 'PASS'
+2025-11-21 10:15:36.658076 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000157 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:11.666225 - INFO - +- END TEST: Test Case tsm-testfile-21-data_integrity (0.002606 s)
+2025-11-21 10:15:36.658139 - INFO - +- END TEST: Test Case tsm-testfile-21-data_integrity (0.002832 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:11.666545 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:11.666669 - INFO - SUITE 'Tsm-Testfile-21-Data Integrity' finished with result 'PASS'
-2025-07-04 16:40:11.666703 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000158 s)
+2025-11-21 10:15:36.658489 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:36.658618 - INFO - SUITE 'Tsm-Testfile-21-Data Integrity' finished with result 'PASS'
+2025-11-21 10:15:36.658654 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000165 s)
 ==============================================================================
-2025-07-04 16:40:11.666729 - INFO - + END SUITE: Tsm-Testfile-21-Data Integrity (0.154923 s)
+2025-11-21 10:15:36.658681 - INFO - + END SUITE: Tsm-Testfile-21-Data Integrity (0.163959 s)
 ==============================================================================

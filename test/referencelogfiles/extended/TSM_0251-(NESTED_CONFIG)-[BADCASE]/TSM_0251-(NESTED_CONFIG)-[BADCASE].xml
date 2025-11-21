@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 15:58:26.910" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:57.674" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20251118 15:58:27.099" level="ERROR">Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'</msg>
-<msg timestamp="20251118 15:58:27.099" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp</msg>
-<msg timestamp="20251118 15:58:27.100" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20251118 15:58:27.058" endtime="20251118 15:58:27.100"/>
+<msg timestamp="20251121 09:59:57.869" level="ERROR">Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'</msg>
+<msg timestamp="20251121 09:59:57.870" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp</msg>
+<msg timestamp="20251121 09:59:57.870" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:57.825" endtime="20251121 09:59:57.870"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20251118 15:58:27.100" endtime="20251118 15:58:27.101">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:57.870" endtime="20251121 09:59:57.871">Parent suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20251118 15:58:27.102" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+<msg timestamp="20251121 09:59:57.872" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20251118 15:58:27.101" endtime="20251118 15:58:27.102"/>
+<status status="PASS" starttime="20251121 09:59:57.871" endtime="20251121 09:59:57.872"/>
 </kw>
-<status status="UNKNOWN" starttime="20251118 15:58:26.921" endtime="20251118 15:58:27.102">Suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:57.685" endtime="20251121 09:59:57.872">Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
@@ -37,7 +37,7 @@ Not possible to load the test configuration. The test execution will be aborted!
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20251118 15:58:27.099" level="ERROR">Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'</msg>
-<msg timestamp="20251118 15:58:27.099" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp</msg>
+<msg timestamp="20251121 09:59:57.869" level="ERROR">Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'</msg>
+<msg timestamp="20251121 09:59:57.870" level="ERROR">In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp</msg>
 </errors>
 </robot>

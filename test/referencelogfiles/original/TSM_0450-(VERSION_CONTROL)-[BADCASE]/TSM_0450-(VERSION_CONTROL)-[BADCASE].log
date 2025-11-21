@@ -1,35 +1,35 @@
 ==============================================================================
-2025-07-04 16:40:07.063634 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:29.043599 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:40:07.170669 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:07.237216 - ERROR - Invalid Maximum version: Wrong format in version information 'I am not a valid version'
-2025-07-04 16:40:07.237579 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
-2025-07-04 16:40:07.238720 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:40:07.238855 - DEBUG - Exception: Wrong format in version information
+2025-11-21 10:15:29.184191 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:29.220327 - ERROR - Maximum_version: Invalid version format 'I am not a valid version' (within 'I am not a valid version')
+2025-11-21 10:15:29.220588 - ERROR - In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
+2025-11-21 10:15:29.221350 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:29.221473 - DEBUG - Exception: Invalid version format 'I am not a valid version'
 
 During handling of the above exception, another exception occurred:
 
-Exception: Wrong format in version information 'I am not a valid version'
+Exception: Invalid version format 'I am not a valid version' (within 'I am not a valid version')
 
 During handling of the above exception, another exception occurred:
 
-Exception
+Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:40:07.238877 - INFO - +- END SETUP: tm.Testsuite Setup (0.068208 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:29.221494 - INFO - +- END SETUP: tm.Testsuite Setup (0.037303 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:07.238993 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:29.221620 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:40:07.240039 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.001046 s)
+2025-11-21 10:15:29.222209 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000589 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:07.241696 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:07.242037 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:29.223010 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:29.223177 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:40:07.242130 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000434 s)
+2025-11-21 10:15:29.223219 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000209 s)
 ==============================================================================
-2025-07-04 16:40:07.242192 - INFO - + END SUITE: Tsm-Testfile-02 (0.178558 s)
+2025-11-21 10:15:29.223251 - INFO - + END SUITE: Tsm-Testfile-02 (0.179652 s)
 ==============================================================================

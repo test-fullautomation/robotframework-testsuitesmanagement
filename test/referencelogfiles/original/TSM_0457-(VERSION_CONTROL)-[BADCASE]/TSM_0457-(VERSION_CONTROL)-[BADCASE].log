@@ -1,0 +1,100 @@
+==============================================================================
+2025-11-21 10:15:32.284252 - INFO - + START SUITE: Tsm-Testfile-52-Version-Control-13
+==============================================================================
+2025-11-21 10:15:32.426238 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:32.463463 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+2025-11-21 10:15:32.463577 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:32.465692 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:32.465756 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:32.465797 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:32.465835 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:32.465868 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:32.465899 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:32.465931 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:32.466312 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2025-11-21 10:15:32.466527 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2025-11-21 10:15:32.466728 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+2025-11-21 10:15:32.466970 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+2025-11-21 10:15:32.467002 - INFO - Running with configuration level 2 (variant name in command line)
+2025-11-21 10:15:32.469603 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:32.469669 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+2025-11-21 10:15:32.469699 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:32.469722 - INFO - Number of test suites: 1
+2025-11-21 10:15:32.469745 - INFO - Total number of testcases: 1
+2025-11-21 10:15:32.469797 - INFO - +- END SETUP: tm.Testsuite Setup (0.043559 s)
+------------------------------------------------------------------------------
+2025-11-21 10:15:32.469923 - INFO - +- START TEST: Test Case tsm-testfile-52-version-control-13
+------------------------------------------------------------------------------
+2025-11-21 10:15:32.470688 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:32.470807 - INFO - Test Count: 1
+2025-11-21 10:15:32.470853 - INFO - +-- END SETUP: tm.Testcase Setup (0.000165 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.471009 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.471288 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-52-version-control-13) : [STR]  :  'tsm-test_config_variant1'
+2025-11-21 10:15:32.471385 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000376 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.471577 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.471712 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-52-version-control-13) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2025-11-21 10:15:32.471807 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00023 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.471989 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.472104 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-52-version-control-13) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+2025-11-21 10:15:32.472189 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.0002 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.472324 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.472438 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-52-version-control-13) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2025-11-21 10:15:32.472510 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000186 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.472715 - INFO - +-- START KEYWORD: BuiltIn.Run Keyword And Ignore Error [ tm.check_version | min_version=0.1.0.1 | max_version=0.20.1 | reference_version=0.3.0 ]
+2025-11-21 10:15:32.472823 - INFO - +--- START KEYWORD: tm.Check Version [ min_version=0.1.0.1 | max_version=0.20.1 | reference_version=0.3.0 ]
+2025-11-21 10:15:32.475501 - ERROR - Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)
+2025-11-21 10:15:32.475791 - FAIL - Execution will be aborted because of a critical version check issue
+2025-11-21 10:15:32.477071 - DEBUG - Traceback (most recent call last):
+  File "C:\workplace\RobotFramework\python3\Lib\site-packages\RobotFramework_TestsuitesManagement\__init__.py", line 66, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\workplace\RobotFramework\python3\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\workplace\RobotFramework\python3\Lib\site-packages\RobotFramework_TestsuitesManagement\Keywords\CKeywords.py", line 367, in check_version
+    result  = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger, status_messages=status_messages) # 'logger' is the one from robot.api
+  File "C:\workplace\RobotFramework\python3\Lib\site-packages\RobotFramework_TestsuitesManagement\Utils\CVersion.py", line 350, in checkVersion
+    raise Exception("Execution will be aborted because of a critical version check issue")
+Exception: Execution will be aborted because of a critical version check issue
+2025-11-21 10:15:32.477101 - INFO - +--- END KEYWORD: tm.Check Version (0.004278 s)
+2025-11-21 10:15:32.477194 - INFO - ${status} = FAIL
+2025-11-21 10:15:32.477226 - INFO - ${result} = Execution will be aborted because of a critical version check issue
+2025-11-21 10:15:32.477243 - INFO - +-- END KEYWORD: BuiltIn.Run Keyword And Ignore Error (0.004528 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.477383 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${status} | PARAMS-VERIFIKATION : ({status} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.477484 - INFO - PARAMS-VERIFIKATION : ({status} / tsm-testfile-52-version-control-13) : [STR]  :  'FAIL'
+2025-11-21 10:15:32.477553 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00017 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.477654 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${result} | PARAMS-VERIFIKATION : ({result} / tsm-testfile-52-version-control-13) ]
+2025-11-21 10:15:32.477780 - INFO - PARAMS-VERIFIKATION : ({result} / tsm-testfile-52-version-control-13) : [STR]  :  'Execution will be aborted because of a critical version check issue'
+2025-11-21 10:15:32.477853 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000199 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.478045 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${status} | FAIL ]
+2025-11-21 10:15:32.478157 - DEBUG - Argument types are:
+<class 'str'>
+<class 'str'>
+2025-11-21 10:15:32.478187 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000142 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.478288 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${result} | Execution will be aborted because of a critical version check issue ]
+2025-11-21 10:15:32.478371 - DEBUG - Argument types are:
+<class 'str'>
+<class 'str'>
+2025-11-21 10:15:32.478394 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000106 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-11-21 10:15:32.478519 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:32.478639 - INFO - TEST 'Test Case tsm-testfile-52-version-control-13' finished with result 'PASS'
+2025-11-21 10:15:32.478670 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000151 s)
+------------------------------------------------------------------------------
+2025-11-21 10:15:32.478719 - INFO - +- END TEST: Test Case tsm-testfile-52-version-control-13 (0.008796 s)
+------------------------------------------------------------------------------
+2025-11-21 10:15:32.479090 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:32.479222 - INFO - SUITE 'Tsm-Testfile-52-Version-Control-13' finished with result 'PASS'
+2025-11-21 10:15:32.479257 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000167 s)
+==============================================================================
+2025-11-21 10:15:32.479284 - INFO - + END SUITE: Tsm-Testfile-52-Version-Control-13 (0.195032 s)
+==============================================================================

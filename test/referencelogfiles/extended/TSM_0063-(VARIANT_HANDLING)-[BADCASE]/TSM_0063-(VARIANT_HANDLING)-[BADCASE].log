@@ -1,23 +1,23 @@
 ==============================================================================
-20251118 15:58:21.100 - INFO - + START SUITE: Tsm-Testfile-09-Err-3 [ ]
+20251121 09:59:52.010 - INFO - + START SUITE: Tsm-Testfile-09-Err-3 [ ]
 ==============================================================================
-20251118 15:58:21.103 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.jsonp ]
-20251118 15:58:21.108 - ERROR - Testsuite management - Loading configuration level 2 failed!
-20251118 15:58:21.108 - ERROR - The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.
-20251118 15:58:21.108 - ERROR - Please find the suitable variant in this list: 'variant1',
-20251118 15:58:21.109 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
-20251118 15:58:21.109 - INFO - +- END SETUP: tm.Testsuite Setup (6)
+20251121 09:59:52.012 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.jsonp ]
+20251121 09:59:52.018 - ERROR - Testsuite management - Loading configuration level 2 failed!
+20251121 09:59:52.018 - ERROR - The variant 'default' is not defined in 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.
+20251121 09:59:52.019 - ERROR - Please find the suitable variant in this list: 'variant1',
+20251121 09:59:52.019 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251121 09:59:52.019 - INFO - +- END SETUP: tm.Testsuite Setup (7)
 ------------------------------------------------------------------------------
-20251118 15:58:21.109 - INFO - +- START TEST: Test Case tsm-testfile-09-err-3 [ ]
+20251121 09:59:52.019 - INFO - +- START TEST: Test Case tsm-testfile-09-err-3 [ ]
 ------------------------------------------------------------------------------
-20251118 15:58:21.110 - INFO - +- END TEST: Test Case tsm-testfile-09-err-3 (0)
+20251121 09:59:52.020 - INFO - +- END TEST: Test Case tsm-testfile-09-err-3 (1)
 ------------------------------------------------------------------------------
-20251118 15:58:21.110 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 15:58:21.110 - INFO - SUITE 'Tsm-Testfile-09-Err-3' finished with result 'UNKNOWN', reason: Suite setup unknown:
+20251121 09:59:52.020 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 09:59:52.020 - INFO - SUITE 'Tsm-Testfile-09-Err-3' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20251118 15:58:21.110 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251121 09:59:52.021 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (1)
 ==============================================================================
-20251118 15:58:21.110 - INFO - + END SUITE: Tsm-Testfile-09-Err-3 (148)
+20251121 09:59:52.021 - INFO - + END SUITE: Tsm-Testfile-09-Err-3 (149)
 ==============================================================================

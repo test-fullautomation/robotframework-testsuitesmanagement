@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:39:59.829531" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:17.039734" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Cft-Test.File-1" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests2\tsm-cft-test.file-1.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:39:59.974166" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
-<msg time="2025-07-04T16:39:59.974373" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'</msg>
-<msg time="2025-07-04T16:39:59.974895" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'</msg>
-<msg time="2025-07-04T16:39:59.974999" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
-<msg time="2025-07-04T16:39:59.975134" level="FAIL">Unable to load the test configuration. The test execution will be aborted!</msg>
+<msg time="2025-11-21T10:15:17.182196" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
+<msg time="2025-11-21T10:15:17.182339" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'</msg>
+<msg time="2025-11-21T10:15:17.182882" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'</msg>
+<msg time="2025-11-21T10:15:17.182956" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+<msg time="2025-11-21T10:15:17.183068" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="FAIL" start="2025-07-04T16:39:59.936465" elapsed="0.038780">Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:17.181685" elapsed="0.001507">Not possible to load the test configuration. The test execution will be aborted!</status>
 </kw>
 <test id="s1-t1" name="Test Case tsm-cft-test.file-1 (BADCASE)" line="32">
 <doc>tsm-cft-test.file-1 (BADCASE)</doc>
-<status status="FAIL" start="2025-07-04T16:39:59.975352" elapsed="0.000570">Parent suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:17.183268" elapsed="0.000515">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:39:59.976485" level="INFO">SUITE 'Tsm-Cft-Test.File-1' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+<msg time="2025-11-21T10:15:17.184308" level="INFO">SUITE 'Tsm-Cft-Test.File-1' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:39:59.976326" elapsed="0.000199"/>
+<status status="PASS" start="2025-11-21T10:15:17.184166" elapsed="0.000188"/>
 </kw>
-<status status="FAIL" start="2025-07-04T16:39:59.832470" elapsed="0.144091">Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:17.042397" elapsed="0.141991">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -38,9 +38,9 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-04T16:39:59.974166" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
-<msg time="2025-07-04T16:39:59.974373" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'</msg>
-<msg time="2025-07-04T16:39:59.974895" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'</msg>
-<msg time="2025-07-04T16:39:59.974999" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+<msg time="2025-11-21T10:15:17.182196" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
+<msg time="2025-11-21T10:15:17.182339" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'</msg>
+<msg time="2025-11-21T10:15:17.182882" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'</msg>
+<msg time="2025-11-21T10:15:17.182956" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
 </errors>
 </robot>

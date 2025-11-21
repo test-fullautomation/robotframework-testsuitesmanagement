@@ -1,89 +1,89 @@
 ==============================================================================
-20251118 15:58:25.533 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
+20251121 09:59:56.352 - INFO - + START SUITE: Tsm-Testfile-03 [ ]
 ==============================================================================
-20251118 15:58:25.536 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20251118 15:58:25.598 - INFO - Set suite metadata 'project' to value 'tsm-test_config_nested.1'.
-20251118 15:58:25.598 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20251118 15:58:25.599 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20251118 15:58:25.600 - INFO - Set suite metadata 'version_test' to value 'None'.
-20251118 15:58:25.601 - INFO - ${testdictionary_variant} = {'tdv_key_1': {'tdv_key_1_1': 'value_tdv_key_1_1_nested.1.1', 'tdv_key_1_2': 'value_tdv_key_1_2_after_import'}, 'tdv_key_2': {'tdv_key_2_1': 'value_tdv_key_2_1_after_import_new'}, 'tdv_key_3': {'tdv_k...
-20251118 15:58:25.601 - INFO - ${testlist_variant} = ['A', 'X', 'C']
-20251118 15:58:25.601 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-20251118 15:58:25.601 - INFO - ${teststring_common} = (2) I am the common teststring of imported.1 valid for all variants and all test benches
-20251118 15:58:25.602 - INFO - ${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test
-20251118 15:58:25.602 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_nested.1', 'TargetName': 'Device_01', 'params': {}}
-20251118 15:58:25.602 - INFO - Running with configuration level 2 (variant name in command line)
-20251118 15:58:25.603 - INFO - RobotFramework AIO (extended) version check passed!
-20251118 15:58:25.603 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.1.jsonp'
-20251118 15:58:25.603 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20251118 15:58:25.603 - INFO - Number of test suites: 1
-20251118 15:58:25.603 - INFO - Total number of testcases: 1
-20251118 15:58:25.603 - INFO - +- END SETUP: tm.Testsuite Setup (67)
+20251121 09:59:56.355 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251121 09:59:56.418 - INFO - Set suite metadata 'project' to value 'tsm-test_config_nested.1'.
+20251121 09:59:56.418 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251121 09:59:56.419 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251121 09:59:56.420 - INFO - ${testdictionary_variant} = {'tdv_key_1': {'tdv_key_1_1': 'value_tdv_key_1_1_nested.1.1', 'tdv_key_1_2': 'value_tdv_key_1_2_after_import'}, 'tdv_key_2': {'tdv_key_2_1': 'value_tdv_key_2_1_after_import_new'}, 'tdv_key_3': {'tdv_k...
+20251121 09:59:56.420 - INFO - ${testlist_variant} = ['A', 'X', 'C']
+20251121 09:59:56.420 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+20251121 09:59:56.421 - INFO - ${teststring_common} = (2) I am the common teststring of imported.1 valid for all variants and all test benches
+20251121 09:59:56.421 - INFO - ${teststring_variant} = I am the variant 'nested.1' configuration of tsm-test
+20251121 09:59:56.421 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_nested.1', 'TargetName': 'Device_01', 'params': {}}
+20251121 09:59:56.421 - INFO - Running with configuration level 2 (variant name in command line)
+20251121 09:59:56.422 - INFO - RobotFramework AIO (extended) version check passed!
+20251121 09:59:56.422 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.1.jsonp'
+20251121 09:59:56.422 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251121 09:59:56.422 - INFO - Number of test suites: 1
+20251121 09:59:56.422 - INFO - Total number of testcases: 1
+20251121 09:59:56.423 - INFO - +- END SETUP: tm.Testsuite Setup (68)
 ------------------------------------------------------------------------------
-20251118 15:58:25.603 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
+20251121 09:59:56.423 - INFO - +- START TEST: Test Case tsm-testfile-03 [ ]
 ------------------------------------------------------------------------------
-20251118 15:58:25.604 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20251118 15:58:25.604 - INFO - Test Count: 1
-20251118 15:58:25.604 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20251121 09:59:56.423 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251121 09:59:56.423 - INFO - Test Count: 1
+20251121 09:59:56.424 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.604 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-03) ]
-20251118 15:58:25.605 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-03) : [STR]  :  'tsm-test_config_nested.1'
-20251118 15:58:25.605 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 09:59:56.424 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-03) ]
+20251121 09:59:56.424 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-03) : [STR]  :  'tsm-test_config_nested.1'
+20251121 09:59:56.424 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.605 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) ]
-20251118 15:58:25.605 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) : [STR]  :  '(2) I am the common teststring of imported.1 valid for all variants and all test benches'
-20251118 15:58:25.605 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.424 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) ]
+20251121 09:59:56.424 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-03) : [STR]  :  '(2) I am the common teststring of imported.1 valid for all variants and all test benches'
+20251121 09:59:56.425 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.605 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-03) ]
-20251118 15:58:25.605 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-03) : [STR]  :  'I am the variant 'nested.1' configuration of tsm-test'
-20251118 15:58:25.606 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.425 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-03) ]
+20251121 09:59:56.425 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-03) : [STR]  :  'I am the variant 'nested.1' configuration of tsm-test'
+20251121 09:59:56.425 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.606 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-03) ]
-20251118 15:58:25.606 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-03) : [STR]  :  'I am the teststring containing the default value for all test benches'
-20251118 15:58:25.606 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.426 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-03) ]
+20251121 09:59:56.426 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-03) : [STR]  :  'I am the teststring containing the default value for all test benches'
+20251121 09:59:56.426 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.606 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_1.tdv_key_1_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_1} / tsm-testfile-03) ]
-20251118 15:58:25.606 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_1_1_nested.1.1'
-20251118 15:58:25.606 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.426 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_1.tdv_key_1_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_1} / tsm-testfile-03) ]
+20251121 09:59:56.426 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_1_1_nested.1.1'
+20251121 09:59:56.426 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.606 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_1.tdv_key_1_2} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_2} / tsm-testfile-03) ]
-20251118 15:58:25.606 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_2} / tsm-testfile-03) : [STR]  :  'value_tdv_key_1_2_after_import'
-20251118 15:58:25.607 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 09:59:56.426 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_1.tdv_key_1_2} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_2} / tsm-testfile-03) ]
+20251121 09:59:56.426 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_1.tdv_key_1_2} / tsm-testfile-03) : [STR]  :  'value_tdv_key_1_2_after_import'
+20251121 09:59:56.427 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.607 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_2.tdv_key_2_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_2.tdv_key_2_1} / tsm-testfile-03) ]
-20251118 15:58:25.607 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_2.tdv_key_2_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_2_1_after_import_new'
-20251118 15:58:25.607 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.427 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_2.tdv_key_2_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_2.tdv_key_2_1} / tsm-testfile-03) ]
+20251121 09:59:56.427 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_2.tdv_key_2_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_2_1_after_import_new'
+20251121 09:59:56.427 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.607 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_3.tdv_key_3_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_3.tdv_key_3_1} / tsm-testfile-03) ]
-20251118 15:58:25.607 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_3.tdv_key_3_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_3_1_nested.1.1.1'
-20251118 15:58:25.607 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.427 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdictionary_variant.tdv_key_3.tdv_key_3_1} | PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_3.tdv_key_3_1} / tsm-testfile-03) ]
+20251121 09:59:56.427 - INFO - PARAMS-VERIFIKATION : ({testdictionary_variant.tdv_key_3.tdv_key_3_1} / tsm-testfile-03) : [STR]  :  'value_tdv_key_3_1_nested.1.1.1'
+20251121 09:59:56.428 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.607 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[0] | PARAMS-VERIFIKATION : ({testlist_variant}[0]} / tsm-testfile-03) ]
-20251118 15:58:25.608 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[0]} / tsm-testfile-03) : [STR]  :  'A'
-20251118 15:58:25.608 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 09:59:56.428 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[0] | PARAMS-VERIFIKATION : ({testlist_variant}[0]} / tsm-testfile-03) ]
+20251121 09:59:56.428 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[0]} / tsm-testfile-03) : [STR]  :  'A'
+20251121 09:59:56.428 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.608 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[1] | PARAMS-VERIFIKATION : ({testlist_variant}[1]} / tsm-testfile-03) ]
-20251118 15:58:25.608 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[1]} / tsm-testfile-03) : [STR]  :  'X'
-20251118 15:58:25.608 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.428 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[1] | PARAMS-VERIFIKATION : ({testlist_variant}[1]} / tsm-testfile-03) ]
+20251121 09:59:56.428 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[1]} / tsm-testfile-03) : [STR]  :  'X'
+20251121 09:59:56.428 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.608 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[2] | PARAMS-VERIFIKATION : ({testlist_variant}[2]} / tsm-testfile-03) ]
-20251118 15:58:25.608 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[2]} / tsm-testfile-03) : [STR]  :  'C'
-20251118 15:58:25.608 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 09:59:56.428 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testlist_variant}[2] | PARAMS-VERIFIKATION : ({testlist_variant}[2]} / tsm-testfile-03) ]
+20251121 09:59:56.428 - INFO - PARAMS-VERIFIKATION : ({testlist_variant}[2]} / tsm-testfile-03) : [STR]  :  'C'
+20251121 09:59:56.428 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251118 15:58:25.608 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20251118 15:58:25.608 - INFO - TEST 'Test Case tsm-testfile-03' finished with result 'PASS'
-20251118 15:58:25.608 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20251121 09:59:56.428 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251121 09:59:56.428 - INFO - TEST 'Test Case tsm-testfile-03' finished with result 'PASS'
+20251121 09:59:56.429 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (1)
 ------------------------------------------------------------------------------
-20251118 15:58:25.609 - INFO - +- END TEST: Test Case tsm-testfile-03 (6)
+20251121 09:59:56.429 - INFO - +- END TEST: Test Case tsm-testfile-03 (6)
 ------------------------------------------------------------------------------
-20251118 15:58:25.609 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20251118 15:58:25.609 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'PASS'
-20251118 15:58:25.609 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251121 09:59:56.429 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 09:59:56.429 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'PASS'
+20251121 09:59:56.429 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20251118 15:58:25.610 - INFO - + END SUITE: Tsm-Testfile-03 (212)
+20251121 09:59:56.429 - INFO - + END SUITE: Tsm-Testfile-03 (214)
 ==============================================================================

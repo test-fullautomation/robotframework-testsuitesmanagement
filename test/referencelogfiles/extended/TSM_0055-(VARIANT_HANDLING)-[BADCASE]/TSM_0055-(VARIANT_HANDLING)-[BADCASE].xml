@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251118 15:58:17.486" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:48.499" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.</msg>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">---&gt; It is not possible to use both together, because they belong to the same feature (the variant selection).</msg>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">---&gt; Please remove one of them.</msg>
-<msg timestamp="20251118 15:58:17.631" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20251118 15:58:17.629" endtime="20251118 15:58:17.631"/>
+<msg timestamp="20251121 09:59:48.650" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.</msg>
+<msg timestamp="20251121 09:59:48.650" level="ERROR">---&gt; It is not possible to use both together, because they belong to the same feature (the variant selection).</msg>
+<msg timestamp="20251121 09:59:48.651" level="ERROR">---&gt; Please remove one of them.</msg>
+<msg timestamp="20251121 09:59:48.651" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:48.650" endtime="20251121 09:59:48.651"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20251118 15:58:17.631" endtime="20251118 15:58:17.631">Parent suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:48.651" endtime="20251121 09:59:48.652">Parent suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20251118 15:58:17.632" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+<msg timestamp="20251121 09:59:48.652" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20251118 15:58:17.632" endtime="20251118 15:58:17.632"/>
+<status status="PASS" starttime="20251121 09:59:48.652" endtime="20251121 09:59:48.652"/>
 </kw>
-<status status="UNKNOWN" starttime="20251118 15:58:17.489" endtime="20251118 15:58:17.632">Suite setup unknown:
+<status status="UNKNOWN" starttime="20251121 09:59:48.511" endtime="20251121 09:59:48.652">Suite setup unknown:
 Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
@@ -38,8 +38,8 @@ Not possible to load the test configuration. The test execution will be aborted!
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.</msg>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">---&gt; It is not possible to use both together, because they belong to the same feature (the variant selection).</msg>
-<msg timestamp="20251118 15:58:17.630" level="ERROR">---&gt; Please remove one of them.</msg>
+<msg timestamp="20251121 09:59:48.650" level="ERROR">Redundant settings detected in command line: Parameter 'variant' is used together with parameter 'config_file'.</msg>
+<msg timestamp="20251121 09:59:48.650" level="ERROR">---&gt; It is not possible to use both together, because they belong to the same feature (the variant selection).</msg>
+<msg timestamp="20251121 09:59:48.651" level="ERROR">---&gt; Please remove one of them.</msg>
 </errors>
 </robot>
