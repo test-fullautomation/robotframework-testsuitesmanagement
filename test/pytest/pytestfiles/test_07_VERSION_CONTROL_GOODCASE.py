@@ -18,7 +18,7 @@
 #
 # XC-CT/ECA3-Queckenstedt
 #
-# 18.11.2025 - 11:36:10
+# 21.11.2025 - 14:11:43
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ class Test_VERSION_CONTROL_GOODCASE:
    # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'",]
+      "Description", ["'Maximum_version' initialized with 'None'; 'Minimum_version' initialized with 'null'",]
    )
    def test_TSM_0401(self, Description):
       nReturn = CExecute.Execute("TSM_0401")
@@ -78,7 +78,7 @@ class Test_VERSION_CONTROL_GOODCASE:
    # Expected: Test is executed, because of the version control is optional
    # (Single file execution)
    @pytest.mark.parametrize(
-      "Description", ["'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined",]
+      "Description", ["'max_version' initialized with 'None'; 'min_version' initialized with 'null'; 'reference_version' not defined",]
    )
    def test_TSM_0405(self, Description):
       nReturn = CExecute.Execute("TSM_0405")
