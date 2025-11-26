@@ -160,7 +160,7 @@ Internally this is realized by the following regex pattern:
 * Replaced ``re`` package by ``regex`` package
 "
                                       ],
-                  "0.14.3.;0.15.0." : [
+                  "0.14.4.;0.15.0." : [
 "
 **Python interface for checking the bundle version**
 
