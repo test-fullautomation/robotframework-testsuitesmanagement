@@ -218,7 +218,7 @@ Comment....: Single file execution
 Hint.......: Belongs to version numbers within variant configuration
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0401 / VERSION_CONTROL / GOODCASE
-Description: 'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'
+Description: 'Maximum_version' initialized with 'None'; 'Minimum_version' initialized with 'null'
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
 Hint.......: Belongs to version numbers within variant configuration
@@ -242,7 +242,7 @@ Comment....: Single file execution
 Hint.......: Belongs to versions within robot files (Robot Framework version interface)
 ------------------------------------------------------------------------------------------------------------------------
 Test TSM_0405 / VERSION_CONTROL / GOODCASE
-Description: 'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined
+Description: 'max_version' initialized with 'None'; 'min_version' initialized with 'null'; 'reference_version' not defined
 Expectation: Test is executed, because of the version control is optional
 Comment....: Single file execution
 Hint.......: Belongs to versions within robot files (Robot Framework version interface)
@@ -441,5 +441,5 @@ Description: JSON file containing Python inline code
 Expectation: Python inline code is resolved and the results are logged correctly
 Comment....: Single file execution
 ------------------------------------------------------------------------------------------------------------------------
-Generated: 18.11.2025 - 16:12:29
+Generated: 21.11.2025 - 14:11:43
 

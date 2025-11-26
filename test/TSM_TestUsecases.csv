@@ -40,11 +40,11 @@ TSM_0201|NESTED_CONFIG|GOODCASE|Variant with multiple nested configuration files
 TSM_0250|NESTED_CONFIG|BADCASE|Variant with multiple nested configuration files; cyclic import of JSON file
 TSM_0251|NESTED_CONFIG|BADCASE|Assignment of unknown dictionary key in imported JSON configuration file
 TSM_0400|VERSION_CONTROL|GOODCASE|'Maximum_version' and 'Minimum_version' not defined
-TSM_0401|VERSION_CONTROL|GOODCASE|'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'
+TSM_0401|VERSION_CONTROL|GOODCASE|'Maximum_version' initialized with 'None'; 'Minimum_version' initialized with 'null'
 TSM_0402|VERSION_CONTROL|GOODCASE|Only 'Maximum_version' is defined
 TSM_0403|VERSION_CONTROL|GOODCASE|Only 'Minimum_version' is defined
 TSM_0404|VERSION_CONTROL|GOODCASE|'max_version', 'min_version' and 'reference_version' not defined
-TSM_0405|VERSION_CONTROL|GOODCASE|'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined
+TSM_0405|VERSION_CONTROL|GOODCASE|'max_version' initialized with 'None'; 'min_version' initialized with 'null'; 'reference_version' not defined
 TSM_0406|VERSION_CONTROL|GOODCASE|Only 'max_version' is defined
 TSM_0407|VERSION_CONTROL|GOODCASE|Only 'min_version' is defined
 TSM_0408|VERSION_CONTROL|GOODCASE|Only 'reference_version' is defined

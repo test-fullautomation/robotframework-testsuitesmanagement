@@ -503,7 +503,7 @@ Test Use Cases
 
   [VERSION_CONTROL / GOODCASE]
 
-   **'Maximum_version' initialized with 'None', 'Minimum_version' initialized with 'null'**
+   **'Maximum_version' initialized with 'None'; 'Minimum_version' initialized with 'null'**
 
    Expected: Test is executed, because of the version control is optional
 
@@ -559,7 +559,7 @@ Test Use Cases
 
   [VERSION_CONTROL / GOODCASE]
 
-   **'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined**
+   **'max_version' initialized with 'None'; 'min_version' initialized with 'null'; 'reference_version' not defined**
 
    Expected: Test is executed, because of the version control is optional
 
@@ -1027,5 +1027,5 @@ Test Use Cases
 
 ----
 
-Generated: 18.11.2025 - 16:12:29
+Generated: 21.11.2025 - 14:11:43
 
