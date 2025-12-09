@@ -692,7 +692,203 @@ to distinguish between variables!
 
 \newpage
 
-\section{Python interface for checking the bundle version}
+\section{Version control interfaces}
+
+The \textbf{RobotFramework AIO} supports a version control in two ways: \textit{implicitly} and \textit{explicitly}. An implicit version control is
+executed automatically at the beginning of every test suite (during \rcode{testsuite_setup}).
+A version expected by user and defined within the variant configuration file, is checked against the version of the
+installed \textbf{RobotFramework AIO}. In detail this is explaind in \ref{sec:parameter_config_files}.
+
+Version control can also be executed explicitly by the user. This version control can refer to any versions (not only to the versions of already
+installed software such as \textbf{RobotFramework AIO} and \textbf{TestsuitesManagement}).
+
+Additionally, it is possible to query the versions of \textbf{RobotFramework AIO} and \textbf{TestsuitesManagement} directly.
+
+For this purpose, \textbf{TestsuitesManagement} provides two interfaces:
+
+\begin{enumerate}
+   \item \textbf{RobotFramework AIO} interface
+   \item \textbf{Python} interface
+\end{enumerate}
+
+\subsection{RobotFramework AIO interface for version control}
+
+Like usual, the \textbf{TestsuitesManagement} library needs to be imported in this way:
+
+\begin{robotcode}
+Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+\end{robotcode}
+
+\subsection{Explicit version control of the RobotFramework AIO}
+
+The simplest implementation of a version control looks like this:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=0.1.0    max_version=0.20.0
+log     === check_version result: ${result}    console=yes
+\end{robotcode}
+
+In this example, the specification is missing against which version (the \rcode{reference_version}) the \rcode{min_version}
+and the \rcode{max_version} should be checked. This automatically leads to the version of the installed software being taken as reference.
+There are two possibilities for this:
+
+\begin{enumerate}
+   \item The \textbf{TestsuitesManagement} is installed together with the \textbf{RobotFramework AIO} (thus is part of the entire
+         \textbf{RobotFramework AIO} bundle).
+         In this case, the version of the installed \textbf{RobotFramework AIO} is the \textit{reference} version.
+   \item The \textbf{TestsuitesManagement} is installed standalone (for example separately via PyPi).
+         In this case, the version of the installed \textbf{TestsuitesManagement} is the \textit{reference} version.
+\end{enumerate}
+
+We assume now that the \textbf{RobotFramework AIO} is installed with version \textbf{0.14.2.26}. This fits to the expectation of
+mimimum version \textbf{0.1.0} and maximum version \textbf{0.20.0} from the example above. Therefore the result is:
+
+\begin{robotlog}
+INFO - Version check passed (RobotFramework AIO (extended))
+INFO - === check_version result: True
+\end{robotlog}
+
+Exactly this is what already happened during the \rcode{testsuite_setup}. Therefore this version check will not provide any new insights.
+In the next example we check the version of the \textbf{TestsuitesManagement}.
+
+\newpage
+
+\subsection{Explicit version control of the TestsuitesManagement}
+
+At first we get the version of the \textbf{TestsuitesManagement}. After this we set this version as reference:
+
+\begin{robotcode}
+${tsm_version}=    tm.get_tsm_version
+log     === tsm_version: ${tsm_version}    console=yes
+${result}=    tm.check_version    min_version=0.1.0    max_version=0.2.0    reference_version=${tsm_version}
+log     === check_version result (TSM): ${result}    console=yes
+\end{robotcode}
+
+It can be seen that the expectation of minimum version \textbf{0.1.0} and maximum version \textbf{0.2.0} does not fit
+to the current \textbf{TestsuitesManagement} version \textbf{0.9.0}. The version check and therefore also the test fails:
+
+\begin{robotlog}
+ERROR - Version check failed: The test execution requires the maximum version '0.2.0', but the reference version '0.9.0' is younger
+UNKNOWN - Execution will be aborted because of a failed version check
+\end{robotlog}
+
+Whether the test result is \rlog{UNKNOWN} or \rlog{FAIL} depends on the type of the \textbf{RobotFramework AIO} installation.
+Details can be found here: \href{https://robotframework-aio.org/}{robotframework-aio.org}.
+
+\subsection{User defined version control}
+
+The keyword \rcode{check_version} can be used for any version checks:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=0.1.0    max_version=0.2.0    reference_version=1.2.3
+\end{robotcode}
+
+Versions that are not relevant for a version check, can be set to \rcode{None}. In this example only
+the maximum version is checked against the reference:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=${None}    max_version=0.2.0    reference_version=1.2.3
+\end{robotcode}
+
+If nothing is specified, the version check is skipped:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=${None}    max_version=${None}    reference_version=${None}
+\end{robotcode}
+
+This is the same like:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=${None}    max_version=${None}
+\end{robotcode}
+
+Because of a version check is not executed, the reference version doesn't matter.
+
+Result:
+
+\begin{robotlog}
+INFO - Version check is skipped because both 'min_version' and 'max_version' are set to None (RobotFramework AIO (extended))
+\end{robotlog}
+
+
+The following formats are accepted for all version parameters:
+
+\begin{itemize}
+   \item \rcode{major.minor.patch}
+   \item \rcode{major.minor}
+   \item \rcode{major}
+\end{itemize}
+
+Therefore, this is also possible:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=0    max_version=2    reference_version=3
+\end{robotcode}
+
+With result:
+
+\begin{robotlog}
+ERROR - Version check failed: The test execution requires the maximum version '2', but the reference version '3' is younger
+UNKNOWN - Execution will be aborted because of a failed version check
+\end{robotlog}
+
+Every deviation cause a failed test:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=0.1.0    max_version=0.2.0.9    reference_version=1.2.3
+\end{robotcode}
+
+Result:
+
+\begin{robotlog}
+ERROR - Version format error: maximum version '0.2.0.9' contains too many parts (expected is: major.minor.patch)
+UNKNOWN - Execution will be aborted because of a critical version check issue
+\end{robotlog}
+
+\vspace{2ex}
+
+It makes a difference, whether the reference version is defined or not!
+
+\begin{itemize}
+   \item \rcode{reference_version} is not defined:
+\end{itemize}
+
+Depending on the installed software, the TestsuitesManagement decides what is used as reference (either the \textbf{RobotFramework AIO} or
+the \textbf{TestsuitesManagement}). This means, a name of the checked software is known. In this case the name is part of the logged output:
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=${None}    max_version=${None}
+\end{robotcode}
+
+\begin{robotlog}
+INFO - Version check is skipped because both 'min_version' and 'max_version' are set to None (RobotFramework AIO (extended))
+\end{robotlog}
+
+\begin{itemize}
+   \item $\textbullet$ \rcode{reference_version} is defined:
+\end{itemize}
+
+In this case a corresponding application name that is assigned to this number, is not available. Therefore, the log does not contain
+a name.
+
+\begin{robotcode}
+${result}=    tm.check_version    min_version=0.1.0    max_version=0.2.0    reference_version=1.2.3
+\end{robotcode}
+
+\begin{robotlog}
+INFO - Version check is skipped because both 'min_version' and 'max_version' are set to None
+\end{robotlog}
+
+This is the same result as before, but without name (\textbf{RobotFramework AIO (extended)}).
+
+
+
+
+% % % QWERT
+
+\newpage
+
+\subsection{Python interface for version control}
 
 The goal of this Python interface is to enable \textbf{RobotFramework AIO} users who work purely in Python, without using robot files,
 to verify which bundle version is installed. The bundle version is either the version of the entire \textbf{RobotFramework AIO}
@@ -748,8 +944,38 @@ These are the token strings together with their meanings:
          An internal error happened (any issue in JSON configuration file).
 \end{itemize}
 
-How the version check works in detail, is explaind in \ref{sec:parameter_config_files}.
-
-
-
 % --------------------------------------------------------------------------------------------------------------
+
+% https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/344
+% https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/352
+% https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues/349
+
+
+
+% We can tell the users:
+
+    % The high-level method does all for you (logging of status messages, flow control by returns or exceptions). Feel free to use this method if you want to go the easy trail. It is possible to adapt the status messages, but it is not possible to adapt the return values and also not possible to avoid exceptions in case of critical errors.
+
+    % If you want to have full control about the entire version check process, use the corresponding low-level method. This enables you to define own status messages in your own way and to define how you want to react on version check results. You can use the existing high-level method as a reference for implementation.
+
+
+% Python       | Robot Framework
+% ----------------------------
+% getConfig    | get_config
+% loadJson     | load_json
+% getVersion   | get_version
+% checkVersion | check_version
+
+
+% # == access to application configuration
+
+% Tabellarische Übersicht über die Prototypen der beteiligten Methodern und Keywörter
+
+
+% "any versions" oder "any version"?
+
+
+
+
+
+

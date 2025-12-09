@@ -160,7 +160,7 @@ Internally this is realized by the following regex pattern:
 * Replaced ``re`` package by ``regex`` package
 "
                                       ],
-                  "0.14.2.;0.15.0." : [
+                  "0.14.4.;0.15.0." : [
 "
 **Python interface for checking the bundle version**
 
@@ -174,11 +174,13 @@ of the **TestsuitesManagement**.
 | ``from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion``
 | ``oVersion = CVersion()``
 | ``result, reason = oVersion.verifyVersion(min_version, max_version)``
+| 
+| The parameters ``min_version`` and  ``max_version`` define the expected range of the bundle version.
+| This is verified against the version of the currently installed bundle.
+| The version string format of ``min_version`` and  ``max_version`` allows a maximum of 3 segments: ``\"\\d\\.\\d\\.\\d\"``
+| (possible also: ``\"\\d\\.\\d\\\"`` and ``\"\\d\"``).
 
-The parameters ``min_version`` and  ``max_version`` define the expected range of the bundle version. This is verified
-against the version of the currently installed bundle. The format of the version string is: ``\\d\\.\\d\\.\\d``.
-
-It is possible to set a version to ``None`` or to ``\"\"``. The impact is that this version number (*min* or *max*) is not part
+It is possible to set a version to ``None``. The impact is that this version number (*min* or *max*) is not part
 of the version check.
 
 Two values are returned:
@@ -191,13 +193,33 @@ This enables users to formulate their own error messages.
 
 These are the token strings together with their meanings:
 
-* ``without_version_check``: Version check not executed.
-* ``wrong_minmax``: Mismatch of minimum version and maximum version: The minimum version is younger than the maximum version.
-* ``conflict_min``: The test execution requires the minimum version, but the installed version is older.
-* ``conflict_max``: The test execution requires the maximum version, but the installed version is younger.
-* ``internal_error``: An internal error happened (any issue in JSON configuration file).
+``CHECK_NOT_EXECUTED``
+    Version check is skipped because both ``min_version`` and ``max_version`` are set to ``None``
 
-More details can be found in the components documentation `TestsuitesManagement <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
+``CHECK_PASSED``
+    Version check passed
+
+``CONFLICT_MIN``
+    The test execution requires the minimum version **<min_version>**, but the reference version **<reference_version>** is older
+
+``CONFLICT_MAX``
+    The test execution requires the maximum version **<max_version>**, but the reference version **<reference_version>** is younger
+
+``WRONG_MINMAX_RELATION``
+    Mismatch of minimum version and maximum version: The minimum version **<min_version>** is younger than the maximum version **<max_version>**
+
+``FORMAT_ERROR``
+    Version format error: **<invalid_format_reason>**
+
+``BUNDLE_CONFIG_FILE_ERROR``
+    A syntax error occurred while accessing or parsing the bundle configuration file
+
+``INTERNAL_ERROR``
+    Version could not be verified because of an internal error. Please contact the AIO team
+
+All names inside angle brackets are placeholders. They are replaced later by current values.
+
+More details can be found in the component documentation `RobotFramework_TestsuitesManagement.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 "
                   ]
                 }

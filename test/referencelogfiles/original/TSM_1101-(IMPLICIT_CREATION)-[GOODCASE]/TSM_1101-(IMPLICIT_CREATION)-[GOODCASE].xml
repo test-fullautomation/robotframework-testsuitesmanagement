@@ -1,118 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:12.807078" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:37.851268" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-23-Implicit Creation 2" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-23-implicit_creation_2.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:12.999302" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_2'.</msg>
-<msg time="2025-07-04T16:40:12.999437" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg time="2025-07-04T16:40:13.001381" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg time="2025-07-04T16:40:13.001443" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
-<msg time="2025-07-04T16:40:13.001478" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
-<msg time="2025-07-04T16:40:13.001512" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:13.001541" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:13.001570" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:13.002048" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg time="2025-07-04T16:40:13.002288" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg time="2025-07-04T16:40:13.002508" level="INFO">${teststring_variant} = I am the 'implicit_creation_2' configuration of tsm-test</msg>
-<msg time="2025-07-04T16:40:13.002873" level="INFO">${param3} = param3 value C</msg>
-<msg time="2025-07-04T16:40:13.003160" level="INFO">${param4} = param4 value B</msg>
-<msg time="2025-07-04T16:40:13.003456" level="INFO">${param1} = {'subkey': {'subkey': {'subkey': 'subkey value'}}}</msg>
-<msg time="2025-07-04T16:40:13.003758" level="INFO">${param2} = {'subkey': {'subkey': {'subkey': 'subkey value extended'}}}</msg>
-<msg time="2025-07-04T16:40:13.004002" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_2', 'TargetName': 'Device_01', 'para...</msg>
-<msg time="2025-07-04T16:40:13.004036" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
-<msg time="2025-07-04T16:40:13.004102" level="INFO">RobotFramework AIO (original) version check passed!</msg>
-<msg time="2025-07-04T16:40:13.004123" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_2.jsonp'</msg>
-<msg time="2025-07-04T16:40:13.004140" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg time="2025-07-04T16:40:13.004155" level="INFO">Number of test suites: 1</msg>
-<msg time="2025-07-04T16:40:13.004169" level="INFO">Total number of testcases: 1</msg>
+<msg time="2025-11-21T10:15:38.042749" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_2'.</msg>
+<msg time="2025-11-21T10:15:38.042875" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-11-21T10:15:38.044744" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-11-21T10:15:38.044807" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-11-21T10:15:38.044846" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg time="2025-11-21T10:15:38.044877" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.</msg>
+<msg time="2025-11-21T10:15:38.044909" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:38.044938" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:38.044967" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:38.045355" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg time="2025-11-21T10:15:38.045616" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg time="2025-11-21T10:15:38.045822" level="INFO">${teststring_variant} = I am the 'implicit_creation_2' configuration of tsm-test</msg>
+<msg time="2025-11-21T10:15:38.046032" level="INFO">${param3} = param3 value C</msg>
+<msg time="2025-11-21T10:15:38.046297" level="INFO">${param4} = param4 value B</msg>
+<msg time="2025-11-21T10:15:38.046586" level="INFO">${param1} = {'subkey': {'subkey': {'subkey': 'subkey value'}}}</msg>
+<msg time="2025-11-21T10:15:38.046860" level="INFO">${param2} = {'subkey': {'subkey': {'subkey': 'subkey value extended'}}}</msg>
+<msg time="2025-11-21T10:15:38.047099" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_2', 'TargetName': 'Device_01', 'para...</msg>
+<msg time="2025-11-21T10:15:38.047132" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2025-11-21T10:15:38.048397" level="INFO">RobotFramework AIO (original) version check passed!</msg>
+<msg time="2025-11-21T10:15:38.048444" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_2.jsonp'</msg>
+<msg time="2025-11-21T10:15:38.048463" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2025-11-21T10:15:38.048479" level="INFO">Number of test suites: 1</msg>
+<msg time="2025-11-21T10:15:38.048494" level="INFO">Total number of testcases: 1</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="PASS" start="2025-07-04T16:40:12.922747" elapsed="0.081463"/>
+<status status="PASS" start="2025-11-21T10:15:37.994172" elapsed="0.054364"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-23-implicit_creation_2" line="33">
 <kw name="Testcase Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:13.005181" level="INFO">Test Count: 1</msg>
+<msg time="2025-11-21T10:15:38.049566" level="INFO">Test Count: 1</msg>
 <doc>This keyword writes the number of counted tests to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:13.005070" elapsed="0.000150"/>
+<status status="PASS" start="2025-11-21T10:15:38.049456" elapsed="0.000151"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.005674" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'tsm-test_config_implicit_creation_2'</msg>
+<msg time="2025-11-21T10:15:38.050125" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'tsm-test_config_implicit_creation_2'</msg>
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.005384" elapsed="0.000380"/>
+<status status="PASS" start="2025-11-21T10:15:38.049822" elapsed="0.000448"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.005994" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<msg time="2025-11-21T10:15:38.050539" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.005870" elapsed="0.000261"/>
+<status status="PASS" start="2025-11-21T10:15:38.050406" elapsed="0.000203"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.006359" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the 'implicit_creation_2' configuration of tsm-test'</msg>
+<msg time="2025-11-21T10:15:38.050803" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the 'implicit_creation_2' configuration of tsm-test'</msg>
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.006267" elapsed="0.000220"/>
+<status status="PASS" start="2025-11-21T10:15:38.050714" elapsed="0.000257"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.006654" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<msg time="2025-11-21T10:15:38.051288" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.006572" elapsed="0.000140"/>
+<status status="PASS" start="2025-11-21T10:15:38.051176" elapsed="0.000281"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.006945" level="INFO">PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [STR]  :  'subkey value'</msg>
+<msg time="2025-11-21T10:15:38.051804" level="INFO">PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [STR]  :  'subkey value'</msg>
 <arg>${param1}</arg>
 <arg>PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.006811" elapsed="0.000202"/>
+<status status="PASS" start="2025-11-21T10:15:38.051654" elapsed="0.000244"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.007195" level="INFO">PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [STR]  :  'subkey value extended'</msg>
+<msg time="2025-11-21T10:15:38.052094" level="INFO">PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [DOTDICT] (1/1) &gt; {subkey} [STR]  :  'subkey value extended'</msg>
 <arg>${param2}</arg>
 <arg>PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.007100" elapsed="0.000153"/>
+<status status="PASS" start="2025-11-21T10:15:38.051995" elapsed="0.000181"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.007404" level="INFO">PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param3 value C'</msg>
+<msg time="2025-11-21T10:15:38.052347" level="INFO">PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param3 value C'</msg>
 <arg>${param3}</arg>
 <arg>PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.007328" elapsed="0.000127"/>
+<status status="PASS" start="2025-11-21T10:15:38.052265" elapsed="0.000213"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:13.007602" level="INFO">PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param4 value B'</msg>
+<msg time="2025-11-21T10:15:38.052778" level="INFO">PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param4 value B'</msg>
 <arg>${param4}</arg>
 <arg>PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:13.007530" elapsed="0.000213"/>
+<status status="PASS" start="2025-11-21T10:15:38.052686" elapsed="0.000147"/>
 </kw>
 <kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:13.008030" level="INFO">TEST 'Test Case tsm-testfile-23-implicit_creation_2' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:38.053276" level="INFO">TEST 'Test Case tsm-testfile-23-implicit_creation_2' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testcase result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:13.007904" elapsed="0.000158"/>
+<status status="PASS" start="2025-11-21T10:15:38.053123" elapsed="0.000189"/>
 </kw>
 <doc>tsm-testfile-23-implicit_creation_2</doc>
-<status status="PASS" start="2025-07-04T16:40:13.004307" elapsed="0.003806"/>
+<status status="PASS" start="2025-11-21T10:15:38.048642" elapsed="0.004730"/>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:13.008564" level="INFO">SUITE 'Tsm-Testfile-23-Implicit Creation 2' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:38.053886" level="INFO">SUITE 'Tsm-Testfile-23-Implicit Creation 2' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:13.008443" elapsed="0.000153"/>
+<status status="PASS" start="2025-11-21T10:15:38.053707" elapsed="0.000222"/>
 </kw>
-<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_implicit_creation_2</meta>
+<meta name="reference_app_name">RobotFramework AIO (original)</meta>
+<meta name="reference_version">0.14.2.26</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" start="2025-07-04T16:40:12.818834" elapsed="0.189787"/>
+<status status="PASS" start="2025-11-21T10:15:37.853886" elapsed="0.200071"/>
 </suite>
 <statistics>
 <total>

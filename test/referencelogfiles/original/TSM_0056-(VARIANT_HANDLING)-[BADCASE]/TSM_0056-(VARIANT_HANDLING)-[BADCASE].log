@@ -1,27 +1,27 @@
 ==============================================================================
-2025-07-04 16:39:56.115337 - INFO - + START SUITE: Tsm-Testfile-01
+2025-11-21 10:15:13.209779 - INFO - + START SUITE: Tsm-Testfile-01
 ==============================================================================
-2025-07-04 16:39:56.215745 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-2025-07-04 16:39:56.216041 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
-2025-07-04 16:39:56.216276 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
-2025-07-04 16:39:56.217278 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:56.217383 - DEBUG - Exception
+2025-11-21 10:15:13.344961 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2025-11-21 10:15:13.345377 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
+2025-11-21 10:15:13.345521 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
+2025-11-21 10:15:13.346095 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.346187 - DEBUG - Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:56.217401 - INFO - +- END SETUP: tm.Testsuite Setup (0.001656 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.346205 - INFO - +- END SETUP: tm.Testsuite Setup (0.001244 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.217485 - INFO - +- START TEST: Test Case tsm-testfile-01
+2025-11-21 10:15:13.346290 - INFO - +- START TEST: Test Case tsm-testfile-01
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.218159 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000674 s)
+2025-11-21 10:15:13.346817 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000527 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.218783 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:56.218932 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.347224 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:13.347370 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:56.218971 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000188 s)
+2025-11-21 10:15:13.347410 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000186 s)
 ==============================================================================
-2025-07-04 16:39:56.219003 - INFO - + END SUITE: Tsm-Testfile-01 (0.103666 s)
+2025-11-21 10:15:13.347447 - INFO - + END SUITE: Tsm-Testfile-01 (0.137668 s)
 ==============================================================================

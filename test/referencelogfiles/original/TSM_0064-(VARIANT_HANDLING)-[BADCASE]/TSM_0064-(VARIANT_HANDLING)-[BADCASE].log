@@ -1,23 +1,23 @@
 ==============================================================================
-2025-07-04 16:39:59.411781 - INFO - + START SUITE: Tsm-Testfile-01
+2025-11-21 10:15:16.622837 - INFO - + START SUITE: Tsm-Testfile-01
 ==============================================================================
-2025-07-04 16:39:59.511975 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-2025-07-04 16:39:59.557563 - ERROR - Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
-2025-07-04 16:39:59.557826 - ERROR - JSON schema validation failed!
-2025-07-04 16:39:59.558638 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:59.558721 - DEBUG - Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:59.558738 - INFO - +- END SETUP: tm.Testsuite Setup (0.046763 s)
+2025-11-21 10:15:16.756472 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2025-11-21 10:15:16.766047 - ERROR - Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+2025-11-21 10:15:16.766261 - ERROR - JSON schema validation failed!
+2025-11-21 10:15:16.766890 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:16.766968 - DEBUG - Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:16.766985 - INFO - +- END SETUP: tm.Testsuite Setup (0.010513 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.558852 - INFO - +- START TEST: Test Case tsm-testfile-01
+2025-11-21 10:15:16.767086 - INFO - +- START TEST: Test Case tsm-testfile-01
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.559425 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000573 s)
+2025-11-21 10:15:16.767798 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000712 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.559833 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:59.559991 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:16.768349 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:16.768508 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:59.560033 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.0002 s)
+2025-11-21 10:15:16.768550 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000201 s)
 ==============================================================================
-2025-07-04 16:39:59.560067 - INFO - + END SUITE: Tsm-Testfile-01 (0.148286 s)
+2025-11-21 10:15:16.768584 - INFO - + END SUITE: Tsm-Testfile-01 (0.145747 s)
 ==============================================================================

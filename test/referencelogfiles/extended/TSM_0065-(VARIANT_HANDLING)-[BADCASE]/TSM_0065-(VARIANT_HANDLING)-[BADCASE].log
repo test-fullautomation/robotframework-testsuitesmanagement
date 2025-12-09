@@ -1,24 +1,24 @@
 ==============================================================================
-20250704 16:25:15.230 - INFO - + START SUITE: Tsm-Cft-Test.File-1 [ ]
+20251121 09:59:52.857 - INFO - + START SUITE: Tsm-Cft-Test.File-1 [ ]
 ==============================================================================
-20250704 16:25:15.232 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-20250704 16:25:15.266 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
-20250704 16:25:15.266 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
-20250704 16:25:15.266 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
-20250704 16:25:15.267 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
-20250704 16:25:15.267 - UNKNOWN - Unable to load the test configuration. The test execution will be aborted!
-20250704 16:25:15.267 - INFO - +- END SETUP: tm.Testsuite Setup (35)
+20251121 09:59:52.860 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+20251121 09:59:52.860 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+20251121 09:59:52.860 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
+20251121 09:59:52.861 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
+20251121 09:59:52.861 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
+20251121 09:59:52.861 - UNKNOWN - Not possible to load the test configuration. The test execution will be aborted!
+20251121 09:59:52.861 - INFO - +- END SETUP: tm.Testsuite Setup (1)
 ------------------------------------------------------------------------------
-20250704 16:25:15.268 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE) [ ]
+20251121 09:59:52.861 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE) [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:15.268 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (1)
+20251121 09:59:52.862 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (1)
 ------------------------------------------------------------------------------
-20250704 16:25:15.269 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:15.269 - INFO - SUITE 'Tsm-Cft-Test.File-1' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+20251121 09:59:52.862 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 09:59:52.862 - INFO - SUITE 'Tsm-Cft-Test.File-1' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown
-20250704 16:25:15.269 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251121 09:59:52.862 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20250704 16:25:15.269 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (137)
+20251121 09:59:52.863 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (146)
 ==============================================================================

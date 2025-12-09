@@ -1,39 +1,41 @@
 ==============================================================================
-2025-07-04 16:40:14.629413 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:39.725972 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:40:14.736456 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:14.799054 - INFO - Set suite metadata 'project' to value 'tsm-test_config_invalid_parameter_name_2'.
-2025-07-04 16:40:14.799195 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:40:14.801199 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:40:14.801261 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:40:14.801298 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:40:14.801332 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:40:14.801363 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:40:14.801393 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:40:14.801558 - ERROR - Variable name '__ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)
-2025-07-04 16:40:14.801728 - ERROR - Please check variable '__ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_2.jsonp'
-2025-07-04 16:40:14.802023 - FAIL - Exception
-2025-07-04 16:40:14.802145 - DEBUG - Exception
+2025-11-21 10:15:39.867921 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:39.901192 - INFO - Set suite metadata 'project' to value 'tsm-test_config_invalid_parameter_name_2'.
+2025-11-21 10:15:39.901310 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:39.903223 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:39.903287 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:39.903326 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:39.903358 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:39.903391 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:39.903421 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:39.903450 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:39.903604 - ERROR - Variable name '__ABC' is invalid. Expected format: '^\p{L}[\p{L}\p{Nd}_]*$' (letters, digits, underscores)
+2025-11-21 10:15:39.903731 - ERROR - Please check variable '__ABC' in params['global'] in the configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_parameter_name_2.jsonp'
+2025-11-21 10:15:39.903846 - ERROR - The test execution will be aborted!
+2025-11-21 10:15:39.903982 - FAIL - Exception
+2025-11-21 10:15:39.904081 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
 Exception
-
-During handling of the above exception, another exception occurred:
-
-Exception
-2025-07-04 16:40:14.802165 - INFO - +- END SETUP: tm.Testsuite Setup (0.065709 s)
+2025-11-21 10:15:39.904100 - INFO - +- END SETUP: tm.Testsuite Setup (0.036179 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:14.802269 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:39.904204 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:40:14.802907 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000638 s)
+2025-11-21 10:15:39.904759 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000555 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:14.803643 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:14.803804 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+2025-11-21 10:15:39.905238 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:39.905420 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
 Exception
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:40:14.803845 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000202 s)
+2025-11-21 10:15:39.905466 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000228 s)
 ==============================================================================
-2025-07-04 16:40:14.803875 - INFO - + END SUITE: Tsm-Testfile-02 (0.174462 s)
+2025-11-21 10:15:39.905502 - INFO - + END SUITE: Tsm-Testfile-02 (0.17953 s)
 ==============================================================================

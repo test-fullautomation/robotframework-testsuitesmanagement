@@ -1,11 +1,11 @@
 ==============================================================================
-2025-07-04 16:39:53.548171 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:10.507955 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:39:53.651972 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:39:53.714034 - ERROR - Required parameter 'WelcomeString' is missing in file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp'.
-2025-07-04 16:39:53.714525 - ERROR - JSON schema validation failed!
-2025-07-04 16:39:53.714744 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:53.715062 - DEBUG - jsonschema.exceptions.ValidationError: 'WelcomeString' is a required property
+2025-11-21 10:15:10.649712 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:10.686761 - ERROR - Required parameter 'WelcomeString' is missing in file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_param.jsonp'.
+2025-11-21 10:15:10.687500 - ERROR - JSON schema validation failed!
+2025-11-21 10:15:10.687668 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:10.687988 - DEBUG - jsonschema.exceptions.ValidationError: 'WelcomeString' is a required property
 
 Failed validating 'required' in schema:
     {'$schema': 'http://json-schema.org/draft-07/schema#',
@@ -31,23 +31,23 @@ On instance:
 
 During handling of the above exception, another exception occurred:
 
-Exception
+Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:53.715089 - INFO - +- END SETUP: tm.Testsuite Setup (0.063117 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:10.688015 - INFO - +- END SETUP: tm.Testsuite Setup (0.038303 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:53.715197 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:10.688125 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:39:53.715811 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000614 s)
+2025-11-21 10:15:10.688746 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000621 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:53.716467 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:53.716631 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:10.689420 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:10.689588 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:53.716675 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000208 s)
+2025-11-21 10:15:10.689631 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000211 s)
 ==============================================================================
-2025-07-04 16:39:53.716707 - INFO - + END SUITE: Tsm-Testfile-02 (0.168536 s)
+2025-11-21 10:15:10.689666 - INFO - + END SUITE: Tsm-Testfile-02 (0.181711 s)
 ==============================================================================

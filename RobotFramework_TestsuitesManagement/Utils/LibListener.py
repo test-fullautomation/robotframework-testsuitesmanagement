@@ -83,7 +83,7 @@ This _start_suite method hooks to every starting testsuite of robot run.
             TM.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
 
             if '${localconfig}' in BuiltIn().get_variables()._keys:
-                if regex.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
+                if regex.match(r'^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
                     CConfig.sLoadedCfgLog['error'] = "Local_config input must not be empty!!!"
                     logger.error(CConfig.sLoadedCfgLog['error'])
                 else:

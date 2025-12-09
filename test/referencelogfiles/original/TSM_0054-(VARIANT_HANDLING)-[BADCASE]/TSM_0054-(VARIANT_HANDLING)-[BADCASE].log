@@ -1,11 +1,11 @@
 ==============================================================================
-2025-07-04 16:39:55.301608 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:12.337020 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:39:55.403922 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:39:55.461675 - ERROR - File 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
-2025-07-04 16:39:55.461970 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.jsonp
-2025-07-04 16:39:55.462699 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:55.462831 - DEBUG - Exception: File 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
+2025-11-21 10:15:12.479903 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:12.510194 - ERROR - File 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
+2025-11-21 10:15:12.510403 - ERROR - In file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.jsonp
+2025-11-21 10:15:12.510998 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:12.511117 - DEBUG - Exception: File 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
 
 During handling of the above exception, another exception occurred:
 
@@ -17,23 +17,23 @@ Exception: File 'C:/workplace/ROBFW/components/robotframework-testsuitesmanageme
 
 During handling of the above exception, another exception occurred:
 
-Exception
+Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:55.462851 - INFO - +- END SETUP: tm.Testsuite Setup (0.058929 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:12.511137 - INFO - +- END SETUP: tm.Testsuite Setup (0.031234 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:55.462958 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:12.511238 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:39:55.463506 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000548 s)
+2025-11-21 10:15:12.511740 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000502 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:55.464084 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:55.464247 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:12.512133 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:12.512285 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:55.464295 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000211 s)
+2025-11-21 10:15:12.512326 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000193 s)
 ==============================================================================
-2025-07-04 16:39:55.464327 - INFO - + END SUITE: Tsm-Testfile-02 (0.162719 s)
+2025-11-21 10:15:12.512370 - INFO - + END SUITE: Tsm-Testfile-02 (0.17535 s)
 ==============================================================================

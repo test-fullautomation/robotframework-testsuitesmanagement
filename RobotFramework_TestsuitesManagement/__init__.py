@@ -1,4 +1,4 @@
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2025 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ from robotlibcore import DynamicCore
 from enum import Enum
 from RobotFramework_TestsuitesManagement.Utils import LibListener
 from RobotFramework_TestsuitesManagement.Keywords import (CSetupKeywords, CGeneralKeywords)
-from RobotFramework_TestsuitesManagement.Utils.CVersion import BUNDLE_VERSION as VERSION
+from RobotFramework_TestsuitesManagement.version import VERSION as LIBRARY_VERSION
 
 
 class RobotFramework_TestsuitesManagement(DynamicCore):
@@ -34,8 +34,9 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
 
        # RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
     # '''
-    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    ROBOT_LIBRARY_VERSION = VERSION
+    ROBOT_LIBRARY_DOC_FORMAT = 'reST'
+    ROBOT_LIBRARY_SCOPE      = 'GLOBAL'
+    ROBOT_LIBRARY_VERSION    = LIBRARY_VERSION
 
     # '''
     # Constructor

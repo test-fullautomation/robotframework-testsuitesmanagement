@@ -1,29 +1,29 @@
 ==============================================================================
-2025-07-04 16:39:56.485873 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:13.628538 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:39:56.588687 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:39:56.645295 - ERROR - Testsuite management - Loading configuration level 2 failed!
-2025-07-04 16:39:56.645590 - ERROR - The variant name 'in/va/lid' is invalid.
-2025-07-04 16:39:56.645721 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits',
-2025-07-04 16:39:56.646306 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'
-2025-07-04 16:39:56.646447 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:56.646532 - DEBUG - Exception
+2025-11-21 10:15:13.769133 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:13.796814 - ERROR - Testsuite management - Loading configuration level 2 failed!
+2025-11-21 10:15:13.797112 - ERROR - The variant name 'in/va/lid' is invalid.
+2025-11-21 10:15:13.797298 - ERROR - Please find the suitable variant in this list: 'default', 'variant1', 'variant2', 'json_dotdict', 'SälfTest.ß.€.考.𠼭.𠼭', 'nested_import_1', 'nested_import_2', 'cyclic_import', 'version_control_01', 'version_control_02', 'version_control_03', 'version_control_04', 'version_control_05', 'version_control_06', 'version_control_07', 'version_control_08', 'version_control_09', 'missing_param', 'syntax_error', 'syntax_error_within_import', 'missing_imported_file', 'invalid_assignment_1', 'implicit_creation_1', 'implicit_creation_2', 'parameter_priority', 'composite_expressions_1', 'naming_conventions_1', 'naming_conventions_2', 'naming_conventions_3', 'naming_conventions_4', 'unicode_digits', 'python_inline_code',
+2025-11-21 10:15:13.797970 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants.jsonp'
+2025-11-21 10:15:13.798197 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.798319 - DEBUG - Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:56.646548 - INFO - +- END SETUP: tm.Testsuite Setup (0.057861 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.798340 - INFO - +- END SETUP: tm.Testsuite Setup (0.029207 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.646660 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:13.798460 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.647280 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.00062 s)
+2025-11-21 10:15:13.799082 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000622 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:56.647753 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:56.647981 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:13.799730 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:13.799887 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:56.648067 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000314 s)
+2025-11-21 10:15:13.799929 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000199 s)
 ==============================================================================
-2025-07-04 16:39:56.648122 - INFO - + END SUITE: Tsm-Testfile-02 (0.162249 s)
+2025-11-21 10:15:13.799961 - INFO - + END SUITE: Tsm-Testfile-02 (0.171423 s)
 ==============================================================================

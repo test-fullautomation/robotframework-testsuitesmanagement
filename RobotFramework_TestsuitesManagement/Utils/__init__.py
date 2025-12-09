@@ -1,4 +1,4 @@
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2025 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -15,4 +15,4 @@
 
 from .LibListener import LibListener
 from .CStruct import CStruct
-from .CVersion import CVersion, bundle_version, BUNDLE_VERSION, BUNDLE_NAME, INSTALLER_LOCATION
+from .CVersion import CVersion

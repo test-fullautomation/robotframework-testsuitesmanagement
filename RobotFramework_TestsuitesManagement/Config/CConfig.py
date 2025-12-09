@@ -35,8 +35,9 @@ from builtins import staticmethod
 
 import RobotFramework_TestsuitesManagement as TM
 from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult, \
-    bundle_version, INSTALLER_LOCATION, BUNDLE_NAME, BUNDLE_VERSION
+from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult
+from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
+
 from PythonExtensionsCollection.String.CString import CString
 
 from JsonPreprocessor import CJsonPreprocessor
@@ -46,15 +47,16 @@ from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
 
+
 class CConfig():
     '''
 Defines the properties of configuration and holds the identified config files.
 
-The loading configuration method is divided into 4 levels, level1 has the highest priority, Level4 has the lowest priority.
+The loading configuration method is divided into 4 levels: level1 has the highest priority, level4 has the lowest priority.
 
-**Level1:** Handed over by command line argument
+**Level1:** Defined in command line
 
-**Level2:** Read from content of json config file
+**Level2:** Read from content of JSON config file
 
    .. code:: json
 
@@ -113,8 +115,8 @@ for None so that subclasses will create their own __single objects.
         self.sTestSuiteCfg     = ''
         self.sTestCfgFile      = ''
         self.sTestcasePath     = ''
-        self.sMaxVersion       = ''
-        self.sMinVersion       = ''
+        self.sMaxVersion       = None
+        self.sMinVersion       = None
         self.sLocalConfig      = ''
         self.lBuitInVariables  = []
         self.configLevel       = TM.CConfigLevel.LEVEL_4
@@ -128,6 +130,19 @@ for None so that subclasses will create their own __single objects.
         # Common configuration parameters
         self.sWelcomeString  = None
         self.sTargetName     = None
+
+        # access to application configuration
+        self.__tsm_app_config       = None
+        self.__tsm_app_config_error = None
+
+        # [X] CConfig / [] CKeywords / [] verifyVersion / [] checkVersion
+        try:
+            self.__tsm_app_config = AppConfig()
+        except Exception as ex:
+            # Will be used when method (that requires this config) is executed.
+            # No exit here!
+            self.__tsm_app_config_error = f"{ex}"
+
 
     def __mergeDicts(self, dMainDict: dict, dUpdateDict: dict) -> dict:
         """
@@ -181,22 +196,22 @@ is used together with parameter 'config_file'.")
                 self.sLoadedCfgLog['info'].append("---> It is not possible to use both together, because they belong \
 to the same feature (the variant selection).")
                 self.sLoadedCfgLog['info'].append("---> Please remove one of them.")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
 
             if self.sTestCfgFile == '':
                 self.bLoadedCfg = False
                 self.sLoadedCfgLog['error'].append("The config_file input parameter is empty!!!")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
         else:
             if self.configLevel==TM.CConfigLevel.LEVEL_2:
                 # Configuration level 2, the oConfig.sTestCfgFile will be detected in method __loadConfigFileLevel2()
                 self.bLoadedCfg = self.__loadConfigFileLevel2()
                 if not self.bLoadedCfg:
                     # self.sLoadedCfgLog 'error' or 'info' are already set in method self.__loadConfigFileLevel2()
-                    self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                    raise Exception
+                    self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                    raise Exception(f"The test execution will be aborted!")
             else:
                 # Configuration level 3
                 if r'${variant}' in BuiltIn().get_variables():
@@ -209,8 +224,8 @@ because of a variant configuration file is not available.")
                         self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
                     self.sLoadedCfgLog['info'].append("---> A variant configuration file must be available when executing \
 robot with configuration level 2.")
-                    self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                    raise Exception
+                    self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                    raise Exception(f"The test execution will be aborted!")
                 # Detect the oConfig.sTestCfgFile the configuration level 3
                 if os.path.isdir(self.sTestcasePath + 'config'):
                     self.configLevel = TM.CConfigLevel.LEVEL_3
@@ -228,8 +243,8 @@ robot with configuration level 2.")
                         self.sLoadedCfgLog['info'].append(f"* file 1: '{sJsonFile1}'")
                         self.sLoadedCfgLog['info'].append(f"* file 2: '{sJsonFile2}'")
                         self.sLoadedCfgLog['info'].append(f"Please decide which one to keep and which one to remove. Both together are not allowed.") 
-                        self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                        raise Exception
+                        self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                        raise Exception(f"The test execution will be aborted!")
                     elif os.path.isfile(sJsonFile1):
                         self.sTestCfgFile = sJsonFile1
                     elif os.path.isfile(sJsonFile2):
@@ -246,8 +261,8 @@ robot with configuration level 2.")
         if not os.path.isfile(self.sTestCfgFile):
             self.bLoadedCfg = False
             self.sLoadedCfgLog['error'].append(f"Did not find configuration file: '{self.sTestCfgFile}'!")
-            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-            raise Exception
+            self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+            raise Exception(f"The test execution will be aborted!")
         robotCoreData = BuiltIn().get_variables()
         oJsonPreprocessor = CJsonPreprocessor(syntax="python")
         try:
@@ -261,8 +276,8 @@ robot with configuration level 2.")
                 self.sLoadedCfgLog['error'].append(f"{line}")
             if not bCheck:
                 self.sLoadedCfgLog['error'].append(f"In file: {self.sTestCfgFile}")
-            self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-            raise Exception
+            self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+            raise Exception(f"The test execution will be aborted!")
         # Handling local configuration
         if self.sLocalConfig != '':
             self.sLocalConfig = CString.NormalizePath(self.sLocalConfig)
@@ -272,8 +287,8 @@ robot with configuration level 2.")
                 self.bLoadedCfg = False
                 self.sLoadedCfgLog['error'].append(str(error))
                 self.sLoadedCfgLog['error'].append(f"Loading local config failed with file: {self.sLocalConfig}")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
             isLocalConfig = True
             if "WelcomeString" in oLocalConfig:
                 self.sLoadedCfgLog['error'].append(f"Loading local config failed with file: {self.sLocalConfig}")
@@ -291,8 +306,8 @@ robot with configuration level 2.")
             if not isLocalConfig:
                 self.bLoadedCfg = False
                 # Loading local configuration failed, the 'error' and 'info' are added above
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
 
         bJsonSchema = True
         try:
@@ -303,8 +318,8 @@ robot with configuration level 2.")
             bJsonSchema = False
             self.bLoadedCfg = False
             self.sLoadedCfgLog['error'].append(f"Could not parse configuration JSON schema file: '{str(err)}'")
-            self.sLoadedCfgLog['unknown'] = "Parse JSON schema file failed!"
-            raise Exception
+            self.sLoadedCfgLog['unknown'] = "Failed to parse JSON schema file. The test execution will be aborted!"
+            raise Exception(f"The test execution will be aborted!")
 
         if bJsonSchema:
             try:
@@ -329,8 +344,8 @@ robot with configuration level 2.")
                     self.sLoadedCfgLog['error'].append(f"Parameter '{errParam}' with invalid value found in JSON configuration file!")
                     self.sLoadedCfgLog['error'].append(f"Reason: {error.message}")
                     self.sLoadedCfgLog['error'].append(f"In file: '{self.sTestCfgFile}'")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
 
         self.sProjectName = oJsonCfgData['Project']
         self.sTargetName = oJsonCfgData['TargetName']
@@ -338,30 +353,51 @@ robot with configuration level 2.")
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
             # Check the format of Maximum_version value
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # But it is also plausible to do the check already here (as early as possible).
+            # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
+            # Can this be merged anyway?
             try:
                 CVersion.tupleVersion(self.sMaxVersion)
             except Exception as error:
-                self.sLoadedCfgLog['error'].append(f"Invalid Maximum version: {error}")
+                self.sLoadedCfgLog['error'].append(f"Maximum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
+
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # But it is also plausible to do the check already here (as early as possible).
+            # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
+            # Can this be merged anyway?
             try:
                 CVersion.tupleVersion(self.sMinVersion)
             except Exception as error:
-                self.sLoadedCfgLog['error'].append(f"Invalid Minimum version:{error}")
+                self.sLoadedCfgLog['error'].append(f"Minimum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
-                self.sLoadedCfgLog['unknown'] = "Unable to load the test configuration. The test execution will be aborted!"
-                raise Exception
+                self.sLoadedCfgLog['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+                raise Exception(f"The test execution will be aborted!")
+
         suiteMetadata = BuiltIn().get_variables()['&{SUITE_METADATA}']
         # Set metadata at top level
         BuiltIn().set_suite_metadata("project", self.sProjectName, top=True)
         BuiltIn().set_suite_metadata("machine", self.__getMachineName(), top=True)
         BuiltIn().set_suite_metadata("tester", self.__getUserName(), top=True)
         BuiltIn().set_suite_metadata("testtool", self.rMetaData.sROBFWVersion, top=True)
-        BuiltIn().set_suite_metadata("bundle_version", BUNDLE_VERSION, top=True)
+
+        if self.__tsm_app_config:
+            reference_version  = self.__tsm_app_config.get_reference_version()
+            reference_app_name = self.__tsm_app_config.get_reference_app_name()
+            BuiltIn().set_suite_metadata("reference_version", reference_version, top=True)
+            BuiltIn().set_suite_metadata("reference_app_name", reference_app_name, top=True)
+        else:
+            # TODO: Verify this. Seems not to be required. But why not?
+            #       Error already logged at other position. Exception not logged.
+            logger.error(f"{self.__tsm_app_config_error}")
+            raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
+
         if not ("version_sw" in suiteMetadata and self.rMetaData.sVersionSW == None):
             BuiltIn().set_suite_metadata("version_sw", self.rMetaData.sVersionSW, top=True)
         if not ("version_hw" in suiteMetadata and self.rMetaData.sVersionHW == None):
@@ -406,7 +442,7 @@ This method set RobotFramework AIO global variable from config object.
         if not regex.match(self.sVariablePattern, key):
             self.sLoadedCfgLog['error'].append(f"Variable name '{key}' is invalid. Expected format: '{self.sVariablePattern}' (letters, digits, underscores)")
             self.sLoadedCfgLog['error'].append(f"Please check variable '{key}' in params['global'] in the configuration file '{self.sTestCfgFile}'")
-            raise Exception
+            raise Exception(f"The test execution will be aborted!")
         k = key
         v = value
         if isinstance(v, dict):
@@ -442,14 +478,14 @@ This method updates preprocessor and global params to global variable of RobotFr
                 if k in lReservedKeyword:
                     self.sLoadedCfgLog['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
                     self.sLoadedCfgLog['unknown'] = "A parameter name conflicted with Robot Framework's reserved keywords. The test execution will be aborted!"
-                    raise Exception
+                    raise Exception(f"The test execution will be aborted!")
                 if k in self.lBuitInVariables:
                     continue
                 try:
                     self.__setGlobalVariable(k, v)
                 except Exception as error:
                     self.sLoadedCfgLog['error'].append(error)
-                    raise Exception
+                    raise Exception(f"The test execution will be aborted!")
 
     def __del__(self):
         '''
@@ -610,7 +646,8 @@ This __getUserName method gets current account name login to run the test.
 
         return sUserName
 
-    def versionCheck(self):
+    def checkVersion(self):
+        # same method name like CVersion()::checkVersion()!
         '''
 This method validates the current package version with maximum and minimum version.
 
@@ -618,48 +655,109 @@ In case the current version is not between min and max version, then the executi
 testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion()
-        reason = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
-        header = None
-        detail = None
-        if reason==enVersionCheckResult.CHECK_NOT_EXECUTED.value:
-            logger.info(f"Running without {BUNDLE_NAME} version check!")
+        # We use the LOW LEVEL method 'oVersion.verifyVersion' here (instead of the HIGH LEVEL method 'oVersion.checkVersion()'),
+        # to be able to provide error messages that are a bit more in scope of RobotFramework AIO tests (whereas
+        # 'oVersion.checkVersion()' itself contains more generic error messages for Python developers, who use the version check
+        # outside RobotFramework AIO tests.
+        # Nevertheless, details about what happened we (mostly) get from 'oVersion.get_last_error()'. These error messages are
+        # most precise. Partially the error messages are hard coded here.
+
+        # from application configuration get reference information required for versioning and logging
+        if self.__tsm_app_config:
+            reference_version            = self.__tsm_app_config.get_reference_version()
+            reference_app_name           = self.__tsm_app_config.get_reference_app_name()
+            reference_installer_location = self.__tsm_app_config.get_reference_installer_location()
+        else:
+            logger.error(f"{self.__tsm_app_config_error}")
+            raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
+
+        # call of LOW LEVEL version control method
+        result = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
+
+        version_check_has_issue = False
+        exception               = None
+        error                   = None
+        last_error              = None
+        addition1               = None # set in case of exception only
+        addition2               = None # set in case of exception only
+
+        # -- good cases
+        if result==enVersionCheckResult.CHECK_NOT_EXECUTED.value:
+            logger.info(f"Running without {reference_app_name} version check!")
             return
-        elif reason==enVersionCheckResult.CHECK_PASSED.value:
-            logger.info(f"{BUNDLE_NAME} version check passed!")
+        elif result==enVersionCheckResult.CHECK_PASSED.value:
+            logger.info(f"{reference_app_name} version check passed!")
             return
-        elif reason==enVersionCheckResult.WRONG_MINMAX_RELATION.value:
-            header = "Wrong use of max/min version control in configuration."
-            detail = f"\nThe configured minimum {BUNDLE_NAME} version                 '{self.sMinVersion}'"
-            detail +=f"\nis younger than the configured maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-            detail +="\nPlease correct the values of 'Maximum_version', 'Minimum_version' in config file"
-        elif reason==enVersionCheckResult.CONFLICT_MIN.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires minimum {BUNDLE_NAME} version '{self.sMinVersion}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is older          '{BUNDLE_VERSION}'"
-        elif reason==enVersionCheckResult.CONFLICT_MAX.value:
-            header = "Version conflict."
-            detail = f"\nThe test execution requires maximum {BUNDLE_NAME} version '{self.sMaxVersion}'"
-            detail +=f"\nbut the installed {BUNDLE_NAME} version is younger        '{BUNDLE_VERSION}'"
-        elif reason==enVersionCheckResult.INTERNAL_ERROR.value:
-            header = f"Incorrect version format '{BUNDLE_VERSION}' detected while reading "
-            if oVersion.is_robotframework_aio:
-                header = header + "the RobotFramework AIO bundle version. Please contact the AIO team."
-            else:
-                header = header + "the TestsuitesManagement version. Please contact the AIO team."
-        elif reason==enVersionCheckResult.FORMAT_ERROR.value:
-            header = f"Invalid version format '{oVersion.invalid_format}': expected format is 'major.minor.patch' (e.g. 0.1.2)"
-        if header is not None:
-            if reason in (enVersionCheckResult.INTERNAL_ERROR.value, 
-                          enVersionCheckResult.FORMAT_ERROR.value):
-                BuiltIn().log(f"{header}", "ERROR")
-            else:
-                BuiltIn().log(f"{header}" +
-                f"\nTestsuite : {BuiltIn().get_variable_value('${SUITE SOURCE}')}" +
-                f"\nconfig    : {self.sTestCfgFile}" +
-                f"\n{detail}\n"
-                f"\nPlease install the required {BUNDLE_NAME} version." +
-                f"\nYou can find an installer here: {INSTALLER_LOCATION}\n", "ERROR")
-            raise Exception('Version control error!!!')
+        # -- bad cases
+        elif result in (enVersionCheckResult.WRONG_MINMAX_RELATION.value,
+                        enVersionCheckResult.FORMAT_ERROR.value,
+                        enVersionCheckResult.INTERNAL_ERROR.value):
+            version_check_has_issue = True
+            error      = "Something basic went wrong with the version check. This requires to fix the defined version numbers."
+            last_error = oVersion.get_last_error()
+            if result == enVersionCheckResult.FORMAT_ERROR.value:
+                addition1 = "The expected version format is 'major.minor.patch' (e.g. 0.1.2)"
+            addition2  = f"Affected configuration file: '{self.sTestCfgFile}'"
+            exception  = "Execution will be aborted because of a critical version check issue."
+        elif result in (enVersionCheckResult.CONFLICT_MIN.value,
+                        enVersionCheckResult.CONFLICT_MAX.value):
+            version_check_has_issue = True
+            error      = f"A failed version check requires to update the used software or to adapt the expected minimum version and the expected maximum version."
+            last_error = oVersion.get_last_error()
+            addition1  = f"Affected configuration file: '{self.sTestCfgFile}'"
+            addition2  = f"{reference_app_name} installer are available here: '{reference_installer_location}'"
+            exception  = "Execution will be aborted because of a failed version check."
+        else:
+            # paranoia handling
+            version_check_has_issue = True
+            last_error = f"Code internal error: got not handled version check result: '{result}'."
+            exception  = "Execution will be aborted because of an internal code error. Please contact the AIO team."
+
+        test_suite = CString.NormalizePath(f"{BuiltIn().get_variable_value('${SUITE SOURCE}')}")
+        logger.info(f"Testsuite : '{test_suite}'")
+
+        if version_check_has_issue:
+            if error:
+                logger.error(f"{error}")
+            logger.error(f"{last_error}")
+            if addition1:
+                logger.info(f"{addition1}")
+            if addition2:
+                logger.info(f"{addition2}")
+            raise Exception(f"{exception}")
+
+        return
 
 if __name__ == "__main__":
-    bundle_version()
+    # small test:
+    app_config = None
+    print()
+    try:
+        app_config = AppConfig()
+        print(f"==> is_robotframework_aio     : '{app_config.is_robotframework_aio()}'")
+        print(f"==> tsm_version               : '{app_config.get_tsm_version()}'")
+        print(f"==> tsm_version_date          : '{app_config.get_tsm_version_date()}'")
+        print(f"==> tsm_app_name              : '{app_config.get_tsm_app_name()}'")
+        print(f"==> tsm_installer_location    : '{app_config.get_tsm_installer_location()}'")
+        print(f"==> bundle_version            : '{app_config.get_bundle_version()}'")
+        print(f"==> bundle_version_date       : '{app_config.get_bundle_version_date()}'")
+        print(f"==> bundle_name               : '{app_config.get_bundle_name()}'")
+        print(f"==> bundle_installer_location : '{app_config.get_bundle_installer_location()}'")
+    except Exception as ex:
+        print(f"Exception in __main__: {ex}")
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

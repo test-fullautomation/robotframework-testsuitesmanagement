@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:31.344292" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-50-Version-Control-11" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-50-version-control-11.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2025-11-21T10:15:31.522757" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
+<msg time="2025-11-21T10:15:31.522861" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-11-21T10:15:31.524718" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-11-21T10:15:31.524779" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-11-21T10:15:31.524821" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg time="2025-11-21T10:15:31.524858" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.</msg>
+<msg time="2025-11-21T10:15:31.524894" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:31.524929" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:31.524959" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:31.525335" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg time="2025-11-21T10:15:31.525557" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg time="2025-11-21T10:15:31.525769" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg time="2025-11-21T10:15:31.526007" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg time="2025-11-21T10:15:31.526039" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2025-11-21T10:15:31.527312" level="INFO">RobotFramework AIO (original) version check passed!</msg>
+<msg time="2025-11-21T10:15:31.527354" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'</msg>
+<msg time="2025-11-21T10:15:31.527374" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2025-11-21T10:15:31.527390" level="INFO">Number of test suites: 1</msg>
+<msg time="2025-11-21T10:15:31.527406" level="INFO">Total number of testcases: 1</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.487528" elapsed="0.039917"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-50-version-control-11" line="32">
+<kw name="Testcase Setup" owner="tm" type="SETUP">
+<msg time="2025-11-21T10:15:31.528358" level="INFO">Test Count: 1</msg>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.528255" elapsed="0.000140"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.528934" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-50-version-control-11) : [STR]  :  'tsm-test_config_variant1'</msg>
+<arg>${CONFIG.Project}</arg>
+<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.528649" elapsed="0.000489"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.529492" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-50-version-control-11) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<arg>${teststring_common}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.529372" elapsed="0.000239"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.530042" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-50-version-control-11) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<arg>${teststring_variant}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.529919" elapsed="0.000290"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.530529" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-50-version-control-11) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<arg>${teststring_bench}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.530418" elapsed="0.000206"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Check Version" owner="tm">
+<msg time="2025-11-21T10:15:31.533469" level="ERROR">Version format error: Invalid version format '1XX' (within '0.1XX.0') (min_version)</msg>
+<msg time="2025-11-21T10:15:31.533717" level="FAIL">Execution will be aborted because of a critical version check issue</msg>
+<arg>min_version=0.1XX.0</arg>
+<arg>max_version=0.20.0</arg>
+<arg>reference_version=0.3.0</arg>
+<doc>This keyword executes a version check, min_version and max_version are checked against the reference_version.</doc>
+<status status="FAIL" start="2025-11-21T10:15:31.530980" elapsed="0.004033">Execution will be aborted because of a critical version check issue</status>
+</kw>
+<msg time="2025-11-21T10:15:31.535111" level="INFO">${status} = FAIL</msg>
+<msg time="2025-11-21T10:15:31.535143" level="INFO">${result} = Execution will be aborted because of a critical version check issue</msg>
+<var>${status}</var>
+<var>${result}</var>
+<arg>tm.check_version</arg>
+<arg>min_version=0.1XX.0</arg>
+<arg>max_version=0.20.0</arg>
+<arg>reference_version=0.3.0</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.530864" elapsed="0.004297"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.535713" level="INFO">PARAMS-VERIFIKATION : ({status} / tsm-testfile-50-version-control-11) : [STR]  :  'FAIL'</msg>
+<arg>${status}</arg>
+<arg>PARAMS-VERIFIKATION : ({status} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.535593" elapsed="0.000291"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2025-11-21T10:15:31.536169" level="INFO">PARAMS-VERIFIKATION : ({result} / tsm-testfile-50-version-control-11) : [STR]  :  'Execution will be aborted because of a critical version check issue'</msg>
+<arg>${result}</arg>
+<arg>PARAMS-VERIFIKATION : ({result} / tsm-testfile-50-version-control-11)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2025-11-21T10:15:31.536056" elapsed="0.000447"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>FAIL</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.536699" elapsed="0.000151"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Execution will be aborted because of a critical version check issue</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.536954" elapsed="0.000104"/>
+</kw>
+<kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
+<msg time="2025-11-21T10:15:31.537385" level="INFO">TEST 'Test Case tsm-testfile-50-version-control-11' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.537238" elapsed="0.000182"/>
+</kw>
+<doc>Robot Interface
+Invalid 'min_version': extra character
+tsm-testfile-50-version-control-11
+TSM_0455</doc>
+<status status="PASS" start="2025-11-21T10:15:31.527543" elapsed="0.009942"/>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2025-11-21T10:15:31.537959" level="INFO">SUITE 'Tsm-Testfile-50-Version-Control-11' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2025-11-21T10:15:31.537833" elapsed="0.000161"/>
+</kw>
+<meta name="machine">HI-C-0044M</meta>
+<meta name="project">tsm-test_config_variant1</meta>
+<meta name="reference_app_name">RobotFramework AIO (original)</meta>
+<meta name="reference_version">0.14.2.26</meta>
+<meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="PASS" start="2025-11-21T10:15:31.346892" elapsed="0.191129"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-50-Version-Control-11" id="s1" pass="1" fail="0" skip="0">Tsm-Testfile-50-Version-Control-11</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-21T10:15:31.533469" level="ERROR">Version format error: Invalid version format '1XX' (within '0.1XX.0') (min_version)</msg>
+</errors>
+</robot>

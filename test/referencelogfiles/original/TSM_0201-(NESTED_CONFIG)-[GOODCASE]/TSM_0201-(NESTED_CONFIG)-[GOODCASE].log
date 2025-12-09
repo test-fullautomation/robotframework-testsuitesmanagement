@@ -1,342 +1,343 @@
 ==============================================================================
-2025-07-04 16:40:03.823529 - INFO - + START SUITE: Tsm-Testfile-04
+2025-11-21 10:15:21.063722 - INFO - + START SUITE: Tsm-Testfile-04
 ==============================================================================
-2025-07-04 16:40:03.933525 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:04.061299 - INFO - Set suite metadata 'project' to value 'tsm-test_config_toplevel'.
-2025-07-04 16:40:04.061424 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:40:04.062997 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:40:04.071947 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:40:04.072010 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:40:04.072048 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:40:04.072080 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:40:04.072110 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:40:04.072496 - INFO - ${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test
-2025-07-04 16:40:04.072773 - INFO - ${int_val} = 123
-2025-07-04 16:40:04.073002 - INFO - ${float_val} = 4.56
-2025-07-04 16:40:04.073225 - INFO - ${bool_val_1} = True
-2025-07-04 16:40:04.073473 - INFO - ${bool_val_2} = True
-2025-07-04 16:40:04.073742 - INFO - ${bool_val_3} = False
-2025-07-04 16:40:04.074015 - INFO - ${bool_val_4} = False
-2025-07-04 16:40:04.074267 - INFO - ${none_val} = None
-2025-07-04 16:40:04.074530 - INFO - ${null_val} = None
-2025-07-04 16:40:04.074796 - INFO - ${mini_dict_val} = {'keyA': 'keyA_val', 'keyB': 'keyB_val'}
-2025-07-04 16:40:04.075049 - INFO - ${mini_list_val} = ['A', 1, True]
-2025-07-04 16:40:04.075304 - INFO - ${certain_teststring} = updated value of certain teststring (2.1.1)
-2025-07-04 16:40:04.075615 - INFO - ${list_val} = ['updated list', 123, 4.56, True, True, False, False, None, None, {'keyA': 'keyA_val', 'keyB': 'keyB_val'}, ['A', 1, True]]
-2025-07-04 16:40:04.076001 - INFO - ${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...
-2025-07-04 16:40:04.076261 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-2025-07-04 16:40:04.076501 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-2025-07-04 16:40:04.076777 - INFO - ${I_am_a_new_int} = 123
-2025-07-04 16:40:04.077094 - INFO - ${I_am_a_new_str} = I am a new str value (2.1.1)
-2025-07-04 16:40:04.077375 - INFO - ${I_am_a_new_None} = None
-2025-07-04 16:40:04.077702 - INFO - ${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}
-2025-07-04 16:40:04.078038 - INFO - ${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']
-2025-07-04 16:40:04.078350 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_toplevel', 'TargetName': 'Device_01', 'params': {}}
-2025-07-04 16:40:04.078385 - INFO - Running with configuration level 2 (variant name in command line)
-2025-07-04 16:40:04.078452 - INFO - RobotFramework AIO (original) version check passed!
-2025-07-04 16:40:04.078473 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.2.jsonp'
-2025-07-04 16:40:04.078491 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 16:40:04.078507 - INFO - Number of test suites: 1
-2025-07-04 16:40:04.078521 - INFO - Total number of testcases: 1
-2025-07-04 16:40:04.078563 - INFO - +- END SETUP: tm.Testsuite Setup (0.145038 s)
+2025-11-21 10:15:21.213059 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:21.314225 - INFO - Set suite metadata 'project' to value 'tsm-test_config_toplevel'.
+2025-11-21 10:15:21.314347 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:21.315712 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:21.316068 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:21.316149 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:21.316185 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:21.316218 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:21.316249 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:21.316282 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:21.316662 - INFO - ${teststring_variant} = I am the variant 'nested.2' configuration of tsm-test
+2025-11-21 10:15:21.316926 - INFO - ${int_val} = 123
+2025-11-21 10:15:21.317155 - INFO - ${float_val} = 4.56
+2025-11-21 10:15:21.317376 - INFO - ${bool_val_1} = True
+2025-11-21 10:15:21.317623 - INFO - ${bool_val_2} = True
+2025-11-21 10:15:21.317880 - INFO - ${bool_val_3} = False
+2025-11-21 10:15:21.318159 - INFO - ${bool_val_4} = False
+2025-11-21 10:15:21.318412 - INFO - ${none_val} = None
+2025-11-21 10:15:21.318663 - INFO - ${null_val} = None
+2025-11-21 10:15:21.318921 - INFO - ${mini_dict_val} = {'keyA': 'keyA_val', 'keyB': 'keyB_val'}
+2025-11-21 10:15:21.319167 - INFO - ${mini_list_val} = ['A', 1, True]
+2025-11-21 10:15:21.319411 - INFO - ${certain_teststring} = updated value of certain teststring (2.1.1)
+2025-11-21 10:15:21.319723 - INFO - ${list_val} = ['updated list', 123, 4.56, True, True, False, False, None, None, {'keyA': 'keyA_val', 'keyB': 'keyB_val'}, ['A', 1, True]]
+2025-11-21 10:15:21.320111 - INFO - ${dict_val} = {'key_1': {'subkey_11': {'subsubkey_111': "I am the variant 'nested.2' configuration of tsm-test", 'subsubkey_112': 123, 'subsubkey_113': 4.56}}, 'key_2': {'subkey_21': {'subsubkey_211': True, 'subsub...
+2025-11-21 10:15:21.320354 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2025-11-21 10:15:21.320604 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2025-11-21 10:15:21.320885 - INFO - ${I_am_a_new_int} = 123
+2025-11-21 10:15:21.321191 - INFO - ${I_am_a_new_str} = I am a new str value (2.1.1)
+2025-11-21 10:15:21.321463 - INFO - ${I_am_a_new_None} = None
+2025-11-21 10:15:21.321788 - INFO - ${I_am_a_new_dict} = {'new_dict_key_1': 'new_dict_key_1_value', 'new_dict_key_2': 'new_dict_key_2_value'}
+2025-11-21 10:15:21.322484 - INFO - ${I_am_a_new_list} = ['I', 'am', 'a', 'new', 'list']
+2025-11-21 10:15:21.322930 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_toplevel', 'TargetName': 'Device_01', 'params': {}}
+2025-11-21 10:15:21.322981 - INFO - Running with configuration level 2 (variant name in command line)
+2025-11-21 10:15:21.324943 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:21.325007 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_nested.2.jsonp'
+2025-11-21 10:15:21.325030 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:21.325049 - INFO - Number of test suites: 1
+2025-11-21 10:15:21.325066 - INFO - Total number of testcases: 1
+2025-11-21 10:15:21.325147 - INFO - +- END SETUP: tm.Testsuite Setup (0.112088 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:04.078660 - INFO - +- START TEST: Test Case tsm-testfile-04
+2025-11-21 10:15:21.325269 - INFO - +- START TEST: Test Case tsm-testfile-04
 ------------------------------------------------------------------------------
-2025-07-04 16:40:04.079654 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 16:40:04.079905 - INFO - Test Count: 1
-2025-07-04 16:40:04.079947 - INFO - +-- END SETUP: tm.Testcase Setup (0.000293 s)
+2025-11-21 10:15:21.326021 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:21.326129 - INFO - Test Count: 1
+2025-11-21 10:15:21.326171 - INFO - +-- END SETUP: tm.Testcase Setup (0.00015 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.080118 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.WelcomeString} | PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) ]
-2025-07-04 16:40:04.080445 - INFO - PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'
-2025-07-04 16:40:04.080537 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000419 s)
+2025-11-21 10:15:21.326347 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.WelcomeString} | PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) ]
+2025-11-21 10:15:21.326708 - INFO - PARAMS-VERIFIKATION : ({CONFIG.WelcomeString} / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'
+2025-11-21 10:15:21.326806 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000459 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.080639 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) ]
-2025-07-04 16:40:04.080904 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'
-2025-07-04 16:40:04.080991 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000352 s)
+2025-11-21 10:15:21.326930 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) ]
+2025-11-21 10:15:21.327227 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'
+2025-11-21 10:15:21.327311 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000381 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.081189 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.TargetName} | PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) ]
-2025-07-04 16:40:04.081470 - INFO - PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) : [STR]  :  'Device_01'
-2025-07-04 16:40:04.081543 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000354 s)
+2025-11-21 10:15:21.327425 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.TargetName} | PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) ]
+2025-11-21 10:15:21.327685 - INFO - PARAMS-VERIFIKATION : ({CONFIG.TargetName} / tsm-testfile-04) : [STR]  :  'Device_01'
+2025-11-21 10:15:21.327812 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000387 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.081655 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[WelcomeString] | PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) ]
-2025-07-04 16:40:04.081764 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'
-2025-07-04 16:40:04.081820 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000165 s)
+2025-11-21 10:15:21.327915 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[WelcomeString] | PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) ]
+2025-11-21 10:15:21.328007 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[WelcomeString] / tsm-testfile-04) : [STR]  :  'Hello... Robot Framework is running now!'
+2025-11-21 10:15:21.328124 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000209 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.081903 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[Project] | PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) ]
-2025-07-04 16:40:04.081994 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'
-2025-07-04 16:40:04.082044 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000141 s)
+2025-11-21 10:15:21.328221 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[Project] | PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) ]
+2025-11-21 10:15:21.328308 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[Project] / tsm-testfile-04) : [STR]  :  'tsm-test_config_toplevel'
+2025-11-21 10:15:21.328407 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000186 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.082124 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[TargetName] | PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) ]
-2025-07-04 16:40:04.082210 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) : [STR]  :  'Device_01'
-2025-07-04 16:40:04.082335 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000211 s)
+2025-11-21 10:15:21.328603 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG}[TargetName] | PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) ]
+2025-11-21 10:15:21.328710 - INFO - PARAMS-VERIFIKATION : ({CONFIG}[TargetName] / tsm-testfile-04) : [STR]  :  'Device_01'
+2025-11-21 10:15:21.328782 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000179 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.082418 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG} | PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) ]
-2025-07-04 16:40:04.082539 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/1) > {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'
-2025-07-04 16:40:04.082591 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '1.0.0'
-2025-07-04 16:40:04.082630 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/3) > {Minimum_version} [STR]  :  '0.6.0'
-2025-07-04 16:40:04.082667 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/4) > {Project} [STR]  :  'tsm-test_config_toplevel'
-2025-07-04 16:40:04.082720 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/5) > {TargetName} [STR]  :  'Device_01'
-2025-07-04 16:40:04.082757 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/6) > {params} [DOTDICT]  :  {}
-2025-07-04 16:40:04.082803 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000385 s)
+2025-11-21 10:15:21.328920 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG} | PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) ]
+2025-11-21 10:15:21.329079 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/1) > {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'
+2025-11-21 10:15:21.329229 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '1.0.0'
+2025-11-21 10:15:21.329309 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/3) > {Minimum_version} [STR]  :  '0.6.0'
+2025-11-21 10:15:21.329397 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/4) > {Project} [STR]  :  'tsm-test_config_toplevel'
+2025-11-21 10:15:21.329474 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/5) > {TargetName} [STR]  :  'Device_01'
+2025-11-21 10:15:21.329520 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/6) > {params} [DOTDICT]  :  {}
+2025-11-21 10:15:21.329656 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000736 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.082895 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val} | PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) ]
-2025-07-04 16:40:04.083038 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/1) > {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'
-2025-07-04 16:40:04.083087 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/2) > {subsubkey_112} [INT]  :  123
-2025-07-04 16:40:04.083133 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/3) > {subsubkey_113} [FLOAT]  :  4.56
-2025-07-04 16:40:04.083176 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/1) > {subsubkey_211} [BOOL]  :  True
-2025-07-04 16:40:04.083217 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/2) > {subsubkey_212} [BOOL]  :  True
-2025-07-04 16:40:04.083257 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/3) > {subsubkey_213} [BOOL]  :  False
-2025-07-04 16:40:04.083297 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/4) > {subsubkey_214} [BOOL]  :  False
-2025-07-04 16:40:04.083336 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/1) > {subsubkey_221} [NONE]  :  None
-2025-07-04 16:40:04.083376 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/2) > {subsubkey_222} [NONE]  :  None
-2025-07-04 16:40:04.083415 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/1) > {certain_teststring_initial} [STR]  :  'initial value of certain teststring'
-2025-07-04 16:40:04.083456 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/2) > {subsubkey_231} [STR]  :  'updated value of certain teststring (2.1.1)'
-2025-07-04 16:40:04.083495 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/1) > [STR]  :  'updated list'
-2025-07-04 16:40:04.083535 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/2) > [INT]  :  123
-2025-07-04 16:40:04.083576 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/3) > [FLOAT]  :  4.56
-2025-07-04 16:40:04.083615 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/4) > [BOOL]  :  True
-2025-07-04 16:40:04.083654 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/5) > [BOOL]  :  True
-2025-07-04 16:40:04.083691 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/6) > [BOOL]  :  False
-2025-07-04 16:40:04.083731 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/7) > [BOOL]  :  False
-2025-07-04 16:40:04.083770 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/8) > [NONE]  :  None
-2025-07-04 16:40:04.083808 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/9) > [NONE]  :  None
-2025-07-04 16:40:04.083847 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/10) > [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
-2025-07-04 16:40:04.083888 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/10) > [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
-2025-07-04 16:40:04.083928 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/1) > [STR]  :  'A'
-2025-07-04 16:40:04.083973 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/2) > [INT]  :  1
-2025-07-04 16:40:04.084017 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/3) > [BOOL]  :  True
-2025-07-04 16:40:04.084065 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/4) > {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'
-2025-07-04 16:40:04.084138 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/5) > {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'
-2025-07-04 16:40:04.084227 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.001332 s)
+2025-11-21 10:15:21.329766 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val} | PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) ]
+2025-11-21 10:15:21.329917 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/1) > {subsubkey_111} [STR]  :  'I am the variant 'nested.2' configuration of tsm-test'
+2025-11-21 10:15:21.329976 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/2) > {subsubkey_112} [INT]  :  123
+2025-11-21 10:15:21.330054 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/1) > {key_1} [DOTDICT] (1/1) > {subkey_11} [DOTDICT] (3/3) > {subsubkey_113} [FLOAT]  :  4.56
+2025-11-21 10:15:21.330112 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/1) > {subsubkey_211} [BOOL]  :  True
+2025-11-21 10:15:21.330172 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/2) > {subsubkey_212} [BOOL]  :  True
+2025-11-21 10:15:21.330229 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/3) > {subsubkey_213} [BOOL]  :  False
+2025-11-21 10:15:21.330288 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/1) > {subkey_21} [DOTDICT] (4/4) > {subsubkey_214} [BOOL]  :  False
+2025-11-21 10:15:21.330345 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/1) > {subsubkey_221} [NONE]  :  None
+2025-11-21 10:15:21.330402 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/2) > {subkey_22} [DOTDICT] (2/2) > {subsubkey_222} [NONE]  :  None
+2025-11-21 10:15:21.330458 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/1) > {certain_teststring_initial} [STR]  :  'initial value of certain teststring'
+2025-11-21 10:15:21.330516 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/2) > {subsubkey_231} [STR]  :  'updated value of certain teststring (2.1.1)'
+2025-11-21 10:15:21.330574 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/1) > [STR]  :  'updated list'
+2025-11-21 10:15:21.330631 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/2) > [INT]  :  123
+2025-11-21 10:15:21.330688 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/3) > [FLOAT]  :  4.56
+2025-11-21 10:15:21.330745 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/4) > [BOOL]  :  True
+2025-11-21 10:15:21.330802 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/5) > [BOOL]  :  True
+2025-11-21 10:15:21.330861 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/6) > [BOOL]  :  False
+2025-11-21 10:15:21.330974 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/7) > [BOOL]  :  False
+2025-11-21 10:15:21.331052 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/8) > [NONE]  :  None
+2025-11-21 10:15:21.331108 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/9) > [NONE]  :  None
+2025-11-21 10:15:21.331167 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/10) > [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
+2025-11-21 10:15:21.331235 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/10) > [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
+2025-11-21 10:15:21.331300 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/1) > [STR]  :  'A'
+2025-11-21 10:15:21.331420 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/2) > [INT]  :  1
+2025-11-21 10:15:21.331477 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/3) > {subsubkey_232} [LIST] (11/11) > [LIST] (3/3) > [BOOL]  :  True
+2025-11-21 10:15:21.331588 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/4) > {dotted.key.name} [STR]  :  'updated dotted key name value (2.1.1)'
+2025-11-21 10:15:21.331647 - INFO - PARAMS-VERIFIKATION : ({dict_val} / tsm-testfile-04) : [DOTDICT] (2/2) > {key_2} [DOTDICT] (3/3) > {subkey_23} [DOTDICT] (5/5) > {I_am_a_new_key} [STR]  :  'I am a new key value (2.1.1)'
+2025-11-21 10:15:21.331716 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00195 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.084380 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val} | PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) ]
-2025-07-04 16:40:04.084484 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/1) > [STR]  :  'updated list'
-2025-07-04 16:40:04.084569 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/2) > [INT]  :  123
-2025-07-04 16:40:04.084630 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/3) > [FLOAT]  :  4.56
-2025-07-04 16:40:04.084689 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/4) > [BOOL]  :  True
-2025-07-04 16:40:04.084747 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/5) > [BOOL]  :  True
-2025-07-04 16:40:04.084805 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/6) > [BOOL]  :  False
-2025-07-04 16:40:04.084862 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/7) > [BOOL]  :  False
-2025-07-04 16:40:04.084919 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/8) > [NONE]  :  None
-2025-07-04 16:40:04.084980 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/9) > [NONE]  :  None
-2025-07-04 16:40:04.085036 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) > [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
-2025-07-04 16:40:04.085096 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) > [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
-2025-07-04 16:40:04.085171 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/1) > [STR]  :  'A'
-2025-07-04 16:40:04.085206 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/2) > [INT]  :  1
-2025-07-04 16:40:04.085240 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/3) > [BOOL]  :  True
-2025-07-04 16:40:04.085284 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000904 s)
+2025-11-21 10:15:21.331851 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val} | PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) ]
+2025-11-21 10:15:21.331972 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/1) > [STR]  :  'updated list'
+2025-11-21 10:15:21.332037 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/2) > [INT]  :  123
+2025-11-21 10:15:21.332110 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/3) > [FLOAT]  :  4.56
+2025-11-21 10:15:21.332153 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/4) > [BOOL]  :  True
+2025-11-21 10:15:21.332198 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/5) > [BOOL]  :  True
+2025-11-21 10:15:21.332245 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/6) > [BOOL]  :  False
+2025-11-21 10:15:21.332285 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/7) > [BOOL]  :  False
+2025-11-21 10:15:21.332322 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/8) > [NONE]  :  None
+2025-11-21 10:15:21.332358 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/9) > [NONE]  :  None
+2025-11-21 10:15:21.332393 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) > [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
+2025-11-21 10:15:21.332452 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/10) > [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
+2025-11-21 10:15:21.332488 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/1) > [STR]  :  'A'
+2025-11-21 10:15:21.332523 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/2) > [INT]  :  1
+2025-11-21 10:15:21.332557 - INFO - PARAMS-VERIFIKATION : ({list_val} / tsm-testfile-04) : [LIST] (11/11) > [LIST] (3/3) > [BOOL]  :  True
+2025-11-21 10:15:21.332601 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00075 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.085365 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${certain_teststring} | PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) ]
-2025-07-04 16:40:04.085451 - INFO - PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
-2025-07-04 16:40:04.085501 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000136 s)
+2025-11-21 10:15:21.332696 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${certain_teststring} | PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) ]
+2025-11-21 10:15:21.332789 - INFO - PARAMS-VERIFIKATION : ({certain_teststring} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
+2025-11-21 10:15:21.332855 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000159 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.085582 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[0] | PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) ]
-2025-07-04 16:40:04.085671 - INFO - PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) : [STR]  :  'updated list'
-2025-07-04 16:40:04.085719 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000137 s)
+2025-11-21 10:15:21.332982 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[0] | PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) ]
+2025-11-21 10:15:21.333093 - INFO - PARAMS-VERIFIKATION : ({list_val}[0] / tsm-testfile-04) : [STR]  :  'updated list'
+2025-11-21 10:15:21.333217 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000235 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.085797 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[9] | PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) ]
-2025-07-04 16:40:04.085890 - INFO - PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
-2025-07-04 16:40:04.085930 - INFO - PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
-2025-07-04 16:40:04.085976 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000179 s)
+2025-11-21 10:15:21.333304 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[9] | PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) ]
+2025-11-21 10:15:21.333406 - INFO - PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/1) > {keyA} [STR]  :  'keyA_val'
+2025-11-21 10:15:21.333459 - INFO - PARAMS-VERIFIKATION : ({list_val}[9] / tsm-testfile-04) : [DOTDICT] (2/2) > {keyB} [STR]  :  'keyB_val'
+2025-11-21 10:15:21.333531 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000227 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.086052 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[9][keyA] | PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) ]
-2025-07-04 16:40:04.086136 - INFO - PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) : [STR]  :  'keyA_val'
-2025-07-04 16:40:04.086182 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00013 s)
+2025-11-21 10:15:21.333627 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[9][keyA] | PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) ]
+2025-11-21 10:15:21.333722 - INFO - PARAMS-VERIFIKATION : ({list_val}[9][keyA] / tsm-testfile-04) : [STR]  :  'keyA_val'
+2025-11-21 10:15:21.333799 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000172 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.086256 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[10][2] | PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) ]
-2025-07-04 16:40:04.086344 - INFO - PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) : [BOOL]  :  True
-2025-07-04 16:40:04.086391 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000135 s)
+2025-11-21 10:15:21.333915 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${list_val}[10][2] | PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) ]
+2025-11-21 10:15:21.334027 - INFO - PARAMS-VERIFIKATION : ({list_val}[10][2] / tsm-testfile-04) : [BOOL]  :  True
+2025-11-21 10:15:21.334090 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000175 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.086471 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_231] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) ]
-2025-07-04 16:40:04.086555 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
-2025-07-04 16:40:04.086642 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000171 s)
+2025-11-21 10:15:21.334182 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_231] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) ]
+2025-11-21 10:15:21.334276 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_231] / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
+2025-11-21 10:15:21.334355 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000173 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.086723 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_231} | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) ]
-2025-07-04 16:40:04.086963 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
-2025-07-04 16:40:04.087059 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000336 s)
+2025-11-21 10:15:21.334441 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_231} | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) ]
+2025-11-21 10:15:21.334694 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_231} / tsm-testfile-04) : [STR]  :  'updated value of certain teststring (2.1.1)'
+2025-11-21 10:15:21.334764 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000323 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.087213 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) ]
-2025-07-04 16:40:04.087311 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) : [STR]  :  'updated list'
-2025-07-04 16:40:04.087395 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000182 s)
+2025-11-21 10:15:21.334903 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) ]
+2025-11-21 10:15:21.335003 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][subsubkey_232][0] / tsm-testfile-04) : [STR]  :  'updated list'
+2025-11-21 10:15:21.335066 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000163 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.087474 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) ]
-2025-07-04 16:40:04.087706 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) : [STR]  :  'updated list'
-2025-07-04 16:40:04.087760 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000286 s)
+2025-11-21 10:15:21.335167 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) ]
+2025-11-21 10:15:21.335416 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23.subsubkey_232}[0] / tsm-testfile-04) : [STR]  :  'updated list'
+2025-11-21 10:15:21.335480 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000313 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.087845 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) ]
-2025-07-04 16:40:04.087949 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'
-2025-07-04 16:40:04.088003 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000158 s)
+2025-11-21 10:15:21.335591 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val}[key_2][subkey_23][dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) ]
+2025-11-21 10:15:21.335684 - INFO - PARAMS-VERIFIKATION : ({dict_val}[key_2][subkey_23][dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'
+2025-11-21 10:15:21.335744 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000153 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.088082 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23}[dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) ]
-2025-07-04 16:40:04.088325 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'
-2025-07-04 16:40:04.088381 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000299 s)
+2025-11-21 10:15:21.335836 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${dict_val.key_2.subkey_23}[dotted.key.name] | PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) ]
+2025-11-21 10:15:21.336097 - INFO - PARAMS-VERIFIKATION : ({dict_val.key_2.subkey_23}[dotted.key.name] / tsm-testfile-04) : [STR]  :  'updated dotted key name value (2.1.1)'
+2025-11-21 10:15:21.336168 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000332 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.088471 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_int} | PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) ]
-2025-07-04 16:40:04.088561 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) : [INT]  :  123
-2025-07-04 16:40:04.088633 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000162 s)
+2025-11-21 10:15:21.336268 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_int} | PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) ]
+2025-11-21 10:15:21.336367 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_int} / tsm-testfile-04) : [INT]  :  123
+2025-11-21 10:15:21.336432 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000164 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.088725 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_str} | PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) ]
-2025-07-04 16:40:04.088803 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) : [STR]  :  'I am a new str value (2.1.1)'
-2025-07-04 16:40:04.088875 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00015 s)
+2025-11-21 10:15:21.336529 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_str} | PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) ]
+2025-11-21 10:15:21.336616 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_str} / tsm-testfile-04) : [STR]  :  'I am a new str value (2.1.1)'
+2025-11-21 10:15:21.336676 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000147 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.088950 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_None} | PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) ]
-2025-07-04 16:40:04.089035 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) : [NONE]  :  None
-2025-07-04 16:40:04.089085 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000135 s)
+2025-11-21 10:15:21.336771 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_None} | PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) ]
+2025-11-21 10:15:21.336855 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_None} / tsm-testfile-04) : [NONE]  :  None
+2025-11-21 10:15:21.336911 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00014 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.089163 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_dict} | PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) ]
-2025-07-04 16:40:04.089253 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/1) > {new_dict_key_1} [STR]  :  'new_dict_key_1_value'
-2025-07-04 16:40:04.089295 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/2) > {new_dict_key_2} [STR]  :  'new_dict_key_2_value'
-2025-07-04 16:40:04.089343 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00018 s)
+2025-11-21 10:15:21.337001 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_dict} | PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) ]
+2025-11-21 10:15:21.337103 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/1) > {new_dict_key_1} [STR]  :  'new_dict_key_1_value'
+2025-11-21 10:15:21.337154 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_dict} / tsm-testfile-04) : [DOTDICT] (2/2) > {new_dict_key_2} [STR]  :  'new_dict_key_2_value'
+2025-11-21 10:15:21.337215 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000214 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.089448 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_list} | PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) ]
-2025-07-04 16:40:04.089533 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/1) > [STR]  :  'I'
-2025-07-04 16:40:04.089576 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/2) > [STR]  :  'am'
-2025-07-04 16:40:04.089614 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/3) > [STR]  :  'a'
-2025-07-04 16:40:04.089649 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/4) > [STR]  :  'new'
-2025-07-04 16:40:04.089684 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/5) > [STR]  :  'list'
-2025-07-04 16:40:04.089727 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000279 s)
+2025-11-21 10:15:21.337548 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${I_am_a_new_list} | PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) ]
+2025-11-21 10:15:21.337746 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/1) > [STR]  :  'I'
+2025-11-21 10:15:21.337843 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/2) > [STR]  :  'am'
+2025-11-21 10:15:21.337910 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/3) > [STR]  :  'a'
+2025-11-21 10:15:21.337950 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/4) > [STR]  :  'new'
+2025-11-21 10:15:21.337986 - INFO - PARAMS-VERIFIKATION : ({I_am_a_new_list} / tsm-testfile-04) : [LIST] (5/5) > [STR]  :  'list'
+2025-11-21 10:15:21.338034 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000486 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.089913 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][certain_teststring_initial] | initial value of certain teststring ]
-2025-07-04 16:40:04.090004 - DEBUG - Argument types are:
+2025-11-21 10:15:21.338240 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][certain_teststring_initial] | initial value of certain teststring ]
+2025-11-21 10:15:21.338337 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.090029 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000116 s)
+2025-11-21 10:15:21.338362 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000122 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.090113 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.certain_teststring_initial} | initial value of certain teststring ]
-2025-07-04 16:40:04.090346 - DEBUG - Argument types are:
+2025-11-21 10:15:21.338468 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.certain_teststring_initial} | initial value of certain teststring ]
+2025-11-21 10:15:21.338742 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.090372 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000259 s)
+2025-11-21 10:15:21.338779 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000311 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.090464 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${certain_teststring} | updated value of certain teststring (2.1.1) ]
-2025-07-04 16:40:04.090536 - DEBUG - Argument types are:
+2025-11-21 10:15:21.338897 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${certain_teststring} | updated value of certain teststring (2.1.1) ]
+2025-11-21 10:15:21.338979 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.090557 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.3e-05 s)
+2025-11-21 10:15:21.339003 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000106 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.090643 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[0] | updated list ]
-2025-07-04 16:40:04.090715 - DEBUG - Argument types are:
+2025-11-21 10:15:21.339114 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[0] | updated list ]
+2025-11-21 10:15:21.339210 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.090740 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.7e-05 s)
+2025-11-21 10:15:21.339235 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000121 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.090823 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[9][keyA] | keyA_val ]
-2025-07-04 16:40:04.090895 - DEBUG - Argument types are:
+2025-11-21 10:15:21.339334 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[9][keyA] | keyA_val ]
+2025-11-21 10:15:21.339425 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.090917 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.4e-05 s)
+2025-11-21 10:15:21.339450 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000116 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.090995 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[10][2] | ${True} ]
-2025-07-04 16:40:04.091077 - DEBUG - Argument types are:
+2025-11-21 10:15:21.339549 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${list_val}[10][2] | ${True} ]
+2025-11-21 10:15:21.339643 - DEBUG - Argument types are:
 <class 'bool'>
 <class 'bool'>
-2025-07-04 16:40:04.091097 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000102 s)
+2025-11-21 10:15:21.339668 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000119 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.091173 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][subsubkey_231] | updated value of certain teststring (2.1.1) ]
-2025-07-04 16:40:04.091246 - DEBUG - Argument types are:
+2025-11-21 10:15:21.339764 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][subsubkey_231] | updated value of certain teststring (2.1.1) ]
+2025-11-21 10:15:21.339854 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.091268 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.5e-05 s)
+2025-11-21 10:15:21.339877 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000113 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.091371 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.subsubkey_231} | updated value of certain teststring (2.1.1) ]
-2025-07-04 16:40:04.091596 - DEBUG - Argument types are:
+2025-11-21 10:15:21.340005 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.subsubkey_231} | updated value of certain teststring (2.1.1) ]
+2025-11-21 10:15:21.340241 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.091621 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.00025 s)
+2025-11-21 10:15:21.340266 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000261 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.091706 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | updated list ]
-2025-07-04 16:40:04.091788 - DEBUG - Argument types are:
+2025-11-21 10:15:21.340360 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][subsubkey_232][0] | updated list ]
+2025-11-21 10:15:21.340448 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.091810 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000104 s)
+2025-11-21 10:15:21.340471 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000111 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.091897 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | updated list ]
-2025-07-04 16:40:04.092124 - DEBUG - Argument types are:
+2025-11-21 10:15:21.340569 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23.subsubkey_232}[0] | updated list ]
+2025-11-21 10:15:21.340806 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.092146 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000249 s)
+2025-11-21 10:15:21.340831 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000262 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.092232 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][dotted.key.name] | updated dotted key name value (2.1.1) ]
-2025-07-04 16:40:04.092304 - DEBUG - Argument types are:
+2025-11-21 10:15:21.340925 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val}[key_2][subkey_23][dotted.key.name] | updated dotted key name value (2.1.1) ]
+2025-11-21 10:15:21.341009 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.092325 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.3e-05 s)
+2025-11-21 10:15:21.341032 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000107 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.092406 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23}[dotted.key.name] | updated dotted key name value (2.1.1) ]
-2025-07-04 16:40:04.092632 - DEBUG - Argument types are:
+2025-11-21 10:15:21.341132 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${dict_val.key_2.subkey_23}[dotted.key.name] | updated dotted key name value (2.1.1) ]
+2025-11-21 10:15:21.341383 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.092657 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000251 s)
+2025-11-21 10:15:21.341414 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000282 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.092748 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_int} | ${123} ]
-2025-07-04 16:40:04.092945 - DEBUG - Argument types are:
+2025-11-21 10:15:21.341513 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_int} | ${123} ]
+2025-11-21 10:15:21.341739 - DEBUG - Argument types are:
 <class 'int'>
 <class 'int'>
-2025-07-04 16:40:04.092967 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000219 s)
+2025-11-21 10:15:21.341772 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000259 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.093047 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_str} | I am a new str value (2.1.1) ]
-2025-07-04 16:40:04.093123 - DEBUG - Argument types are:
+2025-11-21 10:15:21.341942 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_str} | I am a new str value (2.1.1) ]
+2025-11-21 10:15:21.342032 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.093144 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.7e-05 s)
+2025-11-21 10:15:21.342056 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000114 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.093255 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_None} | ${None} ]
-2025-07-04 16:40:04.093333 - DEBUG - Argument types are:
+2025-11-21 10:15:21.342161 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_None} | ${None} ]
+2025-11-21 10:15:21.342255 - DEBUG - Argument types are:
 <class 'NoneType'>
 <class 'NoneType'>
-2025-07-04 16:40:04.093356 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000101 s)
+2025-11-21 10:15:21.342278 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000117 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.093471 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_dict}[new_dict_key_1] | new_dict_key_1_value ]
-2025-07-04 16:40:04.093543 - DEBUG - Argument types are:
+2025-11-21 10:15:21.342405 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_dict}[new_dict_key_1] | new_dict_key_1_value ]
+2025-11-21 10:15:21.342483 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.093564 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.3e-05 s)
+2025-11-21 10:15:21.342503 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.8e-05 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.093646 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_dict}[new_dict_key_2] | new_dict_key_2_value ]
-2025-07-04 16:40:04.093722 - DEBUG - Argument types are:
+2025-11-21 10:15:21.342598 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_dict}[new_dict_key_2] | new_dict_key_2_value ]
+2025-11-21 10:15:21.342706 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.093744 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.8e-05 s)
+2025-11-21 10:15:21.342730 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000132 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.093849 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[0] | I ]
-2025-07-04 16:40:04.093925 - DEBUG - Argument types are:
+2025-11-21 10:15:21.342821 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[0] | I ]
+2025-11-21 10:15:21.342904 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.093946 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.7e-05 s)
+2025-11-21 10:15:21.342928 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000107 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.094033 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[1] | am ]
-2025-07-04 16:40:04.094105 - DEBUG - Argument types are:
+2025-11-21 10:15:21.343024 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[1] | am ]
+2025-11-21 10:15:21.343106 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.094126 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.3e-05 s)
+2025-11-21 10:15:21.343127 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000103 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.094208 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[2] | a ]
-2025-07-04 16:40:04.094277 - DEBUG - Argument types are:
+2025-11-21 10:15:21.343219 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[2] | a ]
+2025-11-21 10:15:21.343300 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.094297 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (8.9e-05 s)
+2025-11-21 10:15:21.343321 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000102 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.094377 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[3] | new ]
-2025-07-04 16:40:04.094443 - DEBUG - Argument types are:
+2025-11-21 10:15:21.343409 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[3] | new ]
+2025-11-21 10:15:21.343491 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.094464 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (8.7e-05 s)
+2025-11-21 10:15:21.343513 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000104 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.094533 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[4] | list ]
-2025-07-04 16:40:04.094597 - DEBUG - Argument types are:
+2025-11-21 10:15:21.343600 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${I_am_a_new_list}[4] | list ]
+2025-11-21 10:15:21.343678 - DEBUG - Argument types are:
 <class 'str'>
 <class 'str'>
-2025-07-04 16:40:04.094616 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (8.3e-05 s)
+2025-11-21 10:15:21.343699 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (9.9e-05 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:04.094724 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 16:40:04.094845 - INFO - TEST 'Test Case tsm-testfile-04' finished with result 'PASS'
-2025-07-04 16:40:04.094877 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000153 s)
+2025-11-21 10:15:21.343837 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:21.343963 - INFO - TEST 'Test Case tsm-testfile-04' finished with result 'PASS'
+2025-11-21 10:15:21.343995 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000158 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:04.095253 - INFO - +- END TEST: Test Case tsm-testfile-04 (0.016593 s)
+2025-11-21 10:15:21.344089 - INFO - +- END TEST: Test Case tsm-testfile-04 (0.01882 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:04.096230 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:04.096529 - INFO - SUITE 'Tsm-Testfile-04' finished with result 'PASS'
-2025-07-04 16:40:04.096600 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.00037 s)
+2025-11-21 10:15:21.344425 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:21.344542 - INFO - SUITE 'Tsm-Testfile-04' finished with result 'PASS'
+2025-11-21 10:15:21.344574 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000149 s)
 ==============================================================================
-2025-07-04 16:40:04.096641 - INFO - + END SUITE: Tsm-Testfile-04 (0.273112 s)
+2025-11-21 10:15:21.344599 - INFO - + END SUITE: Tsm-Testfile-04 (0.280877 s)
 ==============================================================================

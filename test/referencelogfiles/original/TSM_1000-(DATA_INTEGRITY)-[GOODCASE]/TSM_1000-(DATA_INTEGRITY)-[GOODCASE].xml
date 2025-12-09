@@ -1,94 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:11.500279" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:36.492189" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-21-Data Integrity" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-21-data_integrity.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:11.659931" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_data_integrity_1'.</msg>
-<msg time="2025-07-04T16:40:11.660046" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg time="2025-07-04T16:40:11.661808" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg time="2025-07-04T16:40:11.661876" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
-<msg time="2025-07-04T16:40:11.661912" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
-<msg time="2025-07-04T16:40:11.661946" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:11.661977" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:11.662007" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:11.662409" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
-<msg time="2025-07-04T16:40:11.662634" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
-<msg time="2025-07-04T16:40:11.662837" level="INFO">${teststring_variant} = I am the variant 'data_integrity_1' configuration of tsm-test</msg>
-<msg time="2025-07-04T16:40:11.663029" level="INFO">${teststring_data_integrity} = a.1,b.2;c.3,d.4  ;  e.5  ,  f.6</msg>
-<msg time="2025-07-04T16:40:11.663306" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_data_integrity_1', 'TargetName': 'Device_01', 'params'...</msg>
-<msg time="2025-07-04T16:40:11.663342" level="INFO">Running with configuration level 1 (configuration file in command line)</msg>
-<msg time="2025-07-04T16:40:11.663410" level="INFO">RobotFramework AIO (original) version check passed!</msg>
-<msg time="2025-07-04T16:40:11.663432" level="INFO">Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_data_integrity_1.jsonp'</msg>
-<msg time="2025-07-04T16:40:11.663449" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg time="2025-07-04T16:40:11.663465" level="INFO">Number of test suites: 1</msg>
-<msg time="2025-07-04T16:40:11.663481" level="INFO">Total number of testcases: 1</msg>
+<msg time="2025-11-21T10:15:36.649775" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_data_integrity_1'.</msg>
+<msg time="2025-11-21T10:15:36.649907" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-11-21T10:15:36.651803" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-11-21T10:15:36.651882" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-11-21T10:15:36.651921" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg time="2025-11-21T10:15:36.651953" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.</msg>
+<msg time="2025-11-21T10:15:36.651985" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:36.652015" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:36.652045" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:36.652446" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg time="2025-11-21T10:15:36.652675" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg time="2025-11-21T10:15:36.652883" level="INFO">${teststring_variant} = I am the variant 'data_integrity_1' configuration of tsm-test</msg>
+<msg time="2025-11-21T10:15:36.653078" level="INFO">${teststring_data_integrity} = a.1,b.2;c.3,d.4  ;  e.5  ,  f.6</msg>
+<msg time="2025-11-21T10:15:36.653357" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_data_integrity_1', 'TargetName': 'Device_01', 'params'...</msg>
+<msg time="2025-11-21T10:15:36.653392" level="INFO">Running with configuration level 1 (configuration file in command line)</msg>
+<msg time="2025-11-21T10:15:36.655013" level="INFO">RobotFramework AIO (original) version check passed!</msg>
+<msg time="2025-11-21T10:15:36.655083" level="INFO">Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_data_integrity_1.jsonp'</msg>
+<msg time="2025-11-21T10:15:36.655105" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2025-11-21T10:15:36.655123" level="INFO">Number of test suites: 1</msg>
+<msg time="2025-11-21T10:15:36.655139" level="INFO">Total number of testcases: 1</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="PASS" start="2025-07-04T16:40:11.617225" elapsed="0.046295"/>
+<status status="PASS" start="2025-11-21T10:15:36.638469" elapsed="0.016716"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-21-data_integrity" line="33">
 <kw name="Testcase Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:11.664284" level="INFO">Test Count: 1</msg>
+<msg time="2025-11-21T10:15:36.656091" level="INFO">Test Count: 1</msg>
 <doc>This keyword writes the number of counted tests to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:11.664197" elapsed="0.000124"/>
+<status status="PASS" start="2025-11-21T10:15:36.655982" elapsed="0.000152"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:11.664794" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) : [STR]  :  'tsm-test_config_data_integrity_1'</msg>
+<msg time="2025-11-21T10:15:36.656597" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity) : [STR]  :  'tsm-test_config_data_integrity_1'</msg>
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-21-data_integrity)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:11.664499" elapsed="0.000381"/>
+<status status="PASS" start="2025-11-21T10:15:36.656282" elapsed="0.000408"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:11.665125" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<msg time="2025-11-21T10:15:36.656909" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-21-data_integrity)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:11.665008" elapsed="0.000183"/>
+<status status="PASS" start="2025-11-21T10:15:36.656799" elapsed="0.000211"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:11.665402" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the variant 'data_integrity_1' configuration of tsm-test'</msg>
+<msg time="2025-11-21T10:15:36.657213" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the variant 'data_integrity_1' configuration of tsm-test'</msg>
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-21-data_integrity)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:11.665301" elapsed="0.000159"/>
+<status status="PASS" start="2025-11-21T10:15:36.657117" elapsed="0.000161"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:11.665631" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<msg time="2025-11-21T10:15:36.657455" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-21-data_integrity)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:11.665543" elapsed="0.000144"/>
+<status status="PASS" start="2025-11-21T10:15:36.657369" elapsed="0.000147"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:11.665851" level="INFO">PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) : [STR]  :  'a.1,b.2;c.3,d.4  ;  e.5  ,  f.6'</msg>
+<msg time="2025-11-21T10:15:36.657723" level="INFO">PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity) : [STR]  :  'a.1,b.2;c.3,d.4  ;  e.5  ,  f.6'</msg>
 <arg>${teststring_data_integrity}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_data_integrity} / tsm-testfile-21-data_integrity)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:11.665766" elapsed="0.000136"/>
+<status status="PASS" start="2025-11-21T10:15:36.657623" elapsed="0.000164"/>
 </kw>
 <kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:11.666139" level="INFO">TEST 'Test Case tsm-testfile-21-data_integrity' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:36.658045" level="INFO">TEST 'Test Case tsm-testfile-21-data_integrity' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testcase result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:11.666013" elapsed="0.000159"/>
+<status status="PASS" start="2025-11-21T10:15:36.657919" elapsed="0.000157"/>
 </kw>
 <doc>tsm-testfile-21-data_integrity</doc>
-<status status="PASS" start="2025-07-04T16:40:11.663619" elapsed="0.002606"/>
+<status status="PASS" start="2025-11-21T10:15:36.655307" elapsed="0.002832"/>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:11.666669" level="INFO">SUITE 'Tsm-Testfile-21-Data Integrity' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:36.658618" level="INFO">SUITE 'Tsm-Testfile-21-Data Integrity' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:11.666545" elapsed="0.000158"/>
+<status status="PASS" start="2025-11-21T10:15:36.658489" elapsed="0.000165"/>
 </kw>
-<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_data_integrity_1</meta>
+<meta name="reference_app_name">RobotFramework AIO (original)</meta>
+<meta name="reference_version">0.14.2.26</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" start="2025-07-04T16:40:11.511806" elapsed="0.154923"/>
+<status status="PASS" start="2025-11-21T10:15:36.494722" elapsed="0.163959"/>
 </suite>
 <statistics>
 <total>

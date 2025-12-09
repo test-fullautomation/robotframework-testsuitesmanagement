@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:18.219" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:55.751" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:18.399" level="ERROR">Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
-<msg timestamp="20250704 16:25:18.400" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
-<msg timestamp="20250704 16:25:18.401" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
-<msg timestamp="20250704 16:25:18.401" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20250704 16:25:18.332" endtime="20250704 16:25:18.401"/>
+<msg timestamp="20251121 09:59:55.938" level="ERROR">Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg timestamp="20251121 09:59:55.939" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg timestamp="20251121 09:59:55.939" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
+<msg timestamp="20251121 09:59:55.940" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:55.902" endtime="20251121 09:59:55.940"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="UNKNOWN" starttime="20250704 16:25:18.402" endtime="20250704 16:25:18.402">Parent suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:55.940" endtime="20251121 09:59:55.941">Parent suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:18.403" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+<msg timestamp="20251121 09:59:55.941" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20250704 16:25:18.403" endtime="20250704 16:25:18.403"/>
+<status status="PASS" starttime="20251121 09:59:55.941" endtime="20251121 09:59:55.941"/>
 </kw>
-<status status="UNKNOWN" starttime="20250704 16:25:18.231" endtime="20250704 16:25:18.403">Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:55.762" endtime="20251121 09:59:55.941">Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -38,8 +38,8 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250704 16:25:18.399" level="ERROR">Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
-<msg timestamp="20250704 16:25:18.400" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
-<msg timestamp="20250704 16:25:18.401" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
+<msg timestamp="20251121 09:59:55.938" level="ERROR">Loading local config failed with file: C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg timestamp="20251121 09:59:55.939" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg timestamp="20251121 09:59:55.939" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
 </errors>
 </robot>

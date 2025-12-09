@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:14.705" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:52.281" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Testfile-01" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:14.845" level="ERROR">Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.</msg>
-<msg timestamp="20250704 16:25:14.846" level="ERROR">JSON schema validation failed!</msg>
-<msg timestamp="20250704 16:25:14.846" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20250704 16:25:14.803" endtime="20250704 16:25:14.846"/>
+<msg timestamp="20251121 09:59:52.442" level="ERROR">Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.</msg>
+<msg timestamp="20251121 09:59:52.442" level="ERROR">JSON schema validation failed!</msg>
+<msg timestamp="20251121 09:59:52.442" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:52.432" endtime="20251121 09:59:52.442"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
 <doc>tsm-testfile-01</doc>
-<status status="UNKNOWN" starttime="20250704 16:25:14.847" endtime="20250704 16:25:14.847">Parent suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:52.443" endtime="20251121 09:59:52.443">Parent suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:14.848" level="INFO">SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+<msg timestamp="20251121 09:59:52.444" level="INFO">SUITE 'Tsm-Testfile-01' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20250704 16:25:14.848" endtime="20250704 16:25:14.848"/>
+<status status="PASS" starttime="20251121 09:59:52.444" endtime="20251121 09:59:52.444"/>
 </kw>
-<status status="UNKNOWN" starttime="20250704 16:25:14.708" endtime="20250704 16:25:14.848">Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:52.293" endtime="20251121 09:59:52.444">Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -36,7 +36,7 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250704 16:25:14.845" level="ERROR">Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.</msg>
-<msg timestamp="20250704 16:25:14.846" level="ERROR">JSON schema validation failed!</msg>
+<msg timestamp="20251121 09:59:52.442" level="ERROR">Required parameter 'Project' is missing in file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.</msg>
+<msg timestamp="20251121 09:59:52.442" level="ERROR">JSON schema validation failed!</msg>
 </errors>
 </robot>
