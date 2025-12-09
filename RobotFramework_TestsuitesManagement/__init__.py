@@ -27,24 +27,14 @@ from RobotFramework_TestsuitesManagement.version import VERSION as LIBRARY_VERSI
 
 
 class RobotFramework_TestsuitesManagement(DynamicCore):
-    # '''
-    # **Class: RobotFramework_TestsuitesManagement**
-
-       # RobotFramework_TestsuitesManagement is the Bosch testing library for Robot Framework.
-
-       # RobotFramework_TestsuitesManagement control peripheral devices, tools and target under testing.
-    # '''
+    '''
+The RobotFramework_TestsuitesManagement enables users to define dynamic configuration values within 
+separate configuration files in JSONP format.
+    '''
     ROBOT_LIBRARY_DOC_FORMAT = 'reST'
     ROBOT_LIBRARY_SCOPE      = 'GLOBAL'
     ROBOT_LIBRARY_VERSION    = LIBRARY_VERSION
 
-    # '''
-    # Constructor
-    # Args:
-        # None
-    # Returns:
-        # None
-    # '''
     def __init__(self, timeout=10.0):
         self.timeout = timeout
         self._running_on_failure_keyword = False
@@ -54,51 +44,44 @@ class RobotFramework_TestsuitesManagement(DynamicCore):
         self._running_keyword = None
         DynamicCore.__init__(self, libraries)
 
-    # '''
-    # Method: run_keyword
-    # Args:
-        # name: string
-    # Returns:
-        # DynamicCore.run_keyword
-    # '''
     def run_keyword(self, name, args, kwargs):
+        '''
+This is a wrapper method for Robot Framework's keyword execution mechanism.
+        '''
         try:
             return DynamicCore.run_keyword(self, name, args, kwargs)
         except Exception:
             self.failure_occurred()
             raise
 
-    # '''
-    # Method: get_keyword_tags
-    # Args:
-        # name: String
-    # Returns:
-        # tags
-    # '''
     def get_keyword_tags(self, name):
+        '''
+This method retrieves the keyword tags using the parent (DynamicCore) implementation.
+        '''
         tags = list(DynamicCore.get_keyword_tags(self, name))
         return tags
 
-    # '''
-    # Method: get_keyword_documentation
-    # Args:
-        # name: string
-    # Returns:
-        # DynamicCore.get_keyword_documentation
-    # '''
     def get_keyword_documentation(self, name):
+        '''
+This method delegates the request for keyword documentation to Robot Framework's dynamic 
+library core (DynamicCore).
+        '''
         return DynamicCore.get_keyword_documentation(self, name)
 
-    # '''
-    # Method: failure_occurred is executed when RobotFramework_TestsuitesManagement keyword fails.
-    # By default, executes the registered run-on-failure keyword. RobotFramework_TestsuitesManagement can
-    # overwrite this hook method in case provides custom functionality instead.
-    # Args:
-        # None
-    # Returns:
-        # None
-    # '''
     def failure_occurred(self):
+        '''
+This method is executed when RobotFramework_TestsuitesManagement keyword fails. By default, 
+executes the registered run-on-failure keyword. RobotFramework_TestsuitesManagement can 
+overwrite this hook method in case provides custom functionality instead.
+
+**Arguments:**
+
+* None
+
+**Returns:**
+
+* None
+        '''
         if self._running_on_failure_keyword or not self.run_on_failure_keyword:
             return None
         try:
