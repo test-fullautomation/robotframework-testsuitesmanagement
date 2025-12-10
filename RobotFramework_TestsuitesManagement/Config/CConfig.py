@@ -393,9 +393,8 @@ robot with configuration level 2.")
             BuiltIn().set_suite_metadata("reference_version", reference_version, top=True)
             BuiltIn().set_suite_metadata("reference_app_name", reference_app_name, top=True)
         else:
-            # TODO: Verify this. Seems not to be required. But why not?
-            #       Error already logged at other position. Exception not logged.
-            logger.error(f"{self.__tsm_app_config_error}")
+            self.sLoadedCfgLog['error'].append(self.__tsm_app_config_error)
+            self.sLoadedCfgLog['unknown'] = "Execution will be aborted because of a critical version check issue!"
             raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
         if not ("version_sw" in suiteMetadata and self.rMetaData.sVersionSW == None):

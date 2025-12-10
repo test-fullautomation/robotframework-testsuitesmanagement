@@ -95,7 +95,7 @@ Configuration class that contains all the information about the application.
             except Exception as reason:
                 # err_msg = f"Invalid content of file '{self.__aio_package_context_file}' file. Reason: {reason}"
                 # or maybe shorter
-                err_msg = f"{reason} (file '{self.__aio_package_context_file}')"
+                err_msg = f"{reason.message} (file '{self.__aio_package_context_file}')"
                 raise Exception(f"{err_msg}")
 
             if aio_package_context.get('installer_location'):
