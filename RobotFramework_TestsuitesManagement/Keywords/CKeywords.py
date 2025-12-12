@@ -22,8 +22,7 @@ from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion
-from RobotFramework_TestsuitesManagement.Utils.CVersion import StatusMessages
+from RobotFramework_TestsuitesManagement.Utils.version import CVersion, StatusMessages
 
 class CSetupKeywords(object):
     '''
@@ -100,7 +99,7 @@ and logs out the basic information about the test execution.
         else:
             logger.info(msg)
 
-        TM.CTestsuitesCfg.oConfig.checkVersion()
+        TM.CTestsuitesCfg.oConfig.check_version()
         logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
         logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
         if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
@@ -153,7 +152,7 @@ of suites and tests.
         # access to application configuration
         self.__tsm_app_config       = None
         self.__tsm_app_config_error = None
-        # [] CConfig / [X] CKeywords / [] verifyVersion / [] checkVersion
+        # [] CConfig / [X] CKeywords / [] verify_version / [] check_version
         try:
             self.__tsm_app_config = AppConfig()
         except Exception as ex:
@@ -362,9 +361,9 @@ Returns the location of the installer of the entire RobotFramework AIO bundle.
         """
 This keyword executes a version check, min_version and max_version are checked against the reference_version.
         """
-        # Keyword wrapper for high level method '``checkVersion``' defined in CVersion.py
+        # Keyword wrapper for high level method '``check_version``' defined in CVersion.py
         version = CVersion()
-        result  = version.checkVersion(min_version, max_version, reference_version, ext_logger=logger, status_messages=status_messages) # 'logger' is the one from robot.api
+        result  = version.check_version(min_version, max_version, reference_version, ext_logger=logger, status_messages=status_messages) # 'logger' is the one from robot.api
         # In case of an error, 'result' contains the outcome of this error (abort of test execution), that is not very detailed.
         # More helpful details are provided by the last error. Therefore, we return this one.
         # Relevant only in case of 'run_keyword_and_ignore_error' is used. Otherwise the exception is already thrown.
@@ -372,7 +371,7 @@ This keyword executes a version check, min_version and max_version are checked a
         if last_error:
             result = last_error
         return result
-    # A corrsponding keyword wrapper for the low level method '``verifyVersion``' is currently not implemented (and most probably will not be required).
+    # A corrsponding keyword wrapper for the low level method '``verify_version``' is currently not implemented (and most probably will not be required).
 
     @keyword
     def get_status_messages(self):

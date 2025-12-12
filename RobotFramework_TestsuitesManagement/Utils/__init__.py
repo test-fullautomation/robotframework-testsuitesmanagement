@@ -13,6 +13,6 @@
 #  limitations under the License.
 
 
-from .LibListener import LibListener
-from .CStruct import CStruct
-from .CVersion import CVersion
+from .lib_listener import LibListener
+from .struct import CStruct
+from .version import CVersion

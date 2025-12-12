@@ -13,7 +13,7 @@
 #  limitations under the License.
 
 
-from .ScopeEvent import ScopeStart, ScopeEnd
+from .scope_event import ScopeStart, ScopeEnd
 
 
 __all__ = ['on', 'dispatch', 'register_event']

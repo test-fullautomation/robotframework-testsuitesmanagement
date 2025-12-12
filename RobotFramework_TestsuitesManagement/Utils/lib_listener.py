@@ -90,12 +90,12 @@ This _start_suite method hooks to every starting testsuite of robot run.
                     TM.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
 
             elif 'ROBOT_LOCAL_CONFIG' in os.environ:
-                localConfigFile = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
-                if os.path.isfile(localConfigFile):
-                    TM.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
+                local_config_file = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
+                if os.path.isfile(local_config_file):
+                    TM.CTestsuitesCfg.oConfig.sLocalConfig = local_config_file
                 else:
                     TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    CConfig.sLoadedCfgLog['error'] = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
+                    CConfig.sLoadedCfgLog['error'] = f"The local configuration file {local_config_file} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
                     logger.error(CConfig.sLoadedCfgLog['error'])
 
             if '${variant}' in BuiltIn().get_variables()._keys:

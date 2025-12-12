@@ -899,9 +899,9 @@ or, if installed standalone, the version of the \textbf{TestsuitesManagement}.
 \textbf{Example}
 
 \begin{pythoncode}
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion
+from RobotFramework_TestsuitesManagement.Utils.version import CVersion
 oVersion = CVersion()
-result, reason = oVersion.verifyVersion(min_version, max_version)
+result, reason = oVersion.verify_version(min_version, max_version)
 \end{pythoncode}
 
 The parameters \pcode{min_version} and  \pcode{max_version} define the expected range of the bundle version. This is verified
@@ -921,7 +921,7 @@ Two values are returned:
         \pcode{reason} contains a short token string indicating the reason for the failure.
 \end{enumerate}
 
-The method \pcode{verifyVersion} does not return a full error message, but a small token string only.
+The method \pcode{verify_version} does not return a full error message, but a small token string only.
 This enables users to formulate their own error messages.
 
 These are the token strings together with their meanings:

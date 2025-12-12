@@ -20,7 +20,6 @@
 #
 import os
 import json
-from enum import Enum
 from jsonschema import validate
 from RobotFramework_TestsuitesManagement.version import VERSION as TSM_VERSION
 from RobotFramework_TestsuitesManagement.version import VERSION_DATE as TSM_VERSION_DATE

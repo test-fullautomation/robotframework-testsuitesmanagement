@@ -34,8 +34,8 @@ from jsonschema import validate
 from builtins import staticmethod
 
 import RobotFramework_TestsuitesManagement as TM
-from RobotFramework_TestsuitesManagement.Utils.CStruct import CStruct
-from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion, enVersionCheckResult
+from RobotFramework_TestsuitesManagement.Utils.struct import CStruct
+from RobotFramework_TestsuitesManagement.Utils.version import CVersion, enVersionCheckResult
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 
 from PythonExtensionsCollection.String.CString import CString
@@ -135,7 +135,7 @@ for None so that subclasses will create their own __single objects.
         self.__tsm_app_config       = None
         self.__tsm_app_config_error = None
 
-        # [X] CConfig / [] CKeywords / [] verifyVersion / [] checkVersion
+        # [X] CConfig / [] CKeywords / [] verify_version / [] check_version
         try:
             self.__tsm_app_config = AppConfig()
         except Exception as ex:
@@ -188,7 +188,7 @@ This loadCfg method uses to load configuration's parameters from json files.
         '''
         # Detect a configuration level and get the oConfig.sTestCfgFile to handle
         if self.configLevel == TM.CConfigLevel.LEVEL_1:
-            # Configuration level 1, the oConfig.sTestCfgFile was already set in the LibListener.py module
+            # Configuration level 1, the oConfig.sTestCfgFile was already set in the lib_listener.py module
             if self.sConfigName != 'default':
                 self.bLoadedCfg = False
                 self.sLoadedCfgLog['error'].append("Redundant settings detected in command line: Parameter 'variant' \
@@ -353,12 +353,12 @@ robot with configuration level 2.")
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
             # Check the format of Maximum_version value
-            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in CKeywords).
             # But it is also plausible to do the check already here (as early as possible).
             # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
             # Can this be merged anyway?
             try:
-                CVersion.tupleVersion(self.sMaxVersion)
+                CVersion.tuple_version(self.sMaxVersion)
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Maximum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
@@ -368,12 +368,12 @@ robot with configuration level 2.")
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
-            # This will be done later again (by TM.CTestsuitesCfg.oConfig.checkVersion() in CKeywords).
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in CKeywords).
             # But it is also plausible to do the check already here (as early as possible).
             # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
             # Can this be merged anyway?
             try:
-                CVersion.tupleVersion(self.sMinVersion)
+                CVersion.tuple_version(self.sMinVersion)
             except Exception as error:
                 self.sLoadedCfgLog['error'].append(f"Minimum_version: {error}")
                 self.sLoadedCfgLog['error'].append(f"In configuration: '{self.sTestCfgFile}'")
@@ -645,8 +645,8 @@ This __getUserName method gets current account name login to run the test.
 
         return sUserName
 
-    def checkVersion(self):
-        # same method name like CVersion()::checkVersion()!
+    def check_version(self):
+        # same method name like CVersion()::check_version()!
         '''
 This method validates the current package version with maximum and minimum version.
 
@@ -654,9 +654,9 @@ In case the current version is not between min and max version, then the executi
 testsuite is terminated with "unknown" state
         '''
         oVersion = CVersion()
-        # We use the LOW LEVEL method 'oVersion.verifyVersion' here (instead of the HIGH LEVEL method 'oVersion.checkVersion()'),
+        # We use the LOW LEVEL method 'oVersion.verify_version' here (instead of the HIGH LEVEL method 'oVersion.check_version()'),
         # to be able to provide error messages that are a bit more in scope of RobotFramework AIO tests (whereas
-        # 'oVersion.checkVersion()' itself contains more generic error messages for Python developers, who use the version check
+        # 'oVersion.check_version()' itself contains more generic error messages for Python developers, who use the version check
         # outside RobotFramework AIO tests.
         # Nevertheless, details about what happened we (mostly) get from 'oVersion.get_last_error()'. These error messages are
         # most precise. Partially the error messages are hard coded here.
@@ -671,7 +671,7 @@ testsuite is terminated with "unknown" state
             raise Exception(f"Execution will be aborted because it's not possible to load the application configuration")
 
         # call of LOW LEVEL version control method
-        result = oVersion.verifyVersion(self.sMinVersion, self.sMaxVersion)
+        result = oVersion.verify_version(self.sMinVersion, self.sMaxVersion)
 
         version_check_has_issue = False
         exception               = None

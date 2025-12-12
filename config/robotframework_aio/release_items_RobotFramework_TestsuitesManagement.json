@@ -171,9 +171,9 @@ of the **TestsuitesManagement**.
 
 *Example*
 
-| ``from RobotFramework_TestsuitesManagement.Utils.CVersion import CVersion``
+| ``from RobotFramework_TestsuitesManagement.Utils.version import CVersion``
 | ``oVersion = CVersion()``
-| ``result, reason = oVersion.verifyVersion(min_version, max_version)``
+| ``result, reason = oVersion.verify_version(min_version, max_version)``
 | 
 | The parameters ``min_version`` and  ``max_version`` define the expected range of the bundle version.
 | This is verified against the version of the currently installed bundle.
@@ -188,7 +188,7 @@ Two values are returned:
 1. ``result``: A boolean variable that is either ``True`` in case of the version check is passed, ``False`` in case of the version check fails or ``None`` in case of running without version check.
 2. ``reason``: In case of the version check is passed, ``reason`` is ``None``. In case the version check fails, ``reason`` contains a short token string indicating the reason for the failure.
 
-The method ``verifyVersion`` does not return a full error message, but a small token string only.
+The method ``verify_version`` does not return a full error message, but a small token string only.
 This enables users to formulate their own error messages.
 
 These are the token strings together with their meanings:
