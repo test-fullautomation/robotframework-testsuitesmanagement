@@ -12,4 +12,4 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-from .CKeywords import CSetupKeywords, CGeneralKeywords
+from .key_words import CSetupKeywords, CGeneralKeywords

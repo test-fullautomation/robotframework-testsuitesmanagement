@@ -20,9 +20,3 @@ class COnFailureHandle():
     @not_keyword
     def is_noney(self, item):
         return item is None or is_string(item) and item.upper() == 'NONE'
-
-    # @keyword
-    # def register_keyword_run_on_failure(self, keyword):
-    #     '''
-    #     TBD
-    #     '''

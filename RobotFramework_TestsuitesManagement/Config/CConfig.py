@@ -135,7 +135,7 @@ for None so that subclasses will create their own __single objects.
         self.__tsm_app_config       = None
         self.__tsm_app_config_error = None
 
-        # [X] CConfig / [] CKeywords / [] verify_version / [] check_version
+        # [X] CConfig / [] key_words / [] verify_version / [] check_version
         try:
             self.__tsm_app_config = AppConfig()
         except Exception as ex:
@@ -353,7 +353,7 @@ robot with configuration level 2.")
         if ("Maximum_version" in oJsonCfgData) and oJsonCfgData["Maximum_version"] != None:
             self.sMaxVersion = oJsonCfgData["Maximum_version"]
             # Check the format of Maximum_version value
-            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in CKeywords).
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in key_words).
             # But it is also plausible to do the check already here (as early as possible).
             # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
             # Can this be merged anyway?
@@ -368,7 +368,7 @@ robot with configuration level 2.")
         if ("Minimum_version" in oJsonCfgData) and oJsonCfgData["Minimum_version"] != None:
             self.sMinVersion = oJsonCfgData["Minimum_version"]
             # Check the format of Minimum_version value
-            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in CKeywords).
+            # This will be done later again (by TM.CTestsuitesCfg.oConfig.check_version() in key_words).
             # But it is also plausible to do the check already here (as early as possible).
             # Consequence is that the error messages have to be maintained at two different positions in the code (redundancy).
             # Can this be merged anyway?

@@ -145,7 +145,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
         app_config = None
 
         # access to application configuration
-        # [] CConfig / [] CKeywords / [X] verify_version / [] check_version
+        # [] CConfig / [] key_words / [X] verify_version / [] check_version
         try:
             app_config = AppConfig()
         except Exception as ex:
@@ -305,7 +305,7 @@ Impact is that this method influences the execution of the application that call
         self.__last_error = None
 
         # access to application configuration
-        # [] CConfig / [] CKeywords / [] verify_version / [X] check_version
+        # [] CConfig / [] key_words / [] verify_version / [X] check_version
         try:
             app_config = AppConfig()
         except Exception as ex:

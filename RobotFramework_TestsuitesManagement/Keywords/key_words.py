@@ -30,21 +30,21 @@ This class defines the keywords for the setup and the teardown of testcases and 
     '''
 
     @keyword
-    def testsuite_setup(self, sTestsuiteCfgFile=''):
+    def testsuite_setup(self, testsuite_cfg_file=''):
         '''
 This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.
 
 **Arguments:**
 
-* ``sTestsuiteCfgFile``
+* ``testsuite_cfg_file``
 
   / *Condition*: required / *Type*: string /
 
-  ``sTestsuiteCfgFile=''`` and variable ``config_file`` is not set RobotFramework AIO will check for configuration
+  ``testsuite_cfg_file=''`` and variable ``config_file`` is not set RobotFramework AIO will check for configuration
   level 3, and level 4.
 
-  ``sTestsuiteCfgFile`` is set with a <json_config_file_path> and variable ``config_file`` is not set RobotFramework AIO
+  ``testsuite_cfg_file`` is set with a <json_config_file_path> and variable ``config_file`` is not set RobotFramework AIO
   will load configuration level 2.
 
 **Returns:**
@@ -52,10 +52,10 @@ and logs out the basic information about the test execution.
 * No return variable
         '''
         # levels description
-        levelsInfo = {1 : "configuration file in command line",
-                      2 : "variant name in command line",
-                      3 : "configuration file in local config folder",
-                      4 : "default configuration (fallback solution)"}
+        levels_info = {1 : "configuration file in command line",
+                       2 : "variant name in command line",
+                       3 : "configuration file in local config folder",
+                       4 : "default configuration (fallback solution)"}
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_1:
             try:
                 TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
@@ -63,37 +63,37 @@ and logs out the basic information about the test execution.
                 TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
                 pass
         else:
-            if sTestsuiteCfgFile != '':
+            if testsuite_cfg_file != '':
                 TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_2
-                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = sTestsuiteCfgFile
+                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = testsuite_cfg_file
             try:
                 TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
             except:
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
-                    for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                        if str(errorMsg) != '':
-                            logger.error(errorMsg)
+                    for error_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                        if str(error_msg) != '':
+                            logger.error(error_msg)
                 if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                    for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                        if str(infoMsg) != '':
-                            logger.error(infoMsg)
+                    for info_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                        if str(info_msg) != '':
+                            logger.error(info_msg)
                 sys.tracebacklimit = 0
                 raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
         if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
-                for errorMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
-                    if str(errorMsg) != '':
-                        logger.error(errorMsg)
+                for error_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                    if str(error_msg) != '':
+                        logger.error(error_msg)
             if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                for infoMsg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
-                    if str(infoMsg) != '':
-                        logger.error(infoMsg)
+                for info_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                    if str(info_msg) != '':
+                        logger.error(info_msg)
             sys.tracebacklimit = 0
             raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
 
         msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value} \
-({levelsInfo[TM.CTestsuitesCfg.oConfig.configLevel.value]})"
+({levels_info[TM.CTestsuitesCfg.oConfig.configLevel.value]})"
         if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
             logger.warn(msg)
         else:
@@ -112,14 +112,14 @@ and logs out the basic information about the test execution.
         '''
 This keyword writes information about the testsuite result to the log files.
         '''
-        suiteName = BuiltIn().get_variable_value('${SUITENAME}')
-        suiteStatus = BuiltIn().get_variable_value('${SUITESTATUS}')
-        suiteMsg = BuiltIn().get_variable_value('${SUITEMESSAGE}')
-        teardownMsg = f"SUITE '{suiteName}' finished with result '{suiteStatus}'"
-        if suiteStatus == 'PASS':
-            logger.info(teardownMsg)
+        suite_name = BuiltIn().get_variable_value('${SUITENAME}')
+        suite_status = BuiltIn().get_variable_value('${SUITESTATUS}')
+        suite_msg = BuiltIn().get_variable_value('${SUITEMESSAGE}')
+        teardown_msg = f"SUITE '{suite_name}' finished with result '{suite_status}'"
+        if suite_status == 'PASS':
+            logger.info(teardown_msg)
         else:
-            logger.info(f"{teardownMsg}, reason: {suiteMsg}")
+            logger.info(f"{teardown_msg}, reason: {suite_msg}")
 
     @keyword
     def testcase_setup(self):
@@ -133,14 +133,14 @@ This keyword writes the number of counted tests to the log files.
         '''
 This keyword writes information about the testcase result to the log files.
         '''
-        testName = BuiltIn().get_variable_value('${TESTNAME}')
-        testStatus = BuiltIn().get_variable_value('${TESTSTATUS}')
-        testMsg = BuiltIn().get_variable_value('${TESTMESSAGE}')
-        teardownMsg = f"TEST '{testName}' finished with result '{testStatus}'"
-        if testStatus == 'PASS':
-            logger.info(teardownMsg)
+        test_name = BuiltIn().get_variable_value('${TESTNAME}')
+        test_status = BuiltIn().get_variable_value('${TESTSTATUS}')
+        test_msg = BuiltIn().get_variable_value('${TESTMESSAGE}')
+        teardown_msg = f"TEST '{test_name}' finished with result '{test_status}'"
+        if test_status == 'PASS':
+            logger.info(teardown_msg)
         else:
-            logger.info(f"{teardownMsg}, reason: {testMsg}")
+            logger.info(f"{teardown_msg}, reason: {test_msg}")
 
 class CGeneralKeywords(object):
     '''
@@ -152,7 +152,7 @@ of suites and tests.
         # access to application configuration
         self.__tsm_app_config       = None
         self.__tsm_app_config_error = None
-        # [] CConfig / [X] CKeywords / [] verify_version / [] check_version
+        # [] CConfig / [X] key_words / [] verify_version / [] check_version
         try:
             self.__tsm_app_config = AppConfig()
         except Exception as ex:
@@ -181,13 +181,13 @@ This get_config defines the ``Get Config`` keyword gets the current config objec
         return copy.deepcopy(TM.CTestsuitesCfg.oConfig.oConfigParams)
 
     @keyword
-    def load_json(self, jsonfile, level=1, variant='default'):
+    def load_json(self, json_file, level=1, variant='default'):
         '''
 Loads a json file and returns a json object.
 
 **Arguments:**
 
-* ``jsonfile``
+* ``json_file``
 
   / *Condition*: required / *Type*: string /
 
@@ -197,31 +197,31 @@ Loads a json file and returns a json object.
 
   / *Condition*: required / *Type*: int /
 
-  Level = 1 -> loads the content of jsonfile.
+  Level = 1 -> loads the content of json_file.
 
   level != 1 -> loads the json file which is set with variant (likes loading config level2)
 
 **Returns:**
 
-* ``oJsonData``
+* ``json_data``
 
   / *Type*: json /
         '''
         from os.path import abspath, dirname
         from JsonPreprocessor import CJsonPreprocessor
-        jsonFileDir = dirname(abspath(jsonfile))
-        oJsonPreprocessor = CJsonPreprocessor()
+        json_file_dir = dirname(abspath(json_file))
+        jpp_obj = CJsonPreprocessor()
         if level == 1:
-            oJsonData = oJsonPreprocessor.jsonLoad(jsonfile)
-            return oJsonData
+            json_data = jpp_obj.jsonLoad(json_file)
+            return json_data
         else:
-            oJsonFristLevel = oJsonPreprocessor.jsonLoad(jsonfile)
-            if variant not in oJsonFristLevel:
+            json_frist_level = jpp_obj.jsonLoad(json_file)
+            if variant not in json_frist_level:
                 logger.error(f"The variant: {variant} is not correct!")
                 return {}
-            jsonFileLoaded = jsonFileDir + oJsonFristLevel[variant]['path'] + '/' + oJsonFristLevel[variant]['name']
-            oJsonData = oJsonPreprocessor.jsonLoad(jsonFileLoaded)
-            return oJsonData
+            json_file_loaded = json_file_dir + json_frist_level[variant]['path'] + '/' + json_frist_level[variant]['name']
+            json_data = jpp_obj.jsonLoad(json_file_loaded)
+            return json_data
 
 
     @keyword
