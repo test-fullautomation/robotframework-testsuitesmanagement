@@ -56,56 +56,56 @@ and logs out the basic information about the test execution.
                        2 : "variant name in command line",
                        3 : "configuration file in local config folder",
                        4 : "default configuration (fallback solution)"}
-        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_1:
+        if TM.CTestsuitesCfg.config_obj.config_level==TM.CConfigLevel.LEVEL_1:
             try:
-                TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
+                TM.CTestsuitesCfg.config_obj.load_config(TM.CTestsuitesCfg.config_obj)
             except:
-                TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
+                TM.CTestsuitesCfg.config_obj.is_cfg_loaded = False
                 pass
         else:
             if testsuite_cfg_file != '':
-                TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_2
-                TM.CTestsuitesCfg.oConfig.sTestSuiteCfg = testsuite_cfg_file
+                TM.CTestsuitesCfg.config_obj.config_level = TM.CConfigLevel.LEVEL_2
+                TM.CTestsuitesCfg.config_obj.testsuite_config = testsuite_cfg_file
             try:
-                TM.CTestsuitesCfg.oConfig.loadCfg(TM.CTestsuitesCfg.oConfig)
+                TM.CTestsuitesCfg.config_obj.load_config(TM.CTestsuitesCfg.config_obj)
             except:
-                if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
-                    for error_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+                if len(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']) > 0:
+                    for error_msg in TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']:
                         if str(error_msg) != '':
                             logger.error(error_msg)
-                if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                    for info_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+                if len(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['info']) > 0:
+                    for info_msg in TM.CTestsuitesCfg.config_obj.loaded_cfg_log['info']:
                         if str(info_msg) != '':
                             logger.error(info_msg)
                 sys.tracebacklimit = 0
-                raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
+                raise Exception(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['unknown'])
 
-        if not TM.CTestsuitesCfg.oConfig.bLoadedCfg:
-            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']) > 0:
-                for error_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['error']:
+        if not TM.CTestsuitesCfg.config_obj.is_cfg_loaded:
+            if len(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']) > 0:
+                for error_msg in TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']:
                     if str(error_msg) != '':
                         logger.error(error_msg)
-            if len(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']) > 0:
-                for info_msg in TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['info']:
+            if len(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['info']) > 0:
+                for info_msg in TM.CTestsuitesCfg.config_obj.loaded_cfg_log['info']:
                     if str(info_msg) != '':
                         logger.error(info_msg)
             sys.tracebacklimit = 0
-            raise Exception(TM.CTestsuitesCfg.oConfig.sLoadedCfgLog['unknown'])
+            raise Exception(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['unknown'])
 
-        msg = f"Running with configuration level {TM.CTestsuitesCfg.oConfig.configLevel.value} \
-({levels_info[TM.CTestsuitesCfg.oConfig.configLevel.value]})"
-        if TM.CTestsuitesCfg.oConfig.configLevel==TM.CConfigLevel.LEVEL_4:
+        msg = f"Running with configuration level {TM.CTestsuitesCfg.config_obj.config_level.value} \
+({levels_info[TM.CTestsuitesCfg.config_obj.config_level.value]})"
+        if TM.CTestsuitesCfg.config_obj.config_level==TM.CConfigLevel.LEVEL_4:
             logger.warn(msg)
         else:
             logger.info(msg)
 
-        TM.CTestsuitesCfg.oConfig.check_version()
-        logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.oConfig.sTestCfgFile}'")
-        logger.info(f"Suite Path: '{TM.CTestsuitesCfg.oConfig.sTestcasePath}'")
-        if TM.CTestsuitesCfg.oConfig.sLocalConfig != '':
-            logger.info(f"Local config file: '{TM.CTestsuitesCfg.oConfig.sLocalConfig}'")
-        logger.info(f"Number of test suites: {TM.CTestsuitesCfg.oConfig.iSuiteCount}")
-        logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.oConfig.iTotalTestcases}")
+        TM.CTestsuitesCfg.config_obj.check_version()
+        logger.info(f"Loaded configuration file '{TM.CTestsuitesCfg.config_obj.test_config_file}'")
+        logger.info(f"Suite Path: '{TM.CTestsuitesCfg.config_obj.testcase_path}'")
+        if TM.CTestsuitesCfg.config_obj.local_config != '':
+            logger.info(f"Local config file: '{TM.CTestsuitesCfg.config_obj.local_config}'")
+        logger.info(f"Number of test suites: {TM.CTestsuitesCfg.config_obj.suite_count}")
+        logger.info(f"Total number of testcases: {TM.CTestsuitesCfg.config_obj.total_testcases}")
 
     @keyword
     def testsuite_teardown(self):
@@ -126,7 +126,7 @@ This keyword writes information about the testsuite result to the log files.
         '''
 This keyword writes the number of counted tests to the log files.
         '''
-        logger.info(f"Test Count: {TM.CTestsuitesCfg.oConfig.iTestCount}")
+        logger.info(f"Test Count: {TM.CTestsuitesCfg.config_obj.test_count}")
 
     @keyword
     def testcase_teardown(self):
@@ -152,7 +152,7 @@ of suites and tests.
         # access to application configuration
         self.__tsm_app_config       = None
         self.__tsm_app_config_error = None
-        # [] CConfig / [X] key_words / [] verify_version / [] check_version
+        # [] config / [X] key_words / [] verify_version / [] check_version
         try:
             self.__tsm_app_config = AppConfig()
         except Exception as ex:
@@ -174,11 +174,11 @@ This get_config defines the ``Get Config`` keyword gets the current config objec
 
 **Returns:**
 
-* ``oConfig.oConfigParams``
+* ``config_obj.config_params``
 
   / *Type*: json /
         '''
-        return copy.deepcopy(TM.CTestsuitesCfg.oConfig.oConfigParams)
+        return copy.deepcopy(TM.CTestsuitesCfg.config_obj.config_params)
 
     @keyword
     def load_json(self, json_file, level=1, variant='default'):

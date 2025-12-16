@@ -99,7 +99,7 @@ class CConfigLevel(Enum):
     LEVEL_4 = 4
 
 class CTestsuitesCfg():
-    oConfig = None
+    config_obj = None
 
     def __init__(self):
         pass
