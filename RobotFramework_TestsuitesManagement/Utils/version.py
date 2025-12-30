@@ -168,6 +168,9 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
         if not isinstance(reference_version, str):
             self.__last_error = f"reference_version '{reference_version}' is not of expected format 'str'"
             return enVersionCheckResult.FORMAT_ERROR.value
+        
+        # number of parts in reference version
+        num_checked_part = len(reference_version.split('.'))
 
         # version tuples
         tuple_min_version = None
@@ -191,29 +194,33 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
             if not isinstance(min_version, str):
                 self.__last_error = f"minimum version '{min_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
-            elif len(min_version.split('.'))>3:
-                self.__last_error = f"minimum version '{min_version}' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)"
+            elif len(min_version.split('.'))>num_checked_part:
+                self.__last_error = f"minimum version '{min_version}' contains too many parts (expected is a maximum of {num_checked_part} parts)"
                 return enVersionCheckResult.FORMAT_ERROR.value
-            else:
-                try:
-                    tuple_min_version = self.tuple_version(min_version)
-                except Exception as ex:
-                    self.__last_error = f"{ex} (min_version)"
-                    return enVersionCheckResult.FORMAT_ERROR.value
+            elif len(min_version.split('.'))<num_checked_part:
+                for _i in range(len(min_version.split('.')), num_checked_part):
+                    min_version = f"{min_version}.0"
+            try:
+                tuple_min_version = self.tuple_version(min_version)
+            except Exception as ex:
+                self.__last_error = f"{ex} (min_version)"
+                return enVersionCheckResult.FORMAT_ERROR.value
         # maximum version check
         if max_version is not None:
             if not isinstance(max_version, str):
                 self.__last_error = f"maximum version '{max_version}' is not of expected format 'str'"
                 return enVersionCheckResult.FORMAT_ERROR.value
-            elif len(max_version.split('.'))>3:
-                self.__last_error = f"maximum version '{max_version}' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)"
+            elif len(max_version.split('.'))>num_checked_part:
+                self.__last_error = f"maximum version '{max_version}' contains too many parts (expected is a maximum of {num_checked_part} parts)"
                 return enVersionCheckResult.FORMAT_ERROR.value
-            else:
-                try:
-                    tuple_max_version = self.tuple_version(max_version)
-                except Exception as ex:
-                    self.__last_error = f"{ex} (max_version)"
-                    return enVersionCheckResult.FORMAT_ERROR.value
+            elif len(max_version.split('.'))<num_checked_part:
+                for _i in range(len(max_version.split('.')), num_checked_part):
+                    max_version = f"{max_version}.0"
+            try:
+                tuple_max_version = self.tuple_version(max_version)
+            except Exception as ex:
+                self.__last_error = f"{ex} (max_version)"
+                return enVersionCheckResult.FORMAT_ERROR.value
         # minimum/maximum relation check
         if tuple_min_version and tuple_max_version and (tuple_min_version > tuple_max_version):
             self.__last_error = f"(WRONG_MINMAX_RELATION): minimum version ({min_version}) > maximum version ({max_version})"
