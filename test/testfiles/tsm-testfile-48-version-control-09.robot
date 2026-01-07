@@ -42,6 +42,5 @@ Test Case tsm-testfile-48-version-control-09
     # version control
     ${tsm_version}=    tm.get_tsm_version
     ${result}=    tm.check_version    min_version=0.1.0    max_version=0.20.0    reference_version=${tsm_version}
-    rf.extensions.pretty_print    ${tsm_version}      PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09)
     rf.extensions.pretty_print    ${result}      PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09)
     should_be_equal    ${result}    ${True}

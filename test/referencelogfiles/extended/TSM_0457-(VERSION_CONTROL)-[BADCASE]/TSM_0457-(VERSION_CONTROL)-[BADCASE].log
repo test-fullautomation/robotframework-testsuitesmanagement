@@ -47,7 +47,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 20251121 10:00:07.925 - INFO - +-- START KEYWORD: BuiltIn.Run Keyword And Ignore Error [ tm.check_version | min_version=0.1.0.1 | max_version=0.20.1 | reference_version=0.3.0 ]
 20251121 10:00:07.926 - INFO - +--- START KEYWORD: tm.Check Version [ min_version=0.1.0.1 | max_version=0.20.1 | reference_version=0.3.0 ]
-20251121 10:00:07.928 - ERROR - Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)
+20251121 10:00:07.928 - ERROR - Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts)
 20251121 10:00:07.928 - UNKNOWN - Execution will be aborted because of a critical version check issue
 20251121 10:00:07.930 - INFO - +--- END KEYWORD: tm.Check Version (3)
 20251121 10:00:07.930 - INFO - ${status} = FAIL
