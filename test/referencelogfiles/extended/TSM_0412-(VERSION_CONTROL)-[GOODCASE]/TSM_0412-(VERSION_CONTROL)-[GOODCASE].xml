@@ -77,13 +77,6 @@ and logs out the basic information about the test execution.</doc>
 <status status="PASS" starttime="20251121 10:00:03.841" endtime="20251121 10:00:03.844"/>
 </kw>
 <kw name="Pretty Print" library="rf.extensions">
-<arg>${tsm_version}</arg>
-<arg>PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09)</arg>
-<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<msg timestamp="20251121 10:00:03.844" level="INFO">PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09) : [STR]  :  '0.9.0'</msg>
-<status status="PASS" starttime="20251121 10:00:03.844" endtime="20251121 10:00:03.844"/>
-</kw>
-<kw name="Pretty Print" library="rf.extensions">
 <arg>${result}</arg>
 <arg>PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>

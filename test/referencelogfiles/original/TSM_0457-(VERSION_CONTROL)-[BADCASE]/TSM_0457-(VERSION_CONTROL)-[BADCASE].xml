@@ -62,7 +62,7 @@ and logs out the basic information about the test execution.</doc>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Check Version" owner="tm">
-<msg time="2025-11-21T10:15:32.475501" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)</msg>
+<msg time="2025-11-21T10:15:32.475501" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts)</msg>
 <msg time="2025-11-21T10:15:32.475791" level="FAIL">Execution will be aborted because of a critical version check issue</msg>
 <arg>min_version=0.1.0.1</arg>
 <arg>max_version=0.20.1</arg>
@@ -145,6 +145,6 @@ TSM_0457</doc>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-11-21T10:15:32.475501" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)</msg>
+<msg time="2025-11-21T10:15:32.475501" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts)</msg>
 </errors>
 </robot>

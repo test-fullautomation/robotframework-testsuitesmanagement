@@ -54,10 +54,6 @@
 20251121 10:00:03.844 - INFO - ${result} = True
 20251121 10:00:03.844 - INFO - +-- END KEYWORD: tm.Check Version (3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20251121 10:00:03.844 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${tsm_version} | PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09) ]
-20251121 10:00:03.844 - INFO - PARAMS-VERIFIKATION : ({tsm_version} / tsm-testfile-48-version-control-09) : [STR]  :  '0.9.0'
-20251121 10:00:03.844 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 20251121 10:00:03.844 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${result} | PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09) ]
 20251121 10:00:03.844 - INFO - PARAMS-VERIFIKATION : ({result} / tsm-testfile-48-version-control-09) : [BOOL]  :  True
 20251121 10:00:03.845 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)

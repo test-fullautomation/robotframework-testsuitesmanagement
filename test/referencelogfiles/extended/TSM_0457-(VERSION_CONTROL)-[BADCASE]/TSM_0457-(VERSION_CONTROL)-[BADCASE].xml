@@ -73,7 +73,7 @@ and logs out the basic information about the test execution.</doc>
 <arg>max_version=0.20.1</arg>
 <arg>reference_version=0.3.0</arg>
 <doc>This keyword executes a version check, min_version and max_version are checked against the reference_version.</doc>
-<msg timestamp="20251121 10:00:07.928" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)</msg>
+<msg timestamp="20251121 10:00:07.928" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts)</msg>
 <msg timestamp="20251121 10:00:07.928" level="UNKNOWN">Execution will be aborted because of a critical version check issue</msg>
 <status status="UNKNOWN" starttime="20251121 10:00:07.926" endtime="20251121 10:00:07.929"/>
 </kw>
@@ -145,6 +145,6 @@ TSM_0457</doc>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20251121 10:00:07.928" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts: major.minor.patch)</msg>
+<msg timestamp="20251121 10:00:07.928" level="ERROR">Version format error: minimum version '0.1.0.1' contains too many parts (expected is a maximum of 3 parts)</msg>
 </errors>
 </robot>
