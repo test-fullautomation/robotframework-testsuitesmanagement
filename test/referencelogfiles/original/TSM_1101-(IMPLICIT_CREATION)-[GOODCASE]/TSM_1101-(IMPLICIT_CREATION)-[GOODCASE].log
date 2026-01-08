@@ -1,78 +1,79 @@
 ==============================================================================
-2025-07-04 16:40:12.818834 - INFO - + START SUITE: Tsm-Testfile-23-Implicit Creation 2
+2025-11-21 10:15:37.853886 - INFO - + START SUITE: Tsm-Testfile-23-Implicit Creation 2
 ==============================================================================
-2025-07-04 16:40:12.922747 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:40:12.999302 - INFO - Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_2'.
-2025-07-04 16:40:12.999437 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:40:13.001381 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:40:13.001443 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:40:13.001478 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:40:13.001512 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:40:13.001541 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:40:13.001570 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:40:13.002048 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-2025-07-04 16:40:13.002288 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-2025-07-04 16:40:13.002508 - INFO - ${teststring_variant} = I am the 'implicit_creation_2' configuration of tsm-test
-2025-07-04 16:40:13.002873 - INFO - ${param3} = param3 value C
-2025-07-04 16:40:13.003160 - INFO - ${param4} = param4 value B
-2025-07-04 16:40:13.003456 - INFO - ${param1} = {'subkey': {'subkey': {'subkey': 'subkey value'}}}
-2025-07-04 16:40:13.003758 - INFO - ${param2} = {'subkey': {'subkey': {'subkey': 'subkey value extended'}}}
-2025-07-04 16:40:13.004002 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_2', 'TargetName': 'Device_01', 'para...
-2025-07-04 16:40:13.004036 - INFO - Running with configuration level 2 (variant name in command line)
-2025-07-04 16:40:13.004102 - INFO - RobotFramework AIO (original) version check passed!
-2025-07-04 16:40:13.004123 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_2.jsonp'
-2025-07-04 16:40:13.004140 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 16:40:13.004155 - INFO - Number of test suites: 1
-2025-07-04 16:40:13.004169 - INFO - Total number of testcases: 1
-2025-07-04 16:40:13.004210 - INFO - +- END SETUP: tm.Testsuite Setup (0.081463 s)
+2025-11-21 10:15:37.994172 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:38.042749 - INFO - Set suite metadata 'project' to value 'tsm-test_config_implicit_creation_2'.
+2025-11-21 10:15:38.042875 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:38.044744 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:38.044807 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:38.044846 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:38.044877 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:38.044909 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:38.044938 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:38.044967 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:38.045355 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2025-11-21 10:15:38.045616 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2025-11-21 10:15:38.045822 - INFO - ${teststring_variant} = I am the 'implicit_creation_2' configuration of tsm-test
+2025-11-21 10:15:38.046032 - INFO - ${param3} = param3 value C
+2025-11-21 10:15:38.046297 - INFO - ${param4} = param4 value B
+2025-11-21 10:15:38.046586 - INFO - ${param1} = {'subkey': {'subkey': {'subkey': 'subkey value'}}}
+2025-11-21 10:15:38.046860 - INFO - ${param2} = {'subkey': {'subkey': {'subkey': 'subkey value extended'}}}
+2025-11-21 10:15:38.047099 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_implicit_creation_2', 'TargetName': 'Device_01', 'para...
+2025-11-21 10:15:38.047132 - INFO - Running with configuration level 2 (variant name in command line)
+2025-11-21 10:15:38.048397 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:38.048444 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_implicit_creation_2.jsonp'
+2025-11-21 10:15:38.048463 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:38.048479 - INFO - Number of test suites: 1
+2025-11-21 10:15:38.048494 - INFO - Total number of testcases: 1
+2025-11-21 10:15:38.048536 - INFO - +- END SETUP: tm.Testsuite Setup (0.054364 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:13.004307 - INFO - +- START TEST: Test Case tsm-testfile-23-implicit_creation_2
+2025-11-21 10:15:38.048642 - INFO - +- START TEST: Test Case tsm-testfile-23-implicit_creation_2
 ------------------------------------------------------------------------------
-2025-07-04 16:40:13.005070 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 16:40:13.005181 - INFO - Test Count: 1
-2025-07-04 16:40:13.005220 - INFO - +-- END SETUP: tm.Testcase Setup (0.00015 s)
+2025-11-21 10:15:38.049456 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:38.049566 - INFO - Test Count: 1
+2025-11-21 10:15:38.049607 - INFO - +-- END SETUP: tm.Testcase Setup (0.000151 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.005384 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.005674 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'tsm-test_config_implicit_creation_2'
-2025-07-04 16:40:13.005764 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00038 s)
+2025-11-21 10:15:38.049822 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.050125 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'tsm-test_config_implicit_creation_2'
+2025-11-21 10:15:38.050270 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000448 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.005870 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.005994 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-2025-07-04 16:40:13.006131 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000261 s)
+2025-11-21 10:15:38.050406 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.050539 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2025-11-21 10:15:38.050609 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000203 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.006267 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.006359 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the 'implicit_creation_2' configuration of tsm-test'
-2025-07-04 16:40:13.006487 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00022 s)
+2025-11-21 10:15:38.050714 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.050803 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the 'implicit_creation_2' configuration of tsm-test'
+2025-11-21 10:15:38.050971 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000257 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.006572 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.006654 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the teststring containing the default value for all test benches'
-2025-07-04 16:40:13.006712 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00014 s)
+2025-11-21 10:15:38.051176 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.051288 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2025-11-21 10:15:38.051457 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000281 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.006811 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param1} | PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.006945 - INFO - PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [STR]  :  'subkey value'
-2025-07-04 16:40:13.007013 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000202 s)
+2025-11-21 10:15:38.051654 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param1} | PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.051804 - INFO - PARAMS-VERIFIKATION : ({param1} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [STR]  :  'subkey value'
+2025-11-21 10:15:38.051898 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000244 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.007100 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param2} | PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.007195 - INFO - PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [STR]  :  'subkey value extended'
-2025-07-04 16:40:13.007253 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000153 s)
+2025-11-21 10:15:38.051995 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param2} | PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.052094 - INFO - PARAMS-VERIFIKATION : ({param2} / tsm-testfile-23-implicit_creation_2) : [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [DOTDICT] (1/1) > {subkey} [STR]  :  'subkey value extended'
+2025-11-21 10:15:38.052176 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000181 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.007328 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param3} | PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.007404 - INFO - PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param3 value C'
-2025-07-04 16:40:13.007455 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000127 s)
+2025-11-21 10:15:38.052265 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param3} | PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.052347 - INFO - PARAMS-VERIFIKATION : ({param3} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param3 value C'
+2025-11-21 10:15:38.052478 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000213 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.007530 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param4} | PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) ]
-2025-07-04 16:40:13.007602 - INFO - PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param4 value B'
-2025-07-04 16:40:13.007743 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000213 s)
+2025-11-21 10:15:38.052686 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${param4} | PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) ]
+2025-11-21 10:15:38.052778 - INFO - PARAMS-VERIFIKATION : ({param4} / tsm-testfile-23-implicit_creation_2) : [STR]  :  'param4 value B'
+2025-11-21 10:15:38.052833 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000147 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:40:13.007904 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 16:40:13.008030 - INFO - TEST 'Test Case tsm-testfile-23-implicit_creation_2' finished with result 'PASS'
-2025-07-04 16:40:13.008062 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000158 s)
+2025-11-21 10:15:38.053123 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:38.053276 - INFO - TEST 'Test Case tsm-testfile-23-implicit_creation_2' finished with result 'PASS'
+2025-11-21 10:15:38.053312 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000189 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:13.008113 - INFO - +- END TEST: Test Case tsm-testfile-23-implicit_creation_2 (0.003806 s)
+2025-11-21 10:15:38.053372 - INFO - +- END TEST: Test Case tsm-testfile-23-implicit_creation_2 (0.00473 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:40:13.008443 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:40:13.008564 - INFO - SUITE 'Tsm-Testfile-23-Implicit Creation 2' finished with result 'PASS'
-2025-07-04 16:40:13.008596 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000153 s)
+2025-11-21 10:15:38.053707 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:38.053886 - INFO - SUITE 'Tsm-Testfile-23-Implicit Creation 2' finished with result 'PASS'
+2025-11-21 10:15:38.053929 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000222 s)
 ==============================================================================
-2025-07-04 16:40:13.008621 - INFO - + END SUITE: Tsm-Testfile-23-Implicit Creation 2 (0.189787 s)
+2025-11-21 10:15:38.053957 - INFO - + END SUITE: Tsm-Testfile-23-Implicit Creation 2 (0.200071 s)
 ==============================================================================

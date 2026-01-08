@@ -1,58 +1,59 @@
 ==============================================================================
-2025-07-04 16:39:49.633703 - INFO - + START SUITE: Tsm-Testfile-02
+2025-11-21 10:15:06.538814 - INFO - + START SUITE: Tsm-Testfile-02
 ==============================================================================
-2025-07-04 16:39:49.737923 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-2025-07-04 16:39:49.802891 - INFO - Set suite metadata 'project' to value 'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭'.
-2025-07-04 16:39:49.803022 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-2025-07-04 16:39:49.805189 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-2025-07-04 16:39:49.805249 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
-2025-07-04 16:39:49.805285 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-2025-07-04 16:39:49.805318 - INFO - Set suite metadata 'version_sw' to value 'None'.
-2025-07-04 16:39:49.805350 - INFO - Set suite metadata 'version_hw' to value 'None'.
-2025-07-04 16:39:49.805379 - INFO - Set suite metadata 'version_test' to value 'None'.
-2025-07-04 16:39:49.805761 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
-2025-07-04 16:39:49.805980 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
-2025-07-04 16:39:49.806189 - INFO - ${teststring_variant} = I am the 'SälfTest.ß.€.考.𠼭.𠼭' configuration of tsm-test
-2025-07-04 16:39:49.806429 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭', 'TargetName': 'Device_01', 'param...
-2025-07-04 16:39:49.806465 - INFO - Running with configuration level 2 (variant name in command line)
-2025-07-04 16:39:49.806533 - INFO - RobotFramework AIO (original) version check passed!
-2025-07-04 16:39:49.806554 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.jsonp'
-2025-07-04 16:39:49.806576 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-2025-07-04 16:39:49.806592 - INFO - Number of test suites: 1
-2025-07-04 16:39:49.806607 - INFO - Total number of testcases: 1
-2025-07-04 16:39:49.806649 - INFO - +- END SETUP: tm.Testsuite Setup (0.068726 s)
+2025-11-21 10:15:06.684789 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2025-11-21 10:15:06.720490 - INFO - Set suite metadata 'project' to value 'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭'.
+2025-11-21 10:15:06.720615 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+2025-11-21 10:15:06.722409 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+2025-11-21 10:15:06.722486 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2025-11-21 10:15:06.722526 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+2025-11-21 10:15:06.722559 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.
+2025-11-21 10:15:06.722594 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2025-11-21 10:15:06.722624 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2025-11-21 10:15:06.722663 - INFO - Set suite metadata 'version_test' to value 'None'.
+2025-11-21 10:15:06.723040 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2025-11-21 10:15:06.723264 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2025-11-21 10:15:06.723476 - INFO - ${teststring_variant} = I am the 'SälfTest.ß.€.考.𠼭.𠼭' configuration of tsm-test
+2025-11-21 10:15:06.723720 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭', 'TargetName': 'Device_01', 'param...
+2025-11-21 10:15:06.723757 - INFO - Running with configuration level 2 (variant name in command line)
+2025-11-21 10:15:06.725024 - INFO - RobotFramework AIO (original) version check passed!
+2025-11-21 10:15:06.725108 - INFO - Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭.jsonp'
+2025-11-21 10:15:06.725140 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+2025-11-21 10:15:06.725158 - INFO - Number of test suites: 1
+2025-11-21 10:15:06.725174 - INFO - Total number of testcases: 1
+2025-11-21 10:15:06.725213 - INFO - +- END SETUP: tm.Testsuite Setup (0.040424 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:49.806748 - INFO - +- START TEST: Test Case tsm-testfile-02
+2025-11-21 10:15:06.725311 - INFO - +- START TEST: Test Case tsm-testfile-02
 ------------------------------------------------------------------------------
-2025-07-04 16:39:49.807539 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-2025-07-04 16:39:49.807644 - INFO - Test Count: 1
-2025-07-04 16:39:49.807682 - INFO - +-- END SETUP: tm.Testcase Setup (0.000143 s)
+2025-11-21 10:15:06.725921 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2025-11-21 10:15:06.726030 - INFO - Test Count: 1
+2025-11-21 10:15:06.726071 - INFO - +-- END SETUP: tm.Testcase Setup (0.00015 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:39:49.807889 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) ]
-2025-07-04 16:39:49.808172 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭'
-2025-07-04 16:39:49.808369 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00048 s)
+2025-11-21 10:15:06.726218 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) ]
+2025-11-21 10:15:06.726499 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_SälfTest.ß.€.考.𠼭.𠼭'
+2025-11-21 10:15:06.726589 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000371 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:39:49.808610 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) ]
-2025-07-04 16:39:49.808724 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
-2025-07-04 16:39:49.808918 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000308 s)
+2025-11-21 10:15:06.726700 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) ]
+2025-11-21 10:15:06.726797 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2025-11-21 10:15:06.726863 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000163 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:39:49.809165 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) ]
-2025-07-04 16:39:49.809302 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'SälfTest.ß.€.考.𠼭.𠼭' configuration of tsm-test'
-2025-07-04 16:39:49.809515 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00035 s)
+2025-11-21 10:15:06.726980 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) ]
+2025-11-21 10:15:06.727076 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'SälfTest.ß.€.考.𠼭.𠼭' configuration of tsm-test'
+2025-11-21 10:15:06.727148 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000168 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:39:49.809764 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) ]
-2025-07-04 16:39:49.809876 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the teststring containing the default value for all test benches'
-2025-07-04 16:39:49.810034 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.00027 s)
+2025-11-21 10:15:06.727244 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) ]
+2025-11-21 10:15:06.727333 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2025-11-21 10:15:06.727396 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000152 s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2025-07-04 16:39:49.810259 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-2025-07-04 16:39:49.810397 - INFO - TEST 'Test Case tsm-testfile-02' finished with result 'PASS'
-2025-07-04 16:39:49.810433 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000174 s)
+2025-11-21 10:15:06.727533 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2025-11-21 10:15:06.727661 - INFO - TEST 'Test Case tsm-testfile-02' finished with result 'PASS'
+2025-11-21 10:15:06.727693 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.00016 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:49.810721 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.003973 s)
+2025-11-21 10:15:06.727751 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.00244 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:49.811274 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:49.811405 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'PASS'
-2025-07-04 16:39:49.811439 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000165 s)
+2025-11-21 10:15:06.728081 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:06.728204 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'PASS'
+2025-11-21 10:15:06.728235 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000154 s)
 ==============================================================================
-2025-07-04 16:39:49.811466 - INFO - + END SUITE: Tsm-Testfile-02 (0.177763 s)
+2025-11-21 10:15:06.728262 - INFO - + END SUITE: Tsm-Testfile-02 (0.189448 s)
 ==============================================================================

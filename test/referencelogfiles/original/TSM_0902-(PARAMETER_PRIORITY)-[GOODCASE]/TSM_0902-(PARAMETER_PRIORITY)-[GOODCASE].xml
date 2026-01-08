@@ -1,91 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:10.624791" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:35.572013" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-19-Parameter Priority" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-19-parameter_priority.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:10.815137" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_parameter_priority'.</msg>
-<msg time="2025-07-04T16:40:10.815255" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
-<msg time="2025-07-04T16:40:10.817518" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
-<msg time="2025-07-04T16:40:10.817583" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
-<msg time="2025-07-04T16:40:10.817619" level="INFO">Set suite metadata 'bundle_version' to value '0.14.1.33'.</msg>
-<msg time="2025-07-04T16:40:10.817654" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:10.817685" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:10.817718" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
-<msg time="2025-07-04T16:40:10.818089" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...</msg>
-<msg time="2025-07-04T16:40:10.818127" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
-<msg time="2025-07-04T16:40:10.818199" level="INFO">RobotFramework AIO (original) version check passed!</msg>
-<msg time="2025-07-04T16:40:10.818221" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_parameter_priority.jsonp'</msg>
-<msg time="2025-07-04T16:40:10.818239" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
-<msg time="2025-07-04T16:40:10.818254" level="INFO">Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'</msg>
-<msg time="2025-07-04T16:40:10.818269" level="INFO">Number of test suites: 1</msg>
-<msg time="2025-07-04T16:40:10.818284" level="INFO">Total number of testcases: 1</msg>
+<msg time="2025-11-21T10:15:35.768279" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_parameter_priority'.</msg>
+<msg time="2025-11-21T10:15:35.768393" level="INFO">Set suite metadata 'machine' to value 'HI-C-0044M'.</msg>
+<msg time="2025-11-21T10:15:35.770313" level="INFO">Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.</msg>
+<msg time="2025-11-21T10:15:35.770391" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2025-11-21T10:15:35.770432" level="INFO">Set suite metadata 'reference_version' to value '0.14.2.26'.</msg>
+<msg time="2025-11-21T10:15:35.770467" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (original)'.</msg>
+<msg time="2025-11-21T10:15:35.770501" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:35.770534" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:35.770564" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2025-11-21T10:15:35.770921" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...</msg>
+<msg time="2025-11-21T10:15:35.770959" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2025-11-21T10:15:35.772218" level="INFO">RobotFramework AIO (original) version check passed!</msg>
+<msg time="2025-11-21T10:15:35.772265" level="INFO">Loaded configuration file 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_parameter_priority.jsonp'</msg>
+<msg time="2025-11-21T10:15:35.772286" level="INFO">Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2025-11-21T10:15:35.772303" level="INFO">Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'</msg>
+<msg time="2025-11-21T10:15:35.772319" level="INFO">Number of test suites: 1</msg>
+<msg time="2025-11-21T10:15:35.772334" level="INFO">Total number of testcases: 1</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="PASS" start="2025-07-04T16:40:10.743974" elapsed="0.074355"/>
+<status status="PASS" start="2025-11-21T10:15:35.726969" elapsed="0.045409"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-19-parameter_priority" line="32">
 <kw name="Testcase Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:10.819168" level="INFO">Test Count: 1</msg>
+<msg time="2025-11-21T10:15:35.773195" level="INFO">Test Count: 1</msg>
 <doc>This keyword writes the number of counted tests to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:10.819061" elapsed="0.000145"/>
+<status status="PASS" start="2025-11-21T10:15:35.773103" elapsed="0.000130"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:10.819641" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'</msg>
+<msg time="2025-11-21T10:15:35.773715" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'</msg>
 <arg>${CONFIG.Project}</arg>
 <arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:10.819375" elapsed="0.000460"/>
+<status status="PASS" start="2025-11-21T10:15:35.773410" elapsed="0.000391"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:10.820046" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''</msg>
+<msg time="2025-11-21T10:15:35.774056" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''</msg>
 <arg>${teststring_common}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:10.819949" elapsed="0.000249"/>
+<status status="PASS" start="2025-11-21T10:15:35.773933" elapsed="0.000218"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:10.820495" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from command line'</msg>
+<msg time="2025-11-21T10:15:35.774431" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from command line'</msg>
 <arg>${teststring_variant}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:10.820345" elapsed="0.000308"/>
+<status status="PASS" start="2025-11-21T10:15:35.774285" elapsed="0.000222"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:10.820898" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''</msg>
+<msg time="2025-11-21T10:15:35.774721" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''</msg>
 <arg>${teststring_bench}</arg>
 <arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority)</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:10.820791" elapsed="0.000234"/>
+<status status="PASS" start="2025-11-21T10:15:35.774620" elapsed="0.000168"/>
 </kw>
 <kw name="Pretty Print" owner="rf.extensions">
-<msg time="2025-07-04T16:40:10.821260" level="INFO">PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from variablefile 'testvariables.py''</msg>
+<msg time="2025-11-21T10:15:35.774977" level="INFO">PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from variablefile 'testvariables.py''</msg>
 <arg>${variablefile_val}</arg>
 <arg>PARAMS-VERIFIKATION : ({variablefile_val})</arg>
 <doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
-<status status="PASS" start="2025-07-04T16:40:10.821154" elapsed="0.000232"/>
+<status status="PASS" start="2025-11-21T10:15:35.774886" elapsed="0.000156"/>
 </kw>
 <kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:10.821672" level="INFO">TEST 'Test Case tsm-testfile-19-parameter_priority' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:35.775360" level="INFO">TEST 'Test Case tsm-testfile-19-parameter_priority' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testcase result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:10.821541" elapsed="0.000164"/>
+<status status="PASS" start="2025-11-21T10:15:35.775226" elapsed="0.000167"/>
 </kw>
 <doc>tsm-testfile-19-parameter_priority</doc>
-<status status="PASS" start="2025-07-04T16:40:10.818426" elapsed="0.003334"/>
+<status status="PASS" start="2025-11-21T10:15:35.772484" elapsed="0.003011"/>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:10.822174" level="INFO">SUITE 'Tsm-Testfile-19-Parameter Priority' finished with result 'PASS'</msg>
+<msg time="2025-11-21T10:15:35.775974" level="INFO">SUITE 'Tsm-Testfile-19-Parameter Priority' finished with result 'PASS'</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:10.822058" elapsed="0.000150"/>
+<status status="PASS" start="2025-11-21T10:15:35.775846" elapsed="0.000163"/>
 </kw>
-<meta name="bundle_version">0.14.1.33</meta>
 <meta name="machine">HI-C-0044M</meta>
 <meta name="project">tsm-test_config_parameter_priority</meta>
+<meta name="reference_app_name">RobotFramework AIO (original)</meta>
+<meta name="reference_version">0.14.2.26</meta>
 <meta name="tester">Queckenstedt Holger (XC-HWP/ESC3)</meta>
 <meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
 <meta name="version_hw">None</meta>
 <meta name="version_sw">None</meta>
 <meta name="version_test">None</meta>
-<status status="PASS" start="2025-07-04T16:40:10.644719" elapsed="0.177513"/>
+<status status="PASS" start="2025-11-21T10:15:35.589841" elapsed="0.186195"/>
 </suite>
 <statistics>
 <total>

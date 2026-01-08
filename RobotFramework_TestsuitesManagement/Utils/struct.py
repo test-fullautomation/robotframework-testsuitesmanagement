@@ -13,9 +13,9 @@
 #  limitations under the License.
 #################################################################################
 #
-# File: CStruct.py
+# File: struct.py
 # Initially created by Mai Dinh Nam Son (RBVH/ECM11) / Dec-2020
-# Base on file lib\Misc\CStruct.py of TML Framework (Author: Pollerspoeck Thomas)
+# Base on file lib\Misc\struct.py of TML Framework (Author: Pollerspoeck Thomas)
 #
 #
 #################################################################################

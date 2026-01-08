@@ -1,26 +1,26 @@
 ==============================================================================
-2025-07-04 16:39:58.155316 - INFO - + START SUITE: Tsm-Testfile-08-Err-2
+2025-11-21 10:15:15.355458 - INFO - + START SUITE: Tsm-Testfile-08-Err-2
 ==============================================================================
-2025-07-04 16:39:58.258885 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
-2025-07-04 16:39:58.297069 - ERROR - Did not find configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
-2025-07-04 16:39:58.297353 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:58.297909 - DEBUG - Exception
+2025-11-21 10:15:15.494329 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+2025-11-21 10:15:15.499815 - ERROR - Did not find configuration file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
+2025-11-21 10:15:15.500069 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:15.500601 - DEBUG - Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:58.297940 - INFO - +- END SETUP: tm.Testsuite Setup (0.039055 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:15.500625 - INFO - +- END SETUP: tm.Testsuite Setup (0.006296 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:58.298090 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2
+2025-11-21 10:15:15.500722 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2
 ------------------------------------------------------------------------------
-2025-07-04 16:39:58.298742 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (0.000652 s)
+2025-11-21 10:15:15.501250 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (0.000528 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:58.299192 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:58.299356 - INFO - SUITE 'Tsm-Testfile-08-Err-2' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:15.501797 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:15.501986 - INFO - SUITE 'Tsm-Testfile-08-Err-2' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:58.299404 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000212 s)
+2025-11-21 10:15:15.502033 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000236 s)
 ==============================================================================
-2025-07-04 16:39:58.299440 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (0.144124 s)
+2025-11-21 10:15:15.502077 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (0.146619 s)
 ==============================================================================

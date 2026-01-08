@@ -1547,8 +1547,30 @@ In opposite to the \textbf{JsonPreprocessor}, the \textbf{TestsuitesManagement} 
 and does not allow any special characters. Key names are limited to letters and digits!
 \end{boxhint}
 
+% --------------------------------------------------------------------------------------------------------------
 
+\newpage
 
+\section{Byte sequences}
+
+The \textbf{TestsuitesManagement} configuration (in JSONP format) supports the explicit embedding of binary values
+(in Hexadecimal Escape Notation).
+
+\begin{robotcode}
+"bytesequence" : b'\x52\x6f\x62\x6f\x74\x46\x72\x61\x6d\x65\x77\x6f\x72\x6b\x20\x41\x49\x4f'
+\end{robotcode}
+
+The result is the resolved content:
+
+\begin{robotcode}
+log     bytesequence: ${bytesequence}
+\end{robotcode}
+
+\begin{robotlog}
+INFO - bytesequence: RobotFramework AIO
+\end{robotlog}
+
+This feature requires the usage of single quotes: \pcode{b'...'}. Double quotes must not be used.
 
 
 

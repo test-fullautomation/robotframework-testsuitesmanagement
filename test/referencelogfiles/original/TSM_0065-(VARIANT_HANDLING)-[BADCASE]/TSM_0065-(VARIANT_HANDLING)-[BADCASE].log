@@ -1,29 +1,29 @@
 ==============================================================================
-2025-07-04 16:39:59.832470 - INFO - + START SUITE: Tsm-Cft-Test.File-1
+2025-11-21 10:15:17.042397 - INFO - + START SUITE: Tsm-Cft-Test.File-1
 ==============================================================================
-2025-07-04 16:39:59.936465 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
-2025-07-04 16:39:59.974166 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
-2025-07-04 16:39:59.974373 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
-2025-07-04 16:39:59.974895 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
-2025-07-04 16:39:59.974999 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
-2025-07-04 16:39:59.975134 - FAIL - Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:59.975228 - DEBUG - Exception
+2025-11-21 10:15:17.181685 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2025-11-21 10:15:17.182196 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+2025-11-21 10:15:17.182339 - ERROR - * file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
+2025-11-21 10:15:17.182882 - ERROR - * file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
+2025-11-21 10:15:17.182956 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
+2025-11-21 10:15:17.183068 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:17.183164 - DEBUG - Exception: The test execution will be aborted!
 
 During handling of the above exception, another exception occurred:
 
-Exception: Unable to load the test configuration. The test execution will be aborted!
-2025-07-04 16:39:59.975245 - INFO - +- END SETUP: tm.Testsuite Setup (0.03878 s)
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:17.183192 - INFO - +- END SETUP: tm.Testsuite Setup (0.001507 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.975352 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE)
+2025-11-21 10:15:17.183268 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.975922 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (0.00057 s)
+2025-11-21 10:15:17.183783 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (0.000515 s)
 ------------------------------------------------------------------------------
-2025-07-04 16:39:59.976326 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-2025-07-04 16:39:59.976485 - INFO - SUITE 'Tsm-Cft-Test.File-1' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+2025-11-21 10:15:17.184166 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2025-11-21 10:15:17.184308 - INFO - SUITE 'Tsm-Cft-Test.File-1' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed
-2025-07-04 16:39:59.976525 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000199 s)
+2025-11-21 10:15:17.184354 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000188 s)
 ==============================================================================
-2025-07-04 16:39:59.976561 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (0.144091 s)
+2025-11-21 10:15:17.184388 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (0.141991 s)
 ==============================================================================

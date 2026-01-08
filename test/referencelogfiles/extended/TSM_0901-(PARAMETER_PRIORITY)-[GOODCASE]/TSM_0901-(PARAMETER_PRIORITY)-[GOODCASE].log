@@ -1,60 +1,61 @@
 ==============================================================================
-20250704 16:25:25.797 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
+20251121 10:00:10.653 - INFO - + START SUITE: Tsm-Testfile-19-Parameter Priority [ ]
 ==============================================================================
-20250704 16:25:25.799 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
-20250704 16:25:25.852 - INFO - Set suite metadata 'project' to value 'tsm-test_config_parameter_priority'.
-20250704 16:25:25.852 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'bundle_version' to value '0.14.1.33'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'version_sw' to value 'None'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'version_hw' to value 'None'.
-20250704 16:25:25.854 - INFO - Set suite metadata 'version_test' to value 'None'.
-20250704 16:25:25.854 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...
-20250704 16:25:25.854 - INFO - Running with configuration level 1 (configuration file in command line)
-20250704 16:25:25.855 - INFO - RobotFramework AIO (extended) version check passed!
-20250704 16:25:25.855 - INFO - Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.jsonp'
-20250704 16:25:25.855 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
-20250704 16:25:25.855 - INFO - Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'
-20250704 16:25:25.855 - INFO - Number of test suites: 1
-20250704 16:25:25.855 - INFO - Total number of testcases: 1
-20250704 16:25:25.855 - INFO - +- END SETUP: tm.Testsuite Setup (56)
+20251121 10:00:10.656 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+20251121 10:00:10.672 - INFO - Set suite metadata 'project' to value 'tsm-test_config_parameter_priority'.
+20251121 10:00:10.672 - INFO - Set suite metadata 'machine' to value 'HI-C-0044M'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'tester' to value 'Queckenstedt Holger (XC-HWP/ESC3)'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.1 (Python 3.13.2 on win32)'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'reference_version' to value '0.14.2.26'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework AIO (extended)'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'version_sw' to value 'None'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'version_hw' to value 'None'.
+20251121 10:00:10.674 - INFO - Set suite metadata 'version_test' to value 'None'.
+20251121 10:00:10.674 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.0.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_parameter_priority', 'TargetName': 'Device_01', 'param...
+20251121 10:00:10.674 - INFO - Running with configuration level 1 (configuration file in command line)
+20251121 10:00:10.675 - INFO - RobotFramework AIO (extended) version check passed!
+20251121 10:00:10.675 - INFO - Loaded configuration file 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_config_parameter_priority.jsonp'
+20251121 10:00:10.676 - INFO - Suite Path: 'C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\'
+20251121 10:00:10.676 - INFO - Local config file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/localconfig/tsm-test_localconfig_bench2.jsonp'
+20251121 10:00:10.676 - INFO - Number of test suites: 1
+20251121 10:00:10.676 - INFO - Total number of testcases: 1
+20251121 10:00:10.676 - INFO - +- END SETUP: tm.Testsuite Setup (20)
 ------------------------------------------------------------------------------
-20250704 16:25:25.855 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
+20251121 10:00:10.676 - INFO - +- START TEST: Test Case tsm-testfile-19-parameter_priority [ ]
 ------------------------------------------------------------------------------
-20250704 16:25:25.855 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
-20250704 16:25:25.855 - INFO - Test Count: 1
-20250704 16:25:25.856 - INFO - +-- END SETUP: tm.Testcase Setup (0)
+20251121 10:00:10.676 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+20251121 10:00:10.676 - INFO - Test Count: 1
+20251121 10:00:10.677 - INFO - +-- END SETUP: tm.Testcase Setup (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.856 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) ]
-20250704 16:25:25.856 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'
-20250704 16:25:25.856 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:10.677 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) ]
+20251121 10:00:10.677 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-19-parameter_priority) : [STR]  :  'tsm-test_config_parameter_priority'
+20251121 10:00:10.677 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.856 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) ]
-20250704 16:25:25.856 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''
-20250704 16:25:25.856 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:10.677 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) ]
+20251121 10:00:10.677 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_common' value taken from variablefile 'testvariables.py''
+20251121 10:00:10.677 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.856 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) ]
-20250704 16:25:25.856 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from variablefile 'testvariables.py''
-20250704 16:25:25.857 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
+20251121 10:00:10.677 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) ]
+20251121 10:00:10.677 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_variant' value taken from variablefile 'testvariables.py''
+20251121 10:00:10.678 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.857 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) ]
-20250704 16:25:25.857 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''
-20250704 16:25:25.857 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:10.678 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) ]
+20251121 10:00:10.678 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-19-parameter_priority) : [STR]  :  'I am the 'teststring_bench' value taken from variablefile 'testvariables.py''
+20251121 10:00:10.678 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.857 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${variablefile_val} | PARAMS-VERIFIKATION : ({variablefile_val}) ]
-20250704 16:25:25.857 - INFO - PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from variablefile 'testvariables.py''
-20250704 16:25:25.857 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
+20251121 10:00:10.678 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${variablefile_val} | PARAMS-VERIFIKATION : ({variablefile_val}) ]
+20251121 10:00:10.678 - INFO - PARAMS-VERIFIKATION : ({variablefile_val}) : [STR]  :  'I am the 'variablefile_val' value taken from variablefile 'testvariables.py''
+20251121 10:00:10.678 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20250704 16:25:25.857 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
-20250704 16:25:25.857 - INFO - TEST 'Test Case tsm-testfile-19-parameter_priority' finished with result 'PASS'
-20250704 16:25:25.857 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
+20251121 10:00:10.678 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+20251121 10:00:10.678 - INFO - TEST 'Test Case tsm-testfile-19-parameter_priority' finished with result 'PASS'
+20251121 10:00:10.678 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0)
 ------------------------------------------------------------------------------
-20250704 16:25:25.858 - INFO - +- END TEST: Test Case tsm-testfile-19-parameter_priority (2)
+20251121 10:00:10.679 - INFO - +- END TEST: Test Case tsm-testfile-19-parameter_priority (2)
 ------------------------------------------------------------------------------
-20250704 16:25:25.858 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
-20250704 16:25:25.858 - INFO - SUITE 'Tsm-Testfile-19-Parameter Priority' finished with result 'PASS'
-20250704 16:25:25.858 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
+20251121 10:00:10.679 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+20251121 10:00:10.679 - INFO - SUITE 'Tsm-Testfile-19-Parameter Priority' finished with result 'PASS'
+20251121 10:00:10.679 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0)
 ==============================================================================
-20250704 16:25:25.858 - INFO - + END SUITE: Tsm-Testfile-19-Parameter Priority (155)
+20251121 10:00:10.679 - INFO - + END SUITE: Tsm-Testfile-19-Parameter Priority (157)
 ==============================================================================

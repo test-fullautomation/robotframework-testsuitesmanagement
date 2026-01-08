@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20250704 16:25:15.541" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.13.2 on win32)" generated="20251121 09:59:53.126" rpa="false" schemaversion="4">
 <suite id="s1" name="Tsm-Cft-Test.File-2" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\configfoldertests2\tsm-cft-test.file-2.robot">
 <kw name="Testsuite Setup" library="tm" type="SETUP">
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<msg timestamp="20250704 16:25:15.687" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
-<msg timestamp="20250704 16:25:15.687" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'</msg>
-<msg timestamp="20250704 16:25:15.688" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'</msg>
-<msg timestamp="20250704 16:25:15.688" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
-<msg timestamp="20250704 16:25:15.688" level="UNKNOWN">Unable to load the test configuration. The test execution will be aborted!</msg>
-<status status="UNKNOWN" starttime="20250704 16:25:15.654" endtime="20250704 16:25:15.688"/>
+<msg timestamp="20251121 09:59:53.273" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
+<msg timestamp="20251121 09:59:53.273" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'</msg>
+<msg timestamp="20251121 09:59:53.274" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'</msg>
+<msg timestamp="20251121 09:59:53.274" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+<msg timestamp="20251121 09:59:53.274" level="UNKNOWN">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<status status="UNKNOWN" starttime="20251121 09:59:53.272" endtime="20251121 09:59:53.274"/>
 </kw>
 <test id="s1-t1" name="Test Case tsm-cft-test.file-2 (BADCASE)" line="32">
 <doc>tsm-cft-test.file-2 (BADCASE)</doc>
-<status status="UNKNOWN" starttime="20250704 16:25:15.688" endtime="20250704 16:25:15.689">Parent suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:53.274" endtime="20251121 09:59:53.275">Parent suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" library="tm" type="TEARDOWN">
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<msg timestamp="20250704 16:25:15.689" level="INFO">SUITE 'Tsm-Cft-Test.File-2' finished with result 'UNKNOWN', reason: Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!
+<msg timestamp="20251121 09:59:53.275" level="INFO">SUITE 'Tsm-Cft-Test.File-2' finished with result 'UNKNOWN', reason: Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 0 failed, 1 unknown</msg>
-<status status="PASS" starttime="20250704 16:25:15.689" endtime="20250704 16:25:15.689"/>
+<status status="PASS" starttime="20251121 09:59:53.275" endtime="20251121 09:59:53.275"/>
 </kw>
-<status status="UNKNOWN" starttime="20250704 16:25:15.554" endtime="20250704 16:25:15.690">Suite setup unknown:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="UNKNOWN" starttime="20251121 09:59:53.128" endtime="20251121 09:59:53.275">Suite setup unknown:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -38,9 +38,9 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250704 16:25:15.687" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
-<msg timestamp="20250704 16:25:15.687" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'</msg>
-<msg timestamp="20250704 16:25:15.688" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'</msg>
-<msg timestamp="20250704 16:25:15.688" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
+<msg timestamp="20251121 09:59:53.273" level="ERROR">Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!</msg>
+<msg timestamp="20251121 09:59:53.273" level="ERROR">* file 1: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.jsonp'</msg>
+<msg timestamp="20251121 09:59:53.274" level="ERROR">* file 2: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/robot_config.json'</msg>
+<msg timestamp="20251121 09:59:53.274" level="ERROR">Please decide which one to keep and which one to remove. Both together are not allowed.</msg>
 </errors>
 </robot>

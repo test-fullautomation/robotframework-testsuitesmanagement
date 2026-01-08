@@ -59,59 +59,59 @@ This _start_suite method hooks to every starting testsuite of robot run.
 
 * No return variable
         '''
-        TM.CTestsuitesCfg.oConfig = CConfig()
-        TM.CTestsuitesCfg.oConfig.sTestcasePath = ''
+        TM.CTestsuitesCfg.config_obj = CConfig()
+        TM.CTestsuitesCfg.config_obj.testcase_path = ''
         if os.path.isfile(data.source.__str__()):
-            TM.CTestsuitesCfg.oConfig.sTestcasePath = ''
+            TM.CTestsuitesCfg.config_obj.testcase_path = ''
             for item in data.source.__str__().split(os.path.sep)[:-1]:
-                TM.CTestsuitesCfg.oConfig.sTestcasePath += item + os.path.sep
+                TM.CTestsuitesCfg.config_obj.testcase_path += item + os.path.sep
         elif os.path.isdir(data.source.__str__()):
-            TM.CTestsuitesCfg.oConfig.sTestcasePath = data.source.__str__()
-        if TM.CTestsuitesCfg.oConfig.sTestcasePath != '':
-            os.chdir(TM.CTestsuitesCfg.oConfig.sTestcasePath)
+            TM.CTestsuitesCfg.config_obj.testcase_path = data.source.__str__()
+        if TM.CTestsuitesCfg.config_obj.testcase_path != '':
+            os.chdir(TM.CTestsuitesCfg.config_obj.testcase_path)
 
-        if TM.CTestsuitesCfg.oConfig.iSuiteCount == 0:
+        if TM.CTestsuitesCfg.config_obj.suite_count == 0:
             test_suite = None
             test_suite = data
             while test_suite.parent != None:
                 test_suite = test_suite.parent
 
             for k, v in BuiltIn().get_variables()._keys.items():
-                TM.CTestsuitesCfg.oConfig.lBuitInVariables.append(regex.match('.+{(.+)}', v)[1])
+                TM.CTestsuitesCfg.config_obj.buitin_variables.append(regex.match('.+{(.+)}', v)[1])
 
-            TM.CTestsuitesCfg.oConfig.sRootSuiteName = test_suite.name
-            TM.CTestsuitesCfg.oConfig.iTotalTestcases = test_suite.test_count
+            TM.CTestsuitesCfg.config_obj.root_suite_name = test_suite.name
+            TM.CTestsuitesCfg.config_obj.total_testcases = test_suite.test_count
 
             if '${localconfig}' in BuiltIn().get_variables()._keys:
-                if regex.match('^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
-                    CConfig.sLoadedCfgLog['error'] = "Local_config input must not be empty!!!"
-                    logger.error(CConfig.sLoadedCfgLog['error'])
+                if regex.match(r'^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
+                    CConfig.loaded_cfg_log['error'] = "Local_config input must not be empty!!!"
+                    logger.error(CConfig.loaded_cfg_log['error'])
                 else:
-                    TM.CTestsuitesCfg.oConfig.sLocalConfig = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
+                    TM.CTestsuitesCfg.config_obj.local_config = os.path.abspath(BuiltIn().get_variable_value('${LOCAL_CONFIG}').strip())
 
             elif 'ROBOT_LOCAL_CONFIG' in os.environ:
-                localConfigFile = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
-                if os.path.isfile(localConfigFile):
-                    TM.CTestsuitesCfg.oConfig.sLocalConfig = localConfigFile
+                local_config_file = os.path.abspath(os.environ['ROBOT_LOCAL_CONFIG'])
+                if os.path.isfile(local_config_file):
+                    TM.CTestsuitesCfg.config_obj.local_config = local_config_file
                 else:
-                    TM.CTestsuitesCfg.oConfig.bLoadedCfg = False
-                    CConfig.sLoadedCfgLog['error'] = f"The local configuration file {localConfigFile} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
-                    logger.error(CConfig.sLoadedCfgLog['error'])
+                    TM.CTestsuitesCfg.config_obj.is_cfg_loaded = False
+                    CConfig.loaded_cfg_log['error'] = f"The local configuration file {local_config_file} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
+                    logger.error(CConfig.loaded_cfg_log['error'])
 
             if '${variant}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.sConfigName = BuiltIn().get_variable_value('${VARIANT}').strip()
+                TM.CTestsuitesCfg.config_obj.config_name = BuiltIn().get_variable_value('${VARIANT}').strip()
             if '${versionsw}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.rMetaData.sVersionSW = BuiltIn().get_variable_value('${VERSION_SW}')
+                TM.CTestsuitesCfg.config_obj.meta_data.version_sw = BuiltIn().get_variable_value('${VERSION_SW}')
             if '${versionhw}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.rMetaData.sVersionHW = BuiltIn().get_variable_value('${VERSION_HW}')
+                TM.CTestsuitesCfg.config_obj.meta_data.version_hw = BuiltIn().get_variable_value('${VERSION_HW}')
             if '${versiontest}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.rMetaData.sVersionTest = BuiltIn().get_variable_value('${VERSION_TEST}')
+                TM.CTestsuitesCfg.config_obj.meta_data.version_test = BuiltIn().get_variable_value('${VERSION_TEST}')
             if '${configfile}' in BuiltIn().get_variables()._keys:
-                TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_1
-                TM.CTestsuitesCfg.oConfig.sTestCfgFile = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
+                TM.CTestsuitesCfg.config_obj.config_level = TM.CConfigLevel.LEVEL_1
+                TM.CTestsuitesCfg.config_obj.test_config_file = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
 
-        TM.CTestsuitesCfg.oConfig.iSuiteCount += 1
-        BuiltIn().set_global_variable("${SUITECOUNT}", TM.CTestsuitesCfg.oConfig.iSuiteCount)
+        TM.CTestsuitesCfg.config_obj.suite_count += 1
+        BuiltIn().set_global_variable("${SUITECOUNT}", TM.CTestsuitesCfg.config_obj.suite_count)
         dispatch('scope_start', data.longname)
 
     def _end_suite(self, data, result):
@@ -134,9 +134,9 @@ This _end_suite method hooks to every ending testsuite of robot run.
 
 * No return variable
         '''
-        if TM.CTestsuitesCfg.oConfig.configLevel != TM.CConfigLevel.LEVEL_1:
-            TM.CTestsuitesCfg.oConfig.sTestCfgFile = ''
-        TM.CTestsuitesCfg.oConfig.configLevel = TM.CConfigLevel.LEVEL_4
+        if TM.CTestsuitesCfg.config_obj.config_level != TM.CConfigLevel.LEVEL_1:
+            TM.CTestsuitesCfg.config_obj.test_config_file = ''
+        TM.CTestsuitesCfg.config_obj.config_level = TM.CConfigLevel.LEVEL_4
         dispatch('scope_end', data.longname)
 
     def _start_test(self, data, result):
@@ -159,8 +159,8 @@ This _start_test method hooks to every starting test case of robot run.
 
 * No return variable
         '''
-        TM.CTestsuitesCfg.oConfig.iTestCount += 1
-        BuiltIn().set_global_variable("${TESTCOUNT}", TM.CTestsuitesCfg.oConfig.iTestCount)
+        TM.CTestsuitesCfg.config_obj.test_count += 1
+        BuiltIn().set_global_variable("${TESTCOUNT}", TM.CTestsuitesCfg.config_obj.test_count)
         dispatch('scope_start', data.longname)
 
     def _end_test(self, data, result):

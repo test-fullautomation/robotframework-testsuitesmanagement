@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-04T16:40:07.497762" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-11-21T10:15:29.486553" rpa="false" schemaversion="5">
 <suite id="s1" name="Tsm-Testfile-02" source="C:\workplace\ROBFW\components\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
 <kw name="Testsuite Setup" owner="tm" type="SETUP">
-<msg time="2025-07-04T16:40:07.679346" level="ERROR">Invalid Minimum version:Wrong format in version information '   '</msg>
-<msg time="2025-07-04T16:40:07.679632" level="ERROR">In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'</msg>
-<msg time="2025-07-04T16:40:07.680381" level="FAIL">Unable to load the test configuration. The test execution will be aborted!</msg>
+<msg time="2025-11-21T10:15:29.676252" level="ERROR">Minimum_version: Invalid version format '   ' (within '   ')</msg>
+<msg time="2025-11-21T10:15:29.676579" level="ERROR">In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'</msg>
+<msg time="2025-11-21T10:15:29.677121" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
 <arg>./config/tsm-test_variants.jsonp</arg>
 <doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
 and logs out the basic information about the test execution.</doc>
-<status status="FAIL" start="2025-07-04T16:40:07.615629" elapsed="0.064893">Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:29.640625" elapsed="0.036636">Not possible to load the test configuration. The test execution will be aborted!</status>
 </kw>
 <test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
 <doc>tsm-testfile-02</doc>
-<status status="FAIL" start="2025-07-04T16:40:07.680631" elapsed="0.000653">Parent suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:29.677362" elapsed="0.000658">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </test>
 <kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
-<msg time="2025-07-04T16:40:07.682333" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!
+<msg time="2025-11-21T10:15:29.678757" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
 
 1 test, 0 passed, 1 failed</msg>
 <doc>This keyword writes information about the testsuite result to the log files.</doc>
-<status status="PASS" start="2025-07-04T16:40:07.682162" elapsed="0.000214"/>
+<status status="PASS" start="2025-11-21T10:15:29.678577" elapsed="0.000225"/>
 </kw>
-<status status="FAIL" start="2025-07-04T16:40:07.509213" elapsed="0.173195">Suite setup failed:
-Unable to load the test configuration. The test execution will be aborted!</status>
+<status status="FAIL" start="2025-11-21T10:15:29.499008" elapsed="0.179831">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
 </suite>
 <statistics>
 <total>
@@ -37,7 +37,7 @@ Unable to load the test configuration. The test execution will be aborted!</stat
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-04T16:40:07.679346" level="ERROR">Invalid Minimum version:Wrong format in version information '   '</msg>
-<msg time="2025-07-04T16:40:07.679632" level="ERROR">In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'</msg>
+<msg time="2025-11-21T10:15:29.676252" level="ERROR">Minimum_version: Invalid version format '   ' (within '   ')</msg>
+<msg time="2025-11-21T10:15:29.676579" level="ERROR">In configuration: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.06.jsonp'</msg>
 </errors>
 </robot>
