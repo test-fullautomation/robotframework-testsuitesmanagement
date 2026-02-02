@@ -20,7 +20,7 @@
 
 *** Settings ***
 
-Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
+Library    RobotframeworkExtensions.Collection    AS    rf.extensions
 
 *** Test Cases ***
 

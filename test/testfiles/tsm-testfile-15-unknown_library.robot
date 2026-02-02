@@ -20,8 +20,8 @@
 
 *** Settings ***
 
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
-Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
+Library    RobotFramework_TestsuitesManagement    AS    tm
+Library    RobotframeworkExtensions.Collection    AS    rf.extensions
 
 Library    I.Am.The.Unknown.Library.And.Therefore.An.Error
 

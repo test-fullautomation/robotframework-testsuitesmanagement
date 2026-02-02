@@ -19,7 +19,7 @@ ${config_file}   ../../../general_config/robot_config_variant_1.json
 
 *** Settings ***
 #Force Tags        atestExcluded
-Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites
+Library      RobotFramework_TestsuitesManagement    AS    testsuites
 Suite Setup      testsuites.testsuite_setup
 Suite Teardown   testsuites.testsuite_teardown
 Test Setup       testsuites.testcase_setup

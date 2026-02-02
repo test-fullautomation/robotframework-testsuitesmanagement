@@ -300,10 +300,10 @@ another parameter configuration file and another entry in the variants configura
 To activate the test suites management you have to import the \pkg\ library in the following way:
 
 \begin{robotcode}
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotFramework_TestsuitesManagement    AS    tm
 \end{robotcode}
 
-We recommend to use the \rcode{WITH NAME} option to shorten the robot code a little bit.
+We recommend to use the \rcode{AS} option to shorten the robot code a little bit.
 
 The next step is to call the \rcode{testsuite_setup} of the \pkg\ within the \rcode{Suite Setup} of your test:
 
@@ -716,7 +716,7 @@ For this purpose, \textbf{TestsuitesManagement} provides two interfaces:
 Like usual, the \textbf{TestsuitesManagement} library needs to be imported in this way:
 
 \begin{robotcode}
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotFramework_TestsuitesManagement    AS    tm
 \end{robotcode}
 
 \subsection{Explicit version control of the RobotFramework AIO}

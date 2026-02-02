@@ -15,7 +15,7 @@
 # **************************************************************************************************************
 #
 *** Settings ***
-Library    ../../resources/atest_libs.py    WITH NAME    testlibs
+Library    ../../resources/atest_libs.py    AS    testlibs
 
 *** Test Cases ***
 Test Config Level_1_01

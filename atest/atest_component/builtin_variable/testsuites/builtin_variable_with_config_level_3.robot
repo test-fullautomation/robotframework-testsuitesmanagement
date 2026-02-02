@@ -16,7 +16,7 @@
 #
 *** Settings ***
 #Force Tags        atestExcluded
-Library      RobotFramework_TestsuitesManagement    WITH NAME    testsuites
+Library      RobotFramework_TestsuitesManagement    AS    testsuites
 Suite Setup      testsuites.testsuite_setup
 Suite Teardown   testsuites.testsuite_teardown
 Test Setup       testsuites.testcase_setup
