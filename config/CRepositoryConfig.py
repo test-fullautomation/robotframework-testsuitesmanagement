@@ -60,7 +60,6 @@ def printexception(sMsg):
 class CRepositoryConfig():
 
     def __init__(self, sCalledBy=None):
-        pass
         # TODO: error handling sCalledBy=None
         sCalledBy = CString.NormalizePath(sCalledBy)
         self.__sReferencePath = os.path.dirname(sCalledBy)
