@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2024 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -29,13 +29,13 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 14.11.2025
+# 03.02.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 
 import os, sys, platform, shlex, subprocess, json
 import colorama as col
-import pypandoc
+import tomllib
 
 from PythonExtensionsCollection.String.CString import CString
 
@@ -60,7 +60,7 @@ def printexception(sMsg):
 class CRepositoryConfig():
 
     def __init__(self, sCalledBy=None):
-
+        pass
         # TODO: error handling sCalledBy=None
         sCalledBy = CString.NormalizePath(sCalledBy)
         self.__sReferencePath = os.path.dirname(sCalledBy)
@@ -87,6 +87,43 @@ class CRepositoryConfig():
         # make absolute path to package documentation
         self.__dictRepositoryConfig['PACKAGEDOC'] = CString.NormalizePath(sPath=self.__dictRepositoryConfig['PACKAGEDOC'], sReferencePathAbs=self.__sReferencePath)
 
+        # read additional values from TOML configuration file
+        toml_data = None
+        toml_file = f"{self.__sReferencePath}/pyproject.toml"
+        self.__dictRepositoryConfig['TOMLCONFIGURATIONFILE'] = toml_file
+        with open(toml_file, "rb") as f:
+            toml_data = tomllib.load(f)
+        authors = toml_data["project"]["authors"]
+        author = authors[0] if authors else "(not found)"
+        self.__dictRepositoryConfig['AUTHOR'] = author['name']
+        self.__dictRepositoryConfig['AUTHOREMAIL'] = author['email']
+        self.__dictRepositoryConfig['PACKAGENAME'] = toml_data["project"]["name"]
+        self.__dictRepositoryConfig['DESCRIPTION'] = toml_data["project"]["description"]
+        self.__dictRepositoryConfig['BUILDREQUIRES'] = toml_data["build-system"]["requires"]
+        self.__dictRepositoryConfig['EXECUTIONREQUIRES'] = toml_data["project"]["dependencies"]
+        self.__dictRepositoryConfig['PYTHON_REQUIRED'] = toml_data["project"]["requires-python"]
+        self.__dictRepositoryConfig['LICENSE'] = toml_data["project"]["license"]
+        self.__dictRepositoryConfig['KEYWORDS'] = toml_data["project"]["keywords"]
+        # currently skipped because too much content for nice console output:
+        # self.__dictRepositoryConfig['classifiers'] = toml_data["project"]["classifiers"]
+        self.__dictRepositoryConfig['DYNAMIC_VALUES'] = toml_data["project"]["dynamic"]
+        # save access to optional values
+        project = toml_data.get("project", {})
+        optional_dependencies = project.get("optional-dependencies", {})
+        self.__dictRepositoryConfig['OPTIONAL_DEPENDENCIES'] = optional_dependencies.get("dev", {})
+        self.__dictRepositoryConfig['DOC_DEPENDENCIES'] = optional_dependencies.get("docs", {})
+        urls = project.get("urls", {})
+        self.__dictRepositoryConfig['URL_HOMEPAGE'] = urls.get("Homepage", {})
+        self.__dictRepositoryConfig['URL_DOCUMENTATION'] = urls.get("Documentation", {})
+        self.__dictRepositoryConfig['URL_README'] = urls.get("Readme", {})
+        self.__dictRepositoryConfig['URL_REPOSITORY'] = urls.get("Repository", {})
+        self.__dictRepositoryConfig['URL'] = urls.get("Repository", {}) # !!! downward compatibility to older version of GenpackageDoc / to be removed later
+        self.__dictRepositoryConfig['URL_ISSUES'] = urls.get("Issues", {})
+        tool = toml_data.get("tool", {})
+        setuptools = tool.get("setuptools", {})
+        package_data = setuptools.get("package-data", {})
+        self.__dictRepositoryConfig['PACKAGE_DATA'] = package_data.get(self.__dictRepositoryConfig['PACKAGENAME'], {})
+
         # compute dynamic configuration values
         bSuccess, sResult = self.__InitConfig()
         if bSuccess != True:
@@ -109,14 +146,6 @@ class CRepositoryConfig():
 
         sInstalledPackageFolder = None
 
-        try:
-            # try to access pandoc; if not installed we detect this already here as early as possible
-            pypandoc.get_pandoc_path()
-        except Exception as ex:
-            bSuccess = False
-            sResult  = str(ex)
-            return bSuccess, sResult
-
         if sPlatformSystem == "Windows":
             sInstalledPackageFolder = f"{sPythonPath}/Lib/site-packages/" + self.__dictRepositoryConfig['PACKAGENAME']
         elif sPlatformSystem == "Linux":
@@ -136,10 +165,6 @@ class CRepositoryConfig():
 
         # ====== 1. documentation
 
-        # - README
-        self.__dictRepositoryConfig['README_RST'] = CString.NormalizePath(f"{self.__sReferencePath}/README.rst")
-        self.__dictRepositoryConfig['README_MD']  = CString.NormalizePath(f"{self.__sReferencePath}/README.md")
-
         # The following key doesn't matter in case of the documentation builder itself is using this CRepositoryConfig.
         # But if the documentation builder is called by other apps like setup.py, they need to know where to find.
         self.__dictRepositoryConfig['DOCUMENTATIONBUILDER'] = CString.NormalizePath(f"{self.__sReferencePath}/genpackagedoc.py")
@@ -147,13 +172,13 @@ class CRepositoryConfig():
         # - folder containing the package source files (will also contain the PDF documentation)
         self.__dictRepositoryConfig['PACKAGESOURCEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/{self.__dictRepositoryConfig['PACKAGENAME']}")
 
-        # ====== 2. setuptools
+        # ====== 2. PIP/TOML/setuptools
 
         self.__dictRepositoryConfig['SETUPBUILDFOLDER']           = CString.NormalizePath(f"{self.__sReferencePath}/build")
-        self.__dictRepositoryConfig['SETUPBUILDLIBFOLDER']        = CString.NormalizePath(f"{self.__sReferencePath}/build/lib")
-        self.__dictRepositoryConfig['SETUPBUILDLIBPACKAGEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/build/lib/{self.__dictRepositoryConfig['PACKAGENAME']}")
-        self.__dictRepositoryConfig['SETUPDISTFOLDER']            = CString.NormalizePath(f"{self.__sReferencePath}/dist")
-        EGGINFOFOLDER = self.__dictRepositoryConfig['REPOSITORYNAME'].replace('-', '_')
+        # TODO: check if still required: self.__dictRepositoryConfig['SETUPBUILDLIBFOLDER']        = CString.NormalizePath(f"{self.__sReferencePath}/build/lib")
+        # TODO: check if still required: self.__dictRepositoryConfig['SETUPBUILDLIBPACKAGEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/build/lib/{self.__dictRepositoryConfig['PACKAGENAME']}")
+        # deprecated: self.__dictRepositoryConfig['SETUPDISTFOLDER']            = CString.NormalizePath(f"{self.__sReferencePath}/dist")
+        EGGINFOFOLDER = self.__dictRepositoryConfig['PACKAGENAME'].replace('-', '_')
         self.__dictRepositoryConfig['EGGINFOFOLDER']              = CString.NormalizePath(f"{self.__sReferencePath}/{EGGINFOFOLDER}.egg-info")
 
         print()

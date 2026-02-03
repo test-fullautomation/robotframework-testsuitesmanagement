@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 #
 # CAdditionalSteps.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # 15.05.2023
 #

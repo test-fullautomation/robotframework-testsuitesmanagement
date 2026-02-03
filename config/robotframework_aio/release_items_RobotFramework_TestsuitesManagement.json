@@ -221,6 +221,11 @@ All names inside angle brackets are placeholders. They are replaced later by cur
 
 More details can be found in the component documentation `RobotFramework_TestsuitesManagement.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 "
-                  ]
+                  ],
+                   "1.0.0.;1.1.0." : [
+"
+* Usage of **Setuptools** replaced by usage of **PIP/TOML/Setuptools**.
+"
+                   ]
                 }
 }

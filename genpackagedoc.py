@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
 #
 # genpackagedoc.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 29.06.2022
+# 02.02.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -72,6 +72,9 @@ except Exception as ex:
     printexception(str(ex))
     print()
     sys.exit(ERROR)
+
+DOCBUILDERFULLNAME = oPackageDocConfig.Get("DOCBUILDERFULLNAME")
+print(f"\nThis is {DOCBUILDERFULLNAME}\n")
 
 # -- setting up and calling the doc builder
 try:
