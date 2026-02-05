@@ -43,7 +43,7 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
 2. Installation via GitHub (recommended for developers)
 
-   * Clone the **RobotFramework_TestsuitesManagement** repository to your machine
+   * Clone the **robotframework-testsuitesmanagement** repository to your machine
 
      .. code::
 
