@@ -18,11 +18,11 @@
 #
 # TOML file used for component installation
 #
-# Version 0.1.0 / 03.02.2026
+# Version 0.1.0 / 10.02.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# Accordingly to the TOML specification:
+# According to the TOML specification:
 # * Names in square brackets (e.g. [build-system]) are called 'table'.
 # * Names located to the left of the equal sign (e.g. 'requires') are called 'key'.
 #
@@ -33,7 +33,8 @@
 #
 [build-system]
 # 'requires' specifies the dependencies necessary for the build process (meaning the conversion of source code into an installable distribution)
-requires      = ["setuptools>=80.9.0", "wheel", "docutils>=0.22.4", "GenPackageDoc", "robotframework>=6.1", "robotframework-pythonlibcore", "regex", "jsonschema", "JsonPreprocessor"] # need to be strengthened later to: "GenPackageDoc>=0.43.0"
+requires      = ["setuptools>=80.9.0", "wheel", "build", "docutils>=0.22.4", "robotframework>=6.1", "robotframework-pythonlibcore",
+                 "regex", "jsonschema", "GenPackageDoc", "PythonExtensionsCollection", "JsonPreprocessor"] # need to be strengthened later to: "GenPackageDoc>=0.43.0"
 build-backend = "build_backend"
 backend-path  = ["."] # the repository main folder
 
@@ -43,14 +44,14 @@ backend-path  = ["."] # the repository main folder
 # Status: Required
 #
 [project]
-name            = "RobotFramework_TestsuitesManagement" # the official PyPi packet name (must be unique worldwide), not necessarily the import name
+name            = "RobotFramework_TestsuitesManagement" # the official PyPi package name (must be unique worldwide), not necessarily the import name
 description     = "Functionality to manage Robot Framework testsuites"
 requires-python = ">=3.11"
 authors         = [{name = "Mai Dinh Nam Son", email = "son.maidinhnam@vn.bosch.com"}]
 readme          = "README.rst"
-license         = "Apache-2.0"
+license         = { text = "Apache-2.0" }
 keywords        = ["robotframework", "testsuites", "varianthandling", "test"]
-# 'classifiers' need to be choosen accordingly to: https://pypi.org/classifiers/
+# 'classifiers' need to be choosen according to: https://pypi.org/classifiers/
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -62,13 +63,14 @@ classifiers = [
 dependencies = [
     "robotframework>=6.1",
     "robotframework-pythonlibcore",
-    "PythonExtensionsCollection",
-    "JsonPreprocessor",
     "jsonschema",
     "regex",
     "lxml",
     "dotdict",
-    "colorama"
+    "colorama",
+    "GenPackageDoc",
+    "PythonExtensionsCollection",
+    "JsonPreprocessor"
 ]
 dynamic = ["version"]
 

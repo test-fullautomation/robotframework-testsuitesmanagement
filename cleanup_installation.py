@@ -31,9 +31,6 @@ import sys
 import logging
 import shutil
 
-from pathlib import Path
-from typing import Dict, Optional
-
 from config.CRepositoryConfig import CRepositoryConfig # provides repository and environment specific information
 
 logging.basicConfig(level=logging.INFO, stream=sys.stderr)
@@ -58,7 +55,7 @@ Methods to tidy up the installation
             self.repository_config = CRepositoryConfig(f"{__file__}")
         except Exception as ex:
             logger.critical(str(ex))
-            raise Exception(str(ex))
+            raise
 
 
     def delete_previous_build(self):
@@ -67,7 +64,8 @@ Delete build artefacts in local application folder.
         """
         setup_build_folder = self.repository_config.Get('SETUPBUILDFOLDER')
         egginfo_folder     = self.repository_config.Get('EGGINFOFOLDER')
-        for folder in (setup_build_folder, egginfo_folder):
+        dist_folder        = self.repository_config.Get('SETUPDISTFOLDER')
+        for folder in (setup_build_folder, egginfo_folder, dist_folder):
             if os.path.isdir(folder) is True:
                 try:
                     shutil.rmtree(folder)
