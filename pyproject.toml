@@ -102,6 +102,14 @@ Repository    = "https://github.com/test-fullautomation/robotframework-testsuite
 Issues        = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement/issues"
 
 # --------------------------------------------------------------------------------------------------------------
+# [project.scripts]
+# Defines command-line scripts (entry points) that are installed with your Python package.
+# Status: Optional
+#
+[project.scripts]
+robfwaio_version = "RobotFramework_TestsuitesManagement.Utils.app_config:print_bundle_version"
+
+# --------------------------------------------------------------------------------------------------------------
 # [tool.setuptools]
 # Specific settings for the setuptools backend, e.g., package discovery.
 # Defines the main package to be installed.
@@ -132,9 +140,3 @@ packages = [
 [tool.setuptools.dynamic]
 version = {attr = "RobotFramework_TestsuitesManagement.version.VERSION"} # not defined here; we take the version from source code
 
-# --------------------------------------------------------------------------------------------------------------
-# The handling of version numbers has been changed. Therefore, the following setting needs to be verified.
-# All version numbers are accessible in Python scripts and in Robot Framework tests. Do we still need
-# this script too? And which version shall be meant: RobotFramework AIO or TestsuitesManagement?
-# [project.scripts]
-# robfwaio_version = "RobotFramework_TestsuitesManagement.Config:bundle_version"

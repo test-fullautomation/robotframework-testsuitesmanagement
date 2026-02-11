@@ -220,3 +220,14 @@ Returns the location of the installer of the entire RobotFramework AIO bundle.
 
 # eof class AppConfig:
 
+# support of console scripts
+def print_bundle_version():
+    """
+Prints the version of the entire RobotFramework AIO bundle.
+    """
+    try:
+        app_config = AppConfig()
+        bundle_version = app_config.get_bundle_version()
+        print(f"{bundle_version}")
+    except Exception as ex:
+        print(f"{ex}")
