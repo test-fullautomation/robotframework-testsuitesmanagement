@@ -24,9 +24,9 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Set up Python
-          uses: actions/setup-python@v4.3.0
+          uses: actions/setup-python@v6
           with:
-            python-version: "3.9"
+            python-version: "3.13"
 
         - name: Install dependencies
           run: |
@@ -35,11 +35,26 @@ jobs:
             sudo apt-get install -y texlive-latex-*
             echo "GENDOC_LATEXPATH=$(dirname $(which pdflatex))" >> $GITHUB_ENV
             python -m pip install --upgrade build twine wheel GenPackageDoc PythonExtensionsCollection
-            python -m pip install -r ./requirements.txt
+            if [ -f "./requirements.txt" ]; then
+              python -m pip install -r ./requirements.txt
+            fi
 
         - name: Build source and wheel distributions
           run: |
-            python setup.py sdist bdist_wheel
+            if [ -d "dist" ]; then
+              rm -rf dist
+            fi
+            if [ -f "./setup.py" ]; then
+              python setup.py sdist bdist_wheel
+            elif [ -f "./pyproject.toml" ]; then
+              if [ -f "./genpackagedoc.py" ]; then
+                python genpackagedoc.py
+              fi
+              python -m build
+            else
+              echo "Error: No setup.py or pyproject.toml found for building the package."
+              exit 1
+            fi
             twine check --strict dist/*
 
         - name: Publish distribution to PyPI
