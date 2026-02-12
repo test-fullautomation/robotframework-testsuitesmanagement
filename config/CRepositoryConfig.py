@@ -101,7 +101,7 @@ class CRepositoryConfig():
         self.__dictRepositoryConfig['BUILDREQUIRES'] = toml_data["build-system"]["requires"]
         self.__dictRepositoryConfig['EXECUTIONREQUIRES'] = toml_data["project"]["dependencies"]
         self.__dictRepositoryConfig['PYTHON_REQUIRED'] = toml_data["project"]["requires-python"]
-        self.__dictRepositoryConfig['LICENSE'] = toml_data["project"]["license"]["text"]
+        self.__dictRepositoryConfig['LICENSE'] = toml_data["project"]["license"]
         self.__dictRepositoryConfig['KEYWORDS'] = toml_data["project"]["keywords"]
         # currently skipped because too much content for nice console output:
         # self.__dictRepositoryConfig['classifiers'] = toml_data["project"]["classifiers"]
