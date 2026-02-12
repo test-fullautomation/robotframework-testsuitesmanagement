@@ -113,7 +113,7 @@ This method executes a version check at low level (a token string is returned on
 
 The ``min_version`` and the ``max_version`` are checked against the ``reference_version``.
 
-If the ``reference_version`` is ``None`` (= not defined by user), the internally 
+If the ``reference_version`` is ``None`` (= not defined by user), the internally
 defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
 
 **Arguments:**
@@ -139,7 +139,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
   A token string indicating the result of the vesion check.
         """
         # -- LOW LEVEL
-        # 
+        #
         # reinit some flags
         self.__last_error = None
         app_config = None
@@ -168,7 +168,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
         if not isinstance(reference_version, str):
             self.__last_error = f"reference_version '{reference_version}' is not of expected format 'str'"
             return enVersionCheckResult.FORMAT_ERROR.value
-        
+
         # number of parts in reference version
         num_checked_part = len(reference_version.split('.'))
 
@@ -250,7 +250,7 @@ This method executes the version check at high level.
 
 The ``min_version`` and the ``max_version`` are checked against the ``reference_version``.
 
-If the ``reference_version`` is ``None`` (= not defined by user), the internally 
+If the ``reference_version`` is ``None`` (= not defined by user), the internally
 defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) will be used as reference instead.
 
 The execution includes error messages and exception handling (in opposite to the low level method ``verify_version``).
@@ -293,7 +293,7 @@ Impact is that this method influences the execution of the application that call
   Executed version check failed.
         """
         # -- HIGH LEVEL
-        # 
+        #
         # Caution: Python logger         : logger.warning
         #     But: Robot Framework logger: logger.warn
         # Because of this deviation (and because it is not really required), warning/warn is not used here.
@@ -406,7 +406,7 @@ Static method to validate the required minimum version against the reference ver
 * ``True`` or ``False``
         """
         return tuple_ref_version >= tuple_min_version
-    
+
     @staticmethod
     def validate_max_version(tuple_ref_version : tuple, tuple_max_version):
         """
@@ -431,7 +431,7 @@ Static method to validate the required maximum version against the reference ver
 * ``True`` or ``False``
         """
         return tuple_ref_version <= tuple_max_version
-    
+
     @staticmethod
     def validate_sub_version(version):
         """
@@ -474,7 +474,7 @@ Static method to validate the format of the provided sub-version and parse it in
             return tuple(list_sub_version)
         else:
             raise Exception(f"Invalid version format '{version}'")
-        
+
     @staticmethod
     def tuple_version(version):
         """
@@ -521,3 +521,14 @@ Examples: ``"1.2rc3"``, ``"1.2.1b1"``
         except Exception as error:
             raise Exception(f"{error} (within '{version}')")
 
+def get_bundle_version():
+    # Main entry point for retrieving the AIO package version.
+    try:
+        app_config = AppConfig()
+        print(app_config.get_bundle_version())
+    except Exception as ex:
+        print(f"Failed to retrieve bundle version: {ex}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    get_bundle_version()
