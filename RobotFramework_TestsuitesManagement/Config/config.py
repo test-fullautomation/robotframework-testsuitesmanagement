@@ -240,7 +240,7 @@ robot with configuration level 2.")
                         self.loaded_cfg_log['error'].append("Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!")
                         self.loaded_cfg_log['info'].append(f"* file 1: '{json_file_1}'")
                         self.loaded_cfg_log['info'].append(f"* file 2: '{json_file_2}'")
-                        self.loaded_cfg_log['info'].append(f"Please decide which one to keep and which one to remove. Both together are not allowed.") 
+                        self.loaded_cfg_log['info'].append(f"Please decide which one to keep and which one to remove. Both together are not allowed.")
                         self.loaded_cfg_log['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
                         raise Exception(f"The test execution will be aborted!")
                     elif os.path.isfile(json_file_1):
@@ -571,7 +571,7 @@ This __load_config_file_level2 method loads configuration in case config_level i
             self.loaded_cfg_log['error'].append(f"The configuration file name of variant '{self.config_name}' must not be empty.")
             self.loaded_cfg_log['error'].append(f"In file: '{os.path.abspath(self.testsuite_config)}'")
             return False
-        
+
         self.test_config_file = test_config_dir + self.test_config_file
         return True
 
@@ -648,7 +648,7 @@ This __get_user_name method gets current account name login to run the test.
         '''
 This method validates the current package version with maximum and minimum version.
 
-In case the current version is not between min and max version, then the execution of 
+In case the current version is not between min and max version, then the execution of
 testsuite is terminated with "unknown" state
         '''
         version_obj = CVersion()
@@ -725,6 +725,16 @@ testsuite is terminated with "unknown" state
 
         return
 
+def get_bundle_version():
+    '''
+Return the bundle version (RobotFramework AIO version if in use).
+
+This is a thin helper so external tools and console scripts can obtain the bundle version via
+    RobotFramework_TestsuitesManagement.Config.config:get_bundle_version
+    '''
+    app_config = AppConfig()
+    return app_config.get_bundle_version()
+
 if __name__ == "__main__":
     # small test:
     app_config = None
@@ -743,18 +753,3 @@ if __name__ == "__main__":
     except Exception as ex:
         print(f"Exception in __main__: {ex}")
     print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
