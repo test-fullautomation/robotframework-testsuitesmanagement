@@ -120,6 +120,7 @@ packages = [
     "RobotFramework_TestsuitesManagement",
     "RobotFramework_TestsuitesManagement.Config",
     "RobotFramework_TestsuitesManagement.Keywords",
+    "RobotFramework_TestsuitesManagement.short_description",
     "RobotFramework_TestsuitesManagement.Utils",
     "RobotFramework_TestsuitesManagement.Utils.Events"
 ]
