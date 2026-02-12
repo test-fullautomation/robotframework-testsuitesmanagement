@@ -521,7 +521,7 @@ Examples: ``"1.2rc3"``, ``"1.2.1b1"``
         except Exception as error:
             raise Exception(f"{error} (within '{version}')")
 
-if __name__ == "__main__":
+def get_bundle_version():
     # Main entry point for retrieving the AIO package version.
     try:
         app_config = AppConfig()
@@ -529,3 +529,6 @@ if __name__ == "__main__":
     except Exception as ex:
         print(f"Failed to retrieve bundle version: {ex}")
         sys.exit(1)
+
+if __name__ == "__main__":
+    get_bundle_version()
