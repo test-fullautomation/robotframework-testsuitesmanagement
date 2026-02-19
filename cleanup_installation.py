@@ -70,7 +70,7 @@ Delete build artefacts in local application folder.
                 try:
                     shutil.rmtree(folder)
                     logger.info(f"Deleted folder '{folder}'")
-                except Exception as ex:
+                except Exception:
                     logger.warning(f"Skipping to delete folder (in use): '{folder}'")
         return SUCCESS
     # eof def delete_previous_build():
@@ -91,7 +91,7 @@ Delete files within component installation folder under site-packages.
                     try:
                         os.remove(file_path)
                         logger.debug(f"Deleted file: '{file_path}'")
-                    except OSError as e:
+                    except OSError:
                         cnt_files_with_errors = cnt_files_with_errors + 1
                         logger.warning(f"Skipping to delete file (in use): '{file_path}'")
 
