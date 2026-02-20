@@ -6,7 +6,7 @@
                         "BUILD"         : "PYTHON -m build ."
                     },
     "setup_type" :  {
-                        "install" : [CLEANUP, GENPACKAGEDOC, INSTALL],
-                        "build"   : [GENPACKAGEDOC, BUILD]
+                        "install" : ["CLEANUP", "GENPACKAGEDOC", "INSTALL"],
+                        "build"   : ["GENPACKAGEDOC", "BUILD"]
                     }
 }
