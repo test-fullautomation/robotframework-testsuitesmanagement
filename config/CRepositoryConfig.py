@@ -29,11 +29,11 @@
 #
 # --------------------------------------------------------------------------------------------------------------
 #
-# 19.02.2026
+# 26.02.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 
-import os, sys, platform, shlex, subprocess, json
+import os, sys, site, platform, shlex, subprocess, json
 import colorama as col
 import tomllib
 
@@ -125,7 +125,7 @@ class CRepositoryConfig():
         self.__dictRepositoryConfig['URL_DOCUMENTATION'] = urls.get("Documentation", "")             # documentation URL as string
         self.__dictRepositoryConfig['URL_README'] = urls.get("Readme", "")                           # readme URL as string
         self.__dictRepositoryConfig['URL_REPOSITORY'] = urls.get("Repository", "")                   # repository URL as string
-        self.__dictRepositoryConfig['URL'] = urls.get("Repository", "") # !!! downward compatibility to older version of GenpackageDoc / to be removed later
+        self.__dictRepositoryConfig['URL'] = urls.get("Repository", "") # !!! downward compatibility to older version of GenPackageDoc / to be removed later
         self.__dictRepositoryConfig['URL_ISSUES'] = urls.get("Issues", "")                           # issues URL as string
         tool = toml_data.get("tool", {})
         setuptools = tool.get("setuptools", {})
@@ -152,16 +152,30 @@ class CRepositoryConfig():
         sPython         = CString.NormalizePath(sys.executable)
         sPythonVersion  = sys.version
 
-        sInstalledPackageFolder = None
-
-        if sPlatformSystem == "Windows":
-            sInstalledPackageFolder = f"{sPythonPath}/Lib/site-packages/" + self.__dictRepositoryConfig['PACKAGENAME']
-        elif sPlatformSystem == "Linux":
-            sInstalledPackageFolder = f"{sPythonPath}/../lib/python3.9/site-packages/" + self.__dictRepositoryConfig['PACKAGENAME']
-        else:
+        if sPlatformSystem not in ("Windows", "Linux"):
             bSuccess = False
             sResult  = f"Operating system {sPlatformSystem} ({sOSName}) not supported"
             return bSuccess, sResult
+
+        # compute path to site-packages folder
+        sSitePackagesFolder = None
+        if hasattr(site, "getsitepackages"):
+            for path in site.getsitepackages():
+                if "site-packages" in os.path.basename(path):
+                    sSitePackagesFolder = path
+        else:
+            # fallback in case of getsitepackages() is not available (assuming typical standard paths)
+            if sys.platform.startswith('win'):
+                sSitePackagesFolder = os.path.join(sys.prefix, 'Lib', 'site-packages')
+            else:
+                sSitePackagesFolder = os.path.join(sys.prefix, 'lib', f'python{sys.version_info.major}.{sys.version_info.minor}', 'site-packages')
+        if not sSitePackagesFolder:
+            bSuccess = False
+            sResult  = f"Failed to compute the site-packages folder."
+            return bSuccess, sResult
+
+        # compute path to component folder inside site-packages
+        sInstalledPackageFolder = os.path.join(sSitePackagesFolder, self.__dictRepositoryConfig['PACKAGENAME'])
 
         self.__dictRepositoryConfig['OSNAME']                 = sOSName
         self.__dictRepositoryConfig['PLATFORMSYSTEM']         = sPlatformSystem
