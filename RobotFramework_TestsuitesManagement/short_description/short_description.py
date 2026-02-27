@@ -37,7 +37,7 @@ from robot.api.deco import keyword
 class short_description:
 
     @keyword
-    def get_short_description():
+    def get_short_description(self):
         r"""
 **Meaning of "Test Suites Management"**
 
