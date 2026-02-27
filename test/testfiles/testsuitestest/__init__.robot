@@ -1,5 +1,5 @@
 # **************************************************************************************************************
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 
 *** Settings ***
 
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotFramework_TestsuitesManagement    AS    tm
 
 Suite Setup    tm.testsuite_setup    ../config/tsm-test_variants.jsonp
 

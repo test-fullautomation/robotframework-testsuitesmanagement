@@ -1,5 +1,5 @@
 # **************************************************************************************************************
-#  Copyright 2020-2025 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@
 
 # Library 'Collections' is required for keyword 'set_to_dictionary' only in this test
 Library    Collections
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
-Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
+Library    RobotFramework_TestsuitesManagement    AS    tm
+Library    RobotframeworkExtensions.Collection    AS    rf.extensions
 
 Suite Setup       tm.testsuite_setup    ./config/tsm-test_variants.jsonp
 Suite Teardown    tm.testsuite_teardown

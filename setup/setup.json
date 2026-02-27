@@ -1,0 +1,12 @@
+{
+    "setup_steps" : {
+                        "CLEANUP"       : "./cleanup_installation.py",
+                        "GENPACKAGEDOC" : "./genpackagedoc.py",
+                        "INSTALL"       : "PYTHON -m pip install -v --proxy PROXYSETTINGS .",
+                        "BUILD"         : "PYTHON -m build ."
+                    },
+    "setup_type" :  {
+                        "install" : ["CLEANUP", "GENPACKAGEDOC", "INSTALL"],
+                        "build"   : ["GENPACKAGEDOC", "BUILD"]
+                    }
+}

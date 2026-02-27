@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-# Copyright 2020-2023 Robert Bosch GmbH
+# Copyright 2020-2026 Robert Bosch GmbH
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -221,6 +221,13 @@ All names inside angle brackets are placeholders. They are replaced later by cur
 
 More details can be found in the component documentation `RobotFramework_TestsuitesManagement.pdf <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/RobotFramework_TestsuitesManagement/RobotFramework_TestsuitesManagement.pdf>`_
 "
-                  ]
+                  ],
+                   "1.0.0.;1.1.0." : [
+"
+* Usage of **Setuptools** replaced by usage of **PIP/TOML/Setuptools**.
+
+  Details about how to install the component with PIP, can be found in the `README <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/README.rst>`__
+"
+                   ]
                 }
 }

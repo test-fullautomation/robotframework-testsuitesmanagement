@@ -1,5 +1,5 @@
 # **************************************************************************************************************
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -16,9 +16,7 @@
 #
 # test_07_VERSION_CONTROL_GOODCASE.py
 #
-# XC-CT/ECA3-Queckenstedt
-#
-# 21.11.2025 - 14:11:43
+# 27.02.2026 - 11:47:03
 #
 # --------------------------------------------------------------------------------------------------------------
 

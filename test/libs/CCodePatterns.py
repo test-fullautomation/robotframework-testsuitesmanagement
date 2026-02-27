@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 #
 # CCodePatterns.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
-# 24.03.2023
+# 27.02.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ class CCodePatterns():
       """
 
       sPyTestFileHeaderPattern = """# **************************************************************************************************************
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -80,8 +80,6 @@ class CCodePatterns():
 # --------------------------------------------------------------------------------------------------------------
 #
 # ####PYTESTFILENAME####
-#
-# XC-CT/ECA3-Queckenstedt
 #
 # ####DATEOFCREATION####
 #
@@ -130,7 +128,7 @@ class ####CLASSNAME####:
       """
       """
 
-      sCopyRightRST = """.. Copyright 2020-2023 Robert Bosch GmbH
+      sCopyRightRST = """.. Copyright 2020-2026 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -154,7 +152,7 @@ class ####CLASSNAME####:
       """
       """
 
-      sCopyRightTXT = """Copyright 2020-2023 Robert Bosch GmbH
+      sCopyRightTXT = """Copyright 2020-2026 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

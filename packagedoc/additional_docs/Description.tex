@@ -1,6 +1,6 @@
 % --------------------------------------------------------------------------------------------------------------
 %
-% Copyright 2020-2024 Robert Bosch GmbH
+% Copyright 2020-2026 Robert Bosch GmbH
 
 % Licensed under the Apache License, Version 2.0 (the "License");
 % you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ are fixed. Therefore we need a more dynamic way of accessing parameters. And we 
 tests of several variants and test executions on several test benches, no changes shall be required within the test code.
 
 The outcome is that another position has to be introduced to store values for variant and test bench specific parameters.
-And a possibility has to be provided to dynamically make either the one or the other set of values vailable during the execution of
+And a possibility has to be provided to dynamically make either the one or the other set of values available during the execution of
 tests - depending on outer circumstances like "\textit{which variant?}" and "\textit{which test bench?}".
 Those dynamic configuration values are stored within separate configuration files in JSON format and the \pkg\ makes the values
 available globally during the test execution.
@@ -300,10 +300,10 @@ another parameter configuration file and another entry in the variants configura
 To activate the test suites management you have to import the \pkg\ library in the following way:
 
 \begin{robotcode}
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotFramework_TestsuitesManagement    AS    tm
 \end{robotcode}
 
-We recommend to use the \rcode{WITH NAME} option to shorten the robot code a little bit.
+We recommend to use the \rcode{AS} option to shorten the robot code a little bit.
 
 The next step is to call the \rcode{testsuite_setup} of the \pkg\ within the \rcode{Suite Setup} of your test:
 
@@ -716,7 +716,7 @@ For this purpose, \textbf{TestsuitesManagement} provides two interfaces:
 Like usual, the \textbf{TestsuitesManagement} library needs to be imported in this way:
 
 \begin{robotcode}
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
+Library    RobotFramework_TestsuitesManagement    AS    tm
 \end{robotcode}
 
 \subsection{Explicit version control of the RobotFramework AIO}

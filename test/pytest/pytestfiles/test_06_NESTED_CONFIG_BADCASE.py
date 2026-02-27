@@ -1,5 +1,5 @@
 # **************************************************************************************************************
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -16,9 +16,7 @@
 #
 # test_06_NESTED_CONFIG_BADCASE.py
 #
-# XC-CT/ECA3-Queckenstedt
-#
-# 04.07.2025 - 16:41:19
+# 27.02.2026 - 11:47:03
 #
 # --------------------------------------------------------------------------------------------------------------
 

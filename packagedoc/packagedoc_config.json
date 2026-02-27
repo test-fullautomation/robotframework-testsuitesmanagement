@@ -57,7 +57,8 @@
             "INTERFACE"      : "../###PACKAGENAME###",
             "appendix"       : "./additional_docs/Appendix.rst",
             "history"        : "./additional_docs/History.tex",
-            "DOCUMENTPARTS"  : ["introduction","description","thejsonpformat","INTERFACE","appendix","history"]
+            "DOCUMENTPARTS"  : ["introduction","description","thejsonpformat","INTERFACE","appendix","history"],
+            "EXCLUDE"        : ["short_description"]
            },
 
 # Section "PARAMS":

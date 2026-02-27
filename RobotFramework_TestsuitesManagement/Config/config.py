@@ -1,4 +1,4 @@
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -743,18 +743,3 @@ if __name__ == "__main__":
     except Exception as ex:
         print(f"Exception in __main__: {ex}")
     print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

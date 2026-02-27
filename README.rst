@@ -1,4 +1,4 @@
-.. Copyright 2020-2023 Robert Bosch GmbH
+.. Copyright 2020-2026 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -15,18 +15,17 @@
 Package Description
 ===================
 
-The **RobotFramework_TestsuitesManagement** enables users to define dynamic configuration values within separate configuration files in JSON format.
+**RobotFramework_TestsuitesManagement** allows users to define dynamic configuration values in separate JSON configuration files.
 
-These configuration values are available during test execution - but under certain conditions that can be defined by the user
-(e.g. to realize a variant handling). This means: Not all parameter values are available during test execution - only the ones
-that belong to the current test scenario.
+These configuration values are accessible during test execution, but only under conditions specified by the user (e.g., for variant handling).
+This means that not all parameter values are available during test execution - only those relevant to the current test scenario.
 
-To realize this, the **RobotFramework_TestsuitesManagement** provides the following features:
+To achieve this, **RobotFramework_TestsuitesManagement** offers the following features:
 
-* Split all possible configuration values into several JSON configuration files, with every configuration file contains a specific set of values for configuration parameter
-* Use nested imports of JSON configuration files
-* Follow up definitions in configuration files overwrite previous definitions (of the same parameter)
-* Select between several criteria to let the Robot Framework use a certain JSON configuration file
+* Splits all possible configuration values into multiple JSON configuration files, with each file containing a specific set of configuration parameters.
+* Supports nested imports of JSON configuration files.
+* Subsequent definitions in configuration files overwrite previous definitions of the same parameter.
+* Provides various criteria for selecting which JSON configuration file Robot Framework should use during test execution.
 
 How to install
 --------------
@@ -43,7 +42,7 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
 2. Installation via GitHub (recommended for developers)
 
-   * Clone the **RobotFramework_TestsuitesManagement** repository to your machine
+   * Clone the **robotframework-testsuitesmanagement** repository to your machine
 
      .. code::
 
@@ -51,39 +50,57 @@ The **RobotFramework_TestsuitesManagement** can be installed in two different wa
 
      `RobotFramework_TestsuitesManagement in GitHub <https://github.com/test-fullautomation/robotframework-testsuitesmanagement>`_
 
-   * Install dependencies
-
-     **RobotFramework_TestsuitesManagement** requires some additional Python libraries. Before you install the cloned repository sources
-     you have to install the dependencies manually. The names of all related packages you can find in the file ``requirements.txt``
-     in the repository root folder. Use pip to install them:
+   * Use the following command to install **RobotFramework_TestsuitesManagement** (executed in repository main folder):
 
      .. code::
 
-        pip install -r requirements.txt
+        python -m pip install .
 
-     Additionally install **LaTeX** (recommended: TeX Live). This is used to render the documentation.
-
-   * Configure dependencies
-
-     The installation of **RobotFramework_TestsuitesManagement** includes to generate the documentation in PDF format. This is done by
-     an application called **GenPackageDoc**, that is part of the installation dependencies (see ``requirements.txt``).
-
-     **GenPackageDoc** uses **LaTeX** to generate the documentation in PDF format. Therefore **GenPackageDoc** needs to know where to find
-     **LaTeX**. This is defined in the **GenPackageDoc** configuration file
+     Or:
 
      .. code::
 
-        packagedoc\packagedoc_config.json
+        python -m pip install --proxy <proxy> .
 
-     Before you start the installation you have to introduce the following environment variable, that is used in ``packagedoc_config.json``:
+     This command will also download and install all dependencies that are required to work with the source files in the current repository.
+     After the initial installation of **RobotFramework_TestsuitesManagement** is done, you have the following two possibilities:
 
-     - ``GENDOC_LATEXPATH`` : path to ``pdflatex`` executable
+     1. *Clean the previous installation*:
 
-   * Use the following command to install **RobotFramework_TestsuitesManagement**:
+        .. code::
+
+           python "./cleanup_installation.py"
+
+        ``cleanup_installation.py`` explicitly deletes all files and folders within the component installation folder under
+        ``site-packages`` and also deletes local build artefacts.
+
+     2. *Render the component documentation*:
+
+        .. code::
+
+           python "./genpackagedoc.py"
+
+        This would e.g. be required in case of changes in the interface of **RobotFramework_TestsuitesManagement**.
+
+        The documentation is rendered by a separate application called **GenPackageDoc**, that is part
+        of the build dependencies and runtime dependencies of **RobotFramework_TestsuitesManagement**.
+
+        **GenPackageDoc** needs to be configured. Details about how to do this, can be found in the
+        `README.rst <https://github.com/test-fullautomation/python-genpackagedoc/blob/develop/README.rst>`_
+        (sections *Install dependencies* and *Configure dependencies*).
+
+   * Use the following command to build **RobotFramework_TestsuitesManagement** (executed in repository main folder):
 
      .. code::
 
-        setup.py install
+        python -m build .
+
+     Or:
+
+     .. code::
+
+        python -m pip config set global.proxy <proxy>
+        python -m build .
 
 
 Package Documentation
@@ -126,7 +143,7 @@ Contributors
 License
 -------
 
-Copyright 2020-2023 Robert Bosch GmbH
+Copyright 2020-2026 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
