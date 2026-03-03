@@ -34,7 +34,7 @@ from jsonschema import validate
 from builtins import staticmethod
 
 import RobotFramework_TestsuitesManagement as TM
-from RobotFramework_TestsuitesManagement.Utils.struct import CStruct
+from RobotFramework_TestsuitesManagement.Utils.new_struct import CStruct
 from RobotFramework_TestsuitesManagement.Utils.version import CVersion, enVersionCheckResult
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 
