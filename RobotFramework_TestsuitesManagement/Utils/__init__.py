@@ -14,5 +14,4 @@
 
 
 from .lib_listener import LibListener
-from .new_struct import CStruct
 from .version import CVersion
