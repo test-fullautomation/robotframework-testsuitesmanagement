@@ -23,7 +23,6 @@ from robotlibcore import DynamicCore
 from enum import Enum
 from RobotFramework_TestsuitesManagement.Utils import LibListener
 from RobotFramework_TestsuitesManagement.Keywords import (CSetupKeywords, CGeneralKeywords)
-from RobotFramework_TestsuitesManagement.short_description.short_description import short_description
 from RobotFramework_TestsuitesManagement.version import VERSION as LIBRARY_VERSION
 
 
@@ -43,7 +42,7 @@ Details about how to install can be found in the
         self.timeout = timeout
         self._running_on_failure_keyword = False
         self.run_on_failure_keyword = None # will update later
-        libraries = [CSetupKeywords(), CGeneralKeywords(), short_description()]
+        libraries = [CSetupKeywords(), CGeneralKeywords()]
         self.ROBOT_LIBRARY_LISTENER = LibListener()
         self._running_keyword = None
         DynamicCore.__init__(self, libraries)
