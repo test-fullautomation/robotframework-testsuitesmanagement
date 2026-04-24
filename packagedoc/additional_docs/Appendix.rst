@@ -12,21 +12,43 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-**About this package:**
+**About ###PACKAGENAME###:**
 
-.. table:: Package setup
-   :widths: auto
+/VS
 
-   ==================  =========================
-   Setup parameter               Value
-   ==================  =========================
-   Name                ###PACKAGENAME###
-   Version             ###PACKAGEVERSION###
-   Date                ###PACKAGEDATE###
-   Description         ###DESCRIPTION###
-   Package URL         `###REPOSITORYNAME### <###URL###>`_
-   Author              ###AUTHOR###
-   Email               ###AUTHOREMAIL###
-   License             ###LICENSE###
-   Python required     ###PYTHON_REQUIRED###
-   ==================  =========================
+*Author*
+
+   ###AUTHOR### (###AUTHOREMAIL###)
+
+*Version*
+
+   ###PACKAGEVERSION### (###PACKAGEDATE###)
+
+*Short Description*
+
+   ###DESCRIPTION###
+
+*Homepage*
+
+   `###REPOSITORYNAME### <###URL_HOMEPAGE###>`_
+
+*Documentation*
+
+   `Readme <###URL_README###>`_/NL
+   `Main Documentation <###URL_DOCUMENTATION###>`_
+
+*Sources*
+
+   `Repository <###URL_REPOSITORY###>`_
+
+*Issues*
+
+   `Issues <###URL_ISSUES###>`_
+
+*Python required*
+
+   ###PYTHON_REQUIRED###
+
+*License*
+
+   ###LICENSE###
