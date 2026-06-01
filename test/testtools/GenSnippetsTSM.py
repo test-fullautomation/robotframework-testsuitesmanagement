@@ -1,6 +1,6 @@
 ﻿# **************************************************************************************************************
 #
-#  Copyright 2020-2024 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@
 #
 # **************************************************************************************************************
 #
-VERSION      = "0.3.0"
-VERSION_DATE = "11.04.2024"
+VERSION      = "0.3.1"
+VERSION_DATE = "27.02.2026"
 #
 # **************************************************************************************************************
 
@@ -817,8 +817,8 @@ class CSnippets():
 
 Library    Collections
 Library    BuiltIn
-Library    RobotFramework_TestsuitesManagement    WITH NAME    tm
-Library    RobotframeworkExtensions.Collection    WITH NAME    rf.extensions
+Library    RobotFramework_TestsuitesManagement    AS    tm
+Library    RobotframeworkExtensions.Collection    AS    rf.extensions
 
 Suite Setup    tm.testsuite_setup    ./config/variants_config.json
 

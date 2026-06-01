@@ -1,4 +1,4 @@
-.. Copyright 2020-2023 Robert Bosch GmbH
+.. Copyright 2020-2026 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -12,26 +12,43 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-**About this package:**
+**About ###PACKAGENAME###:**
 
-.. table:: Package setup
-   :widths: auto
+/VS
 
-   ==================  =========================
-   Setup parameter               Value
-   ==================  =========================
-   Name                ###PACKAGENAME###
-   Version             ###PACKAGEVERSION###
-   Date                ###PACKAGEDATE###
-   Description         ###DESCRIPTION###
-   Package URL         `###REPOSITORYNAME### <###URL###>`_
-   Author              ###AUTHOR###
-   Email               ###AUTHOREMAIL###
-   Language            ###PROGRAMMINGLANGUAGE###
-   License             ###LICENCE###
-   OS                  ###OPERATINGSYSTEM###
-   Python required     ###PYTHONREQUIRES###
-   Development status  ###DEVELOPMENTSTATUS###
-   Intended audience   ###INTENDEDAUDIENCE###
-   Topic               ###TOPIC###
-   ==================  =========================
+*Author*
+
+   ###AUTHOR### (###AUTHOREMAIL###)
+
+*Version*
+
+   ###PACKAGEVERSION### (###PACKAGEDATE###)
+
+*Short Description*
+
+   ###DESCRIPTION###
+
+*Homepage*
+
+   `###REPOSITORYNAME### <###URL_HOMEPAGE###>`_
+
+*Documentation*
+
+   `Readme <###URL_README###>`_/NL
+   `Main Documentation <###URL_DOCUMENTATION###>`_
+
+*Sources*
+
+   `Repository <###URL_REPOSITORY###>`_
+
+*Issues*
+
+   `Issues <###URL_ISSUES###>`_
+
+*Python required*
+
+   ###PYTHON_REQUIRED###
+
+*License*
+
+   ###LICENSE###

@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2025 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -220,3 +220,14 @@ Returns the location of the installer of the entire RobotFramework AIO bundle.
 
 # eof class AppConfig:
 
+# support of console scripts
+def print_bundle_version():
+    """
+Prints the version of the entire RobotFramework AIO bundle.
+    """
+    try:
+        app_config = AppConfig()
+        bundle_version = app_config.get_bundle_version()
+        print(f"{bundle_version}")
+    except Exception as ex:
+        print(f"{ex}")

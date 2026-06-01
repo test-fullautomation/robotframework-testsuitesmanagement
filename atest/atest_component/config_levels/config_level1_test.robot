@@ -1,5 +1,5 @@
 # **************************************************************************************************************
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 # **************************************************************************************************************
 #
 *** Settings ***
-Library    ../../resources/atest_libs.py    WITH NAME    testlibs
+Library    ../../resources/atest_libs.py    AS    testlibs
 
 *** Test Cases ***
 Test Config Level_1_01

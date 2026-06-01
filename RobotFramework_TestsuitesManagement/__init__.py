@@ -1,4 +1,4 @@
-#  Copyright 2020-2025 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -28,8 +28,11 @@ from RobotFramework_TestsuitesManagement.version import VERSION as LIBRARY_VERSI
 
 class RobotFramework_TestsuitesManagement(DynamicCore):
     '''
-The RobotFramework_TestsuitesManagement enables users to define dynamic configuration values within 
+The **RobotFramework_TestsuitesManagement** enables users to define dynamic configuration values within 
 separate configuration files in JSONP format.
+
+Details about how to install can be found in the
+`README.rst <https://github.com/test-fullautomation/robotframework-testsuitesmanagement/blob/develop/README.rst>`_
     '''
     ROBOT_LIBRARY_DOC_FORMAT = 'reST'
     ROBOT_LIBRARY_SCOPE      = 'GLOBAL'
