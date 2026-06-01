@@ -32,9 +32,9 @@ import json
 import copy
 from jsonschema import validate
 from builtins import staticmethod
+from types import SimpleNamespace
 
 import RobotFramework_TestsuitesManagement as TM
-from RobotFramework_TestsuitesManagement.Utils.new_struct import CStruct
 from RobotFramework_TestsuitesManagement.Utils.version import CVersion, enVersionCheckResult
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 
@@ -119,7 +119,7 @@ for None so that subclasses will create their own __single objects.
         self.local_config      = ''
         self.buitin_variables  = []
         self.config_level      = TM.CConfigLevel.LEVEL_4
-        self.meta_data         = CStruct(
+        self.meta_data         = SimpleNamespace(
                                     version_sw = None,
                                     version_hw     = None,
                                     version_test   = None,
