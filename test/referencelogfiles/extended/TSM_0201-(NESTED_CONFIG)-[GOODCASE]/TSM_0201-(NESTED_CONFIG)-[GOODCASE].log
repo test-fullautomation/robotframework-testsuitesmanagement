@@ -73,7 +73,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 20251121 09:59:56.959 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG} | PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) ]
 20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/1) > {WelcomeString} [STR]  :  'Hello... Robot Framework is running now!'
-20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '1.0.0'
+20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/2) > {Maximum_version} [STR]  :  '2.0.0'
 20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/3) > {Minimum_version} [STR]  :  '0.6.0'
 20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/4) > {Project} [STR]  :  'tsm-test_config_toplevel'
 20251121 09:59:56.959 - INFO - PARAMS-VERIFIKATION : ({CONFIG} / tsm-testfile-04) : [DOTDICT] (6/5) > {TargetName} [STR]  :  'Device_01'

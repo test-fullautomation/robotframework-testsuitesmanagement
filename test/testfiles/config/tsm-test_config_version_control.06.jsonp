@@ -17,7 +17,7 @@
   "WelcomeString"   : "Hello... Robot Framework is running now!",
 
   // Minimum_version invalid (blanks only)
-  "Maximum_version" : "1.0.0",
+  "Maximum_version" : "2.0.0",
   "Minimum_version" : "   ",
 
   "Project"         : "tsm-test_config_version_control.06",
