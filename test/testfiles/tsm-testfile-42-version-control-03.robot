@@ -40,6 +40,6 @@ Test Case tsm-testfile-42-version-control-03
     rf.extensions.pretty_print    ${teststring_variant}    PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-42-version-control-03)
     rf.extensions.pretty_print    ${teststring_bench}      PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-42-version-control-03)
     # version control
-    ${result}=    tm.check_version    max_version=0.20.0
+    ${result}=    tm.check_version    max_version=1.20.0
     rf.extensions.pretty_print    ${result}      PARAMS-VERIFIKATION : ({result} / tsm-testfile-42-version-control-03)
     should_be_equal    ${result}    ${True}
