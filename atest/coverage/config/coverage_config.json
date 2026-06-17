@@ -2,7 +2,7 @@
     "COVERAGE": [
         {
             "STATE": "run",
-            "COMMANDLINE": "-m robot ./atest",
+            "COMMANDLINE": "-m robot ./atest --exclude atestExcluded",
             "CURRENT_WORKING_DIR": "",
             "CONFIG": "./atest/coverage/config/.coveragerc"
         },
