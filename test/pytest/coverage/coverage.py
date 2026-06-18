@@ -65,6 +65,7 @@ sPlatformSystem = platform.system()
 sPythonPath     = CString.NormalizePath(os.path.dirname(sys.executable))
 sPython         = CString.NormalizePath(sys.executable)
 sPythonVersion  = sys.version
+sCoverage       = shutil.which("coverage")
 
 sFilter = None
 if sPlatformSystem == "Windows":
@@ -88,6 +89,15 @@ hCoverageJsonFile = open(sCoverageJsonFile, encoding="utf-8")
 oCoverageConfig = json.load(hCoverageJsonFile)
 hCoverageJsonFile.close()
 
+sCoverageJsonFileAbs = CString.NormalizePath(f"{sComponentPath}/test/pytest/coverage/config/.coveragerc")
+sCoverageStartupPath = CString.NormalizePath(f"{sComponentPath}/test/pytest/coverage/startup")
+
+if sCoverage is None:
+   bSuccess = False
+   sResult  = "The 'coverage' executable is not available in PATH"
+   printerror(CString.FormatResult(sThisScriptName, bSuccess, sResult))
+   sys.exit(ERROR)
+
 listCoverage = oCoverageConfig.get('COVERAGE')
 for coverage in listCoverage:
    sState       = coverage['STATE']
@@ -95,12 +105,26 @@ for coverage in listCoverage:
    sCWD         = coverage['CURRENT_WORKING_DIR']
    sConfig      = coverage['CONFIG']
 
+   if sState in ["report", "html"]:
+      sCombineCmdLine = f'"{sCoverage}" combine --rcfile="{sConfig}"'
+      print(f"Now executing command line:\n{sCombineCmdLine}")
+      print()
+      listCombineCmdLineParts = shlex.split(sCombineCmdLine)
+      nCombineReturn = subprocess.call(listCombineCmdLineParts,
+                                       cwd=CString.NormalizePath(f"{sComponentPath}/{sCWD}"))
+      print()
+      print(f"[{sThisScriptName}] : Subprocess COVERAGE COMBINE returned {nCombineReturn}")
+      print()
+
    # -- prepare the command line for run the test coverage
    listCmdLineParts = []
-   listCmdLineParts.append(f"\"{sPython}\"")
-   listCmdLineParts.append(f"-m coverage {sState}")
-   listCmdLineParts.append(f"--rcfile=\"{sConfig}\"")
-   listCmdLineParts.append(f"{sCommandline}")
+   if sCommandline.strip().startswith("pytest "):
+      listCmdLineParts.append(f"{sCommandline}")
+   else:
+      listCmdLineParts.append(f"\"{sCoverage}\"")
+      listCmdLineParts.append(f"{sState}")
+      listCmdLineParts.append(f"--rcfile=\"{sConfig}\"")
+      listCmdLineParts.append(f"{sCommandline}")
 
    sCmdLine = " ".join(listCmdLineParts)
    del listCmdLineParts
@@ -113,7 +137,8 @@ for coverage in listCoverage:
 
    nReturn = ERROR
    try:
-      nReturn = subprocess.call(listCmdLineParts, cwd=CString.NormalizePath(f"\"{sComponentPath}/{sCWD}\""))
+      nReturn = subprocess.call(listCmdLineParts,
+                                cwd=CString.NormalizePath(f"{sComponentPath}/{sCWD}"))
       print()
       print(f"[{sThisScriptName}] : Subprocess PYTEST returned {nReturn}")
    except Exception as ex:

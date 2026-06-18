@@ -2,7 +2,7 @@
     "COVERAGE": [
         {
             "STATE": "run",
-            "COMMANDLINE": "./component_test.py",
+            "COMMANDLINE": "pytest ./pytest/pytestfiles",
             "CURRENT_WORKING_DIR": "test",
             "CONFIG": "./pytest/coverage/config/.coveragerc"
         },
