@@ -50,6 +50,7 @@ jobs:
             fi
             if [ -f "./pyproject.toml" ]; then
               if [ -f "./genpackagedoc.py" ]; then
+                python -m pip install .
                 python genpackagedoc.py
               fi
               python -m build
