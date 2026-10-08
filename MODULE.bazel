@@ -39,7 +39,7 @@ bazel_dep(name = "repo_rules", version = "0.1.0")
 
 local_path_override(
     module_name = "repo_rules",
-    path = "../tools/repo_rules",
+    path = "../build/tools/repo_rules",
 )
 
 # =============================================================================
