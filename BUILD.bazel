@@ -1,0 +1,44 @@
+# =============================================================================
+# robotframework-testsuitesmanagement/BUILD.bazel
+# =============================================================================
+#
+# This package now builds "RobotFramework_TestsuitesManagement" directly
+# from its GitHub repository source (see MODULE.bazel: variant_git_repository
+# "robotframework_testsuitesmanagement_src") instead of installing the
+# published PyPI package. Its transitive PyPI dependencies (robotframework,
+# robotframework-pythonlibcore, jsonschema, regex, lxml, dotdict, colorama,
+# GenPackageDoc, PythonExtensionsCollection, JsonPreprocessor, ...) continue
+# to be installed the normal, hash-verified way from
+# requirements_lock.txt.
+#
+# Proxy Configuration:
+#   Proxy settings are inherited from the environment via .bazelrc.
+#   Set HTTPS_PROXY, HTTP_PROXY, and NO_PROXY environment variables
+#   before running bazel build.
+#
+# =============================================================================
+
+load("@pip_utils//:pip_install.bzl", "pip_install_from_source")
+
+# Build/install RobotFramework_TestsuitesManagement from the GitHub source
+# tree fetched via variant_git_repository (see MODULE.bazel), together with
+# its transitive PyPI dependencies (robotframework, robotframework-
+# pythonlibcore, jsonschema, regex, lxml, dotdict, colorama, GenPackageDoc,
+# PythonExtensionsCollection, JsonPreprocessor, ...) - ONE single Bazel
+# target (see pip_install.bzl's pip_install_from_source "requirements"
+# attribute doc for why this no longer requires a separate sibling
+# pip_install_dir "_deps" target).
+pip_install_from_source(
+    name         = "robotframework_testsuitesmanagement",
+    source       = "@robotframework_testsuitesmanagement_src//:src",
+    requirements = "requirements_lock.txt",
+    interpreter  = "@python//:python_interpreter",
+    runtime      = "@python//:python_runtime",
+    # No explicit env needed - proxy variables are inherited via --action_env
+    # NOTE: Public visibility required - granting "@installer//:__pkg__" here
+    # would force this module to bazel_dep(installer), but installer already
+    # bazel_dep's this module, creating a circular dependency. Access control
+    # is enforced via the one-directional bazel_dep graph instead.
+    visibility = ["//visibility:public"],
+)
+
