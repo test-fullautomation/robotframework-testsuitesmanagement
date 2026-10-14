@@ -18,62 +18,22 @@
 #
 # =============================================================================
 
-load("@pip_utils//:pip_install.bzl", "pip_install_dir", "pip_install_from_source")
+load("@pip_utils//:pip_install.bzl", "pip_install_from_source")
 
-# Install RobotFramework_TestsuitesManagement's transitive PyPI dependencies.
-pip_install_dir(
-    name = "robotframework_testsuitesmanagement_deps",
-    requirements = "requirements_lock.txt",
-    interpreter = "@python//:python_interpreter",
-    runtime = "@python//:python_runtime",
-    # IMPORTANT: Cannot use the default out_dir ("site-packages") here.
-    # Both this target AND the pip_install_from_source target below live in
-    # the SAME Bazel package (this BUILD.bazel), so declaring two actions
-    # that both output a directory literally named "site-packages" would
-    # make Bazel reject the build with "conflicting actions" (two actions
-    # producing the same output path within the same package). Using a
-    # distinct name here avoids the collision; stage_files.py's
-    # extract_relative_path() has been extended to recognize this
-    # "site-packages-deps" name and still merge it into the same
-    # Python/Lib/site-packages destination as every other component.
-    out_dir = "site-packages-deps",
-    # Same collision reason as out_dir above: this rule now ALSO declares a
-    # second output directory (scripts_dir, for console-script launchers -
-    # see pip_install.bzl). Its default ("py-scripts") would likewise
-    # collide with the pip_install_from_source target below, so it needs
-    # its own distinct name here too. stage_files.py's
-    # extract_relative_path() recognizes "py-scripts-deps" via the same
-    # startswith("py-scripts") matching used for "site-packages-deps".
-    scripts_dir = "py-scripts-deps",
-    # Same collision reason again: this rule now ALSO declares a THIRD
-    # output directory (wheels_dir, for pre-built .whl files - see the
-    # "Solution 2b" note in pip_install.bzl). Its default ("py-wheels")
-    # would likewise collide with the pip_install_from_source target
-    # below. stage_files.py's extract_relative_path() recognizes
-    # "py-wheels-deps" via the same startswith("py-wheels") matching used
-    # for "site-packages-deps"/"py-scripts-deps".
-    wheels_dir = "py-wheels-deps",
-    # NOTE: Public visibility required (same rationale as the
-    # "robotframework_testsuitesmanagement" target below): unlike
-    # python-extensions-collection/python-genpackagedoc (whose own
-    # transitive deps are pulled in indirectly via other components'
-    # requirements files), RobotFramework_TestsuitesManagement is bundled
-    # directly as its own top-level installer component (see
-    # components/config/variant_config.bzl's INSTALLER_VARIANTS), so its
-    # "_deps" target's output (robotlibcore, jsonschema, lxml, ...) must
-    # ALSO be listed there explicitly and therefore needs to be visible
-    # from the "installer" module.
-    visibility = ["//visibility:public"],
-)
-
-# Build/install RobotFramework_TestsuitesManagement itself from the GitHub
-# source tree fetched via variant_git_repository (see MODULE.bazel).
+# Build/install RobotFramework_TestsuitesManagement from the GitHub source
+# tree fetched via variant_git_repository (see MODULE.bazel), together with
+# its transitive PyPI dependencies (robotframework, robotframework-
+# pythonlibcore, jsonschema, regex, lxml, dotdict, colorama, GenPackageDoc,
+# PythonExtensionsCollection, JsonPreprocessor, ...) - ONE single Bazel
+# target (see pip_install.bzl's pip_install_from_source "requirements"
+# attribute doc for why this no longer requires a separate sibling
+# pip_install_dir "_deps" target).
 pip_install_from_source(
-    name        = "robotframework_testsuitesmanagement",
-    source      = "@robotframework_testsuitesmanagement_src//:src",
-    interpreter = "@python//:python_interpreter",
-    runtime     = "@python//:python_runtime",
-    deps_dir    = ":robotframework_testsuitesmanagement_deps",
+    name         = "robotframework_testsuitesmanagement",
+    source       = "@robotframework_testsuitesmanagement_src//:src",
+    requirements = "requirements_lock.txt",
+    interpreter  = "@python//:python_interpreter",
+    runtime      = "@python//:python_runtime",
     # No explicit env needed - proxy variables are inherited via --action_env
     # NOTE: Public visibility required - granting "@installer//:__pkg__" here
     # would force this module to bazel_dep(installer), but installer already
