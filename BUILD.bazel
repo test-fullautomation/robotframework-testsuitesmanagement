@@ -42,3 +42,21 @@ pip_install_from_source(
     visibility = ["//visibility:public"],
 )
 
+# Linux counterpart of the target above, for debian_package-based installer
+# variants (see build/config/variant_config.bzl's "rf_testsuitesmanagement_linux").
+# Same source tree and requirements_lock.txt, just resolved/installed
+# against the Linux Python runtime instead of the Windows one.
+#
+# ponytail: same caveat as py_modules_set_1_linux (see that target's
+# comment) - requirements_lock.txt was hash-pinned against Windows wheels;
+# a real Linux rollout needs its own requirements_lock_linux.txt. This
+# target validates the debian_package build pipeline structurally.
+pip_install_from_source(
+    name         = "robotframework_testsuitesmanagement_linux",
+    source       = "@robotframework_testsuitesmanagement_src//:src",
+    requirements = "requirements_lock.txt",
+    interpreter  = "@python//:python_interpreter_linux",
+    runtime      = "@python//:python_runtime_linux",
+    visibility = ["//visibility:public"],
+)
+
