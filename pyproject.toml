@@ -18,7 +18,7 @@
 #
 # TOML file used for component installation
 #
-# Version 0.1.0 / 12.02.2026
+# Version 0.2.0 / 05.10.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -34,7 +34,7 @@
 [build-system]
 # 'requires' specifies the dependencies necessary for the build process (meaning the conversion of source code into an installable distribution)
 requires      = ["setuptools>=80.9.0", "wheel", "build", "docutils>=0.22.4", "robotframework>=6.1", "robotframework-pythonlibcore",
-                 "regex", "jsonschema", "GenPackageDoc", "PythonExtensionsCollection", "JsonPreprocessor"] # need to be strengthened later to: "GenPackageDoc>=0.43.0"
+                 "regex", "jsonschema", "PythonExtensionsCollection", "JsonPreprocessor"]
 build-backend = "build_backend"
 backend-path  = ["."] # the repository main folder
 
@@ -68,7 +68,6 @@ dependencies = [
     "lxml",
     "dotdict",
     "colorama",
-    "GenPackageDoc",
     "PythonExtensionsCollection",
     "JsonPreprocessor"
 ]
@@ -106,8 +105,12 @@ Issues        = "https://github.com/test-fullautomation/robotframework-testsuite
 # Defines command-line scripts (entry points) that are installed with your Python package.
 # Status: Optional
 #
-[project.scripts]
-robfwaio_version = "RobotFramework_TestsuitesManagement.Utils.app_config:print_bundle_version"
+# [project.scripts]
+# robfwaio_version = "RobotFramework_TestsuitesManagement.Utils.app_config:print_bundle_version"
+# 06.10.2026:
+# In future (Bazel builds), the bundle information will not be handled in the TestsuitesManagement any more.
+# The corresponding TestsuitesManagement code needs to be adapted.
+# The corresponding TestsuitesManagement selftest needs to be adapted.
 
 # --------------------------------------------------------------------------------------------------------------
 # [tool.setuptools]

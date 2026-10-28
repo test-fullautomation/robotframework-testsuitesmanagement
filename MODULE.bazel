@@ -1,0 +1,90 @@
+module(
+    name = "robotframework_testsuitesmanagement",
+    version = "0.11.0",
+)
+
+# This module installs pip packages using the portable Python distribution
+# owned by the "python" module. It depends on "python" to access the
+# re-exported interpreter and runtime targets (@python//:python_interpreter,
+# @python//:python_runtime), since the underlying "@python_portable_windows"
+# repository is private to the "python" module and not visible here.
+#
+# Bzlmod isolates each module's dependency graph, so this module must declare
+# bazel_dep(python) itself even though the root module ("build") already does.
+bazel_dep(name = "python", version = "0.1.0")
+
+local_path_override(
+    module_name = "python",
+    path = "../product-tools/python",
+)
+
+# Needed for py_binary (used by the "update_requirements_lock"/
+# "update_requirements_lock_linux" bazel-run targets in this module's own
+# BUILD.bazel - see pip_utils/update_requirements_lock.py). Bzlmod requires
+# each module to declare its own direct dependencies even though the root
+# module ("build") already declares rules_python - same rationale as
+# build/config/MODULE.bazel's identical bazel_dep.
+bazel_dep(name = "rules_python", version = "1.7.0")
+
+# Shared pip_install.bzl rules (pip_install_dir)
+bazel_dep(name = "pip_utils", version = "0.1.0")
+
+local_path_override(
+    module_name = "pip_utils",
+    path = "../product-tools/pip_utils",
+)
+
+# Shared variant_git_repository.bzl rule (Tag vs. Branch selection) - see
+# tools/repo_rules. Used below instead of the plain
+# @bazel_tools//tools/build_defs/repo:git.bzl git_repository, so that this
+# component supports BOTH a fixed, hermetic release tag (production/
+# installer builds) AND a tracked branch HEAD (Daily Build/Test), selected
+# at build time via --repo_env=BUILD_VARIANT=tagged|daily. See
+# documentation/docs/Bazel_Git_Repository_Tag_vs_Branch.md for the full
+# rationale.
+bazel_dep(name = "repo_rules", version = "0.1.0")
+
+local_path_override(
+    module_name = "repo_rules",
+    path = "../build/tools/repo_rules",
+)
+
+# =============================================================================
+# GitHub Source
+# =============================================================================
+#
+# RobotFramework_TestsuitesManagement is built directly from its GitHub
+# repository.
+#
+#   https://github.com/test-fullautomation/robotframework-testsuitesmanagement
+#
+# variant_git_repository (see tools/repo_rules/variant_git_repository.bzl)
+# fetches this source tree at build time. By default (BUILD_VARIANT unset
+# or "tagged") it pins to a FIXED tag for reproducibility. When
+# BUILD_VARIANT=daily is passed via --repo_env (see .bazelrc's ":daily"
+# config), it instead tracks the "daily_branch" branch's current HEAD -
+# intentionally non-hermetic, for Daily Build / Daily Test pipelines only.
+# NEVER use the "daily" variant for production/installer builds - see
+# documentation/docs/Bazel_Git_Repository_Tag_vs_Branch.md.
+#
+variant_git_repository = use_repo_rule(
+    "@repo_rules//:variant_git_repository.bzl",
+    "variant_git_repository",
+)
+
+variant_git_repository(
+    name = "robotframework_testsuitesmanagement_src",
+    remote = "https://github.com/test-fullautomation/robotframework-testsuitesmanagement.git",
+    # Used when --config=tagged is passed (BUILD_VARIANT=tagged) and no
+    # RELEASE_TAG_OVERRIDE is set.
+    #
+    # To build against a DIFFERENT tag without editing this file, override
+    # it on the command line instead:
+    #   bazel build --config=tagged --repo_env=RELEASE_TAG_OVERRIDE=rel/aio/1.0.1.18 //...
+    release_tag = "rel/aio/1.0.1.18",
+    # Used when BUILD_VARIANT=daily (the project default - no --config
+    # needed, see build/.bazelrc) - tracks this branch's current HEAD at
+    # fetch time. Intentionally non-hermetic; Daily Build/Test only.
+    daily_branch = "develop",
+    build_file_content = """filegroup(name = "src", srcs = glob(["**"], exclude = [".git/**"]), visibility = ["//visibility:public"])""",
+)
