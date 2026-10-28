@@ -2,13 +2,12 @@
 # robotframework-testsuitesmanagement/BUILD.bazel
 # =============================================================================
 #
-# This package now builds "RobotFramework_TestsuitesManagement" directly
-# from its GitHub repository source (see MODULE.bazel: variant_git_repository
-# "robotframework_testsuitesmanagement_src") instead of installing the
-# published PyPI package. Its transitive PyPI dependencies (robotframework,
-# robotframework-pythonlibcore, jsonschema, regex, lxml, dotdict, colorama,
-# GenPackageDoc, PythonExtensionsCollection, JsonPreprocessor, ...) continue
-# to be installed the normal, hash-verified way from
+# This package builds "RobotFramework_TestsuitesManagement" directly from
+# its GitHub repository source (see MODULE.bazel: variant_git_repository
+# "robotframework_testsuitesmanagement_src"). Its transitive PyPI
+# dependencies (robotframework, robotframework-pythonlibcore, jsonschema,
+# regex, lxml, dotdict, colorama, GenPackageDoc, PythonExtensionsCollection,
+# JsonPreprocessor, ...) are installed the normal, hash-verified way from
 # requirements_lock.txt.
 #
 # Proxy Configuration:
@@ -19,15 +18,8 @@
 # =============================================================================
 
 load("@pip_utils//:pip_install.bzl", "pip_install_from_source")
+load("@rules_python//python:defs.bzl", "py_binary")
 
-# Build/install RobotFramework_TestsuitesManagement from the GitHub source
-# tree fetched via variant_git_repository (see MODULE.bazel), together with
-# its transitive PyPI dependencies (robotframework, robotframework-
-# pythonlibcore, jsonschema, regex, lxml, dotdict, colorama, GenPackageDoc,
-# PythonExtensionsCollection, JsonPreprocessor, ...) - ONE single Bazel
-# target (see pip_install.bzl's pip_install_from_source "requirements"
-# attribute doc for why this no longer requires a separate sibling
-# pip_install_dir "_deps" target).
 pip_install_from_source(
     name         = "robotframework_testsuitesmanagement",
     source       = "@robotframework_testsuitesmanagement_src//:src",
@@ -42,15 +34,9 @@ pip_install_from_source(
     visibility = ["//visibility:public"],
 )
 
-# Linux counterpart of the target above, for debian_package-based installer
-# variants (see build/config/variant_config.bzl's "rf_testsuitesmanagement_linux").
+# Linux counterpart of the target above, for debian_package-based installer variants.
 # Same source tree and requirements_lock.txt, just resolved/installed
 # against the Linux Python runtime instead of the Windows one.
-#
-# ponytail: same caveat as py_modules_set_1_linux (see that target's
-# comment) - requirements_lock.txt was hash-pinned against Windows wheels;
-# a real Linux rollout needs its own requirements_lock_linux.txt. This
-# target validates the debian_package build pipeline structurally.
 pip_install_from_source(
     name         = "robotframework_testsuitesmanagement_linux",
     source       = "@robotframework_testsuitesmanagement_src//:src",
@@ -60,3 +46,77 @@ pip_install_from_source(
     visibility = ["//visibility:public"],
 )
 
+# =============================================================================
+# requirements_lock.txt maintenance ("bazel run", NOT part of "bazel build")
+# =============================================================================
+# Regenerates this component's hash-pinned lock file via pip-compile
+# (pip-tools), replacing the previous manual, outside-of-Bazel invocation:
+#   python -m piptools compile --allow-unsafe --generate-hashes \
+#       pyproject.toml requirements_build_extras.txt -o requirements_lock.txt
+#
+# Deliberately a "bazel run" py_binary, NOT a build action - see
+# pip_utils/update_requirements_lock.py's module docstring for the full
+# rationale (pip-compile needs network access and re-resolves against
+# PyPI's current state, the opposite of hermetic; the result must be
+# reviewed/committed like any other source file, not silently regenerated
+# on every build).
+#
+# Two targets, one per platform, because pip-compile's result (which
+# platform-conditional packages/hashes get pinned) depends on which
+# interpreter it actually runs under:
+#   bazel run //:update_requirements_lock          # Windows lock file
+#   bazel run //:update_requirements_lock_linux     # Linux lock file -
+#                                                    # run this ON A LINUX
+#                                                    # HOST (same portable
+#                                                    # Linux interpreter
+#                                                    # this component's own
+#                                                    # "_linux" target
+#                                                    # above uses).
+#
+py_binary(
+    name = "update_requirements_lock",
+    srcs = ["@pip_utils//:update_requirements_lock.py"],
+    main = "@pip_utils//:update_requirements_lock.py",
+    # Precompilation disabled: rules_python's precompile step declares the
+    # generated .pyc as a SIBLING of the source file, under the SOURCE
+    # file's OWN package directory (here: @pip_utils, since srcs/main point
+    # at a file in that separate module, not this one) - Bazel rejects
+    # this with "is not under package directory ..." for any target whose
+    # srcs live in a different package than the target itself. This
+    # one-off maintenance script gains nothing from precompilation anyway
+    # (run rarely, via "bazel run", never on a hot path).
+    precompile = "disabled",
+    data = [
+        "@python//:python_interpreter",
+        "pyproject.toml",
+        "requirements_build_extras.txt",
+    ],
+    args = [
+        "--interpreter=$(location @python//:python_interpreter)",
+        "--component-dir=robotframework-testsuitesmanagement",
+        "--output=requirements_lock.txt",
+        "pyproject.toml",
+        "requirements_build_extras.txt",
+    ],
+)
+
+py_binary(
+    name = "update_requirements_lock_linux",
+    srcs = ["@pip_utils//:update_requirements_lock.py"],
+    main = "@pip_utils//:update_requirements_lock.py",
+    # See update_requirements_lock's identical comment above.
+    precompile = "disabled",
+    data = [
+        "@python//:python_interpreter_linux",
+        "pyproject.toml",
+        "requirements_build_extras.txt",
+    ],
+    args = [
+        "--interpreter=$(location @python//:python_interpreter_linux)",
+        "--component-dir=robotframework-testsuitesmanagement",
+        "--output=requirements_lock.txt",  # see NOTE above
+        "pyproject.toml",
+        "requirements_build_extras.txt",
+    ],
+    target_compatible_with = ["@platforms//os:linux"],
+)
