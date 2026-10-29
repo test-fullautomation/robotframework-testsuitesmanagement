@@ -412,9 +412,6 @@ robot with configuration level 2.")
 
         json_dotdict = DotDict(json_config_data)
         BuiltIn().set_global_variable("${CONFIG}", json_dotdict)
-        if len(jpp_obj.dUpdatedParams) > 0:
-            for param in jpp_obj.dUpdatedParams:
-                logger.info(f"The parameter '{param}' is updated")
 
     def __set_global_variable(self, key, value):
         '''
