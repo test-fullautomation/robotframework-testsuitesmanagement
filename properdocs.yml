@@ -1,0 +1,123 @@
+# ProperDocs configuration for RobotFramework_TestsuitesManagement
+#
+# Build:   properdocs build      (output: build/site)
+# Preview: properdocs serve
+#
+# Requirements:
+#   pip install properdocs mkdocs-material pymdown-extensions
+
+site_name: RobotFramework_TestsuitesManagement
+site_description: Configuration and variant handling for Robot Framework test suites based on JSON (JSONP) configuration files.
+site_author: Robert Bosch GmbH
+copyright: Copyright &copy; 2020-2026 Robert Bosch GmbH - Apache License 2.0
+
+repo_name: test-fullautomation/robotframework-testsuitesmanagement
+repo_url: https://github.com/test-fullautomation/robotframework-testsuitesmanagement
+edit_uri: edit/develop/doc/
+
+docs_dir: doc
+site_dir: build/site
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Introduction: getting-started/introduction.md
+      - Installation: getting-started/installation.md
+      - Quick start: getting-started/quick-start.md
+  - User guide:
+      - Meaning of "Test Suites Management": user-guide/meaning.md
+      - Content of configuration files: user-guide/configuration-files.md
+      - Activation of Test Suites Management: user-guide/activation.md
+      - Configuration levels: user-guide/configuration-levels.md
+      - Variants selection: user-guide/variants-selection.md
+      - Local configuration: user-guide/local-configuration.md
+      - Priority of configuration parameters: user-guide/priority.md
+      - Nested configuration files: user-guide/nested-configuration.md
+      - Overwritten parameters: user-guide/overwritten-parameters.md
+      - Naming convention: user-guide/naming-convention.md
+      - Version control: user-guide/version-control.md
+      - Runtime information: user-guide/runtime-information.md
+      - IDE support: user-guide/ide-support.md
+      - Troubleshooting: user-guide/troubleshooting.md
+  - The JSONP format:
+      - Overview: jsonp-format/index.md
+      - Standard JSON format: jsonp-format/standard-json.md
+      - Boolean and null values: jsonp-format/boolean-null.md
+      - Comments: jsonp-format/comments.md
+      - Import of JSON files: jsonp-format/imports.md
+      - Overwriting parameters: jsonp-format/overwriting-parameters.md
+      - dotdict notation: jsonp-format/dotdict-notation.md
+      - Dynamic key names: jsonp-format/dynamic-key-names.md
+      - Implicit creation of dictionaries: jsonp-format/implicit-creation.md
+      - Python inline code: jsonp-format/python-inline-code.md
+      - Special characters within key names: jsonp-format/special-characters.md
+      - Byte sequences: jsonp-format/byte-sequences.md
+      - Cheat sheet: jsonp-format/cheat-sheet.md
+  - Reference:
+      - Keywords: reference/keywords.md
+      - Python API: reference/python-api.md
+  - Appendix:
+      - FAQ: appendix/faq.md
+      - History: appendix/history.md
+      - About: appendix/about.md
+  - For Developers:
+      - developers/index.md
+      - Startup sequence: developers/startup-sequence.md
+      - Modules in detail: developers/modules.md
+      - Build, test and document: developers/build-and-test.md

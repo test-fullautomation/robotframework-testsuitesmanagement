@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:08:49.349410" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:08:50.434508" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
+<msg time="2026-10-29T15:08:50.434765" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg time="2026-10-29T15:08:50.434863" level="ERROR">In file: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
+<msg time="2026-10-29T15:08:50.435092" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2026-10-29T15:08:50.427955" elapsed="0.007433">Not possible to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
+<doc>tsm-testfile-02</doc>
+<status status="FAIL" start="2026-10-29T15:08:50.435644" elapsed="0.000647">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:08:50.436835" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:08:50.436648" elapsed="0.000240"/>
+</kw>
+<status status="FAIL" start="2026-10-29T15:08:49.350525" elapsed="1.086402">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-02" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-02</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-29T15:08:50.434508" level="ERROR">Expecting property name enclosed in double quotes: line 3 column 4 (char 104)</msg>
+<msg time="2026-10-29T15:08:50.434765" level="ERROR">Nearby: '...  valid for all variants and all test benches",\n   I_AM_SYNTAX_ERROR }} ...'</msg>
+<msg time="2026-10-29T15:08:50.434863" level="ERROR">In file: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_common_with_syntax_error.jsonp'</msg>
+</errors>
+</robot>

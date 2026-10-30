@@ -1,0 +1,6 @@
+variable-files = [
+  "RobotFramework_TestsuitesManagement.ide_variables:config/variants.jsonp:variant1"
+]
+
+[tool.robotcode-analyze.cache]
+ignored-variables = ["RobotFramework_TestsuitesManagement.ide_variables"]

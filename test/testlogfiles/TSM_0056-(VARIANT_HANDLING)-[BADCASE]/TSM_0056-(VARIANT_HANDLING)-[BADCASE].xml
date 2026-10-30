@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:08:57.261781" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-01" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:08:58.211745" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.</msg>
+<msg time="2026-10-29T15:08:58.211834" level="ERROR">---&gt; A variant configuration file must be available when executing robot with configuration level 2.</msg>
+<msg time="2026-10-29T15:08:58.211926" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2026-10-29T15:08:58.211421" elapsed="0.000602">Not possible to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
+<doc>tsm-testfile-01</doc>
+<status status="FAIL" start="2026-10-29T15:08:58.212106" elapsed="0.000523">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:08:58.213058" level="INFO">SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:08:58.212911" elapsed="0.000187"/>
+</kw>
+<status status="FAIL" start="2026-10-29T15:08:57.262866" elapsed="0.950264">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-01" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-01</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-29T15:08:58.211745" level="ERROR">Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.</msg>
+<msg time="2026-10-29T15:08:58.211834" level="ERROR">---&gt; A variant configuration file must be available when executing robot with configuration level 2.</msg>
+</errors>
+</robot>

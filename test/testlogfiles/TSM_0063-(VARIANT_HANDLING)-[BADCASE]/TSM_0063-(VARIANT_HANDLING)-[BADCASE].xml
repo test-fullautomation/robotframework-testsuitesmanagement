@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:09:11.204595" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-09-Err-3" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-09-err-3.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:09:12.233166" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg time="2026-10-29T15:09:12.233269" level="ERROR">The variant 'default' is not defined in 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
+<msg time="2026-10-29T15:09:12.233310" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
+<msg time="2026-10-29T15:09:12.233399" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<arg>./config/tsm-test_variants_err_3.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2026-10-29T15:09:12.231142" elapsed="0.002347">Not possible to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-09-err-3" line="32">
+<doc>tsm-testfile-09-err-3</doc>
+<status status="FAIL" start="2026-10-29T15:09:12.233618" elapsed="0.000602">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:09:12.234839" level="INFO">SUITE 'Tsm-Testfile-09-Err-3' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:09:12.234643" elapsed="0.000239"/>
+</kw>
+<status status="FAIL" start="2026-10-29T15:09:11.205714" elapsed="1.029205">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-09-Err-3" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-09-Err-3</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-29T15:09:12.233166" level="ERROR">Testsuite management - Loading configuration level 2 failed!</msg>
+<msg time="2026-10-29T15:09:12.233269" level="ERROR">The variant 'default' is not defined in 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.</msg>
+<msg time="2026-10-29T15:09:12.233310" level="ERROR">Please find the suitable variant in this list: 'variant1', </msg>
+</errors>
+</robot>

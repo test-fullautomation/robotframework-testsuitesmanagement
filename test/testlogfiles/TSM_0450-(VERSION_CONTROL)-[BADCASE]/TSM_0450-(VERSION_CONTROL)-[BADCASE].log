@@ -1,0 +1,35 @@
+==============================================================================
+2026-10-29 15:10:07.072365 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2026-10-29 15:10:08.191558 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:10:08.198753 - ERROR - Maximum_version: Invalid version format 'I am not a valid version' (within 'I am not a valid version')
+2026-10-29 15:10:08.198862 - ERROR - In configuration: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.05.jsonp'
+2026-10-29 15:10:08.198967 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:10:08.199072 - DEBUG - Exception: Invalid version format 'I am not a valid version'
+
+During handling of the above exception, another exception occurred:
+
+Exception: Invalid version format 'I am not a valid version' (within 'I am not a valid version')
+
+During handling of the above exception, another exception occurred:
+
+Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:10:08.199090 - INFO - +- END SETUP: tm.Testsuite Setup (0.007532 s)
+------------------------------------------------------------------------------
+2026-10-29 15:10:08.199196 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2026-10-29 15:10:08.199749 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000553 s)
+------------------------------------------------------------------------------
+2026-10-29 15:10:08.200066 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:10:08.200238 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:10:08.200285 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000219 s)
+==============================================================================
+2026-10-29 15:10:08.200322 - INFO - + END SUITE: Tsm-Testfile-02 (1.127957 s)
+==============================================================================

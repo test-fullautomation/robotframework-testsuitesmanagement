@@ -1,0 +1,28 @@
+==============================================================================
+2026-10-29 15:09:26.981195 - INFO - + START SUITE: Tsm-Testfile-01
+==============================================================================
+2026-10-29 15:09:27.936181 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2026-10-29 15:09:27.939439 - ERROR - Loading local config failed with file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp
+2026-10-29 15:09:27.939568 - ERROR - ---> The mandatory 'WelcomeString' element of configuration file is found in local config file
+2026-10-29 15:09:27.939685 - ERROR - ---> Wrong local config file was chosen, please check!!!
+2026-10-29 15:09:27.939843 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:27.939967 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:27.939988 - INFO - +- END SETUP: tm.Testsuite Setup (0.003807 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:27.940109 - INFO - +- START TEST: Test Case tsm-testfile-01
+------------------------------------------------------------------------------
+2026-10-29 15:09:27.940705 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000596 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:27.941019 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:27.941182 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:27.941227 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000208 s)
+==============================================================================
+2026-10-29 15:09:27.941259 - INFO - + END SUITE: Tsm-Testfile-01 (0.960064 s)
+==============================================================================

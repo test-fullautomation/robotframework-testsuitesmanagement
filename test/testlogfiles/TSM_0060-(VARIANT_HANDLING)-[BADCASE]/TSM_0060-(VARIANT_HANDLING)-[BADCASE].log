@@ -1,0 +1,28 @@
+==============================================================================
+2026-10-29 15:09:05.104973 - INFO - + START SUITE: Tsm-Testfile-07-Err-1
+==============================================================================
+2026-10-29 15:09:06.152398 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_1.jsonp ]
+2026-10-29 15:09:06.154517 - ERROR - Expecting property name enclosed in double quotes: line 6 column 3 (char 126)
+2026-10-29 15:09:06.154645 - ERROR - Nearby: '...             "path": "./config/"\n             },\n  I_AM_SYNTAX_ERROR }} ...'
+2026-10-29 15:09:06.154691 - ERROR - In file: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_variants_err_1.jsonp'
+2026-10-29 15:09:06.154793 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:06.154880 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:06.154897 - INFO - +- END SETUP: tm.Testsuite Setup (0.002499 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:06.155027 - INFO - +- START TEST: Test Case tsm-testfile-07-err-1
+------------------------------------------------------------------------------
+2026-10-29 15:09:06.155621 - INFO - +- END TEST: Test Case tsm-testfile-07-err-1 (0.000594 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:06.155978 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:06.156169 - INFO - SUITE 'Tsm-Testfile-07-Err-1' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:06.156218 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.00024 s)
+==============================================================================
+2026-10-29 15:09:06.156255 - INFO - + END SUITE: Tsm-Testfile-07-Err-1 (1.051282 s)
+==============================================================================

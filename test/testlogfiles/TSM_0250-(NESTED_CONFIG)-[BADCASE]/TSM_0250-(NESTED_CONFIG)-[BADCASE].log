@@ -1,0 +1,31 @@
+==============================================================================
+2026-10-29 15:09:34.981637 - INFO - + START SUITE: Tsm-Testfile-03
+==============================================================================
+2026-10-29 15:09:36.037594 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:09:36.044132 - ERROR - Cyclic import detection: The file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+2026-10-29 15:09:36.044253 - ERROR - In file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp
+2026-10-29 15:09:36.044413 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:36.044541 - DEBUG - Exception: Cyclic import detection: The file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_cyclic.1.jsonp' imports itself.
+
+During handling of the above exception, another exception occurred:
+
+Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:36.044562 - INFO - +- END SETUP: tm.Testsuite Setup (0.006968 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:36.044674 - INFO - +- START TEST: Test Case tsm-testfile-03
+------------------------------------------------------------------------------
+2026-10-29 15:09:36.045235 - INFO - +- END TEST: Test Case tsm-testfile-03 (0.000561 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:36.045550 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:36.045725 - INFO - SUITE 'Tsm-Testfile-03' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:36.045770 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.00022 s)
+==============================================================================
+2026-10-29 15:09:36.045806 - INFO - + END SUITE: Tsm-Testfile-03 (1.064169 s)
+==============================================================================

@@ -1,0 +1,59 @@
+==============================================================================
+2026-10-29 15:09:42.859105 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2026-10-29 15:09:43.923100 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:09:43.929949 - INFO - Set suite metadata 'project' to value 'tsm-test_config_version_control.03'.
+2026-10-29 15:09:43.930035 - INFO - Set suite metadata 'machine' to value 'HI-C-005QR'.
+2026-10-29 15:09:43.931698 - INFO - Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.
+2026-10-29 15:09:43.931763 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2026-10-29 15:09:43.931830 - INFO - Set suite metadata 'reference_version' to value '0.11.0'.
+2026-10-29 15:09:43.931892 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.
+2026-10-29 15:09:43.931930 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2026-10-29 15:09:43.931961 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2026-10-29 15:09:43.931990 - INFO - Set suite metadata 'version_test' to value 'None'.
+2026-10-29 15:09:43.932380 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2026-10-29 15:09:43.932618 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2026-10-29 15:09:43.933040 - INFO - ${teststring_variant} = I am the 'version_control_03' configuration of tsm-test
+2026-10-29 15:09:43.933366 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.99.0', 'Project': 'tsm-test_config_version_control.03', 'TargetName': 'Device_01', 'params': {}}
+2026-10-29 15:09:43.933405 - INFO - Running with configuration level 2 (variant name in command line)
+2026-10-29 15:09:43.933533 - INFO - RobotFramework_TestsuitesManagement version check passed!
+2026-10-29 15:09:43.933558 - INFO - Loaded configuration file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_version_control.03.jsonp'
+2026-10-29 15:09:43.933576 - INFO - Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'
+2026-10-29 15:09:43.933591 - INFO - Number of test suites: 1
+2026-10-29 15:09:43.933606 - INFO - Total number of testcases: 1
+2026-10-29 15:09:43.933647 - INFO - +- END SETUP: tm.Testsuite Setup (0.010547 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:43.933762 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2026-10-29 15:09:43.934363 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2026-10-29 15:09:43.934461 - INFO - Test Count: 1
+2026-10-29 15:09:43.934498 - INFO - +-- END SETUP: tm.Testcase Setup (0.000135 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:43.934596 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) ]
+2026-10-29 15:09:43.934909 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-02) : [STR]  :  'tsm-test_config_version_control.03'
+2026-10-29 15:09:43.934968 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000372 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:43.935048 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) ]
+2026-10-29 15:09:43.935154 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2026-10-29 15:09:43.935201 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000153 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:43.935273 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) ]
+2026-10-29 15:09:43.935424 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-02) : [STR]  :  'I am the 'version_control_03' configuration of tsm-test'
+2026-10-29 15:09:43.935471 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000198 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:43.935542 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) ]
+2026-10-29 15:09:43.935636 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-02) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2026-10-29 15:09:43.935675 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000133 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:43.935786 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2026-10-29 15:09:43.935966 - INFO - TEST 'Test Case tsm-testfile-02' finished with result 'PASS'
+2026-10-29 15:09:43.936021 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000235 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:43.936056 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.002294 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:43.936338 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:43.936462 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'PASS'
+2026-10-29 15:09:43.936493 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000155 s)
+==============================================================================
+2026-10-29 15:09:43.936518 - INFO - + END SUITE: Tsm-Testfile-02 (1.077413 s)
+==============================================================================

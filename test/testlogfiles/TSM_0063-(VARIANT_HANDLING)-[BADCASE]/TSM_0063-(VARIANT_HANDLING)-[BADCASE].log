@@ -1,0 +1,28 @@
+==============================================================================
+2026-10-29 15:09:11.205714 - INFO - + START SUITE: Tsm-Testfile-09-Err-3
+==============================================================================
+2026-10-29 15:09:12.231142 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_3.jsonp ]
+2026-10-29 15:09:12.233166 - ERROR - Testsuite management - Loading configuration level 2 failed!
+2026-10-29 15:09:12.233269 - ERROR - The variant 'default' is not defined in 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\config\tsm-test_variants_err_3.jsonp'.
+2026-10-29 15:09:12.233310 - ERROR - Please find the suitable variant in this list: 'variant1',
+2026-10-29 15:09:12.233399 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:12.233475 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:12.233489 - INFO - +- END SETUP: tm.Testsuite Setup (0.002347 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:12.233618 - INFO - +- START TEST: Test Case tsm-testfile-09-err-3
+------------------------------------------------------------------------------
+2026-10-29 15:09:12.234220 - INFO - +- END TEST: Test Case tsm-testfile-09-err-3 (0.000602 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:12.234643 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:12.234839 - INFO - SUITE 'Tsm-Testfile-09-Err-3' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:12.234882 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000239 s)
+==============================================================================
+2026-10-29 15:09:12.234919 - INFO - + END SUITE: Tsm-Testfile-09-Err-3 (1.029205 s)
+==============================================================================

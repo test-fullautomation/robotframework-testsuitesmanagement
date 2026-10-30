@@ -1,0 +1,74 @@
+==============================================================================
+2026-10-29 15:09:46.806659 - INFO - + START SUITE: Tsm-Testfile-40-Version-Control-01
+==============================================================================
+2026-10-29 15:09:47.878338 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:09:47.885687 - INFO - Set suite metadata 'project' to value 'tsm-test_config_variant1'.
+2026-10-29 15:09:47.885786 - INFO - Set suite metadata 'machine' to value 'HI-C-005QR'.
+2026-10-29 15:09:47.887267 - INFO - Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.
+2026-10-29 15:09:47.887357 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2026-10-29 15:09:47.887398 - INFO - Set suite metadata 'reference_version' to value '0.11.0'.
+2026-10-29 15:09:47.887432 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.
+2026-10-29 15:09:47.887466 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2026-10-29 15:09:47.887498 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2026-10-29 15:09:47.887529 - INFO - Set suite metadata 'version_test' to value 'None'.
+2026-10-29 15:09:47.887990 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2026-10-29 15:09:47.888222 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2026-10-29 15:09:47.888438 - INFO - ${teststring_variant} = I am the 'variant1' configuration of tsm-test
+2026-10-29 15:09:47.888767 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}
+2026-10-29 15:09:47.888827 - INFO - Running with configuration level 2 (variant name in command line)
+2026-10-29 15:09:47.888967 - INFO - RobotFramework_TestsuitesManagement version check passed!
+2026-10-29 15:09:47.888991 - INFO - Loaded configuration file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'
+2026-10-29 15:09:47.889008 - INFO - Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'
+2026-10-29 15:09:47.889023 - INFO - Number of test suites: 1
+2026-10-29 15:09:47.889037 - INFO - Total number of testcases: 1
+2026-10-29 15:09:47.889083 - INFO - +- END SETUP: tm.Testsuite Setup (0.010745 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:47.889202 - INFO - +- START TEST: Test Case tsm-testfile-40-version-control-01
+------------------------------------------------------------------------------
+2026-10-29 15:09:47.889855 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2026-10-29 15:09:47.889968 - INFO - Test Count: 1
+2026-10-29 15:09:47.890009 - INFO - +-- END SETUP: tm.Testcase Setup (0.000154 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.890114 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-40-version-control-01) ]
+2026-10-29 15:09:47.890427 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-40-version-control-01) : [STR]  :  'tsm-test_config_variant1'
+2026-10-29 15:09:47.890483 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000369 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.890560 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-40-version-control-01) ]
+2026-10-29 15:09:47.890656 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-40-version-control-01) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2026-10-29 15:09:47.890699 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000139 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.890817 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-40-version-control-01) ]
+2026-10-29 15:09:47.890922 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-40-version-control-01) : [STR]  :  'I am the 'variant1' configuration of tsm-test'
+2026-10-29 15:09:47.890962 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000145 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.891025 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-40-version-control-01) ]
+2026-10-29 15:09:47.891117 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-40-version-control-01) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2026-10-29 15:09:47.891156 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000131 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.891222 - INFO - +-- START KEYWORD: tm.Check Version [ ]
+2026-10-29 15:09:47.891347 - INFO - Version check is skipped because both 'min_version' and 'max_version' are set to None (RobotFramework_TestsuitesManagement)
+2026-10-29 15:09:47.891407 - INFO - ${result} = True
+2026-10-29 15:09:47.891426 - INFO - +-- END KEYWORD: tm.Check Version (0.000204 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.891484 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${result} | PARAMS-VERIFIKATION : ({result} / tsm-testfile-40-version-control-01) ]
+2026-10-29 15:09:47.891580 - INFO - PARAMS-VERIFIKATION : ({result} / tsm-testfile-40-version-control-01) : [BOOL]  :  True
+2026-10-29 15:09:47.891619 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000135 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.891775 - INFO - +-- START KEYWORD: BuiltIn.Should Be Equal [ ${result} | ${True} ]
+2026-10-29 15:09:47.891867 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+2026-10-29 15:09:47.891891 - INFO - +-- END KEYWORD: BuiltIn.Should Be Equal (0.000116 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:09:47.891988 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2026-10-29 15:09:47.892122 - INFO - TEST 'Test Case tsm-testfile-40-version-control-01' finished with result 'PASS'
+2026-10-29 15:09:47.892153 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000165 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:47.892184 - INFO - +- END TEST: Test Case tsm-testfile-40-version-control-01 (0.002982 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:47.892497 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:47.892626 - INFO - SUITE 'Tsm-Testfile-40-Version-Control-01' finished with result 'PASS'
+2026-10-29 15:09:47.892658 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000161 s)
+==============================================================================
+2026-10-29 15:09:47.892683 - INFO - + END SUITE: Tsm-Testfile-40-Version-Control-01 (1.086024 s)
+==============================================================================

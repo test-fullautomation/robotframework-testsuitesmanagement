@@ -1,0 +1,79 @@
+==============================================================================
+2026-10-29 15:10:46.222547 - INFO - + START SUITE: Tsm-Testfile-24-Composite Expressions 1
+==============================================================================
+2026-10-29 15:10:47.253764 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:10:47.262365 - INFO - Set suite metadata 'project' to value 'tsm-test_config_composite_expressions_1'.
+2026-10-29 15:10:47.262457 - INFO - Set suite metadata 'machine' to value 'HI-C-005QR'.
+2026-10-29 15:10:47.264499 - INFO - Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.
+2026-10-29 15:10:47.264574 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2026-10-29 15:10:47.264643 - INFO - Set suite metadata 'reference_version' to value '0.11.0'.
+2026-10-29 15:10:47.264708 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.
+2026-10-29 15:10:47.264748 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2026-10-29 15:10:47.264781 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2026-10-29 15:10:47.264812 - INFO - Set suite metadata 'version_test' to value 'None'.
+2026-10-29 15:10:47.265241 - INFO - ${teststring_common} = I am the common teststring valid for all variants and all test benches
+2026-10-29 15:10:47.265481 - INFO - ${teststring_bench} = I am the teststring containing the default value for all test benches
+2026-10-29 15:10:47.265707 - INFO - ${teststring_variant} = I am the variant 'composite_expressions_1' configuration of tsm-test
+2026-10-29 15:10:47.265942 - INFO - ${teststring_1} = prefix.teststring_1.value.suffix_1.suffix_2.suffix_3
+2026-10-29 15:10:47.266237 - INFO - ${teststring_2} = teststring_2.value.suffix_1
+2026-10-29 15:10:47.266548 - INFO - ${teststring_3} = teststring_3.value.5
+2026-10-29 15:10:47.266825 - INFO - ${testdict} = {'key': {'teststring_4': 'teststring_4.initial_value.suffix_1.suffix_2'}}
+2026-10-29 15:10:47.267087 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_composite_expressions_1', 'TargetName': 'Device_01', ...
+2026-10-29 15:10:47.267122 - INFO - Running with configuration level 2 (variant name in command line)
+2026-10-29 15:10:47.267242 - INFO - RobotFramework_TestsuitesManagement version check passed!
+2026-10-29 15:10:47.267265 - INFO - Loaded configuration file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_composite_expressions_1.jsonp'
+2026-10-29 15:10:47.267282 - INFO - Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'
+2026-10-29 15:10:47.267297 - INFO - Number of test suites: 1
+2026-10-29 15:10:47.267311 - INFO - Total number of testcases: 1
+2026-10-29 15:10:47.267351 - INFO - +- END SETUP: tm.Testsuite Setup (0.013587 s)
+------------------------------------------------------------------------------
+2026-10-29 15:10:47.267455 - INFO - +- START TEST: Test Case tsm-testfile-24-composite_expressions_1
+------------------------------------------------------------------------------
+2026-10-29 15:10:47.268040 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2026-10-29 15:10:47.268131 - INFO - Test Count: 1
+2026-10-29 15:10:47.268169 - INFO - +-- END SETUP: tm.Testcase Setup (0.000129 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.268263 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${CONFIG.Project} | PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.268562 - INFO - PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'tsm-test_config_composite_expressions_1'
+2026-10-29 15:10:47.268616 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000353 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.268691 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_common} | PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.268832 - INFO - PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the common teststring valid for all variants and all test benches'
+2026-10-29 15:10:47.268874 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000183 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.268942 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_variant} | PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.269032 - INFO - PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the variant 'composite_expressions_1' configuration of tsm-test'
+2026-10-29 15:10:47.269071 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000129 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.269130 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_bench} | PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.269210 - INFO - PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'I am the teststring containing the default value for all test benches'
+2026-10-29 15:10:47.269246 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000116 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.269305 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_1} | PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.269389 - INFO - PARAMS-VERIFIKATION : ({teststring_1} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'prefix.teststring_1.value.suffix_1.suffix_2.suffix_3'
+2026-10-29 15:10:47.269427 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000122 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.269488 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_2} | PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.269568 - INFO - PARAMS-VERIFIKATION : ({teststring_2} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_2.value.suffix_1'
+2026-10-29 15:10:47.269604 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000116 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.269662 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${teststring_3} | PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.269739 - INFO - PARAMS-VERIFIKATION : ({teststring_3} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_3.value.5'
+2026-10-29 15:10:47.269774 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000112 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.269896 - INFO - +-- START KEYWORD: rf.extensions.Pretty Print [ ${testdict.key.teststring_4} | PARAMS-VERIFIKATION : ({testdict.key.teststring_4} / tsm-testfile-24-composite_expressions_1) ]
+2026-10-29 15:10:47.270129 - INFO - PARAMS-VERIFIKATION : ({testdict.key.teststring_4} / tsm-testfile-24-composite_expressions_1) : [STR]  :  'teststring_4.initial_value.suffix_1.suffix_2'
+2026-10-29 15:10:47.270171 - INFO - +-- END KEYWORD: rf.extensions.Pretty Print (0.000275 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:10:47.270277 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2026-10-29 15:10:47.270412 - INFO - TEST 'Test Case tsm-testfile-24-composite_expressions_1' finished with result 'PASS'
+2026-10-29 15:10:47.270445 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000168 s)
+------------------------------------------------------------------------------
+2026-10-29 15:10:47.270475 - INFO - +- END TEST: Test Case tsm-testfile-24-composite_expressions_1 (0.00302 s)
+------------------------------------------------------------------------------
+2026-10-29 15:10:47.270738 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:10:47.270859 - INFO - SUITE 'Tsm-Testfile-24-Composite Expressions 1' finished with result 'PASS'
+2026-10-29 15:10:47.270889 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000151 s)
+==============================================================================
+2026-10-29 15:10:47.270914 - INFO - + END SUITE: Tsm-Testfile-24-Composite Expressions 1 (1.048367 s)
+==============================================================================

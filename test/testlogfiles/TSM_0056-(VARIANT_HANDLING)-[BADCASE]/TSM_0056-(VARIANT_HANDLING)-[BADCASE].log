@@ -1,0 +1,27 @@
+==============================================================================
+2026-10-29 15:08:57.262866 - INFO - + START SUITE: Tsm-Testfile-01
+==============================================================================
+2026-10-29 15:08:58.211421 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2026-10-29 15:08:58.211745 - ERROR - Not able to get a configuration for variant 'variant1' because of a variant configuration file is not available.
+2026-10-29 15:08:58.211834 - ERROR - ---> A variant configuration file must be available when executing robot with configuration level 2.
+2026-10-29 15:08:58.211926 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:08:58.212007 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:08:58.212023 - INFO - +- END SETUP: tm.Testsuite Setup (0.000602 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:58.212106 - INFO - +- START TEST: Test Case tsm-testfile-01
+------------------------------------------------------------------------------
+2026-10-29 15:08:58.212629 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000523 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:58.212911 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:08:58.213058 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:08:58.213098 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000187 s)
+==============================================================================
+2026-10-29 15:08:58.213130 - INFO - + END SUITE: Tsm-Testfile-01 (0.950264 s)
+==============================================================================

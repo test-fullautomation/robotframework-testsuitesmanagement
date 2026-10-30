@@ -1,0 +1,26 @@
+==============================================================================
+2026-10-29 15:09:07.088060 - INFO - + START SUITE: Tsm-Testfile-08-Err-2
+==============================================================================
+2026-10-29 15:09:08.250594 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants_err_2.jsonp ]
+2026-10-29 15:09:08.253547 - ERROR - Did not find configuration file: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING_FILE.jsonp'!
+2026-10-29 15:09:08.253720 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:08.253831 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:08.253850 - INFO - +- END SETUP: tm.Testsuite Setup (0.003256 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:08.253971 - INFO - +- START TEST: Test Case tsm-testfile-08-err-2
+------------------------------------------------------------------------------
+2026-10-29 15:09:08.254521 - INFO - +- END TEST: Test Case tsm-testfile-08-err-2 (0.00055 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:08.254829 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:08.255006 - INFO - SUITE 'Tsm-Testfile-08-Err-2' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:08.255051 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000222 s)
+==============================================================================
+2026-10-29 15:09:08.255085 - INFO - + END SUITE: Tsm-Testfile-08-Err-2 (1.167025 s)
+==============================================================================

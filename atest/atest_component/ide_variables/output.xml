@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-30T14:14:44.787862" rpa="false" schemaversion="5">
+<suite id="s1" name="Ide Variables Runtime" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\atest\atest_component\ide_variables\testsuites\ide_variables_runtime.robot">
+<kw name="Testsuite Setup" owner="testsuites" type="SETUP">
+<msg time="2026-10-30T14:14:46.011345" level="INFO">Set suite metadata 'project' to value 'G3g-variant_1'.</msg>
+<msg time="2026-10-30T14:14:46.011455" level="INFO">Set suite metadata 'machine' to value 'HI-C-005QR'.</msg>
+<msg time="2026-10-30T14:14:46.013222" level="INFO">Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.</msg>
+<msg time="2026-10-30T14:14:46.013286" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2026-10-30T14:14:46.013328" level="INFO">Set suite metadata 'reference_version' to value '0.11.0'.</msg>
+<msg time="2026-10-30T14:14:46.013358" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.</msg>
+<msg time="2026-10-30T14:14:46.013386" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2026-10-30T14:14:46.013411" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2026-10-30T14:14:46.013437" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2026-10-30T14:14:46.013949" level="INFO">${gGlobalIntParam} = 1</msg>
+<msg time="2026-10-30T14:14:46.014176" level="INFO">${gGlobalFloatParam} = 1.332</msg>
+<msg time="2026-10-30T14:14:46.014401" level="INFO">${gGlobalString} = This is a string</msg>
+<msg time="2026-10-30T14:14:46.014651" level="INFO">${gGlobalStructure} = {'general': 'general'}</msg>
+<msg time="2026-10-30T14:14:46.014968" level="INFO">${dSUT} = {'tuner': {'am': {'frequency': {'bSupported': True, 'nMin_kHz': 522, 'nMax_kHz': 1611, 'nStep_kHz': 9, 'nDefault_kHz': 531}}, 'fm': {'frequency': {'bSupported': False, 'nMin_MHz': 87.5, 'nMax_MHz': 10...</msg>
+<msg time="2026-10-30T14:14:46.015195" level="INFO">${TestErrorFileName} = variant_0_RobotTestError.log</msg>
+<msg time="2026-10-30T14:14:46.015444" level="INFO">${TestLogfileName} = variant_0_RobotTestLog.log</msg>
+<msg time="2026-10-30T14:14:46.017714" level="INFO">${Testparms} = {'Testglobal': {'TesttestParams1': 'testParams1', 'TesttestParams2': 'testParams2'}}</msg>
+<msg time="2026-10-30T14:14:46.018147" level="INFO">${gPreprolIntParam} = 1</msg>
+<msg time="2026-10-30T14:14:46.018460" level="INFO">${gPreproFloatParam} = 1.332</msg>
+<msg time="2026-10-30T14:14:46.018733" level="INFO">${gPreproString} = This is a string</msg>
+<msg time="2026-10-30T14:14:46.019034" level="INFO">${gPreproStructure} = {'general': 'general', 'testing': 19, 'check01': 'This is a string'}</msg>
+<msg time="2026-10-30T14:14:46.019347" level="INFO">${gPreproTest} = {'Param01': 10, 'Param02': {'checkParam01': 2, 'checkParam02': 5}, 'checkParam': 'For testing purpose'}</msg>
+<msg time="2026-10-30T14:14:46.019656" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... ROBFW is running now!', 'version': {'majorversion': '0', 'minorversion': '7', 'patchversion': '0'}, 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'TargetName': '...</msg>
+<msg time="2026-10-30T14:14:46.019694" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2026-10-30T14:14:46.019858" level="INFO">RobotFramework_TestsuitesManagement version check passed!</msg>
+<msg time="2026-10-30T14:14:46.019890" level="INFO">Loaded configuration file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/atest/general_config/robot_config_variant_1.json'</msg>
+<msg time="2026-10-30T14:14:46.019904" level="INFO">Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\atest\atest_component\ide_variables\testsuites\'</msg>
+<msg time="2026-10-30T14:14:46.019920" level="INFO">Number of test suites: 1</msg>
+<msg time="2026-10-30T14:14:46.019929" level="INFO">Total number of testcases: 1</msg>
+<arg>.../general_config/testsuites_config.json</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="PASS" start="2026-10-30T14:14:45.865243" elapsed="0.154731"/>
+</kw>
+<test id="s1-t1" name="Test IDE Variables Do Not Block Runtime Configuration" line="26">
+<kw name="Testcase Setup" owner="testsuites" type="SETUP">
+<msg time="2026-10-30T14:14:46.020878" level="INFO">Test Count: 1</msg>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.020787" elapsed="0.000124"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${CONFIG.Project}</arg>
+<arg>G3g-variant_1</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.021089" elapsed="0.000433"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${gGlobalString}</arg>
+<arg>This is a string</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.021612" elapsed="0.000350"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${dSUT.tuner.fm.frequency.nMax_MHz}</arg>
+<arg>${dSUT}[tuner][fm][frequency][nMax_MHz]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.022131" elapsed="0.000392"/>
+</kw>
+<kw name="Testcase Teardown" owner="testsuites" type="TEARDOWN">
+<msg time="2026-10-30T14:14:46.022794" level="INFO">TEST 'Test IDE Variables Do Not Block Runtime Configuration' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.022652" elapsed="0.000175"/>
+</kw>
+<status status="PASS" start="2026-10-30T14:14:46.020085" elapsed="0.002778"/>
+</test>
+<kw name="Testsuite Teardown" owner="testsuites" type="TEARDOWN">
+<msg time="2026-10-30T14:14:46.023454" level="INFO">SUITE 'Ide Variables Runtime' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-30T14:14:46.023295" elapsed="0.000193"/>
+</kw>
+<meta name="machine">HI-C-005QR</meta>
+<meta name="project">G3g-variant_1</meta>
+<meta name="reference_app_name">RobotFramework_TestsuitesManagement</meta>
+<meta name="reference_version">0.11.0</meta>
+<meta name="tester">Pollerspoeck Thomas (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="PASS" start="2026-10-30T14:14:44.789044" elapsed="1.234478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ide Variables Runtime" id="s1" pass="1" fail="0" skip="0">Ide Variables Runtime</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

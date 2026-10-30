@@ -1,0 +1,31 @@
+==============================================================================
+2026-10-29 15:09:36.910983 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2026-10-29 15:09:38.011792 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:09:38.020166 - ERROR - Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'
+2026-10-29 15:09:38.020302 - ERROR - In file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_invalid_assignment_1.jsonp
+2026-10-29 15:09:38.020420 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:38.020522 - DEBUG - Exception: Could not resolve expression '${params}['global']['dTestDict']['I-am-not-existing']'. Reason: Key error 'I-am-not-existing'
+
+During handling of the above exception, another exception occurred:
+
+Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:38.020539 - INFO - +- END SETUP: tm.Testsuite Setup (0.008747 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:38.020663 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2026-10-29 15:09:38.021263 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.0006 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:38.021607 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:38.021787 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:38.021831 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000224 s)
+==============================================================================
+2026-10-29 15:09:38.021866 - INFO - + END SUITE: Tsm-Testfile-02 (1.110883 s)
+==============================================================================
