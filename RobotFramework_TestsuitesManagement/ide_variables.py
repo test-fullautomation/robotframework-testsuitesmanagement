@@ -18,13 +18,12 @@ The TestsuitesManagement sets ``${CONFIG}`` and all parameters of ``params`` →
 (``testsuite_setup``). A static code analysis (e.g. RobotCode) does not know them and reports
 "Variable not found". This variable file provides the same variables to the code analysis.
 
-Usage (VS Code ``settings.json``):
+Usage (``robot.toml``):
 
-.. code:: json
+.. code:: toml
 
-   "robotcode.robot.variableFiles": [
-      "RobotFramework_TestsuitesManagement.ide_variables:./config/variants.jsonp:variant1"
-   ]
+   variables = { variant = "variant1" }
+   variable-files = ["RobotFramework_TestsuitesManagement.ide_variables:config/variants.jsonp"]
 
 The variables are only returned during the static code analysis. During a test execution the variable file
 returns nothing, because variables that exist before ``testsuite_setup`` are not overwritten by the
@@ -37,16 +36,23 @@ import sys
 from JsonPreprocessor import CJsonPreprocessor
 from robot.utils.dotdict import DotDict
 
-# Module that is loaded only by RobotCode's code analysis (language server, 'robotcode analyze'),
-# not by test executions.
-ANALYSIS_MODULE = "robotcode.robot.diagnostics.library_doc"
+# Function of RobotCode's code analysis (language server, 'robotcode analyze') that loads variable files.
+# Test executions started by RobotCode do not call it (but may have imported the module).
+ANALYSIS_FUNCTION = "get_variables_doc"
+ANALYSIS_FILE = "robotcode/robot/diagnostics/library_doc.py"
 
 
 def is_static_analysis() -> bool:
     '''
 Returns ``True`` if the variable file is loaded by a static code analysis (RobotCode).
     '''
-    return ANALYSIS_MODULE in sys.modules
+    frame = sys._getframe(1)
+    while frame is not None:
+        code = frame.f_code
+        if code.co_name == ANALYSIS_FUNCTION and code.co_filename.replace("\\", "/").endswith(ANALYSIS_FILE):
+            return True
+        frame = frame.f_back
+    return False
 
 
 def _to_robot(value):
@@ -115,16 +121,37 @@ def _add_nested_keys(name: str, value, variables: dict):
                 _add_nested_keys(nested_name, sub_value, variables)
 
 
-def get_variables(config_file: str, variant: str = "default") -> dict:
+def _variant_from_robot_config() -> str:
+    # 'variant' of the RobotCode project configuration (pyproject.toml, robot.toml, .robot.toml);
+    # robotcode is available, because this is called during RobotCode's code analysis only
+    from robotcode.robot.config.loader import (find_project_root, get_config_files_from_folder,
+                                               load_robot_config_from_path)
+    root_folder, _ = find_project_root()
+    if root_folder is None:
+        return "default"
+    config = load_robot_config_from_path(*get_config_files_from_folder(root_folder))
+    variables = config.combine_profiles().evaluated().variables or {}
+    for name, value in variables.items():
+        if name.lower().replace('_', '').replace(' ', '') == 'variant':
+            return str(value)
+    return "default"
+
+
+def get_variables(config_file: str, variant: str = None) -> dict:
     '''
 Robot Framework variable file interface. Returns the variables of ``load_config()`` during a static code
 analysis, otherwise an empty dictionary.
+
+Without ``variant`` the variable ``variant`` of the RobotCode project configuration (``robot.toml``,
+``.robot.toml``, ``pyproject.toml``) is used - the same value the TestsuitesManagement gets at runtime.
 
 Additionally every key of a dictionary is returned as separate variable in dotdict notation
 (e.g. ``CONFIG.Project``), to enable the code completion of ``${CONFIG.`` in the IDE.
     '''
     if not is_static_analysis():
         return {}
+    if variant is None:
+        variant = _variant_from_robot_config()
     variables = load_config(config_file, variant)
     for name, value in list(variables.items()):
         _add_nested_keys(name, value, variables)

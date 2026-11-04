@@ -21,7 +21,22 @@ The variable file is registered in the IDE settings - **not** in the robot files
 | Argument | Description |
 |---|---|
 | `config_file` | variant configuration file (configuration level 2) or parameter configuration file (configuration level 1); relative to the project root |
-| `variant` | optional; name of the variant (default: `default`); ignored for parameter configuration files |
+| `variant` | optional; name of the variant; ignored for parameter configuration files. Default: the variable `variant` of the RobotCode project configuration (`robot.toml`, `.robot.toml`, `pyproject.toml`, without profiles selected in the IDE), otherwise `default` |
+
+=== "robot.toml (recommended)"
+
+    The variant is defined once and is used by the code analysis and by test executions started in the IDE.
+
+    ```toml
+    variables = { variant = "variant1" }
+
+    variable-files = [
+      "RobotFramework_TestsuitesManagement.ide_variables:config/variants.jsonp"
+    ]
+
+    [tool.robotcode-analyze.cache]
+    ignored-variables = ["RobotFramework_TestsuitesManagement.ide_variables"]
+    ```
 
 === "VS Code settings.json"
 
@@ -33,16 +48,7 @@ The variable file is registered in the IDE settings - **not** in the robot files
     }
     ```
 
-=== "robot.toml"
-
-    ```toml
-    variable-files = [
-      "RobotFramework_TestsuitesManagement.ide_variables:config/variants.jsonp:variant1"
-    ]
-
-    [tool.robotcode-analyze.cache]
-    ignored-variables = ["RobotFramework_TestsuitesManagement.ide_variables"]
-    ```
+    The variant of test executions is set separately, e.g. with `"robotcode.robot.variables": {"variant": "variant1"}`.
 
 !!! tip "Changes of the configuration files"
     RobotCode caches the content of variable files. Changes of the configuration files are visible in the IDE

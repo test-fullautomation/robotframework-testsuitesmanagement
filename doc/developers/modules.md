@@ -84,7 +84,7 @@ Variable file for the static code analysis in the IDE, see [IDE support](../user
 |---|---|
 | `get_variables()` | Robot Framework variable file interface; returns the result of `load_config()` only if `is_static_analysis()` is `True`, otherwise `{}`; additionally returns every dictionary key as variable in dotdict notation (`CONFIG.Project`) for the code completion |
 | `load_config()` | loads a variant configuration file (level 2) or a parameter configuration file (level 1) with the JsonPreprocessor and returns `CONFIG` and the parameters of `params` → `global` as `DotDict` |
-| `is_static_analysis()` | `True` if the module `robotcode.robot.diagnostics.library_doc` is loaded - this is only the case in the code analysis of RobotCode (language server, `robotcode analyze`), not in test executions |
+| `is_static_analysis()` | `True` if the call stack contains `get_variables_doc()` of `robotcode/robot/diagnostics/library_doc.py` - this function loads variable files in the code analysis of RobotCode (language server, `robotcode analyze`); test executions started by RobotCode load the module, but do not call this function |
 
 ## `Config/config.py` - `CConfig`
 

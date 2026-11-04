@@ -1,5 +1,7 @@
+variables = { variant = "variant1" }
+
 variable-files = [
-  "RobotFramework_TestsuitesManagement.ide_variables:config/variants.jsonp:variant1"
+  "RobotFramework_TestsuitesManagement.ide_variables:test/testfiles/config/tsm-test_variants.jsonp"
 ]
 
 [tool.robotcode-analyze.cache]
