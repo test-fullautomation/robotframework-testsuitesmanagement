@@ -35,12 +35,19 @@ pip_install_from_source(
 )
 
 # Linux counterpart of the target above, for debian_package-based installer variants.
-# Same source tree and requirements_lock.txt, just resolved/installed
-# against the Linux Python runtime instead of the Windows one.
+# Same source tree, but its OWN separate requirements_lock_linux.txt (not
+# the Windows requirements_lock.txt) - a distinct, independently
+# version-controlled lock file per platform avoids a single shared file
+# whose hashes are only valid for one OS.
+#
+# ponytail: requirements_lock_linux.txt currently still holds a COPY of
+# the Windows-hash-pinned requirements_lock.txt content - a real Linux
+# rollout needs this file regenerated via `bazel run
+# //:update_requirements_lock_linux` on an actual Linux host.
 pip_install_from_source(
     name         = "robotframework_testsuitesmanagement_linux",
     source       = "@robotframework_testsuitesmanagement_src//:src",
-    requirements = "requirements_lock.txt",
+    requirements = "requirements_lock_linux.txt",
     interpreter  = "@python//:python_interpreter_linux",
     runtime      = "@python//:python_runtime_linux",
     visibility = ["//visibility:public"],
@@ -114,7 +121,7 @@ py_binary(
     args = [
         "--interpreter=$(location @python//:python_interpreter_linux)",
         "--component-dir=robotframework-testsuitesmanagement",
-        "--output=requirements_lock.txt",  # see NOTE above
+        "--output=requirements_lock_linux.txt",
         "pyproject.toml",
         "requirements_build_extras.txt",
     ],
