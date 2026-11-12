@@ -1,0 +1,31 @@
+==============================================================================
+2026-10-29 15:08:51.394211 - INFO - + START SUITE: Tsm-Testfile-02
+==============================================================================
+2026-10-29 15:08:52.434880 - INFO - +- START SETUP: tm.Testsuite Setup [ ./config/tsm-test_variants.jsonp ]
+2026-10-29 15:08:52.441253 - ERROR - File 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
+2026-10-29 15:08:52.441407 - ERROR - In file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_missing_imported_file.jsonp
+2026-10-29 15:08:52.441540 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:08:52.441652 - DEBUG - Exception: File 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/I_AM_NOT_EXISTING.jsonp' is not existing!
+
+During handling of the above exception, another exception occurred:
+
+Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:08:52.441671 - INFO - +- END SETUP: tm.Testsuite Setup (0.006791 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:52.441799 - INFO - +- START TEST: Test Case tsm-testfile-02
+------------------------------------------------------------------------------
+2026-10-29 15:08:52.442526 - INFO - +- END TEST: Test Case tsm-testfile-02 (0.000727 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:52.442924 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:08:52.443141 - INFO - SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:08:52.443197 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000273 s)
+==============================================================================
+2026-10-29 15:08:52.443243 - INFO - + END SUITE: Tsm-Testfile-02 (1.049032 s)
+==============================================================================

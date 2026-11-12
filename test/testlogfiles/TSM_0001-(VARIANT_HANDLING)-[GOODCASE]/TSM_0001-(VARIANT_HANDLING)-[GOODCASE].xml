@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:08:21.590762" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-01" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-01.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:08:22.554535" level="INFO">Set suite metadata 'project' to value 'RobotFramework Testsuites'.</msg>
+<msg time="2026-10-29T15:08:22.554632" level="INFO">Set suite metadata 'machine' to value 'HI-C-005QR'.</msg>
+<msg time="2026-10-29T15:08:22.556361" level="INFO">Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.</msg>
+<msg time="2026-10-29T15:08:22.556451" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2026-10-29T15:08:22.556538" level="INFO">Set suite metadata 'reference_version' to value '0.11.0'.</msg>
+<msg time="2026-10-29T15:08:22.556617" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.</msg>
+<msg time="2026-10-29T15:08:22.556659" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2026-10-29T15:08:22.556692" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2026-10-29T15:08:22.556724" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2026-10-29T15:08:22.557049" level="INFO">${CONFIG} = {'Project': 'RobotFramework Testsuites', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'TargetName': 'Device_01'}</msg>
+<msg time="2026-10-29T15:08:22.557097" level="WARN">Running with configuration level 4 (default configuration (fallback solution))</msg>
+<msg time="2026-10-29T15:08:22.557314" level="INFO">RobotFramework_TestsuitesManagement version check passed!</msg>
+<msg time="2026-10-29T15:08:22.557345" level="INFO">Loaded configuration file 'c:/usr_dev/AIO/robotframework-testsuitesmanagement/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'</msg>
+<msg time="2026-10-29T15:08:22.557363" level="INFO">Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2026-10-29T15:08:22.557379" level="INFO">Number of test suites: 1</msg>
+<msg time="2026-10-29T15:08:22.557395" level="INFO">Total number of testcases: 1</msg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="PASS" start="2026-10-29T15:08:22.550648" elapsed="0.006798"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-01" line="31">
+<kw name="Testcase Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:08:22.558335" level="INFO">Test Count: 1</msg>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:08:22.558218" elapsed="0.000167"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-29T15:08:22.558738" level="INFO">tsm-testfile-01</msg>
+<arg>tsm-testfile-01</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-29T15:08:22.558588" elapsed="0.000215"/>
+</kw>
+<kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:08:22.559094" level="INFO">TEST 'Test Case tsm-testfile-01' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:08:22.558942" elapsed="0.000192"/>
+</kw>
+<doc>tsm-testfile-01</doc>
+<status status="PASS" start="2026-10-29T15:08:22.557576" elapsed="0.001592"/>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:08:22.559627" level="INFO">SUITE 'Tsm-Testfile-01' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:08:22.559477" elapsed="0.000191"/>
+</kw>
+<meta name="machine">HI-C-005QR</meta>
+<meta name="project">RobotFramework Testsuites</meta>
+<meta name="reference_app_name">RobotFramework_TestsuitesManagement</meta>
+<meta name="reference_version">0.11.0</meta>
+<meta name="tester">Pollerspoeck Thomas (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="PASS" start="2026-10-29T15:08:21.592011" elapsed="0.967687"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-01" id="s1" pass="1" fail="0" skip="0">Tsm-Testfile-01</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-29T15:08:22.557097" level="WARN">Running with configuration level 4 (default configuration (fallback solution))</msg>
+</errors>
+</robot>

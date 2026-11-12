@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:09:48.875725" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-41-Version-Control-02" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-41-version-control-02.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:09:49.931635" level="INFO">Set suite metadata 'project' to value 'tsm-test_config_variant1'.</msg>
+<msg time="2026-10-29T15:09:49.931732" level="INFO">Set suite metadata 'machine' to value 'HI-C-005QR'.</msg>
+<msg time="2026-10-29T15:09:49.933477" level="INFO">Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.</msg>
+<msg time="2026-10-29T15:09:49.933567" level="INFO">Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.</msg>
+<msg time="2026-10-29T15:09:49.933611" level="INFO">Set suite metadata 'reference_version' to value '0.11.0'.</msg>
+<msg time="2026-10-29T15:09:49.933647" level="INFO">Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.</msg>
+<msg time="2026-10-29T15:09:49.933683" level="INFO">Set suite metadata 'version_sw' to value 'None'.</msg>
+<msg time="2026-10-29T15:09:49.933715" level="INFO">Set suite metadata 'version_hw' to value 'None'.</msg>
+<msg time="2026-10-29T15:09:49.933748" level="INFO">Set suite metadata 'version_test' to value 'None'.</msg>
+<msg time="2026-10-29T15:09:49.934228" level="INFO">${teststring_common} = I am the common teststring valid for all variants and all test benches</msg>
+<msg time="2026-10-29T15:09:49.934470" level="INFO">${teststring_bench} = I am the teststring containing the default value for all test benches</msg>
+<msg time="2026-10-29T15:09:49.934699" level="INFO">${teststring_variant} = I am the 'variant1' configuration of tsm-test</msg>
+<msg time="2026-10-29T15:09:49.934980" level="INFO">${CONFIG} = {'WelcomeString': 'Hello... Robot Framework is running now!', 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'Project': 'tsm-test_config_variant1', 'TargetName': 'Device_01', 'params': {}}</msg>
+<msg time="2026-10-29T15:09:49.935023" level="INFO">Running with configuration level 2 (variant name in command line)</msg>
+<msg time="2026-10-29T15:09:49.935158" level="INFO">RobotFramework_TestsuitesManagement version check passed!</msg>
+<msg time="2026-10-29T15:09:49.935188" level="INFO">Loaded configuration file 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp'</msg>
+<msg time="2026-10-29T15:09:49.935207" level="INFO">Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'</msg>
+<msg time="2026-10-29T15:09:49.935225" level="INFO">Number of test suites: 1</msg>
+<msg time="2026-10-29T15:09:49.935243" level="INFO">Total number of testcases: 1</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.924037" elapsed="0.011265"/>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-41-version-control-02" line="32">
+<kw name="Testcase Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:09:49.936372" level="INFO">Test Count: 1</msg>
+<doc>This keyword writes the number of counted tests to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.936235" elapsed="0.000182"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2026-10-29T15:09:49.936826" level="INFO">PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-41-version-control-02) : [STR]  :  'tsm-test_config_variant1'</msg>
+<arg>${CONFIG.Project}</arg>
+<arg>PARAMS-VERIFIKATION : ({CONFIG.Project} / tsm-testfile-41-version-control-02)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2026-10-29T15:09:49.936526" elapsed="0.000358"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2026-10-29T15:09:49.937072" level="INFO">PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-41-version-control-02) : [STR]  :  'I am the common teststring valid for all variants and all test benches'</msg>
+<arg>${teststring_common}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_common} / tsm-testfile-41-version-control-02)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2026-10-29T15:09:49.936965" elapsed="0.000156"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2026-10-29T15:09:49.937350" level="INFO">PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-41-version-control-02) : [STR]  :  'I am the 'variant1' configuration of tsm-test'</msg>
+<arg>${teststring_variant}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_variant} / tsm-testfile-41-version-control-02)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2026-10-29T15:09:49.937246" elapsed="0.000150"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2026-10-29T15:09:49.937556" level="INFO">PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-41-version-control-02) : [STR]  :  'I am the teststring containing the default value for all test benches'</msg>
+<arg>${teststring_bench}</arg>
+<arg>PARAMS-VERIFIKATION : ({teststring_bench} / tsm-testfile-41-version-control-02)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2026-10-29T15:09:49.937465" elapsed="0.000136"/>
+</kw>
+<kw name="Check Version" owner="tm">
+<msg time="2026-10-29T15:09:49.937899" level="INFO">Version check is skipped because both 'min_version' and 'max_version' are set to None (RobotFramework_TestsuitesManagement)</msg>
+<msg time="2026-10-29T15:09:49.937978" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>max_version=${None}</arg>
+<arg>min_version=${null}</arg>
+<doc>This keyword executes a version check, min_version and max_version are checked against the reference_version.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.937680" elapsed="0.000319"/>
+</kw>
+<kw name="Pretty Print" owner="rf.extensions">
+<msg time="2026-10-29T15:09:49.938195" level="INFO">PARAMS-VERIFIKATION : ({result} / tsm-testfile-41-version-control-02) : [BOOL]  :  True</msg>
+<arg>${result}</arg>
+<arg>PARAMS-VERIFIKATION : ({result} / tsm-testfile-41-version-control-02)</arg>
+<doc>The ``pretty_print`` keyword logs the content of parameters of any Python data type (input: ``oData``).</doc>
+<status status="PASS" start="2026-10-29T15:09:49.938079" elapsed="0.000171"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${True}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.938431" elapsed="0.000148"/>
+</kw>
+<kw name="Testcase Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:09:49.938880" level="INFO">TEST 'Test Case tsm-testfile-41-version-control-02' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testcase result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.938728" elapsed="0.000200"/>
+</kw>
+<doc>Robot Interface
+'max_version' initialized with 'None', 'min_version' initialized with 'null', 'reference_version' not defined
+tsm-testfile-41-version-control-02
+TSM_0405</doc>
+<status status="PASS" start="2026-10-29T15:09:49.935455" elapsed="0.003506"/>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:09:49.939440" level="INFO">SUITE 'Tsm-Testfile-41-Version-Control-02' finished with result 'PASS'</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:09:49.939284" elapsed="0.000193"/>
+</kw>
+<meta name="machine">HI-C-005QR</meta>
+<meta name="project">tsm-test_config_variant1</meta>
+<meta name="reference_app_name">RobotFramework_TestsuitesManagement</meta>
+<meta name="reference_version">0.11.0</meta>
+<meta name="tester">Pollerspoeck Thomas (XC-HWP/ESC3)</meta>
+<meta name="testtool">Robot Framework 7.3 (Python 3.13.2 on win32)</meta>
+<meta name="version_hw">None</meta>
+<meta name="version_sw">None</meta>
+<meta name="version_test">None</meta>
+<status status="PASS" start="2026-10-29T15:09:48.877122" elapsed="1.062469"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-41-Version-Control-02" id="s1" pass="1" fail="0" skip="0">Tsm-Testfile-41-Version-Control-02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

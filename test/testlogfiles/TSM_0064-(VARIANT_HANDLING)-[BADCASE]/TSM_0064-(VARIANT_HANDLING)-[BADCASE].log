@@ -1,0 +1,23 @@
+==============================================================================
+2026-10-29 15:09:13.164753 - INFO - + START SUITE: Tsm-Testfile-01
+==============================================================================
+2026-10-29 15:09:14.161557 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2026-10-29 15:09:14.164049 - ERROR - Required parameter 'Project' is missing in file 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\localconfig\tsm-test_localconfig_bench1.jsonp'.
+2026-10-29 15:09:14.164147 - ERROR - JSON schema validation failed!
+2026-10-29 15:09:14.164243 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:14.164306 - DEBUG - Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:14.164320 - INFO - +- END SETUP: tm.Testsuite Setup (0.002763 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:14.164414 - INFO - +- START TEST: Test Case tsm-testfile-01
+------------------------------------------------------------------------------
+2026-10-29 15:09:14.164965 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.000551 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:14.165263 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:14.165417 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:14.165459 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000196 s)
+==============================================================================
+2026-10-29 15:09:14.165492 - INFO - + END SUITE: Tsm-Testfile-01 (1.000739 s)
+==============================================================================

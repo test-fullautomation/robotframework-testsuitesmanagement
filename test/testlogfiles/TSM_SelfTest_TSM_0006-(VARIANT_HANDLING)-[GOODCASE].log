@@ -1,0 +1,34 @@
+component_test.py v. 0.17.1 / 22.06.2026 started at: 29.10.2026 - 13:43:28
+
+                      THISSCRIPT : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/component_test.py
+                  THISSCRIPTNAME : component_test.py
+                   REFERENCEPATH : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test
+                          OSNAME : nt
+                  PLATFORMSYSTEM : Windows
+                          PYTHON : C:/Program Files/RobotFramework/python3/python.exe
+                      PYTHONPATH : C:/Program Files/RobotFramework/python3
+                   PYTHONVERSION : 3.13.2 (main, Feb  5 2025, 19:16:35) [MSC v.1942 64 bit (AMD64)]
+              NOTPATTERNFILE_TXT : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testconfig/tsm_test_not_pattern_TXT.txt
+           IGNOREPATTERNFILE_TXT : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testconfig/tsm_test_ignore_pattern_TXT.txt
+                 PATTERNFILE_TXT : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testconfig/tsm_test_pattern_TXT.txt
+                 PATTERNFILE_XML : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testconfig/tsm_test_pattern_XML.txt
+                 TESTFILESFOLDER : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles
+         REFERENCELOGFILESFOLDER : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/referencelogfiles/original
+              ROBOTFRAMEWORKCORE : ORIGINAL
+                    SITEPACKAGES : C:/Program Files/RobotFramework/python3/Lib/site-packages
+                CONFIGSCHEMAFILE : C:/Program Files/RobotFramework/python3/Lib/site-packages/RobotFramework_TestsuitesManagement/Config/configuration_schema.json
+                          TESTID : TSM_0006-(VARIANT_HANDLING)-[GOODCASE]
+                          SILENT : False
+                        CODEDUMP : False
+                      CONFIGDUMP : False
+                      LOGCOMPARE : True
+                 SELFTESTLOGFILE : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testlogfiles/TSM_SelfTest_TSM_0006-(VARIANT_HANDLING)-[GOODCASE].log
+              TESTLOGFILESFOLDER : C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testlogfiles
+                         VERSION : 0.17.1
+                    VERSION_DATE : 22.06.2026
+              THISSCRIPTFULLNAME : component_test.py v. 0.17.1 / 22.06.2026
+                   SUT_FULL_NAME : RobotFramework_TestsuitesManagement v. 0.11.0 / 27.02.2026
+
+!!! ERROR !!!
+[component_test.py] : Test ID 'TSM_0006-(VARIANT_HANDLING)-[GOODCASE]' not defined
+

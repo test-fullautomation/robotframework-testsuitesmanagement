@@ -1,0 +1,29 @@
+==============================================================================
+2026-10-29 15:09:14.986710 - INFO - + START SUITE: Tsm-Cft-Test.File-1
+==============================================================================
+2026-10-29 15:09:16.070038 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2026-10-29 15:09:16.071038 - ERROR - Configuration file duplicate detected (both extensions: 'jsonp' and 'json')!
+2026-10-29 15:09:16.071147 - ERROR - * file 1: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.jsonp'
+2026-10-29 15:09:16.071194 - ERROR - * file 2: 'C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/configfoldertests2/config/tsm-cft-test.file-1.json'
+2026-10-29 15:09:16.071230 - ERROR - Please decide which one to keep and which one to remove. Both together are not allowed.
+2026-10-29 15:09:16.071332 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:16.071415 - DEBUG - Exception: The test execution will be aborted!
+
+During handling of the above exception, another exception occurred:
+
+Exception: Not possible to load the test configuration. The test execution will be aborted!
+2026-10-29 15:09:16.071429 - INFO - +- END SETUP: tm.Testsuite Setup (0.001391 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:16.071526 - INFO - +- START TEST: Test Case tsm-cft-test.file-1 (BADCASE)
+------------------------------------------------------------------------------
+2026-10-29 15:09:16.072109 - INFO - +- END TEST: Test Case tsm-cft-test.file-1 (BADCASE) (0.000583 s)
+------------------------------------------------------------------------------
+2026-10-29 15:09:16.072422 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:09:16.072611 - INFO - SUITE 'Tsm-Cft-Test.File-1' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed
+2026-10-29 15:09:16.072656 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000234 s)
+==============================================================================
+2026-10-29 15:09:16.072690 - INFO - + END SUITE: Tsm-Cft-Test.File-1 (1.08598 s)
+==============================================================================

@@ -1,0 +1,44 @@
+==============================================================================
+2026-10-29 15:08:21.592011 - INFO - + START SUITE: Tsm-Testfile-01
+==============================================================================
+2026-10-29 15:08:22.550648 - INFO - +- START SETUP: tm.Testsuite Setup [ ]
+2026-10-29 15:08:22.554535 - INFO - Set suite metadata 'project' to value 'RobotFramework Testsuites'.
+2026-10-29 15:08:22.554632 - INFO - Set suite metadata 'machine' to value 'HI-C-005QR'.
+2026-10-29 15:08:22.556361 - INFO - Set suite metadata 'tester' to value 'Pollerspoeck Thomas (XC-HWP/ESC3)'.
+2026-10-29 15:08:22.556451 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 7.3 (Python 3.13.2 on win32)'.
+2026-10-29 15:08:22.556538 - INFO - Set suite metadata 'reference_version' to value '0.11.0'.
+2026-10-29 15:08:22.556617 - INFO - Set suite metadata 'reference_app_name' to value 'RobotFramework_TestsuitesManagement'.
+2026-10-29 15:08:22.556659 - INFO - Set suite metadata 'version_sw' to value 'None'.
+2026-10-29 15:08:22.556692 - INFO - Set suite metadata 'version_hw' to value 'None'.
+2026-10-29 15:08:22.556724 - INFO - Set suite metadata 'version_test' to value 'None'.
+2026-10-29 15:08:22.557049 - INFO - ${CONFIG} = {'Project': 'RobotFramework Testsuites', 'WelcomeString': 'Hello... RobotFramework AIO is running now!', 'Maximum_version': '1.99.0', 'Minimum_version': '0.6.0', 'TargetName': 'Device_01'}
+2026-10-29 15:08:22.557097 - WARN - Running with configuration level 4 (default configuration (fallback solution))
+2026-10-29 15:08:22.557314 - INFO - RobotFramework_TestsuitesManagement version check passed!
+2026-10-29 15:08:22.557345 - INFO - Loaded configuration file 'c:/usr_dev/AIO/robotframework-testsuitesmanagement/RobotFramework_TestsuitesManagement/Config/robot_config.jsonp'
+2026-10-29 15:08:22.557363 - INFO - Suite Path: 'C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\'
+2026-10-29 15:08:22.557379 - INFO - Number of test suites: 1
+2026-10-29 15:08:22.557395 - INFO - Total number of testcases: 1
+2026-10-29 15:08:22.557446 - INFO - +- END SETUP: tm.Testsuite Setup (0.006798 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:22.557576 - INFO - +- START TEST: Test Case tsm-testfile-01
+------------------------------------------------------------------------------
+2026-10-29 15:08:22.558218 - INFO - +-- START SETUP: tm.Testcase Setup [ ]
+2026-10-29 15:08:22.558335 - INFO - Test Count: 1
+2026-10-29 15:08:22.558385 - INFO - +-- END SETUP: tm.Testcase Setup (0.000167 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:08:22.558588 - INFO - +-- START KEYWORD: BuiltIn.Log [ tsm-testfile-01 | console=yes ]
+2026-10-29 15:08:22.558738 - INFO - tsm-testfile-01
+2026-10-29 15:08:22.558803 - INFO - +-- END KEYWORD: BuiltIn.Log (0.000215 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-29 15:08:22.558942 - INFO - +-- START TEARDOWN: tm.Testcase Teardown [ ]
+2026-10-29 15:08:22.559094 - INFO - TEST 'Test Case tsm-testfile-01' finished with result 'PASS'
+2026-10-29 15:08:22.559134 - INFO - +-- END TEARDOWN: tm.Testcase Teardown (0.000192 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:22.559168 - INFO - +- END TEST: Test Case tsm-testfile-01 (0.001592 s)
+------------------------------------------------------------------------------
+2026-10-29 15:08:22.559477 - INFO - +- START TEARDOWN: tm.Testsuite Teardown [ ]
+2026-10-29 15:08:22.559627 - INFO - SUITE 'Tsm-Testfile-01' finished with result 'PASS'
+2026-10-29 15:08:22.559668 - INFO - +- END TEARDOWN: tm.Testsuite Teardown (0.000191 s)
+==============================================================================
+2026-10-29 15:08:22.559698 - INFO - + END SUITE: Tsm-Testfile-01 (0.967687 s)
+==============================================================================

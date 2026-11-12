@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2026-10-29T15:09:28.855593" rpa="false" schemaversion="5">
+<suite id="s1" name="Tsm-Testfile-02" source="C:\usr_dev\AIO\robotframework-testsuitesmanagement\test\testfiles\tsm-testfile-02.robot">
+<kw name="Testsuite Setup" owner="tm" type="SETUP">
+<msg time="2026-10-29T15:09:30.004587" level="ERROR">Loading local config failed with file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg time="2026-10-29T15:09:30.004708" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg time="2026-10-29T15:09:30.004753" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
+<msg time="2026-10-29T15:09:30.004855" level="FAIL">Not possible to load the test configuration. The test execution will be aborted!</msg>
+<arg>./config/tsm-test_variants.jsonp</arg>
+<doc>This keyword loads the RobotFramework AIO configuration, checks the version of the RobotFramework AIO
+and logs out the basic information about the test execution.</doc>
+<status status="FAIL" start="2026-10-29T15:09:29.997807" elapsed="0.007167">Not possible to load the test configuration. The test execution will be aborted!</status>
+</kw>
+<test id="s1-t1" name="Test Case tsm-testfile-02" line="32">
+<doc>tsm-testfile-02</doc>
+<status status="FAIL" start="2026-10-29T15:09:30.005115" elapsed="0.000583">Parent suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</test>
+<kw name="Testsuite Teardown" owner="tm" type="TEARDOWN">
+<msg time="2026-10-29T15:09:30.006215" level="INFO">SUITE 'Tsm-Testfile-02' finished with result 'FAIL', reason: Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!
+
+1 test, 0 passed, 1 failed</msg>
+<doc>This keyword writes information about the testsuite result to the log files.</doc>
+<status status="PASS" start="2026-10-29T15:09:30.006030" elapsed="0.000231"/>
+</kw>
+<status status="FAIL" start="2026-10-29T15:09:28.857342" elapsed="1.148953">Suite setup failed:
+Not possible to load the test configuration. The test execution will be aborted!</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tsm-Testfile-02" id="s1" pass="0" fail="1" skip="0">Tsm-Testfile-02</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-29T15:09:30.004587" level="ERROR">Loading local config failed with file: C:/usr_dev/AIO/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_variant1.jsonp</msg>
+<msg time="2026-10-29T15:09:30.004708" level="ERROR">---&gt; The mandatory 'WelcomeString' element of configuration file is found in local config file</msg>
+<msg time="2026-10-29T15:09:30.004753" level="ERROR">---&gt; Wrong local config file was chosen, please check!!!</msg>
+</errors>
+</robot>
