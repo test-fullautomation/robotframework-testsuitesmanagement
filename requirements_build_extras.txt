@@ -1,0 +1,12 @@
+# requirements_build_extras.txt
+#
+# NOTE: Dieses Paket wird mit --no-build-isolation gebaut (siehe
+# pip_install_from_source in pip_utils/pip_install.bzl). Ohne Build-
+# Isolation baut pip KEIN eigenes, isoliertes Build-Environment mit den
+# in pyproject.toml's [build-system].requires deklarierten Paketen auf -
+# es erwartet stattdessen, dass diese bereits im aufrufenden Environment
+# (deps_dir, via PYTHONPATH) importierbar sind. Diese Datei stellt genau
+# das sicher, OHNE die eigentlichen Laufzeit-Abhängigkeiten (die weiterhin
+# automatisch aus pyproject.toml kommen) hier redundant mitzupflegen.
+setuptools
+wheel
