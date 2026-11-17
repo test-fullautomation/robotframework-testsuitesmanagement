@@ -26,6 +26,9 @@ from RobotFramework_TestsuitesManagement.Utils import app_logger
 # create an application specific logger
 app_logger = app_logger.setup_app_logger()
 
+# order of pre-release tags within a sub version (released versions without tag get 3)
+PRE_RELEASE_ORDER = {'a': 0, 'b': 1, 'rc': 2}
+
 class enVersionCheckResult(Enum):
     """
 Defines different states that identify the result of the version check
@@ -136,7 +139,7 @@ defined ``bundle_version`` (either RobotFramework AIO or TestsuitesManagement) w
 
   / *Type*: str /
 
-  A token string indicating the result of the vesion check.
+  A token string indicating the result of the version check.
         """
         # -- LOW LEVEL
         #
@@ -324,7 +327,7 @@ Impact is that this method influences the execution of the application that call
         result = self.verify_version(min_version, max_version, reference_version)
         status_message = status_messages[result]
 
-        # apply current calues
+        # apply current values
         if min_version:
             status_message = status_message.replace('<min_version>', min_version)
         if max_version:
@@ -346,7 +349,7 @@ Impact is that this method influences the execution of the application that call
             reference_app_name = app_config.get_reference_app_name()
         status_message = status_message.replace('<reference_version>', reference_version)
         if reference_app_name and not self.__reference_version_defined_by_user:
-            # add the name of the applictaion used as reference
+            # add the name of the application used as reference
             status_message = f"{status_message} ({reference_app_name})"
 
         # Mapping between the result of the version check and the reaction on this result
@@ -456,15 +459,7 @@ Static method to validate the format of the provided sub-version and parse it in
         if match_obj:
             list_sub_version[0] = int(match_obj.group(1))
             # a < b < rc < released (without any character)
-            if match_obj.group(2):
-                if match_obj.group(2) == 'a':
-                    list_sub_version[1] = 0
-                elif match_obj.group(2) == 'b':
-                    list_sub_version[1] = 1
-                elif match_obj.group(2) == 'rc':
-                    list_sub_version[1] = 2
-            else:
-                list_sub_version[1] = 3
+            list_sub_version[1] = PRE_RELEASE_ORDER[match_obj.group(2)] if match_obj.group(2) else 3
 
             if match_obj.group(3):
                 list_sub_version[2] = int(match_obj.group(3))
@@ -517,7 +512,7 @@ Examples: ``"1.2rc3"``, ``"1.2.1b1"``
             list_version = list_version[:3]
         try:
             # verify the version info is a number
-            return tuple(map(lambda x: CVersion.validate_sub_version(x), list_version))
+            return tuple(CVersion.validate_sub_version(x) for x in list_version)
         except Exception as error:
             raise Exception(f"{error} (within '{version}')")
 

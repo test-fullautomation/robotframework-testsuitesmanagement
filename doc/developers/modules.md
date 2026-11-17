@@ -9,8 +9,6 @@ classDiagram
         <<DynamicCore>>
         ROBOT_LIBRARY_SCOPE = GLOBAL
         ROBOT_LIBRARY_LISTENER
-        run_keyword()
-        failure_occurred()
     }
     class LibListener {
         _start_suite()
@@ -36,7 +34,7 @@ classDiagram
         config_level
         test_config_file
         local_config
-        buitin_variables
+        builtin_variables
         loaded_cfg_log
         load_config()
         check_version()
@@ -68,7 +66,6 @@ classDiagram
 | Element | Description |
 |---|---|
 | `RobotFramework_TestsuitesManagement` | the library class; based on `robotlibcore.DynamicCore` and collects the keywords of `CSetupKeywords` and `CGeneralKeywords`; registers `LibListener` as library listener |
-| `run_keyword()` | wrapper around every keyword call; calls `failure_occurred()` in case of an exception (executes an optionally configured *run on failure* keyword) |
 | `CConfigLevel` | enumeration `LEVEL_1` ... `LEVEL_4` |
 | `CTestsuitesCfg` | holds the shared `config_obj` (the `CConfig` instance) |
 
@@ -99,7 +96,7 @@ The heart of the package. A singleton that holds the state of the whole test run
 | `check_version()` | version check against `Maximum_version` / `Minimum_version` with Robot Framework specific messages |
 | `__get_machine_name()`, `__get_user_name()` | metadata (`machine`, `tester`) |
 | `loaded_cfg_log` | collected errors, hints and the final abort message |
-| `buitin_variables` | names of variables that existed before the configuration was loaded (command line wins) |
+| `builtin_variables` | names of variables that existed before the configuration was loaded (command line wins) |
 
 Data files in the same folder:
 
@@ -117,10 +114,6 @@ Data files in the same folder:
 | `CGeneralKeywords` | `Get Config`, `Load Json`, `Check Version`, `Get Status Messages`, information keywords (`Is Robotframework AIO`, `Get ... Version` ...) |
 
 All keywords are described in the [Keyword reference](../reference/keywords.md).
-
-## `Keywords/on_failure_handle.py`
-
-`COnFailureHandle` contains helper code for the *run on failure* handling of the library.
 
 ## `Utils/lib_listener.py` - `LibListener`
 
@@ -161,10 +154,6 @@ It also provides the console script `robfwaio_version` (`print_bundle_version()`
 A minimal event system: `on(event_name, scope, action)` registers an action, `dispatch(event_name, scope)` triggers
 all actions registered for this scope. Available events are `scope_start` and `scope_end` (`ScopeStart`, `ScopeEnd`);
 the scope `current` is resolved to the current suite or test name.
-
-## `Utils/new_struct.py`
-
-`CStruct` creates attributes from keyword arguments (like a C struct).
 
 ## Dependencies
 

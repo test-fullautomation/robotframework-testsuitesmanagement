@@ -6,17 +6,7 @@
 2025-11-21 10:15:11.142245 - ERROR - Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
 2025-11-21 10:15:11.142513 - ERROR - In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
 2025-11-21 10:15:11.142692 - FAIL - Not possible to load the test configuration. The test execution will be aborted!
-2025-11-21 10:15:11.142817 - DEBUG - json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
-
-During handling of the above exception, another exception occurred:
-
-Exception: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
-Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
-In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
-
-During handling of the above exception, another exception occurred:
-
-Exception: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
+2025-11-21 10:15:11.142817 - DEBUG - Exception: Expecting property name enclosed in double quotes: line 7 column 3 (char 221)
 Nearby: '... ntax_error",\n  "TargetName"      : "Device_01",\n  I_AM_SYNTAX_ERROR }} ...'
 In file: 'C:/workplace/ROBFW/components/robotframework-testsuitesmanagement/test/testfiles/config/tsm-test_config_syntax_error.jsonp'
 

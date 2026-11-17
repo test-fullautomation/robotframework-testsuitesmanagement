@@ -14,8 +14,10 @@
 
 import copy
 import sys
+from os.path import abspath, dirname
 
 import RobotFramework_TestsuitesManagement as TM
+from JsonPreprocessor import CJsonPreprocessor
 from robot.api.deco import keyword
 from robot.api import logger
 
@@ -23,6 +25,12 @@ from robot.libraries.BuiltIn import BuiltIn
 
 from RobotFramework_TestsuitesManagement.Utils.app_config import AppConfig
 from RobotFramework_TestsuitesManagement.Utils.version import CVersion, StatusMessages
+
+# configuration levels description
+LEVELS_INFO = {1 : "configuration file in command line",
+               2 : "variant name in command line",
+               3 : "configuration file in local config folder",
+               4 : "default configuration (fallback solution)"}
 
 class CSetupKeywords(object):
     '''
@@ -51,24 +59,18 @@ and logs out the basic information about the test execution.
 
 * No return variable
         '''
-        # levels description
-        levels_info = {1 : "configuration file in command line",
-                       2 : "variant name in command line",
-                       3 : "configuration file in local config folder",
-                       4 : "default configuration (fallback solution)"}
         if TM.CTestsuitesCfg.config_obj.config_level==TM.CConfigLevel.LEVEL_1:
             try:
                 TM.CTestsuitesCfg.config_obj.load_config(TM.CTestsuitesCfg.config_obj)
-            except:
+            except Exception:
                 TM.CTestsuitesCfg.config_obj.is_cfg_loaded = False
-                pass
         else:
             if testsuite_cfg_file != '':
                 TM.CTestsuitesCfg.config_obj.config_level = TM.CConfigLevel.LEVEL_2
                 TM.CTestsuitesCfg.config_obj.testsuite_config = testsuite_cfg_file
             try:
                 TM.CTestsuitesCfg.config_obj.load_config(TM.CTestsuitesCfg.config_obj)
-            except:
+            except Exception:
                 if len(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']) > 0:
                     for error_msg in TM.CTestsuitesCfg.config_obj.loaded_cfg_log['error']:
                         if str(error_msg) != '':
@@ -93,7 +95,7 @@ and logs out the basic information about the test execution.
             raise Exception(TM.CTestsuitesCfg.config_obj.loaded_cfg_log['unknown'])
 
         msg = f"Running with configuration level {TM.CTestsuitesCfg.config_obj.config_level.value} \
-({levels_info[TM.CTestsuitesCfg.config_obj.config_level.value]})"
+({LEVELS_INFO[TM.CTestsuitesCfg.config_obj.config_level.value]})"
         if TM.CTestsuitesCfg.config_obj.config_level==TM.CConfigLevel.LEVEL_4:
             logger.warn(msg)
         else:
@@ -207,19 +209,17 @@ Loads a json file and returns a json object.
 
   / *Type*: json /
         '''
-        from os.path import abspath, dirname
-        from JsonPreprocessor import CJsonPreprocessor
         json_file_dir = dirname(abspath(json_file))
         jpp_obj = CJsonPreprocessor()
         if level == 1:
             json_data = jpp_obj.jsonLoad(json_file)
             return json_data
         else:
-            json_frist_level = jpp_obj.jsonLoad(json_file)
-            if variant not in json_frist_level:
+            json_first_level = jpp_obj.jsonLoad(json_file)
+            if variant not in json_first_level:
                 logger.error(f"The variant: {variant} is not correct!")
                 return {}
-            json_file_loaded = json_file_dir + json_frist_level[variant]['path'] + '/' + json_frist_level[variant]['name']
+            json_file_loaded = json_file_dir + json_first_level[variant]['path'] + '/' + json_first_level[variant]['name']
             json_data = jpp_obj.jsonLoad(json_file_loaded)
             return json_data
 
@@ -371,7 +371,7 @@ This keyword executes a version check, min_version and max_version are checked a
         if last_error:
             result = last_error
         return result
-    # A corrsponding keyword wrapper for the low level method '``verify_version``' is currently not implemented (and most probably will not be required).
+    # A corresponding keyword wrapper for the low level method '``verify_version``' is currently not implemented (and most probably will not be required).
 
     @keyword
     def get_status_messages(self):

@@ -21,14 +21,12 @@ robotframework-testsuitesmanagement/
 │   │   ├── configuration_schema.json      # JSON schema of configuration files
 │   │   └── robot_config.jsonp             # level 4 default configuration
 │   ├── Keywords/
-│   │   ├── key_words.py                   # CSetupKeywords, CGeneralKeywords
-│   │   └── on_failure_handle.py           # COnFailureHandle
+│   │   └── key_words.py                   # CSetupKeywords, CGeneralKeywords
 │   └── Utils/
 │       ├── lib_listener.py                # LibListener (Robot Framework listener API v3)
 │       ├── version.py                     # CVersion, StatusMessages, enVersionCheckResult
 │       ├── app_config.py                  # AppConfig (stand-alone vs. RobotFramework AIO)
 │       ├── app_logger.py                  # isolated Python logger for CVersion
-│       ├── new_struct.py                  # CStruct helper
 │       └── Events/                        # scope_start / scope_end events
 ├── atest/                                 # acceptance test (robot files)
 ├── test/                                  # component test (TSM_xxxx test cases) and pytest wrapper
@@ -91,7 +89,7 @@ flowchart LR
 | `CConfig` is a singleton | listener and keywords work on the same state without passing objects around |
 | Listener API v3 | the listener must see the command line variables and the suite tree **before** the first keyword runs |
 | Errors are collected, not raised immediately | `CConfig.loaded_cfg_log` gathers all errors and hints; `Testsuite Setup` logs them together and aborts with one final message |
-| Command line variables are remembered at the first suite | `buitin_variables` prevents that configuration values overwrite them (see [Priority](../user-guide/priority.md)) |
+| Command line variables are remembered at the first suite | `builtin_variables` prevents that configuration values overwrite them (see [Priority](../user-guide/priority.md)) |
 | `CVersion` uses a pure Python logger | the version check must also work outside of Robot Framework (see [Python API](../reference/python-api.md)) |
 | JSONP parsing is delegated | all syntax features come from the [JsonPreprocessor](../jsonp-format/index.md) |
 

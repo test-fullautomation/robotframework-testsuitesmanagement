@@ -85,15 +85,11 @@ Configuration class that contains all the information about the application.
                 with open(self.__aio_package_context_file) as file:
                     aio_package_context = json.load(file)
             except Exception as reason:
-                # err_msg = f"Cannot load the RobotFramework AIO package context file '{aio_package_context}' file. Reason: {reason}"
-                # or maybe shorter
                 err_msg = f"{reason} (file '{self.__aio_package_context_file}')"
                 raise Exception(f"{err_msg}")
             try:
                 validate(instance=aio_package_context, schema=PACKAGE_CONTEXT_SCHEMA)
             except Exception as reason:
-                # err_msg = f"Invalid content of file '{self.__aio_package_context_file}' file. Reason: {reason}"
-                # or maybe shorter
                 err_msg = f"{reason.message} (file '{self.__aio_package_context_file}')"
                 raise Exception(f"{err_msg}")
 
@@ -120,9 +116,6 @@ Configuration class that contains all the information about the application.
             self.__is_robotframework_aio        = True
         else:
             self.__aio_package_context_file = None
-        # eof else - if os.path.isfile(self.__aio_package_context_file):
-
-    # eof def __init__(self):
 
     def is_robotframework_aio(self):
         """
@@ -213,12 +206,6 @@ Returns the name of the entire RobotFramework AIO bundle.
 Returns the location of the installer of the entire RobotFramework AIO bundle.
         """
         return self.__bundle_installer_location
-
-    # TODO:
-    # def dump_app_config(self):
-        # all versions, dates, names
-
-# eof class AppConfig:
 
 # support of console scripts
 def print_bundle_version():
