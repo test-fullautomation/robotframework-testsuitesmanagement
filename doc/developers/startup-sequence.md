@@ -20,7 +20,7 @@ sequenceDiagram
     RF->>LL: _start_suite(data, result)
     LL->>C: CConfig() (singleton), testcase_path, chdir
     alt first suite
-        LL->>C: remember existing variables (buitin_variables)
+        LL->>C: remember existing variables (builtin_variables)
         LL->>C: root suite name, total test count
         LL->>C: LOCAL_CONFIG / ROBOT_LOCAL_CONFIG, VARIANT,<br/>VERSION_SW/HW/TEST, CONFIG_FILE (-> level 1)
     end
@@ -51,7 +51,7 @@ Additionally, executed only for the **first** suite (`suite_count == 0`):
 
 | Collected information | Source |
 |---|---|
-| `buitin_variables` | names of all variables that exist at this point (built-in and command line) |
+| `builtin_variables` | names of all variables that exist at this point (built-in and command line) |
 | `root_suite_name`, `total_testcases` | root of the suite tree |
 | `local_config` | `--variable local_config:...` or environment variable `ROBOT_LOCAL_CONFIG` |
 | `config_name` | `--variable variant:...` |
@@ -122,12 +122,12 @@ This allows to report all relevant information at once instead of stopping at th
 `__update_global_variable` walks through `params` → `global`:
 
 1. Reserved names (`Settings`, `Variables`, `Keywords`, `Comments`, `Documentation`, `Metadata`) cause an error.
-2. Names contained in `buitin_variables` are **skipped** - this is how command line values win.
+2. Names contained in `builtin_variables` are **skipped** - this is how command line values win.
 3. `__set_global_variable` checks the name against `^\p{L}[\p{L}\p{Nd}_]*$`, converts dictionaries (also inside
    lists) to `DotDict` and calls `BuiltIn().set_global_variable()`.
 
 !!! note "Exact name comparison"
-    `buitin_variables` contains the names as they were found at the first suite. The comparison is exact, therefore
+    `builtin_variables` contains the names as they were found at the first suite. The comparison is exact, therefore
     a command line variable only wins if it is spelled exactly like the configuration parameter
     (see [Priority](../user-guide/priority.md)).
 

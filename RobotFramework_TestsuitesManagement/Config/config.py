@@ -13,7 +13,7 @@
 #  limitations under the License.
 #################################################################################
 #
-# File: CConfig.py
+# File: config.py
 # Initially created by Mai Dinh Nam Son (RBVH/ECM11) / Nov-2020
 # Based on TML Framework automation concept
 #
@@ -31,7 +31,6 @@ import socket
 import json
 import copy
 from jsonschema import validate
-from builtins import staticmethod
 from types import SimpleNamespace
 
 import RobotFramework_TestsuitesManagement as TM
@@ -42,7 +41,7 @@ from PythonExtensionsCollection.String.CString import CString
 
 from JsonPreprocessor import CJsonPreprocessor
 from robot.api import logger
-from robot.version import get_full_version, get_version
+from robot.version import get_full_version
 from robot.libraries.BuiltIn import BuiltIn
 from robot.utils.dotdict import DotDict
 import pathlib
@@ -117,7 +116,7 @@ for None so that subclasses will create their own __single objects.
         self.max_version       = None
         self.min_version       = None
         self.local_config      = ''
-        self.buitin_variables  = []
+        self.builtin_variables = []
         self.config_level      = TM.CConfigLevel.LEVEL_4
         self.meta_data         = SimpleNamespace(
                                     version_sw = None,
@@ -261,7 +260,6 @@ robot with configuration level 2.")
             self.loaded_cfg_log['error'].append(f"Did not find configuration file: '{self.test_config_file}'!")
             self.loaded_cfg_log['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
             raise Exception(f"The test execution will be aborted!")
-        robot_core_data = BuiltIn().get_variables()
         jpp_obj = CJsonPreprocessor(syntax="python")
         try:
             json_config_data = jpp_obj.jsonLoad(self.test_config_file)
@@ -307,43 +305,40 @@ robot with configuration level 2.")
                 self.loaded_cfg_log['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
                 raise Exception(f"The test execution will be aborted!")
 
-        json_schema = True
         try:
             schema_file=str(pathlib.Path(__file__).parent.absolute() / "configuration_schema.json")
             with open(schema_file) as f:
                 json_schema_cfg = json.load(f)
         except Exception as err:
-            json_schema = False
             self.is_cfg_loaded = False
             self.loaded_cfg_log['error'].append(f"Could not parse configuration JSON schema file: '{str(err)}'")
             self.loaded_cfg_log['unknown'] = "Failed to parse JSON schema file. The test execution will be aborted!"
             raise Exception(f"The test execution will be aborted!")
 
-        if json_schema:
-            try:
-                validate(instance=json_config_data, schema=json_schema_cfg)
-            except Exception as error:
-                self.is_cfg_loaded = False
-                if error.validator == 'additionalProperties':
-                    self.loaded_cfg_log['error'].append(f"Verification against JSON schema failed: '{error.message}'.")
-                    self.loaded_cfg_log['error'].append("Please put the additional params into 'params': { 'global': {...}")
-                    self.loaded_cfg_log['error'].append(f"In file: '{self.test_config_file}'")
-                elif error.validator == 'required':
-                    param = regex.search("('[A-Za-z0-9]+')", error.message)
-                    if param[0] == "'global'":
-                        self.loaded_cfg_log['error'].append(f"Required parameter {param[0]} is missing under 'params' in file '{self.test_config_file}'.")
-                    elif param is not None:
-                        self.loaded_cfg_log['error'].append(f"Required parameter {param[0]} is missing in file '{self.test_config_file}'.")
-                    else:
-                        self.loaded_cfg_log['error'].append(f"Required parameter {error.message} is missing in file '{self.test_config_file}'.")
-                    self.loaded_cfg_log['error'].append("JSON schema validation failed!")
+        try:
+            validate(instance=json_config_data, schema=json_schema_cfg)
+        except Exception as error:
+            self.is_cfg_loaded = False
+            if error.validator == 'additionalProperties':
+                self.loaded_cfg_log['error'].append(f"Verification against JSON schema failed: '{error.message}'.")
+                self.loaded_cfg_log['error'].append("Please put the additional params into 'params': { 'global': {...}")
+                self.loaded_cfg_log['error'].append(f"In file: '{self.test_config_file}'")
+            elif error.validator == 'required':
+                param = regex.search("('[A-Za-z0-9]+')", error.message)
+                if param[0] == "'global'":
+                    self.loaded_cfg_log['error'].append(f"Required parameter {param[0]} is missing under 'params' in file '{self.test_config_file}'.")
+                elif param is not None:
+                    self.loaded_cfg_log['error'].append(f"Required parameter {param[0]} is missing in file '{self.test_config_file}'.")
                 else:
-                    errParam = error.path.pop()
-                    self.loaded_cfg_log['error'].append(f"Parameter '{errParam}' with invalid value found in JSON configuration file!")
-                    self.loaded_cfg_log['error'].append(f"Reason: {error.message}")
-                    self.loaded_cfg_log['error'].append(f"In file: '{self.test_config_file}'")
-                self.loaded_cfg_log['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
-                raise Exception(f"The test execution will be aborted!")
+                    self.loaded_cfg_log['error'].append(f"Required parameter {error.message} is missing in file '{self.test_config_file}'.")
+                self.loaded_cfg_log['error'].append("JSON schema validation failed!")
+            else:
+                err_param = error.path.pop()
+                self.loaded_cfg_log['error'].append(f"Parameter '{err_param}' with invalid value found in JSON configuration file!")
+                self.loaded_cfg_log['error'].append(f"Reason: {error.message}")
+                self.loaded_cfg_log['error'].append(f"In file: '{self.test_config_file}'")
+            self.loaded_cfg_log['unknown'] = "Not possible to load the test configuration. The test execution will be aborted!"
+            raise Exception(f"The test execution will be aborted!")
 
         self.project_name = json_config_data['Project']
         self.target_name = json_config_data['TargetName']
@@ -407,7 +402,7 @@ robot with configuration level 2.")
         self.__update_global_variable()
         try:
             del json_config_data['params']['global']
-        except:
+        except (KeyError, TypeError):
             pass
 
         json_dotdict = DotDict(json_config_data)
@@ -473,27 +468,13 @@ This method updates preprocessor and global params to global variable of RobotFr
                     self.loaded_cfg_log['error'].append(f"'{k}' is a reserved keyword in Robot Framework and cannot be used as parameter name.")
                     self.loaded_cfg_log['unknown'] = "A parameter name conflicted with Robot Framework's reserved keywords. The test execution will be aborted!"
                     raise Exception(f"The test execution will be aborted!")
-                if k in self.buitin_variables:
+                if k in self.builtin_variables:
                     continue
                 try:
                     self.__set_global_variable(k, v)
                 except Exception as error:
                     self.loaded_cfg_log['error'].append(error)
                     raise Exception(f"The test execution will be aborted!")
-
-    def __del__(self):
-        '''
-This destructor method.
-
-**Arguments:**
-
-* No input parameter is required
-
-**Returns:**
-
-* No return variable
-        '''
-        pass
 
     def __load_config_file_level2(self) -> bool:
         '''
@@ -558,7 +539,7 @@ This __load_config_file_level2 method loads configuration in case config_level i
             test_config_dir = suite_config[self.config_name]['path']
             if regex.match(r'^\.+/*.*', test_config_dir):
                 test_config_dir = os.path.dirname(self.testsuite_config) + '/' + test_config_dir + '/'
-        except:
+        except (KeyError, TypeError):
             self.loaded_cfg_log['error'].append("Testsuite management - Loading configuration level 2 failed!")
             self.loaded_cfg_log['error'].append(f"The 'name' or 'path' property is not defined for the variant '{self.config_name}'.")
             self.loaded_cfg_log['error'].append(f"In file: '{os.path.abspath(self.testsuite_config)}'")
@@ -587,20 +568,12 @@ This __get_machine_name method gets current machine name which is running the te
 
    / *Type*: string /
         '''
-        machine_name = ''
-        # Allows windows system access only in windows systems
-        if platform.system().lower()!="windows":
-            try:
-                machine_name = socket.gethostname()
-            except:
-                pass
-        else:
-            try:
-                machine_name = os.getenv("COMPUTERNAME",'')
-            except:
-                pass
-
-        return machine_name
+        if platform.system().lower() == "windows":
+            return os.getenv("COMPUTERNAME", '')
+        try:
+            return socket.gethostname()
+        except OSError:
+            return ''
 
     @staticmethod
     def __get_user_name():
@@ -617,28 +590,21 @@ This __get_user_name method gets current account name login to run the test.
 
    / *Type*: string /
         '''
-        user_name = ''
-        # Allows windows system access only in windows systems
-        if platform.system().lower()!="windows":
-            try:
-                user_name = os.getenv("USER","")
-            except:
-                pass
-        else:
-            try:
-                get_user_name_ex = ctypes.windll.secur32.GetUserNameExW
-                name_display = 3
+        if platform.system().lower() != "windows":
+            return os.getenv("USER", "")
+        # Windows system access only in Windows systems
+        try:
+            get_user_name_ex = ctypes.windll.secur32.GetUserNameExW
+            name_display = 3
 
-                size = ctypes.pointer(ctypes.c_ulong(0))
-                get_user_name_ex(name_display, None, size)
+            size = ctypes.pointer(ctypes.c_ulong(0))
+            get_user_name_ex(name_display, None, size)
 
-                name_buffer = ctypes.create_unicode_buffer(size.contents.value)
-                get_user_name_ex(name_display, name_buffer, size)
-                user_name = name_buffer.value
-            except:
-                pass
-
-        return user_name
+            name_buffer = ctypes.create_unicode_buffer(size.contents.value)
+            get_user_name_ex(name_display, name_buffer, size)
+            return name_buffer.value
+        except Exception:
+            return ''
 
     def check_version(self):
         # same method name like CVersion()::check_version()!
@@ -721,22 +687,3 @@ testsuite is terminated with "unknown" state
             raise Exception(f"{exception}")
 
         return
-
-if __name__ == "__main__":
-    # small test:
-    app_config = None
-    print()
-    try:
-        app_config = AppConfig()
-        print(f"==> is_robotframework_aio     : '{app_config.is_robotframework_aio()}'")
-        print(f"==> tsm_version               : '{app_config.get_tsm_version()}'")
-        print(f"==> tsm_version_date          : '{app_config.get_tsm_version_date()}'")
-        print(f"==> tsm_app_name              : '{app_config.get_tsm_app_name()}'")
-        print(f"==> tsm_installer_location    : '{app_config.get_tsm_installer_location()}'")
-        print(f"==> bundle_version            : '{app_config.get_bundle_version()}'")
-        print(f"==> bundle_version_date       : '{app_config.get_bundle_version_date()}'")
-        print(f"==> bundle_name               : '{app_config.get_bundle_name()}'")
-        print(f"==> bundle_installer_location : '{app_config.get_bundle_installer_location()}'")
-    except Exception as ex:
-        print(f"Exception in __main__: {ex}")
-    print()

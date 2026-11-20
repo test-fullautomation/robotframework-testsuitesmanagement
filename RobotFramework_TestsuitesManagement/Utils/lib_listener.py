@@ -12,7 +12,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-from inspect import stack
 import os
 import regex
 import RobotFramework_TestsuitesManagement as TM
@@ -21,7 +20,6 @@ from RobotFramework_TestsuitesManagement.Config import CConfig
 from .Events import dispatch
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api import logger
-from robot.parsing import SuiteStructureBuilder
 
 class LibListener(object):
     '''
@@ -61,28 +59,27 @@ This _start_suite method hooks to every starting testsuite of robot run.
         '''
         TM.CTestsuitesCfg.config_obj = CConfig()
         TM.CTestsuitesCfg.config_obj.testcase_path = ''
-        if os.path.isfile(data.source.__str__()):
-            TM.CTestsuitesCfg.config_obj.testcase_path = ''
-            for item in data.source.__str__().split(os.path.sep)[:-1]:
-                TM.CTestsuitesCfg.config_obj.testcase_path += item + os.path.sep
-        elif os.path.isdir(data.source.__str__()):
-            TM.CTestsuitesCfg.config_obj.testcase_path = data.source.__str__()
+        source = str(data.source)
+        if os.path.isfile(source):
+            TM.CTestsuitesCfg.config_obj.testcase_path = os.path.join(os.path.dirname(source), '')
+        elif os.path.isdir(source):
+            TM.CTestsuitesCfg.config_obj.testcase_path = source
         if TM.CTestsuitesCfg.config_obj.testcase_path != '':
             os.chdir(TM.CTestsuitesCfg.config_obj.testcase_path)
 
         if TM.CTestsuitesCfg.config_obj.suite_count == 0:
-            test_suite = None
             test_suite = data
             while test_suite.parent != None:
                 test_suite = test_suite.parent
 
-            for k, v in BuiltIn().get_variables()._keys.items():
-                TM.CTestsuitesCfg.config_obj.buitin_variables.append(regex.match('.+{(.+)}', v)[1])
+            variables = BuiltIn().get_variables()
+            for name in variables:
+                TM.CTestsuitesCfg.config_obj.builtin_variables.append(regex.match('.+{(.+)}', name)[1])
 
             TM.CTestsuitesCfg.config_obj.root_suite_name = test_suite.name
             TM.CTestsuitesCfg.config_obj.total_testcases = test_suite.test_count
 
-            if '${localconfig}' in BuiltIn().get_variables()._keys:
+            if '${localconfig}' in variables:
                 if regex.match(r'^\s*$', BuiltIn().get_variable_value('${LOCAL_CONFIG}')):
                     CConfig.loaded_cfg_log['error'] = "Local_config input must not be empty!!!"
                     logger.error(CConfig.loaded_cfg_log['error'])
@@ -98,15 +95,15 @@ This _start_suite method hooks to every starting testsuite of robot run.
                     CConfig.loaded_cfg_log['error'] = f"The local configuration file {local_config_file} which set in ROBOT_LOCAL_CONFIG variable, does not exist!!!"
                     logger.error(CConfig.loaded_cfg_log['error'])
 
-            if '${variant}' in BuiltIn().get_variables()._keys:
+            if '${variant}' in variables:
                 TM.CTestsuitesCfg.config_obj.config_name = BuiltIn().get_variable_value('${VARIANT}').strip()
-            if '${versionsw}' in BuiltIn().get_variables()._keys:
+            if '${versionsw}' in variables:
                 TM.CTestsuitesCfg.config_obj.meta_data.version_sw = BuiltIn().get_variable_value('${VERSION_SW}')
-            if '${versionhw}' in BuiltIn().get_variables()._keys:
+            if '${versionhw}' in variables:
                 TM.CTestsuitesCfg.config_obj.meta_data.version_hw = BuiltIn().get_variable_value('${VERSION_HW}')
-            if '${versiontest}' in BuiltIn().get_variables()._keys:
+            if '${versiontest}' in variables:
                 TM.CTestsuitesCfg.config_obj.meta_data.version_test = BuiltIn().get_variable_value('${VERSION_TEST}')
-            if '${configfile}' in BuiltIn().get_variables()._keys:
+            if '${configfile}' in variables:
                 TM.CTestsuitesCfg.config_obj.config_level = TM.CConfigLevel.LEVEL_1
                 TM.CTestsuitesCfg.config_obj.test_config_file = os.path.abspath(BuiltIn().get_variable_value('${CONFIG_FILE}').strip())
 
